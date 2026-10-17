@@ -1,0 +1,97 @@
+{
+  "status": "source_audit_complete_runtime_capture_not_tested",
+  "created_utc": "2026-10-16T01:43:01.824614+00:00",
+  "decision": "Retain native W8 activation measurement as an independent route and transfer-validation instrument; current priority is bounded Hauhau weight-difference recovery.",
+  "installed_vllm_version": "0.31.0",
+  "model": {
+    "path": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+    "architecture": "Gemma4ForConditionalGeneration",
+    "hidden_size": 2816,
+    "decoder_layers": 30,
+    "weight_precision": "native group32 INT8 compressed-tensors",
+    "activation_dtype": "bfloat16"
+  },
+  "verified_from_installed_source": [
+    "Both Gemma4 language and multimodal wrapper advertise SupportsEagle3; set_aux_hidden_state_layers unwraps to the EagleModelMixin decoder.",
+    "Normal Gemma4 forward exposes index 0 before decoder layers, and index i+1 after decoder layer i including its per-layer contribution and scalar.",
+    "Auxiliary index 30 is captured before the final model RMSNorm. Do not equate it with a normalized final Hugging Face hidden state without matching hook semantics.",
+    "kv_sharing_fast_prefill uses a separate forward path that returns normalized states without the normal auxiliary collection. Disable that optimization in a capture profile.",
+    "extract_hidden_states uses a cache-only dummy model, not another learned draft checkpoint. It requires num_speculative_tokens=1 and a nonempty eagle_aux_hidden_state_layer_ids list.",
+    "ExampleHiddenStatesConnector saves token_ids plus hidden_states. TP rank 0 writes; the local implementation counts one completion and uses async disk writes with a companion lock.",
+    "The connector normally exports only prompt tokens. include_output_tokens is optional and excludes the last sampled token; the initial study should use max_tokens=1 and prompt-only data.",
+    "The extractor cache supports auto/BF16, explicitly rejects quantized KV. Retain BF16 KV for this diagnostic.",
+    "The GPU Model Runner V2 extractor requires greedy draft selection and reports supports_mm_inputs=False. Start with text-only prompts; this does not establish vision capture support.",
+    "Hidden-state buffers are replicated by rank in the inspected proposer. TP does not divide their width or selected-layer count.",
+    "No native W8 capture, captured-direction extraction, LoRA-plus-capture compatibility test, or capture-instrumented behavioral equivalence test has run in this phase."
+  ],
+  "resource_estimates": {
+    "formula": "(max_num_batched_tokens + max_num_seqs) * selected_layer_count * 2816 * 2 bytes for the persistent proposer staging buffer per TP rank",
+    "profiles": [
+      {
+        "max_batched_tokens": 256,
+        "selected_layers": 3,
+        "max_sequences": 1,
+        "persistent_staging_bytes_per_rank": 4342272,
+        "persistent_staging_mib_per_rank": 4.14111328125,
+        "prompt_hidden_bytes_at_token_limit": 4325376
+      },
+      {
+        "max_batched_tokens": 1024,
+        "selected_layers": 31,
+        "max_sequences": 1,
+        "persistent_staging_bytes_per_rank": 178956800,
+        "persistent_staging_mib_per_rank": 170.66650390625,
+        "prompt_hidden_bytes_at_token_limit": 178782208
+      },
+      {
+        "max_batched_tokens": 4096,
+        "selected_layers": 31,
+        "max_sequences": 4,
+        "persistent_staging_bytes_per_rank": 715827200,
+        "persistent_staging_mib_per_rank": 682.666015625,
+        "prompt_hidden_bytes_at_token_limit": 715128832
+      }
+    ],
+    "not_a_peak_estimate": "Additional live auxiliary tensors, torch.stack temporary, hidden-state cache pages, cache extraction GPU temporary, pinned CPU copy, KV, model weights and allocator workspace also consume memory. Source-derived buffer arithmetic is not a measured launch fit.",
+    "proposed_initial_disk_cap_bytes": 2147483648,
+    "storage_policy": "Process one prompt at a time. Preserve prompt/token/layer identity, vector selection, code/config hashes, per-file checksums and selected vectors. Remove newly created full-token scratch only after selected-vector output validation; avoid caching an entire dataset of all-token activations."
+  },
+  "bounded_validation_sequence": [
+    "After current evaluation completes, or after an explicit recorded cancellation, use a separate immutable capture launch profile. Do not change the current benchmark profile mid-run.",
+    "Start baseline only, TP2, eager, prefix caching off, fast prefill off, BF16 KV, text prompts, max sequences 1, max context/batched tokens 256, auxiliary indices [0,15,30]. Use the same native INT8 weights and tokenizer, explicit thinking-template setting, and max_tokens=1.",
+    "Validate exact rendered token IDs; exported shape [prompt_length,3,2816]; BF16 finite values; layer-order mapping; completed lock/write handling; and server health after repeated requests. Compare first-token IDs/logprobs with the ordinary baseline for predeclared benign prompts, allowing measured numeric tolerance rather than asserting bitwise determinism.",
+    "Only after the smoke is sound, expand selected layers and context one dimension at a time, up to all31 and 1024 for short calibration prompts. Measure actual peak GPU/host memory and post-request block reclamation.",
+    "Check native reversible LoRA routing separately before using staged edited-model captures. A passing baseline extraction alone does not establish edited-model equivalence.",
+    "Do not use the extraction runtime as the quality/scoring runtime. Restore the ordinary frozen serving profile for matched behavioral evaluations.",
+    "Do not run long generated-trace extraction until multi-token feedback and output-token alignment have been validated against this exact installed build."
+  ],
+  "known_primary_report": {
+    "url": "https://github.com/vllm-project/vllm/issues/56417",
+    "status": "A user report, not reproduced here",
+    "claim": "Reports first-column feedback errors on multi-token generation in extract_hidden_states. Our installed legacy proposer visibly returns sampled_token_ids[:, :1].",
+    "implication": "Use prompt-only/max_tokens=1 for the initial capture; do not assume generated traces or instrumented long-answer scores are equivalent."
+  },
+  "sources": [
+    "https://vllm.ai/blog/2026-03-30-extract-hidden-states",
+    "https://github.com/vllm-project/vllm/blob/v0.31.0/vllm/model_executor/models/gemma4.py",
+    "https://github.com/vllm-project/vllm/blob/v0.31.0/vllm/model_executor/models/interfaces.py",
+    "https://github.com/vllm-project/vllm/issues/56417"
+  ],
+  "installed_source_hashes": {
+    "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/models/gemma4.py": "7966bc15912cd7b52b581d811a4d10ffa1964967305cf5f28c4468c06f78c3ed",
+    "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py": "ee9b33f5f3d76bfec371dfc65292a915cc5b4741367ba0b28a450a5af8c40f9f",
+    "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/models/interfaces.py": "c34635d28191061a46d8c57d178c242dc7bc1993eda23e6a31a72eb1a3759fec",
+    "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/models/extract_hidden_states.py": "9ebcdcb8f70b7e6bc75e4d676a95b1631589b350f3075489dc844e4b8cdf4db7",
+    "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/v1/spec_decode/extract_hidden_states.py": "e383c2fc7c42c8236523651ee813ce9feb99ce015a910df79b4f55a74bdc4b53",
+    "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/v1/worker/gpu/spec_decode/extract_hidden_states.py": "93c4233be7b2d2290b33902ea9b3bb5274c11701830851d03967a22144536e2d",
+    "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/transformers_utils/configs/extract_hidden_states.py": "9bc4131396d4f2c5e52705f614e2de132b320a364dabcafb587734d93805459c",
+    "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/distributed/kv_transfer/kv_connector/v1/example_hidden_states_connector.py": "3afa89896e3988ba9f5fca861814ff11438c3403be3a269fac2a844751199230"
+  },
+  "actions_performed": {
+    "source_reads": true,
+    "model_calls": false,
+    "gpu_allocations": false,
+    "service_changes": false,
+    "new_capture_profile_launched": false
+  }
+}

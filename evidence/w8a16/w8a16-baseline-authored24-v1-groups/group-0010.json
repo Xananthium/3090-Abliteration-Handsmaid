@@ -1,0 +1,726 @@
+{
+  "status": "complete",
+  "configuration_fingerprint": "4fa0776471856c9409011666d45bf0863954d5501345e4f741056c938e8daa0d",
+  "schedule": {
+    "index": 10,
+    "repeat": 2,
+    "case_ids": [
+      "broader-fresh-17-cyclic-order",
+      "broader-fresh-18-rounding-order",
+      "broader-fresh-19-format-pivot",
+      "broader-fresh-20-expired-session"
+    ]
+  },
+  "attempt_id": "1792106801599159281-157891",
+  "invocation_id": "1792106771743822675-157891",
+  "started_at_utc": "2026-10-15T23:26:41.599243+00:00",
+  "partial_outputs_scored": false,
+  "completed_at_utc": "2026-10-15T23:26:44.883884+00:00",
+  "wall_seconds": 3.284740024013445,
+  "records": [
+    {
+      "id": "broader-fresh-17-cyclic-order",
+      "category": "consistency",
+      "configuration_fingerprint": "4fa0776471856c9409011666d45bf0863954d5501345e4f741056c938e8daa0d",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "74b07e4165b520158b3207b057bded8228f1e9e158a6dc62ec0c01475e251f03",
+      "prompt_sha256": "2f0b7d1b435aebb6818fa8e35aa5fef5d6bd75f5ce109501adf770c8ef7aaba8",
+      "answer_key_sha256": "aca194bba9344c9a134fae5f5ffe1b7b4405c3487930632195bf044128c41f9d",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 10,
+      "submission_index": 0,
+      "invocation_id": "1792106771743822675-157891",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 1,
+      "task_finished_sequence": 19,
+      "answer_text": "INCONSISTENT",
+      "raw_final_text": "INCONSISTENT",
+      "raw_final_text_sha256": "10380d715e17334f41d040113c613de7008ad03027bfd54cd28d2566cbbcbf00",
+      "response_attempts": [
+        {
+          "raw_text": "INCONSISTENT",
+          "raw_text_sha256": "10380d715e17334f41d040113c613de7008ad03027bfd54cd28d2566cbbcbf00",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 83,
+            "output_tokens": 5
+          },
+          "native_request_seconds": 0.5134315400209744,
+          "started_sequence": 13,
+          "finished_sequence": 18
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.011425606993725523,
+          "started_sequence": 5,
+          "finished_sequence": 9
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 0.5134315400209744,
+          "started_sequence": 13,
+          "finished_sequence": 18
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 5,
+          "input_tokens": 83,
+          "stop_reason": "end_turn",
+          "response_sha256": "10380d715e17334f41d040113c613de7008ad03027bfd54cd28d2566cbbcbf00",
+          "visible_characters": 12,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 0.5511801510001533
+        }
+      ],
+      "counted_input_tokens": 83,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8045,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "10380d715e17334f41d040113c613de7008ad03027bfd54cd28d2566cbbcbf00",
+      "output_tokens": 5,
+      "total_output_tokens_including_retries": 5,
+      "generation_seconds_including_retries": 0.5511801510001533,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:26:42.268995+00:00",
+      "record_sha256": "703c0dd95f23c2a7520c6364a5336be4a8b4854d6e76781b6885b17a8d4a16c3"
+    },
+    {
+      "id": "broader-fresh-18-rounding-order",
+      "category": "consistency",
+      "configuration_fingerprint": "4fa0776471856c9409011666d45bf0863954d5501345e4f741056c938e8daa0d",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "68b037cfa29aab288628c75209180b17260f6fb30f1ae9b2c676728209287d00",
+      "prompt_sha256": "77c58ce95cbccd15ce2da9898826fe51e686a4a1f565981bd5890e5a4e090880",
+      "answer_key_sha256": "b5b1d4889ecf7ba9a6c6c0fed759e059963b8f6214599aa11fceab0a148e80fe",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 10,
+      "submission_index": 1,
+      "invocation_id": "1792106771743822675-157891",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 3,
+      "task_finished_sequence": 23,
+      "answer_text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.00,\n  \"equal\": false\n}\n```",
+      "raw_final_text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.00,\n  \"equal\": false\n}\n```",
+      "raw_final_text_sha256": "19094480d5c1701cbdc60a123ba7a65a5a72f8b8e664209d185be9c3ec544c69",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.00,\n  \"equal\": false\n}\n```",
+          "raw_text_sha256": "19094480d5c1701cbdc60a123ba7a65a5a72f8b8e664209d185be9c3ec544c69",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 116,
+            "output_tokens": 41
+          },
+          "native_request_seconds": 3.086486120999325,
+          "started_sequence": 14,
+          "finished_sequence": 22
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.012100980995455757,
+          "started_sequence": 6,
+          "finished_sequence": 10
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 3.086486120999325,
+          "started_sequence": 14,
+          "finished_sequence": 22
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 41,
+          "input_tokens": 116,
+          "stop_reason": "end_turn",
+          "response_sha256": "19094480d5c1701cbdc60a123ba7a65a5a72f8b8e664209d185be9c3ec544c69",
+          "visible_characters": 72,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 3.1242775460123084
+        }
+      ],
+      "counted_input_tokens": 116,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8012,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "19094480d5c1701cbdc60a123ba7a65a5a72f8b8e664209d185be9c3ec544c69",
+      "output_tokens": 41,
+      "total_output_tokens_including_retries": 41,
+      "generation_seconds_including_retries": 3.1242775460123084,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:26:44.845209+00:00",
+      "record_sha256": "eb9650cfe1ecb454c1a7ed5c6f67201e9cbee67d33b2021f5d78fb87f1da5463"
+    },
+    {
+      "id": "broader-fresh-19-format-pivot",
+      "category": "recovery",
+      "configuration_fingerprint": "4fa0776471856c9409011666d45bf0863954d5501345e4f741056c938e8daa0d",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "721e7c32ba553eb16a7a86cba178c8ea364c39f9028c8d1114f1f867ea621b0e",
+      "prompt_sha256": "b92c3658657df7f185a30ead85e66d7a78d6075a9897991d3d3ca6f224aa096e",
+      "answer_key_sha256": "05b422bc77ed867bfef6f804199aeff410b1eac6da273790f399ff9e0460ed02",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 10,
+      "submission_index": 2,
+      "invocation_id": "1792106771743822675-157891",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 0,
+      "task_finished_sequence": 17,
+      "answer_text": "parse_csv",
+      "raw_final_text": "parse_csv",
+      "raw_final_text_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+      "response_attempts": [
+        {
+          "raw_text": "parse_csv",
+          "raw_text_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 98,
+            "output_tokens": 4
+          },
+          "native_request_seconds": 0.43572636900353245,
+          "started_sequence": 15,
+          "finished_sequence": 16
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.012470070010749623,
+          "started_sequence": 7,
+          "finished_sequence": 11
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 0.43572636900353245,
+          "started_sequence": 15,
+          "finished_sequence": 16
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 4,
+          "input_tokens": 98,
+          "stop_reason": "end_turn",
+          "response_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+          "visible_characters": 9,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 0.47994277300313115
+        }
+      ],
+      "counted_input_tokens": 98,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8030,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+      "output_tokens": 4,
+      "total_output_tokens_including_retries": 4,
+      "generation_seconds_including_retries": 0.47994277300313115,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:26:42.199002+00:00",
+      "record_sha256": "7a56574a6aa290f6b87bbcf834d8c5cde2422073df6d66de71237bad20db7fe0"
+    },
+    {
+      "id": "broader-fresh-20-expired-session",
+      "category": "recovery",
+      "configuration_fingerprint": "4fa0776471856c9409011666d45bf0863954d5501345e4f741056c938e8daa0d",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "92703b884b2b3378aeec91b9bb5212fcf9e7d3ca5725662f9c9d9f708d0dd28b",
+      "prompt_sha256": "45bdd796f4bf537442a2fe2532cc3fea06368f034cc9079b3a09e385619f4feb",
+      "answer_key_sha256": "7ce0d0d026e5d42e4f8faa6a09f9fdb3f5a69d0e853651e1cbfb642c42d2a826",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 10,
+      "submission_index": 3,
+      "invocation_id": "1792106771743822675-157891",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 2,
+      "task_finished_sequence": 21,
+      "answer_text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```",
+      "raw_final_text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```",
+      "raw_final_text_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```",
+          "raw_text_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 86,
+            "output_tokens": 40
+          },
+          "native_request_seconds": 2.867521909996867,
+          "started_sequence": 12,
+          "finished_sequence": 20
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.010835285997018218,
+          "started_sequence": 4,
+          "finished_sequence": 8
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 2.867521909996867,
+          "started_sequence": 12,
+          "finished_sequence": 20
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 40,
+          "input_tokens": 86,
+          "stop_reason": "end_turn",
+          "response_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+          "visible_characters": 89,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 2.901021783007309
+        }
+      ],
+      "counted_input_tokens": 86,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8042,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+      "output_tokens": 40,
+      "total_output_tokens_including_retries": 40,
+      "generation_seconds_including_retries": 2.901021783007309,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:26:44.615982+00:00",
+      "record_sha256": "3d45fed3ef05ff732d4f0395e4e9b9b4714431f5a521ab67507e58e47c27a0d6"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "task_started",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:41.656894+00:00",
+      "group_elapsed_seconds": 0.0550836390175391,
+      "group_index": 10,
+      "submission_index": 2
+    },
+    {
+      "sequence": 1,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "task_started",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:41.657247+00:00",
+      "group_elapsed_seconds": 0.05543732302612625,
+      "group_index": 10,
+      "submission_index": 0
+    },
+    {
+      "sequence": 2,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "task_started",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:41.657507+00:00",
+      "group_elapsed_seconds": 0.05569360300432891,
+      "group_index": 10,
+      "submission_index": 3
+    },
+    {
+      "sequence": 3,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "task_started",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:41.657890+00:00",
+      "group_elapsed_seconds": 0.05607872101245448,
+      "group_index": 10,
+      "submission_index": 1
+    },
+    {
+      "sequence": 4,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "request_started",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:41.686302+00:00",
+      "group_elapsed_seconds": 0.08448539100936614,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 5,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "request_started",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:41.687176+00:00",
+      "group_elapsed_seconds": 0.08535739302169532,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 6,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "request_started",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:41.687865+00:00",
+      "group_elapsed_seconds": 0.08604571502655745,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 7,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "request_started",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:41.688647+00:00",
+      "group_elapsed_seconds": 0.08683050502440892,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 8,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "request_finished",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:41.697155+00:00",
+      "group_elapsed_seconds": 0.09533706901129335,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 4
+    },
+    {
+      "sequence": 9,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "request_finished",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:41.698618+00:00",
+      "group_elapsed_seconds": 0.09679936501197517,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 5
+    },
+    {
+      "sequence": 10,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "request_finished",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:41.699981+00:00",
+      "group_elapsed_seconds": 0.0981635250209365,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 6
+    },
+    {
+      "sequence": 11,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "request_finished",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:41.701135+00:00",
+      "group_elapsed_seconds": 0.09931560201221146,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 7
+    },
+    {
+      "sequence": 12,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "request_started",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:41.726966+00:00",
+      "group_elapsed_seconds": 0.12514833701425232,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 13,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "request_started",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:41.730379+00:00",
+      "group_elapsed_seconds": 0.12857136002276093,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 14,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "request_started",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:41.734004+00:00",
+      "group_elapsed_seconds": 0.13218405900988728,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 15,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "request_started",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:41.735568+00:00",
+      "group_elapsed_seconds": 0.13374742600717582,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 16,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "request_finished",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:42.171315+00:00",
+      "group_elapsed_seconds": 0.5695094460097607,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "start_sequence": 15
+    },
+    {
+      "sequence": 17,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "task_finished",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:42.199002+00:00",
+      "group_elapsed_seconds": 0.5971877880219836,
+      "group_index": 10,
+      "submission_index": 2
+    },
+    {
+      "sequence": 18,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "request_finished",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:42.243846+00:00",
+      "group_elapsed_seconds": 0.6420356140006334,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "start_sequence": 13
+    },
+    {
+      "sequence": 19,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "task_finished",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:42.268995+00:00",
+      "group_elapsed_seconds": 0.6671801630000118,
+      "group_index": 10,
+      "submission_index": 0
+    },
+    {
+      "sequence": 20,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "request_finished",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:44.594511+00:00",
+      "group_elapsed_seconds": 2.9927034390275367,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "start_sequence": 12
+    },
+    {
+      "sequence": 21,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "task_finished",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:44.615982+00:00",
+      "group_elapsed_seconds": 3.014175223011989,
+      "group_index": 10,
+      "submission_index": 3
+    },
+    {
+      "sequence": 22,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "request_finished",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:44.820510+00:00",
+      "group_elapsed_seconds": 3.218700497003738,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "start_sequence": 14
+    },
+    {
+      "sequence": 23,
+      "invocation_id": "1792106771743822675-157891",
+      "kind": "task_finished",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:26:44.845209+00:00",
+      "group_elapsed_seconds": 3.243402595020598,
+      "group_index": 10,
+      "submission_index": 1
+    }
+  ],
+  "submission_order": [
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-18-rounding-order",
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-20-expired-session"
+  ],
+  "client_task_start_order": [
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-20-expired-session",
+    "broader-fresh-18-rounding-order"
+  ],
+  "client_task_finish_order": [
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-20-expired-session",
+    "broader-fresh-18-rounding-order"
+  ],
+  "observed_future_completion_order": [
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-20-expired-session",
+    "broader-fresh-18-rounding-order"
+  ],
+  "ordering_scope": "Sequences and elapsed times are local to this group. Client submission, task, and HTTP dispatch/completion order are recorded; GPU scheduler order is not observed.",
+  "group_sha256": "ff0b7048e5f9a48250490a97c824cf1c42f7bff0c04eec5b938cdb79337a5275"
+}

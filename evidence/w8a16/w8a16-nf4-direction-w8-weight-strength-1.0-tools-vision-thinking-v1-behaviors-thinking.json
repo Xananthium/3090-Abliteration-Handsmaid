@@ -1,0 +1,2084 @@
+{
+  "checkpoint": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+  "records": [
+    {
+      "test": "forced_tool_call",
+      "passed": true,
+      "response": {
+        "id": "chatcmpl-931a016a673b5ad1",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user wants to add two integers, 3 and 4, using the `add` tool.\nThe `add` tool takes two parameters: `a` and `b`, both of type `INTEGER`.\nSo, `a` should be 3 and `b` should be 4.",
+            "signature": "b048b24bf66248f2bfb3d76ad6ac0bb2"
+          },
+          {
+            "type": "tool_use",
+            "id": "chatcmpl-tool-b05b4d67580001fe",
+            "name": "add",
+            "input": {
+              "a": 3,
+              "b": 4
+            }
+          }
+        ],
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 79,
+          "output_tokens": 82
+        }
+      },
+      "response_sha256": "60d8b8c2b20c3e1d58b7c826a4bdf61e1657f1adbf719a495a3d42134cf331cd",
+      "final_text": "",
+      "final_blocks": [],
+      "tool_use_blocks": [
+        {
+          "type": "tool_use",
+          "id": "chatcmpl-tool-b05b4d67580001fe",
+          "name": "add",
+          "input": {
+            "a": 3,
+            "b": 4
+          }
+        }
+      ],
+      "thinking_blocks": [
+        {
+          "type": "thinking",
+          "thinking": "The user wants to add two integers, 3 and 4, using the `add` tool.\nThe `add` tool takes two parameters: `a` and `b`, both of type `INTEGER`.\nSo, `a` should be 3 and `b` should be 4.",
+          "signature": "b048b24bf66248f2bfb3d76ad6ac0bb2"
+        }
+      ],
+      "assertion_blocks": [
+        {
+          "type": "tool_use",
+          "id": "chatcmpl-tool-b05b4d67580001fe",
+          "name": "add",
+          "input": {
+            "a": 3,
+            "b": 4
+          }
+        }
+      ],
+      "content_block_types": {
+        "thinking": 1,
+        "tool_use": 1
+      },
+      "generation_complete": true
+    },
+    {
+      "test": "tool_result_roundtrip",
+      "passed": true,
+      "response": {
+        "id": "chatcmpl-9948fd93d6ca32f1",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The `add` tool returned the value 7.\nThe user's request was to add 3 and 4.\nThe result is 7.\nFinal answer should state the result.",
+            "signature": "3f1b0ef0af564bcda56f0d9b96354da6"
+          },
+          {
+            "type": "text",
+            "text": "The sum of 3 and 4 is 7."
+          }
+        ],
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 176,
+          "output_tokens": 56
+        }
+      },
+      "response_sha256": "f631e19386128796255c9a1b3f4b394d70527714de1fe86225859979e1e9e55d",
+      "final_text": "The sum of 3 and 4 is 7.",
+      "final_blocks": [
+        {
+          "type": "text",
+          "text": "The sum of 3 and 4 is 7."
+        }
+      ],
+      "tool_use_blocks": [],
+      "thinking_blocks": [
+        {
+          "type": "thinking",
+          "thinking": "The `add` tool returned the value 7.\nThe user's request was to add 3 and 4.\nThe result is 7.\nFinal answer should state the result.",
+          "signature": "3f1b0ef0af564bcda56f0d9b96354da6"
+        }
+      ],
+      "assertion_blocks": [
+        {
+          "type": "text",
+          "text": "The sum of 3 and 4 is 7."
+        }
+      ],
+      "content_block_types": {
+        "thinking": 1,
+        "text": 1
+      },
+      "generation_complete": true
+    },
+    {
+      "test": "automatic_tool_choice",
+      "passed": true,
+      "response": {
+        "id": "chatcmpl-93a7a201252987f9",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user wants to add two numbers: 19 and 23.\nThe available tool is `add(a, b)`.\nSo, the call should be `add(a=19, b=23)`.",
+            "signature": "8c91e60f405d42c59c4d6904f1e2435a"
+          },
+          {
+            "type": "tool_use",
+            "id": "chatcmpl-tool-a960e725369d4440",
+            "name": "add",
+            "input": {
+              "a": 19,
+              "b": 23
+            }
+          }
+        ],
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "stop_reason": "tool_use",
+        "usage": {
+          "input_tokens": 82,
+          "output_tokens": 71
+        }
+      },
+      "response_sha256": "4bd944015be379283f6b8764bd37c59f2717fef7103553f866827676612f3175",
+      "final_text": "",
+      "final_blocks": [],
+      "tool_use_blocks": [
+        {
+          "type": "tool_use",
+          "id": "chatcmpl-tool-a960e725369d4440",
+          "name": "add",
+          "input": {
+            "a": 19,
+            "b": 23
+          }
+        }
+      ],
+      "thinking_blocks": [
+        {
+          "type": "thinking",
+          "thinking": "The user wants to add two numbers: 19 and 23.\nThe available tool is `add(a, b)`.\nSo, the call should be `add(a=19, b=23)`.",
+          "signature": "8c91e60f405d42c59c4d6904f1e2435a"
+        }
+      ],
+      "assertion_blocks": [
+        {
+          "type": "tool_use",
+          "id": "chatcmpl-tool-a960e725369d4440",
+          "name": "add",
+          "input": {
+            "a": 19,
+            "b": 23
+          }
+        }
+      ],
+      "content_block_types": {
+        "thinking": 1,
+        "tool_use": 1
+      },
+      "generation_complete": true
+    },
+    {
+      "test": "pivot_after_two_errors",
+      "passed": true,
+      "response": {
+        "id": "chatcmpl-82f281a32311488d",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user wants to know the revenue from `/reports/quarterly.pdf`.\nThe first attempt to read the PDF failed because it is encrypted.\nThe error message suggests a plain-text export is available at `/reports/quarterly.txt`.\nSo, the next step is to read `/reports/quarterly.txt`.",
+            "signature": "ee9744c80b084717bcd7797a9ffdff4d"
+          },
+          {
+            "type": "tool_use",
+            "id": "chatcmpl-tool-af9cf3820064fecd",
+            "name": "read_text",
+            "input": {
+              "path": "/reports/quarterly.txt"
+            }
+          }
+        ],
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "stop_reason": "tool_use",
+        "usage": {
+          "input_tokens": 241,
+          "output_tokens": 90
+        }
+      },
+      "response_sha256": "af4701bade81d693dfe03c486b032310f10cb7171e6b8182f5057ba84c1741db",
+      "final_text": "",
+      "final_blocks": [],
+      "tool_use_blocks": [
+        {
+          "type": "tool_use",
+          "id": "chatcmpl-tool-af9cf3820064fecd",
+          "name": "read_text",
+          "input": {
+            "path": "/reports/quarterly.txt"
+          }
+        }
+      ],
+      "thinking_blocks": [
+        {
+          "type": "thinking",
+          "thinking": "The user wants to know the revenue from `/reports/quarterly.pdf`.\nThe first attempt to read the PDF failed because it is encrypted.\nThe error message suggests a plain-text export is available at `/reports/quarterly.txt`.\nSo, the next step is to read `/reports/quarterly.txt`.",
+          "signature": "ee9744c80b084717bcd7797a9ffdff4d"
+        }
+      ],
+      "assertion_blocks": [
+        {
+          "type": "tool_use",
+          "id": "chatcmpl-tool-af9cf3820064fecd",
+          "name": "read_text",
+          "input": {
+            "path": "/reports/quarterly.txt"
+          }
+        }
+      ],
+      "content_block_types": {
+        "thinking": 1,
+        "tool_use": 1
+      },
+      "generation_complete": true
+    },
+    {
+      "test": "workflow_completion",
+      "passed": true,
+      "response": {
+        "id": "chatcmpl-975126c69ecc79dc",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The text file `/reports/quarterly.txt` contains the information: \"Quarterly revenue: USD 47 million.\"\nThe user asked for the revenue.",
+            "signature": "c490ba4a0e8344beb974024fd52a5504"
+          },
+          {
+            "type": "text",
+            "text": "The revenue is USD 47 million."
+          }
+        ],
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 366,
+          "output_tokens": 46
+        }
+      },
+      "response_sha256": "711303dc193ea5ac86514878a95a161901d873018b448e11b71efbe9c092507e",
+      "final_text": "The revenue is USD 47 million.",
+      "final_blocks": [
+        {
+          "type": "text",
+          "text": "The revenue is USD 47 million."
+        }
+      ],
+      "tool_use_blocks": [],
+      "thinking_blocks": [
+        {
+          "type": "thinking",
+          "thinking": "The text file `/reports/quarterly.txt` contains the information: \"Quarterly revenue: USD 47 million.\"\nThe user asked for the revenue.",
+          "signature": "c490ba4a0e8344beb974024fd52a5504"
+        }
+      ],
+      "assertion_blocks": [
+        {
+          "type": "text",
+          "text": "The revenue is USD 47 million."
+        }
+      ],
+      "content_block_types": {
+        "thinking": 1,
+        "text": 1
+      },
+      "generation_complete": true
+    },
+    {
+      "test": "vision_red",
+      "passed": true,
+      "response": {
+        "id": "chatcmpl-8ab67bfcd4f95795",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user wants to know the dominant color of the provided image.\nThe image is a solid red square.\nThe dominant color is red.\nThe instruction says \"Reply with the color name only\".\n\nFinal answer: red.",
+            "signature": "c2c2a54207cd44feac2cdef3a23bf68e"
+          },
+          {
+            "type": "text",
+            "text": "red"
+          }
+        ],
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 287,
+          "output_tokens": 53
+        }
+      },
+      "response_sha256": "b1bc635802a734f61adb6da85c21dfdd8bc8ffa2cdd4973e453f142f0020a398",
+      "final_text": "red",
+      "final_blocks": [
+        {
+          "type": "text",
+          "text": "red"
+        }
+      ],
+      "tool_use_blocks": [],
+      "thinking_blocks": [
+        {
+          "type": "thinking",
+          "thinking": "The user wants to know the dominant color of the provided image.\nThe image is a solid red square.\nThe dominant color is red.\nThe instruction says \"Reply with the color name only\".\n\nFinal answer: red.",
+          "signature": "c2c2a54207cd44feac2cdef3a23bf68e"
+        }
+      ],
+      "assertion_blocks": [
+        {
+          "type": "text",
+          "text": "red"
+        }
+      ],
+      "content_block_types": {
+        "thinking": 1,
+        "text": 1
+      },
+      "generation_complete": true
+    },
+    {
+      "test": "vision_blue",
+      "passed": true,
+      "response": {
+        "id": "chatcmpl-8c24baceff93d6c2",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user wants to know the dominant color of the provided image.\nThe image is a solid blue square.\nThe color is blue.",
+            "signature": "07c6dece787441dbbe754d227efd9f00"
+          },
+          {
+            "type": "text",
+            "text": "blue"
+          }
+        ],
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 287,
+          "output_tokens": 34
+        }
+      },
+      "response_sha256": "0839ac3eac31e10414e863fe67b40680325682ed13292796fd91240ed541813e",
+      "final_text": "blue",
+      "final_blocks": [
+        {
+          "type": "text",
+          "text": "blue"
+        }
+      ],
+      "tool_use_blocks": [],
+      "thinking_blocks": [
+        {
+          "type": "thinking",
+          "thinking": "The user wants to know the dominant color of the provided image.\nThe image is a solid blue square.\nThe color is blue.",
+          "signature": "07c6dece787441dbbe754d227efd9f00"
+        }
+      ],
+      "assertion_blocks": [
+        {
+          "type": "text",
+          "text": "blue"
+        }
+      ],
+      "content_block_types": {
+        "thinking": 1,
+        "text": 1
+      },
+      "generation_complete": true
+    }
+  ],
+  "identity": {
+    "version": 1,
+    "model_id": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+    "checkpoint": {
+      "path": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+      "files": {
+        "config.json": {
+          "sha256": "bdd77ab53a226918ed1ac2725729c56fa13ddeba2492bc7a27f53a32aa24d0be"
+        },
+        "generation_config.json": {
+          "sha256": "d4226bbe3117d2d253ba4609720ba82c6c4ce4627a9a6ae05387c78983ac03de"
+        },
+        "chat_template.jinja": {
+          "sha256": "ae53464bf3be25802b3a5b37def7fd89667067d7577049b3b2d74c4d8de4c6d4"
+        },
+        "tokenizer_config.json": {
+          "sha256": "9f4fec4b1dc6ecddf8f4a92e9caea5971c0e67d81309f3f9066a2bee8c362633"
+        },
+        "model.safetensors.index.json": {
+          "sha256": "01adf6facae2403c2e0b02d225897535610554b1e5ad52232b66218c2d7a7e15"
+        },
+        "conversion-receipt.json": {
+          "sha256": "1fc3fb351e6f56a3dd39cd594ad55435539024bd28edd298a43f32a73e7af03b"
+        }
+      },
+      "shards": {
+        "model-00000.safetensors": {
+          "bytes": 1800839520,
+          "mtime_ns": 1792106041607621309
+        },
+        "model-00001.safetensors": {
+          "bytes": 1800522420,
+          "mtime_ns": 1792106075568272900
+        },
+        "model-00002.safetensors": {
+          "bytes": 1800337636,
+          "mtime_ns": 1792106101504006458
+        },
+        "model-00003.safetensors": {
+          "bytes": 1800524332,
+          "mtime_ns": 1792106128740726329
+        },
+        "model-00004.safetensors": {
+          "bytes": 1800524324,
+          "mtime_ns": 1792106161789386008
+        },
+        "model-00005.safetensors": {
+          "bytes": 1802055678,
+          "mtime_ns": 1792106188477110875
+        },
+        "model-00006.safetensors": {
+          "bytes": 1800523308,
+          "mtime_ns": 1792106223338751075
+        },
+        "model-00007.safetensors": {
+          "bytes": 1800524516,
+          "mtime_ns": 1792106250661468786
+        },
+        "model-00008.safetensors": {
+          "bytes": 1800337052,
+          "mtime_ns": 1792106280089164472
+        },
+        "model-00009.safetensors": {
+          "bytes": 1800524332,
+          "mtime_ns": 1792106315082802250
+        },
+        "model-00010.safetensors": {
+          "bytes": 1800524364,
+          "mtime_ns": 1792106343063512362
+        },
+        "model-00011.safetensors": {
+          "bytes": 1802054446,
+          "mtime_ns": 1792106369320240138
+        },
+        "model-00012.safetensors": {
+          "bytes": 1800335428,
+          "mtime_ns": 1792106404528874820
+        },
+        "model-00013.safetensors": {
+          "bytes": 1800521836,
+          "mtime_ns": 1792106432512584249
+        },
+        "model-00014.safetensors": {
+          "bytes": 1802046140,
+          "mtime_ns": 1792106463329185847
+        },
+        "model-00015.safetensors": {
+          "bytes": 505797976,
+          "mtime_ns": 1792106471710064010
+        },
+        "vision.safetensors": {
+          "bytes": 1145638208,
+          "mtime_ns": 1791342072579751196
+        }
+      },
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c"
+    },
+    "adapter": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/nf4-direction-w8-weight-strength-1.0-vllm-v1",
+      "base_checkpoint_path": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+      "files": {
+        "adapter_config.json": {
+          "sha256": "8f404726dab2bbd3ddbe99630a37ed3ded557ab077659c556f03e0ec36804891",
+          "bytes": 674069,
+          "mtime_ns": 1792108722097683869,
+          "device": 66306,
+          "inode": 16799555
+        },
+        "adapter_model.safetensors": {
+          "sha256": "d9e1cc5bb190673c80380f38258576b3b1dec0d7d93d36e38c2533ba36a9b7cb",
+          "bytes": 494660296,
+          "mtime_ns": 1792108721475689868,
+          "device": 66306,
+          "inode": 16799548
+        }
+      }
+    },
+    "precision": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/precision-manifest-v1.json",
+      "sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "canonical_fingerprint": "fcfbd683bfa41a79d7c5285fa9e354dc7ff81982f245e75fefb90bc2990038b3",
+      "manifest": {
+        "schema_version": 1,
+        "expected_base_checkpoint": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "config_sha256": "bdd77ab53a226918ed1ac2725729c56fa13ddeba2492bc7a27f53a32aa24d0be",
+        "index_sha256": "01adf6facae2403c2e0b02d225897535610554b1e5ad52232b66218c2d7a7e15",
+        "conversion_receipt_sha256": "1fc3fb351e6f56a3dd39cd594ad55435539024bd28edd298a43f32a73e7af03b",
+        "weight_bits": 8,
+        "activation_dtype": "bfloat16",
+        "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+        "quantization_backend": "compressed-tensors",
+        "backend_label": "compressed-tensors / Marlin W8A16 group32",
+        "quantization_configs": {
+          "root": {
+            "config_groups": {
+              "config_group_0": {
+                "format": "pack-quantized",
+                "input_activations": null,
+                "output_activations": null,
+                "targets": [
+                  "Linear"
+                ],
+                "weights": {
+                  "actorder": null,
+                  "block_structure": null,
+                  "dynamic": false,
+                  "group_size": 32,
+                  "num_bits": 8,
+                  "observer": "memoryless_minmax",
+                  "observer_kwargs": {},
+                  "scale_dtype": null,
+                  "strategy": "group",
+                  "symmetric": true,
+                  "type": "int",
+                  "zp_dtype": null
+                }
+              }
+            },
+            "format": "pack-quantized",
+            "global_compression_ratio": null,
+            "ignore": [
+              "lm_head",
+              "re:.*embed.*",
+              "re:.*vision.*",
+              "re:.*router.*",
+              "re:.*\\.gate$",
+              "re:.*norm.*"
+            ],
+            "kv_cache_scheme": null,
+            "quant_method": "compressed-tensors",
+            "quantization_status": "compressed",
+            "transform_config": {},
+            "version": "0.17.1"
+          }
+        }
+      },
+      "quality_reference": "untouched W8A16 baseline; BF16 source is conversion input only",
+      "attestation_scope": "Binds checkpoint configuration and supplied launch record. Does not independently inspect live kernel arithmetic or all inherited server environment variables."
+    },
+    "launch_profile": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/launch-v1.json",
+      "sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "canonical_fingerprint": "ff56fd03d3769ad5baffd5fefb1588c11ac33042a296c6542adf409e613a79d9",
+      "base_model_ids": [
+        "qwen3.6-35b-hauhau-w4a16-vision"
+      ],
+      "quantization_backend": "compressed-tensors",
+      "forbidden_activation_environment": [
+        "VLLM_MARLIN_INPUT_DTYPE",
+        "VLLM_HUMMING_INPUT_QUANT_CONFIG",
+        "VLLM_HUMMING_ONLINE_QUANT_CONFIG"
+      ],
+      "attestation_scope": "Supplied launch record is hashed; endpoint checks validate roots and context, not the full running command/environment or kernel precision."
+    },
+    "served_identity": {
+      "requested": {
+        "id": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "root": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/nf4-direction-w8-weight-strength-1.0-vllm-v1",
+        "parent": "qwen3.6-35b-hauhau-w4a16-vision",
+        "max_model_len": null
+      },
+      "base": {
+        "id": "qwen3.6-35b-hauhau-w4a16-vision",
+        "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "parent": null,
+        "max_model_len": 8192
+      },
+      "context_limit": 8192
+    },
+    "runtime_lock": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/runtime.lock",
+    "protocol": {
+      "version": 1,
+      "runner": "w8a16-frozen-behavior-smokes-thinking",
+      "helper_sha256": "fe7a1d2a6c7f4b340bb3ee10f65bde28191e4f1008de9b810bf9156e0fdc8590",
+      "integrity_helper_sha256": "b3054a303ebd8371a57bd0951d93dc7cc8ff974a06180f027462d5b621001696",
+      "wrapper_sha256": "cdfd43d3fcf7573e42d42047a3e40b9abebd806a6ab344cdeeb6e84f7738da6b",
+      "case_order": [
+        "forced_tool_call",
+        "tool_result_roundtrip",
+        "automatic_tool_choice",
+        "pivot_after_two_errors",
+        "workflow_completion",
+        "vision_red",
+        "vision_blue"
+      ],
+      "temperature": 0,
+      "max_tokens": 4096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 3072
+      },
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "context_limit": 8192,
+      "context_margin": 64,
+      "request_timeout_seconds": 1800,
+      "automatic_retries": false,
+      "vllm_protocol_source_sha256": {
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/entrypoints/anthropic/protocol.py": "57f6024bbbc5aeea0a8f967cf768998e1047ac621805a10f4451f52c59d34fd3",
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/entrypoints/anthropic/serving.py": "1e09aafc799b6604b187e9a8cb0b74558724d790a860f709c1236936697ec161",
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/entrypoints/openai/chat_completion/protocol.py": "4bdc71f668e4820d8ae5bae2a153fed0296b430cd6353ace8c0c27cfb982ebc1",
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/parser/gemma4.py": "c974f47dc39ab7276da1e4ae38c4010e3f5411481f75e3879e29f47b2fd08df7",
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/parser/engine/parser_engine.py": "d1075deeb25b4872e92752d7ef0598a07a747afaf2afc56058ec30c6dc1da89a",
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/config/reasoning.py": "2c4f7bdee48a9fb3d93787c4c32361c2411417cce452cfde86808d8759977861",
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/engine/arg_utils.py": "95be1adb96f55933f6a52260c8cb2181d04707401ca21d97c33108c5ab58f3ac",
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/v1/engine/input_processor.py": "d79601e4a053a7bacb0d6a23e273348435e4ab70c6a315dcccb2d428ed57d96b",
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/v1/sample/thinking_budget_state.py": "962f8f55210eb0a431cb9c78b013e35f7a7dd58d06d6fb2e7fcff1b457356f8e"
+      },
+      "chat_template_sha256": "ae53464bf3be25802b3a5b37def7fd89667067d7577049b3b2d74c4d8de4c6d4",
+      "assertion_input": "Final text blocks and tool_use blocks only; thinking never contributes.",
+      "history_policy": "Echo original assistant content, including thinking/signatures/tool IDs, into tool-result follow-ups.",
+      "scoring": "Unchanged frozen smoke predicates and conditional follow-ups. Completion is reported separately; no semantic regrading."
+    },
+    "protocol_fingerprint": "17fb2341fd7ca91144cdc68601f42220f88ae786aa84a4d1738257d3b65811c4",
+    "scope": "Seven previously seen benign development tool/vision smokes; not a broad benchmark.",
+    "comparison_scope": "Separate thinking-enabled protocol; do not pool with thinking-disabled observations.",
+    "quality_reference": "Untouched W8A16 baseline; BF16 source is conversion input only."
+  },
+  "configuration_fingerprint": "4143365d3d8ab74a58e7b290caf6181c3f3fe70fdca5a21100cccf14efc6cdb6",
+  "completed": true,
+  "error": null,
+  "native_requests": [
+    {
+      "request_index": 0,
+      "route": "/v1/messages/count_tokens",
+      "request": {
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Use the add tool to add 3 and 4."
+          }
+        ],
+        "tools": [
+          {
+            "name": "add",
+            "description": "Add two integers.",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "integer"
+                },
+                "b": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "a",
+                "b"
+              ]
+            }
+          }
+        ],
+        "tool_choice": {
+          "type": "tool",
+          "name": "add"
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "request_sha256": "08710243aa269ca0195e33580a0abedbf46f6bc70da2dd62484cc911a3442414",
+      "seconds": 0.004035807010950521,
+      "response": {
+        "input_tokens": 79,
+        "context_management": {
+          "original_input_tokens": 79
+        }
+      },
+      "response_sha256": "11c6d92dcca57d84d73dffb93339c1e924aa4e79afcea27ca8828d4ab8423e8d"
+    },
+    {
+      "request_index": 1,
+      "route": "/v1/messages",
+      "request": {
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "max_tokens": 4096,
+        "temperature": 0,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 3072
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Use the add tool to add 3 and 4."
+          }
+        ],
+        "tools": [
+          {
+            "name": "add",
+            "description": "Add two integers.",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "integer"
+                },
+                "b": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "a",
+                "b"
+              ]
+            }
+          }
+        ],
+        "tool_choice": {
+          "type": "tool",
+          "name": "add"
+        },
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "request_sha256": "b9f75decce73e3e23fbac73745209e67f020ef52648299ba7a45016cef9b6474",
+      "seconds": 6.90222957599326,
+      "response": {
+        "id": "chatcmpl-931a016a673b5ad1",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user wants to add two integers, 3 and 4, using the `add` tool.\nThe `add` tool takes two parameters: `a` and `b`, both of type `INTEGER`.\nSo, `a` should be 3 and `b` should be 4.",
+            "signature": "b048b24bf66248f2bfb3d76ad6ac0bb2"
+          },
+          {
+            "type": "tool_use",
+            "id": "chatcmpl-tool-b05b4d67580001fe",
+            "name": "add",
+            "input": {
+              "a": 3,
+              "b": 4
+            }
+          }
+        ],
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 79,
+          "output_tokens": 82
+        }
+      },
+      "response_sha256": "60d8b8c2b20c3e1d58b7c826a4bdf61e1657f1adbf719a495a3d42134cf331cd",
+      "final_text": "",
+      "final_blocks": [],
+      "tool_use_blocks": [
+        {
+          "type": "tool_use",
+          "id": "chatcmpl-tool-b05b4d67580001fe",
+          "name": "add",
+          "input": {
+            "a": 3,
+            "b": 4
+          }
+        }
+      ],
+      "thinking_blocks": [
+        {
+          "type": "thinking",
+          "thinking": "The user wants to add two integers, 3 and 4, using the `add` tool.\nThe `add` tool takes two parameters: `a` and `b`, both of type `INTEGER`.\nSo, `a` should be 3 and `b` should be 4.",
+          "signature": "b048b24bf66248f2bfb3d76ad6ac0bb2"
+        }
+      ],
+      "assertion_blocks": [
+        {
+          "type": "tool_use",
+          "id": "chatcmpl-tool-b05b4d67580001fe",
+          "name": "add",
+          "input": {
+            "a": 3,
+            "b": 4
+          }
+        }
+      ],
+      "content_block_types": {
+        "thinking": 1,
+        "tool_use": 1
+      },
+      "generation_complete": true,
+      "usage": {
+        "input_tokens": 79,
+        "output_tokens": 82
+      },
+      "stop_reason": "end_turn",
+      "counted_input_tokens": 79
+    },
+    {
+      "request_index": 2,
+      "route": "/v1/messages/count_tokens",
+      "request": {
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Use the add tool to add 3 and 4."
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "thinking",
+                "thinking": "The user wants to add two integers, 3 and 4, using the `add` tool.\nThe `add` tool takes two parameters: `a` and `b`, both of type `INTEGER`.\nSo, `a` should be 3 and `b` should be 4.",
+                "signature": "b048b24bf66248f2bfb3d76ad6ac0bb2"
+              },
+              {
+                "type": "tool_use",
+                "id": "chatcmpl-tool-b05b4d67580001fe",
+                "name": "add",
+                "input": {
+                  "a": 3,
+                  "b": 4
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "chatcmpl-tool-b05b4d67580001fe",
+                "content": "7"
+              }
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "add",
+            "description": "Add two integers.",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "integer"
+                },
+                "b": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "a",
+                "b"
+              ]
+            }
+          }
+        ],
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "request_sha256": "d57f89f8f2d196ed48041a2a81472e0413b824aa1968ccea1fffe5b76875afb6",
+      "seconds": 0.007633980974787846,
+      "response": {
+        "input_tokens": 176,
+        "context_management": {
+          "original_input_tokens": 176
+        }
+      },
+      "response_sha256": "28d46e1ea573d2fba2cc0d79e1e3e4ca9f59c1fd21d5ff2b0830193079530eff"
+    },
+    {
+      "request_index": 3,
+      "route": "/v1/messages",
+      "request": {
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "max_tokens": 4096,
+        "temperature": 0,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 3072
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Use the add tool to add 3 and 4."
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "thinking",
+                "thinking": "The user wants to add two integers, 3 and 4, using the `add` tool.\nThe `add` tool takes two parameters: `a` and `b`, both of type `INTEGER`.\nSo, `a` should be 3 and `b` should be 4.",
+                "signature": "b048b24bf66248f2bfb3d76ad6ac0bb2"
+              },
+              {
+                "type": "tool_use",
+                "id": "chatcmpl-tool-b05b4d67580001fe",
+                "name": "add",
+                "input": {
+                  "a": 3,
+                  "b": 4
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "chatcmpl-tool-b05b4d67580001fe",
+                "content": "7"
+              }
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "add",
+            "description": "Add two integers.",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "integer"
+                },
+                "b": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "a",
+                "b"
+              ]
+            }
+          }
+        ],
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "request_sha256": "611d046c50861c1ce07e940108f8dd237006c0a4785df4d165a48f462dd8696b",
+      "seconds": 4.715019719005795,
+      "response": {
+        "id": "chatcmpl-9948fd93d6ca32f1",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The `add` tool returned the value 7.\nThe user's request was to add 3 and 4.\nThe result is 7.\nFinal answer should state the result.",
+            "signature": "3f1b0ef0af564bcda56f0d9b96354da6"
+          },
+          {
+            "type": "text",
+            "text": "The sum of 3 and 4 is 7."
+          }
+        ],
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 176,
+          "output_tokens": 56
+        }
+      },
+      "response_sha256": "f631e19386128796255c9a1b3f4b394d70527714de1fe86225859979e1e9e55d",
+      "final_text": "The sum of 3 and 4 is 7.",
+      "final_blocks": [
+        {
+          "type": "text",
+          "text": "The sum of 3 and 4 is 7."
+        }
+      ],
+      "tool_use_blocks": [],
+      "thinking_blocks": [
+        {
+          "type": "thinking",
+          "thinking": "The `add` tool returned the value 7.\nThe user's request was to add 3 and 4.\nThe result is 7.\nFinal answer should state the result.",
+          "signature": "3f1b0ef0af564bcda56f0d9b96354da6"
+        }
+      ],
+      "assertion_blocks": [
+        {
+          "type": "text",
+          "text": "The sum of 3 and 4 is 7."
+        }
+      ],
+      "content_block_types": {
+        "thinking": 1,
+        "text": 1
+      },
+      "generation_complete": true,
+      "usage": {
+        "input_tokens": 176,
+        "output_tokens": 56
+      },
+      "stop_reason": "end_turn",
+      "counted_input_tokens": 176
+    },
+    {
+      "request_index": 4,
+      "route": "/v1/messages/count_tokens",
+      "request": {
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is 19 plus 23? Use the available calculator."
+          }
+        ],
+        "tools": [
+          {
+            "name": "add",
+            "description": "Add two integers.",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "integer"
+                },
+                "b": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "a",
+                "b"
+              ]
+            }
+          }
+        ],
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "request_sha256": "8d32e8bdd48eb7ee9846229c12c936df5e25c5f8a22ea33195ed8abc512f8a70",
+      "seconds": 0.00632145898998715,
+      "response": {
+        "input_tokens": 82,
+        "context_management": {
+          "original_input_tokens": 82
+        }
+      },
+      "response_sha256": "79a93deea2e3d285b006b280c4245cc731c026dfdbd0296ddd1bbd3b27658b36"
+    },
+    {
+      "request_index": 5,
+      "route": "/v1/messages",
+      "request": {
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "max_tokens": 4096,
+        "temperature": 0,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 3072
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is 19 plus 23? Use the available calculator."
+          }
+        ],
+        "tools": [
+          {
+            "name": "add",
+            "description": "Add two integers.",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "integer"
+                },
+                "b": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "a",
+                "b"
+              ]
+            }
+          }
+        ],
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "request_sha256": "e1992938e2d8a8ed65900064f7e3568b9e7c2109c13045c403530409943aac63",
+      "seconds": 5.978245261008851,
+      "response": {
+        "id": "chatcmpl-93a7a201252987f9",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user wants to add two numbers: 19 and 23.\nThe available tool is `add(a, b)`.\nSo, the call should be `add(a=19, b=23)`.",
+            "signature": "8c91e60f405d42c59c4d6904f1e2435a"
+          },
+          {
+            "type": "tool_use",
+            "id": "chatcmpl-tool-a960e725369d4440",
+            "name": "add",
+            "input": {
+              "a": 19,
+              "b": 23
+            }
+          }
+        ],
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "stop_reason": "tool_use",
+        "usage": {
+          "input_tokens": 82,
+          "output_tokens": 71
+        }
+      },
+      "response_sha256": "4bd944015be379283f6b8764bd37c59f2717fef7103553f866827676612f3175",
+      "final_text": "",
+      "final_blocks": [],
+      "tool_use_blocks": [
+        {
+          "type": "tool_use",
+          "id": "chatcmpl-tool-a960e725369d4440",
+          "name": "add",
+          "input": {
+            "a": 19,
+            "b": 23
+          }
+        }
+      ],
+      "thinking_blocks": [
+        {
+          "type": "thinking",
+          "thinking": "The user wants to add two numbers: 19 and 23.\nThe available tool is `add(a, b)`.\nSo, the call should be `add(a=19, b=23)`.",
+          "signature": "8c91e60f405d42c59c4d6904f1e2435a"
+        }
+      ],
+      "assertion_blocks": [
+        {
+          "type": "tool_use",
+          "id": "chatcmpl-tool-a960e725369d4440",
+          "name": "add",
+          "input": {
+            "a": 19,
+            "b": 23
+          }
+        }
+      ],
+      "content_block_types": {
+        "thinking": 1,
+        "tool_use": 1
+      },
+      "generation_complete": true,
+      "usage": {
+        "input_tokens": 82,
+        "output_tokens": 71
+      },
+      "stop_reason": "tool_use",
+      "counted_input_tokens": 82
+    },
+    {
+      "request_index": 6,
+      "route": "/v1/messages/count_tokens",
+      "request": {
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Read /reports/quarterly.pdf and tell me its revenue. If a format is unsupported, use another available representation."
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool_use",
+                "id": "failed_1",
+                "name": "read_pdf",
+                "input": {
+                  "path": "/reports/quarterly.pdf"
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "failed_1",
+                "is_error": true,
+                "content": "Unsupported encrypted PDF. A complete plain-text export is available at /reports/quarterly.txt."
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool_use",
+                "id": "failed_2",
+                "name": "read_pdf",
+                "input": {
+                  "path": "/reports/quarterly.pdf"
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "failed_2",
+                "is_error": true,
+                "content": "Unsupported encrypted PDF. A complete plain-text export is available at /reports/quarterly.txt."
+              }
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "read_pdf",
+            "description": "Read a local PDF report.",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          },
+          {
+            "name": "read_text",
+            "description": "Read a local plain-text report export.",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          }
+        ],
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "request_sha256": "eccc0ae4322276b55573a752d0fecb3dead8aa568cc2ed862b5a8a95446d1de0",
+      "seconds": 0.008448524022242054,
+      "response": {
+        "input_tokens": 241,
+        "context_management": {
+          "original_input_tokens": 241
+        }
+      },
+      "response_sha256": "77130ff4ddcc645bac87f2d4911160943f8f49733cd39ab474279f9421857bb0"
+    },
+    {
+      "request_index": 7,
+      "route": "/v1/messages",
+      "request": {
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "max_tokens": 4096,
+        "temperature": 0,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 3072
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Read /reports/quarterly.pdf and tell me its revenue. If a format is unsupported, use another available representation."
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool_use",
+                "id": "failed_1",
+                "name": "read_pdf",
+                "input": {
+                  "path": "/reports/quarterly.pdf"
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "failed_1",
+                "is_error": true,
+                "content": "Unsupported encrypted PDF. A complete plain-text export is available at /reports/quarterly.txt."
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool_use",
+                "id": "failed_2",
+                "name": "read_pdf",
+                "input": {
+                  "path": "/reports/quarterly.pdf"
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "failed_2",
+                "is_error": true,
+                "content": "Unsupported encrypted PDF. A complete plain-text export is available at /reports/quarterly.txt."
+              }
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "read_pdf",
+            "description": "Read a local PDF report.",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          },
+          {
+            "name": "read_text",
+            "description": "Read a local plain-text report export.",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          }
+        ],
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "request_sha256": "61ea1541e67cf8fd7a57e11983bbae76256c17cbbf9ff835588caba0084f8a24",
+      "seconds": 7.548823204007931,
+      "response": {
+        "id": "chatcmpl-82f281a32311488d",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user wants to know the revenue from `/reports/quarterly.pdf`.\nThe first attempt to read the PDF failed because it is encrypted.\nThe error message suggests a plain-text export is available at `/reports/quarterly.txt`.\nSo, the next step is to read `/reports/quarterly.txt`.",
+            "signature": "ee9744c80b084717bcd7797a9ffdff4d"
+          },
+          {
+            "type": "tool_use",
+            "id": "chatcmpl-tool-af9cf3820064fecd",
+            "name": "read_text",
+            "input": {
+              "path": "/reports/quarterly.txt"
+            }
+          }
+        ],
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "stop_reason": "tool_use",
+        "usage": {
+          "input_tokens": 241,
+          "output_tokens": 90
+        }
+      },
+      "response_sha256": "af4701bade81d693dfe03c486b032310f10cb7171e6b8182f5057ba84c1741db",
+      "final_text": "",
+      "final_blocks": [],
+      "tool_use_blocks": [
+        {
+          "type": "tool_use",
+          "id": "chatcmpl-tool-af9cf3820064fecd",
+          "name": "read_text",
+          "input": {
+            "path": "/reports/quarterly.txt"
+          }
+        }
+      ],
+      "thinking_blocks": [
+        {
+          "type": "thinking",
+          "thinking": "The user wants to know the revenue from `/reports/quarterly.pdf`.\nThe first attempt to read the PDF failed because it is encrypted.\nThe error message suggests a plain-text export is available at `/reports/quarterly.txt`.\nSo, the next step is to read `/reports/quarterly.txt`.",
+          "signature": "ee9744c80b084717bcd7797a9ffdff4d"
+        }
+      ],
+      "assertion_blocks": [
+        {
+          "type": "tool_use",
+          "id": "chatcmpl-tool-af9cf3820064fecd",
+          "name": "read_text",
+          "input": {
+            "path": "/reports/quarterly.txt"
+          }
+        }
+      ],
+      "content_block_types": {
+        "thinking": 1,
+        "tool_use": 1
+      },
+      "generation_complete": true,
+      "usage": {
+        "input_tokens": 241,
+        "output_tokens": 90
+      },
+      "stop_reason": "tool_use",
+      "counted_input_tokens": 241
+    },
+    {
+      "request_index": 8,
+      "route": "/v1/messages/count_tokens",
+      "request": {
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Read /reports/quarterly.pdf and tell me its revenue. If a format is unsupported, use another available representation."
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool_use",
+                "id": "failed_1",
+                "name": "read_pdf",
+                "input": {
+                  "path": "/reports/quarterly.pdf"
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "failed_1",
+                "is_error": true,
+                "content": "Unsupported encrypted PDF. A complete plain-text export is available at /reports/quarterly.txt."
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool_use",
+                "id": "failed_2",
+                "name": "read_pdf",
+                "input": {
+                  "path": "/reports/quarterly.pdf"
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "failed_2",
+                "is_error": true,
+                "content": "Unsupported encrypted PDF. A complete plain-text export is available at /reports/quarterly.txt."
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "thinking",
+                "thinking": "The user wants to know the revenue from `/reports/quarterly.pdf`.\nThe first attempt to read the PDF failed because it is encrypted.\nThe error message suggests a plain-text export is available at `/reports/quarterly.txt`.\nSo, the next step is to read `/reports/quarterly.txt`.",
+                "signature": "ee9744c80b084717bcd7797a9ffdff4d"
+              },
+              {
+                "type": "tool_use",
+                "id": "chatcmpl-tool-af9cf3820064fecd",
+                "name": "read_text",
+                "input": {
+                  "path": "/reports/quarterly.txt"
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "chatcmpl-tool-af9cf3820064fecd",
+                "content": "Quarterly revenue: USD 47 million. Operating costs: USD 31 million."
+              }
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "read_pdf",
+            "description": "Read a local PDF report.",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          },
+          {
+            "name": "read_text",
+            "description": "Read a local plain-text report export.",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          }
+        ],
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "request_sha256": "4559844b8a0508382f729a0f31d2e92342262cbb37bea21aa6d17608368bd622",
+      "seconds": 0.009593619994120672,
+      "response": {
+        "input_tokens": 366,
+        "context_management": {
+          "original_input_tokens": 366
+        }
+      },
+      "response_sha256": "34eaf81d5746f6f04ed44bab646a407665a8c50753e612e96b30dd5658a8527e"
+    },
+    {
+      "request_index": 9,
+      "route": "/v1/messages",
+      "request": {
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "max_tokens": 4096,
+        "temperature": 0,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 3072
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Read /reports/quarterly.pdf and tell me its revenue. If a format is unsupported, use another available representation."
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool_use",
+                "id": "failed_1",
+                "name": "read_pdf",
+                "input": {
+                  "path": "/reports/quarterly.pdf"
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "failed_1",
+                "is_error": true,
+                "content": "Unsupported encrypted PDF. A complete plain-text export is available at /reports/quarterly.txt."
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool_use",
+                "id": "failed_2",
+                "name": "read_pdf",
+                "input": {
+                  "path": "/reports/quarterly.pdf"
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "failed_2",
+                "is_error": true,
+                "content": "Unsupported encrypted PDF. A complete plain-text export is available at /reports/quarterly.txt."
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "thinking",
+                "thinking": "The user wants to know the revenue from `/reports/quarterly.pdf`.\nThe first attempt to read the PDF failed because it is encrypted.\nThe error message suggests a plain-text export is available at `/reports/quarterly.txt`.\nSo, the next step is to read `/reports/quarterly.txt`.",
+                "signature": "ee9744c80b084717bcd7797a9ffdff4d"
+              },
+              {
+                "type": "tool_use",
+                "id": "chatcmpl-tool-af9cf3820064fecd",
+                "name": "read_text",
+                "input": {
+                  "path": "/reports/quarterly.txt"
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "chatcmpl-tool-af9cf3820064fecd",
+                "content": "Quarterly revenue: USD 47 million. Operating costs: USD 31 million."
+              }
+            ]
+          }
+        ],
+        "tools": [
+          {
+            "name": "read_pdf",
+            "description": "Read a local PDF report.",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          },
+          {
+            "name": "read_text",
+            "description": "Read a local plain-text report export.",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          }
+        ],
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "request_sha256": "8330230eb3cd92ff809f9a9ccece66c28f484b8da908199fae04e56659d5148a",
+      "seconds": 3.869108597020386,
+      "response": {
+        "id": "chatcmpl-975126c69ecc79dc",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The text file `/reports/quarterly.txt` contains the information: \"Quarterly revenue: USD 47 million.\"\nThe user asked for the revenue.",
+            "signature": "c490ba4a0e8344beb974024fd52a5504"
+          },
+          {
+            "type": "text",
+            "text": "The revenue is USD 47 million."
+          }
+        ],
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 366,
+          "output_tokens": 46
+        }
+      },
+      "response_sha256": "711303dc193ea5ac86514878a95a161901d873018b448e11b71efbe9c092507e",
+      "final_text": "The revenue is USD 47 million.",
+      "final_blocks": [
+        {
+          "type": "text",
+          "text": "The revenue is USD 47 million."
+        }
+      ],
+      "tool_use_blocks": [],
+      "thinking_blocks": [
+        {
+          "type": "thinking",
+          "thinking": "The text file `/reports/quarterly.txt` contains the information: \"Quarterly revenue: USD 47 million.\"\nThe user asked for the revenue.",
+          "signature": "c490ba4a0e8344beb974024fd52a5504"
+        }
+      ],
+      "assertion_blocks": [
+        {
+          "type": "text",
+          "text": "The revenue is USD 47 million."
+        }
+      ],
+      "content_block_types": {
+        "thinking": 1,
+        "text": 1
+      },
+      "generation_complete": true,
+      "usage": {
+        "input_tokens": 366,
+        "output_tokens": 46
+      },
+      "stop_reason": "end_turn",
+      "counted_input_tokens": 366
+    },
+    {
+      "request_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "request": {
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "image",
+                "source": {
+                  "type": "base64",
+                  "media_type": "image/png",
+                  "data": "iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAABLElEQVR4nO3RQREAIAzAMIZ/zyAjjzUKetd5J9LVAds1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgH8/hAf+bYtS1AAAAAElFTkSuQmCC"
+                }
+              },
+              {
+                "type": "text",
+                "text": "What is the dominant color? Reply with the color name only."
+              }
+            ]
+          }
+        ],
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "request_sha256": "056c9144ed87534a79da12ecf139ea9e86c167a1966298f22f0e38f93c473699",
+      "seconds": 0.008435255993390456,
+      "response": {
+        "input_tokens": 287,
+        "context_management": {
+          "original_input_tokens": 287
+        }
+      },
+      "response_sha256": "9bb2c56e67a20b983441dc75bc18265403d9623234ecabd809340e9ee90d8feb"
+    },
+    {
+      "request_index": 11,
+      "route": "/v1/messages",
+      "request": {
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "max_tokens": 4096,
+        "temperature": 0,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 3072
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "image",
+                "source": {
+                  "type": "base64",
+                  "media_type": "image/png",
+                  "data": "iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAABLElEQVR4nO3RQREAIAzAMIZ/zyAjjzUKetd5J9LVAds1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgH8/hAf+bYtS1AAAAAElFTkSuQmCC"
+                }
+              },
+              {
+                "type": "text",
+                "text": "What is the dominant color? Reply with the color name only."
+              }
+            ]
+          }
+        ],
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "request_sha256": "03e54b000dee5057265daa32a2546506dd64905414cb1223b523d4525c28ce0f",
+      "seconds": 4.475258307997137,
+      "response": {
+        "id": "chatcmpl-8ab67bfcd4f95795",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user wants to know the dominant color of the provided image.\nThe image is a solid red square.\nThe dominant color is red.\nThe instruction says \"Reply with the color name only\".\n\nFinal answer: red.",
+            "signature": "c2c2a54207cd44feac2cdef3a23bf68e"
+          },
+          {
+            "type": "text",
+            "text": "red"
+          }
+        ],
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 287,
+          "output_tokens": 53
+        }
+      },
+      "response_sha256": "b1bc635802a734f61adb6da85c21dfdd8bc8ffa2cdd4973e453f142f0020a398",
+      "final_text": "red",
+      "final_blocks": [
+        {
+          "type": "text",
+          "text": "red"
+        }
+      ],
+      "tool_use_blocks": [],
+      "thinking_blocks": [
+        {
+          "type": "thinking",
+          "thinking": "The user wants to know the dominant color of the provided image.\nThe image is a solid red square.\nThe dominant color is red.\nThe instruction says \"Reply with the color name only\".\n\nFinal answer: red.",
+          "signature": "c2c2a54207cd44feac2cdef3a23bf68e"
+        }
+      ],
+      "assertion_blocks": [
+        {
+          "type": "text",
+          "text": "red"
+        }
+      ],
+      "content_block_types": {
+        "thinking": 1,
+        "text": 1
+      },
+      "generation_complete": true,
+      "usage": {
+        "input_tokens": 287,
+        "output_tokens": 53
+      },
+      "stop_reason": "end_turn",
+      "counted_input_tokens": 287
+    },
+    {
+      "request_index": 12,
+      "route": "/v1/messages/count_tokens",
+      "request": {
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "image",
+                "source": {
+                  "type": "base64",
+                  "media_type": "image/png",
+                  "data": "iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAABLUlEQVR4nO3RQREAIAzAsIF/z0NGHjQKetczsxPn6oDfNQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA/N4wH/EYZiSQAAAABJRU5ErkJggg=="
+                }
+              },
+              {
+                "type": "text",
+                "text": "What is the dominant color? Reply with the color name only."
+              }
+            ]
+          }
+        ],
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "request_sha256": "da2d39485e1b58599bee28c2c5d899b75d3130cfd0b32175ba0036333d93cf83",
+      "seconds": 0.0069835449976380914,
+      "response": {
+        "input_tokens": 287,
+        "context_management": {
+          "original_input_tokens": 287
+        }
+      },
+      "response_sha256": "9bb2c56e67a20b983441dc75bc18265403d9623234ecabd809340e9ee90d8feb"
+    },
+    {
+      "request_index": 13,
+      "route": "/v1/messages",
+      "request": {
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "max_tokens": 4096,
+        "temperature": 0,
+        "thinking": {
+          "type": "enabled",
+          "budget_tokens": 3072
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "image",
+                "source": {
+                  "type": "base64",
+                  "media_type": "image/png",
+                  "data": "iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAABLUlEQVR4nO3RQREAIAzAsIF/z0NGHjQKetczsxPn6oDfNQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA3AGoA1AGsA1gCsAVgDsAZgDcAagDUAawDWAKwBWAOwBmANwBqANQBrANYArAFYA7AGYA/N4wH/EYZiSQAAAABJRU5ErkJggg=="
+                }
+              },
+              {
+                "type": "text",
+                "text": "What is the dominant color? Reply with the color name only."
+              }
+            ]
+          }
+        ],
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "request_sha256": "cce9cfe0aec7b3c125e0ea9552e906f2b86304f31a86ee40e0292cefb5984886",
+      "seconds": 2.9032198619970586,
+      "response": {
+        "id": "chatcmpl-8c24baceff93d6c2",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user wants to know the dominant color of the provided image.\nThe image is a solid blue square.\nThe color is blue.",
+            "signature": "07c6dece787441dbbe754d227efd9f00"
+          },
+          {
+            "type": "text",
+            "text": "blue"
+          }
+        ],
+        "model": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 287,
+          "output_tokens": 34
+        }
+      },
+      "response_sha256": "0839ac3eac31e10414e863fe67b40680325682ed13292796fd91240ed541813e",
+      "final_text": "blue",
+      "final_blocks": [
+        {
+          "type": "text",
+          "text": "blue"
+        }
+      ],
+      "tool_use_blocks": [],
+      "thinking_blocks": [
+        {
+          "type": "thinking",
+          "thinking": "The user wants to know the dominant color of the provided image.\nThe image is a solid blue square.\nThe color is blue.",
+          "signature": "07c6dece787441dbbe754d227efd9f00"
+        }
+      ],
+      "assertion_blocks": [
+        {
+          "type": "text",
+          "text": "blue"
+        }
+      ],
+      "content_block_types": {
+        "thinking": 1,
+        "text": 1
+      },
+      "generation_complete": true,
+      "usage": {
+        "input_tokens": 287,
+        "output_tokens": 34
+      },
+      "stop_reason": "end_turn",
+      "counted_input_tokens": 287
+    }
+  ],
+  "seconds": 37.99889002300915,
+  "passed": 7,
+  "total": 7,
+  "expected_total": 7,
+  "generation_count": 7,
+  "all_generations_complete": true,
+  "truncated_generations": 0,
+  "total_output_tokens": 432,
+  "thinking_block_count": 7,
+  "refusal_evaluation_performed": false,
+  "full_quality_retention_gate_evaluated": false,
+  "result_sha256": "c90db9c40cd6e769266fa4adab87a72f422668c19b0f8fcc47a0a4d8f6d8fb12"
+}

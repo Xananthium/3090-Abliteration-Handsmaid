@@ -1,0 +1,10 @@
+{
+  "method": "Constructed installed native Anthropic request, converted via _build_base_request/_handle_thinking and actual ChatCompletion.to_sampling_params with server defaults",
+  "anthropic_temperature": 0.0,
+  "chat_temperature": 0.0,
+  "effective_temperature": 0.0,
+  "effective_top_p": 1.0,
+  "effective_top_k": 0,
+  "reasoning_effort": "none",
+  "conclusion": "The native API preserves temperature zero; varying outputs are not explained by defaulttemperature0.5 overriding it."
+}

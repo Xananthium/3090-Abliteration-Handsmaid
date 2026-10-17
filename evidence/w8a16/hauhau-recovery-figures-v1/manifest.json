@@ -1,0 +1,23 @@
+{
+  "started_utc": "2026-10-16T01:54:55.204130+00:00",
+  "finished_utc": "2026-10-16T01:54:55.662079+00:00",
+  "elapsed_seconds": 0.45794870899408124,
+  "source_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/result.json",
+  "source_sha256": "e7dfbee08e89e9ae19a4ec883392422e8485ffb7dfb9837c8dc2e99d1245cacf",
+  "script_sha256": "1787db1058a77acdd9fd1c458a9adcd6ad43069344f746eec6bd4577b12b4262",
+  "outputs": [
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-recovery-figures-v1/hauhau-weight-edit-recovery-v1.png",
+      "sha256": "f2807fb23fc24628f4105b03aeb8180ba826ec8f5809615c858801bafd161f87",
+      "bytes": 260279
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-recovery-figures-v1/hauhau-weight-edit-recovery-v1.svg",
+      "sha256": "aa6d4e39ce426a3d97b2e169f90d7e4b3d5a84df32f4f68d4cb10e0b0e0ccc3b",
+      "bytes": 127378
+    }
+  ],
+  "peak_rss_bytes": 547348480,
+  "inference_or_gpu_actions": false,
+  "scope": "Seven sampled weight matrices; no behavioral conclusions."
+}

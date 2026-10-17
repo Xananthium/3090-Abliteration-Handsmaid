@@ -1,0 +1,560 @@
+{
+  "status": "metadata_and_header_audit_complete_no_tensor_pilot_run",
+  "checked_utc": "2026-10-16T01:38:45.713225+00:00",
+  "question": "Can refusal-related edit geometry be estimated from existing Hauhau Gemma and compared with the common base before REDCELL specialist tuning?",
+  "conclusion": {
+    "small_controlled_pilot_feasible": true,
+    "exact_original_edit_recovery_established": false,
+    "causal_refusal_direction_identified": false,
+    "transfer_to_redcell_tested": false,
+    "preferred_pair": "Original pinned Hauhau Q8_K_P ranges, selecting its actual F16 shared-down tensors, against identical Google/Unsloth BF16 base weights converted to the same F16 representation. Avoid the extra W6 requantization for first diagnosis."
+  },
+  "hauhau": {
+    "repo": "HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "file": "Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "bytes": 27275669856,
+    "file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d",
+    "published_parent": "google/gemma-4-26B-A4B-it",
+    "full_local_payload_present": false,
+    "exact_remote_header_matches_retained_header": true,
+    "header_range_bytes": 15822240,
+    "header_sha256": "3b8634bf0cd2effdd9993bf546e81eb5f08094a85fc979645d2b6357b1113e20",
+    "tensor_count": 658,
+    "tensor_types": {
+      "F32": 392,
+      "Q8_0": 207,
+      "F16": 59
+    },
+    "f16_shared_down_layers": [
+      0,
+      1,
+      2,
+      25,
+      26,
+      27,
+      28
+    ],
+    "all_attention_output_and_expert_down_tensors_quantized": true,
+    "imatrix_metadata": {
+      "quantize.imatrix.file": "/media/hauhaucs/New Volume/LM Models/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/Gemma4-26B-A4B-Uncensored-HauhauCS-Ba",
+      "quantize.imatrix.dataset": "/home/hauhaucs/llama.cpp/groups_merged.txt",
+      "quantize.imatrix.entries_count": 295,
+      "quantize.imatrix.chunks_count": 93
+    },
+    "imatrix_payload_or_dataset_in_repo": false,
+    "full_f16_or_bf16_text_checkpoint_in_repo": false
+  },
+  "base_identity": {
+    "checked_revisions": {
+      "google-release": {
+        "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+        "weights": {
+          "model-00001-of-00002.safetensors": {
+            "bytes": 49907246508,
+            "sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+          },
+          "model-00002-of-00002.safetensors": {
+            "bytes": 1704763408,
+            "sha256": "aab47033e1e8a492ef8e581efae1cf36478d0433567e7729b3c1728bc8970db7"
+          }
+        }
+      },
+      "google-pre-hauhau": {
+        "revision": "462a98a12e28e2cbcfccaf78fe41e3e50235e6ae",
+        "weights": {
+          "model-00001-of-00002.safetensors": {
+            "bytes": 49907246508,
+            "sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+          },
+          "model-00002-of-00002.safetensors": {
+            "bytes": 1704763408,
+            "sha256": "aab47033e1e8a492ef8e581efae1cf36478d0433567e7729b3c1728bc8970db7"
+          }
+        }
+      },
+      "google": {
+        "revision": "4d7ae4984b7db7de8f8457170b3f1a419ee76d52",
+        "weights": {
+          "model-00001-of-00002.safetensors": {
+            "bytes": 49907246508,
+            "sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+          },
+          "model-00002-of-00002.safetensors": {
+            "bytes": 1704763408,
+            "sha256": "aab47033e1e8a492ef8e581efae1cf36478d0433567e7729b3c1728bc8970db7"
+          }
+        }
+      },
+      "unsloth-pre-hauhau": {
+        "revision": "cd98c13581a9d4ad061cb85d983232ca4edb1343",
+        "weights": {
+          "model-00001-of-00002.safetensors": {
+            "bytes": 49907246508,
+            "sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+          },
+          "model-00002-of-00002.safetensors": {
+            "bytes": 1704763408,
+            "sha256": "aab47033e1e8a492ef8e581efae1cf36478d0433567e7729b3c1728bc8970db7"
+          }
+        }
+      },
+      "unsloth": {
+        "revision": "60941ad6341d0b7af91277ff25c4175f08b56819",
+        "weights": {
+          "model-00001-of-00002.safetensors": {
+            "bytes": 49907246508,
+            "sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+          },
+          "model-00002-of-00002.safetensors": {
+            "bytes": 1704763408,
+            "sha256": "aab47033e1e8a492ef8e581efae1cf36478d0433567e7729b3c1728bc8970db7"
+          }
+        }
+      }
+    },
+    "all_two_shard_lfs_hashes_identical": true,
+    "google_unsloth_index_blob_ids_identical": true,
+    "config_and_chat_template_blob_ids_differ": true,
+    "inference": "The audited published Google/Unsloth checkpoint weights are byte-identical, including release-time and pre-Hauhau snapshots. Missing exact author base commit remains a provenance gap, but does not create a weight mismatch among these audited revisions. Unpublished intermediate modifications cannot be excluded.",
+    "google_first_shard_header": {
+      "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+      "data_offset": 129808,
+      "sha256": "677745fd61936937bb67ebe62f4f8098544f5d26cf2b8653879b1fd10fada820",
+      "matches_old_saved_header": true
+    }
+  },
+  "our_w6_backup": {
+    "repo": "Xananthium/Gemma4-26B-A4B-Hauhau-Balanced-W6A8-Vision",
+    "revision": "b130caf22ec83ed1aa49564fd874fd44d294d9d5",
+    "retained_receipt": "/home/isnotreal/model-tools/full-round-20261006/publication-verified/gemma.json",
+    "remote_metadata_matches_all_previously_verified_files": true,
+    "total_bytes": 22542778380,
+    "remote_model_payload_downloaded_bytes": 0,
+    "precision_chain": "Hauhau mixed F16/F32/Q8_0 GGUF -> dequantization -> BF16 cast -> symmetric group32 INT6 packing, with dynamic per-token INT8 activations. Vision comes from original official BF16 tensor ranges.",
+    "quantized_linears": 11725,
+    "clean_pre_quantization_hauhau_edit_preserved": false,
+    "why_not_first_pilot": "Additional BF16 rounding and INT6 quantization can obscure the original edit. BF16 stored support/router/norm tensors are not proof of original BF16 text-linears."
+  },
+  "published_edit_artifacts": {
+    "current_hauhau_model_catalog_count": 27,
+    "current_model_catalog_contains_code_or_clean_adapter_or_direction_files": false,
+    "hauhau_public_datasets": [],
+    "hauhau_public_spaces": [],
+    "scope": "Checked current public author model file catalog, exact Gemma repo listing/card, relevant discussions, dataset/space lists, and primary historical package artifact. Absence here is not proof of no private or unindexed copy.",
+    "historical_code": {
+      "package": "reaper-abliteration 2.5.2",
+      "source_url": "https://files.pythonhosted.org/packages/60/9a/d7134fef086f8f263623e280735dcaa6c356c04c2002608bc323aa5808a8/reaper_abliteration-2.5.2-py3-none-any.whl",
+      "bytes": 102507,
+      "sha256": "9df0c1541cf357824d2abad9ed1a6237c8a34552f25d2a17a04db9b7d7e66192",
+      "author_metadata": "HauhauCS",
+      "remote_original_wheel_verified_equal_to_retained_copy": true,
+      "generic_model_py_abliterate_and_rank_k_code_present": true,
+      "exact_gemma_run_configuration_or_directions_present": false,
+      "exact_model_generated_by_this_version_proven": false,
+      "installed_or_executed": false,
+      "current_project_repository_and_pypi_index_http_status": 404
+    },
+    "author_methodology_statement_url": "https://huggingface.co/HauhauCS/Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive/discussions/5",
+    "gemma_safetensors_request_url": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/discussions/6",
+    "gemma_safetensors_request_author_response_present": false
+  },
+  "conversion_mapping": {
+    "local_llama_cpp_commit": "b21e4de74567f5eef213765c9476a843c2e43f0d",
+    "local_converter_files_clean": true,
+    "same_commit_was_used_by_hauhau": null,
+    "rules": [
+      "Gemma4 overrides norm_shift to zero; do not apply Gemma3 +1 norm conversion.",
+      "Inherited embedding handling removes out-of-vocabulary padding rows; do not treat restored zero padding as model edits.",
+      "Shared MLP and attention matrix storage orientation is unchanged for this mapping; compare explicit logical shapes.",
+      "Experts retain their leading expert axis; fused [128,1408,2816] gate_up rows split in half into gate and up per expert. Fused down is [128,2816,704].",
+      "router.scale and router.per_expert_scale are renamed to GGUF scale tensors; do not accidentally fold or drop those when comparing normal F16/Q8 paths.",
+      "Cached gemma-gguf-tensors.json used packed data array shapes for quantized entries (for example 4352 bytes instead of 4096 logical values). Use newly verified GGUF logical tensor shapes, not those packed shapes."
+    ],
+    "expert_alignment": "Numerical expert order is preserved by our documented conversion. Hauhau-to-base expert identity has not yet been verified with tensor values; router/scales and sampled expert signatures are necessary before an expert-level difference claim.",
+    "source": "https://github.com/ggml-org/llama.cpp/blob/b21e4de74567f5eef213765c9476a843c2e43f0d/conversion/gemma.py"
+  },
+  "bounded_pilot_proposal": {
+    "executed": false,
+    "phase1_targets": [
+      {
+        "hf_tensor": "model.language_model.layers.0.mlp.down_proj.weight",
+        "gguf_tensor": "blk.0.ffn_down.weight",
+        "shape": [
+          2816,
+          2112
+        ],
+        "base_dtype": "BF16",
+        "hauhau_dtype": "F16",
+        "hauhau_offset": 858575264,
+        "hauhau_bytes": 11894784,
+        "base_file": "model-00001-of-00002.safetensors",
+        "base_absolute_offset": 3005550866,
+        "base_bytes": 11894784,
+        "combined_raw_bytes": 23789568
+      },
+      {
+        "hf_tensor": "model.language_model.layers.1.mlp.down_proj.weight",
+        "gguf_tensor": "blk.1.ffn_down.weight",
+        "shape": [
+          2816,
+          2112
+        ],
+        "base_dtype": "BF16",
+        "hauhau_dtype": "F16",
+        "hauhau_offset": 1751880640,
+        "hauhau_bytes": 11894784,
+        "base_file": "model-00001-of-00002.safetensors",
+        "base_absolute_offset": 4633740820,
+        "base_bytes": 11894784,
+        "combined_raw_bytes": 23789568
+      },
+      {
+        "hf_tensor": "model.language_model.layers.2.mlp.down_proj.weight",
+        "gguf_tensor": "blk.2.ffn_down.weight",
+        "shape": [
+          2816,
+          2112
+        ],
+        "base_dtype": "BF16",
+        "hauhau_dtype": "F16",
+        "hauhau_offset": 2623559136,
+        "hauhau_bytes": 11894784,
+        "base_file": "model-00001-of-00002.safetensors",
+        "base_absolute_offset": 22021103914,
+        "base_bytes": 11894784,
+        "combined_raw_bytes": 23789568
+      },
+      {
+        "hf_tensor": "model.language_model.layers.25.mlp.down_proj.weight",
+        "gguf_tensor": "blk.25.ffn_down.weight",
+        "shape": [
+          2816,
+          2112
+        ],
+        "base_dtype": "BF16",
+        "hauhau_dtype": "F16",
+        "hauhau_offset": 22867603136,
+        "hauhau_bytes": 11894784,
+        "base_file": "model-00001-of-00002.safetensors",
+        "base_absolute_offset": 31275125046,
+        "base_bytes": 11894784,
+        "combined_raw_bytes": 23789568
+      },
+      {
+        "hf_tensor": "model.language_model.layers.26.mlp.down_proj.weight",
+        "gguf_tensor": "blk.26.ffn_down.weight",
+        "shape": [
+          2816,
+          2112
+        ],
+        "base_dtype": "BF16",
+        "hauhau_dtype": "F16",
+        "hauhau_offset": 23739281632,
+        "hauhau_bytes": 11894784,
+        "base_file": "model-00001-of-00002.safetensors",
+        "base_absolute_offset": 32903315000,
+        "base_bytes": 11894784,
+        "combined_raw_bytes": 23789568
+      },
+      {
+        "hf_tensor": "model.language_model.layers.27.mlp.down_proj.weight",
+        "gguf_tensor": "blk.27.ffn_down.weight",
+        "shape": [
+          2816,
+          2112
+        ],
+        "base_dtype": "BF16",
+        "hauhau_dtype": "F16",
+        "hauhau_offset": 24643738368,
+        "hauhau_bytes": 11894784,
+        "base_file": "model-00001-of-00002.safetensors",
+        "base_absolute_offset": 34531504954,
+        "base_bytes": 11894784,
+        "combined_raw_bytes": 23789568
+      },
+      {
+        "hf_tensor": "model.language_model.layers.28.mlp.down_proj.weight",
+        "gguf_tensor": "blk.28.ffn_down.weight",
+        "shape": [
+          2816,
+          2112
+        ],
+        "base_dtype": "BF16",
+        "hauhau_dtype": "F16",
+        "hauhau_offset": 25548195104,
+        "hauhau_bytes": 11894784,
+        "base_file": "model-00001-of-00002.safetensors",
+        "base_absolute_offset": 36159694908,
+        "base_bytes": 11894784,
+        "combined_raw_bytes": 23789568
+      }
+    ],
+    "controls": [
+      {
+        "hf_tensor": "model.language_model.layers.0.self_attn.q_proj.weight",
+        "gguf_tensor": "blk.0.attn_q.weight",
+        "shape": [
+          4096,
+          2816
+        ],
+        "base_dtype": "BF16",
+        "hauhau_dtype": "F16",
+        "hauhau_offset": 823971232,
+        "hauhau_bytes": 23068672,
+        "base_file": "model-00001-of-00002.safetensors",
+        "base_absolute_offset": 3076599826,
+        "base_bytes": 23068672,
+        "combined_raw_bytes": 46137344
+      },
+      {
+        "hf_tensor": "model.language_model.layers.0.router.proj.weight",
+        "gguf_tensor": "blk.0.ffn_gate_inp.weight",
+        "shape": [
+          128,
+          2816
+        ],
+        "base_dtype": "BF16",
+        "hauhau_dtype": "F32",
+        "hauhau_offset": 1146416032,
+        "hauhau_bytes": 1441792,
+        "base_file": "model-00001-of-00002.safetensors",
+        "base_absolute_offset": 3041269266,
+        "base_bytes": 720896,
+        "combined_raw_bytes": 2162688
+      },
+      {
+        "hf_tensor": "model.language_model.layers.0.input_layernorm.weight",
+        "gguf_tensor": "blk.0.attn_norm.weight",
+        "shape": [
+          2816
+        ],
+        "base_dtype": "BF16",
+        "hauhau_dtype": "F32",
+        "hauhau_offset": 811704736,
+        "hauhau_bytes": 11264,
+        "base_file": "model-00001-of-00002.safetensors",
+        "base_absolute_offset": 3005545232,
+        "base_bytes": 5632,
+        "combined_raw_bytes": 16896
+      },
+      {
+        "hf_tensor": "model.language_model.layers.27.router.proj.weight",
+        "gguf_tensor": "blk.27.ffn_gate_inp.weight",
+        "shape": [
+          128,
+          2816
+        ],
+        "base_dtype": "BF16",
+        "hauhau_dtype": "F32",
+        "hauhau_offset": 24937154816,
+        "hauhau_bytes": 1441792,
+        "base_file": "model-00001-of-00002.safetensors",
+        "base_absolute_offset": 34567223354,
+        "base_bytes": 720896,
+        "combined_raw_bytes": 2162688
+      },
+      {
+        "hf_tensor": "model.language_model.layers.27.input_layernorm.weight",
+        "gguf_tensor": "blk.27.attn_norm.weight",
+        "shape": [
+          2816
+        ],
+        "base_dtype": "BF16",
+        "hauhau_dtype": "F32",
+        "hauhau_offset": 24596867840,
+        "hauhau_bytes": 11264,
+        "base_file": "model-00001-of-00002.safetensors",
+        "base_absolute_offset": 34531499320,
+        "base_bytes": 5632,
+        "combined_raw_bytes": 16896
+      }
+    ],
+    "control_semantics": "Router/norm/F16 attention weights are mapping and potential unchanged controls, not assumed untouched by an undocumented edit.",
+    "minimum_one_pair_raw_disk_bytes": 23789568,
+    "minimum_one_pair_raw_disk_mib": 22.6875,
+    "seven_pairs_raw_bytes": 166526976,
+    "seven_pairs_and_controls_raw_bytes": 217023488,
+    "fresh_headers_plus_seven_pairs_controls_bytes": 232975536,
+    "fresh_headers_plus_seven_pairs_controls_mib": 222.1827850341797,
+    "suggested_disk_budget_bytes": 536870912,
+    "suggested_ram_limit_bytes": 1073741824,
+    "threads": 1,
+    "gpu_required": false,
+    "minimum_three_fp32_arrays_for_one_shared_down_bytes": 71368704,
+    "memory_caveat": "Array arithmetic estimate excludes interpreter, raw buffers and numerical-library workspace. Stream one pair at a time and use bounded randomized low-rank diagnostics rather than a full SVD; 1 GiB is a conservative proposed cap, not measured peak.",
+    "steps": [
+      "Fetch only verified exact-revision tensor ranges; reject any HTTP response other than 206 with exact Content-Range and exact length; record per-range checksums.",
+      "Cast the BF16 base to the same F16 representation in FP32 analysis and measure the cast-only control separately. Keep tensor names/shapes and expert indices fixed.",
+      "Measure zero-difference fraction, delta norm and low-rank energy; inspect left/right projection fits rather than assuming every delta is a refusal axis.",
+      "Use multiple layers and weight-column splits to assess subspace stability. Account for any norm-preserving rescaling or multi-rank edits rather than forcing a rank-one interpretation.",
+      "Only if a coherent signal survives mapping/casting controls, inspect selected Q8_0 attention outputs and individual expert slices against a same-quantizer control. Do not redownload the entire GGUF or base.",
+      "Keep numerical edit recovery separate from causal behavioral evidence. Any transfer to REDCELL needs later independent integrity, task, token-work and behavior tests; no adapter/model should be deployed from this metadata study."
+    ],
+    "phase2_optional_sizes": {
+      "layer0_attention_output_pair_bytes": 35323904,
+      "one_layer0_expert_down_pair_bytes": 6071296
+    }
+  },
+  "missing_provenance_and_limits": [
+    "Hauhau exact pre-edit working checkpoint, chosen directions, per-layer strengths, ranks, method flags, optimization objective, calibration prompts, final scoring outputs, RNG state and exact tool/converter commits are unpublished in checked sources.",
+    "A weight delta is the combined effect of all editing and numeric conversions; SVD alone does not label it refusal-related. Original edit factors are generally non-unique under factor rotations and quantization.",
+    "Hauhau Gemma has learned post-attention/shared/expert/post-feedforward RMSNorms before residual additions. A recovered raw weight-output direction is not automatically the post-norm causal direction.",
+    "REDCELL current local BF16 is reconstructed from its author F16 GGUF, with explicit F16-to-BF16 rounding; current runtime W8A16 adds another quantization. It is not the untouched specialist BF16 training checkpoint.",
+    "Same published Gemma parent and architecture allow a controlled hypothesis, but specialist SFT can rotate features and change how transferred edits affect correctness, verbosity and refusal.",
+    "No refusal-rate, quality, recovery or transfer performance measurement was made by this audit."
+  ],
+  "primary_sources": [
+    "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/tree/96c11c22b1128c3c8c655b21557b409f307c557f",
+    "https://huggingface.co/google/gemma-4-26B-A4B-it/tree/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "https://huggingface.co/google/gemma-4-26B-A4B-it/tree/462a98a12e28e2cbcfccaf78fe41e3e50235e6ae",
+    "https://huggingface.co/unsloth/gemma-4-26B-A4B-it/tree/cd98c13581a9d4ad061cb85d983232ca4edb1343",
+    "https://huggingface.co/Xananthium/Gemma4-26B-A4B-Hauhau-Balanced-W6A8-Vision/tree/b130caf22ec83ed1aa49564fd874fd44d294d9d5",
+    "https://github.com/ggml-org/llama.cpp/blob/b21e4de74567f5eef213765c9476a843c2e43f0d/conversion/gemma.py"
+  ],
+  "evidence": {
+    "local_readonly_inputs": {
+      "/home/isnotreal/model-tools/full-round-20261006/gemma-source-receipt.json": {
+        "sha256": "aefd7ec6df81323c3d8804edf21e483fa8824021be2ae2a8e44ac2170bfb035e",
+        "bytes": 507
+      },
+      "/home/isnotreal/model-tools/full-round-20261006/publication-verified/gemma.json": {
+        "sha256": "61549f71f37eb060b58f13750146e623a56c3cac89223ad142eaed42905b48d1",
+        "bytes": 2371
+      },
+      "/home/isnotreal/model-tools/full-round-20261006/gemma-inverse-map.json": {
+        "sha256": "98a1c59997e15af7237c2206e0a33873f22e29eb38daa1826d16efd55bf197a4",
+        "bytes": 58611
+      },
+      "/home/isnotreal/model-tools/full-round-20261006/gemma-hf-tensors.json": {
+        "sha256": "fb749fef4c56678dfaa506177d3658edbbcdabc935e9fdd4ff805bbe0fbba0ee",
+        "bytes": 197991
+      },
+      "/home/isnotreal/model-tools/full-round-20261006/gemma-gguf-tensors.json": {
+        "sha256": "9bcc2da839a3a6f7ff02693172059bb4233596c3bd673649e3e549e492cd07e0",
+        "bytes": 105402
+      },
+      "/home/isnotreal/model-tools/convert_gguf_moe_w8a8.py": {
+        "sha256": "e08567b11355451c6a65720859493314161555c17a14e66e33e2d169c9ba39fe",
+        "bytes": 12320
+      },
+      "/home/isnotreal/model-tools/hf_tensor_ranges.py": {
+        "sha256": "da15a992f35158dfe24c12b88a9b7713f7b96f59d89678e2754ab31589e3d95e",
+        "bytes": 2131
+      },
+      "/home/isnotreal/llama.cpp/conversion/gemma.py": {
+        "sha256": "872f3fea7496cefdcd39308ad02e2d30c9f507f68a18f8b4f6962995b09350f5",
+        "bytes": 50806
+      },
+      "/home/isnotreal/llama.cpp/gguf-py/gguf/tensor_mapping.py": {
+        "sha256": "16192c2d0c7bd9065b2ce41615925ae4a1f26344ab584ab6356bbb59936abb6a",
+        "bytes": 128791
+      },
+      "/home/isnotreal/models/redcell-abliteration-source-bf16/source-receipt.json": {
+        "sha256": "a26500aa8697ea97a39dd31d0939afd42ac3de0291e36e7d55520c4d46aeac4a",
+        "bytes": 579
+      }
+    },
+    "new_metadata_evidence": {
+      "google-commits.json": {
+        "sha256": "639845a7d94731f81ad7b97e131adb2a9f397e3112c95b99bb94ee8ef9a540eb",
+        "bytes": 10706
+      },
+      "google-current-info.json": {
+        "sha256": "32465a062e567a4308bba4a710da6e24d50f37da7710bf02087cad1dcaadb2d1",
+        "bytes": 20408
+      },
+      "google-files.json": {
+        "sha256": "0d428a69fd6afc331d83ec7d9018dd3f17abc7738a9692f8894de646fcbcd6e5",
+        "bytes": 8468
+      },
+      "google-pre-hauhau-files.json": {
+        "sha256": "dabd9143931f1cfb7d588f41f736c907e9b2b41a7775edeb41eb095f5550f9d1",
+        "bytes": 8084
+      },
+      "google-release-files.json": {
+        "sha256": "af1d9c3da0db268a82e77179e471c51fb1e4d7f9f0ce01449203cd3a894abc8e",
+        "bytes": 8047
+      },
+      "google-release-text-header.json": {
+        "sha256": "ed8d6f0c3639de4be011bc2121547d088506135f0198a530e4a909bb9311d7b3",
+        "bytes": 207501
+      },
+      "hauhau-balanced-info.json": {
+        "sha256": "6022be412c570bbae562646b3ceeff369d2e3a7f5c3ef07642428419c5eb4cfc",
+        "bytes": 19307
+      },
+      "hauhau-current-model-catalog.json": {
+        "sha256": "339281f82c6d836306ae715c1240ee1dcc4bf629dc5ace2ad082a3deb9f20045",
+        "bytes": 25226
+      },
+      "hauhau-discussion-1.json": {
+        "sha256": "9cb614430ea46bed4804e8154e765983715bae33c8e050472022ac8b2046c6d9",
+        "bytes": 659
+      },
+      "hauhau-discussion-6.json": {
+        "sha256": "dff7c129e66bd3b59ab8a6d4fe8802547525dbb7fee9b3f232a4573d0e28885d",
+        "bytes": 988
+      },
+      "hauhau-discussions.json": {
+        "sha256": "1a5ea0dcebac1133ae0180ded612276217b6e0afd46767a3019af1a4169d0b86",
+        "bytes": 4825
+      },
+      "hauhau-files.json": {
+        "sha256": "594e5550faaea6fd86c48b3f1f360bc51692070b66c9fea4143411f7d54542ce",
+        "bytes": 12726
+      },
+      "hauhau-header-range-verification.json": {
+        "sha256": "a8e7c4d0e8d1f7406a424a1b95630eaa7cd5c91416d00d264b1895fcfe27a813",
+        "bytes": 472
+      },
+      "hauhau-saved-gguf-header.json": {
+        "sha256": "2d1889b70d260c31ced155cfb5d936a633eef4522039a746d155e216494bdced",
+        "bytes": 116331
+      },
+      "historical-project-current-availability.json": {
+        "sha256": "4f2df064e5fd15f41b687985047da9f47673d1b0a47584d8e85b98cd21c91b3e",
+        "bytes": 167
+      },
+      "historical-reaper-code-evidence.json": {
+        "sha256": "fa7753e1155353f473c4a0a9a5c20f093659b51dbfa3c37d25ad37cf7e8f79eb",
+        "bytes": 8068
+      },
+      "our-w6-backup-files.json": {
+        "sha256": "25d084c612e52ec4b61da297a0c1c0bb06c6dda6ccf00e2cbfba8cb0cd57c68d",
+        "bytes": 20375
+      },
+      "our-w6-backup-info.json": {
+        "sha256": "5bc6d07f59c99548fb58e5daff6115558fb3b3d0a2210527e47ce7e6164d708a",
+        "bytes": 22583
+      },
+      "our-w6-backup-recheck.json": {
+        "sha256": "e8962994480481b010091c32174ab9ac56f8c94362a805ab7748d1ef50471809",
+        "bytes": 2520
+      },
+      "unsloth-commits.json": {
+        "sha256": "c2fdedc0d1512d9ff468d44dbf16bd11cf2574795930145321a44f60dafe8324",
+        "bytes": 6745
+      },
+      "unsloth-current-info.json": {
+        "sha256": "b94fd541a8ffb98c635f84c574165ea7086513446dc318b8dcbeb98393998b16",
+        "bytes": 41536
+      },
+      "unsloth-files.json": {
+        "sha256": "096eea6a561d2516f3f8e66922020c25d4aeefa1d4df86dd9b9bad903f734821",
+        "bytes": 9950
+      },
+      "unsloth-pre-hauhau-files.json": {
+        "sha256": "f430fca64300f10a1fcb0b993c979787906f8877bb05cc4f90fe4c4fb986914d",
+        "bytes": 9898
+      }
+    },
+    "model_weight_payload_downloaded_bytes": 0,
+    "verified_gguf_header_downloaded_bytes": 15822240,
+    "verified_safetensors_header_downloaded_bytes": 129808,
+    "historical_source_wheel_downloaded_bytes": 102507,
+    "inference_or_gpu_or_service_actions": false,
+    "publication_or_contact_performed": false,
+    "existing_pinned_files_modified": false
+  }
+}

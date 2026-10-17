@@ -1,0 +1,794 @@
+{
+  "status": "complete",
+  "configuration_fingerprint": "8eb8c7e9eb9f1bde56b25c6b99062e6d1a29b00dd5548ede66d9fa83a5f8e438",
+  "schedule": {
+    "index": 7,
+    "repeat": 2,
+    "case_ids": [
+      "broader-fresh-05-switch-constraints",
+      "broader-fresh-06-leap-calendar",
+      "broader-fresh-07-two-key-sort",
+      "broader-fresh-08-quoted-csv"
+    ]
+  },
+  "attempt_id": "1792112474637833280-162362",
+  "invocation_id": "1792111166410576976-162362",
+  "started_at_utc": "2026-10-16T01:01:14.637936+00:00",
+  "partial_outputs_scored": false,
+  "completed_at_utc": "2026-10-16T01:03:03.777132+00:00",
+  "wall_seconds": 109.13931655100896,
+  "records": [
+    {
+      "id": "broader-fresh-05-switch-constraints",
+      "category": "reasoning",
+      "configuration_fingerprint": "8eb8c7e9eb9f1bde56b25c6b99062e6d1a29b00dd5548ede66d9fa83a5f8e438",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "b348da45a342b0d1ab0404ac3cbe39162d133794e1f76af9710372eb52eea4e9",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "7762dd6e3c486ab95670ea6e4a71e418d10f74a899d9d4f253cab8053e9e2e2a",
+      "prompt_sha256": "3b59d9e8b411b9e82a434ea3694a9e21e1ef1d9a2f0f0905008dbbef777551f7",
+      "answer_key_sha256": "85a155f7b7c8c91961863ec5ef161d736810e2241014fa15eedd37aca9934ac3",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 7,
+      "submission_index": 0,
+      "invocation_id": "1792111166410576976-162362",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 3,
+      "task_finished_sequence": 23,
+      "answer_text": "[\"B\", \"D\"]",
+      "raw_final_text": "[\"B\", \"D\"]",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 3254,
+      "raw_final_text_sha256": "ad1a4e9f8ae913d54c1adb4be80f9d4cec2ad89d3aeaa032a57f3f04ad05c2d8",
+      "response_attempts": [
+        {
+          "raw_text": "[\"B\", \"D\"]",
+          "raw_text_sha256": "ad1a4e9f8ae913d54c1adb4be80f9d4cec2ad89d3aeaa032a57f3f04ad05c2d8",
+          "thinking_text": "*   Switches: A, B, C, D.\n    *   Condition 1: Exactly two switches are on.\n    *   Condition 2: If A is on, then B is on ($A \\implies B$).\n    *   Condition 3: C is on if and only if D is off ($C \\iff \\neg D$).\n    *   Condition 4: If B is on, then C is off ($B \\implies \\neg C$).\n\n    *   Condition 3 ($C \\iff \\neg D$) means that one of C or D must be on, and the other must be off.\n        *   Case 1: C is on, D is off.\n        *   Case 2: C is off, D is on.\n    *   In both cases, exactly one of {C, D} is on.\n\n    *   Since exactly two switches are on (Condition 1), and exactly one of {C, D} is on, it follows that exactly one of {A, B} must be on.\n\n    *   Condition 2: $A \\implies B$.\n    *   Condition 4: $B \\implies \\neg C$.\n\n    *   **Subcase 1: A is on.**\n        *   If A is on, then B must be on (Condition 2).\n        *   But we established that exactly one of {A, B} must be on.\n        *   If A and B are both on, that's two switches from the {A, B} set.\n        *   Total on = (A and B) + (one of C or D) = 2 + 1 = 3.\n        *   This contradicts Condition 1 (exactly two are on).\n        *   Therefore, A cannot be on.\n\n    *   **Subcase 2: A is off.**\n        *   If A is off, then for exactly one of {A, B} to be on, B must be on.\n        *   If B is on, then C must be off (Condition 4).\n        *   If C is off, then D must be on (Condition 3: $C \\iff \\neg D$).\n        *   Let's check the count: A is off, B is on, C is off, D is on.\n        *   Total on: B and D. (Count = 2). This matches Condition 1.\n\n    *   A is off.\n    *   B is on.\n    *   C is off.\n    *   D is on.\n\n    *   Check conditions:\n        1.  Exactly two are on? Yes (B and D).\n        2.  If A is on, B is on? Yes (A is off, so the implication is true).\n        3.  C is on iff D is off? Yes (C is off, D is on).\n        4.  If B is on, C is off? Yes (B is on, C is off).\n\n    *   Switches on: B, D.\n    *   Alphabetical order: B, D.\n    *   JSON array: `[\"B\", \"D\"]`.\n\n    *   A=on, B=on, C=on, D=off (3 on) - No\n    *   A=on, B=on, C=off, D=on (3 on) - No\n    *   A=off, B=on, C=on, D=off (2 on) - Check Cond 4: B is on $\\implies$ C is off. Here C is on. So No.\n    *   A=off, B=on, C=off, D=on (2 on) - Check Cond 4: B is on $\\implies$ C is off. Yes. Check Cond 2: A is on $\\implies$ B is on. Yes. Check Cond 3: C is on $\\iff$ D is off. Yes. (This is the winner).\n    *   A=off, B=off, C=on, D=off (1 on) - No\n    *   A=off, B=off, C=off, D=on (1 on) - No\n\n    Wait, let's re-verify the \"exactly one of A, B\" logic.\n    Condition 1: $A+B+C+D = 2$.\n    Condition 3: $C+D = 1$.\n    Therefore, $A+B = 1$.\n    If $A=1$, then $B=1$ (Cond 2). But $A+B=1$, so $1+1=2 \\neq 1$. Contradiction.\n    So $A=0$.\n    Since $A+B=1$, $B=1$.\n    If $B=1$, then $C=0$ (Cond 4).\n    Since $C+D=1$ and $C=0$, $D=1$.\n    Result: A=0, B=1, C=0, D=1.\n    Switches on: B, D.\n\n    *   A is on $\\implies$ B is on. (If A is off, this is always true).\n    *   C is on $\\iff$ D is off. (C=off, D=on $\\implies$ \"off $\\iff$ off\" is true).\n    *   B is on $\\implies$ C is off. (B=on, C=off $\\implies$ \"on $\\implies$ on\" is true).\n    *   Exactly two are on. (B and D are on).\n\n    Everything holds.\n\n    *   Names: B, D.\n    *   Alphabetical order: B, D.\n    *   JSON array: `[\"B\", \"D\"]`.",
+          "thinking_text_sha256": "a392fab63d223f1ecb23e825936be12431d26a4782a5d54c05944731bc00405f",
+          "thinking_characters": 3254,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Switches: A, B, C, D.\n    *   Condition 1: Exactly two switches are on.\n    *   Condition 2: If A is on, then B is on ($A \\implies B$).\n    *   Condition 3: C is on if and only if D is off ($C \\iff \\neg D$).\n    *   Condition 4: If B is on, then C is off ($B \\implies \\neg C$).\n\n    *   Condition 3 ($C \\iff \\neg D$) means that one of C or D must be on, and the other must be off.\n        *   Case 1: C is on, D is off.\n        *   Case 2: C is off, D is on.\n    *   In both cases, exactly one of {C, D} is on.\n\n    *   Since exactly two switches are on (Condition 1), and exactly one of {C, D} is on, it follows that exactly one of {A, B} must be on.\n\n    *   Condition 2: $A \\implies B$.\n    *   Condition 4: $B \\implies \\neg C$.\n\n    *   **Subcase 1: A is on.**\n        *   If A is on, then B must be on (Condition 2).\n        *   But we established that exactly one of {A, B} must be on.\n        *   If A and B are both on, that's two switches from the {A, B} set.\n        *   Total on = (A and B) + (one of C or D) = 2 + 1 = 3.\n        *   This contradicts Condition 1 (exactly two are on).\n        *   Therefore, A cannot be on.\n\n    *   **Subcase 2: A is off.**\n        *   If A is off, then for exactly one of {A, B} to be on, B must be on.\n        *   If B is on, then C must be off (Condition 4).\n        *   If C is off, then D must be on (Condition 3: $C \\iff \\neg D$).\n        *   Let's check the count: A is off, B is on, C is off, D is on.\n        *   Total on: B and D. (Count = 2). This matches Condition 1.\n\n    *   A is off.\n    *   B is on.\n    *   C is off.\n    *   D is on.\n\n    *   Check conditions:\n        1.  Exactly two are on? Yes (B and D).\n        2.  If A is on, B is on? Yes (A is off, so the implication is true).\n        3.  C is on iff D is off? Yes (C is off, D is on).\n        4.  If B is on, C is off? Yes (B is on, C is off).\n\n    *   Switches on: B, D.\n    *   Alphabetical order: B, D.\n    *   JSON array: `[\"B\", \"D\"]`.\n\n    *   A=on, B=on, C=on, D=off (3 on) - No\n    *   A=on, B=on, C=off, D=on (3 on) - No\n    *   A=off, B=on, C=on, D=off (2 on) - Check Cond 4: B is on $\\implies$ C is off. Here C is on. So No.\n    *   A=off, B=on, C=off, D=on (2 on) - Check Cond 4: B is on $\\implies$ C is off. Yes. Check Cond 2: A is on $\\implies$ B is on. Yes. Check Cond 3: C is on $\\iff$ D is off. Yes. (This is the winner).\n    *   A=off, B=off, C=on, D=off (1 on) - No\n    *   A=off, B=off, C=off, D=on (1 on) - No\n\n    Wait, let's re-verify the \"exactly one of A, B\" logic.\n    Condition 1: $A+B+C+D = 2$.\n    Condition 3: $C+D = 1$.\n    Therefore, $A+B = 1$.\n    If $A=1$, then $B=1$ (Cond 2). But $A+B=1$, so $1+1=2 \\neq 1$. Contradiction.\n    So $A=0$.\n    Since $A+B=1$, $B=1$.\n    If $B=1$, then $C=0$ (Cond 4).\n    Since $C+D=1$ and $C=0$, $D=1$.\n    Result: A=0, B=1, C=0, D=1.\n    Switches on: B, D.\n\n    *   A is on $\\implies$ B is on. (If A is off, this is always true).\n    *   C is on $\\iff$ D is off. (C=off, D=on $\\implies$ \"off $\\iff$ off\" is true).\n    *   B is on $\\implies$ C is off. (B=on, C=off $\\implies$ \"on $\\implies$ on\" is true).\n    *   Exactly two are on. (B and D are on).\n\n    Everything holds.\n\n    *   Names: B, D.\n    *   Alphabetical order: B, D.\n    *   JSON array: `[\"B\", \"D\"]`.",
+              "signature": "d4246998c5974d5c8ac4e57c89032e98"
+            },
+            {
+              "type": "text",
+              "text": "[\"B\", \"D\"]"
+            }
+          ],
+          "native_content_blocks_sha256": "7e3b4432a5b642fd1a9cc6ad9593add3f0ae7e80858d1289270ef24284c81c18",
+          "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 89,
+            "output_tokens": 1290
+          },
+          "native_request_seconds": 108.93732152800658,
+          "started_sequence": 13,
+          "finished_sequence": 22
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.016073583014076576,
+          "started_sequence": 5,
+          "finished_sequence": 9
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 108.93732152800658,
+          "started_sequence": 13,
+          "finished_sequence": 22
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 1290,
+          "input_tokens": 89,
+          "stop_reason": "end_turn",
+          "response_sha256": "ad1a4e9f8ae913d54c1adb4be80f9d4cec2ad89d3aeaa032a57f3f04ad05c2d8",
+          "visible_characters": 10,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 108.97622652401333
+        }
+      ],
+      "counted_input_tokens": 89,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8039,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "ad1a4e9f8ae913d54c1adb4be80f9d4cec2ad89d3aeaa032a57f3f04ad05c2d8",
+      "output_tokens": 1290,
+      "total_output_tokens_including_retries": 1290,
+      "generation_seconds_including_retries": 108.97622652401333,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T01:03:03.742138+00:00",
+      "record_sha256": "a6805e4f451e14a68415c2cd394f2e04052a2ae929c58b366f94e7f4c559cbe0"
+    },
+    {
+      "id": "broader-fresh-06-leap-calendar",
+      "category": "reasoning",
+      "configuration_fingerprint": "8eb8c7e9eb9f1bde56b25c6b99062e6d1a29b00dd5548ede66d9fa83a5f8e438",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "b348da45a342b0d1ab0404ac3cbe39162d133794e1f76af9710372eb52eea4e9",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "627d4ec2aa7e5fde7eef78993883bf455f2e8bd1ac263435bfec9a02451022b4",
+      "prompt_sha256": "6d8c972adf01a3496178a9c6e31bcab37d78fa0f3bfae1998ec8c58ef88bdf94",
+      "answer_key_sha256": "b9ba7fc66fac377a79eab6c8a0c74f5855a54795820dae2f80ba9bd6da24acc9",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 7,
+      "submission_index": 1,
+      "invocation_id": "1792111166410576976-162362",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 0,
+      "task_finished_sequence": 21,
+      "answer_text": "2028-03-03",
+      "raw_final_text": "2028-03-03",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 1073,
+      "raw_final_text_sha256": "2957e63d5247d2743f1142b11247ddf10b24ae9dda6eadbb3a6847509759f4fb",
+      "response_attempts": [
+        {
+          "raw_text": "2028-03-03",
+          "raw_text_sha256": "2957e63d5247d2743f1142b11247ddf10b24ae9dda6eadbb3a6847509759f4fb",
+          "thinking_text": "*   Start date: 2028-02-27\n    *   Operation: Add five complete days.\n    *   Calendar: Gregorian.\n    *   Rule: The next day counts as one day later.\n    *   Output format: YYYY-MM-DD.\n\n    *   Year: 2028.\n    *   Is 2028 a leap year?\n        *   Rule: A year is a leap year if it is divisible by 4, except for years divisible by 100 unless they are also divisible by 400.\n        *   2028 / 4 = 507 (No remainder).\n        *   2028 is not divisible by 100.\n        *   Therefore, 2028 is a leap year.\n    *   February in a leap year has 29 days.\n\n    *   Start: 2028-02-27\n    *   +1 day: 2028-02-28\n    *   +2 days: 2028-02-29 (Leap day)\n    *   +3 days: 2028-03-01\n    *   +4 days: 2028-03-02\n    *   +5 days: 2028-03-03\n\n    *   27 + 5 = 32.\n    *   February 2028 has 29 days.\n    *   32 - 29 = 3.\n    *   Result: March 3, 2028.\n\n    *   YYYY-MM-DD -> 2028-03-03.\n\n    *   2028-02-27\n    *   1 day later: 2028-02-28\n    *   2 days later: 2028-02-29\n    *   3 days later: 2028-03-01\n    *   4 days later: 2028-03-02\n    *   5 days later: 2028-03-03\n\n    *   2028-03-03.",
+          "thinking_text_sha256": "6156a1a6683f12e7485b5eed33071ffb178129522d6aa55b90b48fe9233aee21",
+          "thinking_characters": 1073,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Start date: 2028-02-27\n    *   Operation: Add five complete days.\n    *   Calendar: Gregorian.\n    *   Rule: The next day counts as one day later.\n    *   Output format: YYYY-MM-DD.\n\n    *   Year: 2028.\n    *   Is 2028 a leap year?\n        *   Rule: A year is a leap year if it is divisible by 4, except for years divisible by 100 unless they are also divisible by 400.\n        *   2028 / 4 = 507 (No remainder).\n        *   2028 is not divisible by 100.\n        *   Therefore, 2028 is a leap year.\n    *   February in a leap year has 29 days.\n\n    *   Start: 2028-02-27\n    *   +1 day: 2028-02-28\n    *   +2 days: 2028-02-29 (Leap day)\n    *   +3 days: 2028-03-01\n    *   +4 days: 2028-03-02\n    *   +5 days: 2028-03-03\n\n    *   27 + 5 = 32.\n    *   February 2028 has 29 days.\n    *   32 - 29 = 3.\n    *   Result: March 3, 2028.\n\n    *   YYYY-MM-DD -> 2028-03-03.\n\n    *   2028-02-27\n    *   1 day later: 2028-02-28\n    *   2 days later: 2028-02-29\n    *   3 days later: 2028-03-01\n    *   4 days later: 2028-03-02\n    *   5 days later: 2028-03-03\n\n    *   2028-03-03.",
+              "signature": "d1903726cf8040a68982e442a5444edd"
+            },
+            {
+              "type": "text",
+              "text": "2028-03-03"
+            }
+          ],
+          "native_content_blocks_sha256": "4f483b8486a2669534d8a4319e3e92ab3f319a0c86384f969a55fb74fa7ba082",
+          "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 75,
+            "output_tokens": 537
+          },
+          "native_request_seconds": 46.17797508399235,
+          "started_sequence": 12,
+          "finished_sequence": 20
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.013484955998137593,
+          "started_sequence": 6,
+          "finished_sequence": 10
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 46.17797508399235,
+          "started_sequence": 12,
+          "finished_sequence": 20
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 537,
+          "input_tokens": 75,
+          "stop_reason": "end_turn",
+          "response_sha256": "2957e63d5247d2743f1142b11247ddf10b24ae9dda6eadbb3a6847509759f4fb",
+          "visible_characters": 10,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 46.21273612100049
+        }
+      ],
+      "counted_input_tokens": 75,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8053,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "2957e63d5247d2743f1142b11247ddf10b24ae9dda6eadbb3a6847509759f4fb",
+      "output_tokens": 537,
+      "total_output_tokens_including_retries": 537,
+      "generation_seconds_including_retries": 46.21273612100049,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T01:02:00.981794+00:00",
+      "record_sha256": "87f76a4f2f43503a521ab4bf1cdf098a74389ea170e671bfbd466b298115040f"
+    },
+    {
+      "id": "broader-fresh-07-two-key-sort",
+      "category": "instruction",
+      "configuration_fingerprint": "8eb8c7e9eb9f1bde56b25c6b99062e6d1a29b00dd5548ede66d9fa83a5f8e438",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "b348da45a342b0d1ab0404ac3cbe39162d133794e1f76af9710372eb52eea4e9",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "aa676088180d15fb3e7bfe79aaa49c2b9552cf3d4fee058f2899de671104df5a",
+      "prompt_sha256": "8219dd3065bd98aedc29b3e976c4a72adb64469eebeefe3152d2d090b2267efe",
+      "answer_key_sha256": "9329b180e7e3a5c68b0af8c3cc7ec1dd58847b420acdd1eb8df1f6ddc7fdde64",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 7,
+      "submission_index": 2,
+      "invocation_id": "1792111166410576976-162362",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 1,
+      "task_finished_sequence": 19,
+      "answer_text": "[\"cedar\", \"ash\", \"birch\", \"elm\"]",
+      "raw_final_text": "[\"cedar\", \"ash\", \"birch\", \"elm\"]",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 1064,
+      "raw_final_text_sha256": "a12007edd992e5538cb9bfc122d30766811dcda301d0cf9d7f68f65bd206e50b",
+      "response_attempts": [
+        {
+          "raw_text": "[\"cedar\", \"ash\", \"birch\", \"elm\"]",
+          "raw_text_sha256": "a12007edd992e5538cb9bfc122d30766811dcda301d0cf9d7f68f65bd206e50b",
+          "thinking_text": "*   Input records: `birch (priority 2)`, `cedar (priority 3)`, `ash (priority 2)`, `elm (priority 1)`.\n    *   Sorting criteria:\n        1.  Priority descending (highest number first).\n        2.  Name alphabetically (A-Z) for equal priorities.\n    *   Output format: JSON array of names only.\n\n    *   birch: priority 2\n    *   cedar: priority 3\n    *   ash: priority 2\n    *   elm: priority 1\n\n    *   *Step 1: Sort by Priority Descending*\n        *   Priority 3: cedar\n        *   Priority 2: birch, ash\n        *   Priority 1: elm\n\n    *   *Step 2: Sort by Name Alphabetically (for equal priorities)*\n        *   Priority 3: cedar (only one)\n        *   Priority 2: ash, birch (alphabetical order: ash comes before birch)\n        *   Priority 1: elm (only one)\n\n    *   *Final Order:*\n        1. cedar\n        2. ash\n        3. birch\n        4. elm\n\n    *   `[\"cedar\", \"ash\", \"birch\", \"elm\"]`\n\n    *   Priority descending? 3, 2, 2, 1. (Yes)\n    *   Name alphabetical for equal priorities? ash (a) before birch (b). (Yes)\n    *   JSON array of names only? (Yes)",
+          "thinking_text_sha256": "1067104fb3b0cc62ddfcbfde7cd9d627d36d1eedf96bfe43e92d6dc3fb1868fc",
+          "thinking_characters": 1064,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Input records: `birch (priority 2)`, `cedar (priority 3)`, `ash (priority 2)`, `elm (priority 1)`.\n    *   Sorting criteria:\n        1.  Priority descending (highest number first).\n        2.  Name alphabetically (A-Z) for equal priorities.\n    *   Output format: JSON array of names only.\n\n    *   birch: priority 2\n    *   cedar: priority 3\n    *   ash: priority 2\n    *   elm: priority 1\n\n    *   *Step 1: Sort by Priority Descending*\n        *   Priority 3: cedar\n        *   Priority 2: birch, ash\n        *   Priority 1: elm\n\n    *   *Step 2: Sort by Name Alphabetically (for equal priorities)*\n        *   Priority 3: cedar (only one)\n        *   Priority 2: ash, birch (alphabetical order: ash comes before birch)\n        *   Priority 1: elm (only one)\n\n    *   *Final Order:*\n        1. cedar\n        2. ash\n        3. birch\n        4. elm\n\n    *   `[\"cedar\", \"ash\", \"birch\", \"elm\"]`\n\n    *   Priority descending? 3, 2, 2, 1. (Yes)\n    *   Name alphabetical for equal priorities? ash (a) before birch (b). (Yes)\n    *   JSON array of names only? (Yes)",
+              "signature": "1435140858f5432b9d9980f54d98d7d7"
+            },
+            {
+              "type": "text",
+              "text": "[\"cedar\", \"ash\", \"birch\", \"elm\"]"
+            }
+          ],
+          "native_content_blocks_sha256": "f8961a9ca7a762800f43b687adae25c18216eacdbbada70ce55a6ffc083c1c6f",
+          "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 80,
+            "output_tokens": 356
+          },
+          "native_request_seconds": 31.16741573897889,
+          "started_sequence": 15,
+          "finished_sequence": 18
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.01662209999631159,
+          "started_sequence": 4,
+          "finished_sequence": 8
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 31.16741573897889,
+          "started_sequence": 15,
+          "finished_sequence": 18
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 356,
+          "input_tokens": 80,
+          "stop_reason": "end_turn",
+          "response_sha256": "a12007edd992e5538cb9bfc122d30766811dcda301d0cf9d7f68f65bd206e50b",
+          "visible_characters": 32,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 31.21654602800845
+        }
+      ],
+      "counted_input_tokens": 80,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8048,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "a12007edd992e5538cb9bfc122d30766811dcda301d0cf9d7f68f65bd206e50b",
+      "output_tokens": 356,
+      "total_output_tokens_including_retries": 356,
+      "generation_seconds_including_retries": 31.21654602800845,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T01:01:45.987658+00:00",
+      "record_sha256": "b52e6944e9044ccec35ce2bf1baa3488c3e91b690628c303def057dcae6a02f9"
+    },
+    {
+      "id": "broader-fresh-08-quoted-csv",
+      "category": "instruction",
+      "configuration_fingerprint": "8eb8c7e9eb9f1bde56b25c6b99062e6d1a29b00dd5548ede66d9fa83a5f8e438",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "b348da45a342b0d1ab0404ac3cbe39162d133794e1f76af9710372eb52eea4e9",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "eb8363347637ed726d114a5fbd95f90c186bffdc7de93c7a63df7037adc3fb08",
+      "prompt_sha256": "a90cd11b32b3ddfc72a15a1ae03a7f207492e75a9169f7fa80b0877808973cf7",
+      "answer_key_sha256": "651f0cab024a8508ec77d902cc4c77166d614dede4b0f526a7cb8277290c5a46",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 7,
+      "submission_index": 3,
+      "invocation_id": "1792111166410576976-162362",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 2,
+      "task_finished_sequence": 17,
+      "answer_text": "```json\n{\n  \"city\": \"New York, NY\",\n  \"count\": 5\n}\n```",
+      "raw_final_text": "```json\n{\n  \"city\": \"New York, NY\",\n  \"count\": 5\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 673,
+      "raw_final_text_sha256": "86876d0ba11e6df8c6ded588dac9c420d280ef74402e9f87ae93dd2fa00d1849",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"city\": \"New York, NY\",\n  \"count\": 5\n}\n```",
+          "raw_text_sha256": "86876d0ba11e6df8c6ded588dac9c420d280ef74402e9f87ae93dd2fa00d1849",
+          "thinking_text": "*   Input: A CSV string `city,count\\n\"New York, NY\",5`.\n    *   Format: Standard double-quoted fields.\n    *   Task: Parse the CSV.\n    *   Output requirement: A JSON object with `city` as a string and `count` as an integer.\n    *   Constraint: Return *only* the JSON object.\n\n    *   Header: `city`, `count`\n    *   Row 1: `\"New York, NY\"`, `5`\n    *   The comma inside the quotes `\"New York, NY\"` is part of the field, not a delimiter.\n\n    *   `city`: \"New York, NY\"\n    *   `count`: 5\n\n    *   `{\"city\": \"New York, NY\", \"count\": 5}`\n\n    *   Is it a JSON object? Yes.\n    *   Is `city` a string? Yes.\n    *   Is `count` an integer? Yes.\n    *   Is there extra text? No.",
+          "thinking_text_sha256": "9a99f382512750a4224e2c9b0f484bb8f4e191f6e89ba554ecb269b7350d1029",
+          "thinking_characters": 673,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Input: A CSV string `city,count\\n\"New York, NY\",5`.\n    *   Format: Standard double-quoted fields.\n    *   Task: Parse the CSV.\n    *   Output requirement: A JSON object with `city` as a string and `count` as an integer.\n    *   Constraint: Return *only* the JSON object.\n\n    *   Header: `city`, `count`\n    *   Row 1: `\"New York, NY\"`, `5`\n    *   The comma inside the quotes `\"New York, NY\"` is part of the field, not a delimiter.\n\n    *   `city`: \"New York, NY\"\n    *   `count`: 5\n\n    *   `{\"city\": \"New York, NY\", \"count\": 5}`\n\n    *   Is it a JSON object? Yes.\n    *   Is `city` a string? Yes.\n    *   Is `count` an integer? Yes.\n    *   Is there extra text? No.",
+              "signature": "8e45d79ca4084b058d9ec170cb2b92aa"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"city\": \"New York, NY\",\n  \"count\": 5\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "55a55b3415392afa7b704d4ac79f09f017b2fcc796a77ede35add36f9d4d98b5",
+          "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 67,
+            "output_tokens": 259
+          },
+          "native_request_seconds": 22.73679071100196,
+          "started_sequence": 14,
+          "finished_sequence": 16
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.010829996987013146,
+          "started_sequence": 7,
+          "finished_sequence": 11
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 22.73679071100196,
+          "started_sequence": 14,
+          "finished_sequence": 16
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 259,
+          "input_tokens": 67,
+          "stop_reason": "end_turn",
+          "response_sha256": "86876d0ba11e6df8c6ded588dac9c420d280ef74402e9f87ae93dd2fa00d1849",
+          "visible_characters": 54,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 22.77997590097948
+        }
+      ],
+      "counted_input_tokens": 67,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8061,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "86876d0ba11e6df8c6ded588dac9c420d280ef74402e9f87ae93dd2fa00d1849",
+      "output_tokens": 259,
+      "total_output_tokens_including_retries": 259,
+      "generation_seconds_including_retries": 22.77997590097948,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T01:01:37.552335+00:00",
+      "record_sha256": "2b10fa8f75db8dbaa8a38846cb0af9e038d715ef5e5d4eaffb9c539b7eeefc2e"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "task_started",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:14.682894+00:00",
+      "group_elapsed_seconds": 0.04224949300987646,
+      "group_index": 7,
+      "submission_index": 1
+    },
+    {
+      "sequence": 1,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "task_started",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:14.683133+00:00",
+      "group_elapsed_seconds": 0.04248497399385087,
+      "group_index": 7,
+      "submission_index": 2
+    },
+    {
+      "sequence": 2,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "task_started",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:14.699006+00:00",
+      "group_elapsed_seconds": 0.05836509799701162,
+      "group_index": 7,
+      "submission_index": 3
+    },
+    {
+      "sequence": 3,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "task_started",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:14.699479+00:00",
+      "group_elapsed_seconds": 0.05884080400574021,
+      "group_index": 7,
+      "submission_index": 0
+    },
+    {
+      "sequence": 4,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "request_started",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:14.726133+00:00",
+      "group_elapsed_seconds": 0.0854863410058897,
+      "group_index": 7,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 5,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "request_started",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:14.727671+00:00",
+      "group_elapsed_seconds": 0.0870236880145967,
+      "group_index": 7,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 6,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "request_started",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:14.732982+00:00",
+      "group_elapsed_seconds": 0.09233260501059704,
+      "group_index": 7,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 7,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "request_started",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:14.737741+00:00",
+      "group_elapsed_seconds": 0.09709621500223875,
+      "group_index": 7,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 8,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "request_finished",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:14.742776+00:00",
+      "group_elapsed_seconds": 0.10213339500478469,
+      "group_index": 7,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 4
+    },
+    {
+      "sequence": 9,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "request_finished",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:14.743763+00:00",
+      "group_elapsed_seconds": 0.10312052301014774,
+      "group_index": 7,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 5
+    },
+    {
+      "sequence": 10,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "request_finished",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:14.746482+00:00",
+      "group_elapsed_seconds": 0.10583730399957858,
+      "group_index": 7,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 6
+    },
+    {
+      "sequence": 11,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "request_finished",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:14.748594+00:00",
+      "group_elapsed_seconds": 0.10795209600473754,
+      "group_index": 7,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 7
+    },
+    {
+      "sequence": 12,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "request_started",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:14.778888+00:00",
+      "group_elapsed_seconds": 0.13823870601481758,
+      "group_index": 7,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 13,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "request_started",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:14.780442+00:00",
+      "group_elapsed_seconds": 0.1397934769920539,
+      "group_index": 7,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 14,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "request_started",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:14.790195+00:00",
+      "group_elapsed_seconds": 0.14954539499012753,
+      "group_index": 7,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 15,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "request_started",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:14.795885+00:00",
+      "group_elapsed_seconds": 0.15523633098928258,
+      "group_index": 7,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 16,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "request_finished",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:37.527005+00:00",
+      "group_elapsed_seconds": 22.886369089013897,
+      "group_index": 7,
+      "route": "/v1/messages",
+      "start_sequence": 14
+    },
+    {
+      "sequence": 17,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "task_finished",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:37.552335+00:00",
+      "group_elapsed_seconds": 22.911693441012176,
+      "group_index": 7,
+      "submission_index": 3
+    },
+    {
+      "sequence": 18,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "request_finished",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:45.963323+00:00",
+      "group_elapsed_seconds": 31.322686268016696,
+      "group_index": 7,
+      "route": "/v1/messages",
+      "start_sequence": 15
+    },
+    {
+      "sequence": 19,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "task_finished",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:01:45.987658+00:00",
+      "group_elapsed_seconds": 31.347011642996222,
+      "group_index": 7,
+      "submission_index": 2
+    },
+    {
+      "sequence": 20,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "request_finished",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:02:00.956884+00:00",
+      "group_elapsed_seconds": 46.316247684997506,
+      "group_index": 7,
+      "route": "/v1/messages",
+      "start_sequence": 12
+    },
+    {
+      "sequence": 21,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "task_finished",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:02:00.981794+00:00",
+      "group_elapsed_seconds": 46.34114980101003,
+      "group_index": 7,
+      "submission_index": 1
+    },
+    {
+      "sequence": 22,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "request_finished",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:03:03.717786+00:00",
+      "group_elapsed_seconds": 109.07714931000373,
+      "group_index": 7,
+      "route": "/v1/messages",
+      "start_sequence": 13
+    },
+    {
+      "sequence": 23,
+      "invocation_id": "1792111166410576976-162362",
+      "kind": "task_finished",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:03:03.742138+00:00",
+      "group_elapsed_seconds": 109.10149174000253,
+      "group_index": 7,
+      "submission_index": 0
+    }
+  ],
+  "submission_order": [
+    "broader-fresh-05-switch-constraints",
+    "broader-fresh-06-leap-calendar",
+    "broader-fresh-07-two-key-sort",
+    "broader-fresh-08-quoted-csv"
+  ],
+  "client_task_start_order": [
+    "broader-fresh-06-leap-calendar",
+    "broader-fresh-07-two-key-sort",
+    "broader-fresh-08-quoted-csv",
+    "broader-fresh-05-switch-constraints"
+  ],
+  "client_task_finish_order": [
+    "broader-fresh-08-quoted-csv",
+    "broader-fresh-07-two-key-sort",
+    "broader-fresh-06-leap-calendar",
+    "broader-fresh-05-switch-constraints"
+  ],
+  "observed_future_completion_order": [
+    "broader-fresh-08-quoted-csv",
+    "broader-fresh-07-two-key-sort",
+    "broader-fresh-06-leap-calendar",
+    "broader-fresh-05-switch-constraints"
+  ],
+  "ordering_scope": "Sequences and elapsed times are local to this group. Client submission, task, and HTTP dispatch/completion order are recorded; GPU scheduler order is not observed.",
+  "group_sha256": "bb1e67734cc8151b73212750b5b05879ad32b88b0b968e2af64e776b3ad438d0"
+}

@@ -1,0 +1,782 @@
+{
+  "status": "complete",
+  "configuration_fingerprint": "bb47eaa83ff5e5eb5970a12d4d402900b3fb157a000e4e462f3445048474263b",
+  "schedule": {
+    "index": 0,
+    "repeat": 1,
+    "case_ids": [
+      "broader-fresh-01-remainders",
+      "broader-fresh-02-shortest-route",
+      "broader-fresh-03-base-seven",
+      "broader-fresh-04-round-robin"
+    ]
+  },
+  "attempt_id": "1792107073742098216-158205",
+  "invocation_id": "1792107073742039518-158205",
+  "started_at_utc": "2026-10-15T23:31:13.742237+00:00",
+  "partial_outputs_scored": false,
+  "completed_at_utc": "2026-10-15T23:32:51.072241+00:00",
+  "wall_seconds": 97.33015509799588,
+  "records": [
+    {
+      "id": "broader-fresh-01-remainders",
+      "category": "reasoning",
+      "configuration_fingerprint": "bb47eaa83ff5e5eb5970a12d4d402900b3fb157a000e4e462f3445048474263b",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "fbb8e8bd3d3479700a2fdf77d3be5b3499b4efd2e4228129a5e1478d15b961df",
+      "prompt_sha256": "9e2537074acd94565342e084a362b3630da22e33c86cb5117f19b3d67a50e38b",
+      "answer_key_sha256": "1e13a2d7eb2e77b8a8f930856a20e9fd7061700f7cb62d1aed687b6ca6576dab",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 0,
+      "submission_index": 0,
+      "invocation_id": "1792107073742039518-158205",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 2,
+      "task_finished_sequence": 25,
+      "answer_text": "To find the integer $n$, we can set up a system of linear congruences based on the problem description:\n1. $n \\equiv 3 \\pmod{7}$\n2. $n \\equiv 4 \\pmod{5}$\n3. $n \\equiv 1 \\pmod{3}$\n\n**Step 1: Solve the first two congruences.**\nFrom $n \\equiv 3 \\pmod{7}$, we can write $n = 7k + 3$ for some integer $k$.\nSubstitute this into the second congruence:\n$7k + 3 \\equiv 4 \\pmod{5}$\n$2k \\equiv 1 \\pmod{5}$\nTo solve $2k \\equiv 1 \\pmod{5}$, we find the modular inverse of 2 modulo 5, which is 3 (since $2 \\times 3 = 6 \\equiv 1 \\pmod{5}$).\n$k \\equiv 3 \\pmod{5}$\nSo, $k = 5m + 3$.\n\nSubstitute $k$ back into the expression for $n$:\n$n = 7(5m + 3) + 3$\n$n = 35m + 21 + 3$\n$n = 35m + 24$\n\n**Step 2: Solve for the third congruence.**\nNow substitute $n = 35m + 24$ into the third congruence:\n$35m + 24 \\equiv 1 \\pmod{3}$\nSimplify the coefficients modulo 3:\n$35 \\equiv 2 \\pmod{3}$ (or $-1 \\pmod{3}$)\n$24 \\equiv 0 \\pmod{3}$\nSo, $2m + 0 \\equiv 1 \\pmod{3}$\n$2m \\equiv 1 \\pmod{3}$\nThe modular inverse of 2 modulo 3 is 2 (since $2 \\times 2 = 4 \\equiv 1 \\pmod{3}$).\n$m \\equiv 2 \\pmod{3}$\nSo, $m = 3p + 2$.\n\n**Step 3: Find $n$.**\nSubstitute $m$ back into the expression for $n$:\n$n = 35(3p + 2) + 24$\n$n = 105p + 70 + 24$\n$n = 105p + 94$\n\nSince we are looking for $0 \\le n < 100$, we set $p = 0$:\n$n = 94$\n\n**Verification:**\n$94 \\div 7 = 13$ R $3$ (Correct)\n$94 \\div 5 = 18$ R $4$ (Correct)\n$94 \\div 3 = 31$ R $1$ (Correct)\n\n94",
+      "raw_final_text": "To find the integer $n$, we can set up a system of linear congruences based on the problem description:\n1. $n \\equiv 3 \\pmod{7}$\n2. $n \\equiv 4 \\pmod{5}$\n3. $n \\equiv 1 \\pmod{3}$\n\n**Step 1: Solve the first two congruences.**\nFrom $n \\equiv 3 \\pmod{7}$, we can write $n = 7k + 3$ for some integer $k$.\nSubstitute this into the second congruence:\n$7k + 3 \\equiv 4 \\pmod{5}$\n$2k \\equiv 1 \\pmod{5}$\nTo solve $2k \\equiv 1 \\pmod{5}$, we find the modular inverse of 2 modulo 5, which is 3 (since $2 \\times 3 = 6 \\equiv 1 \\pmod{5}$).\n$k \\equiv 3 \\pmod{5}$\nSo, $k = 5m + 3$.\n\nSubstitute $k$ back into the expression for $n$:\n$n = 7(5m + 3) + 3$\n$n = 35m + 21 + 3$\n$n = 35m + 24$\n\n**Step 2: Solve for the third congruence.**\nNow substitute $n = 35m + 24$ into the third congruence:\n$35m + 24 \\equiv 1 \\pmod{3}$\nSimplify the coefficients modulo 3:\n$35 \\equiv 2 \\pmod{3}$ (or $-1 \\pmod{3}$)\n$24 \\equiv 0 \\pmod{3}$\nSo, $2m + 0 \\equiv 1 \\pmod{3}$\n$2m \\equiv 1 \\pmod{3}$\nThe modular inverse of 2 modulo 3 is 2 (since $2 \\times 2 = 4 \\equiv 1 \\pmod{3}$).\n$m \\equiv 2 \\pmod{3}$\nSo, $m = 3p + 2$.\n\n**Step 3: Find $n$.**\nSubstitute $m$ back into the expression for $n$:\n$n = 35(3p + 2) + 24$\n$n = 105p + 70 + 24$\n$n = 105p + 94$\n\nSince we are looking for $0 \\le n < 100$, we set $p = 0$:\n$n = 94$\n\n**Verification:**\n$94 \\div 7 = 13$ R $3$ (Correct)\n$94 \\div 5 = 18$ R $4$ (Correct)\n$94 \\div 3 = 31$ R $1$ (Correct)\n\n94",
+      "raw_final_text_sha256": "7c596edc5e3647e9bc8eff361c056a99a6cd8a23c4479d8c0620ee1d3904422c",
+      "response_attempts": [
+        {
+          "raw_text": "To find the integer $n$, we can set up a system of linear congruences based on the problem description:\n1. $n \\equiv 3 \\pmod{7}$\n2. $n \\equiv 4 \\pmod{5}$\n3. $n \\equiv 1 \\pmod{3}$\n\n**Step 1: Solve the first two congruences.**\nFrom $n \\equiv 3 \\pmod{7}$, we can write $n = 7k + 3$ for some integer $k$.\nSubstitute this into the second congruence:\n$7k + 3 \\equiv 4 \\pmod{5}$\n$2k \\equiv 1 \\pmod{5}$\nTo solve $2k \\equiv 1 \\pmod{5}$, we find the modular inverse of 2 modulo 5, which is 3 (since $2 \\times 3 = 6 \\equiv 1 \\pmod{5}$).\n$k \\equiv 3 \\pmod{5}$\nSo, $k = 5m + 3$.\n\nSubstitute $k$ back into the expression for $n$:\n$n = 7(5m + 3) + 3$\n$n = 35m + 21 + 3$\n$n = 35m + 24$\n\n**Step 2: Solve for the third congruence.**\nNow substitute $n = 35m + 24$ into the third congruence:\n$35m + 24 \\equiv 1 \\pmod{3}$\nSimplify the coefficients modulo 3:\n$35 \\equiv 2 \\pmod{3}$ (or $-1 \\pmod{3}$)\n$24 \\equiv 0 \\pmod{3}$\nSo, $2m + 0 \\equiv 1 \\pmod{3}$\n$2m \\equiv 1 \\pmod{3}$\nThe modular inverse of 2 modulo 3 is 2 (since $2 \\times 2 = 4 \\equiv 1 \\pmod{3}$).\n$m \\equiv 2 \\pmod{3}$\nSo, $m = 3p + 2$.\n\n**Step 3: Find $n$.**\nSubstitute $m$ back into the expression for $n$:\n$n = 35(3p + 2) + 24$\n$n = ",
+          "raw_text_sha256": "28a8325444bb049860bf09f5f877b0727bb0dcab756269841213bc6a00ad4ce6",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 512,
+          "stop_reason": "max_tokens",
+          "usage": {
+            "input_tokens": 80,
+            "output_tokens": 512
+          },
+          "native_request_seconds": 43.442929868993815,
+          "started_sequence": 14,
+          "finished_sequence": 22
+        },
+        {
+          "raw_text": "To find the integer $n$, we can set up a system of linear congruences based on the problem description:\n1. $n \\equiv 3 \\pmod{7}$\n2. $n \\equiv 4 \\pmod{5}$\n3. $n \\equiv 1 \\pmod{3}$\n\n**Step 1: Solve the first two congruences.**\nFrom $n \\equiv 3 \\pmod{7}$, we can write $n = 7k + 3$ for some integer $k$.\nSubstitute this into the second congruence:\n$7k + 3 \\equiv 4 \\pmod{5}$\n$2k \\equiv 1 \\pmod{5}$\nTo solve $2k \\equiv 1 \\pmod{5}$, we find the modular inverse of 2 modulo 5, which is 3 (since $2 \\times 3 = 6 \\equiv 1 \\pmod{5}$).\n$k \\equiv 3 \\pmod{5}$\nSo, $k = 5m + 3$.\n\nSubstitute $k$ back into the expression for $n$:\n$n = 7(5m + 3) + 3$\n$n = 35m + 21 + 3$\n$n = 35m + 24$\n\n**Step 2: Solve for the third congruence.**\nNow substitute $n = 35m + 24$ into the third congruence:\n$35m + 24 \\equiv 1 \\pmod{3}$\nSimplify the coefficients modulo 3:\n$35 \\equiv 2 \\pmod{3}$ (or $-1 \\pmod{3}$)\n$24 \\equiv 0 \\pmod{3}$\nSo, $2m + 0 \\equiv 1 \\pmod{3}$\n$2m \\equiv 1 \\pmod{3}$\nThe modular inverse of 2 modulo 3 is 2 (since $2 \\times 2 = 4 \\equiv 1 \\pmod{3}$).\n$m \\equiv 2 \\pmod{3}$\nSo, $m = 3p + 2$.\n\n**Step 3: Find $n$.**\nSubstitute $m$ back into the expression for $n$:\n$n = 35(3p + 2) + 24$\n$n = 105p + 70 + 24$\n$n = 105p + 94$\n\nSince we are looking for $0 \\le n < 100$, we set $p = 0$:\n$n = 94$\n\n**Verification:**\n$94 \\div 7 = 13$ R $3$ (Correct)\n$94 \\div 5 = 18$ R $4$ (Correct)\n$94 \\div 3 = 31$ R $1$ (Correct)\n\n94",
+          "raw_text_sha256": "7c596edc5e3647e9bc8eff361c056a99a6cd8a23c4479d8c0620ee1d3904422c",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 1024,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 80,
+            "output_tokens": 640
+          },
+          "native_request_seconds": 53.66412739799125,
+          "started_sequence": 23,
+          "finished_sequence": 24
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.004480497009353712,
+          "started_sequence": 8,
+          "finished_sequence": 11
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 43.442929868993815,
+          "started_sequence": 14,
+          "finished_sequence": 22
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 53.66412739799125,
+          "started_sequence": 23,
+          "finished_sequence": 24
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 512,
+          "input_tokens": 80,
+          "stop_reason": "max_tokens",
+          "response_sha256": "71e65f269c66bd6c55d5470ae7a2c54e0adcffccb1de6a6e27973965c1eba49f",
+          "visible_characters": 1177,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 43.479849982017186
+        },
+        {
+          "requested_max_tokens": 1024,
+          "output_tokens": 640,
+          "input_tokens": 80,
+          "stop_reason": "end_turn",
+          "response_sha256": "7c596edc5e3647e9bc8eff361c056a99a6cd8a23c4479d8c0620ee1d3904422c",
+          "visible_characters": 1399,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 53.70542721700622
+        }
+      ],
+      "counted_input_tokens": 80,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8048,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "7c596edc5e3647e9bc8eff361c056a99a6cd8a23c4479d8c0620ee1d3904422c",
+      "output_tokens": 640,
+      "total_output_tokens_including_retries": 1152,
+      "generation_seconds_including_retries": 97.1852771990234,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": false,
+      "scored_correct_before_completion_gate": false,
+      "recorded_at_utc": "2026-10-15T23:32:51.037387+00:00",
+      "record_sha256": "efdf71bf35eb22efadedb4e69d7650029f412a3e2665ea489fdb7849c1ef6891"
+    },
+    {
+      "id": "broader-fresh-02-shortest-route",
+      "category": "reasoning",
+      "configuration_fingerprint": "bb47eaa83ff5e5eb5970a12d4d402900b3fb157a000e4e462f3445048474263b",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "7fbbf907afd7e3ee9d03345672a5ee4f81f313ff1da803338de6a1ee4af77f69",
+      "prompt_sha256": "02eded74b39a0f1b633b522a6b6b0575d6ef1321f7591f70ce76978ce4f7bcce",
+      "answer_key_sha256": "52683baff5c874b76dd52b2cbda1009da62652f2ba2a4816ace51b8f4b54de62",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 0,
+      "submission_index": 1,
+      "invocation_id": "1792107073742039518-158205",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 1,
+      "task_finished_sequence": 19,
+      "answer_text": "```json\n{\n  \"minutes\": 8,\n  \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]\n}\n```",
+      "raw_final_text": "```json\n{\n  \"minutes\": 8,\n  \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]\n}\n```",
+      "raw_final_text_sha256": "535eace955baadc9d31ff11551cf3ded89cf830fa95865e0a61c880c2ceb19d9",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"minutes\": 8,\n  \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]\n}\n```",
+          "raw_text_sha256": "535eace955baadc9d31ff11551cf3ded89cf830fa95865e0a61c880c2ceb19d9",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 122,
+            "output_tokens": 37
+          },
+          "native_request_seconds": 3.529955579986563,
+          "started_sequence": 15,
+          "finished_sequence": 18
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.006175660993903875,
+          "started_sequence": 7,
+          "finished_sequence": 10
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 3.529955579986563,
+          "started_sequence": 15,
+          "finished_sequence": 18
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 37,
+          "input_tokens": 122,
+          "stop_reason": "end_turn",
+          "response_sha256": "535eace955baadc9d31ff11551cf3ded89cf830fa95865e0a61c880c2ceb19d9",
+          "visible_characters": 68,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 3.566571728006238
+        }
+      ],
+      "counted_input_tokens": 122,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8006,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "535eace955baadc9d31ff11551cf3ded89cf830fa95865e0a61c880c2ceb19d9",
+      "output_tokens": 37,
+      "total_output_tokens_including_retries": 37,
+      "generation_seconds_including_retries": 3.566571728006238,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": false,
+      "scored_correct_before_completion_gate": false,
+      "recorded_at_utc": "2026-10-15T23:31:17.420112+00:00",
+      "record_sha256": "1b9f142ecc585d697049af4dccca025aea513d53ed4ac7dc54cff6bacda12c06"
+    },
+    {
+      "id": "broader-fresh-03-base-seven",
+      "category": "reasoning",
+      "configuration_fingerprint": "bb47eaa83ff5e5eb5970a12d4d402900b3fb157a000e4e462f3445048474263b",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "c5faf78172d2fe57c93518b2cc74c0e08be5edbc6839c490fefe5c846f1ab467",
+      "prompt_sha256": "f647491ea2c6b9cb6c9ffa41b0661a9200a4061c7080eeb2f8fbc408a8796a27",
+      "answer_key_sha256": "f87f1f93d6af1981fb920e0b85ec5f903110ac60cb0ca5bd93f4959a85ade53c",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 0,
+      "submission_index": 2,
+      "invocation_id": "1792107073742039518-158205",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 0,
+      "task_finished_sequence": 21,
+      "answer_text": "To convert the base 7 number $530_7$ to a decimal (base 10) value, we use the positional notation formula:\n\n$$\\text{Value} = (d_n \\times 7^n) + \\dots + (d_1 \\times 7^1) + (d_0 \\times 7^0)$$\n\nFor the digits $5, 3, 0$:\n1. The digit $0$ is in the $7^0$ place: $0 \\times 7^0 = 0 \\times 1 = 0$\n2. The digit $3$ is in the $7^1$ place: $3 \\times 7^1 = 3 \\times 7 = 21$\n3. The digit $5$ is in the $7^2$ place: $5 \\times 7^2 = 5 \\times 49 = 245$\n\nNow, sum the values:\n$$245 + 21 + 0 = 266$$\n\n266",
+      "raw_final_text": "To convert the base 7 number $530_7$ to a decimal (base 10) value, we use the positional notation formula:\n\n$$\\text{Value} = (d_n \\times 7^n) + \\dots + (d_1 \\times 7^1) + (d_0 \\times 7^0)$$\n\nFor the digits $5, 3, 0$:\n1. The digit $0$ is in the $7^0$ place: $0 \\times 7^0 = 0 \\times 1 = 0$\n2. The digit $3$ is in the $7^1$ place: $3 \\times 7^1 = 3 \\times 7 = 21$\n3. The digit $5$ is in the $7^2$ place: $5 \\times 7^2 = 5 \\times 49 = 245$\n\nNow, sum the values:\n$$245 + 21 + 0 = 266$$\n\n266",
+      "raw_final_text_sha256": "de1fab317f383a724242d8c76088a9b47618ed267bb12fea947424b809c3d65c",
+      "response_attempts": [
+        {
+          "raw_text": "To convert the base 7 number $530_7$ to a decimal (base 10) value, we use the positional notation formula:\n\n$$\\text{Value} = (d_n \\times 7^n) + \\dots + (d_1 \\times 7^1) + (d_0 \\times 7^0)$$\n\nFor the digits $5, 3, 0$:\n1. The digit $0$ is in the $7^0$ place: $0 \\times 7^0 = 0 \\times 1 = 0$\n2. The digit $3$ is in the $7^1$ place: $3 \\times 7^1 = 3 \\times 7 = 21$\n3. The digit $5$ is in the $7^2$ place: $5 \\times 7^2 = 5 \\times 49 = 245$\n\nNow, sum the values:\n$$245 + 21 + 0 = 266$$\n\n266",
+          "raw_text_sha256": "de1fab317f383a724242d8c76088a9b47618ed267bb12fea947424b809c3d65c",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 60,
+            "output_tokens": 235
+          },
+          "native_request_seconds": 20.25588986297953,
+          "started_sequence": 13,
+          "finished_sequence": 20
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.006501208990812302,
+          "started_sequence": 6,
+          "finished_sequence": 9
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 20.25588986297953,
+          "started_sequence": 13,
+          "finished_sequence": 20
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 235,
+          "input_tokens": 60,
+          "stop_reason": "end_turn",
+          "response_sha256": "de1fab317f383a724242d8c76088a9b47618ed267bb12fea947424b809c3d65c",
+          "visible_characters": 486,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 20.294248504011193
+        }
+      ],
+      "counted_input_tokens": 60,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8068,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "de1fab317f383a724242d8c76088a9b47618ed267bb12fea947424b809c3d65c",
+      "output_tokens": 235,
+      "total_output_tokens_including_retries": 235,
+      "generation_seconds_including_retries": 20.294248504011193,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": false,
+      "scored_correct_before_completion_gate": false,
+      "recorded_at_utc": "2026-10-15T23:31:34.144877+00:00",
+      "record_sha256": "8441231008a90f4746ba01e8171d28218615c630d38007ba7cd0f7a0289a45cb"
+    },
+    {
+      "id": "broader-fresh-04-round-robin",
+      "category": "reasoning",
+      "configuration_fingerprint": "bb47eaa83ff5e5eb5970a12d4d402900b3fb157a000e4e462f3445048474263b",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "88fa62970a0884f8450a8c87e517252d1dffcaa5ce8f7ff34577ad7a10952d14",
+      "prompt_sha256": "f24f656d978487a3660cd6f25ff9dce61eeb3e000d63b37b7870473bf206f4b6",
+      "answer_key_sha256": "7ccf091e17ae117e865a01bdd6718f135f3d2b967f9381a9c19b8a7a1babf4e3",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 0,
+      "submission_index": 3,
+      "invocation_id": "1792107073742039518-158205",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 3,
+      "task_finished_sequence": 17,
+      "answer_text": "```json\n{\n  \"A\": 9,\n  \"B\": 7,\n  \"C\": 5\n}\n```",
+      "raw_final_text": "```json\n{\n  \"A\": 9,\n  \"B\": 7,\n  \"C\": 5\n}\n```",
+      "raw_final_text_sha256": "c97b7e7d14b3038eb17e1f0154e8969f955704d8cb7ddf188b4250858f0f6307",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"A\": 9,\n  \"B\": 7,\n  \"C\": 5\n}\n```",
+          "raw_text_sha256": "c97b7e7d14b3038eb17e1f0154e8969f955704d8cb7ddf188b4250858f0f6307",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 107,
+            "output_tokens": 32
+          },
+          "native_request_seconds": 2.924484128016047,
+          "started_sequence": 12,
+          "finished_sequence": 16
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.005036578018916771,
+          "started_sequence": 4,
+          "finished_sequence": 5
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 2.924484128016047,
+          "started_sequence": 12,
+          "finished_sequence": 16
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 32,
+          "input_tokens": 107,
+          "stop_reason": "end_turn",
+          "response_sha256": "c97b7e7d14b3038eb17e1f0154e8969f955704d8cb7ddf188b4250858f0f6307",
+          "visible_characters": 44,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 2.960302869003499
+        }
+      ],
+      "counted_input_tokens": 107,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8021,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "c97b7e7d14b3038eb17e1f0154e8969f955704d8cb7ddf188b4250858f0f6307",
+      "output_tokens": 32,
+      "total_output_tokens_including_retries": 32,
+      "generation_seconds_including_retries": 2.960302869003499,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": false,
+      "scored_correct_before_completion_gate": false,
+      "recorded_at_utc": "2026-10-15T23:31:16.806244+00:00",
+      "record_sha256": "8178295095f03bb3d30454f473aef16d9d7845f5fe56003a1646622e4e358284"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_started",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:13.783549+00:00",
+      "group_elapsed_seconds": 0.03837313302210532,
+      "group_index": 0,
+      "submission_index": 2
+    },
+    {
+      "sequence": 1,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_started",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:13.784060+00:00",
+      "group_elapsed_seconds": 0.0388908910099417,
+      "group_index": 0,
+      "submission_index": 1
+    },
+    {
+      "sequence": 2,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_started",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:13.784231+00:00",
+      "group_elapsed_seconds": 0.03906006499892101,
+      "group_index": 0,
+      "submission_index": 0
+    },
+    {
+      "sequence": 3,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_started",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:13.801487+00:00",
+      "group_elapsed_seconds": 0.05631032900419086,
+      "group_index": 0,
+      "submission_index": 3
+    },
+    {
+      "sequence": 4,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:13.821484+00:00",
+      "group_elapsed_seconds": 0.07631521901930682,
+      "group_index": 0,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 5,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:13.826555+00:00",
+      "group_elapsed_seconds": 0.08138291901559569,
+      "group_index": 0,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 4
+    },
+    {
+      "sequence": 6,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:13.827760+00:00",
+      "group_elapsed_seconds": 0.08258394201402552,
+      "group_index": 0,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 7,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:13.830686+00:00",
+      "group_elapsed_seconds": 0.08550748199922964,
+      "group_index": 0,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 8,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:13.834111+00:00",
+      "group_elapsed_seconds": 0.08893130300566554,
+      "group_index": 0,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 9,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:13.834281+00:00",
+      "group_elapsed_seconds": 0.0891010390187148,
+      "group_index": 0,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 6
+    },
+    {
+      "sequence": 10,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:13.836877+00:00",
+      "group_elapsed_seconds": 0.09169735902105458,
+      "group_index": 0,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 7
+    },
+    {
+      "sequence": 11,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:13.838609+00:00",
+      "group_elapsed_seconds": 0.09343726601218805,
+      "group_index": 0,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 8
+    },
+    {
+      "sequence": 12,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:13.857248+00:00",
+      "group_elapsed_seconds": 0.11207852402003482,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 13,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:13.863478+00:00",
+      "group_elapsed_seconds": 0.11829994400613941,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 14,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:13.864986+00:00",
+      "group_elapsed_seconds": 0.11980444099754095,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 15,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:13.866456+00:00",
+      "group_elapsed_seconds": 0.12127452701679431,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 16,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:16.781764+00:00",
+      "group_elapsed_seconds": 3.0365930600091815,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "start_sequence": 12
+    },
+    {
+      "sequence": 17,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_finished",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:16.806244+00:00",
+      "group_elapsed_seconds": 3.061070969008142,
+      "group_index": 0,
+      "submission_index": 3
+    },
+    {
+      "sequence": 18,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:17.396428+00:00",
+      "group_elapsed_seconds": 3.6512559820257593,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "start_sequence": 15
+    },
+    {
+      "sequence": 19,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_finished",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:17.420112+00:00",
+      "group_elapsed_seconds": 3.6749386060109828,
+      "group_index": 0,
+      "submission_index": 1
+    },
+    {
+      "sequence": 20,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:34.119390+00:00",
+      "group_elapsed_seconds": 20.374223153019557,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "start_sequence": 13
+    },
+    {
+      "sequence": 21,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_finished",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:34.144877+00:00",
+      "group_elapsed_seconds": 20.39970391400857,
+      "group_index": 0,
+      "submission_index": 2
+    },
+    {
+      "sequence": 22,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:57.307935+00:00",
+      "group_elapsed_seconds": 43.56276627900661,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "start_sequence": 14
+    },
+    {
+      "sequence": 23,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:31:57.348356+00:00",
+      "group_elapsed_seconds": 43.60318792401813,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "requested_max_tokens": 1024
+    },
+    {
+      "sequence": 24,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.012518+00:00",
+      "group_elapsed_seconds": 97.26735194501816,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "start_sequence": 23
+    },
+    {
+      "sequence": 25,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_finished",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.037387+00:00",
+      "group_elapsed_seconds": 97.2922116240079,
+      "group_index": 0,
+      "submission_index": 0
+    }
+  ],
+  "submission_order": [
+    "broader-fresh-01-remainders",
+    "broader-fresh-02-shortest-route",
+    "broader-fresh-03-base-seven",
+    "broader-fresh-04-round-robin"
+  ],
+  "client_task_start_order": [
+    "broader-fresh-03-base-seven",
+    "broader-fresh-02-shortest-route",
+    "broader-fresh-01-remainders",
+    "broader-fresh-04-round-robin"
+  ],
+  "client_task_finish_order": [
+    "broader-fresh-04-round-robin",
+    "broader-fresh-02-shortest-route",
+    "broader-fresh-03-base-seven",
+    "broader-fresh-01-remainders"
+  ],
+  "observed_future_completion_order": [
+    "broader-fresh-04-round-robin",
+    "broader-fresh-02-shortest-route",
+    "broader-fresh-03-base-seven",
+    "broader-fresh-01-remainders"
+  ],
+  "ordering_scope": "Sequences and elapsed times are local to this group. Client submission, task, and HTTP dispatch/completion order are recorded; GPU scheduler order is not observed.",
+  "group_sha256": "a0aef5f7ef9f726f4a7440886131be2110d9e1b18454915922988f027cbb51fb"
+}

@@ -1,0 +1,67 @@
+{
+  "status": "completed_five_branch_development_report",
+  "created_utc": "2026-10-16T02:11:46.908347+00:00",
+  "report": {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/final-five-branch-report-v2/report.json",
+    "sha256": "894bb277cf0c99231f6daaf445b00744724c94edc9bd4ce1e2917e0bee7b7e61"
+  },
+  "generator": {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/report_five_branches_v2.py",
+    "sha256": "4e4bb33d69e7627c295ebaf2176a9f755a2664afd7d307a8f032f7b86d59f174"
+  },
+  "validation": {
+    "artifact_hashes_and_sizes_verified": 10,
+    "capability_observations": 480,
+    "unique_questions_per_mode": 24,
+    "repeats_per_question": 2,
+    "tool_vision_checks": 70,
+    "charts_visually_inspected": [
+      "thinking_on-ranked.png",
+      "thinking_off-ranked.png"
+    ],
+    "original_generator_preserved": true
+  },
+  "reporting_fixes": {
+    "previous_generator_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/report_five_branches.py",
+    "previous_generator_sha256": "5acd30e755274a0f786c962e072a6e8f31d329a91ce8dccb56b838e98f44c1a3",
+    "fix": "Provide math to AST-isolated accounting functions and handle absent thinking-character capture fields in verified thinking-off records. Missing character counts remain null; token usage, timing, and scoring are unchanged.",
+    "additional_timing_context_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/research-runtime-overlap-events-v2.json",
+    "evaluation_rerun": false,
+    "prior_files_modified": false
+  },
+  "evaluation_rerun": false,
+  "new_model_or_adapter_built": false,
+  "publication_performed": false,
+  "service_actions": [
+    "Stopped completed private evaluation service; graceful stop succeeded; production service remained inactive and disabled."
+  ],
+  "verified_system_state": {
+    "private_test_service": {
+      "returncode": 0,
+      "stdout": "Result=success\nLoadState=not-found\nActiveState=inactive\nSubState=dead",
+      "stderr": ""
+    },
+    "production_active": {
+      "returncode": 3,
+      "stdout": "inactive",
+      "stderr": ""
+    },
+    "production_boot": {
+      "returncode": 1,
+      "stdout": "disabled",
+      "stderr": ""
+    },
+    "gpu_memory": {
+      "returncode": 0,
+      "stdout": "0, 1 MiB, 24576 MiB\n1, 1 MiB, 24576 MiB",
+      "stderr": ""
+    }
+  },
+  "free_disk_gib": 390.6407012939453,
+  "decision": {
+    "deployment_candidate_selected": false,
+    "basis": "The W8-rebuilt candidate gains one of 48 thinking-enabled observations but uses 101.92% more generated tokens and loses four baseline successes with thinking disabled. The score gain is on one repeat of the pre-existing JSON-types case; broad quality or efficiency improvement is not established.",
+    "permitted_followup": "Precision validation, capability benchmarking, tool/vision reliability, and reduction of mistaken refusals on legitimate tasks.",
+    "not_continued": "Blanket safeguard-removal mapping, transfer, or optimization."
+  }
+}

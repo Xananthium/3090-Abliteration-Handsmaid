@@ -1,0 +1,284 @@
+[
+  {
+    "path": ".gitattributes",
+    "size": 1708,
+    "blob_id": "ddcb389f1c4efd0f6ec18e8925435134b04580da",
+    "last_commit": {
+      "oid": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+      "title": "Preparing for release!",
+      "date": "2026-04-02T10:52:44+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "README.md",
+    "size": 26695,
+    "blob_id": "3949a793c7e94452d4b8f1899af93396f42be9e8",
+    "last_commit": {
+      "oid": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+      "title": "Preparing for release!",
+      "date": "2026-04-02T10:52:44+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "chat_template.jinja",
+    "size": 12045,
+    "blob_id": "33c51c2dbf7e7494b2c055cae7b52f523d3df564",
+    "last_commit": {
+      "oid": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+      "title": "Preparing for release!",
+      "date": "2026-04-02T10:52:44+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "config.json",
+    "size": 3815,
+    "blob_id": "f42adcca257bb0865c506947671e7d0af52ac9c4",
+    "last_commit": {
+      "oid": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+      "title": "Preparing for release!",
+      "date": "2026-04-02T10:52:44+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "generation_config.json",
+    "size": 208,
+    "blob_id": "e605bb4523b1462ea9d9a3810b9e3ecf7ab7b1f6",
+    "last_commit": {
+      "oid": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+      "title": "Preparing for release!",
+      "date": "2026-04-02T10:52:44+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "model-00001-of-00002.safetensors",
+    "size": 49907246508,
+    "blob_id": "2b813216506c6b8266f174ac81c93629b499362e",
+    "lfs": {
+      "size": 49907246508,
+      "sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3",
+      "pointer_size": 136
+    },
+    "xet_hash": "060a1348782427903c74f008d4a544cf7176de0ae0fa87bc06999fbf0e1715ef",
+    "last_commit": {
+      "oid": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+      "title": "Preparing for release!",
+      "date": "2026-04-02T10:52:44+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "unscanned",
+        "message": "",
+        "version": "1.5.2/27963"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "model-00002-of-00002.safetensors",
+    "size": 1704763408,
+    "blob_id": "43fd225b228774659bcb8948b8ad1b07b10cb53f",
+    "lfs": {
+      "size": 1704763408,
+      "sha256": "aab47033e1e8a492ef8e581efae1cf36478d0433567e7729b3c1728bc8970db7",
+      "pointer_size": 135
+    },
+    "xet_hash": "407c22ff8f9884674a186f8568d150a0c63a9f21ec6eea92e4aedd647e43e062",
+    "last_commit": {
+      "oid": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+      "title": "Preparing for release!",
+      "date": "2026-04-02T10:52:44+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "model.safetensors.index.json",
+    "size": 103196,
+    "blob_id": "889ab10e12aca96c43c9804a041fb1780de1e5ca",
+    "last_commit": {
+      "oid": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+      "title": "Preparing for release!",
+      "date": "2026-04-02T10:52:44+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "processor_config.json",
+    "size": 1689,
+    "blob_id": "5465974d23e1eca2c46c2809b26c997946ce0d90",
+    "last_commit": {
+      "oid": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+      "title": "Preparing for release!",
+      "date": "2026-04-02T10:52:44+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "tokenizer.json",
+    "size": 32169626,
+    "blob_id": "1ff9f3e3439a939b971f9919e821bf87e835a503",
+    "lfs": {
+      "size": 32169626,
+      "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+      "pointer_size": 133
+    },
+    "xet_hash": "c62336ad134cad6f154d84eb0e5a5fa9ca17cd665ef3ba5ac4fd02b1486760b4",
+    "last_commit": {
+      "oid": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+      "title": "Preparing for release!",
+      "date": "2026-04-02T10:52:44+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/27985"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "tokenizer_config.json",
+    "size": 2068,
+    "blob_id": "e54180678550bb9eb3ed2e4a64c540dcdf80a2ee",
+    "last_commit": {
+      "oid": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+      "title": "Preparing for release!",
+      "date": "2026-04-02T10:52:44+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  }
+]

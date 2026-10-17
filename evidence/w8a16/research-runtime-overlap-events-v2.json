@@ -1,0 +1,48 @@
+{
+  "status": "sealed_recorded_cpu_intervals",
+  "created_utc": "2026-10-16T02:08:06.418932+00:00",
+  "prior": {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/research-runtime-overlap-events-v1.json",
+    "sha256": "d0350b432bf002efbd33c212405170d92a0626227e5974acfe6638ac31fb61f1"
+  },
+  "events": [
+    {
+      "activity": "controlled F16 weight-difference pilot",
+      "started_utc": "2026-10-16T01:50:59.225180+00:00",
+      "finished_utc": "2026-10-16T01:51:25.074530+00:00",
+      "source_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/result.json",
+      "source_sha256": "e7dfbee08e89e9ae19a4ec883392422e8485ffb7dfb9837c8dc2e99d1245cacf",
+      "gpu_work": false,
+      "timing_interpretation": "Overlapping development inference wall time is not an idle-host throughput measurement."
+    },
+    {
+      "activity": "CPU research figure render",
+      "started_utc": "2026-10-16T01:54:55.204130+00:00",
+      "finished_utc": "2026-10-16T01:54:55.662079+00:00",
+      "source_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-recovery-figures-v1/manifest.json",
+      "source_sha256": "f7419747b1b4cf623ae014f20ea779846e33681ac1c5eea5daaa1ad31538eeeb",
+      "gpu_work": false,
+      "timing_interpretation": "Overlapping development inference wall time is not an idle-host throughput measurement."
+    },
+    {
+      "activity": "CPU weight-difference postanalysis",
+      "started_utc": "2026-10-16T02:00:26.024339+00:00",
+      "finished_utc": "2026-10-16T02:00:41.178294+00:00",
+      "source_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-postanalysis-v1.json",
+      "source_sha256": "f22314baa49a13a82e710a565f1b0ce59ba198e9ba2df2c34f8303ce5815bd71",
+      "gpu_work": false,
+      "timing_interpretation": "Overlapping development inference wall time is not an idle-host throughput measurement."
+    },
+    {
+      "activity": "CPU Q8 precision comparison",
+      "started_utc": "2026-10-16T02:00:27.421428+00:00",
+      "finished_utc": "2026-10-16T02:01:04.479177+00:00",
+      "source_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/summary-v1.json",
+      "source_sha256": "204ae15e8e06340e2ef9e7647695f01fdc3eee61b6cbc40e8d1ab1c0a7f57aeb",
+      "gpu_work": false,
+      "timing_interpretation": "Overlapping development inference wall time is not an idle-host throughput measurement."
+    }
+  ],
+  "coverage": "Recorded bounded numerical tasks only; downloads, metadata reads, and other host activity are not exhaustively measured. These intervals may overlap one another.",
+  "inference_actions": false
+}

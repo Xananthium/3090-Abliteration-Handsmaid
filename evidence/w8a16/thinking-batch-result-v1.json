@@ -1,0 +1,164 @@
+{
+  "status": "completed",
+  "finished_utc": "2026-10-16T01:15:16.111464+00:00",
+  "comparisons": [
+    {
+      "label": "baseline",
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-summary.json",
+      "sha256": "65390e8c1b51343c28d768d5351696a7a8c0df90719d67674a212d7bfce316ea",
+      "capabilities": {
+        "correct": 46,
+        "total": 48,
+        "unresolved": 0,
+        "unresolved_truncated": 0,
+        "retried": 0,
+        "by_category": {
+          "consistency": {
+            "total": 12,
+            "correct": 12,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "instruction": {
+            "total": 12,
+            "correct": 10,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "reasoning": {
+            "total": 12,
+            "correct": 12,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "recovery": {
+            "total": 12,
+            "correct": 12,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          }
+        }
+      }
+    },
+    {
+      "label": "strength-1.0",
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-summary.json",
+      "sha256": "ffaff13f0830d87da294e04dd9f81bef692e9854bf8b695b8713923ead7d7a26",
+      "capabilities": {
+        "correct": 46,
+        "total": 48,
+        "unresolved": 0,
+        "unresolved_truncated": 0,
+        "retried": 0,
+        "by_category": {
+          "consistency": {
+            "total": 12,
+            "correct": 12,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "instruction": {
+            "total": 12,
+            "correct": 10,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "reasoning": {
+            "total": 12,
+            "correct": 12,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "recovery": {
+            "total": 12,
+            "correct": 12,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          }
+        }
+      }
+    },
+    {
+      "label": "strength-1.5",
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-summary.json",
+      "sha256": "6a9dad2e5d3b7dd2b03ab39c2b92f2d007d37bfef1f5b519f3cf5b53d27f7a01",
+      "capabilities": {
+        "correct": 46,
+        "total": 48,
+        "unresolved": 0,
+        "unresolved_truncated": 0,
+        "retried": 0,
+        "by_category": {
+          "consistency": {
+            "total": 12,
+            "correct": 12,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "instruction": {
+            "total": 12,
+            "correct": 10,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "reasoning": {
+            "total": 12,
+            "correct": 12,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "recovery": {
+            "total": 12,
+            "correct": 12,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          }
+        }
+      }
+    },
+    {
+      "label": "attention-1.5-mlp-1.0",
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-summary.json",
+      "sha256": "5081cbeda4320a6622bbdcc0717b4826be1a60647868599254f1d28b9ddf4b6c",
+      "capabilities": {
+        "correct": 46,
+        "total": 48,
+        "unresolved": 0,
+        "unresolved_truncated": 0,
+        "retried": 2,
+        "by_category": {
+          "consistency": {
+            "total": 12,
+            "correct": 12,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "instruction": {
+            "total": 12,
+            "correct": 10,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "reasoning": {
+            "total": 12,
+            "correct": 12,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "recovery": {
+            "total": 12,
+            "correct": 12,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          }
+        }
+      }
+    }
+  ],
+  "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+  "profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+  "quality_reference": "Untouched W8A16 baseline",
+  "scope": "24 previously seen benign reasoning, instruction, consistency and recovery cases, two repeats, thinking explicitly enabled. Separate diagnostic; not broad quality or refusal evidence.",
+  "production_modified": false,
+  "publication_performed": false
+}

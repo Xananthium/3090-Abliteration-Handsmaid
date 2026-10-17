@@ -1,0 +1,794 @@
+{
+  "status": "complete",
+  "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+  "schedule": {
+    "index": 0,
+    "repeat": 1,
+    "case_ids": [
+      "broader-fresh-01-remainders",
+      "broader-fresh-02-shortest-route",
+      "broader-fresh-03-base-seven",
+      "broader-fresh-04-round-robin"
+    ]
+  },
+  "attempt_id": "1792107709927104305-158804",
+  "invocation_id": "1792107709927049025-158804",
+  "started_at_utc": "2026-10-15T23:41:49.927234+00:00",
+  "partial_outputs_scored": false,
+  "completed_at_utc": "2026-10-15T23:42:54.680061+00:00",
+  "wall_seconds": 64.75296732000425,
+  "records": [
+    {
+      "id": "broader-fresh-01-remainders",
+      "category": "reasoning",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "fbb8e8bd3d3479700a2fdf77d3be5b3499b4efd2e4228129a5e1478d15b961df",
+      "prompt_sha256": "9e2537074acd94565342e084a362b3630da22e33c86cb5117f19b3d67a50e38b",
+      "answer_key_sha256": "1e13a2d7eb2e77b8a8f930856a20e9fd7061700f7cb62d1aed687b6ca6576dab",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 0,
+      "submission_index": 0,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 0,
+      "task_finished_sequence": 21,
+      "answer_text": "94",
+      "raw_final_text": "94",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 1566,
+      "raw_final_text_sha256": "e3d6c4d4599e00882384ca981ee287ed961fa5f3828e2adb5e9ea890ab0d0525",
+      "response_attempts": [
+        {
+          "raw_text": "94",
+          "raw_text_sha256": "e3d6c4d4599e00882384ca981ee287ed961fa5f3828e2adb5e9ea890ab0d0525",
+          "thinking_text": "*   $n \\equiv 3 \\pmod{7}$\n    *   $n \\equiv 4 \\pmod{5}$\n    *   $n \\equiv 1 \\pmod{3}$\n    *   $0 \\le n < 100$\n\n    *   $n \\equiv 3 \\pmod{7} \\implies n = 7k + 3$ for some integer $k$.\n\n    *   $7k + 3 \\equiv 4 \\pmod{5}$\n    *   $2k + 3 \\equiv 4 \\pmod{5}$\n    *   $2k \\equiv 1 \\pmod{5}$\n    *   To solve $2k \\equiv 1 \\pmod{5}$, multiply by the modular inverse of 2 modulo 5. The inverse is 3 (since $2 \\times 3 = 6 \\equiv 1 \\pmod{5}$).\n    *   $k \\equiv 3 \\pmod{5}$\n    *   So, $k = 5m + 3$ for some integer $m$.\n\n    *   $n = 7(5m + 3) + 3$\n    *   $n = 35m + 21 + 3$\n    *   $n = 35m + 24$\n\n    *   $35m + 24 \\equiv 1 \\pmod{3}$\n    *   $(3 \\times 11 + 2)m + (3 \\times 8 + 0) \\equiv 1 \\pmod{3}$ (Wait, let's simplify $35 \\pmod{3}$ and $24 \\pmod{3}$)\n    *   $35 \\equiv 2 \\pmod{3}$\n    *   $24 \\equiv 0 \\pmod{3}$\n    *   $2m + 0 \\equiv 1 \\pmod{3}$\n    *   $2m \\equiv 1 \\pmod{3}$\n    *   To solve $2m \\equiv 1 \\pmod{3}$, multiply by the modular inverse of 2 modulo 3. The inverse is 2 (since $2 \\times 2 = 4 \\equiv 1 \\pmod{3}$).\n    *   $m \\equiv 2 \\pmod{3}$\n    *   So, $m = 3p + 2$ for some integer $p$.\n\n    *   $n = 35(3p + 2) + 24$\n    *   $n = 105p + 70 + 24$\n    *   $n = 105p + 94$\n\n    *   $n = 105p + 94$\n    *   For $p = 0$, $n = 94$.\n    *   Check if $0 \\le 94 < 100$. Yes.\n\n    *   $94 \\div 7 = 13$ remainder $3$ ($13 \\times 7 = 91$, $91 + 3 = 94$). Correct.\n    *   $94 \\div 5 = 18$ remainder $4$ ($18 \\times 5 = 90$, $90 + 4 = 94$). Correct.\n    *   $94 \\div 3 = 31$ remainder $1$ ($31 \\times 3 = 93$, $93 + 1 = 94$). Correct.\n\n    *   The integer is 94.",
+          "thinking_text_sha256": "7c28c0d6d8ce17702338c49e3b01f9535590ab5cd961d0d2d6e8715cf5bc6558",
+          "thinking_characters": 1566,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   $n \\equiv 3 \\pmod{7}$\n    *   $n \\equiv 4 \\pmod{5}$\n    *   $n \\equiv 1 \\pmod{3}$\n    *   $0 \\le n < 100$\n\n    *   $n \\equiv 3 \\pmod{7} \\implies n = 7k + 3$ for some integer $k$.\n\n    *   $7k + 3 \\equiv 4 \\pmod{5}$\n    *   $2k + 3 \\equiv 4 \\pmod{5}$\n    *   $2k \\equiv 1 \\pmod{5}$\n    *   To solve $2k \\equiv 1 \\pmod{5}$, multiply by the modular inverse of 2 modulo 5. The inverse is 3 (since $2 \\times 3 = 6 \\equiv 1 \\pmod{5}$).\n    *   $k \\equiv 3 \\pmod{5}$\n    *   So, $k = 5m + 3$ for some integer $m$.\n\n    *   $n = 7(5m + 3) + 3$\n    *   $n = 35m + 21 + 3$\n    *   $n = 35m + 24$\n\n    *   $35m + 24 \\equiv 1 \\pmod{3}$\n    *   $(3 \\times 11 + 2)m + (3 \\times 8 + 0) \\equiv 1 \\pmod{3}$ (Wait, let's simplify $35 \\pmod{3}$ and $24 \\pmod{3}$)\n    *   $35 \\equiv 2 \\pmod{3}$\n    *   $24 \\equiv 0 \\pmod{3}$\n    *   $2m + 0 \\equiv 1 \\pmod{3}$\n    *   $2m \\equiv 1 \\pmod{3}$\n    *   To solve $2m \\equiv 1 \\pmod{3}$, multiply by the modular inverse of 2 modulo 3. The inverse is 2 (since $2 \\times 2 = 4 \\equiv 1 \\pmod{3}$).\n    *   $m \\equiv 2 \\pmod{3}$\n    *   So, $m = 3p + 2$ for some integer $p$.\n\n    *   $n = 35(3p + 2) + 24$\n    *   $n = 105p + 70 + 24$\n    *   $n = 105p + 94$\n\n    *   $n = 105p + 94$\n    *   For $p = 0$, $n = 94$.\n    *   Check if $0 \\le 94 < 100$. Yes.\n\n    *   $94 \\div 7 = 13$ remainder $3$ ($13 \\times 7 = 91$, $91 + 3 = 94$). Correct.\n    *   $94 \\div 5 = 18$ remainder $4$ ($18 \\times 5 = 90$, $90 + 4 = 94$). Correct.\n    *   $94 \\div 3 = 31$ remainder $1$ ($31 \\times 3 = 93$, $93 + 1 = 94$). Correct.\n\n    *   The integer is 94.",
+              "signature": "eca13af1fe8145819b2e14b918d44dc9"
+            },
+            {
+              "type": "text",
+              "text": "94"
+            }
+          ],
+          "native_content_blocks_sha256": "93c49bd21196c54dfbb0f7aea81c8efca188d8a6572e873199d47140b0d35e08",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 78,
+            "output_tokens": 800
+          },
+          "native_request_seconds": 55.37404199998127,
+          "started_sequence": 15,
+          "finished_sequence": 20
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.014594545005820692,
+          "started_sequence": 6,
+          "finished_sequence": 9
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 55.37404199998127,
+          "started_sequence": 15,
+          "finished_sequence": 20
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 800,
+          "input_tokens": 78,
+          "stop_reason": "end_turn",
+          "response_sha256": "e3d6c4d4599e00882384ca981ee287ed961fa5f3828e2adb5e9ea890ab0d0525",
+          "visible_characters": 2,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 55.42543412800296
+        }
+      ],
+      "counted_input_tokens": 78,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8050,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "e3d6c4d4599e00882384ca981ee287ed961fa5f3828e2adb5e9ea890ab0d0525",
+      "output_tokens": 800,
+      "total_output_tokens_including_retries": 800,
+      "generation_seconds_including_retries": 55.42543412800296,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:42:45.478324+00:00",
+      "record_sha256": "77e27e4d937207ddf0b2a5faf8be27d669cb7ed2b8bedd2da8ecf95223df6b2b"
+    },
+    {
+      "id": "broader-fresh-02-shortest-route",
+      "category": "reasoning",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "7fbbf907afd7e3ee9d03345672a5ee4f81f313ff1da803338de6a1ee4af77f69",
+      "prompt_sha256": "02eded74b39a0f1b633b522a6b6b0575d6ef1321f7591f70ce76978ce4f7bcce",
+      "answer_key_sha256": "52683baff5c874b76dd52b2cbda1009da62652f2ba2a4816ace51b8f4b54de62",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 0,
+      "submission_index": 1,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 1,
+      "task_finished_sequence": 19,
+      "answer_text": "```json\n{\n  \"minutes\": 10,\n  \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]\n}\n```",
+      "raw_final_text": "```json\n{\n  \"minutes\": 10,\n  \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 1211,
+      "raw_final_text_sha256": "73769b0ef323568bef970085b8bf274de5f6840ed7dbd141bb7ac35ca2fa6f6e",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"minutes\": 10,\n  \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]\n}\n```",
+          "raw_text_sha256": "73769b0ef323568bef970085b8bf274de5f6840ed7dbd141bb7ac35ca2fa6f6e",
+          "thinking_text": "*   A -> B: 4\n    *   A -> C: 2\n    *   C -> B: 1\n    *   B -> D: 5\n    *   C -> D: 8\n    *   D -> E: 2\n    *   B -> E: 9\n\n    *   A -> B -> D -> E: 4 + 5 + 2 = 11\n    *   A -> B -> E: 4 + 9 = 13\n    *   A -> C -> B -> D -> E: 2 + 1 + 5 + 2 = 10\n    *   A -> C -> B -> E: 2 + 1 + 9 = 12\n    *   A -> C -> D -> E: 2 + 8 + 2 = 12\n\n    *   A -> B -> D -> E: 11\n    *   A -> B -> E: 13\n    *   A -> C -> B -> D -> E: 10\n    *   A -> C -> B -> E: 12\n    *   A -> C -> D -> E: 12\n\n    *   The fastest route is A -> C -> B -> D -> E with a total time of 10 minutes.\n\n    *   Minutes: 10\n    *   Route: [\"A\", \"C\", \"B\", \"D\", \"E\"]\n\n    *   A -> C (2)\n    *   C -> B (1)\n    *   B -> D (5)\n    *   D -> E (2)\n    *   Total: 2 + 1 + 5 + 2 = 10. Correct.\n\n    *   A -> B (4)\n    *   B -> D (5)\n    *   D -> E (2)\n    *   Total: 4 + 5 + 2 = 11. Correct.\n\n    *   A -> C (2)\n    *   C -> D (8)\n    *   D -> E (2)\n    *   Total: 2 + 8 + 2 = 12. Correct.\n\n    *   A -> B (4)\n    *   B -> E (9)\n    *   Total: 4 + 9 = 13. Correct.\n\n    *   A -> C (2)\n    *   C -> B (1)\n    *   B -> E (9)\n    *   Total: 2 + 1 + 9 = 12. Correct.\n\n    *   Fastest is 10.\n\n    *   JSON format: `{\"minutes\": 10, \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]}`.",
+          "thinking_text_sha256": "2a2995161d8ef07c037d6974c73e26f4804f069d003fd8d2cf1fa4d469684db7",
+          "thinking_characters": 1211,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   A -> B: 4\n    *   A -> C: 2\n    *   C -> B: 1\n    *   B -> D: 5\n    *   C -> D: 8\n    *   D -> E: 2\n    *   B -> E: 9\n\n    *   A -> B -> D -> E: 4 + 5 + 2 = 11\n    *   A -> B -> E: 4 + 9 = 13\n    *   A -> C -> B -> D -> E: 2 + 1 + 5 + 2 = 10\n    *   A -> C -> B -> E: 2 + 1 + 9 = 12\n    *   A -> C -> D -> E: 2 + 8 + 2 = 12\n\n    *   A -> B -> D -> E: 11\n    *   A -> B -> E: 13\n    *   A -> C -> B -> D -> E: 10\n    *   A -> C -> B -> E: 12\n    *   A -> C -> D -> E: 12\n\n    *   The fastest route is A -> C -> B -> D -> E with a total time of 10 minutes.\n\n    *   Minutes: 10\n    *   Route: [\"A\", \"C\", \"B\", \"D\", \"E\"]\n\n    *   A -> C (2)\n    *   C -> B (1)\n    *   B -> D (5)\n    *   D -> E (2)\n    *   Total: 2 + 1 + 5 + 2 = 10. Correct.\n\n    *   A -> B (4)\n    *   B -> D (5)\n    *   D -> E (2)\n    *   Total: 4 + 5 + 2 = 11. Correct.\n\n    *   A -> C (2)\n    *   C -> D (8)\n    *   D -> E (2)\n    *   Total: 2 + 8 + 2 = 12. Correct.\n\n    *   A -> B (4)\n    *   B -> E (9)\n    *   Total: 4 + 9 = 13. Correct.\n\n    *   A -> C (2)\n    *   C -> B (1)\n    *   B -> E (9)\n    *   Total: 2 + 1 + 9 = 12. Correct.\n\n    *   Fastest is 10.\n\n    *   JSON format: `{\"minutes\": 10, \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]}`.",
+              "signature": "fec2762583bd4c91810e6ff0197bafdd"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"minutes\": 10,\n  \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "dcef484144822ea87510885969b7313c3e2419b917bca76798abae0c270a3af4",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 120,
+            "output_tokens": 663
+          },
+          "native_request_seconds": 46.272937971982174,
+          "started_sequence": 13,
+          "finished_sequence": 18
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.015286137000657618,
+          "started_sequence": 7,
+          "finished_sequence": 10
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 46.272937971982174,
+          "started_sequence": 13,
+          "finished_sequence": 18
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 663,
+          "input_tokens": 120,
+          "stop_reason": "end_turn",
+          "response_sha256": "73769b0ef323568bef970085b8bf274de5f6840ed7dbd141bb7ac35ca2fa6f6e",
+          "visible_characters": 69,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 46.31561905198032
+        }
+      ],
+      "counted_input_tokens": 120,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8008,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "73769b0ef323568bef970085b8bf274de5f6840ed7dbd141bb7ac35ca2fa6f6e",
+      "output_tokens": 663,
+      "total_output_tokens_including_retries": 663,
+      "generation_seconds_including_retries": 46.31561905198032,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:42:36.370996+00:00",
+      "record_sha256": "07649d99d0c813b23dba2d1016a54f66da3a1386549f201f3d4e26db392cbcc9"
+    },
+    {
+      "id": "broader-fresh-03-base-seven",
+      "category": "reasoning",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "c5faf78172d2fe57c93518b2cc74c0e08be5edbc6839c490fefe5c846f1ab467",
+      "prompt_sha256": "f647491ea2c6b9cb6c9ffa41b0661a9200a4061c7080eeb2f8fbc408a8796a27",
+      "answer_key_sha256": "f87f1f93d6af1981fb920e0b85ec5f903110ac60cb0ca5bd93f4959a85ade53c",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 0,
+      "submission_index": 2,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 3,
+      "task_finished_sequence": 17,
+      "answer_text": "266",
+      "raw_final_text": "266",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 814,
+      "raw_final_text_sha256": "ea5b27556fbb134def2c2fbf944d9cdda3dbdb6b10473a1aec59f6f170c4ca3a",
+      "response_attempts": [
+        {
+          "raw_text": "266",
+          "raw_text_sha256": "ea5b27556fbb134def2c2fbf944d9cdda3dbdb6b10473a1aec59f6f170c4ca3a",
+          "thinking_text": "*   Input: The digits \"530\" in base 7.\n    *   Goal: Convert this base 7 number to its decimal (base 10) equivalent.\n    *   Constraint: Reply with the integer only.\n\n    *   A number in base $b$ with digits $d_n d_{n-1} \\dots d_1 d_0$ is calculated as:\n        $d_n \\cdot b^n + d_{n-1} \\cdot b^{n-1} + \\dots + d_1 \\cdot b^1 + d_0 \\cdot b^0$\n\n    *   Digits: $d_2 = 5$, $d_1 = 3$, $d_0 = 0$\n    *   Base: $b = 7$\n\n    *   $5 \\cdot 7^2 + 3 \\cdot 7^1 + 0 \\cdot 7^0$\n    *   $5 \\cdot 49 + 3 \\cdot 7 + 0 \\cdot 1$\n    *   $5 \\cdot 49 = 245$\n    *   $3 \\cdot 7 = 21$\n    *   $0 \\cdot 1 = 0$\n    *   $245 + 21 + 0 = 266$\n\n    *   $5 \\times 49$: $5 \\times 50 = 250$, $250 - 5 = 245$. Correct.\n    *   $3 \\times 7 = 21$. Correct.\n    *   $245 + 21 = 266$. Correct.\n\n    *   The user requested the integer only.\n\n    *   266",
+          "thinking_text_sha256": "9066d4e019c9463877c5781fb1ba86f853d99c42e923c3d69360b7026ef71e41",
+          "thinking_characters": 814,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Input: The digits \"530\" in base 7.\n    *   Goal: Convert this base 7 number to its decimal (base 10) equivalent.\n    *   Constraint: Reply with the integer only.\n\n    *   A number in base $b$ with digits $d_n d_{n-1} \\dots d_1 d_0$ is calculated as:\n        $d_n \\cdot b^n + d_{n-1} \\cdot b^{n-1} + \\dots + d_1 \\cdot b^1 + d_0 \\cdot b^0$\n\n    *   Digits: $d_2 = 5$, $d_1 = 3$, $d_0 = 0$\n    *   Base: $b = 7$\n\n    *   $5 \\cdot 7^2 + 3 \\cdot 7^1 + 0 \\cdot 7^0$\n    *   $5 \\cdot 49 + 3 \\cdot 7 + 0 \\cdot 1$\n    *   $5 \\cdot 49 = 245$\n    *   $3 \\cdot 7 = 21$\n    *   $0 \\cdot 1 = 0$\n    *   $245 + 21 + 0 = 266$\n\n    *   $5 \\times 49$: $5 \\times 50 = 250$, $250 - 5 = 245$. Correct.\n    *   $3 \\times 7 = 21$. Correct.\n    *   $245 + 21 = 266$. Correct.\n\n    *   The user requested the integer only.\n\n    *   266",
+              "signature": "5a3b5ce6f5e64f63a5f4c79b7dec2bb2"
+            },
+            {
+              "type": "text",
+              "text": "266"
+            }
+          ],
+          "native_content_blocks_sha256": "208a5be9532f246394fe690902fe8b24c6c2e6237ff3cb86c632221c4e54c1ac",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 58,
+            "output_tokens": 404
+          },
+          "native_request_seconds": 28.458139780006604,
+          "started_sequence": 14,
+          "finished_sequence": 16
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.015778116008732468,
+          "started_sequence": 8,
+          "finished_sequence": 11
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 28.458139780006604,
+          "started_sequence": 14,
+          "finished_sequence": 16
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 404,
+          "input_tokens": 58,
+          "stop_reason": "end_turn",
+          "response_sha256": "ea5b27556fbb134def2c2fbf944d9cdda3dbdb6b10473a1aec59f6f170c4ca3a",
+          "visible_characters": 3,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 28.496499676984968
+        }
+      ],
+      "counted_input_tokens": 58,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8070,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "ea5b27556fbb134def2c2fbf944d9cdda3dbdb6b10473a1aec59f6f170c4ca3a",
+      "output_tokens": 404,
+      "total_output_tokens_including_retries": 404,
+      "generation_seconds_including_retries": 28.496499676984968,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:42:18.553362+00:00",
+      "record_sha256": "1139a235737005d2004a5a651f95d22fb021e2d20cbe782814ab1c11715fe222"
+    },
+    {
+      "id": "broader-fresh-04-round-robin",
+      "category": "reasoning",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "88fa62970a0884f8450a8c87e517252d1dffcaa5ce8f7ff34577ad7a10952d14",
+      "prompt_sha256": "f24f656d978487a3660cd6f25ff9dce61eeb3e000d63b37b7870473bf206f4b6",
+      "answer_key_sha256": "7ccf091e17ae117e865a01bdd6718f135f3d2b967f9381a9c19b8a7a1babf4e3",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 0,
+      "submission_index": 3,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 2,
+      "task_finished_sequence": 23,
+      "answer_text": "```json\n{\n  \"A\": 9,\n  \"B\": 8,\n  \"C\": 5\n}\n```",
+      "raw_final_text": "```json\n{\n  \"A\": 9,\n  \"B\": 8,\n  \"C\": 5\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 2283,
+      "raw_final_text_sha256": "b0348615323956963da1c69c05277082eba989feeab2d6ad2a9f646287b560bf",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"A\": 9,\n  \"B\": 8,\n  \"C\": 5\n}\n```",
+          "raw_text_sha256": "b0348615323956963da1c69c05277082eba989feeab2d6ad2a9f646287b560bf",
+          "thinking_text": "*   Scheduling Algorithm: Round-Robin (RR).\n    *   Time Quantum ($q$): 2 minutes.\n    *   Switching Overhead: 0.\n    *   Jobs:\n        *   A: 5 minutes.\n        *   B: 3 minutes.\n        *   C: 1 minute.\n    *   Arrival Time: All at minute 0.\n    *   Order: A, B, C.\n    *   Rule: Unfinished jobs go to the end of the queue.\n\n    *   Queue: [A, B, C]\n    *   Time $t = 0$.\n\n    *   **Round 1:**\n        *   **Job A** starts at $t=0$.\n        *   Quantum is 2. Job A needs 5.\n        *   A runs for 2 mins.\n        *   $t = 2$.\n        *   Remaining A: $5 - 2 = 3$.\n        *   Queue: [B, C, A]\n\n        *   **Job B** starts at $t=2$.\n        *   Quantum is 2. Job B needs 3.\n        *   B runs for 2 mins.\n        *   $t = 4$.\n        *   Remaining B: $3 - 2 = 1$.\n        *   Queue: [C, A, B]\n\n        *   **Job C** starts at $t=4$.\n        *   Quantum is 2. Job C needs 1.\n        *   C runs for 1 min (finishes).\n        *   $t = 5$.\n        *   Remaining C: 0.\n        *   **C completes at $t=5$.**\n        *   Queue: [A, B]\n\n    *   **Round 2:**\n        *   **Job A** starts at $t=5$.\n        *   Quantum is 2. Remaining A is 3.\n        *   A runs for 2 mins.\n        *   $t = 7$.\n        *   Remaining A: $3 - 2 = 1$.\n        *   Queue: [B, A]\n\n        *   **Job B** starts at $t=7$.\n        *   Quantum is 2. Remaining B is 1.\n        *   B runs for 1 min (finishes).\n        *   $t = 8$.\n        *   Remaining B: 0.\n        *   **B completes at $t=8$.**\n        *   Queue: [A]\n\n    *   **Round 3:**\n        *   **Job A** starts at $t=8$.\n        *   Quantum is 2. Remaining A is 1.\n        *   A runs for 1 min (finishes).\n        *   $t = 9$.\n        *   Remaining A: 0.\n        *   **A completes at $t=9$.**\n\n    *   A: 9\n    *   B: 8\n    *   C: 5\n\n    *   $t=0$: A starts (needs 5)\n    *   $t=2$: A ends turn (needs 3), B starts (needs 3)\n    *   $t=4$: B ends turn (needs 1), C starts (needs 1)\n    *   $t=5$: C ends (done), A starts (needs 3)\n    *   $t=7$: A ends turn (needs 1), B starts (needs 1)\n    *   $t=8$: B ends (done), A starts (needs 1)\n    *   $t=9$: A ends (done)\n\n    *   A: 9\n    *   B: 8\n    *   C: 5\n\n    *   Return only a JSON object mapping A, B, C to their completion times.\n\n    ```json\n    {\n      \"A\": 9,\n      \"B\": 8,\n      \"C\": 5\n    }\n    ```",
+          "thinking_text_sha256": "542baffb6e196b60ce0a07df551179a227c26907c0e3a46dee3036194ea9eb9e",
+          "thinking_characters": 2283,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Scheduling Algorithm: Round-Robin (RR).\n    *   Time Quantum ($q$): 2 minutes.\n    *   Switching Overhead: 0.\n    *   Jobs:\n        *   A: 5 minutes.\n        *   B: 3 minutes.\n        *   C: 1 minute.\n    *   Arrival Time: All at minute 0.\n    *   Order: A, B, C.\n    *   Rule: Unfinished jobs go to the end of the queue.\n\n    *   Queue: [A, B, C]\n    *   Time $t = 0$.\n\n    *   **Round 1:**\n        *   **Job A** starts at $t=0$.\n        *   Quantum is 2. Job A needs 5.\n        *   A runs for 2 mins.\n        *   $t = 2$.\n        *   Remaining A: $5 - 2 = 3$.\n        *   Queue: [B, C, A]\n\n        *   **Job B** starts at $t=2$.\n        *   Quantum is 2. Job B needs 3.\n        *   B runs for 2 mins.\n        *   $t = 4$.\n        *   Remaining B: $3 - 2 = 1$.\n        *   Queue: [C, A, B]\n\n        *   **Job C** starts at $t=4$.\n        *   Quantum is 2. Job C needs 1.\n        *   C runs for 1 min (finishes).\n        *   $t = 5$.\n        *   Remaining C: 0.\n        *   **C completes at $t=5$.**\n        *   Queue: [A, B]\n\n    *   **Round 2:**\n        *   **Job A** starts at $t=5$.\n        *   Quantum is 2. Remaining A is 3.\n        *   A runs for 2 mins.\n        *   $t = 7$.\n        *   Remaining A: $3 - 2 = 1$.\n        *   Queue: [B, A]\n\n        *   **Job B** starts at $t=7$.\n        *   Quantum is 2. Remaining B is 1.\n        *   B runs for 1 min (finishes).\n        *   $t = 8$.\n        *   Remaining B: 0.\n        *   **B completes at $t=8$.**\n        *   Queue: [A]\n\n    *   **Round 3:**\n        *   **Job A** starts at $t=8$.\n        *   Quantum is 2. Remaining A is 1.\n        *   A runs for 1 min (finishes).\n        *   $t = 9$.\n        *   Remaining A: 0.\n        *   **A completes at $t=9$.**\n\n    *   A: 9\n    *   B: 8\n    *   C: 5\n\n    *   $t=0$: A starts (needs 5)\n    *   $t=2$: A ends turn (needs 3), B starts (needs 3)\n    *   $t=4$: B ends turn (needs 1), C starts (needs 1)\n    *   $t=5$: C ends (done), A starts (needs 3)\n    *   $t=7$: A ends turn (needs 1), B starts (needs 1)\n    *   $t=8$: B ends (done), A starts (needs 1)\n    *   $t=9$: A ends (done)\n\n    *   A: 9\n    *   B: 8\n    *   C: 5\n\n    *   Return only a JSON object mapping A, B, C to their completion times.\n\n    ```json\n    {\n      \"A\": 9,\n      \"B\": 8,\n      \"C\": 5\n    }\n    ```",
+              "signature": "e4246db8638b48d48e0a7563a8acd786"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"A\": 9,\n  \"B\": 8,\n  \"C\": 5\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "2a83df8cc45219a205a57b4a9f2a32644b61820be394b5b2e0e80c123ad5a720",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 105,
+            "output_tokens": 941
+          },
+          "native_request_seconds": 64.57839767998667,
+          "started_sequence": 12,
+          "finished_sequence": 22
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.006584590999409556,
+          "started_sequence": 4,
+          "finished_sequence": 5
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 64.57839767998667,
+          "started_sequence": 12,
+          "finished_sequence": 22
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 941,
+          "input_tokens": 105,
+          "stop_reason": "end_turn",
+          "response_sha256": "b0348615323956963da1c69c05277082eba989feeab2d6ad2a9f646287b560bf",
+          "visible_characters": 44,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 64.61597844201606
+        }
+      ],
+      "counted_input_tokens": 105,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8023,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "b0348615323956963da1c69c05277082eba989feeab2d6ad2a9f646287b560bf",
+      "output_tokens": 941,
+      "total_output_tokens_including_retries": 941,
+      "generation_seconds_including_retries": 64.61597844201606,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:42:54.645675+00:00",
+      "record_sha256": "24513a36ab4e1cebb19385c9ca8304c0e900826ab8661d271d37725c264ccc4d"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:41:49.942342+00:00",
+      "group_elapsed_seconds": 0.012066408002283424,
+      "group_index": 0,
+      "submission_index": 0
+    },
+    {
+      "sequence": 1,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:41:49.959149+00:00",
+      "group_elapsed_seconds": 0.028874998999526724,
+      "group_index": 0,
+      "submission_index": 1
+    },
+    {
+      "sequence": 2,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:41:49.989316+00:00",
+      "group_elapsed_seconds": 0.05903916899114847,
+      "group_index": 0,
+      "submission_index": 3
+    },
+    {
+      "sequence": 3,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:41:49.989549+00:00",
+      "group_elapsed_seconds": 0.05927952899946831,
+      "group_index": 0,
+      "submission_index": 2
+    },
+    {
+      "sequence": 4,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:41:50.007290+00:00",
+      "group_elapsed_seconds": 0.07701377998455428,
+      "group_index": 0,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 5,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:41:50.013890+00:00",
+      "group_elapsed_seconds": 0.0836094550031703,
+      "group_index": 0,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 4
+    },
+    {
+      "sequence": 6,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:41:50.018446+00:00",
+      "group_elapsed_seconds": 0.0881669849914033,
+      "group_index": 0,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 7,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:41:50.020101+00:00",
+      "group_elapsed_seconds": 0.08982280199415982,
+      "group_index": 0,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 8,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:41:50.021785+00:00",
+      "group_elapsed_seconds": 0.09151455899700522,
+      "group_index": 0,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 9,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:41:50.033056+00:00",
+      "group_elapsed_seconds": 0.10277807200327516,
+      "group_index": 0,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 6
+    },
+    {
+      "sequence": 10,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:41:50.035402+00:00",
+      "group_elapsed_seconds": 0.10512523399665952,
+      "group_index": 0,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 7
+    },
+    {
+      "sequence": 11,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:41:50.037591+00:00",
+      "group_elapsed_seconds": 0.10731991598731838,
+      "group_index": 0,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 8
+    },
+    {
+      "sequence": 12,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:41:50.041186+00:00",
+      "group_elapsed_seconds": 0.11090603697812185,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 13,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:41:50.067748+00:00",
+      "group_elapsed_seconds": 0.1374734709970653,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 14,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:41:50.073243+00:00",
+      "group_elapsed_seconds": 0.1429665399773512,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 15,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:41:50.075984+00:00",
+      "group_elapsed_seconds": 0.14570925198495388,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 16,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:42:18.531404+00:00",
+      "group_elapsed_seconds": 28.601131471979897,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "start_sequence": 14
+    },
+    {
+      "sequence": 17,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:42:18.553362+00:00",
+      "group_elapsed_seconds": 28.623090691980906,
+      "group_index": 0,
+      "submission_index": 2
+    },
+    {
+      "sequence": 18,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:42:36.340711+00:00",
+      "group_elapsed_seconds": 46.410445073997835,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "start_sequence": 13
+    },
+    {
+      "sequence": 19,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:42:36.370996+00:00",
+      "group_elapsed_seconds": 46.44072292800411,
+      "group_index": 0,
+      "submission_index": 1
+    },
+    {
+      "sequence": 20,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:42:45.450051+00:00",
+      "group_elapsed_seconds": 55.519785430980846,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "start_sequence": 15
+    },
+    {
+      "sequence": 21,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:42:45.478324+00:00",
+      "group_elapsed_seconds": 55.548051755991764,
+      "group_index": 0,
+      "submission_index": 0
+    },
+    {
+      "sequence": 22,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:42:54.619601+00:00",
+      "group_elapsed_seconds": 64.6893279159849,
+      "group_index": 0,
+      "route": "/v1/messages",
+      "start_sequence": 12
+    },
+    {
+      "sequence": 23,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:42:54.645675+00:00",
+      "group_elapsed_seconds": 64.71540224499768,
+      "group_index": 0,
+      "submission_index": 3
+    }
+  ],
+  "submission_order": [
+    "broader-fresh-01-remainders",
+    "broader-fresh-02-shortest-route",
+    "broader-fresh-03-base-seven",
+    "broader-fresh-04-round-robin"
+  ],
+  "client_task_start_order": [
+    "broader-fresh-01-remainders",
+    "broader-fresh-02-shortest-route",
+    "broader-fresh-04-round-robin",
+    "broader-fresh-03-base-seven"
+  ],
+  "client_task_finish_order": [
+    "broader-fresh-03-base-seven",
+    "broader-fresh-02-shortest-route",
+    "broader-fresh-01-remainders",
+    "broader-fresh-04-round-robin"
+  ],
+  "observed_future_completion_order": [
+    "broader-fresh-03-base-seven",
+    "broader-fresh-02-shortest-route",
+    "broader-fresh-01-remainders",
+    "broader-fresh-04-round-robin"
+  ],
+  "ordering_scope": "Sequences and elapsed times are local to this group. Client submission, task, and HTTP dispatch/completion order are recorded; GPU scheduler order is not observed.",
+  "group_sha256": "9e147dedfcbf13f3a8e78ac838c54e1069f1a7cf0ec838f104e8fd63c1cc2a31"
+}

@@ -1,0 +1,13 @@
+{
+  "started_utc": "2026-10-17T16:43:25.772967+00:00",
+  "finished_utc": "2026-10-17T16:43:26.862889+00:00",
+  "wall_seconds": 1.0899317060247995,
+  "unit": "redcell-authorized-workflow-1792254112313619027.service",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "final_systemd_state": "Result=success\nExecMainStatus=0\nId=redcell-authorized-workflow-1792254112313619027.service\nActiveState=inactive\nSubState=dead\nUnitFileState=\n\nResult=success\nExecMainStatus=0\nId=qwen-vllm.service\nActiveState=inactive\nSubState=dead\nUnitFileState=disabled\n",
+  "gpu_memory": "0, 1 MiB, 24576 MiB\n1, 1 MiB, 24576 MiB\n",
+  "evaluation_summary_sha256": "cd0069797d4f28002659b8d666fb27eae36274d475d31bdaecd42030635ff53b",
+  "runtime_status_source_unchanged": true
+}

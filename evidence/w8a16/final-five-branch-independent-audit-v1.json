@@ -1,0 +1,497 @@
+{
+  "schema_version": 1,
+  "status": "passed_read_only_independent_benign_evidence_audit",
+  "created_utc": "2026-10-16T02:14:48.861759+00:00",
+  "audit_method": {
+    "prior_raw_audit": "Validated committed groups, records, frozen grades, completion, mode/protocol/checkpoint/adapter identities, response/usage hashes, tool/vision predicates and aggregate links using pinned pure helpers. Network and subprocess actions were blocked. All 196 tracked audit input files remained unchanged.",
+    "report_check": "Compared all ten completed report rows and every paired loss/gain against independently computed pre-report raw results; reviewed the original-to-v2 generator diff. No evaluation was rerun to repair reporting.",
+    "write_scope": "Only this new audit receipt.",
+    "model_api_gpu_service_actions": 0,
+    "source_or_score_mutations": 0
+  },
+  "counts": {
+    "branches": 5,
+    "unique_capability_cases": 24,
+    "repeats_per_mode": 2,
+    "modes": 2,
+    "capability_records_independently_validated": 480,
+    "committed_groups": 120,
+    "tool_vision_runs": 10,
+    "tool_vision_checks_independently_validated": 70,
+    "prior_raw_audit_input_files_hashed_and_unchanged": 196,
+    "report_evidence_manifest_entries": 240,
+    "report_paired_observation_rows": 384,
+    "final_incomplete_capability_records": 0,
+    "final_truncated_capability_records": 0,
+    "unknown_attempt_token_counts": 0,
+    "incomplete_tool_vision_generations": 0
+  },
+  "metrics_match_independent_raw_audit": true,
+  "modes": {
+    "thinking_off": [
+      {
+        "branch": "baseline",
+        "correct": 36,
+        "total": 48,
+        "baseline_losses": 0,
+        "baseline_gains": 0,
+        "baseline_success_retained": 36,
+        "baseline_success_total": 36,
+        "baseline_success_retention_percent": 100.0,
+        "generated_tokens_including_retries": 1034,
+        "generated_token_increase_percent": 0.0,
+        "completed_attempt_tokens": 1034,
+        "preceding_failed_attempt_tokens": 0,
+        "retried_rows": 0,
+        "tool_vision_passed": 7,
+        "tool_vision_total": 7,
+        "tool_vision_generated_tokens": 97,
+        "paired_changes": []
+      },
+      {
+        "branch": "strength-1.0",
+        "correct": 31,
+        "total": 48,
+        "baseline_losses": 5,
+        "baseline_gains": 0,
+        "baseline_success_retained": 31,
+        "baseline_success_total": 36,
+        "baseline_success_retention_percent": 86.11111111111111,
+        "generated_tokens_including_retries": 3859,
+        "generated_token_increase_percent": 273.21083172147,
+        "completed_attempt_tokens": 2835,
+        "preceding_failed_attempt_tokens": 1024,
+        "retried_rows": 2,
+        "tool_vision_passed": 7,
+        "tool_vision_total": 7,
+        "tool_vision_generated_tokens": 98,
+        "paired_changes": [
+          {
+            "case_id": "broader-fresh-17-cyclic-order",
+            "repeat": 1,
+            "outcome": "loss"
+          },
+          {
+            "case_id": "broader-fresh-18-rounding-order",
+            "repeat": 1,
+            "outcome": "loss"
+          },
+          {
+            "case_id": "broader-fresh-03-base-seven",
+            "repeat": 2,
+            "outcome": "loss"
+          },
+          {
+            "case_id": "broader-fresh-17-cyclic-order",
+            "repeat": 2,
+            "outcome": "loss"
+          },
+          {
+            "case_id": "broader-fresh-18-rounding-order",
+            "repeat": 2,
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "branch": "strength-1.5",
+        "correct": 31,
+        "total": 48,
+        "baseline_losses": 6,
+        "baseline_gains": 1,
+        "baseline_success_retained": 30,
+        "baseline_success_total": 36,
+        "baseline_success_retention_percent": 83.33333333333333,
+        "generated_tokens_including_retries": 5018,
+        "generated_token_increase_percent": 385.2998065764023,
+        "completed_attempt_tokens": 3994,
+        "preceding_failed_attempt_tokens": 1024,
+        "retried_rows": 2,
+        "tool_vision_passed": 7,
+        "tool_vision_total": 7,
+        "tool_vision_generated_tokens": 96,
+        "paired_changes": [
+          {
+            "case_id": "broader-fresh-03-base-seven",
+            "repeat": 1,
+            "outcome": "loss"
+          },
+          {
+            "case_id": "broader-fresh-17-cyclic-order",
+            "repeat": 1,
+            "outcome": "loss"
+          },
+          {
+            "case_id": "broader-fresh-18-rounding-order",
+            "repeat": 1,
+            "outcome": "loss"
+          },
+          {
+            "case_id": "broader-fresh-03-base-seven",
+            "repeat": 2,
+            "outcome": "loss"
+          },
+          {
+            "case_id": "broader-fresh-11-second-delimited-field",
+            "repeat": 2,
+            "outcome": "gain"
+          },
+          {
+            "case_id": "broader-fresh-17-cyclic-order",
+            "repeat": 2,
+            "outcome": "loss"
+          },
+          {
+            "case_id": "broader-fresh-18-rounding-order",
+            "repeat": 2,
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "branch": "attention-1.5-mlp-1.0",
+        "correct": 31,
+        "total": 48,
+        "baseline_losses": 5,
+        "baseline_gains": 0,
+        "baseline_success_retained": 31,
+        "baseline_success_total": 36,
+        "baseline_success_retention_percent": 86.11111111111111,
+        "generated_tokens_including_retries": 3904,
+        "generated_token_increase_percent": 277.56286266924565,
+        "completed_attempt_tokens": 2880,
+        "preceding_failed_attempt_tokens": 1024,
+        "retried_rows": 2,
+        "tool_vision_passed": 7,
+        "tool_vision_total": 7,
+        "tool_vision_generated_tokens": 98,
+        "paired_changes": [
+          {
+            "case_id": "broader-fresh-17-cyclic-order",
+            "repeat": 1,
+            "outcome": "loss"
+          },
+          {
+            "case_id": "broader-fresh-18-rounding-order",
+            "repeat": 1,
+            "outcome": "loss"
+          },
+          {
+            "case_id": "broader-fresh-03-base-seven",
+            "repeat": 2,
+            "outcome": "loss"
+          },
+          {
+            "case_id": "broader-fresh-17-cyclic-order",
+            "repeat": 2,
+            "outcome": "loss"
+          },
+          {
+            "case_id": "broader-fresh-18-rounding-order",
+            "repeat": 2,
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "branch": "nf4-direction-w8-weight-strength-1.0",
+        "correct": 32,
+        "total": 48,
+        "baseline_losses": 4,
+        "baseline_gains": 0,
+        "baseline_success_retained": 32,
+        "baseline_success_total": 36,
+        "baseline_success_retention_percent": 88.88888888888889,
+        "generated_tokens_including_retries": 3625,
+        "generated_token_increase_percent": 250.58027079303673,
+        "completed_attempt_tokens": 2601,
+        "preceding_failed_attempt_tokens": 1024,
+        "retried_rows": 2,
+        "tool_vision_passed": 7,
+        "tool_vision_total": 7,
+        "tool_vision_generated_tokens": 98,
+        "paired_changes": [
+          {
+            "case_id": "broader-fresh-17-cyclic-order",
+            "repeat": 1,
+            "outcome": "loss"
+          },
+          {
+            "case_id": "broader-fresh-18-rounding-order",
+            "repeat": 1,
+            "outcome": "loss"
+          },
+          {
+            "case_id": "broader-fresh-17-cyclic-order",
+            "repeat": 2,
+            "outcome": "loss"
+          },
+          {
+            "case_id": "broader-fresh-18-rounding-order",
+            "repeat": 2,
+            "outcome": "loss"
+          }
+        ]
+      }
+    ],
+    "thinking_on": [
+      {
+        "branch": "baseline",
+        "correct": 46,
+        "total": 48,
+        "baseline_losses": 0,
+        "baseline_gains": 0,
+        "baseline_success_retained": 46,
+        "baseline_success_total": 46,
+        "baseline_success_retention_percent": 100.0,
+        "generated_tokens_including_retries": 20336,
+        "generated_token_increase_percent": 0.0,
+        "completed_attempt_tokens": 20336,
+        "preceding_failed_attempt_tokens": 0,
+        "retried_rows": 0,
+        "tool_vision_passed": 7,
+        "tool_vision_total": 7,
+        "tool_vision_generated_tokens": 327,
+        "paired_changes": []
+      },
+      {
+        "branch": "strength-1.0",
+        "correct": 46,
+        "total": 48,
+        "baseline_losses": 0,
+        "baseline_gains": 0,
+        "baseline_success_retained": 46,
+        "baseline_success_total": 46,
+        "baseline_success_retention_percent": 100.0,
+        "generated_tokens_including_retries": 31187,
+        "generated_token_increase_percent": 53.35857592446893,
+        "completed_attempt_tokens": 31187,
+        "preceding_failed_attempt_tokens": 0,
+        "retried_rows": 0,
+        "tool_vision_passed": 7,
+        "tool_vision_total": 7,
+        "tool_vision_generated_tokens": 427,
+        "paired_changes": []
+      },
+      {
+        "branch": "strength-1.5",
+        "correct": 46,
+        "total": 48,
+        "baseline_losses": 1,
+        "baseline_gains": 1,
+        "baseline_success_retained": 45,
+        "baseline_success_total": 46,
+        "baseline_success_retention_percent": 97.82608695652173,
+        "generated_tokens_including_retries": 35804,
+        "generated_token_increase_percent": 76.06215578284817,
+        "completed_attempt_tokens": 35804,
+        "preceding_failed_attempt_tokens": 0,
+        "retried_rows": 0,
+        "tool_vision_passed": 7,
+        "tool_vision_total": 7,
+        "tool_vision_generated_tokens": 531,
+        "paired_changes": [
+          {
+            "case_id": "broader-fresh-11-second-delimited-field",
+            "repeat": 1,
+            "outcome": "loss"
+          },
+          {
+            "case_id": "broader-fresh-12-json-types",
+            "repeat": 2,
+            "outcome": "gain"
+          }
+        ]
+      },
+      {
+        "branch": "attention-1.5-mlp-1.0",
+        "correct": 46,
+        "total": 48,
+        "baseline_losses": 0,
+        "baseline_gains": 0,
+        "baseline_success_retained": 46,
+        "baseline_success_total": 46,
+        "baseline_success_retention_percent": 100.0,
+        "generated_tokens_including_retries": 40664,
+        "generated_token_increase_percent": 99.96066089693154,
+        "completed_attempt_tokens": 32472,
+        "preceding_failed_attempt_tokens": 8192,
+        "retried_rows": 2,
+        "tool_vision_passed": 7,
+        "tool_vision_total": 7,
+        "tool_vision_generated_tokens": 432,
+        "paired_changes": []
+      },
+      {
+        "branch": "nf4-direction-w8-weight-strength-1.0",
+        "correct": 47,
+        "total": 48,
+        "baseline_losses": 0,
+        "baseline_gains": 1,
+        "baseline_success_retained": 46,
+        "baseline_success_total": 46,
+        "baseline_success_retention_percent": 100.0,
+        "generated_tokens_including_retries": 41063,
+        "generated_token_increase_percent": 101.92269866247048,
+        "completed_attempt_tokens": 36967,
+        "preceding_failed_attempt_tokens": 4096,
+        "retried_rows": 1,
+        "tool_vision_passed": 7,
+        "tool_vision_total": 7,
+        "tool_vision_generated_tokens": 432,
+        "paired_changes": [
+          {
+            "case_id": "broader-fresh-12-json-types",
+            "repeat": 1,
+            "outcome": "gain"
+          }
+        ]
+      }
+    ]
+  },
+  "fifth_branch_findings": {
+    "finished_utc": "2026-10-16T02:02:48.610474+00:00",
+    "all_generations_complete": true,
+    "all_predicates_passed": false,
+    "thinking_on": "47/48 with zero paired losses and one gain: JSON-types repeat 1. JSON-types repeat 2 still fails the frozen predicate. All six reasoning cases already pass both baseline repeats; the net gain is not a new reasoning gain.",
+    "thinking_off": "32/48 versus baseline 36/48, with cyclic-order and rounding-order lost in both repeats and no paired gains.",
+    "thinking_on_token_increase_percent": 101.92269866247048,
+    "thinking_on_completed_attempt_token_increase_percent": 81.78107789142408,
+    "thinking_on_retry": {
+      "case_id": "broader-fresh-12-json-types",
+      "repeat": 1,
+      "first_budget": 4096,
+      "first_output_tokens": 4096,
+      "first_stop": "max_tokens",
+      "retry_budget": 6144,
+      "retry_output_tokens": 5164,
+      "retry_stop": "end_turn"
+    },
+    "thinking_on_largest_token_excess_by_case": {
+      "json-types": 11411,
+      "shortest-route": 4914,
+      "rounding-order": 2831,
+      "second-delimited-field": 951
+    },
+    "thinking_on_total_extra_generated_tokens": 20727,
+    "four_cases_share_of_extra_tokens_percent": 97.0087325710426,
+    "thinking_off_retries": "Both remainders repeats exhausted 512 tokens, then completed with 608 and 635 tokens under 1024-token budgets. Both final strict scores remain false."
+  },
+  "v2_normalization_review": {
+    "result": "no scoring, token-count, or timing substitution identified",
+    "math_namespace": "Adds the missing math module to the AST-isolated accounting namespace used by observation().",
+    "thinking_off_missing_character_counts": "Copies each response dictionary, supplies a temporary zero solely for legacy helper compatibility, and returns null when the character field was unmeasured. This does not claim observed zero thinking characters.",
+    "thinking_on": "Keeps the original strict helper path and its required fields.",
+    "saved_records": "Unmodified; only report-local copies are normalized.",
+    "report_output": "Published paired CSV contains native generated-token/timing metrics, not a new inferred reasoning-token count.",
+    "extra_cpu_intervals": "Versioned background-work receipt is pinned. The timing caveat identifies that the two per-group overlap columns cover only earlier build/diagnostic intervals."
+  },
+  "scope_limits": [
+    "These are 24 previously seen development questions repeated twice, not 48 independent questions or a fresh held-out benchmark.",
+    "Strict frozen grading is unchanged. JSON-types wording ambiguity and answer-format failures were not semantically rescored.",
+    "47/48 (97.9167%) on this small development set does not establish 98% global quality. Observed retention of all 46 baseline-success rows is conditional on this set; the aggregate score ratio 47/46 is a different measure.",
+    "Seven tool/vision checks per branch and mode provide narrow smoke coverage, not comprehensive tool or multimodal validation.",
+    "Generated tokens include thinking and final text plus prior exhausted attempts. Completed-attempt tokens still include thinking; they are not final-answer-only token counts.",
+    "Wall time is confounded by batch concurrency, unmerged LoRA runtime, and recorded host CPU work. This audit makes no causal kernel-speed or controlled deployment-throughput claim.",
+    "The quality reference is the untouched W8A16 baseline. The BF16 source is an input artifact, not a quality reference here.",
+    "No refusal evaluation or global 98%/94% quality gate was performed. These results do not establish refusal targets or deployment readiness."
+  ],
+  "source_hashes_sha256": {
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/report_five_branches.py": "5acd30e755274a0f786c962e072a6e8f31d329a91ce8dccb56b838e98f44c1a3",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/report_five_branches_v2.py": "4e4bb33d69e7627c295ebaf2176a9f755a2664afd7d307a8f032f7b86d59f174",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/analyze_integrity.py": "8bff2efeca121cb3fe100386d29736edfb2c3abfdc86fa6200658a020ef6f11e",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/analyze_thinking_integrity.py": "a2c907c08d1963562516c47d984ae5f67a136689a23373c56d6fded1539d33b6",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/analyze_thinking_work.py": "7ec041c485f859ef3876a4d6e446713495587ab703dcec55a1d0f51a98cfa738",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/precision-manifest-v1.json": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/launch-v1.json": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/research-runtime-overlap-events-v2.json": "e329a048f80ebf39a9ff1f883e2bb9b529d9c987aeefe31a01f7e194eaa76c8f",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8-rebase-evaluation-result-v1.json": "32e6e704bdbb2fcda80f54417c90dcc5b10b97d80770ec9c318b4d44049222f0",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/evaluate_markers.py": "a0feb6cf923dca4e5fd5330d8a1cc24d10d51ddff0912db4454f23a70108b9bb",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/broader-validation/capability-cases-v1.json": "34bdac9e83f9651a2cddbef6e2b8dcbe9eedffa3e758bc2d2402421f97c1f5ba",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/final-five-branch-report-v2/report.json": "894bb277cf0c99231f6daaf445b00744724c94edc9bd4ce1e2917e0bee7b7e61",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/final-five-branch-report-v2/evidence-manifest.json": "709b3ef4f39d97303d599eedcf2b53719815b3edae25d6d2eab6aaf39e2c64dc"
+  },
+  "run_evidence": {
+    "thinking_off/baseline": {
+      "summary": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-summary.json",
+      "summary_sha256": "e924252a463713d5505a9f3a7f58c5670a21a7d2aa912668cca681005e4ccdc5",
+      "answers": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-answers.jsonl",
+      "answers_sha256": "c6a2cbff5b8ca68407e4a9f8b720caae7cd3b8c2f3182364712ea1195e9a5333",
+      "tool_vision": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-tools-vision-v1-behaviors.json",
+      "tool_vision_sha256": "b692494ec49851a8ef31da94ff3f543f7f4787c788f3392b7563b1acde98cc02"
+    },
+    "thinking_off/strength-1.0": {
+      "summary": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-summary.json",
+      "summary_sha256": "388b08614db11997a8203ed9ae691afa35c085e89e447f862f3f2e40dcca175e",
+      "answers": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-answers.jsonl",
+      "answers_sha256": "c67ea96df46f840bbaa2d1d01c629b5e93f42602e3a6ac56bb55c056bdfd3ee0",
+      "tool_vision": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-tools-vision-v1-behaviors.json",
+      "tool_vision_sha256": "cdc3b95ae8275d84acd97d51c90a41ca0d6b728eac5ef05d716326ae01152cbc"
+    },
+    "thinking_off/strength-1.5": {
+      "summary": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-summary.json",
+      "summary_sha256": "697736a58e811a9351c0ee9bd89b50fc563d228532bf43e163c75b17d11732c7",
+      "answers": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-answers.jsonl",
+      "answers_sha256": "f690ebb11fa9c4b38b10759d091ba6ef417c25457b4b9f1ca7e95c0f167a2028",
+      "tool_vision": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-tools-vision-v1-behaviors.json",
+      "tool_vision_sha256": "40afc3b948671add5ee96fe84ece2eb610ddb508a0a04f95fa9f1d2687e44eff"
+    },
+    "thinking_off/attention-1.5-mlp-1.0": {
+      "summary": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-summary.json",
+      "summary_sha256": "cee240b86572efc6b19021bbf321a08d116dbbbe7869774aa04d5909d1225997",
+      "answers": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-answers.jsonl",
+      "answers_sha256": "a723ac33a5b863613bbdf308884378b4b9722fb6ce9ef3325c83831ed758f7bf",
+      "tool_vision": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-tools-vision-v1-behaviors.json",
+      "tool_vision_sha256": "50a5131d812840aa20950a25da0453f907ca0c0bce15a6e787bebc4f48e6dcbd"
+    },
+    "thinking_off/nf4-direction-w8-weight-strength-1.0": {
+      "summary": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-authored24-v1-summary.json",
+      "summary_sha256": "7e5ce4e201add025d12ebc057d3ac5a8b08ca932252165f9f8d05b1109368d08",
+      "answers": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-authored24-v1-answers.jsonl",
+      "answers_sha256": "67b57bf58e508b27d7271b60ebae5c2837d19f9edd7833ff903825dccd50ff09",
+      "tool_vision": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-tools-vision-v1-behaviors.json",
+      "tool_vision_sha256": "24c685213b8cfd01f34318fb2eeb8158afdee9792e59c1cb14c16a49f8df5f2a"
+    },
+    "thinking_on/baseline": {
+      "summary": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-summary.json",
+      "summary_sha256": "65390e8c1b51343c28d768d5351696a7a8c0df90719d67674a212d7bfce316ea",
+      "answers": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-answers.jsonl",
+      "answers_sha256": "62f75729f339a5671a6f4e623a1b7ecb11754c59c266a7fb0d7eeb50b08fc119",
+      "tool_vision": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-tools-vision-thinking-v1-behaviors-thinking.json",
+      "tool_vision_sha256": "380f11aa32e1c94eebb82807dd68a7a2cf8ae86e6eb99655ff8b9dec6a6073b9"
+    },
+    "thinking_on/strength-1.0": {
+      "summary": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-summary.json",
+      "summary_sha256": "ffaff13f0830d87da294e04dd9f81bef692e9854bf8b695b8713923ead7d7a26",
+      "answers": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-answers.jsonl",
+      "answers_sha256": "5f54988c75182c5cd8056907d5c3d6fd4c968c24e5bd34823d4ae58aaf8aea13",
+      "tool_vision": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-tools-vision-thinking-v1-behaviors-thinking.json",
+      "tool_vision_sha256": "14af55b84b30f99ede2fbd5863cc7ac98ffe7cc4a5320484eb36167a4e278de4"
+    },
+    "thinking_on/strength-1.5": {
+      "summary": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-summary.json",
+      "summary_sha256": "6a9dad2e5d3b7dd2b03ab39c2b92f2d007d37bfef1f5b519f3cf5b53d27f7a01",
+      "answers": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-answers.jsonl",
+      "answers_sha256": "006eb48f5d7d5ba03fed0c70ae5a7b9dfbf40eb83c948741ef1ef7beec15557e",
+      "tool_vision": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-tools-vision-thinking-v1-behaviors-thinking.json",
+      "tool_vision_sha256": "4da15bccf43d958af7cdbae9c4e88b0c2b8e1977a4bde97421e60e8f7cacee3f"
+    },
+    "thinking_on/attention-1.5-mlp-1.0": {
+      "summary": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-summary.json",
+      "summary_sha256": "5081cbeda4320a6622bbdcc0717b4826be1a60647868599254f1d28b9ddf4b6c",
+      "answers": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-answers.jsonl",
+      "answers_sha256": "27a05f6e8f15425aa01701787ffd9a63bfc6ef89e6907ab05ff12e1f0dc83821",
+      "tool_vision": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-tools-vision-thinking-v1-behaviors-thinking.json",
+      "tool_vision_sha256": "2010db81fa19ca07dfc021a84524cc00b4799ba71f7fd484a7b9d31cdf96dadb"
+    },
+    "thinking_on/nf4-direction-w8-weight-strength-1.0": {
+      "summary": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-thinking24-v1-summary.json",
+      "summary_sha256": "ce5b5b8a79902a9b28331adac3c63041d40167845afb8ff840657729ae09031d",
+      "answers": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-thinking24-v1-answers.jsonl",
+      "answers_sha256": "9f36d70e94155e8d0fc706b50d4c3ef450350a4b2dca9e5c3dbd8f8e99851e9f",
+      "tool_vision": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-tools-vision-thinking-v1-behaviors-thinking.json",
+      "tool_vision_sha256": "c17e16b2583cb47a6e5df761499774c0d1434fb1ae91b43911ddced6dd2f4e16"
+    }
+  },
+  "report_evidence_bundle_sha256": "8fe8f23d577a63ba5cf09acb1e1e725bc7f4e746b9c5a2223dbe7d008a5a178c"
+}

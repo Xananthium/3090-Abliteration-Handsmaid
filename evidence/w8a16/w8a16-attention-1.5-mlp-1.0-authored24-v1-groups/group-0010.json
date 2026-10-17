@@ -1,0 +1,726 @@
+{
+  "status": "complete",
+  "configuration_fingerprint": "b0beb5d73212b2524f4dd2ad4399b914b80f068f8508db8ed90e1908fba4ba85",
+  "schedule": {
+    "index": 10,
+    "repeat": 2,
+    "case_ids": [
+      "broader-fresh-17-cyclic-order",
+      "broader-fresh-18-rounding-order",
+      "broader-fresh-19-format-pivot",
+      "broader-fresh-20-expired-session"
+    ]
+  },
+  "attempt_id": "1792107636972768996-158528",
+  "invocation_id": "1792107405127191307-158528",
+  "started_at_utc": "2026-10-15T23:40:36.972865+00:00",
+  "partial_outputs_scored": false,
+  "completed_at_utc": "2026-10-15T23:41:01.372877+00:00",
+  "wall_seconds": 24.400121095997747,
+  "records": [
+    {
+      "id": "broader-fresh-17-cyclic-order",
+      "category": "consistency",
+      "configuration_fingerprint": "b0beb5d73212b2524f4dd2ad4399b914b80f068f8508db8ed90e1908fba4ba85",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "b348da45a342b0d1ab0404ac3cbe39162d133794e1f76af9710372eb52eea4e9",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "74b07e4165b520158b3207b057bded8228f1e9e158a6dc62ec0c01475e251f03",
+      "prompt_sha256": "2f0b7d1b435aebb6818fa8e35aa5fef5d6bd75f5ce109501adf770c8ef7aaba8",
+      "answer_key_sha256": "aca194bba9344c9a134fae5f5ffe1b7b4405c3487930632195bf044128c41f9d",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 10,
+      "submission_index": 0,
+      "invocation_id": "1792107405127191307-158528",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 0,
+      "task_finished_sequence": 23,
+      "answer_text": "To determine if the claims are consistent, let's list the assertions:\n1. $A < B$\n2. $B < C$\n3. $C < A$\n\nIf we attempt to create a valid order (a linear sequence where each item appears exactly once), we can test the possibilities:\n- If the order is $A, B, C$: Claim 1 is satisfied ($A < B$), Claim 2 is satisfied ($B < C$), but Claim 3 is violated ($C$ is not before $A$).\n- If the order is $B, C, A$: Claim 2 is satisfied, Claim 3 is satisfied, but Claim 1 is violated ($A$ is not before $B$).\n- If the order is $C, A, B$: Claim 3 is satisfied, Claim 1 is satisfied, but Claim 2 is violated ($B$ is not before $C$).\n\nMathematically, these claims form a cycle: $A < B < C < A$. In a strict linear ordering (transitive and asymmetric), if $A < B$ and $B < C$, then $A < C$ must be true. However, the third claim $C < A$ contradicts the transitive requirement that $A < C$. Since no linear arrangement can satisfy a cycle, the claims are mutually exclusive.\n\nINCONSISTENT",
+      "raw_final_text": "To determine if the claims are consistent, let's list the assertions:\n1. $A < B$\n2. $B < C$\n3. $C < A$\n\nIf we attempt to create a valid order (a linear sequence where each item appears exactly once), we can test the possibilities:\n- If the order is $A, B, C$: Claim 1 is satisfied ($A < B$), Claim 2 is satisfied ($B < C$), but Claim 3 is violated ($C$ is not before $A$).\n- If the order is $B, C, A$: Claim 2 is satisfied, Claim 3 is satisfied, but Claim 1 is violated ($A$ is not before $B$).\n- If the order is $C, A, B$: Claim 3 is satisfied, Claim 1 is satisfied, but Claim 2 is violated ($B$ is not before $C$).\n\nMathematically, these claims form a cycle: $A < B < C < A$. In a strict linear ordering (transitive and asymmetric), if $A < B$ and $B < C$, then $A < C$ must be true. However, the third claim $C < A$ contradicts the transitive requirement that $A < C$. Since no linear arrangement can satisfy a cycle, the claims are mutually exclusive.\n\nINCONSISTENT",
+      "raw_final_text_sha256": "c9aaa159f5acc7caa138d1b65285a5b298a0642a80613e370a98d209e673e14c",
+      "response_attempts": [
+        {
+          "raw_text": "To determine if the claims are consistent, let's list the assertions:\n1. $A < B$\n2. $B < C$\n3. $C < A$\n\nIf we attempt to create a valid order (a linear sequence where each item appears exactly once), we can test the possibilities:\n- If the order is $A, B, C$: Claim 1 is satisfied ($A < B$), Claim 2 is satisfied ($B < C$), but Claim 3 is violated ($C$ is not before $A$).\n- If the order is $B, C, A$: Claim 2 is satisfied, Claim 3 is satisfied, but Claim 1 is violated ($A$ is not before $B$).\n- If the order is $C, A, B$: Claim 3 is satisfied, Claim 1 is satisfied, but Claim 2 is violated ($B$ is not before $C$).\n\nMathematically, these claims form a cycle: $A < B < C < A$. In a strict linear ordering (transitive and asymmetric), if $A < B$ and $B < C$, then $A < C$ must be true. However, the third claim $C < A$ contradicts the transitive requirement that $A < C$. Since no linear arrangement can satisfy a cycle, the claims are mutually exclusive.\n\nINCONSISTENT",
+          "raw_text_sha256": "c9aaa159f5acc7caa138d1b65285a5b298a0642a80613e370a98d209e673e14c",
+          "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 83,
+            "output_tokens": 286
+          },
+          "native_request_seconds": 24.196328894991893,
+          "started_sequence": 12,
+          "finished_sequence": 22
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.017218244000105187,
+          "started_sequence": 6,
+          "finished_sequence": 10
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 24.196328894991893,
+          "started_sequence": 12,
+          "finished_sequence": 22
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 286,
+          "input_tokens": 83,
+          "stop_reason": "end_turn",
+          "response_sha256": "c9aaa159f5acc7caa138d1b65285a5b298a0642a80613e370a98d209e673e14c",
+          "visible_characters": 969,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 24.23295570598566
+        }
+      ],
+      "counted_input_tokens": 83,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8045,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "c9aaa159f5acc7caa138d1b65285a5b298a0642a80613e370a98d209e673e14c",
+      "output_tokens": 286,
+      "total_output_tokens_including_retries": 286,
+      "generation_seconds_including_retries": 24.23295570598566,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": false,
+      "scored_correct_before_completion_gate": false,
+      "recorded_at_utc": "2026-10-15T23:41:01.339553+00:00",
+      "record_sha256": "f24d2d5a10e0a98b85b025d75ded4d2173744b54ccc4ab8069c064736bbfdb81"
+    },
+    {
+      "id": "broader-fresh-18-rounding-order",
+      "category": "consistency",
+      "configuration_fingerprint": "b0beb5d73212b2524f4dd2ad4399b914b80f068f8508db8ed90e1908fba4ba85",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "b348da45a342b0d1ab0404ac3cbe39162d133794e1f76af9710372eb52eea4e9",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "68b037cfa29aab288628c75209180b17260f6fb30f1ae9b2c676728209287d00",
+      "prompt_sha256": "77c58ce95cbccd15ce2da9898826fe51e686a4a1f565981bd5890e5a4e090880",
+      "answer_key_sha256": "b5b1d4889ecf7ba9a6c6c0fed759e059963b8f6214599aa11fceab0a148e80fe",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 10,
+      "submission_index": 1,
+      "invocation_id": "1792107405127191307-158528",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 1,
+      "task_finished_sequence": 21,
+      "answer_text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.01,\n  \"equal\": true\n}\n```",
+      "raw_final_text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.01,\n  \"equal\": true\n}\n```",
+      "raw_final_text_sha256": "bf7c973ae762fe51e3b1ded296c6db9d2f5e65065448f90634b4e777d3f1582d",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.01,\n  \"equal\": true\n}\n```",
+          "raw_text_sha256": "bf7c973ae762fe51e3b1ded296c6db9d2f5e65065448f90634b4e777d3f1582d",
+          "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 116,
+            "output_tokens": 41
+          },
+          "native_request_seconds": 3.784105120023014,
+          "started_sequence": 15,
+          "finished_sequence": 20
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.014754664996871725,
+          "started_sequence": 7,
+          "finished_sequence": 11
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 3.784105120023014,
+          "started_sequence": 15,
+          "finished_sequence": 20
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 41,
+          "input_tokens": 116,
+          "stop_reason": "end_turn",
+          "response_sha256": "bf7c973ae762fe51e3b1ded296c6db9d2f5e65065448f90634b4e777d3f1582d",
+          "visible_characters": 71,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 3.827320554992184
+        }
+      ],
+      "counted_input_tokens": 116,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8012,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "bf7c973ae762fe51e3b1ded296c6db9d2f5e65065448f90634b4e777d3f1582d",
+      "output_tokens": 41,
+      "total_output_tokens_including_retries": 41,
+      "generation_seconds_including_retries": 3.827320554992184,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": false,
+      "scored_correct_before_completion_gate": false,
+      "recorded_at_utc": "2026-10-15T23:40:40.940805+00:00",
+      "record_sha256": "c8d2b01374da31a6e37b7cc5c8d41df2d8a59d5e2b688a67353b2e046e82465c"
+    },
+    {
+      "id": "broader-fresh-19-format-pivot",
+      "category": "recovery",
+      "configuration_fingerprint": "b0beb5d73212b2524f4dd2ad4399b914b80f068f8508db8ed90e1908fba4ba85",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "b348da45a342b0d1ab0404ac3cbe39162d133794e1f76af9710372eb52eea4e9",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "721e7c32ba553eb16a7a86cba178c8ea364c39f9028c8d1114f1f867ea621b0e",
+      "prompt_sha256": "b92c3658657df7f185a30ead85e66d7a78d6075a9897991d3d3ca6f224aa096e",
+      "answer_key_sha256": "05b422bc77ed867bfef6f804199aeff410b1eac6da273790f399ff9e0460ed02",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 10,
+      "submission_index": 2,
+      "invocation_id": "1792107405127191307-158528",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 3,
+      "task_finished_sequence": 17,
+      "answer_text": "parse_csv",
+      "raw_final_text": "parse_csv",
+      "raw_final_text_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+      "response_attempts": [
+        {
+          "raw_text": "parse_csv",
+          "raw_text_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+          "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 98,
+            "output_tokens": 4
+          },
+          "native_request_seconds": 0.5489769970008638,
+          "started_sequence": 13,
+          "finished_sequence": 16
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.017900559003464878,
+          "started_sequence": 5,
+          "finished_sequence": 9
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 0.5489769970008638,
+          "started_sequence": 13,
+          "finished_sequence": 16
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 4,
+          "input_tokens": 98,
+          "stop_reason": "end_turn",
+          "response_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+          "visible_characters": 9,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 0.5876664129900746
+        }
+      ],
+      "counted_input_tokens": 98,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8030,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+      "output_tokens": 4,
+      "total_output_tokens_including_retries": 4,
+      "generation_seconds_including_retries": 0.5876664129900746,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:40:37.696765+00:00",
+      "record_sha256": "f5a23a0743fed1d9c60838865e0d092714afa8a669576fe47b4ad7301dc9742f"
+    },
+    {
+      "id": "broader-fresh-20-expired-session",
+      "category": "recovery",
+      "configuration_fingerprint": "b0beb5d73212b2524f4dd2ad4399b914b80f068f8508db8ed90e1908fba4ba85",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "b348da45a342b0d1ab0404ac3cbe39162d133794e1f76af9710372eb52eea4e9",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "92703b884b2b3378aeec91b9bb5212fcf9e7d3ca5725662f9c9d9f708d0dd28b",
+      "prompt_sha256": "45bdd796f4bf537442a2fe2532cc3fea06368f034cc9079b3a09e385619f4feb",
+      "answer_key_sha256": "7ce0d0d026e5d42e4f8faa6a09f9fdb3f5a69d0e853651e1cbfb642c42d2a826",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 10,
+      "submission_index": 3,
+      "invocation_id": "1792107405127191307-158528",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 2,
+      "task_finished_sequence": 19,
+      "answer_text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```",
+      "raw_final_text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```",
+      "raw_final_text_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```",
+          "raw_text_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+          "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 86,
+            "output_tokens": 40
+          },
+          "native_request_seconds": 3.7042968989990186,
+          "started_sequence": 14,
+          "finished_sequence": 18
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.01788911101175472,
+          "started_sequence": 4,
+          "finished_sequence": 8
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 3.7042968989990186,
+          "started_sequence": 14,
+          "finished_sequence": 18
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 40,
+          "input_tokens": 86,
+          "stop_reason": "end_turn",
+          "response_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+          "visible_characters": 89,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 3.7507028770050965
+        }
+      ],
+      "counted_input_tokens": 86,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8042,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+      "output_tokens": 40,
+      "total_output_tokens_including_retries": 40,
+      "generation_seconds_including_retries": 3.7507028770050965,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:40:40.853823+00:00",
+      "record_sha256": "834cb93ac98ea3d6ca408314550714595dd71fe5dc8b2ad19ac55662f5526761"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "task_started",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.006208+00:00",
+      "group_elapsed_seconds": 0.030659177020424977,
+      "group_index": 10,
+      "submission_index": 0
+    },
+    {
+      "sequence": 1,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "task_started",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.021039+00:00",
+      "group_elapsed_seconds": 0.04547641400131397,
+      "group_index": 10,
+      "submission_index": 1
+    },
+    {
+      "sequence": 2,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "task_started",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.037348+00:00",
+      "group_elapsed_seconds": 0.061786681006196886,
+      "group_index": 10,
+      "submission_index": 3
+    },
+    {
+      "sequence": 3,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "task_started",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.037609+00:00",
+      "group_elapsed_seconds": 0.06205047501134686,
+      "group_index": 10,
+      "submission_index": 2
+    },
+    {
+      "sequence": 4,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "request_started",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.064084+00:00",
+      "group_elapsed_seconds": 0.08852678199764341,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 5,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "request_started",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.066430+00:00",
+      "group_elapsed_seconds": 0.09086123300949112,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 6,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "request_started",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.069287+00:00",
+      "group_elapsed_seconds": 0.0937170670076739,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 7,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "request_started",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.073301+00:00",
+      "group_elapsed_seconds": 0.09773468400817364,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 8,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "request_finished",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.082007+00:00",
+      "group_elapsed_seconds": 0.10644536599284038,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 4
+    },
+    {
+      "sequence": 9,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "request_finished",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.084346+00:00",
+      "group_elapsed_seconds": 0.10877739201532677,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 5
+    },
+    {
+      "sequence": 10,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "request_finished",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.086523+00:00",
+      "group_elapsed_seconds": 0.11096093300147913,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 6
+    },
+    {
+      "sequence": 11,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "request_finished",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.088077+00:00",
+      "group_elapsed_seconds": 0.11251407899544574,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 7
+    },
+    {
+      "sequence": 12,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "request_started",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.117851+00:00",
+      "group_elapsed_seconds": 0.14228334301151335,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 13,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "request_started",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.123404+00:00",
+      "group_elapsed_seconds": 0.14783904200885445,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 14,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "request_started",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.124690+00:00",
+      "group_elapsed_seconds": 0.14911844601738267,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 15,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "request_started",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.133010+00:00",
+      "group_elapsed_seconds": 0.15743858701898716,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 16,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "request_finished",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.672408+00:00",
+      "group_elapsed_seconds": 0.6968505940167233,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "start_sequence": 13
+    },
+    {
+      "sequence": 17,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "task_finished",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:37.696765+00:00",
+      "group_elapsed_seconds": 0.7211989370116498,
+      "group_index": 10,
+      "submission_index": 2
+    },
+    {
+      "sequence": 18,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "request_finished",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:40.829001+00:00",
+      "group_elapsed_seconds": 3.85343806099263,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "start_sequence": 14
+    },
+    {
+      "sequence": 19,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "task_finished",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:40.853823+00:00",
+      "group_elapsed_seconds": 3.8782593280193396,
+      "group_index": 10,
+      "submission_index": 3
+    },
+    {
+      "sequence": 20,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "request_finished",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:40.917131+00:00",
+      "group_elapsed_seconds": 3.9415669180161785,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "start_sequence": 15
+    },
+    {
+      "sequence": 21,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "task_finished",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:40:40.940805+00:00",
+      "group_elapsed_seconds": 3.9652361879998352,
+      "group_index": 10,
+      "submission_index": 1
+    },
+    {
+      "sequence": 22,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "request_finished",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:41:01.314203+00:00",
+      "group_elapsed_seconds": 24.338666466006543,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "start_sequence": 12
+    },
+    {
+      "sequence": 23,
+      "invocation_id": "1792107405127191307-158528",
+      "kind": "task_finished",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:41:01.339553+00:00",
+      "group_elapsed_seconds": 24.363988680997863,
+      "group_index": 10,
+      "submission_index": 0
+    }
+  ],
+  "submission_order": [
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-18-rounding-order",
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-20-expired-session"
+  ],
+  "client_task_start_order": [
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-18-rounding-order",
+    "broader-fresh-20-expired-session",
+    "broader-fresh-19-format-pivot"
+  ],
+  "client_task_finish_order": [
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-20-expired-session",
+    "broader-fresh-18-rounding-order",
+    "broader-fresh-17-cyclic-order"
+  ],
+  "observed_future_completion_order": [
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-20-expired-session",
+    "broader-fresh-18-rounding-order",
+    "broader-fresh-17-cyclic-order"
+  ],
+  "ordering_scope": "Sequences and elapsed times are local to this group. Client submission, task, and HTTP dispatch/completion order are recorded; GPU scheduler order is not observed.",
+  "group_sha256": "27cc2721922e8c6503249322df6d906a26b09c455c684ec193fee767d22d3abf"
+}

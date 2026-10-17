@@ -1,0 +1,18 @@
+[
+  {
+    "precision": "bf16",
+    "repo": "Xananthium/REDCELL-26B-A4B-OSINT-Cyber-Abliterated-Pilot-BF16-Vision",
+    "revision": "91af35c07db9ef6b570673405a89411bcb41f951",
+    "readme_sha256": "4d7c55da9ae19e6c13dea4376f9c3d0393fe052c48a4c1fb491b45cdd6462d64",
+    "download_verified": true,
+    "relative_links_valid": true
+  },
+  {
+    "precision": "w6a8",
+    "repo": "Xananthium/REDCELL-26B-A4B-OSINT-Cyber-Abliterated-Pilot-W6A8-Vision",
+    "revision": "d27d2f66f97900539652a726a94537b24bb65caa",
+    "readme_sha256": "1df9f0e02e97d94f62f81487e2a80de374ddfc3a6417c6d3a0fcf0b98eddd39d",
+    "download_verified": true,
+    "relative_links_valid": true
+  }
+]

@@ -1,0 +1,794 @@
+{
+  "status": "complete",
+  "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+  "schedule": {
+    "index": 9,
+    "repeat": 2,
+    "case_ids": [
+      "broader-fresh-13-equal-authority-conflict",
+      "broader-fresh-14-unit-agreement",
+      "broader-fresh-15-quantifier-gap",
+      "broader-fresh-16-table-total"
+    ]
+  },
+  "attempt_id": "1792108163169391156-158804",
+  "invocation_id": "1792107709927049025-158804",
+  "started_at_utc": "2026-10-15T23:49:23.169446+00:00",
+  "partial_outputs_scored": false,
+  "completed_at_utc": "2026-10-15T23:49:42.762562+00:00",
+  "wall_seconds": 19.593190390005475,
+  "records": [
+    {
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "category": "consistency",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "be29ab8a2ee30a7d9e2efe912d216e81acfc6c35327ace78ff580e000e56a195",
+      "prompt_sha256": "9cae34f8053a8174702c43fab7a66c7321b9d59932381d4ca6c331069fc544d0",
+      "answer_key_sha256": "86e7611d633ae80ecbe72fae03abdf172f92f21fdd28e3a4897d69faeb7f5823",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 9,
+      "submission_index": 0,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 0,
+      "task_finished_sequence": 17,
+      "answer_text": "CONFLICT",
+      "raw_final_text": "CONFLICT",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 594,
+      "raw_final_text_sha256": "d79910c78cef73436cb082e736cd62960bf56c2d8c6232362e6bde0eb62e33c9",
+      "response_attempts": [
+        {
+          "raw_text": "CONFLICT",
+          "raw_text_sha256": "d79910c78cef73436cb082e736cd62960bf56c2d8c6232362e6bde0eb62e33c9",
+          "thinking_text": "*   Input: Two equally authoritative records about the same object at the same time.\n    *   Record 1: Color is red.\n    *   Record 2: Color is blue.\n    *   Condition: Neither record has priority.\n    *   Rule: Return \"CONFLICT\" when equally authoritative values disagree.\n    *   Constraint: Reply with the required result only.\n\n    *   Value 1: Red\n    *   Value 2: Blue\n    *   Are they different? Yes.\n    *   Are they equally authoritative? Yes.\n    *   Does the rule apply? Yes.\n\n    *   The rule says return \"CONFLICT\".\n\n    *   \"Reply with the required result only.\"\n\n    *   CONFLICT",
+          "thinking_text_sha256": "6b2486abadfb9ad95b1b7e60b0703f6eb4e1a55babb1a8a83d8dff908465c9bc",
+          "thinking_characters": 594,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Input: Two equally authoritative records about the same object at the same time.\n    *   Record 1: Color is red.\n    *   Record 2: Color is blue.\n    *   Condition: Neither record has priority.\n    *   Rule: Return \"CONFLICT\" when equally authoritative values disagree.\n    *   Constraint: Reply with the required result only.\n\n    *   Value 1: Red\n    *   Value 2: Blue\n    *   Are they different? Yes.\n    *   Are they equally authoritative? Yes.\n    *   Does the rule apply? Yes.\n\n    *   The rule says return \"CONFLICT\".\n\n    *   \"Reply with the required result only.\"\n\n    *   CONFLICT",
+              "signature": "77066b18e6fa493f93b3420e96cdc35a"
+            },
+            {
+              "type": "text",
+              "text": "CONFLICT"
+            }
+          ],
+          "native_content_blocks_sha256": "37d45608da5ac23ec488966eb4d53028445fc609c09960ae54834108d9ee4199",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 86,
+            "output_tokens": 165
+          },
+          "native_request_seconds": 11.429000117001124,
+          "started_sequence": 15,
+          "finished_sequence": 16
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.015196082997135818,
+          "started_sequence": 7,
+          "finished_sequence": 11
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 11.429000117001124,
+          "started_sequence": 15,
+          "finished_sequence": 16
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 165,
+          "input_tokens": 86,
+          "stop_reason": "end_turn",
+          "response_sha256": "d79910c78cef73436cb082e736cd62960bf56c2d8c6232362e6bde0eb62e33c9",
+          "visible_characters": 8,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 11.470724388986127
+        }
+      ],
+      "counted_input_tokens": 86,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8042,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "d79910c78cef73436cb082e736cd62960bf56c2d8c6232362e6bde0eb62e33c9",
+      "output_tokens": 165,
+      "total_output_tokens_including_retries": 165,
+      "generation_seconds_including_retries": 11.470724388986127,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:49:34.767942+00:00",
+      "record_sha256": "50487ab77194d3b3bce0b3c8f63ca7df3fae9c48372551186f59db59ea1e0bef"
+    },
+    {
+      "id": "broader-fresh-14-unit-agreement",
+      "category": "consistency",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "df18fb1143b9160543092d336202f14a15d98ea9c7f4efadf15b2581e622372b",
+      "prompt_sha256": "673caf9f24bda38a10a52d1369951eff615bf4630456973769a91ced850fd2c6",
+      "answer_key_sha256": "96400541d7bccac7b2cad05da1944d6430859f0cdd30bc31aa888cb41b0a4c83",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 9,
+      "submission_index": 1,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 1,
+      "task_finished_sequence": 21,
+      "answer_text": "```json\n{\n  \"same_mass\": true,\n  \"mass_g\": 2500\n}\n```",
+      "raw_final_text": "```json\n{\n  \"same_mass\": true,\n  \"mass_g\": 2500\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 392,
+      "raw_final_text_sha256": "ce5d82c9191c7967bb0bfda85f7b3b71a218a678916d15eeb7dc2a650fecfba5",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"same_mass\": true,\n  \"mass_g\": 2500\n}\n```",
+          "raw_text_sha256": "ce5d82c9191c7967bb0bfda85f7b3b71a218a678916d15eeb7dc2a650fecfba5",
+          "thinking_text": "*   Record A: 2.5 kg\n    *   Record B: 2500 g\n    *   Conversion factor: 1 kg = 1000 g\n\n    *   Convert Record A to grams: $2.5 \\text{ kg} \\times 1000 \\text{ g/kg} = 2500 \\text{ g}$.\n    *   Compare Record A (2500 g) with Record B (2500 g).\n    *   Result: They are the same.\n\n    *   `same_mass`: Boolean (true)\n    *   `mass_g`: Integer (2500)\n\n    *   `{\"same_mass\": true, \"mass_g\": 2500}`",
+          "thinking_text_sha256": "f0772f0da20add272afc8d3bc27e05383fac1fc56a6a6719f9da034b0bcb3e62",
+          "thinking_characters": 392,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Record A: 2.5 kg\n    *   Record B: 2500 g\n    *   Conversion factor: 1 kg = 1000 g\n\n    *   Convert Record A to grams: $2.5 \\text{ kg} \\times 1000 \\text{ g/kg} = 2500 \\text{ g}$.\n    *   Compare Record A (2500 g) with Record B (2500 g).\n    *   Result: They are the same.\n\n    *   `same_mass`: Boolean (true)\n    *   `mass_g`: Integer (2500)\n\n    *   `{\"same_mass\": true, \"mass_g\": 2500}`",
+              "signature": "1f1bffe699af44a6802ae4db5757a7b7"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"same_mass\": true,\n  \"mass_g\": 2500\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "39b836f8dccf93b12636f7d07beeae9da4f9c6f02af96ff1d1ad699c42c8db84",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 87,
+            "output_tokens": 205
+          },
+          "native_request_seconds": 14.140851965988986,
+          "started_sequence": 13,
+          "finished_sequence": 20
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.014800221018958837,
+          "started_sequence": 6,
+          "finished_sequence": 10
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 14.140851965988986,
+          "started_sequence": 13,
+          "finished_sequence": 20
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 205,
+          "input_tokens": 87,
+          "stop_reason": "end_turn",
+          "response_sha256": "ce5d82c9191c7967bb0bfda85f7b3b71a218a678916d15eeb7dc2a650fecfba5",
+          "visible_characters": 53,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 14.178431345993886
+        }
+      ],
+      "counted_input_tokens": 87,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8041,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "ce5d82c9191c7967bb0bfda85f7b3b71a218a678916d15eeb7dc2a650fecfba5",
+      "output_tokens": 205,
+      "total_output_tokens_including_retries": 205,
+      "generation_seconds_including_retries": 14.178431345993886,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:49:37.467478+00:00",
+      "record_sha256": "d60d03ff7eead4347ea3e048bafd9da90b6723017ae424de61af84f21032d517"
+    },
+    {
+      "id": "broader-fresh-15-quantifier-gap",
+      "category": "consistency",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "7ccf7fb577c96126ea0335281a1169b7da827a6c3da6e4af83cf256a394790a0",
+      "prompt_sha256": "1d95f220dbba7b64e94cc559fa21b61f44fc3ca607cd7fc28e00c4d34018c95d",
+      "answer_key_sha256": "60c6c8ddbd9f866861b3a393152d4e571b957cff879828774568b5a7d6bd0265",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 9,
+      "submission_index": 2,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 2,
+      "task_finished_sequence": 23,
+      "answer_text": "NOT_ENTAILED",
+      "raw_final_text": "NOT_ENTAILED",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 891,
+      "raw_final_text_sha256": "74f54cdb515c8be45c2999290ca4d334333efb1cf7a7c22a6152ea0f42ffab9e",
+      "response_attempts": [
+        {
+          "raw_text": "NOT_ENTAILED",
+          "raw_text_sha256": "74f54cdb515c8be45c2999290ca4d334333efb1cf7a7c22a6152ea0f42ffab9e",
+          "thinking_text": "*   Premise: A club has exactly five members.\n    *   Evidence: At least one member arrived late.\n    *   Question: Does this evidence establish that *every* member arrived late?\n\n    *   Let $M = \\{m_1, m_2, m_3, m_4, m_5\\}$ be the set of members.\n    *   Let $L(x)$ be the predicate \"member $x$ arrived late\".\n    *   Evidence: $\\exists x \\in M, L(x)$ (There exists at least one member who arrived late).\n    *   Conclusion to test: $\\forall x \\in M, L(x)$ (Every member arrived late).\n\n    *   If $\\exists x \\in M, L(x)$ is true, does it imply $\\forall x \\in M, L(x)$ is true?\n    *   No. For example, if $m_1$ arrived late and $m_2, m_3, m_4, m_5$ arrived on time, the evidence \"at least one member arrived late\" is satisfied, but the conclusion \"every member arrived late\" is false.\n\n    *   The evidence does not establish the conclusion.\n    *   Therefore, the answer is NOT_ENTAILED.",
+          "thinking_text_sha256": "56bae369d962a09f0ed68113d7a3d26ec65df9ec61e7d43a177e14cd32659a95",
+          "thinking_characters": 891,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Premise: A club has exactly five members.\n    *   Evidence: At least one member arrived late.\n    *   Question: Does this evidence establish that *every* member arrived late?\n\n    *   Let $M = \\{m_1, m_2, m_3, m_4, m_5\\}$ be the set of members.\n    *   Let $L(x)$ be the predicate \"member $x$ arrived late\".\n    *   Evidence: $\\exists x \\in M, L(x)$ (There exists at least one member who arrived late).\n    *   Conclusion to test: $\\forall x \\in M, L(x)$ (Every member arrived late).\n\n    *   If $\\exists x \\in M, L(x)$ is true, does it imply $\\forall x \\in M, L(x)$ is true?\n    *   No. For example, if $m_1$ arrived late and $m_2, m_3, m_4, m_5$ arrived on time, the evidence \"at least one member arrived late\" is satisfied, but the conclusion \"every member arrived late\" is false.\n\n    *   The evidence does not establish the conclusion.\n    *   Therefore, the answer is NOT_ENTAILED.",
+              "signature": "9289b59e4ec74c7288cefc025a692626"
+            },
+            {
+              "type": "text",
+              "text": "NOT_ENTAILED"
+            }
+          ],
+          "native_content_blocks_sha256": "f2a1e3d9b247b97af54b8cf4bce46f3ffd285e4f003f1847e4691a251a922955",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 71,
+            "output_tokens": 287
+          },
+          "native_request_seconds": 19.4026506569935,
+          "started_sequence": 12,
+          "finished_sequence": 22
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.016134498990140855,
+          "started_sequence": 4,
+          "finished_sequence": 8
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 19.4026506569935,
+          "started_sequence": 12,
+          "finished_sequence": 22
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 287,
+          "input_tokens": 71,
+          "stop_reason": "end_turn",
+          "response_sha256": "74f54cdb515c8be45c2999290ca4d334333efb1cf7a7c22a6152ea0f42ffab9e",
+          "visible_characters": 12,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 19.437854029005393
+        }
+      ],
+      "counted_input_tokens": 71,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8057,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "74f54cdb515c8be45c2999290ca4d334333efb1cf7a7c22a6152ea0f42ffab9e",
+      "output_tokens": 287,
+      "total_output_tokens_including_retries": 287,
+      "generation_seconds_including_retries": 19.437854029005393,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:49:42.717854+00:00",
+      "record_sha256": "285b9991b4909c585e335d21fa94d8218f8220518d828ed0cb8e826ce747e8f1"
+    },
+    {
+      "id": "broader-fresh-16-table-total",
+      "category": "consistency",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "670dd0384f812067aba3383dcb2671d18f67467ba1a480ed4fe53439b57f8968",
+      "prompt_sha256": "51752b6e9d9fed3f413117b35fd2d8f301c4f6ecfa57b7ab945e9d2af198b850",
+      "answer_key_sha256": "9fa6a330748cb280552da773e17b2e61aa5e4e3797cd2ada7806482b6f054ec4",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 9,
+      "submission_index": 3,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 3,
+      "task_finished_sequence": 19,
+      "answer_text": "```json\n{\n  \"computed_total\": 27,\n  \"consistent\": false\n}\n```",
+      "raw_final_text": "```json\n{\n  \"computed_total\": 27,\n  \"consistent\": false\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 430,
+      "raw_final_text_sha256": "0686ea281bd8b66daa35dc3e1af219ff5f64735ca9a77b86ed0737b45a7906ff",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"computed_total\": 27,\n  \"consistent\": false\n}\n```",
+          "raw_text_sha256": "0686ea281bd8b66daa35dc3e1af219ff5f64735ca9a77b86ed0737b45a7906ff",
+          "thinking_text": "*   Input: A list of amounts (13, 8, 6) and a printed total (28).\n    *   Task: Compute the actual total and check if it matches the printed total.\n    *   Output Format: JSON with keys `computed_total` and `consistent`.\n\n    *   Amounts: 13, 8, 6\n    *   Sum: 13 + 8 + 6 = 27\n    *   Printed Total: 28\n\n    *   `computed_total`: 27\n    *   `consistent`: 27 == 28 is `false`.\n\n    *   `{\"computed_total\": 27, \"consistent\": false}`",
+          "thinking_text_sha256": "a08785e0f2e3666290409879393f2f4c30e938d83d1b2e1b7997708663536ecb",
+          "thinking_characters": 430,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Input: A list of amounts (13, 8, 6) and a printed total (28).\n    *   Task: Compute the actual total and check if it matches the printed total.\n    *   Output Format: JSON with keys `computed_total` and `consistent`.\n\n    *   Amounts: 13, 8, 6\n    *   Sum: 13 + 8 + 6 = 27\n    *   Printed Total: 28\n\n    *   `computed_total`: 27\n    *   `consistent`: 27 == 28 is `false`.\n\n    *   `{\"computed_total\": 27, \"consistent\": false}`",
+              "signature": "249e4eda117a4ea78f649583462ec904"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"computed_total\": 27,\n  \"consistent\": false\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "8b7494c7bf6e62a1868cbf7bdbf4a253c2dc18ee85c839565375c0cc168070b4",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 79,
+            "output_tokens": 187
+          },
+          "native_request_seconds": 12.94619894301286,
+          "started_sequence": 14,
+          "finished_sequence": 18
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.014180352998664603,
+          "started_sequence": 5,
+          "finished_sequence": 9
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 12.94619894301286,
+          "started_sequence": 14,
+          "finished_sequence": 18
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 187,
+          "input_tokens": 79,
+          "stop_reason": "end_turn",
+          "response_sha256": "0686ea281bd8b66daa35dc3e1af219ff5f64735ca9a77b86ed0737b45a7906ff",
+          "visible_characters": 61,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 12.989775751979323
+        }
+      ],
+      "counted_input_tokens": 79,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8049,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "0686ea281bd8b66daa35dc3e1af219ff5f64735ca9a77b86ed0737b45a7906ff",
+      "output_tokens": 187,
+      "total_output_tokens_including_retries": 187,
+      "generation_seconds_including_retries": 12.989775751979323,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:49:36.274343+00:00",
+      "record_sha256": "f83d7155809d65c442a766f9682baf888476937abf2c5c9e78da91430273672f"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:23.197143+00:00",
+      "group_elapsed_seconds": 0.02519510200363584,
+      "group_index": 9,
+      "submission_index": 0
+    },
+    {
+      "sequence": 1,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:23.206825+00:00",
+      "group_elapsed_seconds": 0.03487564600072801,
+      "group_index": 9,
+      "submission_index": 1
+    },
+    {
+      "sequence": 2,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:23.223080+00:00",
+      "group_elapsed_seconds": 0.05113099800655618,
+      "group_index": 9,
+      "submission_index": 2
+    },
+    {
+      "sequence": 3,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:23.223308+00:00",
+      "group_elapsed_seconds": 0.05136539399973117,
+      "group_index": 9,
+      "submission_index": 3
+    },
+    {
+      "sequence": 4,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:23.246563+00:00",
+      "group_elapsed_seconds": 0.07461416200385429,
+      "group_index": 9,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 5,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:23.251035+00:00",
+      "group_elapsed_seconds": 0.07908528999541886,
+      "group_index": 9,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 6,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:23.252577+00:00",
+      "group_elapsed_seconds": 0.08062767700175755,
+      "group_index": 9,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 7,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:23.253936+00:00",
+      "group_elapsed_seconds": 0.08198555200942792,
+      "group_index": 9,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 8,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:23.262714+00:00",
+      "group_elapsed_seconds": 0.09076349399401806,
+      "group_index": 9,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 4
+    },
+    {
+      "sequence": 9,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:23.265231+00:00",
+      "group_elapsed_seconds": 0.0932804930198472,
+      "group_index": 9,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 5
+    },
+    {
+      "sequence": 10,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:23.267396+00:00",
+      "group_elapsed_seconds": 0.09545322600752115,
+      "group_index": 9,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 6
+    },
+    {
+      "sequence": 11,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:23.269150+00:00",
+      "group_elapsed_seconds": 0.09720668400404975,
+      "group_index": 9,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 7
+    },
+    {
+      "sequence": 12,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:23.291451+00:00",
+      "group_elapsed_seconds": 0.11950092599727213,
+      "group_index": 9,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 13,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:23.302155+00:00",
+      "group_elapsed_seconds": 0.13020758499624208,
+      "group_index": 9,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 14,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:23.303473+00:00",
+      "group_elapsed_seconds": 0.13152249599806964,
+      "group_index": 9,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 15,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:23.313166+00:00",
+      "group_elapsed_seconds": 0.14121653701295145,
+      "group_index": 9,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 16,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:34.742189+00:00",
+      "group_elapsed_seconds": 11.57025037301355,
+      "group_index": 9,
+      "route": "/v1/messages",
+      "start_sequence": 15
+    },
+    {
+      "sequence": 17,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:34.767942+00:00",
+      "group_elapsed_seconds": 11.595993883995106,
+      "group_index": 9,
+      "submission_index": 0
+    },
+    {
+      "sequence": 18,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:36.249693+00:00",
+      "group_elapsed_seconds": 13.077754507015925,
+      "group_index": 9,
+      "route": "/v1/messages",
+      "start_sequence": 14
+    },
+    {
+      "sequence": 19,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:36.274343+00:00",
+      "group_elapsed_seconds": 13.102396428002976,
+      "group_index": 9,
+      "submission_index": 3
+    },
+    {
+      "sequence": 20,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:37.443030+00:00",
+      "group_elapsed_seconds": 14.271084467007313,
+      "group_index": 9,
+      "route": "/v1/messages",
+      "start_sequence": 13
+    },
+    {
+      "sequence": 21,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:37.467478+00:00",
+      "group_elapsed_seconds": 14.295533297001384,
+      "group_index": 9,
+      "submission_index": 1
+    },
+    {
+      "sequence": 22,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.694123+00:00",
+      "group_elapsed_seconds": 19.522184027009644,
+      "group_index": 9,
+      "route": "/v1/messages",
+      "start_sequence": 12
+    },
+    {
+      "sequence": 23,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.717854+00:00",
+      "group_elapsed_seconds": 19.545907212013844,
+      "group_index": 9,
+      "submission_index": 2
+    }
+  ],
+  "submission_order": [
+    "broader-fresh-13-equal-authority-conflict",
+    "broader-fresh-14-unit-agreement",
+    "broader-fresh-15-quantifier-gap",
+    "broader-fresh-16-table-total"
+  ],
+  "client_task_start_order": [
+    "broader-fresh-13-equal-authority-conflict",
+    "broader-fresh-14-unit-agreement",
+    "broader-fresh-15-quantifier-gap",
+    "broader-fresh-16-table-total"
+  ],
+  "client_task_finish_order": [
+    "broader-fresh-13-equal-authority-conflict",
+    "broader-fresh-16-table-total",
+    "broader-fresh-14-unit-agreement",
+    "broader-fresh-15-quantifier-gap"
+  ],
+  "observed_future_completion_order": [
+    "broader-fresh-13-equal-authority-conflict",
+    "broader-fresh-16-table-total",
+    "broader-fresh-14-unit-agreement",
+    "broader-fresh-15-quantifier-gap"
+  ],
+  "ordering_scope": "Sequences and elapsed times are local to this group. Client submission, task, and HTTP dispatch/completion order are recorded; GPU scheduler order is not observed.",
+  "group_sha256": "ef8880939decc2412ef3ebe17f7d0d21c4a5c48f310163fb202725a0cba00d9f"
+}

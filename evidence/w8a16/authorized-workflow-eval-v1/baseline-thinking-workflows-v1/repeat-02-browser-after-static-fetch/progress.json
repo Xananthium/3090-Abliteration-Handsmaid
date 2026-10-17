@@ -1,0 +1,9 @@
+{
+  "case_id": "browser-after-static-fetch",
+  "repeat": 2,
+  "turn": 3,
+  "attempt_count": 4,
+  "tool_calls": 3,
+  "known_generated_tokens": 769,
+  "updated_utc": "2026-10-17T16:40:35.990187+00:00"
+}

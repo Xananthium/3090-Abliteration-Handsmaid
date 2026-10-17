@@ -1,0 +1,27 @@
+{
+  "dispatches": [
+    {
+      "turn": 0,
+      "tool_use_id": "chatcmpl-tool-9a7862a11cc5c99a",
+      "name": "service_probe",
+      "arguments": {
+        "host": "app.ctf.test",
+        "port": 443,
+        "transport": "tls"
+      },
+      "result": {
+        "evidence_id": "E001",
+        "ok": true,
+        "host": "app.ctf.test",
+        "port": 443,
+        "tls_version": "TLSv1.3",
+        "certificate_dns": [
+          "app.ctf.test"
+        ],
+        "alpn": "h2",
+        "service": "HTTPS",
+        "application_version": "unverified"
+      }
+    }
+  ]
+}

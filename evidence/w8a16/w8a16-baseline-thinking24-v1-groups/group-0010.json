@@ -1,0 +1,794 @@
+{
+  "status": "complete",
+  "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+  "schedule": {
+    "index": 10,
+    "repeat": 2,
+    "case_ids": [
+      "broader-fresh-17-cyclic-order",
+      "broader-fresh-18-rounding-order",
+      "broader-fresh-19-format-pivot",
+      "broader-fresh-20-expired-session"
+    ]
+  },
+  "attempt_id": "1792108182789866315-158804",
+  "invocation_id": "1792107709927049025-158804",
+  "started_at_utc": "2026-10-15T23:49:42.789955+00:00",
+  "partial_outputs_scored": false,
+  "completed_at_utc": "2026-10-15T23:50:33.174510+00:00",
+  "wall_seconds": 50.38465516001452,
+  "records": [
+    {
+      "id": "broader-fresh-17-cyclic-order",
+      "category": "consistency",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "74b07e4165b520158b3207b057bded8228f1e9e158a6dc62ec0c01475e251f03",
+      "prompt_sha256": "2f0b7d1b435aebb6818fa8e35aa5fef5d6bd75f5ce109501adf770c8ef7aaba8",
+      "answer_key_sha256": "aca194bba9344c9a134fae5f5ffe1b7b4405c3487930632195bf044128c41f9d",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 10,
+      "submission_index": 0,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 0,
+      "task_finished_sequence": 21,
+      "answer_text": "INCONSISTENT",
+      "raw_final_text": "INCONSISTENT",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 1466,
+      "raw_final_text_sha256": "10380d715e17334f41d040113c613de7008ad03027bfd54cd28d2566cbbcbf00",
+      "response_attempts": [
+        {
+          "raw_text": "INCONSISTENT",
+          "raw_text_sha256": "10380d715e17334f41d040113c613de7008ad03027bfd54cd28d2566cbbcbf00",
+          "thinking_text": "*   Claim 1: A < B (A comes before B)\n    *   Claim 2: B < C (B comes before C)\n    *   Claim 3: C < A (C comes before A)\n\n    *   A valid order must place each item (A, B, C) exactly once.\n    *   Possible permutations of {A, B, C}:\n        1.  (A, B, C)\n        2.  (A, C, B)\n        3.  (B, A, C)\n        4.  (B, C, A)\n        5.  (C, A, B)\n        6.  (C, B, A)\n\n    *   Claim 1 (A < B):\n        1. (A, B, C) - Yes\n        2. (A, C, B) - Yes\n        3. (B, A, C) - No\n        4. (B, C, A) - No\n        5. (C, A, B) - Yes\n        6. (C, B, A) - No\n\n    *   Claim 2 (B < C):\n        1. (A, B, C) - Yes\n        2. (A, C, B) - No\n        5. (C, A, B) - No\n\n    *   Claim 3 (C < A):\n        1. (A, B, C) - No\n\n    *   Claim 1: A < B\n    *   Claim 2: B < C\n    *   Claim 3: C < A\n    *   Combining 1 and 2: A < B < C\n    *   Adding 3: A < B < C < A\n    *   This implies A < A, which is impossible in a strict ordering.\n\n    *   The claims are: A < B, B < C, C < A.\n    *   This forms a cycle: A -> B -> C -> A.\n    *   A strict ordering (a total order) must be transitive and asymmetric.\n    *   If A < B and B < C, then A < C (transitivity).\n    *   But the third claim is C < A.\n    *   If A < C and C < A, this violates the asymmetry property of a strict order.\n    *   Therefore, no valid order exists.\n\n    *   The prompt asks for \"CONSISTENT\" if a valid order exists, and \"INCONSISTENT\" otherwise.\n    *   Since no valid order exists, the answer is INCONSISTENT.",
+          "thinking_text_sha256": "ca3e6eca206c4c29818afff941bad111db1929a7f6eaf7df1c0f76e791683da3",
+          "thinking_characters": 1466,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Claim 1: A < B (A comes before B)\n    *   Claim 2: B < C (B comes before C)\n    *   Claim 3: C < A (C comes before A)\n\n    *   A valid order must place each item (A, B, C) exactly once.\n    *   Possible permutations of {A, B, C}:\n        1.  (A, B, C)\n        2.  (A, C, B)\n        3.  (B, A, C)\n        4.  (B, C, A)\n        5.  (C, A, B)\n        6.  (C, B, A)\n\n    *   Claim 1 (A < B):\n        1. (A, B, C) - Yes\n        2. (A, C, B) - Yes\n        3. (B, A, C) - No\n        4. (B, C, A) - No\n        5. (C, A, B) - Yes\n        6. (C, B, A) - No\n\n    *   Claim 2 (B < C):\n        1. (A, B, C) - Yes\n        2. (A, C, B) - No\n        5. (C, A, B) - No\n\n    *   Claim 3 (C < A):\n        1. (A, B, C) - No\n\n    *   Claim 1: A < B\n    *   Claim 2: B < C\n    *   Claim 3: C < A\n    *   Combining 1 and 2: A < B < C\n    *   Adding 3: A < B < C < A\n    *   This implies A < A, which is impossible in a strict ordering.\n\n    *   The claims are: A < B, B < C, C < A.\n    *   This forms a cycle: A -> B -> C -> A.\n    *   A strict ordering (a total order) must be transitive and asymmetric.\n    *   If A < B and B < C, then A < C (transitivity).\n    *   But the third claim is C < A.\n    *   If A < C and C < A, this violates the asymmetry property of a strict order.\n    *   Therefore, no valid order exists.\n\n    *   The prompt asks for \"CONSISTENT\" if a valid order exists, and \"INCONSISTENT\" otherwise.\n    *   Since no valid order exists, the answer is INCONSISTENT.",
+              "signature": "6d277c56c0a64e43b0b411be83d26683"
+            },
+            {
+              "type": "text",
+              "text": "INCONSISTENT"
+            }
+          ],
+          "native_content_blocks_sha256": "6f5f8dc59ee5d93c1fb2b3d9e71f6797c60375fd0e2e5138fb1ad13f85816b7e",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 81,
+            "output_tokens": 582
+          },
+          "native_request_seconds": 39.15241123200394,
+          "started_sequence": 13,
+          "finished_sequence": 20
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.01415625898516737,
+          "started_sequence": 7,
+          "finished_sequence": 11
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 39.15241123200394,
+          "started_sequence": 13,
+          "finished_sequence": 20
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 582,
+          "input_tokens": 81,
+          "stop_reason": "end_turn",
+          "response_sha256": "10380d715e17334f41d040113c613de7008ad03027bfd54cd28d2566cbbcbf00",
+          "visible_characters": 12,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 39.182432123983745
+        }
+      ],
+      "counted_input_tokens": 81,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8047,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "10380d715e17334f41d040113c613de7008ad03027bfd54cd28d2566cbbcbf00",
+      "output_tokens": 582,
+      "total_output_tokens_including_retries": 582,
+      "generation_seconds_including_retries": 39.182432123983745,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:50:22.100897+00:00",
+      "record_sha256": "2a482301dc5c0ccfa0df5ef2a5c221ea155763e333173e128a5270205182f309"
+    },
+    {
+      "id": "broader-fresh-18-rounding-order",
+      "category": "consistency",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "68b037cfa29aab288628c75209180b17260f6fb30f1ae9b2c676728209287d00",
+      "prompt_sha256": "77c58ce95cbccd15ce2da9898826fe51e686a4a1f565981bd5890e5a4e090880",
+      "answer_key_sha256": "b5b1d4889ecf7ba9a6c6c0fed759e059963b8f6214599aa11fceab0a148e80fe",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 10,
+      "submission_index": 1,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 1,
+      "task_finished_sequence": 23,
+      "answer_text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.00,\n  \"equal\": false\n}\n```",
+      "raw_final_text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.00,\n  \"equal\": false\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 1663,
+      "raw_final_text_sha256": "19094480d5c1701cbdc60a123ba7a65a5a72f8b8e664209d185be9c3ec544c69",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.00,\n  \"equal\": false\n}\n```",
+          "raw_text_sha256": "19094480d5c1701cbdc60a123ba7a65a5a72f8b8e664209d185be9c3ec544c69",
+          "thinking_text": "*   Item cost: $0.03 each.\n    *   Quantity: 2 items.\n    *   Tax rate: 10%.\n    *   Rounding rule: Round to the nearest cent, half-cent ties round up.\n\n    *   Combined price = $0.03 + $0.03 = $0.06.\n    *   Tax on combined price = $0.06 * 0.10 = $0.006.\n    *   Rounding $0.006 to the nearest cent:\n        *   The value is 0.6 cents.\n        *   Rounding 0.6 cents to the nearest whole cent: 1 cent ($0.01).\n    *   Method A tax amount = $0.01.\n\n    *   Tax on item 1 = $0.03 * 0.10 = $0.003.\n    *   Rounding $0.003 to the nearest cent:\n        *   The value is 0.3 cents.\n        *   Rounding 0.3 cents to the nearest whole cent: 0 cents ($0.00).\n    *   Tax on item 2 = $0.03 * 0.10 = $0.003.\n    *   Rounding $0.003 to the nearest cent:\n        *   The value is 0.3 cents.\n        *   Rounding 0.3 cents to the nearest whole cent: 0 cents ($0.00).\n    *   Total tax (Method B) = $0.00 + $0.00 = $0.00.\n\n    *   Method A: $0.01\n    *   Method B: $0.00\n    *   Are they equal? No (false).\n\n    *   `method_A`: 0.01\n    *   `method_B`: 0.00\n    *   `equal`: false\n\n    *   \"Return only JSON with method_A and method_B as the tax amounts in dollars only, excluding the item prices, and equal as a Boolean.\"\n\n    *   Method A: $0.06 * 0.1 = $0.006. Rounding $0.006 to nearest cent. $0.006 is 0.6 cents. 0.6 rounds to 1. So $0.01. Correct.\n    *   Method B: $0.03 * 0.1 = $0.003. Rounding $0.003 to nearest cent. $0.003 is 0.3 cents. 0.3 rounds to 0. So $0.00. Correct.\n    *   Total B: $0.00 + $0.00 = $0.00. Correct.\n    *   $0.01 == $0.00 is false. Correct.\n\n    ```json\n    {\n      \"method_A\": 0.01,\n      \"method_B\": 0.00,\n      \"equal\": false\n    }\n    ```",
+          "thinking_text_sha256": "e7207cc95e727619be2b5517290a48afa2156e518f86ffde1d51a7e1b76cae1d",
+          "thinking_characters": 1663,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Item cost: $0.03 each.\n    *   Quantity: 2 items.\n    *   Tax rate: 10%.\n    *   Rounding rule: Round to the nearest cent, half-cent ties round up.\n\n    *   Combined price = $0.03 + $0.03 = $0.06.\n    *   Tax on combined price = $0.06 * 0.10 = $0.006.\n    *   Rounding $0.006 to the nearest cent:\n        *   The value is 0.6 cents.\n        *   Rounding 0.6 cents to the nearest whole cent: 1 cent ($0.01).\n    *   Method A tax amount = $0.01.\n\n    *   Tax on item 1 = $0.03 * 0.10 = $0.003.\n    *   Rounding $0.003 to the nearest cent:\n        *   The value is 0.3 cents.\n        *   Rounding 0.3 cents to the nearest whole cent: 0 cents ($0.00).\n    *   Tax on item 2 = $0.03 * 0.10 = $0.003.\n    *   Rounding $0.003 to the nearest cent:\n        *   The value is 0.3 cents.\n        *   Rounding 0.3 cents to the nearest whole cent: 0 cents ($0.00).\n    *   Total tax (Method B) = $0.00 + $0.00 = $0.00.\n\n    *   Method A: $0.01\n    *   Method B: $0.00\n    *   Are they equal? No (false).\n\n    *   `method_A`: 0.01\n    *   `method_B`: 0.00\n    *   `equal`: false\n\n    *   \"Return only JSON with method_A and method_B as the tax amounts in dollars only, excluding the item prices, and equal as a Boolean.\"\n\n    *   Method A: $0.06 * 0.1 = $0.006. Rounding $0.006 to nearest cent. $0.006 is 0.6 cents. 0.6 rounds to 1. So $0.01. Correct.\n    *   Method B: $0.03 * 0.1 = $0.003. Rounding $0.003 to nearest cent. $0.003 is 0.3 cents. 0.3 rounds to 0. So $0.00. Correct.\n    *   Total B: $0.00 + $0.00 = $0.00. Correct.\n    *   $0.01 == $0.00 is false. Correct.\n\n    ```json\n    {\n      \"method_A\": 0.01,\n      \"method_B\": 0.00,\n      \"equal\": false\n    }\n    ```",
+              "signature": "3cd7b36452b544e69b67cd537a0a9911"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.00,\n  \"equal\": false\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "8c2405e9fac3d6e94a9bc093ac3a12ce99b8b182ef8750736fda33bf34f78deb",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 114,
+            "output_tokens": 750
+          },
+          "native_request_seconds": 50.185621041979175,
+          "started_sequence": 14,
+          "finished_sequence": 22
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.014508891996229067,
+          "started_sequence": 6,
+          "finished_sequence": 10
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 50.185621041979175,
+          "started_sequence": 14,
+          "finished_sequence": 22
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 750,
+          "input_tokens": 114,
+          "stop_reason": "end_turn",
+          "response_sha256": "19094480d5c1701cbdc60a123ba7a65a5a72f8b8e664209d185be9c3ec544c69",
+          "visible_characters": 72,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 50.22459792601876
+        }
+      ],
+      "counted_input_tokens": 114,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8014,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "19094480d5c1701cbdc60a123ba7a65a5a72f8b8e664209d185be9c3ec544c69",
+      "output_tokens": 750,
+      "total_output_tokens_including_retries": 750,
+      "generation_seconds_including_retries": 50.22459792601876,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:50:33.140757+00:00",
+      "record_sha256": "856e1ddeb14bf523cfb7ebce6708ae10df8c6d01a00525f022e48a19478e2ff6"
+    },
+    {
+      "id": "broader-fresh-19-format-pivot",
+      "category": "recovery",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "721e7c32ba553eb16a7a86cba178c8ea364c39f9028c8d1114f1f867ea621b0e",
+      "prompt_sha256": "b92c3658657df7f185a30ead85e66d7a78d6075a9897991d3d3ca6f224aa096e",
+      "answer_key_sha256": "05b422bc77ed867bfef6f804199aeff410b1eac6da273790f399ff9e0460ed02",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 10,
+      "submission_index": 2,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 2,
+      "task_finished_sequence": 17,
+      "answer_text": "parse_csv",
+      "raw_final_text": "parse_csv",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 591,
+      "raw_final_text_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+      "response_attempts": [
+        {
+          "raw_text": "parse_csv",
+          "raw_text_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+          "thinking_text": "*   Action: A mock report pipeline called `parse_json` twice.\n    *   Result: Received `unsupported_format` both times.\n    *   Input Data: The supplied report has `Content-Type: text/csv`.\n    *   Tool Mapping:\n        *   `application/json` $\\rightarrow$ `parse_json`\n        *   `text/csv` $\\rightarrow$ `parse_csv`\n    *   Goal: Select the next tool using the actual `Content-Type`.\n    *   Constraint: Reply with the tool name only.\n\n    *   Actual `Content-Type` is `text/csv`.\n    *   According to the tool guide, `text/csv` maps to `parse_csv`.\n\n    *   The tool name is `parse_csv`.",
+          "thinking_text_sha256": "df84649c9048cc4e8554389db258d64fe31134d0dd72635d110117106a434eef",
+          "thinking_characters": 591,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Action: A mock report pipeline called `parse_json` twice.\n    *   Result: Received `unsupported_format` both times.\n    *   Input Data: The supplied report has `Content-Type: text/csv`.\n    *   Tool Mapping:\n        *   `application/json` $\\rightarrow$ `parse_json`\n        *   `text/csv` $\\rightarrow$ `parse_csv`\n    *   Goal: Select the next tool using the actual `Content-Type`.\n    *   Constraint: Reply with the tool name only.\n\n    *   Actual `Content-Type` is `text/csv`.\n    *   According to the tool guide, `text/csv` maps to `parse_csv`.\n\n    *   The tool name is `parse_csv`.",
+              "signature": "6333cb43aaa24f82993e6fb9a81e5689"
+            },
+            {
+              "type": "text",
+              "text": "parse_csv"
+            }
+          ],
+          "native_content_blocks_sha256": "b218ec8dd71e8a2aca36e2608e4ba8757c4efb9f29c8d040687a4b945cae1609",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 96,
+            "output_tokens": 183
+          },
+          "native_request_seconds": 12.58391714800382,
+          "started_sequence": 12,
+          "finished_sequence": 16
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.015288588008843362,
+          "started_sequence": 5,
+          "finished_sequence": 9
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 12.58391714800382,
+          "started_sequence": 12,
+          "finished_sequence": 16
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 183,
+          "input_tokens": 96,
+          "stop_reason": "end_turn",
+          "response_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+          "visible_characters": 9,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 12.621081678022165
+        }
+      ],
+      "counted_input_tokens": 96,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8032,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+      "output_tokens": 183,
+      "total_output_tokens_including_retries": 183,
+      "generation_seconds_including_retries": 12.621081678022165,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:49:55.535027+00:00",
+      "record_sha256": "ce5673e7d53ad8e467b3378da81bb91bdd8ece72fac65dcb69dde8bf3fba5039"
+    },
+    {
+      "id": "broader-fresh-20-expired-session",
+      "category": "recovery",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "92703b884b2b3378aeec91b9bb5212fcf9e7d3ca5725662f9c9d9f708d0dd28b",
+      "prompt_sha256": "45bdd796f4bf537442a2fe2532cc3fea06368f034cc9079b3a09e385619f4feb",
+      "answer_key_sha256": "7ce0d0d026e5d42e4f8faa6a09f9fdb3f5a69d0e853651e1cbfb642c42d2a826",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 10,
+      "submission_index": 3,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 3,
+      "task_finished_sequence": 19,
+      "answer_text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```",
+      "raw_final_text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 489,
+      "raw_final_text_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```",
+          "raw_text_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+          "thinking_text": "*   Error: `session_expired`\n    *   Session ID: `s82`\n    *   API Guide Instruction: \"requires `refresh_session` with the same `session_id` before repeating the read.\"\n    *   Goal: Return a JSON object with `name` and `arguments` for the next call.\n\n    *   Function name: `refresh_session`\n    *   Arguments: `session_id` = `\"s82\"`\n\n    *   `{\"name\": \"refresh_session\", \"arguments\": {\"session_id\": \"s82\"}}`\n\n    *   \"Return only a JSON object with name and arguments for the next call.\"",
+          "thinking_text_sha256": "b5cb8de0d07029887df519f992dae4afe6a27dbb4c4564db22f55aabc8757582",
+          "thinking_characters": 489,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Error: `session_expired`\n    *   Session ID: `s82`\n    *   API Guide Instruction: \"requires `refresh_session` with the same `session_id` before repeating the read.\"\n    *   Goal: Return a JSON object with `name` and `arguments` for the next call.\n\n    *   Function name: `refresh_session`\n    *   Arguments: `session_id` = `\"s82\"`\n\n    *   `{\"name\": \"refresh_session\", \"arguments\": {\"session_id\": \"s82\"}}`\n\n    *   \"Return only a JSON object with name and arguments for the next call.\"",
+              "signature": "70c0b8b40fdc464cb084e10211dc9f25"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "f7473f6509b64c12c9935d0843df2f1245701a4973515473e2a90b6e5a0075de",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 84,
+            "output_tokens": 191
+          },
+          "native_request_seconds": 13.265707934013335,
+          "started_sequence": 15,
+          "finished_sequence": 18
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.014900336973369122,
+          "started_sequence": 4,
+          "finished_sequence": 8
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 13.265707934013335,
+          "started_sequence": 15,
+          "finished_sequence": 18
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 191,
+          "input_tokens": 84,
+          "stop_reason": "end_turn",
+          "response_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+          "visible_characters": 89,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 13.311291735008126
+        }
+      ],
+      "counted_input_tokens": 84,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8044,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+      "output_tokens": 191,
+      "total_output_tokens_including_retries": 191,
+      "generation_seconds_including_retries": 13.311291735008126,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:49:56.222056+00:00",
+      "record_sha256": "aa5a0c309e4e42bd5de4bd500f15286746755b540e71524d5e54be48e78e8020"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.822600+00:00",
+      "group_elapsed_seconds": 0.029954165976960212,
+      "group_index": 10,
+      "submission_index": 0
+    },
+    {
+      "sequence": 1,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.837427+00:00",
+      "group_elapsed_seconds": 0.04477995098568499,
+      "group_index": 10,
+      "submission_index": 1
+    },
+    {
+      "sequence": 2,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.851201+00:00",
+      "group_elapsed_seconds": 0.05855981999775395,
+      "group_index": 10,
+      "submission_index": 2
+    },
+    {
+      "sequence": 3,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.851693+00:00",
+      "group_elapsed_seconds": 0.05904549200204201,
+      "group_index": 10,
+      "submission_index": 3
+    },
+    {
+      "sequence": 4,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.877123+00:00",
+      "group_elapsed_seconds": 0.0844783799839206,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 5,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.878974+00:00",
+      "group_elapsed_seconds": 0.08631892397534102,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 6,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.881864+00:00",
+      "group_elapsed_seconds": 0.08920914097689092,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 7,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.884059+00:00",
+      "group_elapsed_seconds": 0.09140356999705546,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 8,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.892052+00:00",
+      "group_elapsed_seconds": 0.09939656397909857,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 4
+    },
+    {
+      "sequence": 9,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.894278+00:00",
+      "group_elapsed_seconds": 0.1016230609966442,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 5
+    },
+    {
+      "sequence": 10,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.896388+00:00",
+      "group_elapsed_seconds": 0.10373379697557539,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 6
+    },
+    {
+      "sequence": 11,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.898234+00:00",
+      "group_elapsed_seconds": 0.10558595199836418,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 7
+    },
+    {
+      "sequence": 12,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.927018+00:00",
+      "group_elapsed_seconds": 0.13436275999993086,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 13,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.930843+00:00",
+      "group_elapsed_seconds": 0.13818552400334738,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 14,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.931330+00:00",
+      "group_elapsed_seconds": 0.1386724499752745,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 15,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:42.931939+00:00",
+      "group_elapsed_seconds": 0.13928334097727202,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 16,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:55.510957+00:00",
+      "group_elapsed_seconds": 12.718314089986961,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "start_sequence": 12
+    },
+    {
+      "sequence": 17,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:55.535027+00:00",
+      "group_elapsed_seconds": 12.742374241002835,
+      "group_index": 10,
+      "submission_index": 2
+    },
+    {
+      "sequence": 18,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:56.197669+00:00",
+      "group_elapsed_seconds": 13.405024610983673,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "start_sequence": 15
+    },
+    {
+      "sequence": 19,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:49:56.222056+00:00",
+      "group_elapsed_seconds": 13.4294035959756,
+      "group_index": 10,
+      "submission_index": 3
+    },
+    {
+      "sequence": 20,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:50:22.083274+00:00",
+      "group_elapsed_seconds": 39.29063015198335,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "start_sequence": 13
+    },
+    {
+      "sequence": 21,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:50:22.100897+00:00",
+      "group_elapsed_seconds": 39.3082428459893,
+      "group_index": 10,
+      "submission_index": 0
+    },
+    {
+      "sequence": 22,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:50:33.116970+00:00",
+      "group_elapsed_seconds": 50.32432575998246,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "start_sequence": 14
+    },
+    {
+      "sequence": 23,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:50:33.140757+00:00",
+      "group_elapsed_seconds": 50.3481045869994,
+      "group_index": 10,
+      "submission_index": 1
+    }
+  ],
+  "submission_order": [
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-18-rounding-order",
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-20-expired-session"
+  ],
+  "client_task_start_order": [
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-18-rounding-order",
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-20-expired-session"
+  ],
+  "client_task_finish_order": [
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-20-expired-session",
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-18-rounding-order"
+  ],
+  "observed_future_completion_order": [
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-20-expired-session",
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-18-rounding-order"
+  ],
+  "ordering_scope": "Sequences and elapsed times are local to this group. Client submission, task, and HTTP dispatch/completion order are recorded; GPU scheduler order is not observed.",
+  "group_sha256": "3b6ae7eb05a69c444deba751b85ecd513a2aa4b9481ac8c5f7de4abdb3fe73ac"
+}

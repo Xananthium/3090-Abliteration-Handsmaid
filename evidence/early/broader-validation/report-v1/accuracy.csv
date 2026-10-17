@@ -1,0 +1,19 @@
+model,category,questions_per_run,correct_run_1,correct_run_2,mean_percent
+Pilot W6A8,all,224,209,207,92.85714285714286
+Pilot W6A8,consistency,6,4,4,66.66666666666666
+Pilot W6A8,cybersecurity,200,192,191,95.75
+Pilot W6A8,instruction,6,5,5,83.33333333333334
+Pilot W6A8,reasoning,6,2,1,25.0
+Pilot W6A8,recovery,6,6,6,100.0
+1.5× W8A8,all,224,206,208,92.41071428571429
+1.5× W8A8,consistency,6,4,4,66.66666666666666
+1.5× W8A8,cybersecurity,200,191,191,95.5
+1.5× W8A8,instruction,6,4,6,83.33333333333334
+1.5× W8A8,reasoning,6,1,1,16.666666666666664
+1.5× W8A8,recovery,6,6,6,100.0
+1.5× W6A8,all,224,205,207,91.96428571428571
+1.5× W6A8,consistency,6,4,4,66.66666666666666
+1.5× W6A8,cybersecurity,200,191,192,95.75
+1.5× W6A8,instruction,6,3,4,58.333333333333336
+1.5× W6A8,reasoning,6,1,1,16.666666666666664
+1.5× W6A8,recovery,6,6,6,100.0

@@ -1,0 +1,319 @@
+{
+  "label": "w8a16-strength-1.0-authored24-v1",
+  "status": "completed",
+  "protocol_version": 1,
+  "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+  "configuration_fingerprint": "4ed7177741f93a931cd09825ba4a603ba1f5b5f0422fe7cffc6d123e7e21dea7",
+  "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+  "model_id": "redcell-w8a16-strength-1.0",
+  "base_checkpoint": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+  "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+  "adapter": {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/strength-1.0-vllm",
+    "base_checkpoint_path": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+    "files": {
+      "adapter_config.json": {
+        "sha256": "8f404726dab2bbd3ddbe99630a37ed3ded557ab077659c556f03e0ec36804891",
+        "bytes": 674069,
+        "mtime_ns": 1792105775755325479,
+        "device": 66306,
+        "inode": 16789929
+      },
+      "adapter_model.safetensors": {
+        "sha256": "61f51713f45cb9da0e7293074e405d2a36a8ab612a89b180120f47ab45603469",
+        "bytes": 494660296,
+        "mtime_ns": 1792104382193946830,
+        "device": 66306,
+        "inode": 15740794
+      }
+    }
+  },
+  "launch_profile": {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/launch-v1.json",
+    "sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+    "canonical_fingerprint": "ff56fd03d3769ad5baffd5fefb1588c11ac33042a296c6542adf409e613a79d9",
+    "base_model_ids": [
+      "qwen3.6-35b-hauhau-w4a16-vision"
+    ],
+    "quantization_backend": "compressed-tensors",
+    "forbidden_activation_environment": [
+      "VLLM_MARLIN_INPUT_DTYPE",
+      "VLLM_HUMMING_INPUT_QUANT_CONFIG",
+      "VLLM_HUMMING_ONLINE_QUANT_CONFIG"
+    ],
+    "attestation_scope": "Supplied launch record is hashed; endpoint checks validate roots and context, not the full running command/environment or kernel precision."
+  },
+  "served_identity": {
+    "requested": {
+      "id": "redcell-w8a16-strength-1.0",
+      "root": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/strength-1.0-vllm",
+      "parent": "qwen3.6-35b-hauhau-w4a16-vision",
+      "max_model_len": null
+    },
+    "base": {
+      "id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+      "parent": null,
+      "max_model_len": 8192
+    },
+    "context_limit": 8192
+  },
+  "precision": {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/precision-manifest-v1.json",
+    "sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+    "canonical_fingerprint": "fcfbd683bfa41a79d7c5285fa9e354dc7ff81982f245e75fefb90bc2990038b3",
+    "manifest": {
+      "schema_version": 1,
+      "expected_base_checkpoint": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+      "config_sha256": "bdd77ab53a226918ed1ac2725729c56fa13ddeba2492bc7a27f53a32aa24d0be",
+      "index_sha256": "01adf6facae2403c2e0b02d225897535610554b1e5ad52232b66218c2d7a7e15",
+      "conversion_receipt_sha256": "1fc3fb351e6f56a3dd39cd594ad55435539024bd28edd298a43f32a73e7af03b",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "quantization_backend": "compressed-tensors",
+      "backend_label": "compressed-tensors / Marlin W8A16 group32",
+      "quantization_configs": {
+        "root": {
+          "config_groups": {
+            "config_group_0": {
+              "format": "pack-quantized",
+              "input_activations": null,
+              "output_activations": null,
+              "targets": [
+                "Linear"
+              ],
+              "weights": {
+                "actorder": null,
+                "block_structure": null,
+                "dynamic": false,
+                "group_size": 32,
+                "num_bits": 8,
+                "observer": "memoryless_minmax",
+                "observer_kwargs": {},
+                "scale_dtype": null,
+                "strategy": "group",
+                "symmetric": true,
+                "type": "int",
+                "zp_dtype": null
+              }
+            }
+          },
+          "format": "pack-quantized",
+          "global_compression_ratio": null,
+          "ignore": [
+            "lm_head",
+            "re:.*embed.*",
+            "re:.*vision.*",
+            "re:.*router.*",
+            "re:.*\\.gate$",
+            "re:.*norm.*"
+          ],
+          "kv_cache_scheme": null,
+          "quant_method": "compressed-tensors",
+          "quantization_status": "compressed",
+          "transform_config": {},
+          "version": "0.17.1"
+        }
+      }
+    },
+    "quality_reference": "untouched W8A16 baseline; BF16 source is conversion input only",
+    "attestation_scope": "Binds checkpoint configuration and supplied launch record. Does not independently inspect live kernel arithmetic or all inherited server environment variables."
+  },
+  "quality_reference": "untouched W8A16 baseline; BF16 source is conversion input only",
+  "initial_advertised_model_ids": [
+    "qwen3.6-35b-hauhau-w4a16-vision",
+    "redcell-w8a16-strength-1.5",
+    "redcell-w8a16-strength-1.0",
+    "redcell-w8a16-attention-1.5-mlp-1.0"
+  ],
+  "selected_case_ids": [
+    "broader-fresh-01-remainders",
+    "broader-fresh-02-shortest-route",
+    "broader-fresh-03-base-seven",
+    "broader-fresh-04-round-robin",
+    "broader-fresh-05-switch-constraints",
+    "broader-fresh-06-leap-calendar",
+    "broader-fresh-07-two-key-sort",
+    "broader-fresh-08-quoted-csv",
+    "broader-fresh-09-percent-encoding",
+    "broader-fresh-10-transpose",
+    "broader-fresh-11-second-delimited-field",
+    "broader-fresh-12-json-types",
+    "broader-fresh-13-equal-authority-conflict",
+    "broader-fresh-14-unit-agreement",
+    "broader-fresh-15-quantifier-gap",
+    "broader-fresh-16-table-total",
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-18-rounding-order",
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-20-expired-session",
+    "broader-fresh-21-exhausted-retries",
+    "broader-fresh-22-integrity-before-parse",
+    "broader-fresh-23-schema-key-repair",
+    "broader-fresh-24-stop-on-completion"
+  ],
+  "unique_cases": 24,
+  "repeats_per_case": 2,
+  "record_count": 48,
+  "batch_size": 4,
+  "max_workers": 4,
+  "complete_groups": 12,
+  "group_directory": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-groups",
+  "group_sha256": [
+    "54e1b4fadd7d228fa9f6192ad909862e30e49871843b61144dd3a2ca8b7b16aa",
+    "85d68fd84f4f250e911caf4787f8bbce3ed50243e15ec798dc28ba928bb66d71",
+    "3b660c9a69e4d9e9ae2caa4ee74efa6fc1bd3a2874ca1388b49f41c5870f8991",
+    "d6a75f1045d1c1972e04c9b132b2b741ae0bc13cc251279b26a8be20a04bc88b",
+    "1ee091420343f2ec9e24f0c567df418aaabfd50e2bffb143b6e85fc2ca67701d",
+    "858a3cc4e15bc40760896d692033c364d2883106325db14bc4c41952982ef6e5",
+    "d4659deb8c3efdcf56008e9db9e77247de554a9308c0cf9458d05f7dca68fd5f",
+    "1b3bca8bb10714b8f2faa1b263c23d0291dccd2106a9ee01ff2f5efd3f721582",
+    "26c2ee3162c1e38ccc64657f5adc72f4cb267f309072281be29f4c082a84456b",
+    "ab9b685b0ca3be1aeba005c29d7f5db1f66d2280b6bbfd9d9275be3a2f978ba9",
+    "97dc4540922a96b516157381e957ecc8ab8b45f376bd4cc03227a02594c514e8",
+    "a99ed8efdf88f925a2acaad73b1b8bed488703421affc8d786eeb39514eb9c68"
+  ],
+  "answers_file": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-answers.jsonl",
+  "answers_sha256": "c67ea96df46f840bbaa2d1d01c629b5e93f42602e3a6ac56bb55c056bdfd3ee0",
+  "archived_incomplete_attempts": [],
+  "capabilities": {
+    "correct": 31,
+    "total": 48,
+    "unresolved": 0,
+    "unresolved_truncated": 0,
+    "retried": 2,
+    "by_category": {
+      "consistency": {
+        "total": 12,
+        "correct": 8,
+        "unresolved": 0,
+        "unresolved_truncated": 0
+      },
+      "instruction": {
+        "total": 12,
+        "correct": 8,
+        "unresolved": 0,
+        "unresolved_truncated": 0
+      },
+      "reasoning": {
+        "total": 12,
+        "correct": 3,
+        "unresolved": 0,
+        "unresolved_truncated": 0
+      },
+      "recovery": {
+        "total": 12,
+        "correct": 12,
+        "unresolved": 0,
+        "unresolved_truncated": 0
+      }
+    }
+  },
+  "by_case": {
+    "broader-fresh-01-remainders": {
+      "correct": 0,
+      "repeats": 2
+    },
+    "broader-fresh-02-shortest-route": {
+      "correct": 0,
+      "repeats": 2
+    },
+    "broader-fresh-03-base-seven": {
+      "correct": 1,
+      "repeats": 2
+    },
+    "broader-fresh-04-round-robin": {
+      "correct": 0,
+      "repeats": 2
+    },
+    "broader-fresh-05-switch-constraints": {
+      "correct": 0,
+      "repeats": 2
+    },
+    "broader-fresh-06-leap-calendar": {
+      "correct": 2,
+      "repeats": 2
+    },
+    "broader-fresh-07-two-key-sort": {
+      "correct": 2,
+      "repeats": 2
+    },
+    "broader-fresh-08-quoted-csv": {
+      "correct": 2,
+      "repeats": 2
+    },
+    "broader-fresh-09-percent-encoding": {
+      "correct": 2,
+      "repeats": 2
+    },
+    "broader-fresh-10-transpose": {
+      "correct": 2,
+      "repeats": 2
+    },
+    "broader-fresh-11-second-delimited-field": {
+      "correct": 0,
+      "repeats": 2
+    },
+    "broader-fresh-12-json-types": {
+      "correct": 0,
+      "repeats": 2
+    },
+    "broader-fresh-13-equal-authority-conflict": {
+      "correct": 2,
+      "repeats": 2
+    },
+    "broader-fresh-14-unit-agreement": {
+      "correct": 2,
+      "repeats": 2
+    },
+    "broader-fresh-15-quantifier-gap": {
+      "correct": 2,
+      "repeats": 2
+    },
+    "broader-fresh-16-table-total": {
+      "correct": 2,
+      "repeats": 2
+    },
+    "broader-fresh-17-cyclic-order": {
+      "correct": 0,
+      "repeats": 2
+    },
+    "broader-fresh-18-rounding-order": {
+      "correct": 0,
+      "repeats": 2
+    },
+    "broader-fresh-19-format-pivot": {
+      "correct": 2,
+      "repeats": 2
+    },
+    "broader-fresh-20-expired-session": {
+      "correct": 2,
+      "repeats": 2
+    },
+    "broader-fresh-21-exhausted-retries": {
+      "correct": 2,
+      "repeats": 2
+    },
+    "broader-fresh-22-integrity-before-parse": {
+      "correct": 2,
+      "repeats": 2
+    },
+    "broader-fresh-23-schema-key-repair": {
+      "correct": 2,
+      "repeats": 2
+    },
+    "broader-fresh-24-stop-on-completion": {
+      "correct": 2,
+      "repeats": 2
+    }
+  },
+  "total_output_tokens_including_retries": 3859,
+  "sum_generation_request_seconds_including_retries": 357.09704096615314,
+  "sum_native_generation_seconds": 355.23725596707663,
+  "sum_committed_group_wall_seconds": 262.0052656599437,
+  "seconds_this_invocation": 263.18886115198256,
+  "refusal_evaluation_performed": false,
+  "full_quality_retention_gate_evaluated": false,
+  "interpretation": "Only complete fixed batches count. These previously seen benign development cases and repeated answers do not establish held-out quality or refusal rates. Compare candidates with the untouched W8A16 baseline under this same batching protocol; BF16 source weights are conversion input, not the quality reference. Strict grading and completion gates are unchanged."
+}

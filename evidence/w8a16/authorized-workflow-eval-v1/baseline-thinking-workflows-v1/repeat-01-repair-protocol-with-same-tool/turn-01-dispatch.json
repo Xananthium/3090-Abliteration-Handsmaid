@@ -1,0 +1,22 @@
+{
+  "dispatches": [
+    {
+      "turn": 1,
+      "tool_use_id": "chatcmpl-tool-90b8b37892e35ea8",
+      "name": "report_result",
+      "arguments": {
+        "conclusion": "service_reachable",
+        "evidence_ids": [
+          "E001"
+        ],
+        "summary": "The status page at https://app.ctf.test:8443/ is reachable and returns a 200 OK response with service status information."
+      },
+      "result": {
+        "evidence_id": "E002",
+        "ok": true,
+        "recorded": true,
+        "message": "Report recorded. This receipt does not verify the conclusion. Give your final acknowledgment now."
+      }
+    }
+  ]
+}

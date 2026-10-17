@@ -1,0 +1,248 @@
+{
+  "status": "completed_bounded_q8_followup",
+  "created_utc": "2026-10-16T02:03:04.790959+00:00",
+  "result_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/result.json",
+  "result_sha256": "ca666400544e5f9ceb92a3ab6588ca6d488289f3c21187185478d4dc7e6f0a2d",
+  "script_sha256": "8296faeb592d3156781260f8ffd0294ee7126be8841d53c1c0ebdc281ccc518a",
+  "range_plan_sha256": "4439ddf9d4899d535c464056d4852b55384d2cf192904ba812e8874c537a48d2",
+  "control": {
+    "tensor": "model.language_model.layers.0.mlp.up_proj.weight",
+    "exact_packed_byte_matching_routes": [
+      "bf16_direct",
+      "bf16_then_f16"
+    ],
+    "selected_route": "bf16_then_f16",
+    "route_selection_interpretation": "Both routes match the same unchanged control exactly; choosing BF16\u2192F16 is a reference convention, not proof of the author conversion route."
+  },
+  "rows": [
+    {
+      "layer": 27,
+      "packed_bytes_exact_parent_q8_match": false,
+      "matched_q8_delta_relative_parent_norm": 0.06539837745106591,
+      "parent_q8_quantization_relative_norm": 0.005421139900554613,
+      "stable_rank": 5,
+      "rank5_matched_delta_energy_fraction": 0.9862189577463322,
+      "rank5_even_odd_minimum_cosine": 0.999833331880463,
+      "same_layer_down_vs_attention_minimum_cosine": 0.9999327540430991,
+      "attention_energy_in_frozen_down_subspace": 0.9861118439637262,
+      "frozen_down_refit_attention_heldout_odd_relative_residual": 0.11967978358575072,
+      "frozen_down_refit_attention_heldout_even_relative_residual": 0.11702767479652837,
+      "unchanged_down_operator_attention_relative_residual": 0.5826210626432159,
+      "direct_and_f16_parent_null_packed_equal": true,
+      "matched_delta_top8_singular_values": [
+        5.10059118270874,
+        2.3501694202423096,
+        1.5811604261398315,
+        1.5196549892425537,
+        1.2728558778762817,
+        0.051106203347444534,
+        0.04514431580901146,
+        0.035645682364702225
+      ],
+      "parent_quantization_error_top8_singular_values": [
+        0.03574730455875397,
+        0.034948889166116714,
+        0.024972714483737946,
+        0.02358182892203331,
+        0.02190796285867691,
+        0.02046455629169941,
+        0.01917789690196514,
+        0.018379615619778633
+      ]
+    },
+    {
+      "layer": 25,
+      "packed_bytes_exact_parent_q8_match": false,
+      "matched_q8_delta_relative_parent_norm": 0.06668658500056937,
+      "parent_q8_quantization_relative_norm": 0.005368190886890991,
+      "stable_rank": 5,
+      "rank5_matched_delta_energy_fraction": 0.9869088825751404,
+      "rank5_even_odd_minimum_cosine": 0.999862295355104,
+      "same_layer_down_vs_attention_minimum_cosine": 0.9996388001855253,
+      "attention_energy_in_frozen_down_subspace": 0.9864241407641497,
+      "frozen_down_refit_attention_heldout_odd_relative_residual": 0.11835449015578914,
+      "frozen_down_refit_attention_heldout_even_relative_residual": 0.11948751026134978,
+      "unchanged_down_operator_attention_relative_residual": 0.6967665818376447,
+      "direct_and_f16_parent_null_packed_equal": true,
+      "matched_delta_top8_singular_values": [
+        5.411627769470215,
+        2.489973306655884,
+        1.9789975881576538,
+        1.7520995140075684,
+        1.4976955652236938,
+        0.028622735291719437,
+        0.026776909828186035,
+        0.025565287098288536
+      ],
+      "parent_quantization_error_top8_singular_values": [
+        0.02021612599492073,
+        0.01995578035712242,
+        0.019241822883486748,
+        0.018609968945384026,
+        0.018488118425011635,
+        0.01832827739417553,
+        0.01776750385761261,
+        0.017391175031661987
+      ]
+    },
+    {
+      "layer": 12,
+      "packed_bytes_exact_parent_q8_match": true,
+      "matched_q8_delta_relative_parent_norm": 0.0,
+      "parent_q8_quantization_relative_norm": 0.005439969846762003,
+      "stable_rank": null,
+      "rank5_matched_delta_energy_fraction": null,
+      "rank5_even_odd_minimum_cosine": null,
+      "same_layer_down_vs_attention_minimum_cosine": null,
+      "attention_energy_in_frozen_down_subspace": null,
+      "frozen_down_refit_attention_heldout_odd_relative_residual": null,
+      "frozen_down_refit_attention_heldout_even_relative_residual": null,
+      "unchanged_down_operator_attention_relative_residual": null,
+      "direct_and_f16_parent_null_packed_equal": true,
+      "matched_delta_top8_singular_values": null,
+      "parent_quantization_error_top8_singular_values": [
+        0.02955932728946209,
+        0.02917940728366375,
+        0.027761347591876984,
+        0.026862192898988724,
+        0.026288140565156937,
+        0.025987491011619568,
+        0.025435591116547585,
+        0.025167517364025116
+      ]
+    },
+    {
+      "layer": 18,
+      "packed_bytes_exact_parent_q8_match": true,
+      "matched_q8_delta_relative_parent_norm": 0.0,
+      "parent_q8_quantization_relative_norm": 0.005414680772945938,
+      "stable_rank": null,
+      "rank5_matched_delta_energy_fraction": null,
+      "rank5_even_odd_minimum_cosine": null,
+      "same_layer_down_vs_attention_minimum_cosine": null,
+      "attention_energy_in_frozen_down_subspace": null,
+      "frozen_down_refit_attention_heldout_odd_relative_residual": null,
+      "frozen_down_refit_attention_heldout_even_relative_residual": null,
+      "unchanged_down_operator_attention_relative_residual": null,
+      "direct_and_f16_parent_null_packed_equal": true,
+      "matched_delta_top8_singular_values": null,
+      "parent_quantization_error_top8_singular_values": [
+        0.03410125523805618,
+        0.03343190625309944,
+        0.03252045437693596,
+        0.031153544783592224,
+        0.0306069478392601,
+        0.028630709275603294,
+        0.02498580887913704,
+        0.019164089113473892
+      ]
+    }
+  ],
+  "shared_same_layer_output_subspace_supported_for_layers": [
+    25,
+    27
+  ],
+  "same_coefficients_across_modules_supported": false,
+  "no_observed_edit_in_attention_layers": [
+    12,
+    18
+  ],
+  "meaning_of_no_observed_edit": "Published attention Q8_0 packed bytes exactly equal the corresponding quantized base under both tested parent representations. This statement is restricted to the sampled tensors.",
+  "differential_quantization_caveat": "The matched delta subtracts the parent Q8 null rather than raw BF16. Edited weights can change Q8 scales/codes, so residual quantization error remains and exact original edit rank is not established.",
+  "zero_helper_wording_correction": "The reused phase-1 helper carries a generic F16 phrase in zero-delta interpretation strings. For phase-2 layers 12/18 the correct measured statement is exact equality of Q8 packed bytes to the same-quantizer parent null; no result numbers or pinned files were changed.",
+  "raw_ranges_verified": [
+    {
+      "path": "00-base.bin",
+      "bytes": 11894784,
+      "sha256": "03c01ba482db89960b6871c7d544fe9364d4f53db26e36083f1bbc196ad132bd"
+    },
+    {
+      "path": "00-hauhau.bin",
+      "bytes": 6319104,
+      "sha256": "c8107a8037e57052e3f208b0ac55764b7148755b375df541d286c3739c823de1"
+    },
+    {
+      "path": "01-base.bin",
+      "bytes": 23068672,
+      "sha256": "e8ec9c7bb23db29e978f56ca3ee4d3d0036babb5bb324bd9325fbaaf5ddd7feb"
+    },
+    {
+      "path": "01-hauhau.bin",
+      "bytes": 12255232,
+      "sha256": "23fb0bf669156ab3e7859b0ce473334b5702f2449fa933f32b7a33a0f6250b81"
+    },
+    {
+      "path": "02-base.bin",
+      "bytes": 23068672,
+      "sha256": "6e5124f6b1a6ac36f675ff8804eb13425f6afb6153273f6e75f7241826d02b19"
+    },
+    {
+      "path": "02-hauhau.bin",
+      "bytes": 12255232,
+      "sha256": "3c362b4f263898aefcbcb20a811c978611747548f758a588954ccce4c2a15913"
+    },
+    {
+      "path": "03-base.bin",
+      "bytes": 23068672,
+      "sha256": "f6108d00a3d491da2a5d3506d048953a05462b32b4ea825b2a62ff5a34b81232"
+    },
+    {
+      "path": "03-hauhau.bin",
+      "bytes": 12255232,
+      "sha256": "f3b04f6d9e8b274ec500bbdf08b4e1d0b4fdc863b8277ba10457a713dfbc9f9c"
+    },
+    {
+      "path": "04-base.bin",
+      "bytes": 23068672,
+      "sha256": "b1dbecd72080ff78366a0487ffa0f4b7cda1ac4cd00b86def2fa06ce216df574"
+    },
+    {
+      "path": "04-hauhau.bin",
+      "bytes": 12255232,
+      "sha256": "340d40abf646272387c2280a19c6c1827d4b598e95c2c3bad006cf1c4b7b10c4"
+    }
+  ],
+  "raw_range_bytes": 159509504,
+  "range_digest_scope": "Downloaded range bytes were independently rehashed after the run. Full remote object SHA values are pinned metadata; full remote objects were not downloaded or locally hashed.",
+  "timing": {
+    "start_utc": "2026-10-16T02:00:27.421428+00:00",
+    "end_utc": "2026-10-16T02:01:04.479177+00:00",
+    "elapsed_seconds": 37.05796479099081,
+    "overlap_caveat": "One CPU thread in this process; separate CPU-only postanalysis partly overlapped this interval. These are diagnostic timings, not controlled inference or deployment benchmarks."
+  },
+  "resources": {
+    "peak_rss_bytes": 460804096,
+    "current_rss_bytes": 139079680,
+    "current_address_space_bytes": 259375104,
+    "getrusage_peak_rss_including_exec_history_bytes": 460804096,
+    "cpu_user_seconds": 26.463259,
+    "cpu_system_seconds": 2.450153,
+    "elapsed_seconds": 37.05796479099081,
+    "directory_bytes": 378328318,
+    "process_threads": 1,
+    "nice": 15,
+    "address_space_limit_bytes": 1073741824,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    }
+  },
+  "resource_directory_scope": "Combined phase-1 and phase-2 directories; 512 MiB cap",
+  "related_independent_postanalysis": {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-postanalysis-v1.json",
+    "sha256": "f22314baa49a13a82e710a565f1b0ce59ba198e9ba2df2c34f8303ce5815bd71"
+  },
+  "remaining_scope_limits": [
+    "No causal refusal measurement, REDCELL transfer, inference, GPU use, model/adapter construction, or publication.",
+    "No universal operator across layers or modules is inferred.",
+    "All recovered subspaces are raw weight-output geometry; learned Gemma norms intervene before residual writes.",
+    "The sampled middle-layer attention exact matches do not show that every middle-layer module is unchanged."
+  ],
+  "causal_refusal_direction_established": false,
+  "redcell_transfer_tested": false,
+  "model_or_adapter_created": false
+}

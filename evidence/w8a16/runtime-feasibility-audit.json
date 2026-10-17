@@ -1,0 +1,418 @@
+{
+  "created_utc": "2026-10-15T23:10:19.448066+00:00",
+  "status": "native_int8_w8a16_marlin_reversible_lora_code_feasible_runtime_unvalidated",
+  "scope": "Read-only installed-code and primary-documentation review plus CPU-only intercepted-kernel wrapper probe. No model load, GPU query, GPU kernel, inference, service action, model/export/adapter modification.",
+  "working_baseline": "An untouched local INT8 W8A16 export becomes the working baseline. The BF16 source is conversion input only; no BF16 final evaluation is required under current user steering.",
+  "recommendation": {
+    "format": "compressed-tensors",
+    "compression_format": "pack-quantized",
+    "weight_bits": 8,
+    "weight_type": "int",
+    "weight_strategy": "group",
+    "group_size": 32,
+    "weight_symmetric": true,
+    "weight_dynamic": false,
+    "input_activations": null,
+    "output_activations": null,
+    "activation_dtype": "bfloat16",
+    "kv_cache_dtype": "bfloat16",
+    "lora_dtype": "bfloat16",
+    "linear_backend": "marlin",
+    "moe_backend": "marlin",
+    "tensor_parallel_size": 2,
+    "fully_sharded_loras": false,
+    "current_adapter_scope": "Attention o_proj, shared MLP down_proj, and all expert down_proj; expert gate_proj/up_proj factors remain exactly zero.",
+    "iteration": "Load one resident untouched W8A16 base; register distinct reversible adapter candidates and save artifacts/results. No repeated full checkpoint export per trial. Baseline requests use the base model ID, candidate requests their distinct adapter ID.",
+    "transformers_fallback_required": false,
+    "numerical_caveat": "This is a new local integer W8A16 representation, not bit-identical to the author Q8_K_P GGUF or FP8. FP32 disk adapter factors are cast to BF16 in this runtime. Unmerged low-rank arithmetic is not bit-identical to merging then requantizing; any eventual merged quantized artifact must be checked in its own final runtime, against the accepted W8 baseline/candidate as appropriate."
+  },
+  "hardware_reported_by_parent": {
+    "gpus": "2 x RTX 3090, 24 GiB each, SM86",
+    "topology": "NV4 GPU link; host maximum PCIe Gen3 x16 per GPU",
+    "power_caps": "User-controlled, unchanged"
+  },
+  "evidence": [
+    {
+      "claim": "CT pack-quantized integer weight-only group/channel schemes select CompressedTensorsWNA16MoEMethod and dense CompressedTensorsWNA16; 8-bit maps to uint8b128.",
+      "refs": [
+        "ct_moe_selector:76",
+        "ct_wna16_linear:36",
+        "ct_wna16_moe:75"
+      ]
+    },
+    {
+      "claim": "CT MoE requests allow_tile_padding=True and sets up internal modular MoE kernel. INT8 uses kInt8StaticGroupScale; Marlin accepts this quant key. Group32 and channel(-1) are supported.",
+      "refs": [
+        "ct_wna16_moe:86",
+        "ct_wna16_moe:102",
+        "ct_wna16_moe:359",
+        "marlin_experts:590"
+      ]
+    },
+    {
+      "claim": "MarlinExperts inherits LoRAExpertsMixin and injects w13 LoRA before activation and w2 LoRA before final MoE sum. Device minimum SM75 permits RTX3090 SM86. Ordinary TP2 and Gemma4 gelu activation pass inspected gates.",
+      "refs": [
+        "marlin_experts:578",
+        "marlin_experts:613",
+        "marlin_experts:676",
+        "marlin_experts:773"
+      ]
+    },
+    {
+      "claim": "Hidden2816 is divisible128. Gemma4 expert intermediate704 / TP2 =352; Marlin pads352 to384. Group32 divides352 and shared-MLP partition1056; group64/128 do not and cannot be repaired across TP scale boundaries.",
+      "refs": [
+        "marlin_utils:335",
+        "marlin_utils:356",
+        "wna16_oracle:650",
+        "ct_wna16_moe:243",
+        "marlin_linear:36"
+      ]
+    },
+    {
+      "claim": "The installed non-fully-sharded one-shot and small-batch LoRA wrappers derive K from A0.shape[3], while honoring the activation row stride. Thus down-A352 consumes first352 lanes of padded384 activation. CPU intercepted-launch probe confirms these exact arguments.",
+      "refs": [
+        "moe_lora_kernels:307",
+        "moe_lora_kernels:342",
+        "moe_lora_kernels:726",
+        "moe_lora_kernels:761"
+      ]
+    },
+    {
+      "claim": "Keep fully_sharded_loras=false. Legacy fully-sharded path derives K from padded input shape, which differs from logical LoRA A. Current adapters have zero gate/up factors, making their logical slice offset352 harmless even though base packed output gate/up halves are384 wide. Nonzero gate/up LoRA is outside this audited contract.",
+      "refs": [
+        "moe_lora_kernels:1481",
+        "moe_lora_kernels:1538",
+        "moe_lora_kernels:494",
+        "moe_lora_kernels:841"
+      ]
+    },
+    {
+      "claim": "Global linear backend marlin does not force ignored BF16 linears into an INT8 kernel: unquantized dispatch falls back to ordinary GEMM. For compressed-tensors Gemma4 passes quant config to vision; explicit vision/embed ignore rules are required and present in exporter recipe.",
+      "refs": [
+        "linear_dispatch:602",
+        "gemma4_mm:1082",
+        "gemma4_mm:1105"
+      ]
+    },
+    {
+      "claim": "Installed CLI explicitly defines --linear-backend and --moe-backend, with marlin choices; LoRA bool defaults false and BooleanOptionalAction provides the explicit negative flags.",
+      "refs": [
+        "arg_utils:1772",
+        "arg_utils:1775",
+        "arg_utils:1558",
+        "lora_config:39"
+      ]
+    }
+  ],
+  "cpu_probe": {
+    "passed": true,
+    "cuda_visible_devices": "",
+    "cuda_initialized": false,
+    "method": "AST-extracted installed _run_fused_moe_lora_one_shot and _run_fused_moe_lora_small_batch with CPU BF16 tensors and intercepted kernel launch; fake hardware metadata only; no GPU execution.",
+    "records": [
+      {
+        "kernel": "_fused_moe_lora_one_shot_kernel",
+        "K": 352,
+        "N": 2816,
+        "input_row_stride": 384,
+        "input_col_stride": 1,
+        "slice_n_offset": 2816
+      },
+      {
+        "kernel": "_fused_moe_lora_small_batch_kernel",
+        "K": 352,
+        "N": 2816,
+        "input_row_stride": 384,
+        "input_col_stride": 1,
+        "slice_n_offset": 2816
+      }
+    ],
+    "limits": "Verifies actual Python argument selection and shape/stride contract, not compiled GPU kernel correctness, output quality, speed or memory fit."
+  },
+  "launch": {
+    "minimum_profile_args": [
+      "--quantization",
+      "compressed-tensors",
+      "--dtype",
+      "bfloat16",
+      "--kv-cache-dtype",
+      "bfloat16",
+      "--tensor-parallel-size",
+      "2",
+      "--linear-backend",
+      "marlin",
+      "--moe-backend",
+      "marlin",
+      "--cpu-offload-gb",
+      "0",
+      "--gpu-memory-utilization",
+      "0.85",
+      "--max-model-len",
+      "8192",
+      "--max-num-seqs",
+      "4",
+      "--enable-lora",
+      "--max-loras",
+      "1",
+      "--max-cpu-loras",
+      "4",
+      "--max-lora-rank",
+      "8",
+      "--lora-dtype",
+      "bfloat16",
+      "--lora-target-modules",
+      "o_proj",
+      "down_proj",
+      "experts",
+      "--no-fully-sharded-loras",
+      "--no-enable-prefix-caching",
+      "--enforce-eager"
+    ],
+    "retain": "Private localhost binding, existing multimodal processor/tokenizer settings, image limits, user-required legacy API alias; lora-modules with unique candidate ID and base_model_name matching that alias. Manifest/actual checkpoint path provide truthful model lineage. Rank8 is capacity for original rank3/alpha3, not a factor rescale.",
+    "mixed_moe_lora_format_required": false,
+    "no_tower_lora_required": true,
+    "unset_environment": [
+      "VLLM_MARLIN_INPUT_DTYPE",
+      "VLLM_HUMMING_INPUT_QUANT_CONFIG",
+      "VLLM_HUMMING_ONLINE_QUANT_CONFIG"
+    ],
+    "service_environment_requirement": "Profile absence alone does not prove process absence. Launcher should use explicit service UnsetEnvironment for these inherited variables and record the effective environment checks.",
+    "agent_environment_observed": {
+      "VLLM_MARLIN_INPUT_DTYPE": null,
+      "VLLM_HUMMING_INPUT_QUANT_CONFIG": null,
+      "VLLM_HUMMING_ONLINE_QUANT_CONFIG": null
+    },
+    "runtime_lora_updates": "VLLM_ALLOW_RUNTIME_LORA_UPDATING=1 is compatible with the planned private adapter registration workflow.",
+    "offload": "CPU offload0 is reasonable for the projected resident model, pending actual load. Do not carry the BF16 offload8 setting into this profile."
+  },
+  "other_options": [
+    {
+      "option": "INT8 channel(-1) compressed-tensors + Marlin",
+      "status": "Code-supported alternative",
+      "details": "Avoids scale-group boundaries and saves about1.4GiB checkpoint payload. Group32 selected for finer per-weight scaling granularity; quality and speed differences not measured."
+    },
+    {
+      "option": "Symmetric INT8 GPTQ/AutoGPTQ + Marlin",
+      "status": "Code-supported but unnecessary alternate export format",
+      "details": "AutoGPTQConfig supports8-bit symmetric weights; AutoGPTQMoEMethod allows tile padding and routes to MarlinExperts. Would require a separate correctly formatted GPTQ checkpoint, with no advantage established over existing CT exporter."
+    },
+    {
+      "option": "FP8 weight-only Marlin",
+      "status": "Potential alternate numeric format, not selected",
+      "details": "Marlin supports FP8 weights with BF16 activations on SM86; native FP8 compute is not required. A serialized FP8 checkpoint or fp8_per_tensor online path differs numerically from requested integer W8 baseline. --quantization fp8 on an unquantized source is explicitly rejected by installed code; fp8_per_channel requires activation FP8 in dense PTPC path and is unsuitable."
+    },
+    {
+      "option": "INT8 AWQ",
+      "status": "Blocked for this native MoE route",
+      "details": "Installed AutoAWQConfig TYPE_MAP contains only4 and AutoAWQMoEMethod explicitly rejects non4bit."
+    },
+    {
+      "option": "Humming MoE + current per-expert LoRA",
+      "status": "Blocked by installed native LoRA capability gate",
+      "details": "HummingExpertsBase and Indexed/Grouped/Batched subclasses do not implement LoRAExpertsMixin or override supports_lora; modular kernel rejects them when LoRA is enabled."
+    },
+    {
+      "option": "GGUF Q8_K_P directly",
+      "status": "No native quantization method registered in this installed vLLM tree",
+      "details": "Installed quantization method registry has no gguf entry. Do not infer native adapter support from the author GGUF file or equate GGUF packing with CT INT8."
+    },
+    {
+      "option": "Transformers + bitsandbytes8bit + PEFT",
+      "status": "Fallback only if native runtime validation fails",
+      "details": "Existing compatibility code can unfuse canonical Gemma4 experts into individual Linear modules for full adapter coverage, but the old pilot actually loads4bit and requires a new8bit harness. Avoid CPU-offloaded meta-weight mutation assumptions. No fallback runtime was exercised."
+    }
+  ],
+  "memory": {
+    "exported_tensor_payload_gib_group32": 26.69062839075923,
+    "exported_tensor_payload_gib_channel": 25.296735625714064,
+    "expert_marlin_tile_padding_extra_weight_bytes_total": 2076180480,
+    "expert_marlin_tile_padding_extra_group32_scale_bytes_total": 129761280,
+    "limits": "Disk payload/2 is not exact GPU memory: Marlin pads expert tiles, TP replicates some tensors and vision, LoRA adds buffers, plus KV/workspaces/CUDA state. 0.85 utilization on24GiB GPUs is a reasonable proposed budget, not a validated fit. No throughput estimate is claimed."
+  },
+  "comparison_protocol": "Same W8 base, backend flags, BF16 activation/KV precision, batch4 and fixed benign fixtures for base and all candidates; separate candidate IDs and saved run receipts. First controlled root-owned runtime check should include base/adapter/base and a benign image probe. No harmful prompt generation or compliance testing is part of this audit.",
+  "export_audit": {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/export-feasibility-audit.json",
+    "sha256_at_review": "5acb43b28a99154c96ab89191fc160e3de334190fe2ae7397b0fd5530bb19731"
+  },
+  "source_references": {
+    "ct_moe_selector": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/quantization/compressed_tensors/compressed_tensors_moe/compressed_tensors_moe.py",
+      "sha256": "be07469d52ee139a479f0d687ac5bffa8d60931cd87490f0ee6b26b2441d938a"
+    },
+    "ct_wna16_moe": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/quantization/compressed_tensors/compressed_tensors_moe/compressed_tensors_moe_wna16.py",
+      "sha256": "9fee7bb36f0c8f26398b18d9dcec8f050b5498664f76c4c4008d6a1dfb858f03"
+    },
+    "ct_wna16_linear": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/quantization/compressed_tensors/schemes/compressed_tensors_wNa16.py",
+      "sha256": "56a1f965be85a995d27da5daecca4dc611d0a7bceedf13374128eb55f064ab41"
+    },
+    "wna16_oracle": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/fused_moe/oracle/int_wna16.py",
+      "sha256": "5bb77475566d7d0688e16b7a2cf10586fef7d867a991a17296d2da52203ed5c0"
+    },
+    "marlin_experts": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/fused_moe/experts/marlin_moe.py",
+      "sha256": "e048731e130ecc3100be0ab4a168777a7697131b41538f9d9b6a73c4f66e14ff"
+    },
+    "marlin_utils": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/quantization/utils/marlin_utils.py",
+      "sha256": "e60713c15080347b01425f90eaf03840ca80a1cd226ec57e526e8f6286eeeb22"
+    },
+    "marlin_linear": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/kernels/linear/mixed_precision/marlin.py",
+      "sha256": "f1bdb34e9c492db54e7c813bd63ca34b4bb8d1810e89d899dc725b9fca5d40bd"
+    },
+    "moe_lora_wrapper": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/layers/fused_moe.py",
+      "sha256": "3a2a6c03fda98f5cc216570324921c889a01e0893ac3febe4bd13f4bf03fab0c"
+    },
+    "punica": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/punica_wrapper/punica_gpu.py",
+      "sha256": "fcef19b14e9f7cfc430998d74b91193d1398e4f9b6a4b96136b6b719b33c3294"
+    },
+    "moe_lora_kernels": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/ops/triton_ops/fused_moe_lora_op.py",
+      "sha256": "506efbd701648e872c0642178251f7b1256783496b0e3d361c730a0d7b272b58"
+    },
+    "lora_mixin": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/fused_moe/experts/lora_experts_mixin.py",
+      "sha256": "5cd2fd34e2b11b26ea2de126f74ad745d9cbee1695389b963c99ea81fe900057"
+    },
+    "modular_kernel": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/fused_moe/modular_kernel.py",
+      "sha256": "b8dce8f9af0545c080d8d761bd12a60b607ed84eafbaf89a6f8020040df7d6ce"
+    },
+    "humming_experts": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/fused_moe/experts/fused_humming_moe.py",
+      "sha256": "0cd9d4f84708c64879dadf97cae3a69b3c68cc001ea6da347273c0e96d7980d0"
+    },
+    "auto_awq": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/quantization/auto_awq.py",
+      "sha256": "9ed2fd3d33b510e152a8826aab239e46c2a9c0d6cf718ba32a2d54e3d60e29fa"
+    },
+    "auto_gptq": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/quantization/auto_gptq.py",
+      "sha256": "be5eb05af945d4c45b62b3ed7b6de8d1f8dc0c72ce209cc3b81010694a908739"
+    },
+    "fp8": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/quantization/fp8.py",
+      "sha256": "24d0885dc6425909090b36d3ff731b82460436881ce5bac1e06c77393f192387"
+    },
+    "fp8_online": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/quantization/online/fp8.py",
+      "sha256": "8dcdeaf95b619e623952b55c6c80d80eb38cc522863b920054ddac6d271ad46c"
+    },
+    "quant_registry": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/quantization/__init__.py",
+      "sha256": "d7656bbd3c34acc5df276cb99c72e96783c343c2751f7650107f035afbe8c295"
+    },
+    "gemma4_mm": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py",
+      "sha256": "ee9b33f5f3d76bfec371dfc65292a915cc5b4741367ba0b28a450a5af8c40f9f"
+    },
+    "arg_utils": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/engine/arg_utils.py",
+      "sha256": "95be1adb96f55933f6a52260c8cb2181d04707401ca21d97c33108c5ab58f3ac"
+    },
+    "kernel_config": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/config/kernel.py",
+      "sha256": "249ead9ca4c207ff8ea49c99c5e5332eb84ed990e93e55c493bab20b9a293739"
+    },
+    "lora_config": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/config/lora.py",
+      "sha256": "d8fe6d62f304c50fda1e9bee0a52b16d30f948f41df036c76535fe694d2bacfc"
+    },
+    "cache_config": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/config/cache.py",
+      "sha256": "a9b2a804c9c353e7bded64081bf920c79432d4e44ca180c05e275c69e642a280"
+    },
+    "linear_dispatch": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/utils.py",
+      "sha256": "514076151e2a81b461e362087f6520120befea511c1ecc4cd375fbfff9fa7e37"
+    }
+  },
+  "primary_docs": [
+    "https://docs.vllm.ai/en/v0.31.0/features/quantization/",
+    "https://docs.vllm.ai/en/v0.31.0/configuration/engine_args/",
+    "https://docs.vllm.ai/en/v0.31.0/features/quantization/online/",
+    "https://docs.vllm.ai/en/v0.31.0/api/vllm/model_executor/layers/fused_moe/oracle/fp8/"
+  ],
+  "private_launch_review": {
+    "status": "passed_cpu_static_checks_pending_export_manifest_and_runtime",
+    "reviewed_utc": "2026-10-15T23:11:57.386473+00:00",
+    "profile": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/launch-v1.json",
+      "sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58"
+    },
+    "prepare_runtime": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/prepare_runtime.py",
+      "sha256": "1b6f88d237150709a21699643195f536c2d63218664b78774bb944c1f1753441"
+    },
+    "start_runtime": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/start_runtime.py",
+      "sha256": "28e653a6aeb3b4468bfa1fa58eb57a183a18b0a1f43b4c92164140498a2c7124"
+    },
+    "flags": "Confirmed TP2, BF16 activation/KV/LoRA, Marlin linear/MoE, offload0, memory0.85, context8192, maxseq4, maxloras1/maxcpuloras4/rank8, eager, no fully-sharded LoRA, no prefix caching, localhost8002.",
+    "environment": "All three forbidden activation-quantization env vars absent from profile; start script passes systemd UnsetEnvironment covering all three. No service was created or queried by reviewer.",
+    "identity": "The legacy qwen3.6-35b-hauhau-w4a16-vision API alias is explicitly user-required for Claude Code/client compatibility across switches, per parent. Retain it. Actual model path is the new W8A16 Gemma4 baseline; adapter API ID is redcell-w8a16-strength-1.5 and its base_model_name matches that alias. This is internally consistent; model lineage is supplied by manifest, adapter provenance and /v1/models root.",
+    "adapter_branch": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/strength-1.5-vllm",
+      "safetensors_sha256": "cfd9fe8705b79237e252fba47f19b88c3071683d56eacd4ae4f69a249ada4919",
+      "config_sha256": "8f404726dab2bbd3ddbe99630a37ed3ded557ab077659c556f03e0ec36804891",
+      "same_inode_as_validated_bf16_branch": true,
+      "tensor_count": 23160,
+      "all_tensor_dtype": "F32",
+      "rank": 3,
+      "alpha": 3,
+      "only_config_change": "base_model_name_or_path from source BF16 to redcell-baseline-w8a16-native; no factor changes."
+    },
+    "manifest": "Final precision-manifest-v1.json is pending successful baseline export. start_runtime refuses to launch without it and binds profile/config/index hashes. It does not independently rehash every model shard or adapter at start; final export and adapter receipts carry those identities."
+  },
+  "exporter_independent_review": {
+    "reviewed_utc": "2026-10-15T23:14:15.838353+00:00",
+    "status": "passed_code_review_and_bounded_real_weight_cpu_probe",
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/export_unedited_w8a16.py",
+    "sha256": "fa61bd2bf7772732ce9961f9b8cba33d92b136c99d563282fed5309655e3d29c",
+    "checks": [
+      "No adapter argument, file read, factor addition or matrix merge path; source\u2192W8 export only.",
+      "Explicit integer8 symmetric static group32 scheme, with both activation quantizers null and pack-quantized format.",
+      "Every quantized layer requires INT32 packed shape[out,in/4], BF16 positive finite scales[out,in/32], INT64 shape[2], and exactly these three tensors.",
+      "Manual unsigned-byte unpack minus128 and independent BF16 divide/round/clamp reference for15 full real projections at layers0/15/29 cover attention, shared MLP and expert gate/up/down.",
+      "Full canonical1013, expanded12473, quantized11725, output35923 and payload28658844012-byte counts gate final rename.",
+      "Explicit vision/embed/router/gate/norm ignores;356 vision tensors remain same-inode source hardlink, checked BF16/finite and indexed unchanged.",
+      "Ignored language tensors checked byte for byte; every serialized output shard reloaded with exact key/tensor-byte equality and SHA256.",
+      "Source file fingerprints are checked before/after; source shard hashes and original support-file copies are retained. No source files are written.",
+      "CUDA_VISIBLE_DEVICES is cleared before torch import, all tensors/device operations are CPU, and torch.cuda.is_initialized must remain false.",
+      "Final output directory appears only after all coverage, numerical, preservation and serialization assertions pass."
+    ],
+    "independent_cpu_probe": {
+      "passed": true,
+      "source_tensor": "model.language_model.layers.0.experts.down_proj",
+      "source_slice": "expert0, outputrows0:32, all704inputcolumns",
+      "source_shape": [
+        32,
+        704
+      ],
+      "packed_shape": [
+        32,
+        176
+      ],
+      "scale_shape": [
+        32,
+        22
+      ],
+      "scale_matches_independent_group_absmax_div_127_5_BF16": true,
+      "manual_unpack_matches_independent_signed_INT8_reference": true,
+      "quantized_min": -128,
+      "quantized_max": 127,
+      "weight_rmse": 0.0002615024277474731,
+      "relative_l2_weight_error": 0.006187319289892912,
+      "max_abs_weight_error": 0.0012359619140625,
+      "source_slice_unchanged": true,
+      "cuda_initialized": false,
+      "scope": "Small real-weight slice only; no model/export write, forward pass, GPU or service operation. Error statistics describe this slice and do not estimate model capability."
+    },
+    "remaining": "Full export completion and its15 real-projection numerical assertions are the converter responsibility. Runtime load, base/adapter/base, tools and vision are root-owned and remain unvalidated by this reviewer."
+  }
+}

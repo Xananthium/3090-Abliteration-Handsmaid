@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "completed_utc": "2026-10-17T16:44:32.842277+00:00",
+  "status": "completed_and_reported",
+  "checkpoint": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+  "thinking_enabled": true,
+  "variants": 8,
+  "scenario_families": 6,
+  "repeats": 2,
+  "objectives_passed": 16,
+  "observations": 16,
+  "output_tokens_including_thinking": 15933,
+  "warmup_output_tokens": 2,
+  "elapsed_seconds": 368.48662346199853,
+  "unnecessary_postcompletion_calls": 2,
+  "model_edits_performed": false,
+  "live_target_requests_performed": false,
+  "private_inference_stopped": true,
+  "production_boot_enabled": false,
+  "free_disk_gib": 390.5910339355469,
+  "artifacts": {
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/authorized-workflow-eval-v1/baseline-thinking-workflows-v1/summary.json": "cd0069797d4f28002659b8d666fb27eae36274d475d31bdaecd42030635ff53b",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/authorized-workflow-eval-v1/baseline-thinking-workflows-v1/report-workflows-v1/summary.json": "5280e8cb71ab5a2c70ac24ccde44bbace8d4ce9083ef5bb21aee4c0dadfb73d0",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/authorized-workflow-eval-v1/baseline-qualitative-audit-v1.json": "19c812da9b908b624fa23b6f2e7773da80f2a8d751000cbe1701a211aa0c5877",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/authorized-workflow-eval-v1/runtime-stop-receipt-v1.json": "afa2d5d5e1eb56dfba2198625638c5ef0a08a14a0e0c953e6e6947fb8c9d6d5e",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/authorized-workflow-eval-v1/baseline-thinking-workflows-v1/report-workflows-v1/case-rankings.png": "1f6e69e191a623aac72e4109e6d68f20e817fab2a423f20ecc322434a72fd559",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/authorized-workflow-eval-v1/baseline-thinking-workflows-v1/report-workflows-v1/cases-ranked.csv": "8bd53dd90bc574819afd579bbbd3a7c5ea46ed381544644f636aeb4d48e0f8bb"
+  }
+}

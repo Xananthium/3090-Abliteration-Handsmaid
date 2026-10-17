@@ -1,0 +1,84 @@
+{
+  "status": "metadata_research_complete_no_merge_or_training_started",
+  "checked_utc": "2026-10-16T01:17:07.000171+00:00",
+  "question": "Can earlier Hauhau Gemma work be reused for REDCELL; is the original specialist corpus available?",
+  "lineage": {
+    "hauhau": {
+      "repo": "HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced",
+      "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+      "declared_parent": "google/gemma-4-26B-A4B-it",
+      "highest_published_language_format": "Q8_K_P GGUF",
+      "local_converted_weights_present": false,
+      "recoverable_conversion_repo": "Xananthium/Gemma4-26B-A4B-Hauhau-Balanced-W6A8-Vision",
+      "recoverable_conversion_revision": "b130caf22ec83ed1aa49564fd874fd44d294d9d5"
+    },
+    "redcell": {
+      "repo": "terrorswift/REDCELL-26B-A4B-OSINT-Cyber-APEX-GGUF",
+      "current_head": "742cc47ead4f0be776744e60084e21b83411d135",
+      "our_source_revision": "ba311d958b4ed191a7291b38a6d805662415a570",
+      "unchanged_f16_sha256": "26cc25c909a26f8ed08a78444295ac174e7f329f8fb39ebae98f42d4115a7011",
+      "declared_parent": "unsloth/gemma-4-26B-A4B-it",
+      "method_reported_by_author": "16-bit LoRA SFT",
+      "corpus_examples_approximate": 6500,
+      "author_reported_duration_hours": 4,
+      "author_reported_hardware": "RTX PRO 6000 96GB RunPod",
+      "author_reported_epochs": 2,
+      "author_reported_steps": 808
+    }
+  },
+  "availability_checks": {
+    "hf_datasets_list_author_terrorswift": [],
+    "hf_discussions_list_redcell": [],
+    "public_author_models": [
+      "terrorswift/REDCELL-26B-A4B-OSINT-Cyber-APEX-GGUF",
+      "terrorswift/BugTraceAI-Apex-G4-26B-APEX-GGUF"
+    ],
+    "standalone_original_specialist_adapter_in_model_repo": false,
+    "training_corpus_in_model_repo": false,
+    "exact_training_base_revision_found": false,
+    "scope": "Current public model card, repository file listings, author public datasets/models/discussions, web search, and focused local provenance audit. Absence in this search is not proof that no copy exists anywhere."
+  },
+  "conditional_routes": [
+    {
+      "route": "Apply original REDCELL specialist LoRA to compatible Hauhau base",
+      "missing": "Original upstream specialist LoRA and exact base identity",
+      "status": "concept only; no adapter obtained or trial run"
+    },
+    {
+      "route": "Hauhau + (REDCELL - matching vanilla Gemma)",
+      "status": "conditional task-arithmetic hypothesis; not constructed",
+      "limits": [
+        "Exact compatible parent and tensor mapping must be established",
+        "Quantized and reconstructed inputs mix edit differences with quantization and rounding differences",
+        "Preservation of domain capability, behavior and generated-token cost requires independent evaluation"
+      ]
+    },
+    {
+      "route": "Fine-tune Hauhau using original specialist corpus",
+      "missing": "Original corpus and complete training recipe",
+      "status": "concept only; no training launched",
+      "limits": [
+        "Do not assume original author runtime transfers to two RTX3090 GPUs",
+        "Fine-tuning can change both reasoning and refusal behavior",
+        "Current Unsloth Gemma26B MoE guide prefers16-bit/bf16 LoRA; lower-memory training setup would need validation"
+      ]
+    }
+  ],
+  "sources": [
+    "https://huggingface.co/terrorswift/REDCELL-26B-A4B-OSINT-Cyber-APEX-GGUF",
+    "https://huggingface.co/terrorswift/REDCELL-26B-A4B-OSINT-Cyber-APEX-GGUF/tree/main",
+    "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced",
+    "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/tree/main",
+    "https://arxiv.org/abs/2212.04089",
+    "https://unsloth.ai/docs/models/gemma-4/train"
+  ],
+  "local_evidence": [
+    "/home/isnotreal/model-tools/full-round-20261006/gemma-source-receipt.json",
+    "/home/isnotreal/model-tools/full-round-20261006/redcell-source-receipt.json",
+    "/home/isnotreal/models/redcell-abliteration-source-bf16/source-receipt.json",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/removed-checkpoint-metadata/gemma-verified-v1/removal-receipt.json"
+  ],
+  "background_comparison_changed": false,
+  "model_weights_downloaded": false,
+  "publication_or_contact_performed": false
+}

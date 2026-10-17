@@ -1,0 +1,480 @@
+{
+  "status": "completed_bounded_recovery_pilot",
+  "created_utc": "2026-10-16T01:53:12.070990+00:00",
+  "result_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/result.json",
+  "result_sha256": "e7dfbee08e89e9ae19a4ec883392422e8485ffb7dfb9837c8dc2e99d1245cacf",
+  "script_sha256": "6259a1d11b7c811cfb42ca87b553dcbec3e8a5a2b923babb31ed3b98a5e8efeb",
+  "ranges_manifest_sha256": "44eb6a9fc472786d88790e8df05e03ed5645ebdffb8de6ab1025710b94888191",
+  "controls_exact": 5,
+  "target_count": 7,
+  "unchanged_shared_down_layers": [
+    0,
+    1,
+    2
+  ],
+  "edited_shared_down_layers": [
+    25,
+    26,
+    27,
+    28
+  ],
+  "low_rank_weight_edit_recovered": true,
+  "causal_refusal_direction_established": false,
+  "transfer_to_redcell_tested": false,
+  "inference_tested": false,
+  "symmetric_projection_interpretation": "Late sampled matrices are compatible with a nearly symmetric rank-5 shrinkage operator plus rounding/residual error. Eigenvalues are not all one, so this is not evidence of one exact orthogonal projector or a known author recipe.",
+  "precision_interpretation": "All sampled Hauhau F16 values are exactly BF16-representable. This is consistent with a BF16-rounded intermediate, but does not establish the author merge pipeline. Raw BF16 and matched F16 residuals remain separate.",
+  "rows": [
+    {
+      "kind": "control",
+      "tensor": "model.language_model.layers.0.self_attn.q_proj.weight",
+      "exact_equal_after_cast": true,
+      "relative_edit_norm": 0.0,
+      "delta_frobenius_norm": 0.0,
+      "cast_only_frobenius_norm": 9.891032975809752e-07,
+      "cast_only_relative_norm": 9.746458834160782e-09,
+      "bf16_representable_fraction": 1.0,
+      "stable_rank": null,
+      "rank_energy_fraction": null,
+      "split_min_cosine": null,
+      "left_subspace_heldout_right_relative_residual": null,
+      "right_subspace_heldout_left_relative_residual": null,
+      "restricted_operator_fit_relative_residual": null,
+      "restricted_operator_heldout_right_relative_residual": null,
+      "restricted_operator_heldout_left_relative_residual": null,
+      "operator_asymmetry_relative": null,
+      "symmetric_operator_eigenvalues": null,
+      "row_norm_ratio_min_median_max": null
+    },
+    {
+      "kind": "control",
+      "tensor": "model.language_model.layers.0.router.proj.weight",
+      "exact_equal_after_cast": true,
+      "relative_edit_norm": 0.0,
+      "delta_frobenius_norm": 0.0,
+      "cast_only_frobenius_norm": 0.0,
+      "cast_only_relative_norm": 0.0,
+      "bf16_representable_fraction": 1.0,
+      "stable_rank": null,
+      "rank_energy_fraction": null,
+      "split_min_cosine": null,
+      "left_subspace_heldout_right_relative_residual": null,
+      "right_subspace_heldout_left_relative_residual": null,
+      "restricted_operator_fit_relative_residual": null,
+      "restricted_operator_heldout_right_relative_residual": null,
+      "restricted_operator_heldout_left_relative_residual": null,
+      "operator_asymmetry_relative": null,
+      "symmetric_operator_eigenvalues": null,
+      "row_norm_ratio_min_median_max": null
+    },
+    {
+      "kind": "control",
+      "tensor": "model.language_model.layers.0.input_layernorm.weight",
+      "exact_equal_after_cast": true,
+      "relative_edit_norm": 0.0,
+      "delta_frobenius_norm": 0.0,
+      "cast_only_frobenius_norm": 0.0,
+      "cast_only_relative_norm": 0.0,
+      "bf16_representable_fraction": 1.0,
+      "stable_rank": null,
+      "rank_energy_fraction": null,
+      "split_min_cosine": null,
+      "left_subspace_heldout_right_relative_residual": null,
+      "right_subspace_heldout_left_relative_residual": null,
+      "restricted_operator_fit_relative_residual": null,
+      "restricted_operator_heldout_right_relative_residual": null,
+      "restricted_operator_heldout_left_relative_residual": null,
+      "operator_asymmetry_relative": null,
+      "symmetric_operator_eigenvalues": null,
+      "row_norm_ratio_min_median_max": null
+    },
+    {
+      "kind": "control",
+      "tensor": "model.language_model.layers.27.router.proj.weight",
+      "exact_equal_after_cast": true,
+      "relative_edit_norm": 0.0,
+      "delta_frobenius_norm": 0.0,
+      "cast_only_frobenius_norm": 0.0,
+      "cast_only_relative_norm": 0.0,
+      "bf16_representable_fraction": 1.0,
+      "stable_rank": null,
+      "rank_energy_fraction": null,
+      "split_min_cosine": null,
+      "left_subspace_heldout_right_relative_residual": null,
+      "right_subspace_heldout_left_relative_residual": null,
+      "restricted_operator_fit_relative_residual": null,
+      "restricted_operator_heldout_right_relative_residual": null,
+      "restricted_operator_heldout_left_relative_residual": null,
+      "operator_asymmetry_relative": null,
+      "symmetric_operator_eigenvalues": null,
+      "row_norm_ratio_min_median_max": null
+    },
+    {
+      "kind": "control",
+      "tensor": "model.language_model.layers.27.input_layernorm.weight",
+      "exact_equal_after_cast": true,
+      "relative_edit_norm": 0.0,
+      "delta_frobenius_norm": 0.0,
+      "cast_only_frobenius_norm": 0.0,
+      "cast_only_relative_norm": 0.0,
+      "bf16_representable_fraction": 1.0,
+      "stable_rank": null,
+      "rank_energy_fraction": null,
+      "split_min_cosine": null,
+      "left_subspace_heldout_right_relative_residual": null,
+      "right_subspace_heldout_left_relative_residual": null,
+      "restricted_operator_fit_relative_residual": null,
+      "restricted_operator_heldout_right_relative_residual": null,
+      "restricted_operator_heldout_left_relative_residual": null,
+      "operator_asymmetry_relative": null,
+      "symmetric_operator_eigenvalues": null,
+      "row_norm_ratio_min_median_max": null
+    },
+    {
+      "kind": "target",
+      "tensor": "model.language_model.layers.27.mlp.down_proj.weight",
+      "exact_equal_after_cast": false,
+      "relative_edit_norm": 0.03856071217371006,
+      "delta_frobenius_norm": 2.929718816888558,
+      "cast_only_frobenius_norm": 7.338681215030048e-07,
+      "cast_only_relative_norm": 9.659110370459514e-09,
+      "bf16_representable_fraction": 1.0,
+      "stable_rank": 5,
+      "rank_energy_fraction": 0.9961106298249324,
+      "split_min_cosine": 0.9999656697557375,
+      "left_subspace_heldout_right_relative_residual": 0.0633491825761031,
+      "right_subspace_heldout_left_relative_residual": 0.0619651752553386,
+      "restricted_operator_fit_relative_residual": 0.0632002469734942,
+      "restricted_operator_heldout_right_relative_residual": 0.06418709535860682,
+      "restricted_operator_heldout_left_relative_residual": 0.06302291315827636,
+      "operator_asymmetry_relative": 0.0011381958938590673,
+      "symmetric_operator_eigenvalues": [
+        0.6759531408202984,
+        0.7320167538625161,
+        0.7859543664190237,
+        0.8114924797834113,
+        0.9376861613770213
+      ],
+      "row_norm_ratio_min_median_max": [
+        0.9775810410853355,
+        0.9992739739665797,
+        1.0509183271974956
+      ]
+    },
+    {
+      "kind": "target",
+      "tensor": "model.language_model.layers.0.mlp.down_proj.weight",
+      "exact_equal_after_cast": true,
+      "relative_edit_norm": 0.0,
+      "delta_frobenius_norm": 0.0,
+      "cast_only_frobenius_norm": 6.622192914862748e-07,
+      "cast_only_relative_norm": 7.733889094617694e-09,
+      "bf16_representable_fraction": 1.0,
+      "stable_rank": null,
+      "rank_energy_fraction": null,
+      "split_min_cosine": null,
+      "left_subspace_heldout_right_relative_residual": null,
+      "right_subspace_heldout_left_relative_residual": null,
+      "restricted_operator_fit_relative_residual": null,
+      "restricted_operator_heldout_right_relative_residual": null,
+      "restricted_operator_heldout_left_relative_residual": null,
+      "operator_asymmetry_relative": null,
+      "symmetric_operator_eigenvalues": null,
+      "row_norm_ratio_min_median_max": null
+    },
+    {
+      "kind": "target",
+      "tensor": "model.language_model.layers.1.mlp.down_proj.weight",
+      "exact_equal_after_cast": true,
+      "relative_edit_norm": 0.0,
+      "delta_frobenius_norm": 0.0,
+      "cast_only_frobenius_norm": 6.773038729471102e-07,
+      "cast_only_relative_norm": 7.821886808047386e-09,
+      "bf16_representable_fraction": 1.0,
+      "stable_rank": null,
+      "rank_energy_fraction": null,
+      "split_min_cosine": null,
+      "left_subspace_heldout_right_relative_residual": null,
+      "right_subspace_heldout_left_relative_residual": null,
+      "restricted_operator_fit_relative_residual": null,
+      "restricted_operator_heldout_right_relative_residual": null,
+      "restricted_operator_heldout_left_relative_residual": null,
+      "operator_asymmetry_relative": null,
+      "symmetric_operator_eigenvalues": null,
+      "row_norm_ratio_min_median_max": null
+    },
+    {
+      "kind": "target",
+      "tensor": "model.language_model.layers.2.mlp.down_proj.weight",
+      "exact_equal_after_cast": true,
+      "relative_edit_norm": 0.0,
+      "delta_frobenius_norm": 0.0,
+      "cast_only_frobenius_norm": 6.828563169640829e-07,
+      "cast_only_relative_norm": 8.046750642252559e-09,
+      "bf16_representable_fraction": 1.0,
+      "stable_rank": null,
+      "rank_energy_fraction": null,
+      "split_min_cosine": null,
+      "left_subspace_heldout_right_relative_residual": null,
+      "right_subspace_heldout_left_relative_residual": null,
+      "restricted_operator_fit_relative_residual": null,
+      "restricted_operator_heldout_right_relative_residual": null,
+      "restricted_operator_heldout_left_relative_residual": null,
+      "operator_asymmetry_relative": null,
+      "symmetric_operator_eigenvalues": null,
+      "row_norm_ratio_min_median_max": null
+    },
+    {
+      "kind": "target",
+      "tensor": "model.language_model.layers.25.mlp.down_proj.weight",
+      "exact_equal_after_cast": false,
+      "relative_edit_norm": 0.033046652644957014,
+      "delta_frobenius_norm": 2.662089140774521,
+      "cast_only_frobenius_norm": 7.362234662049985e-07,
+      "cast_only_relative_norm": 9.139333760125043e-09,
+      "bf16_representable_fraction": 1.0,
+      "stable_rank": 5,
+      "rank_energy_fraction": 0.9940557792458808,
+      "split_min_cosine": 0.9998994872267404,
+      "left_subspace_heldout_right_relative_residual": 0.07637898377115798,
+      "right_subspace_heldout_left_relative_residual": 0.07845940811077845,
+      "restricted_operator_fit_relative_residual": 0.07812138963702127,
+      "restricted_operator_heldout_right_relative_residual": 0.07759799998026852,
+      "restricted_operator_heldout_left_relative_residual": 0.0795301428181933,
+      "operator_asymmetry_relative": 0.001812060801077486,
+      "symmetric_operator_eigenvalues": [
+        0.4811937020674302,
+        0.7385328026270429,
+        0.7928055307303291,
+        0.8668584284534099,
+        0.9699537320076863
+      ],
+      "row_norm_ratio_min_median_max": [
+        0.9878841264557778,
+        0.9994655607874723,
+        1.030062479374818
+      ]
+    },
+    {
+      "kind": "target",
+      "tensor": "model.language_model.layers.26.mlp.down_proj.weight",
+      "exact_equal_after_cast": false,
+      "relative_edit_norm": 0.0368609124688754,
+      "delta_frobenius_norm": 2.9333478810492783,
+      "cast_only_frobenius_norm": 7.101383584453874e-07,
+      "cast_only_relative_norm": 8.923710699490189e-09,
+      "bf16_representable_fraction": 1.0,
+      "stable_rank": 5,
+      "rank_energy_fraction": 0.9958319801566606,
+      "split_min_cosine": 0.9999632254988485,
+      "left_subspace_heldout_right_relative_residual": 0.06275554283564554,
+      "right_subspace_heldout_left_relative_residual": 0.06705287158511934,
+      "restricted_operator_fit_relative_residual": 0.06530636514155029,
+      "restricted_operator_heldout_right_relative_residual": 0.06364140626927596,
+      "restricted_operator_heldout_left_relative_residual": 0.06792881092178839,
+      "operator_asymmetry_relative": 0.002954160392882858,
+      "symmetric_operator_eigenvalues": [
+        0.6723029427086794,
+        0.7290456077579657,
+        0.8078858856858775,
+        0.8119434083894558,
+        0.9354890683218604
+      ],
+      "row_norm_ratio_min_median_max": [
+        0.9739042816775313,
+        0.9993005084767521,
+        1.0325219700906725
+      ]
+    },
+    {
+      "kind": "target",
+      "tensor": "model.language_model.layers.28.mlp.down_proj.weight",
+      "exact_equal_after_cast": false,
+      "relative_edit_norm": 0.037885054152868455,
+      "delta_frobenius_norm": 3.0619522233646066,
+      "cast_only_frobenius_norm": 7.269484692936221e-07,
+      "cast_only_relative_norm": 8.994419284331949e-09,
+      "bf16_representable_fraction": 1.0,
+      "stable_rank": 5,
+      "rank_energy_fraction": 0.9959109281143832,
+      "split_min_cosine": 0.9999629694033353,
+      "left_subspace_heldout_right_relative_residual": 0.0639931523164933,
+      "right_subspace_heldout_left_relative_residual": 0.06449067180033387,
+      "restricted_operator_fit_relative_residual": 0.06528000251799411,
+      "restricted_operator_heldout_right_relative_residual": 0.06554397454592198,
+      "restricted_operator_heldout_left_relative_residual": 0.06590438284786437,
+      "operator_asymmetry_relative": 0.002825459745035475,
+      "symmetric_operator_eigenvalues": [
+        0.6786150298972007,
+        0.7342964575650396,
+        0.7600387188415393,
+        0.817112925634159,
+        0.9355811113567736
+      ],
+      "row_norm_ratio_min_median_max": [
+        0.9755535930345709,
+        0.9992979065130785,
+        1.0551465933108255
+      ]
+    }
+  ],
+  "resources": {
+    "peak_rss_bytes": 343339008,
+    "current_rss_bytes": 64765952,
+    "current_address_space_bytes": 186830848,
+    "getrusage_peak_rss_including_exec_history_bytes": 343339008,
+    "cpu_user_seconds": 10.76042,
+    "cpu_system_seconds": 2.110593,
+    "elapsed_seconds": 25.849606167990714,
+    "directory_bytes": 218016367,
+    "process_threads": 1,
+    "nice": 15,
+    "address_space_limit_bytes": 1073741824,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    }
+  },
+  "pilot_timing": {
+    "start_utc": "2026-10-16T01:50:59.225180+00:00",
+    "end_utc": "2026-10-16T01:51:25.074530+00:00",
+    "elapsed_seconds": 25.849606167990714,
+    "overlap_caveat": "Observed inference wall times overlapping this single-thread CPU and download interval may include background work; this was not a controlled deployment benchmark."
+  },
+  "raw_range_bytes": 217023488,
+  "postrun_ranges_verified": [
+    {
+      "path": "00-base.bin",
+      "bytes": 23068672,
+      "sha256": "9a5cf6cc22a48095ab37a8f5470d6ece227dd4d12c7397ee83d8a63347e465b7"
+    },
+    {
+      "path": "00-hauhau.bin",
+      "bytes": 23068672,
+      "sha256": "454a0ec9cfc87a970c7b45a136e1a6bf056828511500db24d271dc95893c25f8"
+    },
+    {
+      "path": "01-base.bin",
+      "bytes": 720896,
+      "sha256": "009d5e2ea49f83f6a1faf424b26233adb6ac4b2c54fdd82eb7de162f4fef1be9"
+    },
+    {
+      "path": "01-hauhau.bin",
+      "bytes": 1441792,
+      "sha256": "6aec11960aedabf6e143394fefd847fca51ee0f1320e8fc23dd8f61d24fa9066"
+    },
+    {
+      "path": "02-base.bin",
+      "bytes": 5632,
+      "sha256": "218744f656a797cef91f0f985f9f034c3e9e06c40d3dad26502edd12a811f068"
+    },
+    {
+      "path": "02-hauhau.bin",
+      "bytes": 11264,
+      "sha256": "f56d20377dd018b027b0315a8a02434eb350a4f5976a224fd4c66ba3f996f998"
+    },
+    {
+      "path": "03-base.bin",
+      "bytes": 720896,
+      "sha256": "7f1453fc17d402f0c51cf53f58d74926dbf93ca5a6672d32a2102edeea4fd5ee"
+    },
+    {
+      "path": "03-hauhau.bin",
+      "bytes": 1441792,
+      "sha256": "5da65301d40a1cb37740c878562e82b681bd452f3fed02eb243bb544b85896ac"
+    },
+    {
+      "path": "04-base.bin",
+      "bytes": 5632,
+      "sha256": "44e82397d067cabd4cf7fc6f6491756de9549d15f3eb51abb57c3a317ae8cd07"
+    },
+    {
+      "path": "04-hauhau.bin",
+      "bytes": 11264,
+      "sha256": "a7f0733c1c7db750f7672d976a174c6c1fe76c7922f656441febe27d3db3a609"
+    },
+    {
+      "path": "05-base.bin",
+      "bytes": 11894784,
+      "sha256": "0b885dfcd31f6f3d29877cb656dbb2ca629e52e27ab28c8f0784a0cab18abc86"
+    },
+    {
+      "path": "05-hauhau.bin",
+      "bytes": 11894784,
+      "sha256": "00e99cc1cba699aa46da99c626281427b9ba21e40099df88c1b534d1e8c0c1f6"
+    },
+    {
+      "path": "06-base.bin",
+      "bytes": 11894784,
+      "sha256": "7b5e45c9418ef38c42f23978326a69c247eb319ab66a9cc64f50c36205b60644"
+    },
+    {
+      "path": "06-hauhau.bin",
+      "bytes": 11894784,
+      "sha256": "82ca7908799aa74bde5efade3de4bafd5ba5d122979b2dffc8b7b2a1977d1c91"
+    },
+    {
+      "path": "07-base.bin",
+      "bytes": 11894784,
+      "sha256": "212db6a8b9715ce485f1249a75da3c538155e2c37e25edcb32a80b066940b7fe"
+    },
+    {
+      "path": "07-hauhau.bin",
+      "bytes": 11894784,
+      "sha256": "f17d3dcd4e2a0b31cfaf938d207a89bbbad9f7a3fb00757268c802ff7ef5d971"
+    },
+    {
+      "path": "08-base.bin",
+      "bytes": 11894784,
+      "sha256": "5690a3b18b91949463446e2f0b78e91e9fc4b1503ab3620a05db79d5d3756b81"
+    },
+    {
+      "path": "08-hauhau.bin",
+      "bytes": 11894784,
+      "sha256": "93687b618031e9ed1ced3e4fb50ecfe457e4607d2b622107c93a7337b1c51524"
+    },
+    {
+      "path": "09-base.bin",
+      "bytes": 11894784,
+      "sha256": "93f915b75e543b92d3cc81efd8a9017e6901914761946421c6f001487bce138d"
+    },
+    {
+      "path": "09-hauhau.bin",
+      "bytes": 11894784,
+      "sha256": "803d9462de515e50c326868c8e22f30e620d2a1d4fe75df241271bdf3046d0ae"
+    },
+    {
+      "path": "10-base.bin",
+      "bytes": 11894784,
+      "sha256": "5328a347f2b62794b5ff6687ba94965adda550131a7138b4c0b6d562f6700b2b"
+    },
+    {
+      "path": "10-hauhau.bin",
+      "bytes": 11894784,
+      "sha256": "2d0764c813e363406a3b59ae12f281f50af0ec2bb7ca748162e4c35ac6d0a832"
+    },
+    {
+      "path": "11-base.bin",
+      "bytes": 11894784,
+      "sha256": "f6ab4e78446a1d3a889617b6e074f4709acf7bb2b8bce657fb0d42b03726b5fe"
+    },
+    {
+      "path": "11-hauhau.bin",
+      "bytes": 11894784,
+      "sha256": "aa8e749dc7b88388c218a60f6d9b25563a17c154456be0654417cb8378c238f2"
+    }
+  ],
+  "range_digest_scope": "Each local downloaded range was rehashed and matches its streaming SHA256. Whole remote file digests are pinned metadata from the source audit; no full file was downloaded or independently hashed in this pilot.",
+  "limitations": [
+    "Seven shared-down matrices are a deliberately small edge-layer sample; zero early-layer deltas do not characterize middle layers.",
+    "The output subspace is estimated from edited-minus-base weights. It is not automatically a causal refusal direction after Gemma learned RMSNorms.",
+    "The 95% energy / 0.95 split-cosine rank heuristic is descriptive triage, not a safety, capability, or deployment acceptance test.",
+    "A general left operator is underdetermined for down matrices shaped 2816 by 2112. The saved symmetric-subspace fits test only a restricted family.",
+    "No Q8 tensors, REDCELL transfer, adapter construction, refusal probes, or inference were performed."
+  ],
+  "next_bounded_candidate": "Use same-quantizer null controls before comparing a middle-layer Q8 attention-output matrix and selected expert-down slices; separately test whether operators are shared across modules. Requires root phase approval."
+}

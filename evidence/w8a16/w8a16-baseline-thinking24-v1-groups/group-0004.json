@@ -1,0 +1,794 @@
+{
+  "status": "complete",
+  "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+  "schedule": {
+    "index": 4,
+    "repeat": 1,
+    "case_ids": [
+      "broader-fresh-17-cyclic-order",
+      "broader-fresh-18-rounding-order",
+      "broader-fresh-19-format-pivot",
+      "broader-fresh-20-expired-session"
+    ]
+  },
+  "attempt_id": "1792107888121743754-158804",
+  "invocation_id": "1792107709927049025-158804",
+  "started_at_utc": "2026-10-15T23:44:48.121886+00:00",
+  "partial_outputs_scored": false,
+  "completed_at_utc": "2026-10-15T23:46:29.981881+00:00",
+  "wall_seconds": 101.8601487580163,
+  "records": [
+    {
+      "id": "broader-fresh-17-cyclic-order",
+      "category": "consistency",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "74b07e4165b520158b3207b057bded8228f1e9e158a6dc62ec0c01475e251f03",
+      "prompt_sha256": "2f0b7d1b435aebb6818fa8e35aa5fef5d6bd75f5ce109501adf770c8ef7aaba8",
+      "answer_key_sha256": "aca194bba9344c9a134fae5f5ffe1b7b4405c3487930632195bf044128c41f9d",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 4,
+      "submission_index": 0,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 3,
+      "task_finished_sequence": 21,
+      "answer_text": "INCONSISTENT",
+      "raw_final_text": "INCONSISTENT",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 1320,
+      "raw_final_text_sha256": "10380d715e17334f41d040113c613de7008ad03027bfd54cd28d2566cbbcbf00",
+      "response_attempts": [
+        {
+          "raw_text": "INCONSISTENT",
+          "raw_text_sha256": "10380d715e17334f41d040113c613de7008ad03027bfd54cd28d2566cbbcbf00",
+          "thinking_text": "*   Claim 1: A < B (A comes before B)\n    *   Claim 2: B < C (B comes before C)\n    *   Claim 3: C < A (C comes before A)\n\n    *   A valid order must place each item (A, B, C) exactly once.\n    *   Possible permutations of {A, B, C}:\n        1.  (A, B, C)\n        2.  (A, C, B)\n        3.  (B, A, C)\n        4.  (B, C, A)\n        5.  (C, A, B)\n        6.  (C, B, A)\n\n    *   Claim 1 (A < B):\n        1.  (A, B, C) - Yes\n        2.  (A, C, B) - Yes\n        3.  (B, A, C) - No\n        4.  (B, C, A) - No\n        5.  (C, A, B) - Yes\n        6.  (C, B, A) - No\n\n    *   Claim 2 (B < C):\n        1.  (A, B, C) - Yes\n        2.  (A, C, B) - No\n        5.  (C, A, B) - No\n\n    *   Claim 3 (C < A):\n        1.  (A, B, C) - No\n\n    *   Claim 1: A < B\n    *   Claim 2: B < C\n    *   Claim 3: C < A\n    *   Combining 1 and 2: A < B < C.\n    *   Adding 3: A < B < C < A.\n    *   This implies A < A, which is impossible in a strict ordering.\n\n    *   The claims are: A < B, B < C, C < A.\n    *   This forms a cycle: A -> B -> C -> A.\n    *   In a strict ordering (a total order), there can be no cycles.\n    *   Therefore, no valid order exists.\n\n    *   The prompt asks to reply \"CONSISTENT\" if any valid order satisfies every claim; otherwise reply \"INCONSISTENT\".\n    *   Since no valid order exists, the answer is \"INCONSISTENT\".",
+          "thinking_text_sha256": "64b63acffa1410e25d84ef374f675cac0bf47e4689c9f06492061c08ca40a764",
+          "thinking_characters": 1320,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Claim 1: A < B (A comes before B)\n    *   Claim 2: B < C (B comes before C)\n    *   Claim 3: C < A (C comes before A)\n\n    *   A valid order must place each item (A, B, C) exactly once.\n    *   Possible permutations of {A, B, C}:\n        1.  (A, B, C)\n        2.  (A, C, B)\n        3.  (B, A, C)\n        4.  (B, C, A)\n        5.  (C, A, B)\n        6.  (C, B, A)\n\n    *   Claim 1 (A < B):\n        1.  (A, B, C) - Yes\n        2.  (A, C, B) - Yes\n        3.  (B, A, C) - No\n        4.  (B, C, A) - No\n        5.  (C, A, B) - Yes\n        6.  (C, B, A) - No\n\n    *   Claim 2 (B < C):\n        1.  (A, B, C) - Yes\n        2.  (A, C, B) - No\n        5.  (C, A, B) - No\n\n    *   Claim 3 (C < A):\n        1.  (A, B, C) - No\n\n    *   Claim 1: A < B\n    *   Claim 2: B < C\n    *   Claim 3: C < A\n    *   Combining 1 and 2: A < B < C.\n    *   Adding 3: A < B < C < A.\n    *   This implies A < A, which is impossible in a strict ordering.\n\n    *   The claims are: A < B, B < C, C < A.\n    *   This forms a cycle: A -> B -> C -> A.\n    *   In a strict ordering (a total order), there can be no cycles.\n    *   Therefore, no valid order exists.\n\n    *   The prompt asks to reply \"CONSISTENT\" if any valid order satisfies every claim; otherwise reply \"INCONSISTENT\".\n    *   Since no valid order exists, the answer is \"INCONSISTENT\".",
+              "signature": "41a154e684fd4c19badb6922bcb67277"
+            },
+            {
+              "type": "text",
+              "text": "INCONSISTENT"
+            }
+          ],
+          "native_content_blocks_sha256": "e9004578fc068173083305bf3484eea12976d12d6666a1f52e73f3614dfc0d58",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 81,
+            "output_tokens": 541
+          },
+          "native_request_seconds": 36.55766477601719,
+          "started_sequence": 15,
+          "finished_sequence": 20
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.016829156986204907,
+          "started_sequence": 7,
+          "finished_sequence": 11
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 36.55766477601719,
+          "started_sequence": 15,
+          "finished_sequence": 20
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 541,
+          "input_tokens": 81,
+          "stop_reason": "end_turn",
+          "response_sha256": "10380d715e17334f41d040113c613de7008ad03027bfd54cd28d2566cbbcbf00",
+          "visible_characters": 12,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 36.596675726992544
+        }
+      ],
+      "counted_input_tokens": 81,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8047,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "10380d715e17334f41d040113c613de7008ad03027bfd54cd28d2566cbbcbf00",
+      "output_tokens": 541,
+      "total_output_tokens_including_retries": 541,
+      "generation_seconds_including_retries": 36.596675726992544,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:45:24.854767+00:00",
+      "record_sha256": "4b35975d99bf1e4e015ed165a06af89cee0acf8e9ad120a7b977a90ec18ecd43"
+    },
+    {
+      "id": "broader-fresh-18-rounding-order",
+      "category": "consistency",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "68b037cfa29aab288628c75209180b17260f6fb30f1ae9b2c676728209287d00",
+      "prompt_sha256": "77c58ce95cbccd15ce2da9898826fe51e686a4a1f565981bd5890e5a4e090880",
+      "answer_key_sha256": "b5b1d4889ecf7ba9a6c6c0fed759e059963b8f6214599aa11fceab0a148e80fe",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 4,
+      "submission_index": 1,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 0,
+      "task_finished_sequence": 23,
+      "answer_text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.0,\n  \"equal\": false\n}\n```",
+      "raw_final_text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.0,\n  \"equal\": false\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 3687,
+      "raw_final_text_sha256": "39ef435d5ebb4c0ed90fe9a8986ac8c2f728c41f093c5237f6aeed3e68137ab3",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.0,\n  \"equal\": false\n}\n```",
+          "raw_text_sha256": "39ef435d5ebb4c0ed90fe9a8986ac8c2f728c41f093c5237f6aeed3e68137ab3",
+          "thinking_text": "*   Item cost: $0.03 each.\n    *   Quantity: 2 items.\n    *   Tax rate: 10%.\n    *   Rounding rule: Round to the nearest cent, half-cent ties round up.\n\n    *   Combined price = $0.03 + $0.03 = $0.06.\n    *   Tax on combined price = $0.06 * 0.10 = $0.006.\n    *   Rounding $0.006 to the nearest cent:\n        *   The value is 0.6 cents.\n        *   The nearest cent is $0.01.\n        *   Wait, let's look at the cents. $0.006 is 0.6 cents.\n        *   Rounding 0.6 cents to the nearest whole cent: 1 cent.\n        *   So, Method A tax = $0.01.\n\n    *   Tax on one item = $0.03 * 0.10 = $0.003.\n    *   Rounding $0.003 to the nearest cent:\n        *   The value is 0.3 cents.\n        *   The nearest cent is $0.00.\n        *   So, tax per item = $0.00.\n    *   Total tax = $0.00 + $0.00 = $0.00.\n\n    *   Method A: $0.01\n    *   Method B: $0.00\n    *   Are they equal? No (False).\n\n    *   `method_A`: 0.01\n    *   `method_B`: 0.00\n    *   `equal`: false\n\n    *   Item 1: $0.03. Tax = 0.003. Round(0.003) = 0.00.\n    *   Item 2: $0.03. Tax = 0.003. Round(0.003) = 0.00.\n    *   Method B = 0.00 + 0.00 = 0.00.\n    *   Combined: $0.06. Tax = 0.006. Round(0.006) = 0.01.\n    *   Method A = 0.01.\n    *   0.01 != 0.00.\n\n    *   \"Return only JSON with method_A and method_B as the tax amounts in dollars only, excluding the item prices, and equal as a Boolean.\"\n\n    ```json\n    {\n      \"method_A\": 0.01,\n      \"method_B\": 0.00,\n      \"equal\": false\n    }\n    ```\n\n    *   \"Two items each cost $0.03.\" -> Correct.\n    *   \"10% tax\" -> Correct.\n    *   \"rounded to the nearest cent, with exact half-cent ties rounding up\" -> Correct.\n    *   \"Method A taxes their combined price and rounds once.\" -> $0.06 * 0.1 = $0.006 -> $0.01.\n    *   \"Method B rounds each item tax, then adds the rounded taxes.\" -> $0.03 * 0.1 = $0.003 -> $0.00. $0.00 + $0.00 = $0.00.\n    *   \"Return only JSON with method_A and method_B as the tax amounts in dollars only, excluding the item prices, and equal as a Boolean.\" -> Correct.\n\n    Wait, let me double check the rounding of 0.006.\n    0.006 dollars is 0.6 cents.\n    Rounding 0.6 cents to the nearest cent:\n    0.5 cents is the tie-breaker.\n    0.6 is greater than 0.5, so it rounds up to 1 cent ($0.01).\n    Correct.\n\n    Let me double check the rounding of 0.003.\n    0.003 dollars is 0.3 cents.\n    Rounding 0.3 cents to the nearest cent:\n    0.3 is less than 0.5, so it rounds down to 0 cents ($0.00).\n    Correct.\n\n    Result:\n    A: 0.01\n    B: 0.00\n    Equal: false\n\n    Wait, should the numbers be strings or floats? The prompt says \"as the tax amounts in dollars only\". Usually, JSON numbers are fine.\n\n    One more check:\n    Method A: (0.03 + 0.03) * 0.10 = 0.006. Round(0.006) = 0.01.\n    Method B: Round(0.03 * 0.10) + Round(0.03 * 0.10) = Round(0.003) + Round(0.003) = 0.00 + 0.00 = 0.00.\n\n    Is there any ambiguity in \"tax amounts in dollars only\"?\n    $0.01 is 0.01 dollars.\n    $0.00 is 0.00 dollars.\n\n    Final JSON structure:\n    {\n      \"method_A\": 0.01,\n      \"method_B\": 0.0,\n      \"equal\": false\n    }\n    (Using 0.0 or 0.00 is fine in JSON).\n\n    Wait, let me re-read: \"Return only JSON with method_A and method_B as the tax amounts in dollars only, excluding the item prices, and equal as a Boolean.\"\n    The wording \"and equal as a Boolean\" is slightly ambiguous. Does it mean \"and a key 'equal' which is a Boolean\"? Yes, that's the standard interpretation for these types of prompts.\n\n    Let's check the math one more time.\n    0.03 * 0.1 = 0.003.\n    0.003 is 0.3 cents.\n    Nearest cent to 0.3 cents is 0 cents.\n    0.06 * 0.1 = 0.006.\n    0.006 is 0.6 cents.\n    Nearest cent to 0.6 cents is 1 cent.\n\n    Everything seems solid.",
+          "thinking_text_sha256": "5604b3b75e46052b7f30594c5d66bd5cbec244d3f2684f0a7a134faa0cfff44d",
+          "thinking_characters": 3687,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Item cost: $0.03 each.\n    *   Quantity: 2 items.\n    *   Tax rate: 10%.\n    *   Rounding rule: Round to the nearest cent, half-cent ties round up.\n\n    *   Combined price = $0.03 + $0.03 = $0.06.\n    *   Tax on combined price = $0.06 * 0.10 = $0.006.\n    *   Rounding $0.006 to the nearest cent:\n        *   The value is 0.6 cents.\n        *   The nearest cent is $0.01.\n        *   Wait, let's look at the cents. $0.006 is 0.6 cents.\n        *   Rounding 0.6 cents to the nearest whole cent: 1 cent.\n        *   So, Method A tax = $0.01.\n\n    *   Tax on one item = $0.03 * 0.10 = $0.003.\n    *   Rounding $0.003 to the nearest cent:\n        *   The value is 0.3 cents.\n        *   The nearest cent is $0.00.\n        *   So, tax per item = $0.00.\n    *   Total tax = $0.00 + $0.00 = $0.00.\n\n    *   Method A: $0.01\n    *   Method B: $0.00\n    *   Are they equal? No (False).\n\n    *   `method_A`: 0.01\n    *   `method_B`: 0.00\n    *   `equal`: false\n\n    *   Item 1: $0.03. Tax = 0.003. Round(0.003) = 0.00.\n    *   Item 2: $0.03. Tax = 0.003. Round(0.003) = 0.00.\n    *   Method B = 0.00 + 0.00 = 0.00.\n    *   Combined: $0.06. Tax = 0.006. Round(0.006) = 0.01.\n    *   Method A = 0.01.\n    *   0.01 != 0.00.\n\n    *   \"Return only JSON with method_A and method_B as the tax amounts in dollars only, excluding the item prices, and equal as a Boolean.\"\n\n    ```json\n    {\n      \"method_A\": 0.01,\n      \"method_B\": 0.00,\n      \"equal\": false\n    }\n    ```\n\n    *   \"Two items each cost $0.03.\" -> Correct.\n    *   \"10% tax\" -> Correct.\n    *   \"rounded to the nearest cent, with exact half-cent ties rounding up\" -> Correct.\n    *   \"Method A taxes their combined price and rounds once.\" -> $0.06 * 0.1 = $0.006 -> $0.01.\n    *   \"Method B rounds each item tax, then adds the rounded taxes.\" -> $0.03 * 0.1 = $0.003 -> $0.00. $0.00 + $0.00 = $0.00.\n    *   \"Return only JSON with method_A and method_B as the tax amounts in dollars only, excluding the item prices, and equal as a Boolean.\" -> Correct.\n\n    Wait, let me double check the rounding of 0.006.\n    0.006 dollars is 0.6 cents.\n    Rounding 0.6 cents to the nearest cent:\n    0.5 cents is the tie-breaker.\n    0.6 is greater than 0.5, so it rounds up to 1 cent ($0.01).\n    Correct.\n\n    Let me double check the rounding of 0.003.\n    0.003 dollars is 0.3 cents.\n    Rounding 0.3 cents to the nearest cent:\n    0.3 is less than 0.5, so it rounds down to 0 cents ($0.00).\n    Correct.\n\n    Result:\n    A: 0.01\n    B: 0.00\n    Equal: false\n\n    Wait, should the numbers be strings or floats? The prompt says \"as the tax amounts in dollars only\". Usually, JSON numbers are fine.\n\n    One more check:\n    Method A: (0.03 + 0.03) * 0.10 = 0.006. Round(0.006) = 0.01.\n    Method B: Round(0.03 * 0.10) + Round(0.03 * 0.10) = Round(0.003) + Round(0.003) = 0.00 + 0.00 = 0.00.\n\n    Is there any ambiguity in \"tax amounts in dollars only\"?\n    $0.01 is 0.01 dollars.\n    $0.00 is 0.00 dollars.\n\n    Final JSON structure:\n    {\n      \"method_A\": 0.01,\n      \"method_B\": 0.0,\n      \"equal\": false\n    }\n    (Using 0.0 or 0.00 is fine in JSON).\n\n    Wait, let me re-read: \"Return only JSON with method_A and method_B as the tax amounts in dollars only, excluding the item prices, and equal as a Boolean.\"\n    The wording \"and equal as a Boolean\" is slightly ambiguous. Does it mean \"and a key 'equal' which is a Boolean\"? Yes, that's the standard interpretation for these types of prompts.\n\n    Let's check the math one more time.\n    0.03 * 0.1 = 0.003.\n    0.003 is 0.3 cents.\n    Nearest cent to 0.3 cents is 0 cents.\n    0.06 * 0.1 = 0.006.\n    0.006 is 0.6 cents.\n    Nearest cent to 0.6 cents is 1 cent.\n\n    Everything seems solid.",
+              "signature": "aeb475e40efc4610ac646de668f2bf87"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.0,\n  \"equal\": false\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "b0fdbea721917f9590d4b4f34552d49ff80d6020eee513fef534c1a0f5f759b1",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 114,
+            "output_tokens": 1526
+          },
+          "native_request_seconds": 101.65762097900733,
+          "started_sequence": 14,
+          "finished_sequence": 22
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.015757298009702936,
+          "started_sequence": 5,
+          "finished_sequence": 9
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 101.65762097900733,
+          "started_sequence": 14,
+          "finished_sequence": 22
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 1526,
+          "input_tokens": 114,
+          "stop_reason": "end_turn",
+          "response_sha256": "39ef435d5ebb4c0ed90fe9a8986ac8c2f728c41f093c5237f6aeed3e68137ab3",
+          "visible_characters": 71,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 101.69771783897886
+        }
+      ],
+      "counted_input_tokens": 114,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8014,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "39ef435d5ebb4c0ed90fe9a8986ac8c2f728c41f093c5237f6aeed3e68137ab3",
+      "output_tokens": 1526,
+      "total_output_tokens_including_retries": 1526,
+      "generation_seconds_including_retries": 101.69771783897886,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:46:29.949611+00:00",
+      "record_sha256": "4bb9bb7d08f7b071482e56ee4b07b71d749a4b6a3fc5b7f1e0d49d6bb714c7a2"
+    },
+    {
+      "id": "broader-fresh-19-format-pivot",
+      "category": "recovery",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "721e7c32ba553eb16a7a86cba178c8ea364c39f9028c8d1114f1f867ea621b0e",
+      "prompt_sha256": "b92c3658657df7f185a30ead85e66d7a78d6075a9897991d3d3ca6f224aa096e",
+      "answer_key_sha256": "05b422bc77ed867bfef6f804199aeff410b1eac6da273790f399ff9e0460ed02",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 4,
+      "submission_index": 2,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 2,
+      "task_finished_sequence": 17,
+      "answer_text": "parse_csv",
+      "raw_final_text": "parse_csv",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 528,
+      "raw_final_text_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+      "response_attempts": [
+        {
+          "raw_text": "parse_csv",
+          "raw_text_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+          "thinking_text": "*   Action: `parse_json` was called twice.\n    *   Result: `unsupported_format` both times.\n    *   Input Content-Type: `text/csv`.\n    *   Tool Mapping:\n        *   `application/json` $\\rightarrow$ `parse_json`\n        *   `text/csv` $\\rightarrow$ `parse_csv`\n    *   Goal: Select the next tool based on the actual Content-Type.\n\n    *   The actual Content-Type is `text/csv`.\n    *   According to the tool guide, `text/csv` maps to `parse_csv`.\n\n    *   The user requested \"Reply with the tool name only.\"\n\n    *   `parse_csv`",
+          "thinking_text_sha256": "a1342e1e70f15dc514325bf1957afaba4b93d2dd3fe9f6313dceda60afff387a",
+          "thinking_characters": 528,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Action: `parse_json` was called twice.\n    *   Result: `unsupported_format` both times.\n    *   Input Content-Type: `text/csv`.\n    *   Tool Mapping:\n        *   `application/json` $\\rightarrow$ `parse_json`\n        *   `text/csv` $\\rightarrow$ `parse_csv`\n    *   Goal: Select the next tool based on the actual Content-Type.\n\n    *   The actual Content-Type is `text/csv`.\n    *   According to the tool guide, `text/csv` maps to `parse_csv`.\n\n    *   The user requested \"Reply with the tool name only.\"\n\n    *   `parse_csv`",
+              "signature": "902eb024c38f4925b8f69ffecd460dcd"
+            },
+            {
+              "type": "text",
+              "text": "parse_csv"
+            }
+          ],
+          "native_content_blocks_sha256": "bfb1d1af11082dad3693d0c7775c08c3941030bdeec8b0a080442e28495c776b",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 96,
+            "output_tokens": 170
+          },
+          "native_request_seconds": 11.702742427005433,
+          "started_sequence": 12,
+          "finished_sequence": 16
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.016533031011931598,
+          "started_sequence": 6,
+          "finished_sequence": 10
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 11.702742427005433,
+          "started_sequence": 12,
+          "finished_sequence": 16
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 170,
+          "input_tokens": 96,
+          "stop_reason": "end_turn",
+          "response_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+          "visible_characters": 9,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 11.724754683003994
+        }
+      ],
+      "counted_input_tokens": 96,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8032,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+      "output_tokens": 170,
+      "total_output_tokens_including_retries": 170,
+      "generation_seconds_including_retries": 11.724754683003994,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:44:59.978001+00:00",
+      "record_sha256": "d2bafb1e44323e20ab146d749774513ef3c4be40a795e2787f2046620f6702ce"
+    },
+    {
+      "id": "broader-fresh-20-expired-session",
+      "category": "recovery",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "92703b884b2b3378aeec91b9bb5212fcf9e7d3ca5725662f9c9d9f708d0dd28b",
+      "prompt_sha256": "45bdd796f4bf537442a2fe2532cc3fea06368f034cc9079b3a09e385619f4feb",
+      "answer_key_sha256": "7ce0d0d026e5d42e4f8faa6a09f9fdb3f5a69d0e853651e1cbfb642c42d2a826",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 4,
+      "submission_index": 3,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 1,
+      "task_finished_sequence": 19,
+      "answer_text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```",
+      "raw_final_text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 484,
+      "raw_final_text_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```",
+          "raw_text_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+          "thinking_text": "*   Error: `session_expired`\n    *   Session ID: `s82`\n    *   Instruction from API guide: Call `refresh_session` with the same `session_id` before repeating the read.\n    *   Goal: Return a JSON object with `name` and `arguments` for the next call.\n\n    *   Function name: `refresh_session`\n    *   Arguments: `session_id=\"s82\"`\n\n    *   `{\"name\": \"refresh_session\", \"arguments\": {\"session_id\": \"s82\"}}`\n\n    *   \"Return only a JSON object with name and arguments for the next call.\"",
+          "thinking_text_sha256": "322c51d2b629bf7cab9777f3fb515c532ccc7b2d58364951e46b0808f791d2c7",
+          "thinking_characters": 484,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Error: `session_expired`\n    *   Session ID: `s82`\n    *   Instruction from API guide: Call `refresh_session` with the same `session_id` before repeating the read.\n    *   Goal: Return a JSON object with `name` and `arguments` for the next call.\n\n    *   Function name: `refresh_session`\n    *   Arguments: `session_id=\"s82\"`\n\n    *   `{\"name\": \"refresh_session\", \"arguments\": {\"session_id\": \"s82\"}}`\n\n    *   \"Return only a JSON object with name and arguments for the next call.\"",
+              "signature": "510196c62bca4449a43a3bb46575f843"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "7e3e7514b83441714592dafeb05e4da6f17488998aa840d56aa44e8bd522e1c2",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 84,
+            "output_tokens": 189
+          },
+          "native_request_seconds": 13.167848697979935,
+          "started_sequence": 13,
+          "finished_sequence": 18
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.017538157000672072,
+          "started_sequence": 4,
+          "finished_sequence": 8
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 13.167848697979935,
+          "started_sequence": 13,
+          "finished_sequence": 18
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 189,
+          "input_tokens": 84,
+          "stop_reason": "end_turn",
+          "response_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+          "visible_characters": 89,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 13.212068944994826
+        }
+      ],
+      "counted_input_tokens": 84,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8044,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+      "output_tokens": 189,
+      "total_output_tokens_including_retries": 189,
+      "generation_seconds_including_retries": 13.212068944994826,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:45:01.456802+00:00",
+      "record_sha256": "89c7955d4e4e1d8940841f16276c44bf2aa2b8bf370e9ce99943457a13774403"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:48.173557+00:00",
+      "group_elapsed_seconds": 0.048910518002230674,
+      "group_index": 4,
+      "submission_index": 1
+    },
+    {
+      "sequence": 1,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:48.188148+00:00",
+      "group_elapsed_seconds": 0.06349818300805055,
+      "group_index": 4,
+      "submission_index": 3
+    },
+    {
+      "sequence": 2,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:48.188566+00:00",
+      "group_elapsed_seconds": 0.06392191600752994,
+      "group_index": 4,
+      "submission_index": 2
+    },
+    {
+      "sequence": 3,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:48.189141+00:00",
+      "group_elapsed_seconds": 0.06449668799177743,
+      "group_index": 4,
+      "submission_index": 0
+    },
+    {
+      "sequence": 4,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:48.210831+00:00",
+      "group_elapsed_seconds": 0.0861879310104996,
+      "group_index": 4,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 5,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:48.215456+00:00",
+      "group_elapsed_seconds": 0.09080218101735227,
+      "group_index": 4,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 6,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:48.217031+00:00",
+      "group_elapsed_seconds": 0.09237922600004822,
+      "group_index": 4,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 7,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:48.218462+00:00",
+      "group_elapsed_seconds": 0.09380875699571334,
+      "group_index": 4,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 8,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:48.228396+00:00",
+      "group_elapsed_seconds": 0.10374249701271765,
+      "group_index": 4,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 4
+    },
+    {
+      "sequence": 9,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:48.231229+00:00",
+      "group_elapsed_seconds": 0.10657746600918472,
+      "group_index": 4,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 5
+    },
+    {
+      "sequence": 10,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:48.233585+00:00",
+      "group_elapsed_seconds": 0.10893830799614079,
+      "group_index": 4,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 6
+    },
+    {
+      "sequence": 11,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:48.235307+00:00",
+      "group_elapsed_seconds": 0.1106554750003852,
+      "group_index": 4,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 7
+    },
+    {
+      "sequence": 12,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:48.262828+00:00",
+      "group_elapsed_seconds": 0.13817443899461068,
+      "group_index": 4,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 13,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:48.267562+00:00",
+      "group_elapsed_seconds": 0.14290920199709944,
+      "group_index": 4,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 14,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:48.267935+00:00",
+      "group_elapsed_seconds": 0.1432797170127742,
+      "group_index": 4,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 15,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:48.272035+00:00",
+      "group_elapsed_seconds": 0.14737954500014894,
+      "group_index": 4,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 16,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:59.965588+00:00",
+      "group_elapsed_seconds": 11.840941266011214,
+      "group_index": 4,
+      "route": "/v1/messages",
+      "start_sequence": 12
+    },
+    {
+      "sequence": 17,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:44:59.978001+00:00",
+      "group_elapsed_seconds": 11.853352249017917,
+      "group_index": 4,
+      "submission_index": 2
+    },
+    {
+      "sequence": 18,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:45:01.435434+00:00",
+      "group_elapsed_seconds": 13.310792339994805,
+      "group_index": 4,
+      "route": "/v1/messages",
+      "start_sequence": 13
+    },
+    {
+      "sequence": 19,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:45:01.456802+00:00",
+      "group_elapsed_seconds": 13.33215303599718,
+      "group_index": 4,
+      "submission_index": 3
+    },
+    {
+      "sequence": 20,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:45:24.829719+00:00",
+      "group_elapsed_seconds": 36.70507691000239,
+      "group_index": 4,
+      "route": "/v1/messages",
+      "start_sequence": 15
+    },
+    {
+      "sequence": 21,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:45:24.854767+00:00",
+      "group_elapsed_seconds": 36.73011720101931,
+      "group_index": 4,
+      "submission_index": 0
+    },
+    {
+      "sequence": 22,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:46:29.925576+00:00",
+      "group_elapsed_seconds": 101.80093355401186,
+      "group_index": 4,
+      "route": "/v1/messages",
+      "start_sequence": 14
+    },
+    {
+      "sequence": 23,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:46:29.949611+00:00",
+      "group_elapsed_seconds": 101.82495953299804,
+      "group_index": 4,
+      "submission_index": 1
+    }
+  ],
+  "submission_order": [
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-18-rounding-order",
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-20-expired-session"
+  ],
+  "client_task_start_order": [
+    "broader-fresh-18-rounding-order",
+    "broader-fresh-20-expired-session",
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-17-cyclic-order"
+  ],
+  "client_task_finish_order": [
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-20-expired-session",
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-18-rounding-order"
+  ],
+  "observed_future_completion_order": [
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-20-expired-session",
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-18-rounding-order"
+  ],
+  "ordering_scope": "Sequences and elapsed times are local to this group. Client submission, task, and HTTP dispatch/completion order are recorded; GPU scheduler order is not observed.",
+  "group_sha256": "0f490ca554f44742eb2a9a23f3aa1640bd587ef0d6a668aeba6ac58a8e6b4e65"
+}

@@ -1,0 +1,262 @@
+{
+  "configuration_fingerprint": "4143365d3d8ab74a58e7b290caf6181c3f3fe70fdca5a21100cccf14efc6cdb6",
+  "configuration": {
+    "version": 1,
+    "model_id": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+    "checkpoint": {
+      "path": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+      "files": {
+        "config.json": {
+          "sha256": "bdd77ab53a226918ed1ac2725729c56fa13ddeba2492bc7a27f53a32aa24d0be"
+        },
+        "generation_config.json": {
+          "sha256": "d4226bbe3117d2d253ba4609720ba82c6c4ce4627a9a6ae05387c78983ac03de"
+        },
+        "chat_template.jinja": {
+          "sha256": "ae53464bf3be25802b3a5b37def7fd89667067d7577049b3b2d74c4d8de4c6d4"
+        },
+        "tokenizer_config.json": {
+          "sha256": "9f4fec4b1dc6ecddf8f4a92e9caea5971c0e67d81309f3f9066a2bee8c362633"
+        },
+        "model.safetensors.index.json": {
+          "sha256": "01adf6facae2403c2e0b02d225897535610554b1e5ad52232b66218c2d7a7e15"
+        },
+        "conversion-receipt.json": {
+          "sha256": "1fc3fb351e6f56a3dd39cd594ad55435539024bd28edd298a43f32a73e7af03b"
+        }
+      },
+      "shards": {
+        "model-00000.safetensors": {
+          "bytes": 1800839520,
+          "mtime_ns": 1792106041607621309
+        },
+        "model-00001.safetensors": {
+          "bytes": 1800522420,
+          "mtime_ns": 1792106075568272900
+        },
+        "model-00002.safetensors": {
+          "bytes": 1800337636,
+          "mtime_ns": 1792106101504006458
+        },
+        "model-00003.safetensors": {
+          "bytes": 1800524332,
+          "mtime_ns": 1792106128740726329
+        },
+        "model-00004.safetensors": {
+          "bytes": 1800524324,
+          "mtime_ns": 1792106161789386008
+        },
+        "model-00005.safetensors": {
+          "bytes": 1802055678,
+          "mtime_ns": 1792106188477110875
+        },
+        "model-00006.safetensors": {
+          "bytes": 1800523308,
+          "mtime_ns": 1792106223338751075
+        },
+        "model-00007.safetensors": {
+          "bytes": 1800524516,
+          "mtime_ns": 1792106250661468786
+        },
+        "model-00008.safetensors": {
+          "bytes": 1800337052,
+          "mtime_ns": 1792106280089164472
+        },
+        "model-00009.safetensors": {
+          "bytes": 1800524332,
+          "mtime_ns": 1792106315082802250
+        },
+        "model-00010.safetensors": {
+          "bytes": 1800524364,
+          "mtime_ns": 1792106343063512362
+        },
+        "model-00011.safetensors": {
+          "bytes": 1802054446,
+          "mtime_ns": 1792106369320240138
+        },
+        "model-00012.safetensors": {
+          "bytes": 1800335428,
+          "mtime_ns": 1792106404528874820
+        },
+        "model-00013.safetensors": {
+          "bytes": 1800521836,
+          "mtime_ns": 1792106432512584249
+        },
+        "model-00014.safetensors": {
+          "bytes": 1802046140,
+          "mtime_ns": 1792106463329185847
+        },
+        "model-00015.safetensors": {
+          "bytes": 505797976,
+          "mtime_ns": 1792106471710064010
+        },
+        "vision.safetensors": {
+          "bytes": 1145638208,
+          "mtime_ns": 1791342072579751196
+        }
+      },
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c"
+    },
+    "adapter": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/nf4-direction-w8-weight-strength-1.0-vllm-v1",
+      "base_checkpoint_path": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+      "files": {
+        "adapter_config.json": {
+          "sha256": "8f404726dab2bbd3ddbe99630a37ed3ded557ab077659c556f03e0ec36804891",
+          "bytes": 674069,
+          "mtime_ns": 1792108722097683869,
+          "device": 66306,
+          "inode": 16799555
+        },
+        "adapter_model.safetensors": {
+          "sha256": "d9e1cc5bb190673c80380f38258576b3b1dec0d7d93d36e38c2533ba36a9b7cb",
+          "bytes": 494660296,
+          "mtime_ns": 1792108721475689868,
+          "device": 66306,
+          "inode": 16799548
+        }
+      }
+    },
+    "precision": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/precision-manifest-v1.json",
+      "sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "canonical_fingerprint": "fcfbd683bfa41a79d7c5285fa9e354dc7ff81982f245e75fefb90bc2990038b3",
+      "manifest": {
+        "schema_version": 1,
+        "expected_base_checkpoint": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "config_sha256": "bdd77ab53a226918ed1ac2725729c56fa13ddeba2492bc7a27f53a32aa24d0be",
+        "index_sha256": "01adf6facae2403c2e0b02d225897535610554b1e5ad52232b66218c2d7a7e15",
+        "conversion_receipt_sha256": "1fc3fb351e6f56a3dd39cd594ad55435539024bd28edd298a43f32a73e7af03b",
+        "weight_bits": 8,
+        "activation_dtype": "bfloat16",
+        "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+        "quantization_backend": "compressed-tensors",
+        "backend_label": "compressed-tensors / Marlin W8A16 group32",
+        "quantization_configs": {
+          "root": {
+            "config_groups": {
+              "config_group_0": {
+                "format": "pack-quantized",
+                "input_activations": null,
+                "output_activations": null,
+                "targets": [
+                  "Linear"
+                ],
+                "weights": {
+                  "actorder": null,
+                  "block_structure": null,
+                  "dynamic": false,
+                  "group_size": 32,
+                  "num_bits": 8,
+                  "observer": "memoryless_minmax",
+                  "observer_kwargs": {},
+                  "scale_dtype": null,
+                  "strategy": "group",
+                  "symmetric": true,
+                  "type": "int",
+                  "zp_dtype": null
+                }
+              }
+            },
+            "format": "pack-quantized",
+            "global_compression_ratio": null,
+            "ignore": [
+              "lm_head",
+              "re:.*embed.*",
+              "re:.*vision.*",
+              "re:.*router.*",
+              "re:.*\\.gate$",
+              "re:.*norm.*"
+            ],
+            "kv_cache_scheme": null,
+            "quant_method": "compressed-tensors",
+            "quantization_status": "compressed",
+            "transform_config": {},
+            "version": "0.17.1"
+          }
+        }
+      },
+      "quality_reference": "untouched W8A16 baseline; BF16 source is conversion input only",
+      "attestation_scope": "Binds checkpoint configuration and supplied launch record. Does not independently inspect live kernel arithmetic or all inherited server environment variables."
+    },
+    "launch_profile": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/launch-v1.json",
+      "sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "canonical_fingerprint": "ff56fd03d3769ad5baffd5fefb1588c11ac33042a296c6542adf409e613a79d9",
+      "base_model_ids": [
+        "qwen3.6-35b-hauhau-w4a16-vision"
+      ],
+      "quantization_backend": "compressed-tensors",
+      "forbidden_activation_environment": [
+        "VLLM_MARLIN_INPUT_DTYPE",
+        "VLLM_HUMMING_INPUT_QUANT_CONFIG",
+        "VLLM_HUMMING_ONLINE_QUANT_CONFIG"
+      ],
+      "attestation_scope": "Supplied launch record is hashed; endpoint checks validate roots and context, not the full running command/environment or kernel precision."
+    },
+    "served_identity": {
+      "requested": {
+        "id": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "root": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/nf4-direction-w8-weight-strength-1.0-vllm-v1",
+        "parent": "qwen3.6-35b-hauhau-w4a16-vision",
+        "max_model_len": null
+      },
+      "base": {
+        "id": "qwen3.6-35b-hauhau-w4a16-vision",
+        "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "parent": null,
+        "max_model_len": 8192
+      },
+      "context_limit": 8192
+    },
+    "runtime_lock": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/runtime.lock",
+    "protocol": {
+      "version": 1,
+      "runner": "w8a16-frozen-behavior-smokes-thinking",
+      "helper_sha256": "fe7a1d2a6c7f4b340bb3ee10f65bde28191e4f1008de9b810bf9156e0fdc8590",
+      "integrity_helper_sha256": "b3054a303ebd8371a57bd0951d93dc7cc8ff974a06180f027462d5b621001696",
+      "wrapper_sha256": "cdfd43d3fcf7573e42d42047a3e40b9abebd806a6ab344cdeeb6e84f7738da6b",
+      "case_order": [
+        "forced_tool_call",
+        "tool_result_roundtrip",
+        "automatic_tool_choice",
+        "pivot_after_two_errors",
+        "workflow_completion",
+        "vision_red",
+        "vision_blue"
+      ],
+      "temperature": 0,
+      "max_tokens": 4096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 3072
+      },
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "context_limit": 8192,
+      "context_margin": 64,
+      "request_timeout_seconds": 1800,
+      "automatic_retries": false,
+      "vllm_protocol_source_sha256": {
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/entrypoints/anthropic/protocol.py": "57f6024bbbc5aeea0a8f967cf768998e1047ac621805a10f4451f52c59d34fd3",
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/entrypoints/anthropic/serving.py": "1e09aafc799b6604b187e9a8cb0b74558724d790a860f709c1236936697ec161",
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/entrypoints/openai/chat_completion/protocol.py": "4bdc71f668e4820d8ae5bae2a153fed0296b430cd6353ace8c0c27cfb982ebc1",
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/parser/gemma4.py": "c974f47dc39ab7276da1e4ae38c4010e3f5411481f75e3879e29f47b2fd08df7",
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/parser/engine/parser_engine.py": "d1075deeb25b4872e92752d7ef0598a07a747afaf2afc56058ec30c6dc1da89a",
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/config/reasoning.py": "2c4f7bdee48a9fb3d93787c4c32361c2411417cce452cfde86808d8759977861",
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/engine/arg_utils.py": "95be1adb96f55933f6a52260c8cb2181d04707401ca21d97c33108c5ab58f3ac",
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/v1/engine/input_processor.py": "d79601e4a053a7bacb0d6a23e273348435e4ab70c6a315dcccb2d428ed57d96b",
+        "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/v1/sample/thinking_budget_state.py": "962f8f55210eb0a431cb9c78b013e35f7a7dd58d06d6fb2e7fcff1b457356f8e"
+      },
+      "chat_template_sha256": "ae53464bf3be25802b3a5b37def7fd89667067d7577049b3b2d74c4d8de4c6d4",
+      "assertion_input": "Final text blocks and tool_use blocks only; thinking never contributes.",
+      "history_policy": "Echo original assistant content, including thinking/signatures/tool IDs, into tool-result follow-ups.",
+      "scoring": "Unchanged frozen smoke predicates and conditional follow-ups. Completion is reported separately; no semantic regrading."
+    },
+    "protocol_fingerprint": "17fb2341fd7ca91144cdc68601f42220f88ae786aa84a4d1738257d3b65811c4",
+    "scope": "Seven previously seen benign development tool/vision smokes; not a broad benchmark.",
+    "comparison_scope": "Separate thinking-enabled protocol; do not pool with thinking-disabled observations.",
+    "quality_reference": "Untouched W8A16 baseline; BF16 source is conversion input only."
+  }
+}

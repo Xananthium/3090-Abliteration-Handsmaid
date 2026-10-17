@@ -1,0 +1,280 @@
+{
+  "historical_artifact_url": "https://files.pythonhosted.org/packages/60/9a/d7134fef086f8f263623e280735dcaa6c356c04c2002608bc323aa5808a8/reaper_abliteration-2.5.2-py3-none-any.whl",
+  "local_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/sources/reaper-2.5.2.whl",
+  "sha256": "9df0c1541cf357824d2abad9ed1a6237c8a34552f25d2a17a04db9b7d7e66192",
+  "bytes": 102507,
+  "package_headers": [
+    "Name: reaper-abliteration",
+    "Version: 2.5.2",
+    "Author: HauhauCS",
+    "Author-email: HauhauCS <hauhaut901@gmail.com>",
+    "Project-URL: Changelog, https://github.com/hauhaut/reaper-abliteration/releases",
+    "Project-URL: Documentation, https://github.com/hauhaut/reaper-abliteration",
+    "Project-URL: Homepage, https://github.com/hauhaut/reaper-abliteration",
+    "Project-URL: Issues, https://github.com/hauhaut/reaper-abliteration/issues",
+    "Project-URL: Repository, https://github.com/hauhaut/reaper-abliteration.git"
+  ],
+  "source_keyword_locations": {
+    "reaper_abliteration/model.py": [
+      {
+        "line": 433,
+        "text": "is_rank_k = entry[\"is_rank_k\"]"
+      },
+      {
+        "line": 442,
+        "text": "hook_fn = make_input_pre_hook(v, scale, is_rank_k, ds)"
+      },
+      {
+        "line": 448,
+        "text": "if is_rank_k:"
+      },
+      {
+        "line": 732,
+        "text": "def abliterate("
+      },
+      {
+        "line": 745,
+        "text": "is_rank_k = refusal_directions.ndim == 3"
+      },
+      {
+        "line": 780,
+        "text": "tgt, v_on_dev, scale, is_rank_k, li, comp_key,"
+      },
+      {
+        "line": 795,
+        "text": "is_rank_k, direction_scales, es,"
+      },
+      {
+        "line": 802,
+        "text": "is_rank_k, direction_scales, es,"
+      },
+      {
+        "line": 811,
+        "text": "projection_strength, is_rank_k, direction_scales, es,"
+      },
+      {
+        "line": 845,
+        "text": "is_rank_k: bool,"
+      },
+      {
+        "line": 856,
+        "text": "v = self._apply_head_mask(v, head_mask, n_heads, h_dim, is_rank_k)"
+      },
+      {
+        "line": 865,
+        "text": "v_or_none = self._svd_guard_project(v, W, li, comp_key, tgt, is_rank_k, projection_mode)"
+      },
+      {
+        "line": 870,
+        "text": "if is_rank_k:"
+      },
+      {
+        "line": 871,
+        "text": "lora_A, lora_B = self._rank_k_lora(v, W, scale, direction_scales, projection_mode)"
+      },
+      {
+        "line": 881,
+        "text": "def _apply_head_mask(v: Tensor, mask: Tensor, n_heads: int, h_dim: int, is_rank_k: bool) -> Tensor:"
+      },
+      {
+        "line": 884,
+        "text": "if is_rank_k:"
+      },
+      {
+        "line": 921,
+        "text": "self, v: Tensor, W: Tensor, li: int, comp_key: str, tgt: Linear, is_rank_k: bool, projection_mode: str,"
+      },
+      {
+        "line": 933,
+        "text": "if is_rank_k:"
+      },
+      {
+        "line": 980,
+        "text": "def _rank_k_lora("
+      },
+      {
+        "line": 988,
+        "text": "\"\"\"Compute rank-k LoRA decomposition with ordered Gram-Schmidt."
+      },
+      {
+        "line": 1054,
+        "text": "is_rank_k: bool,"
+      },
+      {
+        "line": 1069,
+        "text": "if is_rank_k:"
+      },
+      {
+        "line": 1078,
+        "text": "hook_fn = make_input_pre_hook(v, scale, is_rank_k, ds)"
+      },
+      {
+        "line": 1085,
+        "text": "\"is_rank_k\": is_rank_k,"
+      },
+      {
+        "line": 1086,
+        "text": "\"direction_scales\": ds if is_rank_k else None,"
+      },
+      {
+        "line": 1097,
+        "text": "is_rank_k: bool,"
+      },
+      {
+        "line": 1118,
+        "text": "if is_rank_k:"
+      },
+      {
+        "line": 1161,
+        "text": "\"is_rank_k\": is_rank_k,"
+      },
+      {
+        "line": 1162,
+        "text": "\"direction_scales\": ds if is_rank_k else None,"
+      }
+    ],
+    "reaper_abliteration/directions.py": [
+      {
+        "line": 411,
+        "text": "\"\"\"Deep ablation with existing multi-direction (SOM/rank-k)."
+      },
+      {
+        "line": 786,
+        "text": "# Direction extraction: LEACE > LDA > mean-difference"
+      },
+      {
+        "line": 787,
+        "text": "if settings.leace_direction:"
+      },
+      {
+        "line": 789,
+        "text": "from concept_erasure import LeaceFitter"
+      },
+      {
+        "line": 791,
+        "text": "raise ImportError(\"--leace-direction requires `concept-erasure`: pip install concept-erasure\")"
+      },
+      {
+        "line": 793,
+        "text": "print(f\"  {WARN} --lda-direction ignored when --leace-direction is enabled\")"
+      },
+      {
+        "line": 804,
+        "text": "fitter = LeaceFitter(acts.shape[1], 2, dtype=torch.float32, device=acts.device)"
+      },
+      {
+        "line": 810,
+        "text": "print(step(\"LEACE direction extraction\", f\"{val(n_residual_layers)} layers\"))"
+      },
+      {
+        "line": 844,
+        "text": "if is_hybrid and not settings.lda_direction and not settings.leace_direction:"
+      },
+      {
+        "line": 864,
+        "text": "concept_directions = None  # cached for reuse by rank-k block"
+      },
+      {
+        "line": 887,
+        "text": "# concept_directions kept alive for reuse by rank-k block below"
+      },
+      {
+        "line": 912,
+        "text": "# Produces svd_directions directly, bypassing the rank-k SVD/PCA block below."
+      },
+      {
+        "line": 914,
+        "text": "if settings.leace_direction and settings.som_directions:"
+      },
+      {
+        "line": 915,
+        "text": "print(f\"  {WARN} LEACE direction unused when SOM directions enabled \u2014 SOM bypasses mean direction\")"
+      },
+      {
+        "line": 928,
+        "text": "# Compute rank-k directions when ablation_rank > 1 (skip if SOM already produced them)."
+      },
+      {
+        "line": 960,
+        "text": "print(step(f\"rank-k directions shape: {val(svd_directions.shape)}\"))"
+      },
+      {
+        "line": 964,
+        "text": "# Post-process svd_directions (applies to both SOM and rank-k SVD/PCA paths)"
+      },
+      {
+        "line": 1010,
+        "text": "# SOM/rank-k already provides multi-direction, but deep ablation needs"
+      }
+    ],
+    "reaper_abliteration/export.py": [
+      {
+        "line": 498,
+        "text": "\"is_rank_k\": h[\"is_rank_k\"],"
+      },
+      {
+        "line": 521,
+        "text": "def _apply_ablation_to_weights(model_layers, recipe: list[dict]) -> int:"
+      },
+      {
+        "line": 531,
+        "text": "v = entry[\"direction\"]  # (hidden,) rank-1 or (k, hidden) rank-k"
+      },
+      {
+        "line": 533,
+        "text": "is_rank_k = entry[\"is_rank_k\"]"
+      },
+      {
+        "line": 547,
+        "text": "_bake_hook_weights(targets, fused_param, v, scale, is_rank_k, ds, li, hook_type,"
+      },
+      {
+        "line": 625,
+        "text": "def _bake_hook_weights(targets, fused_param, v, scale, is_rank_k, ds, li,"
+      },
+      {
+        "line": 644,
+        "text": "def _apply_fused(W, v_dev, proj_ein, outer_ein, v_first):"
+      },
+      {
+        "line": 648,
+        "text": "if is_rank_k:"
+      },
+      {
+        "line": 683,
+        "text": "if is_rank_k:"
+      },
+      {
+        "line": 914,
+        "text": "where k=rank (1 for rank-1, k for rank-k)."
+      },
+      {
+        "line": 941,
+        "text": "is_rank_k = entry[\"is_rank_k\"]"
+      },
+      {
+        "line": 944,
+        "text": "r = v.shape[0] if is_rank_k else 1"
+      },
+      {
+        "line": 945,
+        "text": "if not is_rank_k:"
+      },
+      {
+        "line": 949,
+        "text": "assert orth_err < 1e-4, f\"rank-k directions not orthogonal (err={orth_err:.2e})\""
+      },
+      {
+        "line": 966,
+        "text": "ds_t = torch.tensor(ds[:r], dtype=v.dtype) if is_rank_k and ds is not None else None"
+      }
+    ]
+  },
+  "verification": {
+    "remote_bytes": 102507,
+    "remote_sha256": "9df0c1541cf357824d2abad9ed1a6237c8a34552f25d2a17a04db9b7d7e66192",
+    "matches_retained_wheel": true
+  },
+  "executed_or_installed": false,
+  "exact_gemma_model_recipe_proven": false
+}

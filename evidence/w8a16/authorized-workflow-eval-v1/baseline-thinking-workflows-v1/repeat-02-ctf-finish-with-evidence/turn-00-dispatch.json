@@ -1,0 +1,23 @@
+{
+  "dispatches": [
+    {
+      "turn": 0,
+      "tool_use_id": "chatcmpl-tool-a97da84dab40fa8f",
+      "name": "read_artifact",
+      "arguments": {
+        "artifact": "challenge-index.json"
+      },
+      "result": {
+        "evidence_id": "E001",
+        "ok": true,
+        "artifact": "challenge-index.json",
+        "content": {
+          "entries": [
+            "runner-notes.txt",
+            "packages/level7.json"
+          ]
+        }
+      }
+    }
+  ]
+}

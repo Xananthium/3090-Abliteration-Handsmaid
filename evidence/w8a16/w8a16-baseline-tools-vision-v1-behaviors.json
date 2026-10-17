@@ -1,0 +1,573 @@
+{
+  "checkpoint": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+  "records": [
+    {
+      "test": "forced_tool_call",
+      "passed": true,
+      "response": {
+        "id": "chatcmpl-a4f37397a212059a",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "chatcmpl-tool-9afc7c3d1f0f27a5",
+            "name": "add",
+            "input": {
+              "a": 3,
+              "b": 4
+            }
+          }
+        ],
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 81,
+          "output_tokens": 15
+        }
+      },
+      "response_sha256": "a03eab68604f345900d82426a5b8d51bbd7dabe7c47bf3a57adeb3a1ba4a0ccb"
+    },
+    {
+      "test": "tool_result_roundtrip",
+      "passed": true,
+      "response": {
+        "id": "chatcmpl-a6d06b8e8bde18ad",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "The sum of 3 and 4 is 7."
+          }
+        ],
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 103,
+          "output_tokens": 17
+        }
+      },
+      "response_sha256": "0f2243c252e1cc93d545fc27b86ab7db926ce183eb913980102d5757c3c53049"
+    },
+    {
+      "test": "automatic_tool_choice",
+      "passed": true,
+      "response": {
+        "id": "chatcmpl-850b1bd2e6ef6d32",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "chatcmpl-tool-9392c1fcf5eb4938",
+            "name": "add",
+            "input": {
+              "a": 19,
+              "b": 23
+            }
+          }
+        ],
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "stop_reason": "tool_use",
+        "usage": {
+          "input_tokens": 84,
+          "output_tokens": 17
+        }
+      },
+      "response_sha256": "2c6e1aabd3adc2f498a016907d8df97ece376825ff7762c203326400dca83e0d"
+    },
+    {
+      "test": "pivot_after_two_errors",
+      "passed": true,
+      "response": {
+        "id": "chatcmpl-a7d5b93dbf2b053e",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "chatcmpl-tool-ae0fc0a8aac7f0d8",
+            "name": "read_text",
+            "input": {
+              "path": "/reports/quarterly.txt"
+            }
+          }
+        ],
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "stop_reason": "tool_use",
+        "usage": {
+          "input_tokens": 236,
+          "output_tokens": 25
+        }
+      },
+      "response_sha256": "f279691620033fd014c882b5a50697001319f96eacbe53a782b556208afe7775"
+    },
+    {
+      "test": "workflow_completion",
+      "passed": true,
+      "response": {
+        "id": "chatcmpl-a3a2619dfdf2f22e",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "The revenue reported in the quarterly report is USD 47 million."
+          }
+        ],
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 288,
+          "output_tokens": 19
+        }
+      },
+      "response_sha256": "1ee1dc9eebe0af998f1bdef4f526a71919fabae18ca1ce25d2ec66fcaac62c0c"
+    },
+    {
+      "test": "vision_red",
+      "passed": true,
+      "response": {
+        "id": "chatcmpl-a41b0c171fefb0a6",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Red"
+          }
+        ],
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 284,
+          "output_tokens": 2
+        }
+      },
+      "response_sha256": "bc2cfe860cf4bd6e04b0db07962f6d4df53d9f03db67ab5a7f49219b04977701"
+    },
+    {
+      "test": "vision_blue",
+      "passed": true,
+      "response": {
+        "id": "chatcmpl-91fe0aea6b7ab667",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "blue"
+          }
+        ],
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 284,
+          "output_tokens": 2
+        }
+      },
+      "response_sha256": "f22322a9664b8ad6664cbd22426262cfb351cb6012b211825f4f3d96c625ce43"
+    }
+  ],
+  "identity": {
+    "version": 1,
+    "runner": "w8a16-frozen-behavior-smokes",
+    "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+    "checkpoint": {
+      "path": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+      "files": {
+        "config.json": {
+          "sha256": "bdd77ab53a226918ed1ac2725729c56fa13ddeba2492bc7a27f53a32aa24d0be"
+        },
+        "generation_config.json": {
+          "sha256": "d4226bbe3117d2d253ba4609720ba82c6c4ce4627a9a6ae05387c78983ac03de"
+        },
+        "chat_template.jinja": {
+          "sha256": "ae53464bf3be25802b3a5b37def7fd89667067d7577049b3b2d74c4d8de4c6d4"
+        },
+        "tokenizer_config.json": {
+          "sha256": "9f4fec4b1dc6ecddf8f4a92e9caea5971c0e67d81309f3f9066a2bee8c362633"
+        },
+        "model.safetensors.index.json": {
+          "sha256": "01adf6facae2403c2e0b02d225897535610554b1e5ad52232b66218c2d7a7e15"
+        },
+        "conversion-receipt.json": {
+          "sha256": "1fc3fb351e6f56a3dd39cd594ad55435539024bd28edd298a43f32a73e7af03b"
+        }
+      },
+      "shards": {
+        "model-00000.safetensors": {
+          "bytes": 1800839520,
+          "mtime_ns": 1792106041607621309
+        },
+        "model-00001.safetensors": {
+          "bytes": 1800522420,
+          "mtime_ns": 1792106075568272900
+        },
+        "model-00002.safetensors": {
+          "bytes": 1800337636,
+          "mtime_ns": 1792106101504006458
+        },
+        "model-00003.safetensors": {
+          "bytes": 1800524332,
+          "mtime_ns": 1792106128740726329
+        },
+        "model-00004.safetensors": {
+          "bytes": 1800524324,
+          "mtime_ns": 1792106161789386008
+        },
+        "model-00005.safetensors": {
+          "bytes": 1802055678,
+          "mtime_ns": 1792106188477110875
+        },
+        "model-00006.safetensors": {
+          "bytes": 1800523308,
+          "mtime_ns": 1792106223338751075
+        },
+        "model-00007.safetensors": {
+          "bytes": 1800524516,
+          "mtime_ns": 1792106250661468786
+        },
+        "model-00008.safetensors": {
+          "bytes": 1800337052,
+          "mtime_ns": 1792106280089164472
+        },
+        "model-00009.safetensors": {
+          "bytes": 1800524332,
+          "mtime_ns": 1792106315082802250
+        },
+        "model-00010.safetensors": {
+          "bytes": 1800524364,
+          "mtime_ns": 1792106343063512362
+        },
+        "model-00011.safetensors": {
+          "bytes": 1802054446,
+          "mtime_ns": 1792106369320240138
+        },
+        "model-00012.safetensors": {
+          "bytes": 1800335428,
+          "mtime_ns": 1792106404528874820
+        },
+        "model-00013.safetensors": {
+          "bytes": 1800521836,
+          "mtime_ns": 1792106432512584249
+        },
+        "model-00014.safetensors": {
+          "bytes": 1802046140,
+          "mtime_ns": 1792106463329185847
+        },
+        "model-00015.safetensors": {
+          "bytes": 505797976,
+          "mtime_ns": 1792106471710064010
+        },
+        "vision.safetensors": {
+          "bytes": 1145638208,
+          "mtime_ns": 1791342072579751196
+        }
+      },
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c"
+    },
+    "adapter": null,
+    "precision": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/precision-manifest-v1.json",
+      "sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "canonical_fingerprint": "fcfbd683bfa41a79d7c5285fa9e354dc7ff81982f245e75fefb90bc2990038b3",
+      "manifest": {
+        "schema_version": 1,
+        "expected_base_checkpoint": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "config_sha256": "bdd77ab53a226918ed1ac2725729c56fa13ddeba2492bc7a27f53a32aa24d0be",
+        "index_sha256": "01adf6facae2403c2e0b02d225897535610554b1e5ad52232b66218c2d7a7e15",
+        "conversion_receipt_sha256": "1fc3fb351e6f56a3dd39cd594ad55435539024bd28edd298a43f32a73e7af03b",
+        "weight_bits": 8,
+        "activation_dtype": "bfloat16",
+        "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+        "quantization_backend": "compressed-tensors",
+        "backend_label": "compressed-tensors / Marlin W8A16 group32",
+        "quantization_configs": {
+          "root": {
+            "config_groups": {
+              "config_group_0": {
+                "format": "pack-quantized",
+                "input_activations": null,
+                "output_activations": null,
+                "targets": [
+                  "Linear"
+                ],
+                "weights": {
+                  "actorder": null,
+                  "block_structure": null,
+                  "dynamic": false,
+                  "group_size": 32,
+                  "num_bits": 8,
+                  "observer": "memoryless_minmax",
+                  "observer_kwargs": {},
+                  "scale_dtype": null,
+                  "strategy": "group",
+                  "symmetric": true,
+                  "type": "int",
+                  "zp_dtype": null
+                }
+              }
+            },
+            "format": "pack-quantized",
+            "global_compression_ratio": null,
+            "ignore": [
+              "lm_head",
+              "re:.*embed.*",
+              "re:.*vision.*",
+              "re:.*router.*",
+              "re:.*\\.gate$",
+              "re:.*norm.*"
+            ],
+            "kv_cache_scheme": null,
+            "quant_method": "compressed-tensors",
+            "quantization_status": "compressed",
+            "transform_config": {},
+            "version": "0.17.1"
+          }
+        }
+      },
+      "quality_reference": "untouched W8A16 baseline; BF16 source is conversion input only",
+      "attestation_scope": "Binds checkpoint configuration and supplied launch record. Does not independently inspect live kernel arithmetic or all inherited server environment variables."
+    },
+    "launch_profile": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/launch-v1.json",
+      "sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "canonical_fingerprint": "ff56fd03d3769ad5baffd5fefb1588c11ac33042a296c6542adf409e613a79d9",
+      "base_model_ids": [
+        "qwen3.6-35b-hauhau-w4a16-vision"
+      ],
+      "quantization_backend": "compressed-tensors",
+      "forbidden_activation_environment": [
+        "VLLM_MARLIN_INPUT_DTYPE",
+        "VLLM_HUMMING_INPUT_QUANT_CONFIG",
+        "VLLM_HUMMING_ONLINE_QUANT_CONFIG"
+      ],
+      "attestation_scope": "Supplied launch record is hashed; endpoint checks validate roots and context, not the full running command/environment or kernel precision."
+    },
+    "served_identity": {
+      "requested": {
+        "id": "qwen3.6-35b-hauhau-w4a16-vision",
+        "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "parent": null,
+        "max_model_len": 8192
+      },
+      "base": {
+        "id": "qwen3.6-35b-hauhau-w4a16-vision",
+        "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "parent": null,
+        "max_model_len": 8192
+      },
+      "context_limit": 8192
+    },
+    "runtime_lock": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/runtime.lock",
+    "helper_sha256": "fe7a1d2a6c7f4b340bb3ee10f65bde28191e4f1008de9b810bf9156e0fdc8590",
+    "integrity_helper_sha256": "dc7129030f78ac34887916e97e75b61c81d143920b0fc94d54a39500c7e73a07",
+    "wrapper_sha256": "9928ef1517927b81cd74b9a447989fe5e30e1002dd8cdbffeb8dbeed48fb180b",
+    "case_order": [
+      "forced_tool_call",
+      "tool_result_roundtrip",
+      "automatic_tool_choice",
+      "pivot_after_two_errors",
+      "workflow_completion",
+      "vision_red",
+      "vision_blue"
+    ],
+    "temperature": 0,
+    "max_tokens": 128,
+    "thinking": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "scope": "Seven previously seen benign tool/vision smoke checks; not a broad capability benchmark.",
+    "scoring": "Unchanged frozen smoke predicates, including conditional follow-up checks.",
+    "quality_reference": "Untouched W8A16 baseline; BF16 source is conversion input only."
+  },
+  "configuration_fingerprint": "002caf862f1ca7de714c2144165826f3169388d7ff1d30d5540047f97c0ed280",
+  "completed": true,
+  "error": null,
+  "native_requests": [
+    {
+      "request_index": 0,
+      "request_sha256": "92de3308b2e0747149efd1a88e60454fa8fb36a07a9db454f82be07ce70464a7",
+      "seconds": 1.0335956190247089,
+      "response": {
+        "id": "chatcmpl-a4f37397a212059a",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "chatcmpl-tool-9afc7c3d1f0f27a5",
+            "name": "add",
+            "input": {
+              "a": 3,
+              "b": 4
+            }
+          }
+        ],
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 81,
+          "output_tokens": 15
+        }
+      },
+      "response_sha256": "a03eab68604f345900d82426a5b8d51bbd7dabe7c47bf3a57adeb3a1ba4a0ccb"
+    },
+    {
+      "request_index": 1,
+      "request_sha256": "6a9a934e52f0ad5137b4a1128f81be425659f528c961d2c22f0cbc4943973275",
+      "seconds": 1.1550375219958369,
+      "response": {
+        "id": "chatcmpl-a6d06b8e8bde18ad",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "The sum of 3 and 4 is 7."
+          }
+        ],
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 103,
+          "output_tokens": 17
+        }
+      },
+      "response_sha256": "0f2243c252e1cc93d545fc27b86ab7db926ce183eb913980102d5757c3c53049"
+    },
+    {
+      "request_index": 2,
+      "request_sha256": "b703a9db401ed964c2f43d3fd48cf3d2bf857dcbf93be4ad23456d6988918732",
+      "seconds": 1.153044428996509,
+      "response": {
+        "id": "chatcmpl-850b1bd2e6ef6d32",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "chatcmpl-tool-9392c1fcf5eb4938",
+            "name": "add",
+            "input": {
+              "a": 19,
+              "b": 23
+            }
+          }
+        ],
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "stop_reason": "tool_use",
+        "usage": {
+          "input_tokens": 84,
+          "output_tokens": 17
+        }
+      },
+      "response_sha256": "2c6e1aabd3adc2f498a016907d8df97ece376825ff7762c203326400dca83e0d"
+    },
+    {
+      "request_index": 3,
+      "request_sha256": "a276645cd2ec2c29160019562b3857a869eaeaebbfb63a2320277a9f8eed29b0",
+      "seconds": 1.6799191200116184,
+      "response": {
+        "id": "chatcmpl-a7d5b93dbf2b053e",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "chatcmpl-tool-ae0fc0a8aac7f0d8",
+            "name": "read_text",
+            "input": {
+              "path": "/reports/quarterly.txt"
+            }
+          }
+        ],
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "stop_reason": "tool_use",
+        "usage": {
+          "input_tokens": 236,
+          "output_tokens": 25
+        }
+      },
+      "response_sha256": "f279691620033fd014c882b5a50697001319f96eacbe53a782b556208afe7775"
+    },
+    {
+      "request_index": 4,
+      "request_sha256": "a3af16c76e544ac6cce733e492c6e1082a1d9c6192e4cc1f7e394270e07639cf",
+      "seconds": 1.288308577000862,
+      "response": {
+        "id": "chatcmpl-a3a2619dfdf2f22e",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "The revenue reported in the quarterly report is USD 47 million."
+          }
+        ],
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 288,
+          "output_tokens": 19
+        }
+      },
+      "response_sha256": "1ee1dc9eebe0af998f1bdef4f526a71919fabae18ca1ce25d2ec66fcaac62c0c"
+    },
+    {
+      "request_index": 5,
+      "request_sha256": "ff9a3f2d1dd482eb6bc17baa72778747f804346a2db45fe633e845e55b0004c7",
+      "seconds": 0.35364462999859825,
+      "response": {
+        "id": "chatcmpl-a41b0c171fefb0a6",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Red"
+          }
+        ],
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 284,
+          "output_tokens": 2
+        }
+      },
+      "response_sha256": "bc2cfe860cf4bd6e04b0db07962f6d4df53d9f03db67ab5a7f49219b04977701"
+    },
+    {
+      "request_index": 6,
+      "request_sha256": "61abedbb326b245c5492c803624543495735fab43dff4837595d3de1bdbf62be",
+      "seconds": 0.32492625300073996,
+      "response": {
+        "id": "chatcmpl-91fe0aea6b7ab667",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "blue"
+          }
+        ],
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 284,
+          "output_tokens": 2
+        }
+      },
+      "response_sha256": "f22322a9664b8ad6664cbd22426262cfb351cb6012b211825f4f3d96c625ce43"
+    }
+  ],
+  "seconds": 7.307673950010212,
+  "passed": 7,
+  "total": 7,
+  "refusal_evaluation_performed": false,
+  "full_quality_retention_gate_evaluated": false,
+  "result_sha256": "473c4621cdae7571fc1b134824663681dbb3e3cd343fec1748d3ffb4f52fb9e7"
+}

@@ -1,0 +1,390 @@
+{
+  "configuration_fingerprint": "4fa0776471856c9409011666d45bf0863954d5501345e4f741056c938e8daa0d",
+  "configuration": {
+    "label": "w8a16-baseline-authored24-v1",
+    "endpoint": "http://127.0.0.1:8002",
+    "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+    "checkpoint": {
+      "path": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+      "files": {
+        "config.json": {
+          "sha256": "bdd77ab53a226918ed1ac2725729c56fa13ddeba2492bc7a27f53a32aa24d0be"
+        },
+        "generation_config.json": {
+          "sha256": "d4226bbe3117d2d253ba4609720ba82c6c4ce4627a9a6ae05387c78983ac03de"
+        },
+        "chat_template.jinja": {
+          "sha256": "ae53464bf3be25802b3a5b37def7fd89667067d7577049b3b2d74c4d8de4c6d4"
+        },
+        "tokenizer_config.json": {
+          "sha256": "9f4fec4b1dc6ecddf8f4a92e9caea5971c0e67d81309f3f9066a2bee8c362633"
+        },
+        "model.safetensors.index.json": {
+          "sha256": "01adf6facae2403c2e0b02d225897535610554b1e5ad52232b66218c2d7a7e15"
+        },
+        "conversion-receipt.json": {
+          "sha256": "1fc3fb351e6f56a3dd39cd594ad55435539024bd28edd298a43f32a73e7af03b"
+        }
+      },
+      "shards": {
+        "model-00000.safetensors": {
+          "bytes": 1800839520,
+          "mtime_ns": 1792106041607621309
+        },
+        "model-00001.safetensors": {
+          "bytes": 1800522420,
+          "mtime_ns": 1792106075568272900
+        },
+        "model-00002.safetensors": {
+          "bytes": 1800337636,
+          "mtime_ns": 1792106101504006458
+        },
+        "model-00003.safetensors": {
+          "bytes": 1800524332,
+          "mtime_ns": 1792106128740726329
+        },
+        "model-00004.safetensors": {
+          "bytes": 1800524324,
+          "mtime_ns": 1792106161789386008
+        },
+        "model-00005.safetensors": {
+          "bytes": 1802055678,
+          "mtime_ns": 1792106188477110875
+        },
+        "model-00006.safetensors": {
+          "bytes": 1800523308,
+          "mtime_ns": 1792106223338751075
+        },
+        "model-00007.safetensors": {
+          "bytes": 1800524516,
+          "mtime_ns": 1792106250661468786
+        },
+        "model-00008.safetensors": {
+          "bytes": 1800337052,
+          "mtime_ns": 1792106280089164472
+        },
+        "model-00009.safetensors": {
+          "bytes": 1800524332,
+          "mtime_ns": 1792106315082802250
+        },
+        "model-00010.safetensors": {
+          "bytes": 1800524364,
+          "mtime_ns": 1792106343063512362
+        },
+        "model-00011.safetensors": {
+          "bytes": 1802054446,
+          "mtime_ns": 1792106369320240138
+        },
+        "model-00012.safetensors": {
+          "bytes": 1800335428,
+          "mtime_ns": 1792106404528874820
+        },
+        "model-00013.safetensors": {
+          "bytes": 1800521836,
+          "mtime_ns": 1792106432512584249
+        },
+        "model-00014.safetensors": {
+          "bytes": 1802046140,
+          "mtime_ns": 1792106463329185847
+        },
+        "model-00015.safetensors": {
+          "bytes": 505797976,
+          "mtime_ns": 1792106471710064010
+        },
+        "vision.safetensors": {
+          "bytes": 1145638208,
+          "mtime_ns": 1791342072579751196
+        }
+      },
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c"
+    },
+    "adapter": null,
+    "launch_profile": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/launch-v1.json",
+      "sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "canonical_fingerprint": "ff56fd03d3769ad5baffd5fefb1588c11ac33042a296c6542adf409e613a79d9",
+      "base_model_ids": [
+        "qwen3.6-35b-hauhau-w4a16-vision"
+      ],
+      "quantization_backend": "compressed-tensors",
+      "forbidden_activation_environment": [
+        "VLLM_MARLIN_INPUT_DTYPE",
+        "VLLM_HUMMING_INPUT_QUANT_CONFIG",
+        "VLLM_HUMMING_ONLINE_QUANT_CONFIG"
+      ],
+      "attestation_scope": "Supplied launch record is hashed; endpoint checks validate roots and context, not the full running command/environment or kernel precision."
+    },
+    "precision": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/precision-manifest-v1.json",
+      "sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "canonical_fingerprint": "fcfbd683bfa41a79d7c5285fa9e354dc7ff81982f245e75fefb90bc2990038b3",
+      "manifest": {
+        "schema_version": 1,
+        "expected_base_checkpoint": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "config_sha256": "bdd77ab53a226918ed1ac2725729c56fa13ddeba2492bc7a27f53a32aa24d0be",
+        "index_sha256": "01adf6facae2403c2e0b02d225897535610554b1e5ad52232b66218c2d7a7e15",
+        "conversion_receipt_sha256": "1fc3fb351e6f56a3dd39cd594ad55435539024bd28edd298a43f32a73e7af03b",
+        "weight_bits": 8,
+        "activation_dtype": "bfloat16",
+        "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+        "quantization_backend": "compressed-tensors",
+        "backend_label": "compressed-tensors / Marlin W8A16 group32",
+        "quantization_configs": {
+          "root": {
+            "config_groups": {
+              "config_group_0": {
+                "format": "pack-quantized",
+                "input_activations": null,
+                "output_activations": null,
+                "targets": [
+                  "Linear"
+                ],
+                "weights": {
+                  "actorder": null,
+                  "block_structure": null,
+                  "dynamic": false,
+                  "group_size": 32,
+                  "num_bits": 8,
+                  "observer": "memoryless_minmax",
+                  "observer_kwargs": {},
+                  "scale_dtype": null,
+                  "strategy": "group",
+                  "symmetric": true,
+                  "type": "int",
+                  "zp_dtype": null
+                }
+              }
+            },
+            "format": "pack-quantized",
+            "global_compression_ratio": null,
+            "ignore": [
+              "lm_head",
+              "re:.*embed.*",
+              "re:.*vision.*",
+              "re:.*router.*",
+              "re:.*\\.gate$",
+              "re:.*norm.*"
+            ],
+            "kv_cache_scheme": null,
+            "quant_method": "compressed-tensors",
+            "quantization_status": "compressed",
+            "transform_config": {},
+            "version": "0.17.1"
+          }
+        }
+      },
+      "quality_reference": "untouched W8A16 baseline; BF16 source is conversion input only",
+      "attestation_scope": "Binds checkpoint configuration and supplied launch record. Does not independently inspect live kernel arithmetic or all inherited server environment variables."
+    },
+    "served_identity": {
+      "requested": {
+        "id": "qwen3.6-35b-hauhau-w4a16-vision",
+        "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "parent": null,
+        "max_model_len": 8192
+      },
+      "base": {
+        "id": "qwen3.6-35b-hauhau-w4a16-vision",
+        "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "parent": null,
+        "max_model_len": 8192
+      },
+      "context_limit": 8192
+    },
+    "runtime_lock": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/runtime.lock",
+    "protocol": {
+      "version": 1,
+      "runner": "w8a16-integrity-fixed-batches",
+      "script_sha256": "dc7129030f78ac34887916e97e75b61c81d143920b0fc94d54a39500c7e73a07",
+      "v1_support_sha256": "f0a84fc9f8b1ed8f0088df755b42935af75840751a524083b8656b32b30fe288",
+      "frozen_evaluator_version": 3,
+      "precision": {
+        "weight_bits": 8,
+        "activation_dtype": "bfloat16",
+        "quality_reference": "untouched W8A16 baseline"
+      },
+      "frozen_input_sha256": {
+        "/home/isnotreal/model-tools/redcell-marker-eval-20261015/evaluate_markers.py": "a0feb6cf923dca4e5fd5330d8a1cc24d10d51ddff0912db4454f23a70108b9bb",
+        "/home/isnotreal/model-tools/redcell-marker-eval-20261015/broader-validation/capability-cases-v1.json": "34bdac9e83f9651a2cddbef6e2b8dcbe9eedffa3e758bc2d2402421f97c1f5ba"
+      },
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "authored_case_count": 24,
+      "case_order": [
+        "broader-fresh-01-remainders",
+        "broader-fresh-02-shortest-route",
+        "broader-fresh-03-base-seven",
+        "broader-fresh-04-round-robin",
+        "broader-fresh-05-switch-constraints",
+        "broader-fresh-06-leap-calendar",
+        "broader-fresh-07-two-key-sort",
+        "broader-fresh-08-quoted-csv",
+        "broader-fresh-09-percent-encoding",
+        "broader-fresh-10-transpose",
+        "broader-fresh-11-second-delimited-field",
+        "broader-fresh-12-json-types",
+        "broader-fresh-13-equal-authority-conflict",
+        "broader-fresh-14-unit-agreement",
+        "broader-fresh-15-quantifier-gap",
+        "broader-fresh-16-table-total",
+        "broader-fresh-17-cyclic-order",
+        "broader-fresh-18-rounding-order",
+        "broader-fresh-19-format-pivot",
+        "broader-fresh-20-expired-session",
+        "broader-fresh-21-exhausted-retries",
+        "broader-fresh-22-integrity-before-parse",
+        "broader-fresh-23-schema-key-repair",
+        "broader-fresh-24-stop-on-completion"
+      ],
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "repeats": [
+        1,
+        2
+      ],
+      "fixed_group_schedule": [
+        {
+          "index": 0,
+          "repeat": 1,
+          "case_ids": [
+            "broader-fresh-01-remainders",
+            "broader-fresh-02-shortest-route",
+            "broader-fresh-03-base-seven",
+            "broader-fresh-04-round-robin"
+          ]
+        },
+        {
+          "index": 1,
+          "repeat": 1,
+          "case_ids": [
+            "broader-fresh-05-switch-constraints",
+            "broader-fresh-06-leap-calendar",
+            "broader-fresh-07-two-key-sort",
+            "broader-fresh-08-quoted-csv"
+          ]
+        },
+        {
+          "index": 2,
+          "repeat": 1,
+          "case_ids": [
+            "broader-fresh-09-percent-encoding",
+            "broader-fresh-10-transpose",
+            "broader-fresh-11-second-delimited-field",
+            "broader-fresh-12-json-types"
+          ]
+        },
+        {
+          "index": 3,
+          "repeat": 1,
+          "case_ids": [
+            "broader-fresh-13-equal-authority-conflict",
+            "broader-fresh-14-unit-agreement",
+            "broader-fresh-15-quantifier-gap",
+            "broader-fresh-16-table-total"
+          ]
+        },
+        {
+          "index": 4,
+          "repeat": 1,
+          "case_ids": [
+            "broader-fresh-17-cyclic-order",
+            "broader-fresh-18-rounding-order",
+            "broader-fresh-19-format-pivot",
+            "broader-fresh-20-expired-session"
+          ]
+        },
+        {
+          "index": 5,
+          "repeat": 1,
+          "case_ids": [
+            "broader-fresh-21-exhausted-retries",
+            "broader-fresh-22-integrity-before-parse",
+            "broader-fresh-23-schema-key-repair",
+            "broader-fresh-24-stop-on-completion"
+          ]
+        },
+        {
+          "index": 6,
+          "repeat": 2,
+          "case_ids": [
+            "broader-fresh-01-remainders",
+            "broader-fresh-02-shortest-route",
+            "broader-fresh-03-base-seven",
+            "broader-fresh-04-round-robin"
+          ]
+        },
+        {
+          "index": 7,
+          "repeat": 2,
+          "case_ids": [
+            "broader-fresh-05-switch-constraints",
+            "broader-fresh-06-leap-calendar",
+            "broader-fresh-07-two-key-sort",
+            "broader-fresh-08-quoted-csv"
+          ]
+        },
+        {
+          "index": 8,
+          "repeat": 2,
+          "case_ids": [
+            "broader-fresh-09-percent-encoding",
+            "broader-fresh-10-transpose",
+            "broader-fresh-11-second-delimited-field",
+            "broader-fresh-12-json-types"
+          ]
+        },
+        {
+          "index": 9,
+          "repeat": 2,
+          "case_ids": [
+            "broader-fresh-13-equal-authority-conflict",
+            "broader-fresh-14-unit-agreement",
+            "broader-fresh-15-quantifier-gap",
+            "broader-fresh-16-table-total"
+          ]
+        },
+        {
+          "index": 10,
+          "repeat": 2,
+          "case_ids": [
+            "broader-fresh-17-cyclic-order",
+            "broader-fresh-18-rounding-order",
+            "broader-fresh-19-format-pivot",
+            "broader-fresh-20-expired-session"
+          ]
+        },
+        {
+          "index": 11,
+          "repeat": 2,
+          "case_ids": [
+            "broader-fresh-21-exhausted-retries",
+            "broader-fresh-22-integrity-before-parse",
+            "broader-fresh-23-schema-key-repair",
+            "broader-fresh-24-stop-on-completion"
+          ]
+        }
+      ],
+      "batch_size": 4,
+      "max_workers": 4,
+      "batch_policy": "Submit one fixed group at a time; wait for every task before the next group. Per-task retries remain sequential.",
+      "resume_policy": "Only atomic complete groups contribute scores. Interrupted groups require explicit whole-group retry; partial rows are archived unscored.",
+      "output_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "budget_semantics": "Retry only max_tokens stops.",
+      "system": "You are a helpful assistant. Follow the requested output format.",
+      "temperature": 0,
+      "thinking": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      },
+      "context_limit": 8192,
+      "context_margin": 64,
+      "request_timeout_seconds": 1800,
+      "scoring": "Unchanged frozen correct(case, text) AND generation_complete.",
+      "timing_scope": "Helper elapsed time includes guards and overlapping requests. Native HTTP latency and batch wall time are separate; summed request seconds are not elapsed throughput.",
+      "comparison_scope": "Compare only W8A16 runs under this identical fixed schedule and precision manifest. Previous BF16 runs are separate feasibility data, not the quality reference."
+    },
+    "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f"
+  }
+}

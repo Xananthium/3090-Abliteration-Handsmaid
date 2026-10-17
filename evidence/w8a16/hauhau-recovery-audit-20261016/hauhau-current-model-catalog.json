@@ -1,0 +1,908 @@
+[
+  {
+    "id": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
+    "sha": "993a5971fda8f30dd1b7eb2654792ba4415c7460",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "FastMTP-PROVENANCE.json"
+      },
+      {
+        "rfilename": "FastMTP-PROVENANCE.json.sig"
+      },
+      {
+        "rfilename": "HauhauCS-FastMTP-Ed25519-PUBLIC.pem"
+      },
+      {
+        "rfilename": "HauhauCS-FastMTP-llama.cpp.patch"
+      },
+      {
+        "rfilename": "HauhauCS-RELEASE-MANIFEST.json"
+      },
+      {
+        "rfilename": "HauhauCS-RELEASE-MANIFEST.json.sig"
+      },
+      {
+        "rfilename": "Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-FastMTP-32K.gguf"
+      },
+      {
+        "rfilename": "Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-IQ2_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-IQ3_XS.gguf"
+      },
+      {
+        "rfilename": "Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-IQ4_XS.gguf"
+      },
+      {
+        "rfilename": "Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-Q2_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-Q3_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-Q4_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-Q5_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-Q6_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-Q8_K_P.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "SHA256SUMS"
+      },
+      {
+        "rfilename": "mmproj-Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-BF16.gguf"
+      }
+    ],
+    "trending_score": 121
+  },
+  {
+    "id": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
+    "sha": "f12a584fecbeb5f20001130d8ecd66c9327ae685",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ2_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ4_NL.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ4_XS.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-Q2_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-Q3_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-Q4_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-Q5_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-Q6_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-Q8_K_P.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "mmproj-Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-f16.gguf"
+      }
+    ],
+    "trending_score": 52
+  },
+  {
+    "id": "HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive",
+    "sha": "45b6a334b4bcd1d7f37179df58b3b1d66a184e5d",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf"
+      },
+      {
+        "rfilename": "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-IQ4_XS.gguf"
+      },
+      {
+        "rfilename": "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q2_K_P.gguf"
+      },
+      {
+        "rfilename": "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q3_K_M.gguf"
+      },
+      {
+        "rfilename": "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q3_K_P.gguf"
+      },
+      {
+        "rfilename": "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q4_K_P.gguf"
+      },
+      {
+        "rfilename": "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q5_K_M.gguf"
+      },
+      {
+        "rfilename": "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q5_K_P.gguf"
+      },
+      {
+        "rfilename": "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q6_K_P.gguf"
+      },
+      {
+        "rfilename": "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q8_K_P.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "mmproj-Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-f16.gguf"
+      }
+    ],
+    "trending_score": 40
+  },
+  {
+    "id": "HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive",
+    "sha": "0a41c68809d375475f954be12ba7c40efa56c2a9",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Qwen3.5-9B-Uncensored-HauhauCS-Aggressive-BF16.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-9B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-9B-Uncensored-HauhauCS-Aggressive-Q6_K.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-9B-Uncensored-HauhauCS-Aggressive-Q8_0.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "mmproj-Qwen3.5-9B-Uncensored-HauhauCS-Aggressive-BF16.gguf"
+      }
+    ],
+    "trending_score": 36
+  },
+  {
+    "id": "HauhauCS/Qwen3.5-4B-Uncensored-HauhauCS-Aggressive",
+    "sha": "c09cdbcdb1fefad6d335809d445621b5f5ba0c6e",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Qwen3.5-4B-Uncensored-HauhauCS-Aggressive-BF16.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-4B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-4B-Uncensored-HauhauCS-Aggressive-Q6_K.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-4B-Uncensored-HauhauCS-Aggressive-Q8_0.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "mmproj-Qwen3.5-4B-Uncensored-HauhauCS-Aggressive-BF16.gguf"
+      }
+    ],
+    "trending_score": 24
+  },
+  {
+    "id": "HauhauCS/Gemma4-12B-QAT-Uncensored-HauhauCS-Balanced",
+    "sha": "ae8045ac2bd216293ca49a3065da2c942dde4b68",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Gemma4-12B-QAT-Uncensored-HauhauCS-Balanced-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "mmproj-Gemma4-12B-QAT-Uncensored-HauhauCS-Balanced-BF16.gguf"
+      },
+      {
+        "rfilename": "mtp-gemma-4-12B-it.gguf"
+      }
+    ],
+    "trending_score": 23
+  },
+  {
+    "id": "HauhauCS/Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive",
+    "sha": "f34c1414c2f9a3629187098bdf0e90c85f5034f5",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive-BF16.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ2_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ4_XS.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive-Q3_K_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive-Q5_K_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive-Q6_K.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive-Q8_0.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "mmproj-Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive-f16.gguf"
+      }
+    ],
+    "trending_score": 17
+  },
+  {
+    "id": "HauhauCS/Gemma4-26B-A4B-QAT-Uncensored-HauhauCS-Balanced-MTP",
+    "sha": "f9093662a2e7ae0503f637088bc96f77a1a70c83",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Gemma4-26B-A4B-QAT-Uncensored-HauhauCS-Balanced-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "mmproj-Gemma4-26B-A4B-QAT-Uncensored-HauhauCS-Balanced-BF16.gguf"
+      },
+      {
+        "rfilename": "mtp-gemma-4-26B-A4B-it.gguf"
+      }
+    ],
+    "trending_score": 14
+  },
+  {
+    "id": "HauhauCS/Gemma4-31B-QAT-Uncensored-HauhauCS-Balanced-MTP",
+    "sha": "9654466e82d83f5ebfe1518a369bc5900873abb1",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Gemma4-31B-QAT-Uncensored-HauhauCS-Balanced-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "mmproj-Gemma4-31B-QAT-Uncensored-HauhauCS-Balanced-BF16.gguf"
+      },
+      {
+        "rfilename": "mtp-gemma-4-31B-it.gguf"
+      }
+    ],
+    "trending_score": 7
+  },
+  {
+    "id": "HauhauCS/Qwen3VL-8B-Uncensored-HauhauCS-Aggressive",
+    "sha": "131a3da6324520b0471196ed0012386d701543a6",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Qwen3VL-8B-Uncensored-HauhauCS-Aggressive-BF16.gguf"
+      },
+      {
+        "rfilename": "Qwen3VL-8B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3VL-8B-Uncensored-HauhauCS-Aggressive-Q6_K.gguf"
+      },
+      {
+        "rfilename": "Qwen3VL-8B-Uncensored-HauhauCS-Aggressive-Q8_0.gguf"
+      },
+      {
+        "rfilename": "Qwen3VL-8B-Uncensored-HauhauCS-Aggressive-mmproj-f16.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      }
+    ],
+    "trending_score": 5
+  },
+  {
+    "id": "HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced",
+    "sha": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-IQ2_M.gguf"
+      },
+      {
+        "rfilename": "Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-IQ3_M.gguf"
+      },
+      {
+        "rfilename": "Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-IQ4_XS.gguf"
+      },
+      {
+        "rfilename": "Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q2_K_P.gguf"
+      },
+      {
+        "rfilename": "Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q3_K_M.gguf"
+      },
+      {
+        "rfilename": "Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q3_K_P.gguf"
+      },
+      {
+        "rfilename": "Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q4_K_P.gguf"
+      },
+      {
+        "rfilename": "Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q5_K_M.gguf"
+      },
+      {
+        "rfilename": "Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q5_K_P.gguf"
+      },
+      {
+        "rfilename": "Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q6_K_P.gguf"
+      },
+      {
+        "rfilename": "Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "mmproj-Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-f16.gguf"
+      }
+    ],
+    "trending_score": 4
+  },
+  {
+    "id": "HauhauCS/Qwen3.5-2B-Uncensored-HauhauCS-Aggressive",
+    "sha": "2bcf35c1ebf62c837c12c1aa90b578ff4717e831",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Qwen3.5-2B-Uncensored-HauhauCS-Aggressive-BF16.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-2B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-2B-Uncensored-HauhauCS-Aggressive-Q6_K.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-2B-Uncensored-HauhauCS-Aggressive-Q8_0.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "mmproj-Qwen3.5-2B-Uncensored-HauhauCS-Aggressive-f16.gguf"
+      }
+    ],
+    "trending_score": 3
+  },
+  {
+    "id": "HauhauCS/Gemma-4-E2B-Uncensored-HauhauCS-Aggressive",
+    "sha": "da8593c3e407afcd3e7da94ff2d69d77e2a28a48",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Gemma-4-E2B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf"
+      },
+      {
+        "rfilename": "Gemma-4-E2B-Uncensored-HauhauCS-Aggressive-Q2_K_P.gguf"
+      },
+      {
+        "rfilename": "Gemma-4-E2B-Uncensored-HauhauCS-Aggressive-Q3_K_P.gguf"
+      },
+      {
+        "rfilename": "Gemma-4-E2B-Uncensored-HauhauCS-Aggressive-Q4_K_P.gguf"
+      },
+      {
+        "rfilename": "Gemma-4-E2B-Uncensored-HauhauCS-Aggressive-Q5_K_P.gguf"
+      },
+      {
+        "rfilename": "Gemma-4-E2B-Uncensored-HauhauCS-Aggressive-Q6_K_P.gguf"
+      },
+      {
+        "rfilename": "Gemma-4-E2B-Uncensored-HauhauCS-Aggressive-Q8_K_P.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "mmproj-Gemma-4-E2B-Uncensored-HauhauCS-Aggressive-f16.gguf"
+      }
+    ],
+    "trending_score": 3
+  },
+  {
+    "id": "HauhauCS/Qwen3.5-122B-A10B-Uncensored-HauhauCS-Aggressive",
+    "sha": "f4cb0b62dd608c596f0edacd200363676a826abc",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Qwen3.5-122B-A10B-Uncensored-HauhauCS-Aggressive-IQ2_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-122B-A10B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-122B-A10B-Uncensored-HauhauCS-Aggressive-IQ3_XXS.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-122B-A10B-Uncensored-HauhauCS-Aggressive-IQ4_XS.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-122B-A10B-Uncensored-HauhauCS-Aggressive-Q3_K_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-122B-A10B-Uncensored-HauhauCS-Aggressive-Q3_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-122B-A10B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-122B-A10B-Uncensored-HauhauCS-Aggressive-Q4_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-122B-A10B-Uncensored-HauhauCS-Aggressive-Q5_K_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-122B-A10B-Uncensored-HauhauCS-Aggressive-Q5_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-122B-A10B-Uncensored-HauhauCS-Aggressive-Q6_K.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-122B-A10B-Uncensored-HauhauCS-Aggressive-Q6_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-122B-A10B-Uncensored-HauhauCS-Aggressive-Q8_K_P.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "mmproj-Qwen3.5-122B-A10B-Uncensored-HauhauCS-Aggressive-f16.gguf"
+      }
+    ],
+    "trending_score": 2
+  },
+  {
+    "id": "HauhauCS/Qwen3.6-27B-Uncensored-HauhauCS-Aggressive",
+    "sha": "f2db94d03eccf3b133aeea3dea62388acf98e864",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Aggressive-IQ2_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Aggressive-IQ3_XS.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Aggressive-IQ4_XS.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Aggressive-Q2_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Aggressive-Q3_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Aggressive-Q4_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Aggressive-Q5_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Aggressive-Q6_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Aggressive-Q8_K_P.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "mmproj-Qwen3.6-27B-Uncensored-HauhauCS-Aggressive-f16.gguf"
+      }
+    ],
+    "trending_score": 2
+  },
+  {
+    "id": "HauhauCS/Qwen3.6-27B-Uncensored-HauhauCS-Balanced",
+    "sha": "9a28c2fbd15f21fb8ed204074c6f58d5bc889941",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Balanced-IQ2_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Balanced-IQ3_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Balanced-IQ3_XS.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Balanced-IQ4_XS.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Balanced-Q2_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Balanced-Q3_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Balanced-Q4_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Balanced-Q5_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Balanced-Q6_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.6-27B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "mmproj-Qwen3.6-27B-Uncensored-HauhauCS-Balanced-f16.gguf"
+      }
+    ],
+    "trending_score": 2
+  },
+  {
+    "id": "HauhauCS/GPT-OSS-20B-Uncensored-HauhauCS-Aggressive",
+    "sha": "cf9b3a0f2ba72b839c566675857f3baa87880f28",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "GPT-OSS-20B-Uncensored-HauhauCS-MXFP4-Aggressive.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      }
+    ],
+    "trending_score": 1
+  },
+  {
+    "id": "HauhauCS/Qwen3-4B-2507-Instruct-Uncensored-HauhauCS-Aggressive",
+    "sha": "ce36938d2edf886ddefc0d3136744b1b6777198b",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Qwen3-4B-2507-Instruct-Uncensored-HauhauCS-Aggressive-FP16.gguf"
+      },
+      {
+        "rfilename": "Qwen3-4B-2507-Instruct-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3-4B-2507-Instruct-Uncensored-HauhauCS-Aggressive-Q6_K.gguf"
+      },
+      {
+        "rfilename": "Qwen3-4B-2507-Instruct-Uncensored-HauhauCS-Aggressive-Q8_0.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      }
+    ],
+    "trending_score": 1
+  },
+  {
+    "id": "HauhauCS/Qwen3VL-8B-Uncensored-HauhauCS-Balanced",
+    "sha": "05f7c93912f5f028f89dec016c46c0841905d564",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Qwen3VL-8B-Uncensored-HauhauCS-Balanced-BF16.gguf"
+      },
+      {
+        "rfilename": "Qwen3VL-8B-Uncensored-HauhauCS-Balanced-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3VL-8B-Uncensored-HauhauCS-Balanced-Q6_K.gguf"
+      },
+      {
+        "rfilename": "Qwen3VL-8B-Uncensored-HauhauCS-Balanced-Q8_0.gguf"
+      },
+      {
+        "rfilename": "Qwen3VL-8B-Uncensored-HauhauCS-Balanced-mmproj-f16.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      }
+    ],
+    "trending_score": 1
+  },
+  {
+    "id": "HauhauCS/Nemotron3-Nano-4B-Uncensored-HauhauCS-Aggressive",
+    "sha": "8d58c5deaac1aec09e287be801b3669875cb2fb9",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Nemotron3-Nano-4B-Uncensored-HauhauCS-Aggressive-IQ2_M.gguf"
+      },
+      {
+        "rfilename": "Nemotron3-Nano-4B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf"
+      },
+      {
+        "rfilename": "Nemotron3-Nano-4B-Uncensored-HauhauCS-Aggressive-IQ4_XS.gguf"
+      },
+      {
+        "rfilename": "Nemotron3-Nano-4B-Uncensored-HauhauCS-Aggressive-Q2_K_P.gguf"
+      },
+      {
+        "rfilename": "Nemotron3-Nano-4B-Uncensored-HauhauCS-Aggressive-Q3_K_M.gguf"
+      },
+      {
+        "rfilename": "Nemotron3-Nano-4B-Uncensored-HauhauCS-Aggressive-Q3_K_P.gguf"
+      },
+      {
+        "rfilename": "Nemotron3-Nano-4B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "Nemotron3-Nano-4B-Uncensored-HauhauCS-Aggressive-Q4_K_P.gguf"
+      },
+      {
+        "rfilename": "Nemotron3-Nano-4B-Uncensored-HauhauCS-Aggressive-Q5_K_M.gguf"
+      },
+      {
+        "rfilename": "Nemotron3-Nano-4B-Uncensored-HauhauCS-Aggressive-Q5_K_P.gguf"
+      },
+      {
+        "rfilename": "Nemotron3-Nano-4B-Uncensored-HauhauCS-Aggressive-Q6_K_P.gguf"
+      },
+      {
+        "rfilename": "Nemotron3-Nano-4B-Uncensored-HauhauCS-Aggressive-Q8_K_P.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      }
+    ],
+    "trending_score": 1
+  },
+  {
+    "id": "HauhauCS/GPT-OSS-20B-Uncensored-HauhauCS-Balanced",
+    "sha": "7a909785d6ac850c97860fb2b0b553bbe015cd81",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "GPT-OSS-20B-Uncensored-HauhauCS-MXFP4-Balanced.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      }
+    ],
+    "trending_score": 0
+  },
+  {
+    "id": "HauhauCS/GLM-4.7-Flash-Uncensored-HauhauCS-Balanced",
+    "sha": "e70c7741efdb964d6cedbece3e40ff94553c057b",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "GLM-4.7-Flash-Uncensored-HauhauCS-Balanced-FP16.gguf"
+      },
+      {
+        "rfilename": "GLM-4.7-Flash-Uncensored-HauhauCS-Balanced-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "GLM-4.7-Flash-Uncensored-HauhauCS-Balanced-Q6_K.gguf"
+      },
+      {
+        "rfilename": "GLM-4.7-Flash-Uncensored-HauhauCS-Balanced-Q8_0.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      }
+    ],
+    "trending_score": 0
+  },
+  {
+    "id": "HauhauCS/GLM-4.7-Flash-Uncensored-HauhauCS-Aggressive",
+    "sha": "4b2f44dc827d3f58ee162371cf1d915371c8270e",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "GLM-4.7-Flash-Uncensored-HauhauCS-Aggressive-FP16.gguf"
+      },
+      {
+        "rfilename": "GLM-4.7-Flash-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "GLM-4.7-Flash-Uncensored-HauhauCS-Aggressive-Q6_K.gguf"
+      },
+      {
+        "rfilename": "GLM-4.7-Flash-Uncensored-HauhauCS-Aggressive-Q8_0.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      }
+    ],
+    "trending_score": 0
+  },
+  {
+    "id": "HauhauCS/GPTOSS-120B-Uncensored-HauhauCS-Aggressive",
+    "sha": "a0d2e513a5ebbb958e3c212da660b23b254c969f",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "GPTOSS-120B-Uncensored-HauhauCS-Aggressive-MXFP4.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      }
+    ],
+    "trending_score": 0
+  },
+  {
+    "id": "HauhauCS/Qwen3.5-27B-Uncensored-HauhauCS-Aggressive",
+    "sha": "ba23816347e0f24d82efbd2397278ff32743b75c",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Qwen3.5-27B-Uncensored-HauhauCS-Aggressive-BF16.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-27B-Uncensored-HauhauCS-Aggressive-IQ2_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-27B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-27B-Uncensored-HauhauCS-Aggressive-IQ4_XS.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-27B-Uncensored-HauhauCS-Aggressive-Q3_K_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-27B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-27B-Uncensored-HauhauCS-Aggressive-Q5_K_M.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-27B-Uncensored-HauhauCS-Aggressive-Q6_K.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-27B-Uncensored-HauhauCS-Aggressive-Q8_0.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "mmproj-Qwen3.5-27B-Uncensored-HauhauCS-Aggressive-f16.gguf"
+      }
+    ],
+    "trending_score": 0
+  },
+  {
+    "id": "HauhauCS/Nemotron3-Nano-4B-Uncensored-HauhauCS-Aggressive-GenRM",
+    "sha": "cea9b62fb4fba678e3caaa8e1002bf30d38fae3a",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Nemotron3-Nano-4B-Uncensored-HauhauCS-Aggressive-GenRM-IQ2_M.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      }
+    ],
+    "trending_score": 0
+  },
+  {
+    "id": "HauhauCS/Qwen3.5-35B-Optimized-HauhauCS-40",
+    "sha": "ae45b3a23f828fd765d024c5199ec1c2740d4f33",
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "Qwen3.5-35B-Optimized-HauhauCS-40-Q4_K_P.gguf"
+      },
+      {
+        "rfilename": "Qwen3.5-35B-Optimized-HauhauCS-40-Q8_K_P.gguf"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "mmproj-Qwen3.5-35B-Optimized-HauhauCS-40-f16.gguf"
+      }
+    ],
+    "trending_score": 0
+  }
+]

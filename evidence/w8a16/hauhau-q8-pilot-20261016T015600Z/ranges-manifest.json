@@ -1,0 +1,102 @@
+[
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/00-base.bin",
+    "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+    "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "offset": 3029340434,
+    "bytes": 11894784,
+    "sha256": "03c01ba482db89960b6871c7d544fe9364d4f53db26e36083f1bbc196ad132bd",
+    "content_range": "bytes 3029340434-3041235217/49907246508",
+    "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/00-hauhau.bin",
+    "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "offset": 1687099296,
+    "bytes": 6319104,
+    "sha256": "c8107a8037e57052e3f208b0ac55764b7148755b375df541d286c3739c823de1",
+    "content_range": "bytes 1687099296-1693418399/27275669856",
+    "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/01-base.bin",
+    "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+    "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "offset": 34579484730,
+    "bytes": 23068672,
+    "sha256": "e8ec9c7bb23db29e978f56ca3ee4d3d0036babb5bb324bd9325fbaaf5ddd7feb",
+    "content_range": "bytes 34579484730-34602553401/49907246508",
+    "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/01-hauhau.bin",
+    "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "offset": 24596879104,
+    "bytes": 12255232,
+    "sha256": "23fb0bf669156ab3e7859b0ce473334b5702f2449fa933f32b7a33a0f6250b81",
+    "content_range": "bytes 24596879104-24609134335/27275669856",
+    "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/02-base.bin",
+    "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+    "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "offset": 31323104822,
+    "bytes": 23068672,
+    "sha256": "6e5124f6b1a6ac36f675ff8804eb13425f6afb6153273f6e75f7241826d02b19",
+    "content_range": "bytes 31323104822-31346173493/49907246508",
+    "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/02-hauhau.bin",
+    "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "offset": 22836964032,
+    "bytes": 12255232,
+    "sha256": "3c362b4f263898aefcbcb20a811c978611747548f758a588954ccce4c2a15913",
+    "content_range": "bytes 22836964032-22849219263/27275669856",
+    "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/03-base.bin",
+    "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+    "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "offset": 9558682650,
+    "bytes": 23068672,
+    "sha256": "f6108d00a3d491da2a5d3506d048953a05462b32b4ea825b2a62ff5a34b81232",
+    "content_range": "bytes 9558682650-9581751321/49907246508",
+    "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/03-hauhau.bin",
+    "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "offset": 11311792928,
+    "bytes": 12255232,
+    "sha256": "f3b04f6d9e8b274ec500bbdf08b4e1d0b4fdc863b8277ba10457a713dfbc9f9c",
+    "content_range": "bytes 11311792928-11324048159/27275669856",
+    "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/04-base.bin",
+    "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+    "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "offset": 18812703782,
+    "bytes": 23068672,
+    "sha256": "b1dbecd72080ff78366a0487ffa0f4b7cda1ac4cd00b86def2fa06ce216df574",
+    "content_range": "bytes 18812703782-18835772453/49907246508",
+    "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/04-hauhau.bin",
+    "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "offset": 16656195552,
+    "bytes": 12255232,
+    "sha256": "340d40abf646272387c2280a19c6c1827d4b598e95c2c3bad006cf1c4b7b10c4",
+    "content_range": "bytes 16656195552-16668450783/27275669856",
+    "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+  }
+]

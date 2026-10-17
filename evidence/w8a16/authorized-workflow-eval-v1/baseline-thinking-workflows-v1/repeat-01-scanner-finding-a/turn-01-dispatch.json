@@ -1,0 +1,25 @@
+{
+  "dispatches": [
+    {
+      "turn": 1,
+      "tool_use_id": "chatcmpl-tool-9da3ede9cca01824",
+      "name": "read_artifact",
+      "arguments": {
+        "artifact": "deployment-manifest.json"
+      },
+      "result": {
+        "evidence_id": "E002",
+        "ok": true,
+        "artifact": "deployment-manifest.json",
+        "content": {
+          "service": "LabWidget",
+          "version": "2.4.1",
+          "deployment_id": "synthetic-app",
+          "applied_fixes": [
+            "LFX-17"
+          ]
+        }
+      }
+    }
+  ]
+}

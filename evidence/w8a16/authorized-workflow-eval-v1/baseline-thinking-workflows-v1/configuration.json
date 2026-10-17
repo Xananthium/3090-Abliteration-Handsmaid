@@ -1,0 +1,161 @@
+{
+  "configuration": {
+    "schema_version": 1,
+    "created_utc": "2026-10-17T16:36:32.698871+00:00",
+    "label": "baseline-thinking-workflows-v1",
+    "endpoint": "http://127.0.0.1:8002",
+    "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+    "checkpoint": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+    "model_listing": {
+      "id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+      "parent": null,
+      "max_model_len": 8192
+    },
+    "input_artifacts": {
+      "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/authorized-workflow-eval-v1/run_workflows_v1.py": {
+        "sha256": "c638e3b1b73467c2af10b228e9b73815d879fbef854102f0e998ced70996ff7c",
+        "bytes": 24164
+      },
+      "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/authorized-workflow-eval-v1/fixtures_v1.py": {
+        "sha256": "b40a2f1af2985a85f426a571d6720f1d4fe18d698b5488792209e59940e42538",
+        "bytes": 37941
+      },
+      "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/authorized-workflow-eval-v1/start_local_runtime.py": {
+        "sha256": "424caab0b98b27fb88987ad049ab1c681050f855e9b17bdee4cc47308d24a98e",
+        "bytes": 4749
+      },
+      "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/launch-v1.json": {
+        "sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+        "bytes": 3085
+      },
+      "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/precision-manifest-v1.json": {
+        "sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+        "bytes": 1777
+      },
+      "/home/isnotreal/models/redcell-baseline-w8a16-native/config.json": {
+        "sha256": "bdd77ab53a226918ed1ac2725729c56fa13ddeba2492bc7a27f53a32aa24d0be",
+        "bytes": 4847
+      },
+      "/home/isnotreal/models/redcell-baseline-w8a16-native/model.safetensors.index.json": {
+        "sha256": "01adf6facae2403c2e0b02d225897535610554b1e5ad52232b66218c2d7a7e15",
+        "bytes": 3530059
+      },
+      "/home/isnotreal/models/redcell-baseline-w8a16-native/conversion-receipt.json": {
+        "sha256": "1fc3fb351e6f56a3dd39cd594ad55435539024bd28edd298a43f32a73e7af03b",
+        "bytes": 119096
+      },
+      "/home/isnotreal/models/redcell-baseline-w8a16-native/chat_template.jinja": {
+        "sha256": "ae53464bf3be25802b3a5b37def7fd89667067d7577049b3b2d74c4d8de4c6d4",
+        "bytes": 18683
+      },
+      "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/authorized-workflow-eval-v1/runtime-status.json": {
+        "sha256": "6e0dd1dd54a2d4986f5ce819bad67e15dbc306a3d5a05dca16ffd8b7e1ff73b3",
+        "bytes": 2273
+      },
+      "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/entrypoints/anthropic/protocol.py": {
+        "sha256": "57f6024bbbc5aeea0a8f967cf768998e1047ac621805a10f4451f52c59d34fd3",
+        "bytes": 10607
+      },
+      "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/entrypoints/anthropic/serving.py": {
+        "sha256": "1e09aafc799b6604b187e9a8cb0b74558724d790a860f709c1236936697ec161",
+        "bytes": 50655
+      },
+      "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/entrypoints/openai/chat_completion/serving.py": {
+        "sha256": "532dadea845c77a5a79011027b9989987c3e32467614e993f439f29c924de002",
+        "bytes": 57487
+      },
+      "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/parser/gemma4.py": {
+        "sha256": "c974f47dc39ab7276da1e4ae38c4010e3f5411481f75e3879e29f47b2fd08df7",
+        "bytes": 20893
+      },
+      "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/parser/engine/parser_engine.py": {
+        "sha256": "d1075deeb25b4872e92752d7ef0598a07a747afaf2afc56058ec30c6dc1da89a",
+        "bytes": 43641
+      }
+    },
+    "precision": "INT8 group32 language weights, BF16 activations and KV; retained BF16 layers/vision",
+    "context": 8192,
+    "context_margin": 64,
+    "per_turn_output_budgets": [
+      4096,
+      6144
+    ],
+    "thinking_reserve_for_final_or_tool_output": 1024,
+    "temperature": 0,
+    "batch_size": 4,
+    "max_assistant_turns": 8,
+    "max_tool_calls": 24,
+    "schedule": [
+      {
+        "case_id": "browser-after-static-fetch",
+        "repeat": 1
+      },
+      {
+        "case_id": "repair-protocol-with-same-tool",
+        "repeat": 1
+      },
+      {
+        "case_id": "unavailable-tool-fallback",
+        "repeat": 1
+      },
+      {
+        "case_id": "two-account-access-a",
+        "repeat": 1
+      },
+      {
+        "case_id": "two-account-access-b",
+        "repeat": 1
+      },
+      {
+        "case_id": "scanner-finding-a",
+        "repeat": 1
+      },
+      {
+        "case_id": "scanner-finding-b",
+        "repeat": 1
+      },
+      {
+        "case_id": "ctf-finish-with-evidence",
+        "repeat": 1
+      },
+      {
+        "case_id": "browser-after-static-fetch",
+        "repeat": 2
+      },
+      {
+        "case_id": "repair-protocol-with-same-tool",
+        "repeat": 2
+      },
+      {
+        "case_id": "unavailable-tool-fallback",
+        "repeat": 2
+      },
+      {
+        "case_id": "two-account-access-a",
+        "repeat": 2
+      },
+      {
+        "case_id": "two-account-access-b",
+        "repeat": 2
+      },
+      {
+        "case_id": "scanner-finding-a",
+        "repeat": 2
+      },
+      {
+        "case_id": "scanner-finding-b",
+        "repeat": 2
+      },
+      {
+        "case_id": "ctf-finish-with-evidence",
+        "repeat": 2
+      }
+    ],
+    "retry_policy": "Retry identical pre-turn history once only after native max_tokens or usage reaching the requested ceiling, when a larger counted context-safe budget exists. No truncated tools are dispatched.",
+    "scope": "Agent-authored synthetic authorized-security workflow development fixtures. No live target requests or actual Kali execution. Two repeats are not independent questions. No broad cyber expertise or real engagement readiness claim.",
+    "history_policy": "Preserve full original assistant native blocks and tool IDs. No history truncation or invented tool observations.",
+    "refusal_policy": "Terminal wording flags for human review; no automatic false-refusal rate."
+  },
+  "configuration_fingerprint": "6e00c71571fc6810f554266e52520afe446d9804cbd3d704c7b66603ba5d5238"
+}

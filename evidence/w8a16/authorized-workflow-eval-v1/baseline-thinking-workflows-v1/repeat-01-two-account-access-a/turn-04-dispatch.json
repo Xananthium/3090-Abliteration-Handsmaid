@@ -1,0 +1,26 @@
+{
+  "dispatches": [
+    {
+      "turn": 4,
+      "tool_use_id": "chatcmpl-tool-a8f9d69d360ee7a7",
+      "name": "http_request",
+      "arguments": {
+        "headers": {
+          "Authorization": "Bearer fixture-alice"
+        },
+        "method": "GET",
+        "url": "https://app.ctf.test/api/records/beta-002"
+      },
+      "result": {
+        "evidence_id": "E005",
+        "ok": true,
+        "status": 403,
+        "body": {
+          "error": "forbidden",
+          "authenticated_as": "alice",
+          "record_id": "beta-002"
+        }
+      }
+    }
+  ]
+}

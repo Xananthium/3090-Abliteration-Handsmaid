@@ -1,0 +1,9 @@
+{
+  "case_id": "repair-protocol-with-same-tool",
+  "repeat": 2,
+  "turn": 2,
+  "attempt_count": 3,
+  "tool_calls": 2,
+  "known_generated_tokens": 357,
+  "updated_utc": "2026-10-17T16:40:05.699981+00:00"
+}

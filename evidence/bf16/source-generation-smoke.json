@@ -1,0 +1,26 @@
+{
+  "checkpoint": "/home/isnotreal/models/redcell-abliteration-source-bf16",
+  "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+  "test": "benign arithmetic generation",
+  "passed": true,
+  "text": "7",
+  "seconds": 4.384049501008121,
+  "response": {
+    "id": "chatcmpl-a4e0d6e0546c2e82",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "7"
+      }
+    ],
+    "model": "qwen3.6-35b-hauhau-w4a16-vision",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 27,
+      "output_tokens": 2
+    }
+  },
+  "scope": "Full BF16 source, no ablation adapter and no weight quantization; one smoke check, not a quality benchmark."
+}

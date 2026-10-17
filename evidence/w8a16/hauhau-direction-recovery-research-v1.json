@@ -1,0 +1,597 @@
+{
+  "schema_version": 1,
+  "status": "research_complete_no_weight_recovery_or_model_execution_performed",
+  "created_utc": "2026-10-16T01:46:20Z",
+  "question": "Can paired Hauhau Gemma and vanilla Gemma checkpoint differences recover edited layers or directions, and can those edits inform integrity-preserving iteration on separately fine-tuned REDCELL?",
+  "recommendation": "Prioritize the now-authorized CPU-only Gemma recovery pilot: mapping controls, F16 shared-down layers 27 and 0, then the remaining five F16 targets only if alignment is established. Stable low-rank edit recovery and recovery of the original edit operator are separate outcomes. Neither proves causal refusal mediation or transfer to REDCELL. Keep the original W8 baseline and current evaluation artifacts immutable.",
+  "scope": {
+    "research_actions": [
+      "Primary-paper and official-code web research",
+      "Read-only local metadata inspection",
+      "Coordination with independent artifact audit"
+    ],
+    "model_payload_downloads_performed_by_this_agent": 0,
+    "model_calls": 0,
+    "gpu_calls": 0,
+    "runtime_changes": 0,
+    "candidate_builds": 0,
+    "pinned_files_modified": 0,
+    "only_new_output": "hauhau-direction-recovery-research-v1.json",
+    "external_evidence_limit": "Paper and implementation findings are not runtime validation on this Gemma4/REDCELL pair. Plans below are proposed future diagnostics, not executed work.",
+    "latest_authorization_note": "While this research memo was being finalized, the parent authorized a separate artifact agent to run the bounded F16 tensor pilot. This agent did not duplicate payload acquisition or computation and sent the mathematical/control recommendations directly."
+  },
+  "evidence_ranked_conclusions": [
+    {
+      "level": "direct local provenance plus upstream metadata",
+      "finding": "Hauhau's pinned Q8_K_P artifact has seven F16 shared-down matrices, so the first pilot need not begin with quantized attention or expert matrices. Google and Unsloth advertise identical complete weight-shard hashes across audited release, pre-Hauhau, and current snapshots.",
+      "limit": "The exact download revision and private edit history used by Hauhau are not attested. Matching public weight contents substantially narrows this uncertainty but does not exclude private preprocessing, fine-tuning, or merging.",
+      "source_ids": [
+        "local_artifact_audit"
+      ]
+    },
+    {
+      "level": "algebra plus peer-reviewed mechanistic evidence",
+      "finding": "For a plain left projection of a canonical output-by-input matrix, a nonzero rank-one difference reveals the projected output-space axis up to sign. Fit the projection relation against the parent matrix; low rank alone is insufficient.",
+      "limit": "Normalization, multiple directions, fine-tuning, quantization and mismatched tensor coordinates can invalidate the simple rank-one model.",
+      "source_ids": [
+        "arditi2024",
+        "weightwatch",
+        "heretic_code"
+      ]
+    },
+    {
+      "level": "architecture implementation",
+      "finding": "Gemma4 has learned normalization after attention and on shared/expert MLP paths. A direction recovered from an o_proj/down_proj weight delta lives before these normalizations.",
+      "limit": "It is not automatically the same vector at the residual stream intervention point. Do not claim exact activation-ablation equivalence without auditing placement and all relevant residual writers.",
+      "source_ids": [
+        "gemma4_forward"
+      ]
+    },
+    {
+      "level": "empirical transfer evidence with limited scope",
+      "finding": "Related-model transfer has been demonstrated for some steering operators, and fine-tuning can change behavior without undoing an earlier weight edit.",
+      "limit": "Neither result validates transfer from a quantized Hauhau Gemma4 MoE checkpoint to REDCELL. No universal refusal layer or unique direction is established.",
+      "source_ids": [
+        "transfer2026",
+        "finetune2026",
+        "geometry2025"
+      ]
+    },
+    {
+      "level": "maintainer experience and resolved implementation discussion",
+      "finding": "Allow MLP strength zero as an experimental option; do not categorically exclude MLP edits. Evaluate thinking completion, correctness and output format in addition to first-token distribution metrics.",
+      "limit": "Issue reports are not controlled evidence that MLP edits or a particular direction cause REDCELL regressions.",
+      "source_ids": [
+        "heretic202",
+        "heretic253"
+      ]
+    }
+  ],
+  "local_lineage": {
+    "hauhau": {
+      "repo": "HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced",
+      "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+      "file": "Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+      "file_bytes": 27275669856,
+      "file_sha256_from_retained_receipt": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d",
+      "declared_parent": "google/gemma-4-26B-A4B-it",
+      "retained_header_tensor_counts": {
+        "F32": 392,
+        "Q8_0": 207,
+        "F16": 59,
+        "total": 658
+      },
+      "f16_shared_down_layers": [
+        0,
+        1,
+        2,
+        25,
+        26,
+        27,
+        28
+      ],
+      "f16_shared_down_shape": [
+        2816,
+        2112
+      ],
+      "f16_shared_down_bytes_each": 11894784,
+      "attention_and_expert_down_storage": "Q8_0",
+      "raw_gguf_and_our_w6_local_weights_removed": true,
+      "clean_delta_or_directions_found": false,
+      "method_limit": "Historical Reaper 2.5.2 author code has now been recovered from its original package CDN and inspected, but the Gemma release's actual version, parameters, directions and run recipe remain unproven.",
+      "header_provenance": "Independent artifact agent verified the retained 15,822,240-byte header against an immutable-revision HTTP 206 response; no model payload was downloaded for that verification.",
+      "header_sha256": "3b8634bf0cd2effdd9993bf546e81eb5f08094a85fc979645d2b6357b1113e20",
+      "imatrix_metadata": "Header records an imatrix path, groups_merged.txt, 295 entries and 93 chunks. These are not the calibration contents or a reproducible quantizer command.",
+      "historical_code_recovered": {
+        "package": "reaper-abliteration 2.5.2",
+        "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/sources/reaper-2.5.2.whl",
+        "sha256": "9df0c1541cf357824d2abad9ed1a6237c8a34552f25d2a17a04db9b7d7e66192",
+        "member": "reaper_abliteration/model.py",
+        "member_sha256": "a50b90b422fe28a92886948a47146594e728f12aa671cd2d297b1f7c96659158",
+        "inspected_as_zip_text_only": true,
+        "installed_or_executed": false,
+        "exact_gemma_run_proven": false
+      }
+    },
+    "public_vanilla_weight_identity": {
+      "google_revisions_checked": [
+        "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+        "462a98a12e28e2cbcfccaf78fe41e3e50235e6ae",
+        "4d7ae4984b7db7de8f8457170b3f1a419ee76d52"
+      ],
+      "unsloth_current_revision": "60941ad6341d0b7af91277ff25c4175f08b56819",
+      "unsloth_prior_snapshot": "April 20 snapshot recorded in unsloth-pre-hauhau-files.json",
+      "identical_advertised_shards": [
+        {
+          "file": "model-00001-of-00002.safetensors",
+          "bytes": 49907246508,
+          "sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+        },
+        {
+          "file": "model-00002-of-00002.safetensors",
+          "bytes": 1704763408,
+          "sha256": "aab47033e1e8a492ef8e581efae1cf36478d0433567e7729b3c1728bc8970db7"
+        }
+      ],
+      "verification_kind": "Compared saved upstream file metadata and advertised LFS SHA256s; did not download or rehash these complete shards.",
+      "remaining_difference": "Config, tokenizer and chat-template revisions can differ even when all weight bytes match. Pin them separately for any behavioral comparison.",
+      "unsloth_prior_revision": "cd98c13581a9d4ad061cb85d983232ca4edb1343"
+    },
+    "redcell": {
+      "repo": "terrorswift/REDCELL-26B-A4B-OSINT-Cyber-APEX-GGUF",
+      "original_revision": "ba311d958b4ed191a7291b38a6d805662415a570",
+      "original_file": "REDCELL-26B-A4B-OSINT-Cyber-f16.gguf",
+      "original_sha256": "26cc25c909a26f8ed08a78444295ac174e7f329f8fb39ebae98f42d4115a7011",
+      "declared_parent": "unsloth/gemma-4-26B-A4B-it",
+      "author_method": "16-bit LoRA supervised fine-tuning on a vanilla base; not an abliterated starting model.",
+      "original_specialist_adapter_or_corpus_available_locally": false,
+      "local_source": "/home/isnotreal/models/redcell-abliteration-source-bf16",
+      "local_source_limit": "Restored from author F16 GGUF with F16-to-BF16 rounding; this is not a byte-identical upstream training checkpoint.",
+      "working_baseline": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+      "working_baseline_precision": "INT8 group32 weights with BF16 activations; cumulative candidate deltas should remain separate from these fixed quantized codes/scales.",
+      "forbidden_subtraction": "Hauhau minus REDCELL is not a clean Hauhau edit: it also subtracts the specialist fine-tune and mixes format errors."
+    }
+  },
+  "recovery_mathematics": {
+    "notation": "B is the canonical parent weight, H is the aligned edited weight, Delta=H-B. For linear o/down weights, B has shape [output,input]. The following are algebraic hypotheses and diagnostics, not claims about Hauhau's undisclosed construction.",
+    "plain_projection": {
+      "equation": "H=(I-lambda*r*r^T) B, ||r||2=1; Delta=-lambda*r*(r^T B).",
+      "recoverable": "If Delta is nonzero and the projection hypothesis holds, rank(Delta)<=1 and the leading left singular vector is +/-r. The right singular vector belongs to input coordinates and generally is not r.",
+      "embedding_orientation": "For an embedding stored as [vocabulary,hidden], the same hidden-space operation acts on the right; the hidden direction is a right singular vector. Determine orientation from actual forward code and canonical mapping, not a name or GGUF dimension list alone.",
+      "sign": "The projector r*r^T is invariant under r -> -r. SVD cannot tell which sign of activation addition corresponds to refusal. The scalar fit diagnoses contraction-like geometry relative to B, not behavioral meaning.",
+      "fit": "For P=r*(r^T B), lambda_hat=-<Delta,P>F/||P||F^2. Report ||Delta+lambda_hat*P||F/||Delta||F and ||r^T B||2. A tiny denominator makes the fit uninformative.",
+      "rank_one_caution": "A general rank-one LoRA update u*v^T need not be a projection of B. Test the right-factor relationship as well as rank-one energy.",
+      "coefficient_caution": "Do not assume lambda=1. For the plain operator, 0<lambda<1 attenuates, lambda=1 removes, and larger lambda can reverse or amplify the component."
+    },
+    "low_rank_and_eigen_diagnostics": {
+      "metrics": [
+        "Relative Frobenius edit size ||Delta||F/||B||F",
+        "E1=sigma1^2/||Delta||F^2 and E3=sum(first three sigma^2)/||Delta||F^2",
+        "Top-k spectrum and spectral gaps, k at most 8 in the pilot",
+        "Projection-fit residual and coefficient",
+        "Principal angles between recovered subspaces across related tensors",
+        "Direction stability across deterministic column splits and solver seeds"
+      ],
+      "aggregation": "For matrices sharing output coordinates, the dominant eigenvectors of sum_m w_m*Delta_m*Delta_m^T find common output-space change. Equivalent to SVD of horizontally concatenated weighted deltas. Implement streamed matrix-vector products; avoid concatenating the whole checkpoint.",
+      "weighting": "Report attention, shared MLP, and experts separately. Otherwise 128 experts per layer can dominate an aggregate by count. Without routing activations, weight norms do not identify expert usage or behavioral importance.",
+      "numerical_practice": "Subtract stored values after promotion to FP32 or FP64. Use a deterministic top-k solver and verify the small pilot with residual checks and a second seed. FP64 improves computation accuracy but cannot restore lost checkpoint precision. Near-equal singular values identify a subspace, not unique basis vectors. For a raw rank-k subspace test, learn U independently from even and odd input columns and report principal angles plus ||(I-U_train*U_train^T)Delta_test||F/||Delta_test||F. Fit scalar/operator parameters only on training columns before computing held-out residuals.",
+      "identifiability": "An arbitrary output operator inferred from Delta*pinv(B) is not unique when B lacks full row rank and can fit noise. A 2816x2112 shared-down matrix cannot constrain every output-space operator. Prefer testing specific low-rank hypotheses over interpreting a dense pseudoinverse fit.",
+      "precision_diagnostic": "Record the fraction of stored Hauhau F16 values exactly representable in BF16 and compare F16/BF16 rounding envelopes. This can reveal a possible merged-weight precision fingerprint but is not proof of the original arithmetic precision."
+    },
+    "normalization_and_recipe_limits": {
+      "weight_row_normalization": "Some implementations normalize weight rows before projection and restore their magnitudes afterward. Pre-normalization changes the apparent left axis; full magnitude restoration creates additional components and may be approximated by rank greater than one. A failed rank-one fit therefore does not rule out an ablation-derived edit.",
+      "heretic_example": "Official Heretic code supports none/pre/full row normalization, defaults full with rank 3, and uses an SVD approximation after row-norm restoration. This illustrates model families to test; it is not attribution of Hauhau's recipe.",
+      "runtime_norm_placement": "Gemma4 applies learned RMSNorm scales after attention and on shared/expert MLP paths before residual addition. Those coordinate scales and activation-dependent normalization mean a raw matrix-output direction must be distinguished from a post-norm residual direction.",
+      "normalization_limit": "Do not infer that simply multiplying or dividing a recovered vector by one norm tensor reproduces the original intervention; verify the complete forward path and all relevant scales.",
+      "historical_reaper": {
+        "code_locations": "reaper_abliteration/model.py:950-958, 980-1046",
+        "raw_rank1": "A=v^T W, B=-scale*v.",
+        "norm_preserve": "Let delta=B*A. For each output row, s_i=clamp(-2*<W_i,delta_i>/max(||delta_i||2^2,1e-12),0,2); replace B by diag(s)*B.",
+        "consequence": "Rank remains at most k, but the left factor becomes row-scaled and need not be parallel to the original direction. The resulting left operator can be nonsymmetric. Thus excellent rank-one recovery can coexist with a poor symmetric r*r^T projection fit.",
+        "rankk": "The code uses ordered Gram-Schmidt directions, weight-dependent right factors and per-direction scales; optional sparsity can alter the right factors. These are additional hypotheses, not provenance of this Gemma run.",
+        "norm_test": "Report per-row norm ratios and relative changes for rows above a declared small-norm floor. Near-constant row norms support a norm-preservation hypothesis but do not identify this code uniquely; clamping and rounding can leave exceptions.",
+        "source_id": "reaper_historical"
+      }
+    },
+    "general_operator_identifiability": {
+      "general_form": "Delta=L*W, with L acting in output coordinates.",
+      "down_constraint": "Each canonical shared-down W is 2816x2112 and therefore cannot have full row rank. If N*W=0, then L and L+N produce the same observed Delta. A unique general 2816x2816 operator cannot be inferred from one such pair.",
+      "restricted_fit": "Fitting C=U^T Delta to A=U^T W with a small M, so Delta_hat=-U*M*U^T W, tests a same-input/output-subspace operator. It is useful and cheap but is not a fully general low-rank operator fit.",
+      "historical_limit": "Reaper's row-scaled output factor and original input-side direction need not span the same subspace, so a poor restricted fit must be labeled operator_unknown rather than low_rank_recovery_failed.",
+      "possible_disambiguation": "A wider attention output W with full row rank can in principle identify L=Delta*W^T*(W*W^T)^(-1), or recover the input-side low-rank factors. Conditioning and Q8 noise require regularization and held-out checks; this is a proposed follow-up, not part of the current seven-F16 pilot.",
+      "shared_operator_limit": "Stacking multiple pairs can remove rank deficiency only if the same operator is justified across them, including component coefficients, row normalization and coordinate mapping. Do not assume the shared and attention operators, or directions across layers, are identical.",
+      "no_transfer_until_resolved": "A stable left singular axis alone can seed a clearly labeled exploratory candidate, but it cannot be presented as the recovered original refusal direction. A faithful operator-transfer claim needs the stronger identification evidence."
+    }
+  },
+  "quantization_and_alignment": {
+    "observed_delta": "Delta_observed = Delta_edit + export_rounding + quantization_error + any parent/mapping/other-training mismatch.",
+    "information_loss": "Dequantization returns the stored approximate weights. Multiple original weights map to the same code/scale bins, so the exact prequantization edit generally cannot be recovered uniquely.",
+    "noise_controls": [
+      "First use F16 Hauhau shared-down tensors against the advertised matching BF16 Google weights, preserving each stored representation when promoting for subtraction.",
+      "Compute a no-edit BF16-to-F16 export control and record underflow/overflow or changed values rather than assuming this conversion is exact.",
+      "For Q8_0 tensors, simulate the documented reference block quantizer on the same parent and compare its difference spectrum; also compare H_dequant with Q(B)_dequant.",
+      "Matched quantization reduces format confounds but does not cancel error exactly: edited weights change block maxima and bins. Unknown historical quantizer options or imatrix content remain limitations.",
+      "Use empirical noise spectra, spectral separation, held-out column stability and cross-tensor operator agreement together. Do not import rank-one thresholds from BF16 dense-model studies as calibrated GGUF thresholds."
+    ],
+    "q8_code_evidence": "Official Q8_0 reference code uses blockwise maximum scaling, F16 stored scale and rounded signed integer codes. The Q8_K_P marketing name is a mixed tensor policy here, not a single canonical tensor dtype.",
+    "canonicalization_checklist": [
+      "Pin source model revision, advertised full-file hash, file size, byte offsets, per-range hashes and Content-Range before any future range acquisition.",
+      "Use architecture-specific HF-to-GGUF tensor mapping; validate byte order, output/input axes, expert order, fused gate/up split and transposes against retained headers.",
+      "Preserve expert identity jointly across router rows, gate/up/down weights and per-expert scales. Do not independently sort or align each expert matrix by nearest norm.",
+      "Check layer order, shared-KV configuration, attention type/head dimensions, tokenizer/embedding padding and tied embeddings separately.",
+      "Distinguish generated RoPE helper tensors from trained weight edits; do not blindly apply a Llama Q/K permutation to Gemma4.",
+      "Current official Gemma4 converter overrides norm_shift to zero; do not apply Gemma3's plus-one norm conversion rule.",
+      "Current converter maps per_expert_scale to expert-down scale; NVFP4 paths can fold it into quantization scales. That current implementation is a comparison reference, not evidence that this Q8 artifact used NVFP4 or a particular export revision.",
+      "Known shared ancestry makes unchanged expert ordering plausible, but identical shape alone does not prove alignment. Stop attribution if controls reveal unexplained permutations or scale transforms."
+    ],
+    "source_ids": [
+      "gguf_conversion",
+      "gguf_quantization",
+      "rebasin",
+      "wedin"
+    ]
+  },
+  "detecting_edits_versus_refusal": {
+    "weight_only_can_support": [
+      "Which inspected matrices differ beyond export noise",
+      "Whether differences match a low-rank projection or a broader edit family",
+      "Candidate output-space axes/subspaces and per-layer coefficients",
+      "Whether directions align across attention, shared MLP and selected experts"
+    ],
+    "weight_only_cannot_establish": [
+      "That an edit was caused by a specific tool or training dataset",
+      "That the leading singular direction uniquely represents refusal",
+      "Which sign induces refusal",
+      "Which edited layer is causally most important",
+      "That REDCELL retains the same behavioral dependence",
+      "That benign capability preservation implies safety or universal reliability"
+    ],
+    "causal_standard": "Behavioral attribution requires controlled interventions and matched baselines: candidate direction versus sham and norm-matched random direction, layer-specific interventions, reversal/restoration when possible, held-out inputs, and outcome measures that distinguish answering quality, format, refusal and truncation.",
+    "benign_scope": "Within the present scope, use legitimate requests that the baseline wrongly declines plus ordinary reasoning/instruction/recovery/tool/vision checks. This can support causal claims about benign over-refusal and capability preservation on those tests. It cannot establish all refusal behavior or harmful-request safety, and this memo creates no such test content.",
+    "evidence_limit": "A weight-derived axis that merely correlates with activations or changes answers should be labeled a candidate edit direction until intervention-specific evidence supports a more precise behavioral description.",
+    "source_ids": [
+      "arditi2024",
+      "weightwatch",
+      "geometry2025",
+      "checkpoint_audit2026",
+      "jain2024"
+    ]
+  },
+  "transfer_and_staged_iteration": {
+    "distinction": {
+      "copied_delta": "If H=(I-lambda*r*r^T)B, transplanting the observed edit gives R_copy=R-lambda*r*r^T B.",
+      "transferred_operator": "Applying the hypothesized same operator to REDCELL gives R_operator=R-lambda*r*r^T R.",
+      "difference": "R_operator-R_copy=-lambda*r*r^T*(R-B).",
+      "interpretation": "The second operation acts on REDCELL's actual weight component; the first reuses a base-specific numerical update. Neither is automatically behaviorally appropriate. With row normalization, apply the whole fitted weight-dependent recipe rather than substituting this plain formula.",
+      "working_base": "Any future weight-dependent factors should be computed from the current W8 dequantized working weights, explicitly labeled by their weight source and direction source. This does not make the direction freshly measured on W8 activations."
+    },
+    "sequential_projection": {
+      "equation": "For P_i=I-lambda_i*r_i*r_i^T, P2*P1*W contains a cross-term lambda1*lambda2*r2*(r2^T*r1)*(r1^T*W).",
+      "implication": "Two deltas independently computed from W and simply added omit that cross-term. Projection order generally matters unless the projectors commute. An exact repeated full projection onto the same axis is idempotent; additional passes are not automatically additional progress.",
+      "nonlinear_limit": "Even orthogonal directions can interact through later nonlinear layers, normalization and MoE routing. A newly accepted candidate changes the state on which subsequent directions and layer importance should be measured."
+    },
+    "cumulative_lora": {
+      "exact_additive_representation": "For fixed updates C_i=s_i*B_i*A_i, their sum can be represented by concatenating scaled factors at increased rank. Compare effective deltas C, not individual factors, because LoRA bases have a change-of-basis freedom.",
+      "staged_representation": "If a second edit is constructed on W0+C1, retain C_total=C1+delta2(W0+C1) over the original fixed W8 base. This records the actual staged construction without repeatedly requantizing the base.",
+      "constraints": "Rank can grow. Compression back to the runtime rank limit is a new approximation that needs its own error receipt and behavioral checks. Keep exact LoRA scaling, zero-effect compatibility padding, and distinct candidate IDs.",
+      "protocol": "Use untouched W8 for initial parameter search and as the permanent evaluation anchor. Promote a candidate to a staged source only after predetermined capability and behavioral criteria pass; record all ancestors and cumulative deltas. No current candidate is declared qualified by this research."
+    },
+    "source_ids": [
+      "task_arithmetic",
+      "task_singular_vectors",
+      "geometry2025",
+      "transfer2026",
+      "finetune2026"
+    ]
+  },
+  "bounded_next_sequence": [
+    {
+      "priority": 1,
+      "action": "Run the parent's authorized CPU-only Gemma tensor pilot, owned by the artifact audit agent.",
+      "budget": "One CPU/BLAS thread, 1 GiB process RAM, 512 MiB total new disk, low priority, no GPU or inference. Exact runtime is not yet benchmarked. Seven F16 down pairs plus q/router/norm controls are estimated at 206.97 MiB raw and 222.18 MiB with fresh headers.",
+      "phase_a": {
+        "target": "The seven F16 shared-down tensors at layers 0,1,2,25,26,27,28 and their matching Google parent tensors.",
+        "pair_payload_bytes": 166526976,
+        "pair_payload_mib": 158.8125,
+        "first_smoke_pair": "Layer 0: 23,789,568 bytes, about 22.69 MiB, excluding headers and controls.",
+        "operations": [
+          "Validate mapping and export-only control",
+          "Compute top at most eight singular components",
+          "Fit plain and row-normalized projection hypotheses without forcing success",
+          "Record full versus low-rank residuals, coefficient, numerical stability and all source range hashes",
+          "Keep low-rank recovery and original-operator recovery as distinct verdicts, including nonsymmetric historical Reaper possibilities"
+        ],
+        "order": [
+          27,
+          0,
+          1,
+          2,
+          25,
+          26,
+          28
+        ],
+        "expansion_condition": "Validate controls first, inspect layers 27 and 0, then acquire the remaining five only if alignment is established."
+      },
+      "phase_b": {
+        "target": "At most sixteen Q8 pairs: layers 5,11,17,23, each with attention output, shared MLP down, expert 0 down and expert 63 down.",
+        "reason": "The F16 targets are concentrated near the stack ends and may be untouched even if middle layers were edited. A small middle-layer sample avoids treating a null F16 result as a whole-model negative.",
+        "conditions": "Use matched Q8/export controls; fetch single-expert slices only after verifying contiguous expert layout and block boundaries. If ranges exceed the fixed payload cap, stop and report the exact shortfall.",
+        "authorization": "Not included in the currently authorized seven-F16 pilot. This is a bounded possible follow-up requiring a separate decision after the pilot result."
+      },
+      "stop_conditions": [
+        "Parent/mapping controls fail: report alignment_unproven_or_additional_edits",
+        "No stable interpretable signal within the authorized tensor sample: report inconclusive rather than whole-model absence",
+        "Solver residual/stability checks fail",
+        "Resource/time budget is exhausted"
+      ],
+      "output": "A weight-edit recovery receipt with candidate subspaces, uncertain/unidentified targets and no refusal-attribution label."
+    },
+    {
+      "priority": 2,
+      "action": "Let the already-running matched W8 evaluations finish in parallel where they do not interfere with the prioritized CPU pilot; interpret them before qualifying any next-pass candidate.",
+      "reason": "Direct local behavior under the user's thinking mode is stronger decision evidence than transfer hypotheses or forum anecdotes.",
+      "controls": "Keep original baseline, thinking on/off, budgets, exact/semantic scoring distinctions, repeated controls, tool/vision results, termination and truncation separate."
+    },
+    {
+      "priority": 3,
+      "action": "Only if the pilot gives interpretable structure, decide whether a bounded all-layer map or fresh W8 activation study is the more informative next step.",
+      "options": "An all-layer attention/shared-down map would localize edits; fresh native-W8 activation measurement would test current REDCELL relevance. Parent separately audits the latter's feasibility and budget.",
+      "limit": "Do not automatically expand to every expert or reconstruct the full Hauhau model. The sampled expert results do not establish complete expert coverage."
+    },
+    {
+      "priority": 4,
+      "action": "Use a small controlled reversible candidate comparison after current results and only within the approved benign protocol.",
+      "knobs": [
+        "Component isolation: include attention-only/MLP-strength-zero as an option, while retaining nonzero MLP alternatives when evidence supports them",
+        "Lower strength or a single prespecified layer band rather than assuming stronger/all-layer edits improve quality",
+        "Compare any transferred Hauhau-derived operator with a matched sham/random-direction control and the original W8 baseline"
+      ],
+      "no_claim": "These are experiment choices, not predicted improvements. Shared and expert MLPs should remain distinguishable.",
+      "issue_basis": "Heretic #202 was resolved through a zero MLP floor, not blanket MLP exclusion; #253 supports monitoring long thinking termination but provides anecdotal, confounded reports."
+    },
+    {
+      "priority": 5,
+      "action": "Consider staged iteration only after a candidate passes the fixed acceptance criteria.",
+      "reason": "Newly measured residual behavior/directions and a cumulative delta over original W8 make the next pass interpretable and reversible.",
+      "no_requantization": "Do not make repeated quantized checkpoint exports the source of each trial. Any final merge/quantization is a separate artifact and validation step if later requested."
+    }
+  ],
+  "primary_sources": [
+    {
+      "id": "arditi2024",
+      "title": "Refusal in Language Models Is Mediated by a Single Direction",
+      "url": "https://arxiv.org/html/2406.11717v3",
+      "kind": "NeurIPS 2024 paper",
+      "relevance": "Derives residual-output weight orthogonalization and validates refusal-direction interventions in its model suite; appendix examines base/chat relations.",
+      "limit": "Not Gemma4 MoE, and its exact intervention-equivalence assumptions must be rechecked with post-output normalization."
+    },
+    {
+      "id": "weightwatch",
+      "title": "Watch the Weights: Unsupervised monitoring and control of fine-tuned LLMs",
+      "url": "https://arxiv.org/html/2508.00161v3",
+      "code_url": "https://github.com/fjzzq2002/WeightWatch",
+      "code_detail_url": "https://raw.githubusercontent.com/fjzzq2002/WeightWatch/main/src/worker.py",
+      "kind": "Research paper and official implementation",
+      "relevance": "Uses left singular vectors of aligned o_proj/down_proj checkpoint differences. Official code explicitly promotes to FP32, subtracts weights and extracts top left singular vectors.",
+      "limit": "General behavior-change directions are not automatically refusal directions. Their code loads models and is not an appropriate drop-in for this bounded no-model-load pilot. Alignment and access to the reference are assumptions."
+    },
+    {
+      "id": "jain2024",
+      "title": "What Makes and Breaks Safety Fine-tuning? A Mechanistic Study",
+      "url": "https://papers.nips.cc/paper_files/paper/2024/hash/a9bef53eb7b0e5950d4f2d9c74a16006-Abstract-Conference.html",
+      "code_url": "https://github.com/fiveai/understanding_safety_finetuning",
+      "kind": "NeurIPS 2024 paper and official code",
+      "relevance": "Studies targeted MLP changes and activation geometry under safety fine-tuning.",
+      "limit": "Controlled synthetic setting with supporting Llama experiments; does not show that every low-rank MLP difference has the same mechanism."
+    },
+    {
+      "id": "geometry2025",
+      "title": "The Geometry of Refusal in Large Language Models: Concept Cones and Representational Independence",
+      "url": "https://arxiv.org/html/2502.17420",
+      "kind": "ICML 2025 paper",
+      "relevance": "Finds multiple refusal-mediating directions and shows that Euclidean orthogonality does not ensure causal independence across a nonlinear model.",
+      "limit": "Supports testing interaction and subspaces rather than assuming one universal refusal axis; no Hauhau/REDCELL experiment."
+    },
+    {
+      "id": "transfer2026",
+      "title": "From Refusal Tokens to Refusal Control: Discovering and Steering Category-Specific Refusal Directions",
+      "url": "https://arxiv.org/html/2603.13359v1",
+      "code_url": "https://github.com/RishabSA/interp-refusal-tokens",
+      "kind": "2026 author-posted research paper and code",
+      "relevance": "Reports transfer of a learned low-rank intervention from Refuse-Llama to Llama 3 8B Instruct and DeepSeek R1 Distill Llama, with smaller effects than in the source model.",
+      "limit": "A specific trained activation operator on related Llama models, not a guarantee for a weight-derived quantized Gemma4 edit."
+    },
+    {
+      "id": "finetune2026",
+      "title": "Does Fine-Tuning Undo Activation Steering? Behavioural Recovery Without Weight-Edit Reversal",
+      "url": "https://arxiv.org/html/2608.24988v1",
+      "kind": "2026 arXiv manuscript; authors state EMNLP 2026 acceptance",
+      "relevance": "Across five 3B-14B models, reports substantial behavioral changes after ordinary training despite small reversal of the embedded weight edit.",
+      "limit": "Full-parameter fine-tuning, not Gemma4/REDCELL LoRA SFT; quantization and parameter-efficient adaptation are explicitly not established by its experiments."
+    },
+    {
+      "id": "checkpoint_audit2026",
+      "title": "Has This Checkpoint Been Abliterated? A Two-Signal Audit and Its Failure Map",
+      "url": "https://arxiv.org/html/2607.01854v1",
+      "kind": "2026 research preprint",
+      "relevance": "Combines spectral weight-difference evidence with an activation signal and documents false positives from benign edits.",
+      "limit": "Its committed negative set contains no quantizations. Its threshold and reported accuracy must not be treated as calibrated for this GGUF case. Used here for limitations, not as a validated detector."
+    },
+    {
+      "id": "task_arithmetic",
+      "title": "Editing Models with Task Arithmetic",
+      "url": "https://arxiv.org/abs/2212.04089",
+      "kind": "ICLR 2023 paper",
+      "relevance": "Provides empirical motivation for manipulating differences relative to a common parent.",
+      "limit": "Does not guarantee preservation when copying this Hauhau delta into REDCELL or under quantization mismatch."
+    },
+    {
+      "id": "task_singular_vectors",
+      "title": "Task Singular Vectors: Reducing Task Interference in Model Merging",
+      "url": "https://arxiv.org/abs/2412.00081",
+      "kind": "CVPR 2025 paper",
+      "relevance": "Studies layer-level low-rank task changes and interference between their singular subspaces.",
+      "limit": "Motivates inspecting interactions; its benchmark results are not predictions for refusal edits in this MoE model."
+    },
+    {
+      "id": "rebasin",
+      "title": "Git Re-Basin: Merging Models modulo Permutation Symmetries",
+      "url": "https://arxiv.org/abs/2209.04836",
+      "kind": "ICLR 2023 paper",
+      "relevance": "Functionally equivalent permutations can alter raw parameter coordinates, so correspondence matters before subtraction.",
+      "limit": "Does not supply a validated Gemma4 expert-alignment procedure; conservative provenance and mapping checks remain necessary."
+    },
+    {
+      "id": "wedin",
+      "title": "Perturbation bounds in connection with singular value decomposition",
+      "url": "https://link.springer.com/article/10.1007/BF01932678",
+      "kind": "Original numerical-analysis paper, 1972; publisher abstract inspected",
+      "relevance": "Establishes sensitivity of singular subspaces under perturbations.",
+      "limit": "Qualitative motivation for requiring spectral separation and stability. No numerical error bound is claimed here because the true Hauhau quantization perturbation is unknown."
+    },
+    {
+      "id": "gemma4_forward",
+      "title": "Transformers Gemma4 implementation",
+      "url": "https://github.com/huggingface/transformers/blob/main/src/transformers/models/gemma4/modeling_gemma4.py",
+      "raw_url": "https://raw.githubusercontent.com/huggingface/transformers/main/src/transformers/models/gemma4/modeling_gemma4.py",
+      "kind": "Official architecture code inspected 2026-10-16",
+      "relevance": "Gemma4RMSNorm, Gemma4TextRouter and Gemma4TextDecoderLayer expose learned post-output scales, expert routing and residual-path placement.",
+      "limit": "Moving upstream branch; historical source/export implementations still require their own pins."
+    },
+    {
+      "id": "gguf_conversion",
+      "title": "llama.cpp Gemma conversion implementation",
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/conversion/gemma.py",
+      "kind": "Official converter code inspected 2026-10-16",
+      "relevance": "Gemma4 norm_shift=0, generated proportional-RoPE helper, per-expert-scale naming and special NVFP4 scale folding are explicit.",
+      "limit": "Current code documents architecture-specific pitfalls; it does not identify the exact historical converter used for the Hauhau Q8 release."
+    },
+    {
+      "id": "gguf_quantization",
+      "title": "llama.cpp quantization reference implementation",
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/ggml/src/ggml-quants.c",
+      "kind": "Official quantization code inspected 2026-10-16",
+      "relevance": "quantize_row_q8_0_ref documents block scale, F16 scale storage and signed-code rounding.",
+      "limit": "The exact historical quantizer build and options are not recovered. Unknown transforms and mixed-tensor policy remain part of the error budget."
+    },
+    {
+      "id": "heretic_code",
+      "title": "Heretic abliteration modifier",
+      "url": "https://github.com/p-e-w/heretic/blob/master/src/heretic/modifiers/abliteration.py",
+      "raw_url": "https://raw.githubusercontent.com/p-e-w/heretic/master/src/heretic/modifiers/abliteration.py",
+      "kind": "Official implementation inspected 2026-10-16",
+      "relevance": "Shows weight-dependent factors, none/pre/full row normalization and a rank-limited SVD after full magnitude restoration.",
+      "limit": "An illustrative implementation family and the basis of our own starter pipeline; not evidence that Hauhau used it."
+    },
+    {
+      "id": "heretic202",
+      "title": "Heretic issue #202: Should we stop ablating the MLP?",
+      "url": "https://github.com/p-e-w/heretic/issues/202",
+      "resolution_url": "https://github.com/p-e-w/heretic/pull/387",
+      "kind": "Maintainer discussion and linked merged resolution",
+      "relevance": "Maintainer reports some Gemma/Qwen models benefit from MLP ablation. The June resolution permits a zero MLP-strength floor so the search can disable it, rather than removing MLP targets.",
+      "limit": "Experience and contributor experiments, not controlled evidence about Gemma4 REDCELL. The issue's later resolution matters more than its initial proposal."
+    },
+    {
+      "id": "heretic253",
+      "title": "Heretic issue #253: Reasoning degradation and incoherent thinking loops",
+      "url": "https://github.com/p-e-w/heretic/issues/253",
+      "kind": "User report and maintainer response",
+      "relevance": "Reports nonterminating thinking in third-party quantized merged models; reinforces measuring complete thinking responses and termination.",
+      "limit": "Reporter lacked a matched unedited-base comparison; exact upstream methods were unknown. Maintainer disputed a universal silhouette gate and emphasized testing. This is anecdotal evidence, not proof of causation in REDCELL."
+    },
+    {
+      "id": "reaper_historical",
+      "title": "reaper-abliteration 2.5.2 original distribution wheel",
+      "url": "https://files.pythonhosted.org/packages/60/9a/d7134fef086f8f263623e280735dcaa6c356c04c2002608bc323aa5808a8/reaper_abliteration-2.5.2-py3-none-any.whl",
+      "kind": "Historical primary code artifact; metadata author HauhauCS; original-CDN equality verified by artifact agent",
+      "relevance": "Contains plain row/column projection factors, ordered rank-k directions, optional right-factor sparsity and per-row norm-preserving output-factor scaling.",
+      "limit": "The exact Gemma release was not proven to use this package version or these options. Read as text only; no installation or execution."
+    }
+  ],
+  "local_evidence": [
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-reuse-feasibility-v1.json",
+      "sha256": "3221c176b9611cdf1b8514473da9b08c3c8c752ea439e5e3e7ecc01e1002c1b9"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-recovery-audit-20261016/hauhau-saved-gguf-header.json",
+      "sha256": "2d1889b70d260c31ced155cfb5d936a633eef4522039a746d155e216494bdced"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-recovery-audit-20261016/hauhau-header-range-verification.json",
+      "sha256": "a8e7c4d0e8d1f7406a424a1b95630eaa7cd5c91416d00d264b1895fcfe27a813"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-recovery-audit-20261016/google-files.json",
+      "sha256": "0d428a69fd6afc331d83ec7d9018dd3f17abc7738a9692f8894de646fcbcd6e5"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-recovery-audit-20261016/google-release-files.json",
+      "sha256": "af1d9c3da0db268a82e77179e471c51fb1e4d7f9f0ce01449203cd3a894abc8e"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-recovery-audit-20261016/google-pre-hauhau-files.json",
+      "sha256": "dabd9143931f1cfb7d588f41f736c907e9b2b41a7775edeb41eb095f5550f9d1"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-recovery-audit-20261016/unsloth-files.json",
+      "sha256": "096eea6a561d2516f3f8e66922020c25d4aeefa1d4df86dd9b9bad903f734821"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-recovery-audit-20261016/unsloth-pre-hauhau-files.json",
+      "sha256": "f430fca64300f10a1fcb0b993c979787906f8877bb05cc4f90fe4c4fb986914d"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/full-round-20261006/gemma-source-receipt.json",
+      "sha256": "aefd7ec6df81323c3d8804edf21e483fa8824021be2ae2a8e44ac2170bfb035e"
+    },
+    {
+      "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/source-receipt.json",
+      "sha256": "a26500aa8697ea97a39dd31d0939afd42ac3de0291e36e7d55520c4d46aeac4a"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/removed-checkpoint-metadata/gemma-verified-v1/removal-receipt.json",
+      "sha256": "6cdb4af7d03748560c9b429b9c68f4c28c8761bbb77c48710ac6620c2c952410"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-artifact-recovery-feasibility-v1.json",
+      "sha256": "3b6f97842b4d8670861f38558762c4745d6a8584180b0662702390dcef914a82"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/sources/reaper-2.5.2.whl",
+      "sha256": "9df0c1541cf357824d2abad9ed1a6237c8a34552f25d2a17a04db9b7d7e66192"
+    }
+  ],
+  "unresolved_questions": [
+    "Exact Hauhau editing recipe, direction tensors, layer schedule and private pre-edit processing remain unknown.",
+    "Spectral signal-to-noise of this actual paired checkpoint has not been measured.",
+    "The seven F16 edge-layer matrices may have no edit; the bounded middle-layer Q8 sample is needed before interpreting a null pilot.",
+    "Current REDCELL activation geometry, expert usage and relevance of recovered Hauhau axes remain unmeasured in this research.",
+    "No causal refusal-effect or capability benefit is established by metadata, singular vectors, or a published model's uncensored label.",
+    "Historical Reaper 2.5.2 code is now recovered and text-inspected, but exact Gemma parameters, direction tensors and version attribution remain unavailable."
+  ],
+  "recoverability_decision_rules": {
+    "status": "Predeclared engineering heuristics for triage, not calibrated probabilities or universal refusal thresholds.",
+    "gate_0_mapping": {
+      "go": "Byte ranges and canonical shapes validate, and expected no-edit q/router/norm controls equal the corresponding parent after declared storage conversion.",
+      "no_go": "Stop expansion on unexplained control mismatch as alignment_unproven_or_additional_edits. Do not reinterpret mismatch as proof that Hauhau contains no useful edit."
+    },
+    "gate_1_stable_low_rank": {
+      "suggested_go": "At least one inspected target has E_k>=0.95 for a selected rank k<=8, a signal clearly above matched export controls, and minimum canonical-correlation cosine >=0.95 between independently fitted column-half subspaces at that rank. Require a meaningful singular gap and report held-out residuals.",
+      "signal_rule": "As a conservative screening heuristic, compare retained singular values against 5 times the matched no-edit control spectrum and declared rounding sensitivity estimates. If the control is zero, do not divide by zero or treat infinite signal-to-noise as proof; report the zero control and nonzero rounding uncertainty separately.",
+      "qualification": "Use the smallest supported stable rank, not eight noise directions appended to a rank-one signal. A result near a cutoff is inconclusive. These heuristics select evidence to inspect; no pass establishes refusal attribution.",
+      "no_go": "No nonzero/stable signal within the seven F16 probes means no recovery established in this bounded pilot. It does not rule out middle-layer or expert-only edits."
+    },
+    "gate_2_operator": {
+      "strong_symmetric_evidence": "Projection coefficients fitted on one column half predict the other half, with residual comparable to the declared rounding/noise tail and consistent direction/coefficient across independent solves.",
+      "nonsymmetric_case": "High stable low-rank energy with poor symmetric fit remains a positive edit-recovery result. Report row-norm behavior and restricted low-rank-operator fit, retain factors, and identify the missing input-side operator information before claiming faithful transfer.",
+      "no_universal_residual_cutoff": "Set the acceptance residual relative to measured precision controls and recovered spectral tail, not a threshold borrowed from a BF16 dense checkpoint."
+    },
+    "gate_3_next_action": {
+      "coherent_signal": "Proceed first to a targeted same-layer operator-disambiguation sample or fresh native-W8 activation relevance check, as appropriate. The parent separately owns capture feasibility. No automatic full download or model transfer.",
+      "behavioral_trial": "Only a separately labeled and evaluated reversible candidate can establish any benefit on REDCELL. Keep baseline/sham controls and the user's actual thinking protocol.",
+      "fruitless": "If alignment fails or the bounded samples show no stable interpretable effect, retain the negative/inconclusive receipt and return to the independently evaluated W8 iteration path rather than expanding indefinitely."
+    }
+  }
+}

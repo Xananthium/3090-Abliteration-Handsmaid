@@ -1,0 +1,726 @@
+{
+  "status": "complete",
+  "configuration_fingerprint": "4ed7177741f93a931cd09825ba4a603ba1f5b5f0422fe7cffc6d123e7e21dea7",
+  "schedule": {
+    "index": 8,
+    "repeat": 2,
+    "case_ids": [
+      "broader-fresh-09-percent-encoding",
+      "broader-fresh-10-transpose",
+      "broader-fresh-11-second-delimited-field",
+      "broader-fresh-12-json-types"
+    ]
+  },
+  "attempt_id": "1792107043465169985-157924",
+  "invocation_id": "1792106809445652378-157924",
+  "started_at_utc": "2026-10-15T23:30:43.465260+00:00",
+  "partial_outputs_scored": false,
+  "completed_at_utc": "2026-10-15T23:30:48.098723+00:00",
+  "wall_seconds": 4.633565753989387,
+  "records": [
+    {
+      "id": "broader-fresh-09-percent-encoding",
+      "category": "instruction",
+      "configuration_fingerprint": "4ed7177741f93a931cd09825ba4a603ba1f5b5f0422fe7cffc6d123e7e21dea7",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "ebc2aaa386ac338975f20da43a65ec62bbb99c07903bb418137f1b487a0b3c51",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.0",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "2e106de62707ca03071f0bbd11c406e0e66d7694bbafb20700dec66460adc771",
+      "prompt_sha256": "f4e8f0135c4132865ac323fc16868bff93860ee050114b9a5d9c1b9c298f9068",
+      "answer_key_sha256": "6e5f93ecb5df82fd2b6fa35821152b39560b0695bff50c472fc2013ec60c2658",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 8,
+      "submission_index": 0,
+      "invocation_id": "1792106809445652378-157924",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 3,
+      "task_finished_sequence": 17,
+      "answer_text": "a%20b%2Fc%2Bd",
+      "raw_final_text": "a%20b%2Fc%2Bd",
+      "raw_final_text_sha256": "e6b00429ab52b216f8285d5f3fb595a0a73251143c03f756ba0f8b8c374d78cf",
+      "response_attempts": [
+        {
+          "raw_text": "a%20b%2Fc%2Bd",
+          "raw_text_sha256": "e6b00429ab52b216f8285d5f3fb595a0a73251143c03f756ba0f8b8c374d78cf",
+          "model_id": "redcell-w8a16-strength-1.0",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 78,
+            "output_tokens": 12
+          },
+          "native_request_seconds": 1.2270927990030032,
+          "started_sequence": 15,
+          "finished_sequence": 16
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.009579515986843035,
+          "started_sequence": 9,
+          "finished_sequence": 11
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 1.2270927990030032,
+          "started_sequence": 15,
+          "finished_sequence": 16
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 12,
+          "input_tokens": 78,
+          "stop_reason": "end_turn",
+          "response_sha256": "e6b00429ab52b216f8285d5f3fb595a0a73251143c03f756ba0f8b8c374d78cf",
+          "visible_characters": 13,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 1.267365414998494
+        }
+      ],
+      "counted_input_tokens": 78,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8050,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "e6b00429ab52b216f8285d5f3fb595a0a73251143c03f756ba0f8b8c374d78cf",
+      "output_tokens": 12,
+      "total_output_tokens_including_retries": 12,
+      "generation_seconds_including_retries": 1.267365414998494,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:30:44.845653+00:00",
+      "record_sha256": "117bfd0927f6996b4feac3a914178fc92715606a165a11273509fd571aed666e"
+    },
+    {
+      "id": "broader-fresh-10-transpose",
+      "category": "instruction",
+      "configuration_fingerprint": "4ed7177741f93a931cd09825ba4a603ba1f5b5f0422fe7cffc6d123e7e21dea7",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "ebc2aaa386ac338975f20da43a65ec62bbb99c07903bb418137f1b487a0b3c51",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.0",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "dc1dd71a15d32585db6ff57615694d602e2baa0b026cf3cc83d5d5c8cf1437d4",
+      "prompt_sha256": "13a3e818b6201b57a59d5a82c6652efeba165b45d68dd5e9e61ce9d356aac2fe",
+      "answer_key_sha256": "1edfb4e885f13e9593e35e8c66affb5062eca59b43b467c8b7d978eb7f4d3d0f",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 8,
+      "submission_index": 1,
+      "invocation_id": "1792106809445652378-157924",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 2,
+      "task_finished_sequence": 19,
+      "answer_text": "[[2, 7, 4], [5, 1, 9]]",
+      "raw_final_text": "[[2, 7, 4], [5, 1, 9]]",
+      "raw_final_text_sha256": "f3e9cab812dace522130f89ff20d6a601d221c1044205f56e26a3345e2ed226b",
+      "response_attempts": [
+        {
+          "raw_text": "[[2, 7, 4], [5, 1, 9]]",
+          "raw_text_sha256": "f3e9cab812dace522130f89ff20d6a601d221c1044205f56e26a3345e2ed226b",
+          "model_id": "redcell-w8a16-strength-1.0",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 65,
+            "output_tokens": 19
+          },
+          "native_request_seconds": 1.8545300890109502,
+          "started_sequence": 13,
+          "finished_sequence": 18
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.008697621000465006,
+          "started_sequence": 8,
+          "finished_sequence": 10
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 1.8545300890109502,
+          "started_sequence": 13,
+          "finished_sequence": 18
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 19,
+          "input_tokens": 65,
+          "stop_reason": "end_turn",
+          "response_sha256": "f3e9cab812dace522130f89ff20d6a601d221c1044205f56e26a3345e2ed226b",
+          "visible_characters": 22,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 1.8876822990132496
+        }
+      ],
+      "counted_input_tokens": 65,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8063,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "f3e9cab812dace522130f89ff20d6a601d221c1044205f56e26a3345e2ed226b",
+      "output_tokens": 19,
+      "total_output_tokens_including_retries": 19,
+      "generation_seconds_including_retries": 1.8876822990132496,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:30:45.458023+00:00",
+      "record_sha256": "f3c9b191b857c20dbcdd4347831a72f204ace51aaea1d4913a46ec0f58165316"
+    },
+    {
+      "id": "broader-fresh-11-second-delimited-field",
+      "category": "instruction",
+      "configuration_fingerprint": "4ed7177741f93a931cd09825ba4a603ba1f5b5f0422fe7cffc6d123e7e21dea7",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "ebc2aaa386ac338975f20da43a65ec62bbb99c07903bb418137f1b487a0b3c51",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.0",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "71cdc0d09fa5ca522ed197d335d20f6f3f9fa402f0dbc437ade9caae97592609",
+      "prompt_sha256": "052a0467fae9ba9736c1461965b029b3ab85e49c22f8e26649fa4a5f6254e244",
+      "answer_key_sha256": "7317a8d3c9eea59a06c84c009dbe370640a27832cef6e3cfbd4fa951e1426f59",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 8,
+      "submission_index": 2,
+      "invocation_id": "1792106809445652378-157924",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 0,
+      "task_finished_sequence": 21,
+      "answer_text": "```json\n{\n  \"text\": \"blue\",\n  \"count\": 4\n}\n```",
+      "raw_final_text": "```json\n{\n  \"text\": \"blue\",\n  \"count\": 4\n}\n```",
+      "raw_final_text_sha256": "18422c6accaf4f6af62c86108049b0e68d696969390b5194ba64d6ad95dbcedf",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"text\": \"blue\",\n  \"count\": 4\n}\n```",
+          "raw_text_sha256": "18422c6accaf4f6af62c86108049b0e68d696969390b5194ba64d6ad95dbcedf",
+          "model_id": "redcell-w8a16-strength-1.0",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 87,
+            "output_tokens": 24
+          },
+          "native_request_seconds": 2.273717699019471,
+          "started_sequence": 14,
+          "finished_sequence": 20
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.010344790003728122,
+          "started_sequence": 4,
+          "finished_sequence": 6
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 2.273717699019471,
+          "started_sequence": 14,
+          "finished_sequence": 20
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 24,
+          "input_tokens": 87,
+          "stop_reason": "end_turn",
+          "response_sha256": "18422c6accaf4f6af62c86108049b0e68d696969390b5194ba64d6ad95dbcedf",
+          "visible_characters": 46,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 2.3171597580076195
+        }
+      ],
+      "counted_input_tokens": 87,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8041,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "18422c6accaf4f6af62c86108049b0e68d696969390b5194ba64d6ad95dbcedf",
+      "output_tokens": 24,
+      "total_output_tokens_including_retries": 24,
+      "generation_seconds_including_retries": 2.3171597580076195,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": false,
+      "scored_correct_before_completion_gate": false,
+      "recorded_at_utc": "2026-10-15T23:30:45.886345+00:00",
+      "record_sha256": "dff6d1a82cb96b88c4256adca81a0b8d816b60eb6bd1a69ca31386c78cf7b9b4"
+    },
+    {
+      "id": "broader-fresh-12-json-types",
+      "category": "instruction",
+      "configuration_fingerprint": "4ed7177741f93a931cd09825ba4a603ba1f5b5f0422fe7cffc6d123e7e21dea7",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "ebc2aaa386ac338975f20da43a65ec62bbb99c07903bb418137f1b487a0b3c51",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.0",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "4b2d25e6f90fd80e2b979c8313c43ed8c9b5ef9e74ad535a0c0ab9604df2a73a",
+      "prompt_sha256": "0083ae21728d5616259725a5bd28c9dbb68d0740f85cdd592e3fd15a8918786f",
+      "answer_key_sha256": "80dc10d01c7d4b0c82b99cf52237b05d3ce5d8ea2ed8aa64c26fb1bac6012beb",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 8,
+      "submission_index": 3,
+      "invocation_id": "1792106809445652378-157924",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 1,
+      "task_finished_sequence": 23,
+      "answer_text": "```json\n{\n  \"booleans\": 2,\n  \"numbers\": 2,\n  \"strings\": 1,\n  \"nulls\": 1,\n  \"integer_counts\": 6\n}\n```",
+      "raw_final_text": "```json\n{\n  \"booleans\": 2,\n  \"numbers\": 2,\n  \"strings\": 1,\n  \"nulls\": 1,\n  \"integer_counts\": 6\n}\n```",
+      "raw_final_text_sha256": "78e77a51f22c9fa4f0bef27b9f91477686143066ef308c7c805683207319cd71",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"booleans\": 2,\n  \"numbers\": 2,\n  \"strings\": 1,\n  \"nulls\": 1,\n  \"integer_counts\": 6\n}\n```",
+          "raw_text_sha256": "78e77a51f22c9fa4f0bef27b9f91477686143066ef308c7c805683207319cd71",
+          "model_id": "redcell-w8a16-strength-1.0",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 76,
+            "output_tokens": 52
+          },
+          "native_request_seconds": 4.466845649993047,
+          "started_sequence": 12,
+          "finished_sequence": 22
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.012626287993043661,
+          "started_sequence": 5,
+          "finished_sequence": 7
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 4.466845649993047,
+          "started_sequence": 12,
+          "finished_sequence": 22
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 52,
+          "input_tokens": 76,
+          "stop_reason": "end_turn",
+          "response_sha256": "78e77a51f22c9fa4f0bef27b9f91477686143066ef308c7c805683207319cd71",
+          "visible_characters": 100,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 4.502823989983881
+        }
+      ],
+      "counted_input_tokens": 76,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8052,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "78e77a51f22c9fa4f0bef27b9f91477686143066ef308c7c805683207319cd71",
+      "output_tokens": 52,
+      "total_output_tokens_including_retries": 52,
+      "generation_seconds_including_retries": 4.502823989983881,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": false,
+      "scored_correct_before_completion_gate": false,
+      "recorded_at_utc": "2026-10-15T23:30:48.063987+00:00",
+      "record_sha256": "c76aa483d88923b4fbe4c74bbe05dfe93d195b469623da4368db1d48bce377a6"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "task_started",
+      "id": "broader-fresh-11-second-delimited-field",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:43.512261+00:00",
+      "group_elapsed_seconds": 0.044350804993882775,
+      "group_index": 8,
+      "submission_index": 2
+    },
+    {
+      "sequence": 1,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "task_started",
+      "id": "broader-fresh-12-json-types",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:43.512548+00:00",
+      "group_elapsed_seconds": 0.04463379297521897,
+      "group_index": 8,
+      "submission_index": 3
+    },
+    {
+      "sequence": 2,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "task_started",
+      "id": "broader-fresh-10-transpose",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:43.512669+00:00",
+      "group_elapsed_seconds": 0.044765683996956795,
+      "group_index": 8,
+      "submission_index": 1
+    },
+    {
+      "sequence": 3,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "task_started",
+      "id": "broader-fresh-09-percent-encoding",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:43.512840+00:00",
+      "group_elapsed_seconds": 0.044931748998351395,
+      "group_index": 8,
+      "submission_index": 0
+    },
+    {
+      "sequence": 4,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "request_started",
+      "id": "broader-fresh-11-second-delimited-field",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:43.534952+00:00",
+      "group_elapsed_seconds": 0.06703941099112853,
+      "group_index": 8,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 5,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "request_started",
+      "id": "broader-fresh-12-json-types",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:43.536506+00:00",
+      "group_elapsed_seconds": 0.06859229199471883,
+      "group_index": 8,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 6,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "request_finished",
+      "id": "broader-fresh-11-second-delimited-field",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:43.545309+00:00",
+      "group_elapsed_seconds": 0.07739496699650772,
+      "group_index": 8,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 4
+    },
+    {
+      "sequence": 7,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "request_finished",
+      "id": "broader-fresh-12-json-types",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:43.549145+00:00",
+      "group_elapsed_seconds": 0.08123352599795908,
+      "group_index": 8,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 5
+    },
+    {
+      "sequence": 8,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "request_started",
+      "id": "broader-fresh-10-transpose",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:43.549225+00:00",
+      "group_elapsed_seconds": 0.08131239598151296,
+      "group_index": 8,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 9,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "request_started",
+      "id": "broader-fresh-09-percent-encoding",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:43.550351+00:00",
+      "group_elapsed_seconds": 0.08243543899152428,
+      "group_index": 8,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 10,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "request_finished",
+      "id": "broader-fresh-10-transpose",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:43.557936+00:00",
+      "group_elapsed_seconds": 0.09002144398982637,
+      "group_index": 8,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 8
+    },
+    {
+      "sequence": 11,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "request_finished",
+      "id": "broader-fresh-09-percent-encoding",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:43.559941+00:00",
+      "group_elapsed_seconds": 0.09202885098056868,
+      "group_index": 8,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 9
+    },
+    {
+      "sequence": 12,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "request_started",
+      "id": "broader-fresh-12-json-types",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:43.571664+00:00",
+      "group_elapsed_seconds": 0.10375030699651688,
+      "group_index": 8,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 13,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "request_started",
+      "id": "broader-fresh-10-transpose",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:43.579980+00:00",
+      "group_elapsed_seconds": 0.11206722998758778,
+      "group_index": 8,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 14,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "request_started",
+      "id": "broader-fresh-11-second-delimited-field",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:43.587574+00:00",
+      "group_elapsed_seconds": 0.11966427898732945,
+      "group_index": 8,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 15,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "request_started",
+      "id": "broader-fresh-09-percent-encoding",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:43.593604+00:00",
+      "group_elapsed_seconds": 0.1256894939870108,
+      "group_index": 8,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 16,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "request_finished",
+      "id": "broader-fresh-09-percent-encoding",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:44.820718+00:00",
+      "group_elapsed_seconds": 1.3528172569931485,
+      "group_index": 8,
+      "route": "/v1/messages",
+      "start_sequence": 15
+    },
+    {
+      "sequence": 17,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "task_finished",
+      "id": "broader-fresh-09-percent-encoding",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:44.845653+00:00",
+      "group_elapsed_seconds": 1.377743686985923,
+      "group_index": 8,
+      "submission_index": 0
+    },
+    {
+      "sequence": 18,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "request_finished",
+      "id": "broader-fresh-10-transpose",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:45.434530+00:00",
+      "group_elapsed_seconds": 1.9666292189795058,
+      "group_index": 8,
+      "route": "/v1/messages",
+      "start_sequence": 13
+    },
+    {
+      "sequence": 19,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "task_finished",
+      "id": "broader-fresh-10-transpose",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:45.458023+00:00",
+      "group_elapsed_seconds": 1.99011304898886,
+      "group_index": 8,
+      "submission_index": 1
+    },
+    {
+      "sequence": 20,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "request_finished",
+      "id": "broader-fresh-11-second-delimited-field",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:45.861318+00:00",
+      "group_elapsed_seconds": 2.393417816987494,
+      "group_index": 8,
+      "route": "/v1/messages",
+      "start_sequence": 14
+    },
+    {
+      "sequence": 21,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "task_finished",
+      "id": "broader-fresh-11-second-delimited-field",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:45.886345+00:00",
+      "group_elapsed_seconds": 2.4184366849949583,
+      "group_index": 8,
+      "submission_index": 2
+    },
+    {
+      "sequence": 22,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "request_finished",
+      "id": "broader-fresh-12-json-types",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:48.038532+00:00",
+      "group_elapsed_seconds": 4.57063053798629,
+      "group_index": 8,
+      "route": "/v1/messages",
+      "start_sequence": 12
+    },
+    {
+      "sequence": 23,
+      "invocation_id": "1792106809445652378-157924",
+      "kind": "task_finished",
+      "id": "broader-fresh-12-json-types",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:30:48.063987+00:00",
+      "group_elapsed_seconds": 4.596080170973437,
+      "group_index": 8,
+      "submission_index": 3
+    }
+  ],
+  "submission_order": [
+    "broader-fresh-09-percent-encoding",
+    "broader-fresh-10-transpose",
+    "broader-fresh-11-second-delimited-field",
+    "broader-fresh-12-json-types"
+  ],
+  "client_task_start_order": [
+    "broader-fresh-11-second-delimited-field",
+    "broader-fresh-12-json-types",
+    "broader-fresh-10-transpose",
+    "broader-fresh-09-percent-encoding"
+  ],
+  "client_task_finish_order": [
+    "broader-fresh-09-percent-encoding",
+    "broader-fresh-10-transpose",
+    "broader-fresh-11-second-delimited-field",
+    "broader-fresh-12-json-types"
+  ],
+  "observed_future_completion_order": [
+    "broader-fresh-09-percent-encoding",
+    "broader-fresh-10-transpose",
+    "broader-fresh-11-second-delimited-field",
+    "broader-fresh-12-json-types"
+  ],
+  "ordering_scope": "Sequences and elapsed times are local to this group. Client submission, task, and HTTP dispatch/completion order are recorded; GPU scheduler order is not observed.",
+  "group_sha256": "26c2ee3162c1e38ccc64657f5adc72f4cb267f309072281be29f4c082a84456b"
+}

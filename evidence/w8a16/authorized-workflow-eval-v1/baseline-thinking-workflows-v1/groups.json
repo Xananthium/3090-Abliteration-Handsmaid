@@ -1,0 +1,98 @@
+[
+  {
+    "started_utc": "2026-10-17T16:36:32.994828+00:00",
+    "finished_utc": "2026-10-17T16:37:53.128164+00:00",
+    "wall_seconds": 80.13333474798128,
+    "schedule": [
+      {
+        "case_id": "browser-after-static-fetch",
+        "repeat": 1
+      },
+      {
+        "case_id": "repair-protocol-with-same-tool",
+        "repeat": 1
+      },
+      {
+        "case_id": "unavailable-tool-fallback",
+        "repeat": 1
+      },
+      {
+        "case_id": "two-account-access-a",
+        "repeat": 1
+      }
+    ],
+    "generated_tokens": 3141
+  },
+  {
+    "started_utc": "2026-10-17T16:37:53.148588+00:00",
+    "finished_utc": "2026-10-17T16:39:38.880152+00:00",
+    "wall_seconds": 105.73156432399992,
+    "schedule": [
+      {
+        "case_id": "two-account-access-b",
+        "repeat": 1
+      },
+      {
+        "case_id": "scanner-finding-a",
+        "repeat": 1
+      },
+      {
+        "case_id": "scanner-finding-b",
+        "repeat": 1
+      },
+      {
+        "case_id": "ctf-finish-with-evidence",
+        "repeat": 1
+      }
+    ],
+    "generated_tokens": 4724
+  },
+  {
+    "started_utc": "2026-10-17T16:39:38.900763+00:00",
+    "finished_utc": "2026-10-17T16:41:03.087877+00:00",
+    "wall_seconds": 84.18711440701736,
+    "schedule": [
+      {
+        "case_id": "browser-after-static-fetch",
+        "repeat": 2
+      },
+      {
+        "case_id": "repair-protocol-with-same-tool",
+        "repeat": 2
+      },
+      {
+        "case_id": "unavailable-tool-fallback",
+        "repeat": 2
+      },
+      {
+        "case_id": "two-account-access-a",
+        "repeat": 2
+      }
+    ],
+    "generated_tokens": 3190
+  },
+  {
+    "started_utc": "2026-10-17T16:41:03.108189+00:00",
+    "finished_utc": "2026-10-17T16:42:41.156993+00:00",
+    "wall_seconds": 98.04880524502369,
+    "schedule": [
+      {
+        "case_id": "two-account-access-b",
+        "repeat": 2
+      },
+      {
+        "case_id": "scanner-finding-a",
+        "repeat": 2
+      },
+      {
+        "case_id": "scanner-finding-b",
+        "repeat": 2
+      },
+      {
+        "case_id": "ctf-finish-with-evidence",
+        "repeat": 2
+      }
+    ],
+    "generated_tokens": 4878
+  }
+]

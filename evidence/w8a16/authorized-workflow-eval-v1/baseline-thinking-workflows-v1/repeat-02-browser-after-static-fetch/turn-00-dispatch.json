@@ -1,0 +1,31 @@
+{
+  "dispatches": [
+    {
+      "turn": 0,
+      "tool_use_id": "chatcmpl-tool-bed5bb522b71b662",
+      "name": "browser_inspect",
+      "arguments": {
+        "credentials": {
+          "password": "ctf-only-password",
+          "username": "lab.viewer"
+        },
+        "url": "https://app.ctf.test/"
+      },
+      "result": {
+        "evidence_id": "E001",
+        "ok": true,
+        "status": 200,
+        "rendered_text": "Signed in as lab.viewer; workspace list loaded.",
+        "authorization_header": "Bearer fixture-viewer",
+        "network_requests": [
+          {
+            "method": "GET",
+            "url": "https://app.ctf.test/api/workspaces",
+            "status": 200
+          }
+        ],
+        "note": "Replay the observed request to inspect its response body."
+      }
+    }
+  ]
+}

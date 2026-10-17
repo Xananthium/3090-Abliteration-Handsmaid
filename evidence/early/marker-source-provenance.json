@@ -1,0 +1,18 @@
+[
+  {
+    "version": "2.5.2",
+    "source_url": "https://files.pythonhosted.org/packages/60/9a/d7134fef086f8f263623e280735dcaa6c356c04c2002608bc323aa5808a8/reaper_abliteration-2.5.2-py3-none-any.whl",
+    "source_sha256": "9df0c1541cf357824d2abad9ed1a6237c8a34552f25d2a17a04db9b7d7e66192",
+    "source_config_path": "reaper_abliteration/config.py",
+    "count": 98,
+    "unique_count": 98
+  },
+  {
+    "version": "2.6.0",
+    "source_url": "https://murmur.dreamfast.solutions/reaper-abliteration/wheels/reaper_abliteration-2.6.0-py3-none-any.whl",
+    "source_sha256": "6e56ebbae28bcecbdf07f98d259cd86d7faef8bb92b7c141744d2ed97aea591d",
+    "source_config_path": "reaper_abliteration/config.py",
+    "count": 90,
+    "unique_count": 90
+  }
+]

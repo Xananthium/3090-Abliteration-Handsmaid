@@ -1,0 +1,9 @@
+{
+  "case_id": "scanner-finding-a",
+  "repeat": 2,
+  "turn": 4,
+  "attempt_count": 5,
+  "tool_calls": 4,
+  "known_generated_tokens": 1248,
+  "updated_utc": "2026-10-17T16:42:35.655621+00:00"
+}

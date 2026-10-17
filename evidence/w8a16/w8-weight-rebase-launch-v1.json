@@ -1,0 +1,18 @@
+{
+  "status": "running",
+  "unit": "redcell-w8-weight-rebase-v1.service",
+  "started_utc": "2026-10-15T23:56:38+00:00",
+  "builder": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/build_w8_weight_rebase.py",
+  "builder_sha256": "8f0d61388c70f5c3348287dd02291aca8589948c1c38bac01f07e82f24df4381",
+  "cpu_threads": 4,
+  "cpu_quota_percent": 400,
+  "memory_high_gib": 6,
+  "memory_max_gib": 8,
+  "swap_max": 0,
+  "private_devices": true,
+  "nice": 10,
+  "log": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8-weight-rebase-build.log",
+  "output": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/nf4-direction-w8-weight-strength-1.0-vllm-v1",
+  "gpu_used": false,
+  "timing_caveat": "This bounded CPU-only construction overlaps part of the thinking evaluation. Overlapping latency observations are not controlled idle-host comparisons; generated-token counts are reported separately."
+}

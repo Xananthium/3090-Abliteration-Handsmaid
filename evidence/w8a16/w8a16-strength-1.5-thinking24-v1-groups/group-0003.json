@@ -1,0 +1,794 @@
+{
+  "status": "complete",
+  "configuration_fingerprint": "ace6c1e1dbe82282b360cbf81235eb374cf60bf3ba93b0771d5a80abd406f344",
+  "schedule": {
+    "index": 3,
+    "repeat": 1,
+    "case_ids": [
+      "broader-fresh-13-equal-authority-conflict",
+      "broader-fresh-14-unit-agreement",
+      "broader-fresh-15-quantifier-gap",
+      "broader-fresh-16-table-total"
+    ]
+  },
+  "attempt_id": "1792110145740830966-161303",
+  "invocation_id": "1792109741937547541-161303",
+  "started_at_utc": "2026-10-16T00:22:25.740968+00:00",
+  "partial_outputs_scored": false,
+  "completed_at_utc": "2026-10-16T00:22:58.705102+00:00",
+  "wall_seconds": 32.964282523986185,
+  "records": [
+    {
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "category": "consistency",
+      "configuration_fingerprint": "ace6c1e1dbe82282b360cbf81235eb374cf60bf3ba93b0771d5a80abd406f344",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "be29ab8a2ee30a7d9e2efe912d216e81acfc6c35327ace78ff580e000e56a195",
+      "prompt_sha256": "9cae34f8053a8174702c43fab7a66c7321b9d59932381d4ca6c331069fc544d0",
+      "answer_key_sha256": "86e7611d633ae80ecbe72fae03abdf172f92f21fdd28e3a4897d69faeb7f5823",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 3,
+      "submission_index": 0,
+      "invocation_id": "1792109741937547541-161303",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 0,
+      "task_finished_sequence": 17,
+      "answer_text": "CONFLICT",
+      "raw_final_text": "CONFLICT",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 477,
+      "raw_final_text_sha256": "d79910c78cef73436cb082e736cd62960bf56c2d8c6232362e6bde0eb62e33c9",
+      "response_attempts": [
+        {
+          "raw_text": "CONFLICT",
+          "raw_text_sha256": "d79910c78cef73436cb082e736cd62960bf56c2d8c6232362e6bde0eb62e33c9",
+          "thinking_text": "*   Record A: Color = Red (only color).\n    *   Record B: Color = Blue (only color).\n    *   Authority: Both are equally authoritative.\n    *   Time: Same time.\n    *   Rule: If equally authoritative values disagree, return \"CONFLICT\".\n    *   Goal: Return the required result only.\n\n    *   Value A = Red.\n    *   Value B = Blue.\n    *   Red $\\neq$ Blue.\n    *   Since they disagree and are equally authoritative, the rule \"return CONFLICT\" applies.\n\n    *   Result: CONFLICT.",
+          "thinking_text_sha256": "22981dad1a4ea21e447fed5d37105b6fe00d26ae0ffc829adbe8ac71dcb56ef9",
+          "thinking_characters": 477,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Record A: Color = Red (only color).\n    *   Record B: Color = Blue (only color).\n    *   Authority: Both are equally authoritative.\n    *   Time: Same time.\n    *   Rule: If equally authoritative values disagree, return \"CONFLICT\".\n    *   Goal: Return the required result only.\n\n    *   Value A = Red.\n    *   Value B = Blue.\n    *   Red $\\neq$ Blue.\n    *   Since they disagree and are equally authoritative, the rule \"return CONFLICT\" applies.\n\n    *   Result: CONFLICT.",
+              "signature": "9d318cdf30544714923fac290e588bc2"
+            },
+            {
+              "type": "text",
+              "text": "CONFLICT"
+            }
+          ],
+          "native_content_blocks_sha256": "3f99c6cfd7037c5c49b170cda94b2a2a46f2e0f99aaa20ba0859dd7e226f6d05",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 86,
+            "output_tokens": 138
+          },
+          "native_request_seconds": 12.262657793005928,
+          "started_sequence": 13,
+          "finished_sequence": 16
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.00732128499657847,
+          "started_sequence": 7,
+          "finished_sequence": 10
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 12.262657793005928,
+          "started_sequence": 13,
+          "finished_sequence": 16
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 138,
+          "input_tokens": 86,
+          "stop_reason": "end_turn",
+          "response_sha256": "d79910c78cef73436cb082e736cd62960bf56c2d8c6232362e6bde0eb62e33c9",
+          "visible_characters": 8,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 12.299776456988184
+        }
+      ],
+      "counted_input_tokens": 86,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8042,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "d79910c78cef73436cb082e736cd62960bf56c2d8c6232362e6bde0eb62e33c9",
+      "output_tokens": 138,
+      "total_output_tokens_including_retries": 138,
+      "generation_seconds_including_retries": 12.299776456988184,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T00:22:38.157745+00:00",
+      "record_sha256": "0d9db1b1f0bb34a35df19076671e7eb350708c8a16a4758c041470c1ed13a6fc"
+    },
+    {
+      "id": "broader-fresh-14-unit-agreement",
+      "category": "consistency",
+      "configuration_fingerprint": "ace6c1e1dbe82282b360cbf81235eb374cf60bf3ba93b0771d5a80abd406f344",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "df18fb1143b9160543092d336202f14a15d98ea9c7f4efadf15b2581e622372b",
+      "prompt_sha256": "673caf9f24bda38a10a52d1369951eff615bf4630456973769a91ced850fd2c6",
+      "answer_key_sha256": "96400541d7bccac7b2cad05da1944d6430859f0cdd30bc31aa888cb41b0a4c83",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 3,
+      "submission_index": 1,
+      "invocation_id": "1792109741937547541-161303",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 1,
+      "task_finished_sequence": 19,
+      "answer_text": "```json\n{\n  \"same_mass\": true,\n  \"mass_g\": 2500\n}\n```",
+      "raw_final_text": "```json\n{\n  \"same_mass\": true,\n  \"mass_g\": 2500\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 389,
+      "raw_final_text_sha256": "ce5d82c9191c7967bb0bfda85f7b3b71a218a678916d15eeb7dc2a650fecfba5",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"same_mass\": true,\n  \"mass_g\": 2500\n}\n```",
+          "raw_text_sha256": "ce5d82c9191c7967bb0bfda85f7b3b71a218a678916d15eeb7dc2a650fecfba5",
+          "thinking_text": "*   Record A: 2.5 kg\n    *   Record B: 2500 g\n    *   Conversion factor: 1 kg = 1000 g\n\n    *   Convert Record A to grams: $2.5 \\text{ kg} \\times 1000 \\text{ g/kg} = 2500 \\text{ g}$.\n    *   Compare Record A (2500 g) with Record B (2500 g).\n    *   Are they the same? Yes.\n\n    *   `same_mass`: Boolean (true)\n    *   `mass_g`: Integer (2500)\n\n    *   `{\"same_mass\": true, \"mass_g\": 2500}`",
+          "thinking_text_sha256": "8fa1a137302cf1f4ae33bc8da2f4038d3a870de15a207010f830eeb21833a190",
+          "thinking_characters": 389,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Record A: 2.5 kg\n    *   Record B: 2500 g\n    *   Conversion factor: 1 kg = 1000 g\n\n    *   Convert Record A to grams: $2.5 \\text{ kg} \\times 1000 \\text{ g/kg} = 2500 \\text{ g}$.\n    *   Compare Record A (2500 g) with Record B (2500 g).\n    *   Are they the same? Yes.\n\n    *   `same_mass`: Boolean (true)\n    *   `mass_g`: Integer (2500)\n\n    *   `{\"same_mass\": true, \"mass_g\": 2500}`",
+              "signature": "59c99f4c4a524a87a4d51c17b52c6fc1"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"same_mass\": true,\n  \"mass_g\": 2500\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "0e0240c2be53eeb2b829b33eadddea73046c78679bbbd021d8fdb1f42fd89117",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 87,
+            "output_tokens": 205
+          },
+          "native_request_seconds": 18.120866436016513,
+          "started_sequence": 15,
+          "finished_sequence": 18
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.007689988007768989,
+          "started_sequence": 8,
+          "finished_sequence": 11
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 18.120866436016513,
+          "started_sequence": 15,
+          "finished_sequence": 18
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 205,
+          "input_tokens": 87,
+          "stop_reason": "end_turn",
+          "response_sha256": "ce5d82c9191c7967bb0bfda85f7b3b71a218a678916d15eeb7dc2a650fecfba5",
+          "visible_characters": 53,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 18.159337155986577
+        }
+      ],
+      "counted_input_tokens": 87,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8041,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "ce5d82c9191c7967bb0bfda85f7b3b71a218a678916d15eeb7dc2a650fecfba5",
+      "output_tokens": 205,
+      "total_output_tokens_including_retries": 205,
+      "generation_seconds_including_retries": 18.159337155986577,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T00:22:44.022781+00:00",
+      "record_sha256": "6e02b90ff8172d4d10e0966e2302f34a6235e73a482138c717e1a4adeb76127a"
+    },
+    {
+      "id": "broader-fresh-15-quantifier-gap",
+      "category": "consistency",
+      "configuration_fingerprint": "ace6c1e1dbe82282b360cbf81235eb374cf60bf3ba93b0771d5a80abd406f344",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "7ccf7fb577c96126ea0335281a1169b7da827a6c3da6e4af83cf256a394790a0",
+      "prompt_sha256": "1d95f220dbba7b64e94cc559fa21b61f44fc3ca607cd7fc28e00c4d34018c95d",
+      "answer_key_sha256": "60c6c8ddbd9f866861b3a393152d4e571b957cff879828774568b5a7d6bd0265",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 3,
+      "submission_index": 2,
+      "invocation_id": "1792109741937547541-161303",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 2,
+      "task_finished_sequence": 23,
+      "answer_text": "NOT_ENTAILED",
+      "raw_final_text": "NOT_ENTAILED",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 1146,
+      "raw_final_text_sha256": "74f54cdb515c8be45c2999290ca4d334333efb1cf7a7c22a6152ea0f42ffab9e",
+      "response_attempts": [
+        {
+          "raw_text": "NOT_ENTAILED",
+          "raw_text_sha256": "74f54cdb515c8be45c2999290ca4d334333efb1cf7a7c22a6152ea0f42ffab9e",
+          "thinking_text": "*   Total members in the club: 5.\n    *   Evidence: \"At least one member arrived late.\"\n    *   Question: Does this evidence establish that \"every member arrived late\"?\n\n    *   Let $M = \\{m_1, m_2, m_3, m_4, m_5\\}$ be the set of members.\n    *   Let $L(x)$ be the predicate \"member $x$ arrived late.\"\n    *   Evidence: $\\exists x \\in M, L(x)$ (There exists at least one $x$ such that $x$ is late).\n    *   Conclusion to test: $\\forall x \\in M, L(x)$ (For all $x$, $x$ is late).\n\n    *   If the evidence is $\\exists x, L(x)$, does it imply $\\forall x, L(x)$?\n    *   Example scenario: $m_1$ is late, but $m_2, m_3, m_4, m_5$ are on time.\n    *   In this scenario, the evidence \"at least one member arrived late\" is true (because $m_1$ is late).\n    *   However, the conclusion \"every member arrived late\" is false (because $m_2, m_3, m_4, m_5$ are on time).\n\n    *   Since there is a scenario where the evidence is true but the conclusion is false, the conclusion is not necessarily true.\n    *   Therefore, the evidence does *not* entail the conclusion.\n\n    *   The question asks for \"ENTAILLED\" or \"NOT_ENTAILED\".\n    *   Result: NOT_ENTAILED.",
+          "thinking_text_sha256": "41254b5d1de3205e3836c35bb448714f19bf97cb82185047493729ee129a57e6",
+          "thinking_characters": 1146,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Total members in the club: 5.\n    *   Evidence: \"At least one member arrived late.\"\n    *   Question: Does this evidence establish that \"every member arrived late\"?\n\n    *   Let $M = \\{m_1, m_2, m_3, m_4, m_5\\}$ be the set of members.\n    *   Let $L(x)$ be the predicate \"member $x$ arrived late.\"\n    *   Evidence: $\\exists x \\in M, L(x)$ (There exists at least one $x$ such that $x$ is late).\n    *   Conclusion to test: $\\forall x \\in M, L(x)$ (For all $x$, $x$ is late).\n\n    *   If the evidence is $\\exists x, L(x)$, does it imply $\\forall x, L(x)$?\n    *   Example scenario: $m_1$ is late, but $m_2, m_3, m_4, m_5$ are on time.\n    *   In this scenario, the evidence \"at least one member arrived late\" is true (because $m_1$ is late).\n    *   However, the conclusion \"every member arrived late\" is false (because $m_2, m_3, m_4, m_5$ are on time).\n\n    *   Since there is a scenario where the evidence is true but the conclusion is false, the conclusion is not necessarily true.\n    *   Therefore, the evidence does *not* entail the conclusion.\n\n    *   The question asks for \"ENTAILLED\" or \"NOT_ENTAILED\".\n    *   Result: NOT_ENTAILED.",
+              "signature": "dbee8c6612e84868a58f6292a1b41a04"
+            },
+            {
+              "type": "text",
+              "text": "NOT_ENTAILED"
+            }
+          ],
+          "native_content_blocks_sha256": "74d0717ad15f8faa7a241edda538e3863ccbd448ce8589587fa2a6aacf895319",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 71,
+            "output_tokens": 380
+          },
+          "native_request_seconds": 32.77712728199549,
+          "started_sequence": 14,
+          "finished_sequence": 22
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.0069667689967900515,
+          "started_sequence": 6,
+          "finished_sequence": 9
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 32.77712728199549,
+          "started_sequence": 14,
+          "finished_sequence": 22
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 380,
+          "input_tokens": 71,
+          "stop_reason": "end_turn",
+          "response_sha256": "74f54cdb515c8be45c2999290ca4d334333efb1cf7a7c22a6152ea0f42ffab9e",
+          "visible_characters": 12,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 32.81802984900423
+        }
+      ],
+      "counted_input_tokens": 71,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8057,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "74f54cdb515c8be45c2999290ca4d334333efb1cf7a7c22a6152ea0f42ffab9e",
+      "output_tokens": 380,
+      "total_output_tokens_including_retries": 380,
+      "generation_seconds_including_retries": 32.81802984900423,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T00:22:58.678412+00:00",
+      "record_sha256": "7bf5efe61fb561882e53f33a1a408015f36b89b18cc834a4b78c21861be6aff2"
+    },
+    {
+      "id": "broader-fresh-16-table-total",
+      "category": "consistency",
+      "configuration_fingerprint": "ace6c1e1dbe82282b360cbf81235eb374cf60bf3ba93b0771d5a80abd406f344",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "670dd0384f812067aba3383dcb2671d18f67467ba1a480ed4fe53439b57f8968",
+      "prompt_sha256": "51752b6e9d9fed3f413117b35fd2d8f301c4f6ecfa57b7ab945e9d2af198b850",
+      "answer_key_sha256": "9fa6a330748cb280552da773e17b2e61aa5e4e3797cd2ada7806482b6f054ec4",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 3,
+      "submission_index": 3,
+      "invocation_id": "1792109741937547541-161303",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 3,
+      "task_finished_sequence": 21,
+      "answer_text": "```json\n{\n  \"computed_total\": 27,\n  \"consistent\": false\n}\n```",
+      "raw_final_text": "```json\n{\n  \"computed_total\": 27,\n  \"consistent\": false\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 587,
+      "raw_final_text_sha256": "0686ea281bd8b66daa35dc3e1af219ff5f64735ca9a77b86ed0737b45a7906ff",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"computed_total\": 27,\n  \"consistent\": false\n}\n```",
+          "raw_text_sha256": "0686ea281bd8b66daa35dc3e1af219ff5f64735ca9a77b86ed0737b45a7906ff",
+          "thinking_text": "*   Input: A list of three amounts (13, 8, 6) and a printed total (28).\n    *   Task: Compute the actual total and check if the printed total is consistent with the sum.\n    *   Output Format: JSON with keys `computed_total` and `consistent`.\n\n    *   Amounts: 13, 8, 6\n    *   Sum = 13 + 8 + 6\n    *   13 + 8 = 21\n    *   21 + 6 = 27\n    *   `computed_total` = 27\n\n    *   Printed total = 28\n    *   Computed total = 27\n    *   Is 28 == 27? No.\n    *   `consistent` = false\n\n    *   `computed_total`: 27\n    *   `consistent`: false\n\n    *   `{\"computed_total\": 27, \"consistent\": false}`",
+          "thinking_text_sha256": "41c8980e9d9c42307bfcc98a7cf7fabb25e852a7d0dc57bf528c9ea4e2590e81",
+          "thinking_characters": 587,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Input: A list of three amounts (13, 8, 6) and a printed total (28).\n    *   Task: Compute the actual total and check if the printed total is consistent with the sum.\n    *   Output Format: JSON with keys `computed_total` and `consistent`.\n\n    *   Amounts: 13, 8, 6\n    *   Sum = 13 + 8 + 6\n    *   13 + 8 = 21\n    *   21 + 6 = 27\n    *   `computed_total` = 27\n\n    *   Printed total = 28\n    *   Computed total = 27\n    *   Is 28 == 27? No.\n    *   `consistent` = false\n\n    *   `computed_total`: 27\n    *   `consistent`: false\n\n    *   `{\"computed_total\": 27, \"consistent\": false}`",
+              "signature": "8726abe844a64de4894756aa0adff70f"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"computed_total\": 27,\n  \"consistent\": false\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "4da67cfff1c2319949b07cfa6324137297ab2003fffa6abfbb898b07062589cc",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 79,
+            "output_tokens": 250
+          },
+          "native_request_seconds": 21.764303688018117,
+          "started_sequence": 12,
+          "finished_sequence": 20
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.00580804399214685,
+          "started_sequence": 4,
+          "finished_sequence": 5
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 21.764303688018117,
+          "started_sequence": 12,
+          "finished_sequence": 20
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 250,
+          "input_tokens": 79,
+          "stop_reason": "end_turn",
+          "response_sha256": "0686ea281bd8b66daa35dc3e1af219ff5f64735ca9a77b86ed0737b45a7906ff",
+          "visible_characters": 61,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 21.801210826000897
+        }
+      ],
+      "counted_input_tokens": 79,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8049,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "0686ea281bd8b66daa35dc3e1af219ff5f64735ca9a77b86ed0737b45a7906ff",
+      "output_tokens": 250,
+      "total_output_tokens_including_retries": 250,
+      "generation_seconds_including_retries": 21.801210826000897,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T00:22:47.650494+00:00",
+      "record_sha256": "ea04d7d9f87bfa3c937345705eb33d8a8eedc0dc5fb0d03711db7bf92905023e"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_started",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:25.775464+00:00",
+      "group_elapsed_seconds": 0.03159032401163131,
+      "group_index": 3,
+      "submission_index": 0
+    },
+    {
+      "sequence": 1,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_started",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:25.775707+00:00",
+      "group_elapsed_seconds": 0.0318339980149176,
+      "group_index": 3,
+      "submission_index": 1
+    },
+    {
+      "sequence": 2,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_started",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:25.790623+00:00",
+      "group_elapsed_seconds": 0.046744015999138355,
+      "group_index": 3,
+      "submission_index": 2
+    },
+    {
+      "sequence": 3,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_started",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:25.807982+00:00",
+      "group_elapsed_seconds": 0.0641085910028778,
+      "group_index": 3,
+      "submission_index": 3
+    },
+    {
+      "sequence": 4,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:25.828745+00:00",
+      "group_elapsed_seconds": 0.08486421499401331,
+      "group_index": 3,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 5,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:25.834569+00:00",
+      "group_elapsed_seconds": 0.09068791099707596,
+      "group_index": 3,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 4
+    },
+    {
+      "sequence": 6,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:25.834670+00:00",
+      "group_elapsed_seconds": 0.090789832000155,
+      "group_index": 3,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 7,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:25.835380+00:00",
+      "group_elapsed_seconds": 0.09149797100690193,
+      "group_index": 3,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 8,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:25.836135+00:00",
+      "group_elapsed_seconds": 0.09225318499375135,
+      "group_index": 3,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 9,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:25.841654+00:00",
+      "group_elapsed_seconds": 0.09777345400652848,
+      "group_index": 3,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 6
+    },
+    {
+      "sequence": 10,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:25.842716+00:00",
+      "group_elapsed_seconds": 0.09883490001084283,
+      "group_index": 3,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 7
+    },
+    {
+      "sequence": 11,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:25.843844+00:00",
+      "group_elapsed_seconds": 0.09996913900249638,
+      "group_index": 3,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 8
+    },
+    {
+      "sequence": 12,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:25.861687+00:00",
+      "group_elapsed_seconds": 0.11780482501490042,
+      "group_index": 3,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 13,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:25.870895+00:00",
+      "group_elapsed_seconds": 0.1270126320014242,
+      "group_index": 3,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 14,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:25.875374+00:00",
+      "group_elapsed_seconds": 0.1314911090012174,
+      "group_index": 3,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 15,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:25.876521+00:00",
+      "group_elapsed_seconds": 0.13263631000882015,
+      "group_index": 3,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 16,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:38.133574+00:00",
+      "group_elapsed_seconds": 12.389704491011798,
+      "group_index": 3,
+      "route": "/v1/messages",
+      "start_sequence": 13
+    },
+    {
+      "sequence": 17,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_finished",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:38.157745+00:00",
+      "group_elapsed_seconds": 12.413864566013217,
+      "group_index": 3,
+      "submission_index": 0
+    },
+    {
+      "sequence": 18,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:43.997407+00:00",
+      "group_elapsed_seconds": 18.25353695100057,
+      "group_index": 3,
+      "route": "/v1/messages",
+      "start_sequence": 15
+    },
+    {
+      "sequence": 19,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_finished",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:44.022781+00:00",
+      "group_elapsed_seconds": 18.278903614002047,
+      "group_index": 3,
+      "submission_index": 1
+    },
+    {
+      "sequence": 20,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:47.626014+00:00",
+      "group_elapsed_seconds": 21.882144461997086,
+      "group_index": 3,
+      "route": "/v1/messages",
+      "start_sequence": 12
+    },
+    {
+      "sequence": 21,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_finished",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:47.650494+00:00",
+      "group_elapsed_seconds": 21.90661677598837,
+      "group_index": 3,
+      "submission_index": 3
+    },
+    {
+      "sequence": 22,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:58.652524+00:00",
+      "group_elapsed_seconds": 32.90865403501084,
+      "group_index": 3,
+      "route": "/v1/messages",
+      "start_sequence": 14
+    },
+    {
+      "sequence": 23,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_finished",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 1,
+      "at_utc": "2026-10-16T00:22:58.678412+00:00",
+      "group_elapsed_seconds": 32.9345343199966,
+      "group_index": 3,
+      "submission_index": 2
+    }
+  ],
+  "submission_order": [
+    "broader-fresh-13-equal-authority-conflict",
+    "broader-fresh-14-unit-agreement",
+    "broader-fresh-15-quantifier-gap",
+    "broader-fresh-16-table-total"
+  ],
+  "client_task_start_order": [
+    "broader-fresh-13-equal-authority-conflict",
+    "broader-fresh-14-unit-agreement",
+    "broader-fresh-15-quantifier-gap",
+    "broader-fresh-16-table-total"
+  ],
+  "client_task_finish_order": [
+    "broader-fresh-13-equal-authority-conflict",
+    "broader-fresh-14-unit-agreement",
+    "broader-fresh-16-table-total",
+    "broader-fresh-15-quantifier-gap"
+  ],
+  "observed_future_completion_order": [
+    "broader-fresh-13-equal-authority-conflict",
+    "broader-fresh-14-unit-agreement",
+    "broader-fresh-16-table-total",
+    "broader-fresh-15-quantifier-gap"
+  ],
+  "ordering_scope": "Sequences and elapsed times are local to this group. Client submission, task, and HTTP dispatch/completion order are recorded; GPU scheduler order is not observed.",
+  "group_sha256": "334fee06183c75d1616f681ea9965cd9f535d356723c5ed722ec421f0407bdb0"
+}

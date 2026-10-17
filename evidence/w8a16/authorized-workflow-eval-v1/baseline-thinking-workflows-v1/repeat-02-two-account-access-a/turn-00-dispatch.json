@@ -1,0 +1,24 @@
+{
+  "dispatches": [
+    {
+      "turn": 0,
+      "tool_use_id": "chatcmpl-tool-9e9c9652160ccc98",
+      "name": "http_request",
+      "arguments": {
+        "headers": {
+          "Authorization": "Bearer fixture-alice"
+        },
+        "method": "GET",
+        "url": "https://app.ctf.test/api/me"
+      },
+      "result": {
+        "evidence_id": "E001",
+        "ok": true,
+        "status": 200,
+        "body": {
+          "authenticated_as": "alice"
+        }
+      }
+    }
+  ]
+}

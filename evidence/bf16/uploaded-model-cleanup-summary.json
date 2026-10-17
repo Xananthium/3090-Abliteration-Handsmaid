@@ -1,0 +1,267 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-10-15T22:57:37.536088+00:00",
+  "full_manifest": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/uploaded-model-cleanup-manifest.json",
+  "full_manifest_sha256": "de718e46ef862a4f269ad060b5a08a40a3d50091444ed418df007b41af63b1e4",
+  "candidates_verified": 12,
+  "verified_weight_file_references": 134,
+  "unverified_weight_files": 0,
+  "conservative_reclaimable_bytes": 333675462656,
+  "conservative_reclaimable_gib": 310.7594909667969,
+  "active_model_endpoints_at_audit_start": [
+    {
+      "port": 8001,
+      "reachable": false,
+      "error": "URLError"
+    },
+    {
+      "port": 8002,
+      "id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "root": "/home/isnotreal/models/redcell-abliteration-source-bf16"
+    },
+    {
+      "port": 8002,
+      "id": "redcell-bf16-strength-1.5",
+      "root": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/adapters/strength-1.5-vllm"
+    }
+  ],
+  "required_retained_paths": [
+    "/home/isnotreal/models/redcell-abliteration-source-bf16",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/adapters"
+  ],
+  "candidates": [
+    {
+      "local_directory": "/home/isnotreal/models/hauhau-qwen3.6-35b-source",
+      "repository": "Xananthium/Inference-Model-Archive-2026-10",
+      "revision": "fdad9ecefe229ca70fcf002c5f074535c9caf576",
+      "prefix": "hauhau-qwen3.6-35b-source",
+      "status": "verified_complete_local_copy",
+      "verified_weight_files": 2,
+      "local_metadata_to_preserve": [],
+      "conservative_reclaimable_bytes_excluding_shared_inodes": 44504313856,
+      "prior_verification_receipt": "/home/isnotreal/model-tools/hf-publication-20261006/verified/hauhau-qwen3.6-35b-source.json",
+      "remote_tree_receipt": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/cleanup-remote-trees/hauhau-qwen3.6-35b-source.json"
+    },
+    {
+      "local_directory": "/home/isnotreal/models/qwen3.6-35b-hauhau-reconstructed-bf16",
+      "repository": "Xananthium/Inference-Model-Archive-2026-10",
+      "revision": "8fdbc3433428cccf1574dc726f80ea092b914d65",
+      "prefix": "qwen3.6-35b-hauhau-reconstructed-bf16",
+      "status": "verified_weights_preserve_local_metadata",
+      "verified_weight_files": 26,
+      "local_metadata_to_preserve": [
+        ".gitattributes",
+        "README.md"
+      ],
+      "conservative_reclaimable_bytes_excluding_shared_inodes": 71920336896,
+      "prior_verification_receipt": "/home/isnotreal/model-tools/hf-publication-20261006/verified/qwen3.6-35b-hauhau-reconstructed-bf16.json",
+      "remote_tree_receipt": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/cleanup-remote-trees/qwen3.6-35b-hauhau-reconstructed-bf16.json"
+    },
+    {
+      "local_directory": "/home/isnotreal/models/qwen3.6-35b-hauhau-w8a16-trt",
+      "repository": "Xananthium/Inference-Model-Archive-2026-10",
+      "revision": "02d0e9d57a1a1c0e28b858982741b7301c4838bd",
+      "prefix": "qwen3.6-35b-hauhau-w8a16-trt",
+      "status": "verified_weights_preserve_local_metadata",
+      "verified_weight_files": 4,
+      "local_metadata_to_preserve": [
+        ".gitattributes",
+        ".quant_summary.txt",
+        "README.md"
+      ],
+      "conservative_reclaimable_bytes_excluding_shared_inodes": 38450085888,
+      "prior_verification_receipt": "/home/isnotreal/model-tools/hf-publication-20261006/verified/qwen3.6-35b-hauhau-w8a16-trt.json",
+      "remote_tree_receipt": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/cleanup-remote-trees/qwen3.6-35b-hauhau-w8a16-trt.json"
+    },
+    {
+      "local_directory": "/home/isnotreal/models/qwen3.6-35b-hauhau-w8a16-native-view",
+      "repository": "Xananthium/Qwen3.6-35B-A3B-Hauhau-Aggressive-W8A16-Vision",
+      "revision": "2bafdbe39fde27e3389b089ec78544eb9aca7e0c",
+      "prefix": "",
+      "status": "verified_weights_preserve_local_metadata",
+      "verified_weight_files": 4,
+      "local_metadata_to_preserve": [
+        ".quant_summary.txt",
+        "README.md",
+        "w8a16-view.json"
+      ],
+      "conservative_reclaimable_bytes_excluding_shared_inodes": 86016,
+      "prior_verification_receipt": "/home/isnotreal/model-tools/hf-publication-20261006/verified/qwen3.6-35b-hauhau-w8a16-native-view.json",
+      "remote_tree_receipt": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/cleanup-remote-trees/qwen3.6-35b-hauhau-w8a16-native-view.json"
+    },
+    {
+      "local_directory": "/home/isnotreal/models/qwen3.6-35b-hauhau-w8a8-native-view",
+      "repository": "Xananthium/Qwen3.6-35B-A3B-Hauhau-Aggressive-W8A8-Vision",
+      "revision": "8f41545e16ea3a1930fbefc69b68b4830d690f09",
+      "prefix": "",
+      "status": "verified_weights_preserve_local_metadata",
+      "verified_weight_files": 4,
+      "local_metadata_to_preserve": [
+        ".quant_summary.txt",
+        "README.md",
+        "w8a8-view.json"
+      ],
+      "conservative_reclaimable_bytes_excluding_shared_inodes": 86016,
+      "prior_verification_receipt": "/home/isnotreal/model-tools/hf-publication-20261006/verified/qwen3.6-35b-hauhau-w8a8-native-view.json",
+      "remote_tree_receipt": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/cleanup-remote-trees/qwen3.6-35b-hauhau-w8a8-native-view.json"
+    },
+    {
+      "local_directory": "/home/isnotreal/models/qwen3.6-35b-hauhau-w6a8-native",
+      "repository": "Xananthium/Qwen3.6-35B-A3B-Hauhau-Aggressive-W6A8-Vision",
+      "revision": "7b97321ddd05db6e472153c59bbc95a78153efc2",
+      "prefix": "",
+      "status": "verified_weights_preserve_local_metadata",
+      "verified_weight_files": 26,
+      "local_metadata_to_preserve": [
+        ".gitattributes",
+        "README.md"
+      ],
+      "conservative_reclaimable_bytes_excluding_shared_inodes": 30447706112,
+      "prior_verification_receipt": "/home/isnotreal/model-tools/full-round-20261006/publication-verified/hauhau-w6a8.json",
+      "remote_tree_receipt": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/cleanup-remote-trees/qwen3.6-35b-hauhau-w6a8-native.json"
+    },
+    {
+      "local_directory": "/home/isnotreal/models/glm-w6a8-native",
+      "repository": "Xananthium/GLM-4.7-Flash-Hauhau-Aggressive-W6A8",
+      "revision": "3cfec03c00165843f709565c78231ec6e8f4f5db",
+      "prefix": "",
+      "status": "verified_weights_preserve_local_metadata",
+      "verified_weight_files": 14,
+      "local_metadata_to_preserve": [
+        "README.md"
+      ],
+      "conservative_reclaimable_bytes_excluding_shared_inodes": 24009195520,
+      "prior_verification_receipt": "/home/isnotreal/model-tools/full-round-20261006/publication-verified/glm.json",
+      "remote_tree_receipt": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/cleanup-remote-trees/glm-w6a8-native.json"
+    },
+    {
+      "local_directory": "/home/isnotreal/models/gemma-w6a8-native",
+      "repository": "Xananthium/Gemma4-26B-A4B-Hauhau-Balanced-W6A8-Vision",
+      "revision": "b130caf22ec83ed1aa49564fd874fd44d294d9d5",
+      "prefix": "",
+      "status": "verified_weights_preserve_local_metadata",
+      "verified_weight_files": 13,
+      "local_metadata_to_preserve": [
+        "README.md"
+      ],
+      "conservative_reclaimable_bytes_excluding_shared_inodes": 22579380224,
+      "prior_verification_receipt": "/home/isnotreal/model-tools/full-round-20261006/publication-verified/gemma.json",
+      "remote_tree_receipt": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/cleanup-remote-trees/gemma-w6a8-native.json"
+    },
+    {
+      "local_directory": "/home/isnotreal/models/nemotron-w6a8-native",
+      "repository": "Xananthium/NVIDIA-Nemotron-3-Nano-30B-A3B-Heretic-W6A8",
+      "revision": "f181686c4c0ac0be94f26e7276e749237fb8ad63",
+      "prefix": "",
+      "status": "verified_weights_preserve_local_metadata",
+      "verified_weight_files": 7,
+      "local_metadata_to_preserve": [
+        "README.md"
+      ],
+      "conservative_reclaimable_bytes_excluding_shared_inodes": 26541899776,
+      "prior_verification_receipt": "/home/isnotreal/model-tools/full-round-20261006/publication-verified/nemotron-w6a8.json",
+      "remote_tree_receipt": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/cleanup-remote-trees/nemotron-w6a8-native.json"
+    },
+    {
+      "local_directory": "/home/isnotreal/models/nemotron-w8a8-native",
+      "repository": "Xananthium/NVIDIA-Nemotron-3-Nano-30B-A3B-Heretic-W8A8",
+      "revision": "04b4dc4e962eec2e4d5ef349401d6d8b97af8d8a",
+      "prefix": "",
+      "status": "verified_weights_preserve_local_metadata",
+      "verified_weight_files": 7,
+      "local_metadata_to_preserve": [
+        "README.md",
+        "results/claude-code.json",
+        "results/cybermetric.json",
+        "results/long-context.json",
+        "results/serving-profile.json",
+        "results/speed.json",
+        "results/suite-status.json"
+      ],
+      "conservative_reclaimable_bytes_excluding_shared_inodes": 32355291136,
+      "prior_verification_receipt": "/home/isnotreal/model-tools/full-round-20261006/publication-verified/nemotron.json",
+      "remote_tree_receipt": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/cleanup-remote-trees/nemotron-w8a8-native.json"
+    },
+    {
+      "local_directory": "/home/isnotreal/models/redcell-w6a8-native",
+      "repository": "Xananthium/REDCELL-26B-A4B-OSINT-Cyber-W6A8-Vision",
+      "revision": "224d29d960498e9202d7c5462f5e298556df3cfd",
+      "prefix": "",
+      "status": "verified_weights_preserve_local_metadata",
+      "verified_weight_files": 13,
+      "local_metadata_to_preserve": [
+        "README.md"
+      ],
+      "conservative_reclaimable_bytes_excluding_shared_inodes": 21433745408,
+      "prior_verification_receipt": "/home/isnotreal/model-tools/full-round-20261006/publication-verified/redcell.json",
+      "remote_tree_receipt": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/cleanup-remote-trees/redcell-w6a8-native.json"
+    },
+    {
+      "local_directory": "/home/isnotreal/models/redcell-abliterated-pilot-w6a8",
+      "repository": "Xananthium/REDCELL-26B-A4B-OSINT-Cyber-Abliterated-Pilot-W6A8-Vision",
+      "revision": "d27d2f66f97900539652a726a94537b24bb65caa",
+      "prefix": "",
+      "status": "verified_complete_local_copy",
+      "verified_weight_files": 14,
+      "local_metadata_to_preserve": [],
+      "conservative_reclaimable_bytes_excluding_shared_inodes": 21433335808,
+      "prior_verification_receipt": "/home/isnotreal/model-tools/redcell-abliteration-20261014/model-card-publication.json",
+      "remote_tree_receipt": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/cleanup-remote-trees/redcell-abliterated-pilot-w6a8.json"
+    }
+  ],
+  "retained_unmapped_or_unpublished": [
+    {
+      "local_directory": "/home/isnotreal/models/endy-qwen3.6-35b-source",
+      "status": "retain",
+      "reason": "No complete Xananthium backup mapping found in audited receipts; retain pending separate decision."
+    },
+    {
+      "local_directory": "/home/isnotreal/models/full-round-sources-20261006",
+      "status": "retain",
+      "reason": "No complete Xananthium backup mapping found in audited receipts; retain pending separate decision."
+    },
+    {
+      "local_directory": "/home/isnotreal/models/qwen3.6-35b-base-bf16",
+      "status": "retain",
+      "reason": "No complete Xananthium backup mapping found in audited receipts; retain pending separate decision."
+    },
+    {
+      "local_directory": "/home/isnotreal/models/qwen3.8-27b-uncensored-bf16",
+      "status": "retain",
+      "reason": "No complete Xananthium backup mapping found in audited receipts; retain pending separate decision."
+    },
+    {
+      "local_directory": "/home/isnotreal/models/redcell-abliterated-strength-1.1-w6a8",
+      "status": "retain",
+      "reason": "Unpublished experimental conversion; not covered by uploaded-model deletion authorization."
+    },
+    {
+      "local_directory": "/home/isnotreal/models/redcell-abliterated-strength-1.25-w6a8",
+      "status": "retain",
+      "reason": "Unpublished experimental conversion; not covered by uploaded-model deletion authorization."
+    },
+    {
+      "local_directory": "/home/isnotreal/models/redcell-abliterated-strength-1.5-w6a8",
+      "status": "retain",
+      "reason": "Unpublished experimental conversion; not covered by uploaded-model deletion authorization."
+    },
+    {
+      "local_directory": "/home/isnotreal/models/redcell-abliterated-strength-1.5-w8a8",
+      "status": "retain",
+      "reason": "Unpublished experimental conversion; not covered by uploaded-model deletion authorization."
+    },
+    {
+      "local_directory": "/home/isnotreal/models/redcell-abliteration-source-bf16",
+      "status": "retain",
+      "reason": "Required current full BF16 source; retain."
+    }
+  ],
+  "scope": "Read-only audit; root agent owns deletion and final free-space measurement.",
+  "conditions": [
+    "Preserve all small local support metadata before deleting model directories, especially listed differences.",
+    "Root must stop or disable inactive old boot targets when removing their model directory.",
+    "No candidate is referenced by the active private BF16 endpoints.",
+    "Shared vision and adapter hardlinks are excluded from reclaimed-byte estimates."
+  ],
+  "verification": "Immutable HF revisions queried with hf models list; local SHA256 (LFS) or Git blob hashes match. Prior SHA256 cache reused only with exact resolved path, size and nanosecond mtime. Pilot additionally passed hf cache verify (49 local files)."
+}

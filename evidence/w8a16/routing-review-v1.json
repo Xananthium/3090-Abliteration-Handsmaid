@@ -1,0 +1,45 @@
+{
+  "review_type": "diagnostic_followup_to_failed_exact_probability_match",
+  "approved_for_development_comparison": true,
+  "exact_logprob_reproducibility": false,
+  "baseline_numerical_variation_observed": true,
+  "records": [
+    {
+      "prompt": "What is 3 + 4? Reply with the integer only.",
+      "all_outputs_complete": true,
+      "base_and_reset_answers": [
+        "7"
+      ],
+      "edited_answers": [
+        "7"
+      ],
+      "baseline_answer_stable": true,
+      "control_max_top20_half_l1": 6.06647267213113e-09,
+      "reset_max_top20_half_l1": 8.603357173376192e-09,
+      "edit_min_top20_half_l1": 9.092421938623402e-08,
+      "minimum_observed_top20_mass": 0.9999999591865945,
+      "reset_variation_within_control_range_plus_fp32_epsilon": true
+    },
+    {
+      "prompt": "Suggest one concise synonym for careful. Respond with a single word.",
+      "all_outputs_complete": true,
+      "base_and_reset_answers": [
+        "Cautious"
+      ],
+      "edited_answers": [
+        "Meticulous"
+      ],
+      "baseline_answer_stable": true,
+      "control_max_top20_half_l1": 0.011425251705043543,
+      "reset_max_top20_half_l1": 0.011425251705043543,
+      "edit_min_top20_half_l1": 0.9666420645937138,
+      "minimum_observed_top20_mass": 0.9999999100908639,
+      "reset_variation_within_control_range_plus_fp32_epsilon": true
+    }
+  ],
+  "evidence_sha256": {
+    "routing-repeatability-v1.json": "374b9b7f01f00679cc5a97b19e91d508ef773f89ca5cb8e2e2d7572e2a58d3bd",
+    "routing-smoke-v1.json": "c6654e149d399cdff7f2c76332c27a58d9164bf56213935cdc58cdcb2a7c975c"
+  },
+  "interpretation": "Both benign probes restored their baseline answer in every reset. Synonym probability variation on reset equals ordinary base-only variation; edit produces a much larger distribution change. This supports development comparisons with repeated matched controls, not bitwise determinism or proof of global quality. Original exact-match failure is retained."
+}

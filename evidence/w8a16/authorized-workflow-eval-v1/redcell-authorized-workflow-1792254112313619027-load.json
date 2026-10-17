@@ -1,0 +1,65 @@
+{
+  "unit": "redcell-authorized-workflow-1792254112313619027",
+  "checkpoint": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+  "profile_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/launch-v1.json",
+  "profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+  "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+  "started_utc": "2026-10-17T16:21:52.313665+00:00",
+  "generation_validated": false,
+  "production_modified": false,
+  "source_launcher_sha256": "c583411fae73972dfc0c6d39d7429bbf313d289ea2e0d0f652bd48677c22d61a",
+  "status": "loaded",
+  "advertised_models": [
+    {
+      "id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "object": "model",
+      "created": 1792254197,
+      "owned_by": "vllm",
+      "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+      "parent": null,
+      "max_model_len": 8192,
+      "permission": [
+        {
+          "id": "modelperm-87c02c834453cd46",
+          "object": "model_permission",
+          "created": 1792254197,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ]
+    },
+    {
+      "id": "redcell-w8a16-strength-1.5",
+      "object": "model",
+      "created": 1792254197,
+      "owned_by": "vllm",
+      "root": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/strength-1.5-vllm",
+      "parent": "qwen3.6-35b-hauhau-w4a16-vision",
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-a69c9f1163406927",
+          "object": "model_permission",
+          "created": 1792254197,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ]
+    }
+  ],
+  "load_seconds": 85.22663361800369
+}

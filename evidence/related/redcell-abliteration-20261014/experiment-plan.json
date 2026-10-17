@@ -1,0 +1,18 @@
+{
+  "model": "REDCELL-26B-A4B-OSINT-Cyber",
+  "source_revision": "ba311d958b4ed191a7291b38a6d805662415a570",
+  "heretic_commit": "66a952b49b00bfd1854bdad769fee5fb225b53be",
+  "method": "Magnitude-preserving orthogonal abliteration, Heretic rank-3 LoRA",
+  "analysis_quantization": "NF4 language linears, BF16 embeddings/router/vision",
+  "trial_count": 8,
+  "calibration_per_class": 64,
+  "optimization_per_class": 12,
+  "heldout_refusal_examples": 16,
+  "capability_cases": 20,
+  "final_export_target": "W6A8 for vLLM, conditional on pilot evaluation",
+  "vllm_stopped_cleanly": true,
+  "boot_selection_unchanged": "GLM 200k context, 80 GiB host offload, 0.97 VRAM budget",
+  "gpu_power_limit_watts": 280,
+  "baseline_service_backup": "/home/isnotreal/model-tools/redcell-abliteration-20261014/service-before.json",
+  "research_only_until_evaluated": true
+}

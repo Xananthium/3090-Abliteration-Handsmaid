@@ -1,0 +1,77 @@
+{
+  "status": "completed",
+  "passed": true,
+  "base_response_restored": true,
+  "scope": "Native Anthropic base/edit/base routing smoke; no prefix cache; not a quality or numerical-equivalence claim.",
+  "rows": [
+    {
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "text": "7",
+      "passed": true,
+      "seconds": 3.660163339023711,
+      "response": {
+        "id": "chatcmpl-aed4b930cd041fff",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "7"
+          }
+        ],
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 27,
+          "output_tokens": 2
+        }
+      }
+    },
+    {
+      "model_id": "redcell-bf16-strength-1.5",
+      "text": "7",
+      "passed": true,
+      "seconds": 6.670993756008102,
+      "response": {
+        "id": "chatcmpl-83cee596c2fcab75",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "7"
+          }
+        ],
+        "model": "redcell-bf16-strength-1.5",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 27,
+          "output_tokens": 2
+        }
+      }
+    },
+    {
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "text": "7",
+      "passed": true,
+      "seconds": 4.422686192992842,
+      "response": {
+        "id": "chatcmpl-a23f0e760d2da472",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "7"
+          }
+        ],
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "stop_reason": "end_turn",
+        "usage": {
+          "input_tokens": 27,
+          "output_tokens": 2
+        }
+      }
+    }
+  ]
+}

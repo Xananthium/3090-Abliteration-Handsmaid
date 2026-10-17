@@ -1,0 +1,122 @@
+{
+  "created_utc": "2026-10-16T01:55:32.211461+00:00",
+  "phase1_directory": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z",
+  "phase2_directory": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z",
+  "combined_disk_limit_bytes": 536870912,
+  "phase1_bytes_at_plan": 218296254,
+  "phase2_raw_bytes": 159509504,
+  "combined_raw_plus_existing_bytes": 377805758,
+  "remaining_for_phase2_code_and_outputs_bytes": 159065154,
+  "memory_address_space_limit_bytes": 1073741824,
+  "cpu_threads": 1,
+  "nice": 15,
+  "external_timeout_seconds": 1800,
+  "external_kill_grace_seconds": 5,
+  "stages": [
+    {
+      "kind": "control",
+      "layer": 0,
+      "hf_tensor": "model.language_model.layers.0.mlp.up_proj.weight",
+      "gguf_tensor": "blk.0.ffn_up.weight",
+      "shape": [
+        2112,
+        2816
+      ],
+      "base_dtype": "BF16",
+      "hauhau_dtype": "Q8_0",
+      "base_file": "model-00001-of-00002.safetensors",
+      "base_absolute_offset": 3029340434,
+      "base_bytes": 11894784,
+      "hauhau_offset": 1687099296,
+      "hauhau_bytes": 6319104,
+      "q8_block_values": 32,
+      "q8_block_bytes": 34
+    },
+    {
+      "kind": "target",
+      "layer": 27,
+      "hf_tensor": "model.language_model.layers.27.self_attn.o_proj.weight",
+      "gguf_tensor": "blk.27.attn_output.weight",
+      "shape": [
+        2816,
+        4096
+      ],
+      "base_dtype": "BF16",
+      "hauhau_dtype": "Q8_0",
+      "base_file": "model-00001-of-00002.safetensors",
+      "base_absolute_offset": 34579484730,
+      "base_bytes": 23068672,
+      "hauhau_offset": 24596879104,
+      "hauhau_bytes": 12255232,
+      "q8_block_values": 32,
+      "q8_block_bytes": 34
+    },
+    {
+      "kind": "target",
+      "layer": 25,
+      "hf_tensor": "model.language_model.layers.25.self_attn.o_proj.weight",
+      "gguf_tensor": "blk.25.attn_output.weight",
+      "shape": [
+        2816,
+        4096
+      ],
+      "base_dtype": "BF16",
+      "hauhau_dtype": "Q8_0",
+      "base_file": "model-00001-of-00002.safetensors",
+      "base_absolute_offset": 31323104822,
+      "base_bytes": 23068672,
+      "hauhau_offset": 22836964032,
+      "hauhau_bytes": 12255232,
+      "q8_block_values": 32,
+      "q8_block_bytes": 34
+    },
+    {
+      "kind": "target",
+      "layer": 12,
+      "hf_tensor": "model.language_model.layers.12.self_attn.o_proj.weight",
+      "gguf_tensor": "blk.12.attn_output.weight",
+      "shape": [
+        2816,
+        4096
+      ],
+      "base_dtype": "BF16",
+      "hauhau_dtype": "Q8_0",
+      "base_file": "model-00001-of-00002.safetensors",
+      "base_absolute_offset": 9558682650,
+      "base_bytes": 23068672,
+      "hauhau_offset": 11311792928,
+      "hauhau_bytes": 12255232,
+      "q8_block_values": 32,
+      "q8_block_bytes": 34
+    },
+    {
+      "kind": "target",
+      "layer": 18,
+      "hf_tensor": "model.language_model.layers.18.self_attn.o_proj.weight",
+      "gguf_tensor": "blk.18.attn_output.weight",
+      "shape": [
+        2816,
+        4096
+      ],
+      "base_dtype": "BF16",
+      "hauhau_dtype": "Q8_0",
+      "base_file": "model-00001-of-00002.safetensors",
+      "base_absolute_offset": 18812703782,
+      "base_bytes": 23068672,
+      "hauhau_offset": 16656195552,
+      "hauhau_bytes": 12255232,
+      "q8_block_values": 32,
+      "q8_block_bytes": 34
+    }
+  ],
+  "pins": {
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-recovery-audit-20261016/hauhau-saved-gguf-header.json": "2d1889b70d260c31ced155cfb5d936a633eef4522039a746d155e216494bdced",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-recovery-audit-20261016/google-release-text-header.json": "ed8d6f0c3639de4be011bc2121547d088506135f0198a530e4a909bb9311d7b3",
+    "/home/isnotreal/llama.cpp/gguf-py/gguf/quants.py": "2c927a1b3d9f0920dcf4007fb686e1b0999333e9f65ce43dcc689900c0beae8b",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/recover_tensor_geometry.py": "6259a1d11b7c811cfb42ca87b553dcbec3e8a5a2b923babb31ed3b98a5e8efeb",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/result.json": "e7dfbee08e89e9ae19a4ec883392422e8485ffb7dfb9837c8dc2e99d1245cacf"
+  },
+  "control_gate": "At least one direct-BF16 or BF16-to-F16 Q8_0 null route must exactly match the expected-unchanged control packed bytes. Both failing stops target expansion.",
+  "control_choice": "Layer 27 shared up is F16; layer 0 shared up is Q8_0 and accompanies independently verified unchanged early down/q control tensors.",
+  "scope": "Bounded geometry and quantizer controls only; no inference, GPU, adapters, REDCELL transfer, publication, or service changes."
+}

@@ -1,0 +1,36 @@
+{
+  "adapters": {
+    "strength-1.0-vllm": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/strength-1.0-vllm",
+      "derived_from": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/adapters/strength-1.0-vllm",
+      "adapter_model_sha256": "61f51713f45cb9da0e7293074e405d2a36a8ab612a89b180120f47ab45603469",
+      "adapter_config_sha256": "8f404726dab2bbd3ddbe99630a37ed3ded557ab077659c556f03e0ec36804891",
+      "model_id": "redcell-w8a16-strength-1.0",
+      "base_model_name_or_path": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+      "factor_change": "None; only the base checkpoint identity in config changed."
+    },
+    "strength-1.5-vllm": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/strength-1.5-vllm",
+      "derived_from": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/adapters/strength-1.5-vllm",
+      "adapter_model_sha256": "cfd9fe8705b79237e252fba47f19b88c3071683d56eacd4ae4f69a249ada4919",
+      "adapter_config_sha256": "8f404726dab2bbd3ddbe99630a37ed3ded557ab077659c556f03e0ec36804891",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "base_model_name_or_path": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+      "factor_change": "None; only the base checkpoint identity in config changed."
+    },
+    "attention-1.5-mlp-1.0-vllm": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/attention-1.5-mlp-1.0-vllm",
+      "derived_from": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/adapters/attention-1.5-mlp-1.0-vllm",
+      "adapter_model_sha256": "a108c0bb3e80075975c6565c0f53dc965593611cebae78c19264d70a19c402ac",
+      "adapter_config_sha256": "8f404726dab2bbd3ddbe99630a37ed3ded557ab077659c556f03e0ec36804891",
+      "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+      "base_model_name_or_path": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+      "factor_change": "None; only the base checkpoint identity in config changed."
+    }
+  },
+  "direction_provenance": "Original pilot directions were derived with NF4; these are preserved starting candidates, not directions newly extracted from W8A16.",
+  "runtime_constraints": [
+    "No fully sharded LoRA",
+    "Expert gate/up factors remain zero"
+  ]
+}

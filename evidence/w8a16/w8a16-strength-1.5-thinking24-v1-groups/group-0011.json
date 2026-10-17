@@ -1,0 +1,794 @@
+{
+  "status": "complete",
+  "configuration_fingerprint": "ace6c1e1dbe82282b360cbf81235eb374cf60bf3ba93b0771d5a80abd406f344",
+  "schedule": {
+    "index": 11,
+    "repeat": 2,
+    "case_ids": [
+      "broader-fresh-21-exhausted-retries",
+      "broader-fresh-22-integrity-before-parse",
+      "broader-fresh-23-schema-key-repair",
+      "broader-fresh-24-stop-on-completion"
+    ]
+  },
+  "attempt_id": "1792111139673173155-161303",
+  "invocation_id": "1792109741937547541-161303",
+  "started_at_utc": "2026-10-16T00:38:59.673236+00:00",
+  "partial_outputs_scored": false,
+  "completed_at_utc": "2026-10-16T00:39:24.258571+00:00",
+  "wall_seconds": 24.585410023020813,
+  "records": [
+    {
+      "id": "broader-fresh-21-exhausted-retries",
+      "category": "recovery",
+      "configuration_fingerprint": "ace6c1e1dbe82282b360cbf81235eb374cf60bf3ba93b0771d5a80abd406f344",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "60bc0a60ac5812a217517ebdf21a10c641d73f4de7816efc0ae800a3e83d58ea",
+      "prompt_sha256": "ab1f6604dfa843281a7c1ce536617306c3f4422598d03a4ad9698838f7ae3d69",
+      "answer_key_sha256": "7ff76b60c09bccce5acd10b1b5be9c3a7dab2dbfbb9e01bd36c2aee1791a91b4",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 11,
+      "submission_index": 0,
+      "invocation_id": "1792109741937547541-161303",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 1,
+      "task_finished_sequence": 17,
+      "answer_text": "report_unavailable",
+      "raw_final_text": "report_unavailable",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 630,
+      "raw_final_text_sha256": "edb9ca71c20051d7361f19736d3eaa2c26b260905a5ecf267756a2c0932d7068",
+      "response_attempts": [
+        {
+          "raw_text": "report_unavailable",
+          "raw_text_sha256": "edb9ca71c20051d7361f19736d3eaa2c26b260905a5ecf267756a2c0932d7068",
+          "thinking_text": "*   Current state: A mock service has failed three attempts.\n    *   Rule: At most three attempts total are permitted.\n    *   Rule: If the budget is exhausted, the action must be `report_unavailable`.\n    *   Constraint: No fallback result exists.\n    *   Goal: Determine the next action name.\n\n    *   Attempt 1: Failed.\n    *   Attempt 2: Failed.\n    *   Attempt 3: Failed.\n    *   Total attempts made so far = 3.\n    *   Max allowed attempts = 3.\n\n    *   Since the budget of 3 attempts is exhausted (3/3), the rule says to `report_unavailable`.\n\n    *   `retry_request` or `report_unavailable`.\n\n    *   `report_unavailable`.",
+          "thinking_text_sha256": "4045a83fd10acdd6108398c13e6be30686bb3b963b5a644e90c7d6e461977c08",
+          "thinking_characters": 630,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Current state: A mock service has failed three attempts.\n    *   Rule: At most three attempts total are permitted.\n    *   Rule: If the budget is exhausted, the action must be `report_unavailable`.\n    *   Constraint: No fallback result exists.\n    *   Goal: Determine the next action name.\n\n    *   Attempt 1: Failed.\n    *   Attempt 2: Failed.\n    *   Attempt 3: Failed.\n    *   Total attempts made so far = 3.\n    *   Max allowed attempts = 3.\n\n    *   Since the budget of 3 attempts is exhausted (3/3), the rule says to `report_unavailable`.\n\n    *   `retry_request` or `report_unavailable`.\n\n    *   `report_unavailable`.",
+              "signature": "175031216cac4310944a0eb522081368"
+            },
+            {
+              "type": "text",
+              "text": "report_unavailable"
+            }
+          ],
+          "native_content_blocks_sha256": "64f854ba41ac9f6803f8b0cbce2925b9280dd345d387b2526d639dad1c07b733",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 78,
+            "output_tokens": 184
+          },
+          "native_request_seconds": 16.19058639902505,
+          "started_sequence": 15,
+          "finished_sequence": 16
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.01705768599640578,
+          "started_sequence": 5,
+          "finished_sequence": 9
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 16.19058639902505,
+          "started_sequence": 15,
+          "finished_sequence": 16
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 184,
+          "input_tokens": 78,
+          "stop_reason": "end_turn",
+          "response_sha256": "edb9ca71c20051d7361f19736d3eaa2c26b260905a5ecf267756a2c0932d7068",
+          "visible_characters": 18,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 16.244704431999708
+        }
+      ],
+      "counted_input_tokens": 78,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8050,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "edb9ca71c20051d7361f19736d3eaa2c26b260905a5ecf267756a2c0932d7068",
+      "output_tokens": 184,
+      "total_output_tokens_including_retries": 184,
+      "generation_seconds_including_retries": 16.244704431999708,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T00:39:16.047605+00:00",
+      "record_sha256": "ced381c84fb80f50a5c753cb69bfe4ac2ac84b6820962c07029f730615fa2efa"
+    },
+    {
+      "id": "broader-fresh-22-integrity-before-parse",
+      "category": "recovery",
+      "configuration_fingerprint": "ace6c1e1dbe82282b360cbf81235eb374cf60bf3ba93b0771d5a80abd406f344",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "3452da7c2108f9dc449541e6da70d8582c861e5ae2379fb12e353cd852f45dce",
+      "prompt_sha256": "9d35d635ada981753ca727a0b2b3f8bd855400387667ee0dfa735e58d796ad11",
+      "answer_key_sha256": "dcb1440c02e77fe663e0f1cb71dc48b936796fc741b294d70d54aa7b88868a10",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 11,
+      "submission_index": 1,
+      "invocation_id": "1792109741937547541-161303",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 0,
+      "task_finished_sequence": 21,
+      "answer_text": "```json\n{\n  \"name\": \"discard_and_refetch\",\n  \"arguments\": {\n    \"file_id\": \"r17\"\n  }\n}\n```",
+      "raw_final_text": "```json\n{\n  \"name\": \"discard_and_refetch\",\n  \"arguments\": {\n    \"file_id\": \"r17\"\n  }\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 527,
+      "raw_final_text_sha256": "a94186bf06a8946b953c5c81a5691fbaaaf59b0b7c5dee580e2dc615b36f2548",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"name\": \"discard_and_refetch\",\n  \"arguments\": {\n    \"file_id\": \"r17\"\n  }\n}\n```",
+          "raw_text_sha256": "a94186bf06a8946b953c5c81a5691fbaaaf59b0b7c5dee580e2dc615b36f2548",
+          "thinking_text": "*   Expected checksum: `7a4c`\n    *   Actual checksum: `7a4d`\n    *   Condition: `expected == actual` $\\rightarrow$ `parse_report`\n    *   Condition: `expected != actual` $\\rightarrow$ `discard_and_refetch(file_id=r17)`\n    *   Comparison: `7a4c != 7a4d`\n    *   Result: `discard_and_refetch` with `file_id=\"r17\"`\n\n    *   Format: JSON object with `name` and `arguments`.\n    *   `name`: \"discard_and_refetch\"\n    *   `arguments`: `{\"file_id\": \"r17\"}`\n\n    *   `{\"name\": \"discard_and_refetch\", \"arguments\": {\"file_id\": \"r17\"}}`",
+          "thinking_text_sha256": "848b3272476d66c57ad46ede8b9f9af4fb15d9c1a5035444c54e9f7177e10940",
+          "thinking_characters": 527,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Expected checksum: `7a4c`\n    *   Actual checksum: `7a4d`\n    *   Condition: `expected == actual` $\\rightarrow$ `parse_report`\n    *   Condition: `expected != actual` $\\rightarrow$ `discard_and_refetch(file_id=r17)`\n    *   Comparison: `7a4c != 7a4d`\n    *   Result: `discard_and_refetch` with `file_id=\"r17\"`\n\n    *   Format: JSON object with `name` and `arguments`.\n    *   `name`: \"discard_and_refetch\"\n    *   `arguments`: `{\"file_id\": \"r17\"}`\n\n    *   `{\"name\": \"discard_and_refetch\", \"arguments\": {\"file_id\": \"r17\"}}`",
+              "signature": "35b5d388e7634772bf6a558a4134f051"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"name\": \"discard_and_refetch\",\n  \"arguments\": {\n    \"file_id\": \"r17\"\n  }\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "eb290953ddf9d1f549dbd1c6f76f94c840179df7a2add945c63c08d197682d9f",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 92,
+            "output_tokens": 242
+          },
+          "native_request_seconds": 21.21165521501098,
+          "started_sequence": 14,
+          "finished_sequence": 20
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.015424651995999739,
+          "started_sequence": 7,
+          "finished_sequence": 11
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 21.21165521501098,
+          "started_sequence": 14,
+          "finished_sequence": 20
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 242,
+          "input_tokens": 92,
+          "stop_reason": "end_turn",
+          "response_sha256": "a94186bf06a8946b953c5c81a5691fbaaaf59b0b7c5dee580e2dc615b36f2548",
+          "visible_characters": 90,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 21.25054251900292
+        }
+      ],
+      "counted_input_tokens": 92,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8036,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "a94186bf06a8946b953c5c81a5691fbaaaf59b0b7c5dee580e2dc615b36f2548",
+      "output_tokens": 242,
+      "total_output_tokens_including_retries": 242,
+      "generation_seconds_including_retries": 21.25054251900292,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T00:39:21.061445+00:00",
+      "record_sha256": "51f686452e8013d1986ffcd1913e704bbc78557a5621799fb59b48bfbcc47488"
+    },
+    {
+      "id": "broader-fresh-23-schema-key-repair",
+      "category": "recovery",
+      "configuration_fingerprint": "ace6c1e1dbe82282b360cbf81235eb374cf60bf3ba93b0771d5a80abd406f344",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "57ef6e5a630da06f2869be9057fdd8c153ab5cccdd8820949c51490c5b0b5eee",
+      "prompt_sha256": "274c39a0a930d69665ead1065790fcd36b711224811f5f8924b8b1b0f4532e08",
+      "answer_key_sha256": "94e81163074dc60a533fe3b20cf52199d068edd9d2fbc79ab78c00185c4febc3",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 11,
+      "submission_index": 2,
+      "invocation_id": "1792109741937547541-161303",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 2,
+      "task_finished_sequence": 23,
+      "answer_text": "{\"order\":\"created_at\",\"limit\":25}",
+      "raw_final_text": "{\"order\":\"created_at\",\"limit\":25}",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 802,
+      "raw_final_text_sha256": "7e3f50d3bab80481a99a26597e0656d3f9bb8fccf1513961332fbdd6e33ba9c0",
+      "response_attempts": [
+        {
+          "raw_text": "{\"order\":\"created_at\",\"limit\":25}",
+          "raw_text_sha256": "7e3f50d3bab80481a99a26597e0656d3f9bb8fccf1513961332fbdd6e33ba9c0",
+          "thinking_text": "*   Input: A JSON object `{\"sort_by\":\"created_at\",\"limit\":25}`.\n    *   Error message: `sort_by` is unsupported; the correct field is `order`.\n    *   Constraint 1: All values must stay unchanged.\n    *   Constraint 2: All other fields must stay unchanged.\n    *   Constraint 3: Return *only* the corrected JSON arguments.\n\n    *   Original: `{\"sort_by\":\"created_at\",\"limit\":25}`\n    *   Change `sort_by` to `order`.\n    *   Value of `sort_by` is `\"created_at\"`.\n    *   New key-value pair: `\"order\":\"created_at\"`.\n    *   Keep `\"limit\":25`.\n\n    *   `{\"order\":\"created_at\",\"limit\":25}`\n\n    *   Corrected JSON? Yes.\n    *   Only corrected JSON? Yes.\n    *   `sort_by` $\\rightarrow$ `order`? Yes.\n    *   Values unchanged? Yes (`\"created_at\"`, `25`).\n    *   Other fields unchanged? Yes (`\"limit\":25`).",
+          "thinking_text_sha256": "f0f3c4991f972ca6c4006f1c818c10076440b1173351c64c5d1c452d87778e82",
+          "thinking_characters": 802,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Input: A JSON object `{\"sort_by\":\"created_at\",\"limit\":25}`.\n    *   Error message: `sort_by` is unsupported; the correct field is `order`.\n    *   Constraint 1: All values must stay unchanged.\n    *   Constraint 2: All other fields must stay unchanged.\n    *   Constraint 3: Return *only* the corrected JSON arguments.\n\n    *   Original: `{\"sort_by\":\"created_at\",\"limit\":25}`\n    *   Change `sort_by` to `order`.\n    *   Value of `sort_by` is `\"created_at\"`.\n    *   New key-value pair: `\"order\":\"created_at\"`.\n    *   Keep `\"limit\":25`.\n\n    *   `{\"order\":\"created_at\",\"limit\":25}`\n\n    *   Corrected JSON? Yes.\n    *   Only corrected JSON? Yes.\n    *   `sort_by` $\\rightarrow$ `order`? Yes.\n    *   Values unchanged? Yes (`\"created_at\"`, `25`).\n    *   Other fields unchanged? Yes (`\"limit\":25`).",
+              "signature": "ab18c8582440491ebaa325e0c2a29981"
+            },
+            {
+              "type": "text",
+              "text": "{\"order\":\"created_at\",\"limit\":25}"
+            }
+          ],
+          "native_content_blocks_sha256": "3099a56e8c18500bb40c0cba4652ecccda6de70aab8692e402e89baddedc53c9",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 80,
+            "output_tokens": 280
+          },
+          "native_request_seconds": 24.37949391201255,
+          "started_sequence": 13,
+          "finished_sequence": 22
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.01595927300513722,
+          "started_sequence": 6,
+          "finished_sequence": 10
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 24.37949391201255,
+          "started_sequence": 13,
+          "finished_sequence": 22
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 280,
+          "input_tokens": 80,
+          "stop_reason": "end_turn",
+          "response_sha256": "7e3f50d3bab80481a99a26597e0656d3f9bb8fccf1513961332fbdd6e33ba9c0",
+          "visible_characters": 33,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 24.417431844980456
+        }
+      ],
+      "counted_input_tokens": 80,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8048,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "7e3f50d3bab80481a99a26597e0656d3f9bb8fccf1513961332fbdd6e33ba9c0",
+      "output_tokens": 280,
+      "total_output_tokens_including_retries": 280,
+      "generation_seconds_including_retries": 24.417431844980456,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T00:39:24.224182+00:00",
+      "record_sha256": "6e05f4d4121e0d5ce735929887a29091f15b1a0f08e7f4a264ef78746703bd6a"
+    },
+    {
+      "id": "broader-fresh-24-stop-on-completion",
+      "category": "recovery",
+      "configuration_fingerprint": "ace6c1e1dbe82282b360cbf81235eb374cf60bf3ba93b0771d5a80abd406f344",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "83a3306729287ac596190a62c473ef38b0291288a033a26069c28996a982adb6",
+      "prompt_sha256": "6095a7475823da00562054ef96fa57ee49f981181c5ab06442a587b3d93be5e7",
+      "answer_key_sha256": "ea3e55b37bf546bfda40aabc65b17b2ee986c2f025c1338fabb0b98bb9e10e5d",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 11,
+      "submission_index": 3,
+      "invocation_id": "1792109741937547541-161303",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 3,
+      "task_finished_sequence": 19,
+      "answer_text": "```json\n{\n  \"action\": \"finish\",\n  \"result\": {\n    \"completed\": 3,\n    \"failed\": 0\n  }\n}\n```",
+      "raw_final_text": "```json\n{\n  \"action\": \"finish\",\n  \"result\": {\n    \"completed\": 3,\n    \"failed\": 0\n  }\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 555,
+      "raw_final_text_sha256": "7064e68fd4ecbaa7ea92b3f531692e8bb6ef988dd7c7e163f3b62f94ce5e06ae",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"action\": \"finish\",\n  \"result\": {\n    \"completed\": 3,\n    \"failed\": 0\n  }\n}\n```",
+          "raw_text_sha256": "7064e68fd4ecbaa7ea92b3f531692e8bb6ef988dd7c7e163f3b62f94ce5e06ae",
+          "thinking_text": "*   Input: A mock workflow requested tasks a, b, c.\n    *   Current states: a=done, b=done, c=done.\n    *   Rule: Finish once all requested tasks are done and don't call tools again.\n    *   Output format: JSON with `action: \"finish\"` and `result` containing `completed` and `failed` counts.\n\n    *   Tasks requested: a, b, c (Total = 3).\n    *   Tasks done: a, b, c (Total = 3).\n    *   Tasks failed: 0.\n\n    *   `action`: \"finish\"\n    *   `result`: { \"completed\": 3, \"failed\": 0 }\n\n    *   `{\"action\": \"finish\", \"result\": {\"completed\": 3, \"failed\": 0}}`",
+          "thinking_text_sha256": "c4a8aeb8798439ec977a033d94140d0f8e5b39bfccb9350c8f07ea69ca3f9dd4",
+          "thinking_characters": 555,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Input: A mock workflow requested tasks a, b, c.\n    *   Current states: a=done, b=done, c=done.\n    *   Rule: Finish once all requested tasks are done and don't call tools again.\n    *   Output format: JSON with `action: \"finish\"` and `result` containing `completed` and `failed` counts.\n\n    *   Tasks requested: a, b, c (Total = 3).\n    *   Tasks done: a, b, c (Total = 3).\n    *   Tasks failed: 0.\n\n    *   `action`: \"finish\"\n    *   `result`: { \"completed\": 3, \"failed\": 0 }\n\n    *   `{\"action\": \"finish\", \"result\": {\"completed\": 3, \"failed\": 0}}`",
+              "signature": "ed22c4d325894c518a66ec3cb47217bf"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"action\": \"finish\",\n  \"result\": {\n    \"completed\": 3,\n    \"failed\": 0\n  }\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "18df88eea393e59c95f2fbe555c09acc518dfa98d5291ab574b78768fba79918",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 90,
+            "output_tokens": 232
+          },
+          "native_request_seconds": 20.208663955010707,
+          "started_sequence": 12,
+          "finished_sequence": 18
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.017712394997943193,
+          "started_sequence": 4,
+          "finished_sequence": 8
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 20.208663955010707,
+          "started_sequence": 12,
+          "finished_sequence": 18
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 232,
+          "input_tokens": 90,
+          "stop_reason": "end_turn",
+          "response_sha256": "7064e68fd4ecbaa7ea92b3f531692e8bb6ef988dd7c7e163f3b62f94ce5e06ae",
+          "visible_characters": 91,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 20.24487339099869
+        }
+      ],
+      "counted_input_tokens": 90,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8038,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "7064e68fd4ecbaa7ea92b3f531692e8bb6ef988dd7c7e163f3b62f94ce5e06ae",
+      "output_tokens": 232,
+      "total_output_tokens_including_retries": 232,
+      "generation_seconds_including_retries": 20.24487339099869,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T00:39:20.050742+00:00",
+      "record_sha256": "d46ee0e06e1206bc641f99c77f36b6768c03d61452aec61ca7bcfe526d104889"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_started",
+      "id": "broader-fresh-22-integrity-before-parse",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.706452+00:00",
+      "group_elapsed_seconds": 0.03064077001181431,
+      "group_index": 11,
+      "submission_index": 1
+    },
+    {
+      "sequence": 1,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_started",
+      "id": "broader-fresh-21-exhausted-retries",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.720991+00:00",
+      "group_elapsed_seconds": 0.04518431398901157,
+      "group_index": 11,
+      "submission_index": 0
+    },
+    {
+      "sequence": 2,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_started",
+      "id": "broader-fresh-23-schema-key-repair",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.736738+00:00",
+      "group_elapsed_seconds": 0.06093120700097643,
+      "group_index": 11,
+      "submission_index": 2
+    },
+    {
+      "sequence": 3,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_started",
+      "id": "broader-fresh-24-stop-on-completion",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.737097+00:00",
+      "group_elapsed_seconds": 0.06129075700300746,
+      "group_index": 11,
+      "submission_index": 3
+    },
+    {
+      "sequence": 4,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-24-stop-on-completion",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.763907+00:00",
+      "group_elapsed_seconds": 0.08810427799471654,
+      "group_index": 11,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 5,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-21-exhausted-retries",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.766320+00:00",
+      "group_elapsed_seconds": 0.09050647300318815,
+      "group_index": 11,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 6,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-23-schema-key-repair",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.769239+00:00",
+      "group_elapsed_seconds": 0.09342431201366708,
+      "group_index": 11,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 7,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-22-integrity-before-parse",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.771727+00:00",
+      "group_elapsed_seconds": 0.09591250700759701,
+      "group_index": 11,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 8,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-24-stop-on-completion",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.781653+00:00",
+      "group_elapsed_seconds": 0.10584562498843297,
+      "group_index": 11,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 4
+    },
+    {
+      "sequence": 9,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-21-exhausted-retries",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.783394+00:00",
+      "group_elapsed_seconds": 0.10758097900543362,
+      "group_index": 11,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 5
+    },
+    {
+      "sequence": 10,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-23-schema-key-repair",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.785226+00:00",
+      "group_elapsed_seconds": 0.10941719298716635,
+      "group_index": 11,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 6
+    },
+    {
+      "sequence": 11,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-22-integrity-before-parse",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.787170+00:00",
+      "group_elapsed_seconds": 0.11136341298697516,
+      "group_index": 11,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 7
+    },
+    {
+      "sequence": 12,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-24-stop-on-completion",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.817961+00:00",
+      "group_elapsed_seconds": 0.1421464369923342,
+      "group_index": 11,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 13,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-23-schema-key-repair",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.818899+00:00",
+      "group_elapsed_seconds": 0.14308254700154066,
+      "group_index": 11,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 14,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-22-integrity-before-parse",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.825394+00:00",
+      "group_elapsed_seconds": 0.14957904900074936,
+      "group_index": 11,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 15,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-21-exhausted-retries",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.832550+00:00",
+      "group_elapsed_seconds": 0.15674898400902748,
+      "group_index": 11,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 16,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-21-exhausted-retries",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:39:16.023178+00:00",
+      "group_elapsed_seconds": 16.34737414700794,
+      "group_index": 11,
+      "route": "/v1/messages",
+      "start_sequence": 15
+    },
+    {
+      "sequence": 17,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_finished",
+      "id": "broader-fresh-21-exhausted-retries",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:39:16.047605+00:00",
+      "group_elapsed_seconds": 16.371793488011463,
+      "group_index": 11,
+      "submission_index": 0
+    },
+    {
+      "sequence": 18,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-24-stop-on-completion",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:39:20.026646+00:00",
+      "group_elapsed_seconds": 20.35084319798625,
+      "group_index": 11,
+      "route": "/v1/messages",
+      "start_sequence": 12
+    },
+    {
+      "sequence": 19,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_finished",
+      "id": "broader-fresh-24-stop-on-completion",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:39:20.050742+00:00",
+      "group_elapsed_seconds": 20.374929534998955,
+      "group_index": 11,
+      "submission_index": 3
+    },
+    {
+      "sequence": 20,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-22-integrity-before-parse",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:39:21.037073+00:00",
+      "group_elapsed_seconds": 21.361270519992104,
+      "group_index": 11,
+      "route": "/v1/messages",
+      "start_sequence": 14
+    },
+    {
+      "sequence": 21,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_finished",
+      "id": "broader-fresh-22-integrity-before-parse",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:39:21.061445+00:00",
+      "group_elapsed_seconds": 21.385632263991283,
+      "group_index": 11,
+      "submission_index": 1
+    },
+    {
+      "sequence": 22,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-23-schema-key-repair",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:39:24.198414+00:00",
+      "group_elapsed_seconds": 24.522609898995142,
+      "group_index": 11,
+      "route": "/v1/messages",
+      "start_sequence": 13
+    },
+    {
+      "sequence": 23,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_finished",
+      "id": "broader-fresh-23-schema-key-repair",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:39:24.224182+00:00",
+      "group_elapsed_seconds": 24.548371621000115,
+      "group_index": 11,
+      "submission_index": 2
+    }
+  ],
+  "submission_order": [
+    "broader-fresh-21-exhausted-retries",
+    "broader-fresh-22-integrity-before-parse",
+    "broader-fresh-23-schema-key-repair",
+    "broader-fresh-24-stop-on-completion"
+  ],
+  "client_task_start_order": [
+    "broader-fresh-22-integrity-before-parse",
+    "broader-fresh-21-exhausted-retries",
+    "broader-fresh-23-schema-key-repair",
+    "broader-fresh-24-stop-on-completion"
+  ],
+  "client_task_finish_order": [
+    "broader-fresh-21-exhausted-retries",
+    "broader-fresh-24-stop-on-completion",
+    "broader-fresh-22-integrity-before-parse",
+    "broader-fresh-23-schema-key-repair"
+  ],
+  "observed_future_completion_order": [
+    "broader-fresh-21-exhausted-retries",
+    "broader-fresh-24-stop-on-completion",
+    "broader-fresh-22-integrity-before-parse",
+    "broader-fresh-23-schema-key-repair"
+  ],
+  "ordering_scope": "Sequences and elapsed times are local to this group. Client submission, task, and HTTP dispatch/completion order are recorded; GPU scheduler order is not observed.",
+  "group_sha256": "1dfb384edeb18c828231646361fd3583214948734e9356ca4cd717448a176449"
+}

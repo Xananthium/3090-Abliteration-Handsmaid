@@ -1,0 +1,726 @@
+{
+  "status": "complete",
+  "configuration_fingerprint": "bb47eaa83ff5e5eb5970a12d4d402900b3fb157a000e4e462f3445048474263b",
+  "schedule": {
+    "index": 1,
+    "repeat": 1,
+    "case_ids": [
+      "broader-fresh-05-switch-constraints",
+      "broader-fresh-06-leap-calendar",
+      "broader-fresh-07-two-key-sort",
+      "broader-fresh-08-quoted-csv"
+    ]
+  },
+  "attempt_id": "1792107171080513419-158205",
+  "invocation_id": "1792107073742039518-158205",
+  "started_at_utc": "2026-10-15T23:32:51.080588+00:00",
+  "partial_outputs_scored": false,
+  "completed_at_utc": "2026-10-15T23:33:30.895609+00:00",
+  "wall_seconds": 39.81510815100046,
+  "records": [
+    {
+      "id": "broader-fresh-05-switch-constraints",
+      "category": "reasoning",
+      "configuration_fingerprint": "bb47eaa83ff5e5eb5970a12d4d402900b3fb157a000e4e462f3445048474263b",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "7762dd6e3c486ab95670ea6e4a71e418d10f74a899d9d4f253cab8053e9e2e2a",
+      "prompt_sha256": "3b59d9e8b411b9e82a434ea3694a9e21e1ef1d9a2f0f0905008dbbef777551f7",
+      "answer_key_sha256": "85a155f7b7c8c91961863ec5ef161d736810e2241014fa15eedd37aca9934ac3",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 1,
+      "submission_index": 0,
+      "invocation_id": "1792107073742039518-158205",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 0,
+      "task_finished_sequence": 23,
+      "answer_text": "To find the correct switches, let's evaluate the given conditions:\n\n1.  **Exactly two switches are on.**\n2.  **If A is on, B is on.** ($A \\implies B$)\n3.  **C is on if and only if D is off.** ($C \\iff \\neg D$) This means one of C or D is on, and the other is off.\n4.  **If B is on, C is off.** ($B \\implies \\neg C$)\n\n**Step-by-step analysis:**\n\n*   From condition 3, we know that exactly one of $\\{C, D\\}$ is on.\n*   Since exactly two switches are on (condition 1), and one of them is either C or D, exactly one switch from $\\{A, B\\}$ must be on.\n*   Now look at condition 2: \"If A is on, B is on.\" \n    *   If A were on, B would also have to be on. This would mean two switches from $\\{A, B\\}$ are on, which contradicts our finding that only one of them can be on.\n    *   Therefore, **A must be off**.\n*   Since A is off and exactly one of $\\{A, B\\}$ is on, **B must be on**.\n*   Now look at condition 4: \"If B is on, C is off.\"\n    *   Since B is on, **C must be off**.\n*   Finally, look back at condition 3: \"C is on if and only if D is off.\"\n    *   Since C is off, **D must be on**.\n\n**Verification:**\n*   Switches on: B, D. (Exactly two? Yes.)\n*   If A is on, B is on? (A is off, so this is true.)\n*   C is on iff D is off? (C is off, D is on. Yes.)\n*   If B is on, C is off? (B is on, C is off. Yes.)\n\nThe switches that are on are B and D.\n\n```json\n[\"B\", \"D\"]\n```",
+      "raw_final_text": "To find the correct switches, let's evaluate the given conditions:\n\n1.  **Exactly two switches are on.**\n2.  **If A is on, B is on.** ($A \\implies B$)\n3.  **C is on if and only if D is off.** ($C \\iff \\neg D$) This means one of C or D is on, and the other is off.\n4.  **If B is on, C is off.** ($B \\implies \\neg C$)\n\n**Step-by-step analysis:**\n\n*   From condition 3, we know that exactly one of $\\{C, D\\}$ is on.\n*   Since exactly two switches are on (condition 1), and one of them is either C or D, exactly one switch from $\\{A, B\\}$ must be on.\n*   Now look at condition 2: \"If A is on, B is on.\" \n    *   If A were on, B would also have to be on. This would mean two switches from $\\{A, B\\}$ are on, which contradicts our finding that only one of them can be on.\n    *   Therefore, **A must be off**.\n*   Since A is off and exactly one of $\\{A, B\\}$ is on, **B must be on**.\n*   Now look at condition 4: \"If B is on, C is off.\"\n    *   Since B is on, **C must be off**.\n*   Finally, look back at condition 3: \"C is on if and only if D is off.\"\n    *   Since C is off, **D must be on**.\n\n**Verification:**\n*   Switches on: B, D. (Exactly two? Yes.)\n*   If A is on, B is on? (A is off, so this is true.)\n*   C is on iff D is off? (C is off, D is on. Yes.)\n*   If B is on, C is off? (B is on, C is off. Yes.)\n\nThe switches that are on are B and D.\n\n```json\n[\"B\", \"D\"]\n```",
+      "raw_final_text_sha256": "e2e0d96a3837782f580ff89e429ea8bb630a2baccade42012dcc211ab8484c68",
+      "response_attempts": [
+        {
+          "raw_text": "To find the correct switches, let's evaluate the given conditions:\n\n1.  **Exactly two switches are on.**\n2.  **If A is on, B is on.** ($A \\implies B$)\n3.  **C is on if and only if D is off.** ($C \\iff \\neg D$) This means one of C or D is on, and the other is off.\n4.  **If B is on, C is off.** ($B \\implies \\neg C$)\n\n**Step-by-step analysis:**\n\n*   From condition 3, we know that exactly one of $\\{C, D\\}$ is on.\n*   Since exactly two switches are on (condition 1), and one of them is either C or D, exactly one switch from $\\{A, B\\}$ must be on.\n*   Now look at condition 2: \"If A is on, B is on.\" \n    *   If A were on, B would also have to be on. This would mean two switches from $\\{A, B\\}$ are on, which contradicts our finding that only one of them can be on.\n    *   Therefore, **A must be off**.\n*   Since A is off and exactly one of $\\{A, B\\}$ is on, **B must be on**.\n*   Now look at condition 4: \"If B is on, C is off.\"\n    *   Since B is on, **C must be off**.\n*   Finally, look back at condition 3: \"C is on if and only if D is off.\"\n    *   Since C is off, **D must be on**.\n\n**Verification:**\n*   Switches on: B, D. (Exactly two? Yes.)\n*   If A is on, B is on? (A is off, so this is true.)\n*   C is on iff D is off? (C is off, D is on. Yes.)\n*   If B is on, C is off? (B is on, C is off. Yes.)\n\nThe switches that are on are B and D.\n\n```json\n[\"B\", \"D\"]\n```",
+          "raw_text_sha256": "e2e0d96a3837782f580ff89e429ea8bb630a2baccade42012dcc211ab8484c68",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 91,
+            "output_tokens": 463
+          },
+          "native_request_seconds": 39.62199427600717,
+          "started_sequence": 13,
+          "finished_sequence": 22
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.016382082016207278,
+          "started_sequence": 5,
+          "finished_sequence": 9
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 39.62199427600717,
+          "started_sequence": 13,
+          "finished_sequence": 22
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 463,
+          "input_tokens": 91,
+          "stop_reason": "end_turn",
+          "response_sha256": "e2e0d96a3837782f580ff89e429ea8bb630a2baccade42012dcc211ab8484c68",
+          "visible_characters": 1371,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 39.65884165401803
+        }
+      ],
+      "counted_input_tokens": 91,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8037,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "e2e0d96a3837782f580ff89e429ea8bb630a2baccade42012dcc211ab8484c68",
+      "output_tokens": 463,
+      "total_output_tokens_including_retries": 463,
+      "generation_seconds_including_retries": 39.65884165401803,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": false,
+      "scored_correct_before_completion_gate": false,
+      "recorded_at_utc": "2026-10-15T23:33:30.861225+00:00",
+      "record_sha256": "69c9626bb46890929d6cfe70cedaa5e481b6bcce6726b37d3c4626c4799bd0bf"
+    },
+    {
+      "id": "broader-fresh-06-leap-calendar",
+      "category": "reasoning",
+      "configuration_fingerprint": "bb47eaa83ff5e5eb5970a12d4d402900b3fb157a000e4e462f3445048474263b",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "627d4ec2aa7e5fde7eef78993883bf455f2e8bd1ac263435bfec9a02451022b4",
+      "prompt_sha256": "6d8c972adf01a3496178a9c6e31bcab37d78fa0f3bfae1998ec8c58ef88bdf94",
+      "answer_key_sha256": "b9ba7fc66fac377a79eab6c8a0c74f5855a54795820dae2f80ba9bd6da24acc9",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 1,
+      "submission_index": 1,
+      "invocation_id": "1792107073742039518-158205",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 1,
+      "task_finished_sequence": 17,
+      "answer_text": "2028-03-03",
+      "raw_final_text": "2028-03-03",
+      "raw_final_text_sha256": "2957e63d5247d2743f1142b11247ddf10b24ae9dda6eadbb3a6847509759f4fb",
+      "response_attempts": [
+        {
+          "raw_text": "2028-03-03",
+          "raw_text_sha256": "2957e63d5247d2743f1142b11247ddf10b24ae9dda6eadbb3a6847509759f4fb",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 77,
+            "output_tokens": 11
+          },
+          "native_request_seconds": 1.5763337179960217,
+          "started_sequence": 12,
+          "finished_sequence": 16
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.016162758984137326,
+          "started_sequence": 4,
+          "finished_sequence": 8
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 1.5763337179960217,
+          "started_sequence": 12,
+          "finished_sequence": 16
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 11,
+          "input_tokens": 77,
+          "stop_reason": "end_turn",
+          "response_sha256": "2957e63d5247d2743f1142b11247ddf10b24ae9dda6eadbb3a6847509759f4fb",
+          "visible_characters": 10,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 1.61655861599138
+        }
+      ],
+      "counted_input_tokens": 77,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8051,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "2957e63d5247d2743f1142b11247ddf10b24ae9dda6eadbb3a6847509759f4fb",
+      "output_tokens": 11,
+      "total_output_tokens_including_retries": 11,
+      "generation_seconds_including_retries": 1.61655861599138,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:32:52.816548+00:00",
+      "record_sha256": "b0028fb08c9999a97a0224a6c4341bb973fb72cd2e7dd20215434b973cd6d817"
+    },
+    {
+      "id": "broader-fresh-07-two-key-sort",
+      "category": "instruction",
+      "configuration_fingerprint": "bb47eaa83ff5e5eb5970a12d4d402900b3fb157a000e4e462f3445048474263b",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "aa676088180d15fb3e7bfe79aaa49c2b9552cf3d4fee058f2899de671104df5a",
+      "prompt_sha256": "8219dd3065bd98aedc29b3e976c4a72adb64469eebeefe3152d2d090b2267efe",
+      "answer_key_sha256": "9329b180e7e3a5c68b0af8c3cc7ec1dd58847b420acdd1eb8df1f6ddc7fdde64",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 1,
+      "submission_index": 2,
+      "invocation_id": "1792107073742039518-158205",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 3,
+      "task_finished_sequence": 19,
+      "answer_text": "```json\n[\"cedar\", \"ash\", \"birch\", \"elm\"]\n```",
+      "raw_final_text": "```json\n[\"cedar\", \"ash\", \"birch\", \"elm\"]\n```",
+      "raw_final_text_sha256": "538175dfb2fc2309b10a323ac608c7f1820c38ea32391e6a34536736d4e86891",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n[\"cedar\", \"ash\", \"birch\", \"elm\"]\n```",
+          "raw_text_sha256": "538175dfb2fc2309b10a323ac608c7f1820c38ea32391e6a34536736d4e86891",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 82,
+            "output_tokens": 20
+          },
+          "native_request_seconds": 2.528593633993296,
+          "started_sequence": 15,
+          "finished_sequence": 18
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.01599698100471869,
+          "started_sequence": 7,
+          "finished_sequence": 11
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 2.528593633993296,
+          "started_sequence": 15,
+          "finished_sequence": 18
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 20,
+          "input_tokens": 82,
+          "stop_reason": "end_turn",
+          "response_sha256": "538175dfb2fc2309b10a323ac608c7f1820c38ea32391e6a34536736d4e86891",
+          "visible_characters": 44,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 2.570209422992775
+        }
+      ],
+      "counted_input_tokens": 82,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8046,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "538175dfb2fc2309b10a323ac608c7f1820c38ea32391e6a34536736d4e86891",
+      "output_tokens": 20,
+      "total_output_tokens_including_retries": 20,
+      "generation_seconds_including_retries": 2.570209422992775,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:32:53.784040+00:00",
+      "record_sha256": "373ba4fbf0ea53cb9f9ff220c2ff0a02f9795631b4b6df5c170ec2732e8a927c"
+    },
+    {
+      "id": "broader-fresh-08-quoted-csv",
+      "category": "instruction",
+      "configuration_fingerprint": "bb47eaa83ff5e5eb5970a12d4d402900b3fb157a000e4e462f3445048474263b",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "eb8363347637ed726d114a5fbd95f90c186bffdc7de93c7a63df7037adc3fb08",
+      "prompt_sha256": "a90cd11b32b3ddfc72a15a1ae03a7f207492e75a9169f7fa80b0877808973cf7",
+      "answer_key_sha256": "651f0cab024a8508ec77d902cc4c77166d614dede4b0f526a7cb8277290c5a46",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 1,
+      "submission_index": 3,
+      "invocation_id": "1792107073742039518-158205",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 2,
+      "task_finished_sequence": 21,
+      "answer_text": "```json\n{\n  \"city\": \"New York, NY\",\n  \"count\": 5\n}\n```",
+      "raw_final_text": "```json\n{\n  \"city\": \"New York, NY\",\n  \"count\": 5\n}\n```",
+      "raw_final_text_sha256": "86876d0ba11e6df8c6ded588dac9c420d280ef74402e9f87ae93dd2fa00d1849",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"city\": \"New York, NY\",\n  \"count\": 5\n}\n```",
+          "raw_text_sha256": "86876d0ba11e6df8c6ded588dac9c420d280ef74402e9f87ae93dd2fa00d1849",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 69,
+            "output_tokens": 27
+          },
+          "native_request_seconds": 3.1250445249897894,
+          "started_sequence": 14,
+          "finished_sequence": 20
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.018244170991238207,
+          "started_sequence": 6,
+          "finished_sequence": 10
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 3.1250445249897894,
+          "started_sequence": 14,
+          "finished_sequence": 20
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 27,
+          "input_tokens": 69,
+          "stop_reason": "end_turn",
+          "response_sha256": "86876d0ba11e6df8c6ded588dac9c420d280ef74402e9f87ae93dd2fa00d1849",
+          "visible_characters": 54,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 3.1651410570193548
+        }
+      ],
+      "counted_input_tokens": 69,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8059,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "86876d0ba11e6df8c6ded588dac9c420d280ef74402e9f87ae93dd2fa00d1849",
+      "output_tokens": 27,
+      "total_output_tokens_including_retries": 27,
+      "generation_seconds_including_retries": 3.1651410570193548,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:32:54.377616+00:00",
+      "record_sha256": "fea7df161f6d70f9ff3eeb284d1f75c7dec7c159af5d75e2538ac3db075643e0"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_started",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.107907+00:00",
+      "group_elapsed_seconds": 0.02474922698456794,
+      "group_index": 1,
+      "submission_index": 0
+    },
+    {
+      "sequence": 1,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_started",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.108022+00:00",
+      "group_elapsed_seconds": 0.02485802400042303,
+      "group_index": 1,
+      "submission_index": 1
+    },
+    {
+      "sequence": 2,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_started",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.136195+00:00",
+      "group_elapsed_seconds": 0.05303657500189729,
+      "group_index": 1,
+      "submission_index": 3
+    },
+    {
+      "sequence": 3,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_started",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.137426+00:00",
+      "group_elapsed_seconds": 0.05426733198692091,
+      "group_index": 1,
+      "submission_index": 2
+    },
+    {
+      "sequence": 4,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.164137+00:00",
+      "group_elapsed_seconds": 0.08097144798375666,
+      "group_index": 1,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 5,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.166166+00:00",
+      "group_elapsed_seconds": 0.08299997798167169,
+      "group_index": 1,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 6,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.167611+00:00",
+      "group_elapsed_seconds": 0.08444456697907299,
+      "group_index": 1,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 7,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.170381+00:00",
+      "group_elapsed_seconds": 0.08721356798196211,
+      "group_index": 1,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 8,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.180316+00:00",
+      "group_elapsed_seconds": 0.09715033299289644,
+      "group_index": 1,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 4
+    },
+    {
+      "sequence": 9,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.182564+00:00",
+      "group_elapsed_seconds": 0.09939812897937372,
+      "group_index": 1,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 5
+    },
+    {
+      "sequence": 10,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.185874+00:00",
+      "group_elapsed_seconds": 0.10271414299495518,
+      "group_index": 1,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 6
+    },
+    {
+      "sequence": 11,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.186396+00:00",
+      "group_elapsed_seconds": 0.10323689499637112,
+      "group_index": 1,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 7
+    },
+    {
+      "sequence": 12,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.215102+00:00",
+      "group_elapsed_seconds": 0.1319355669838842,
+      "group_index": 1,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 13,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.216836+00:00",
+      "group_elapsed_seconds": 0.13366740400670096,
+      "group_index": 1,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 14,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.227739+00:00",
+      "group_elapsed_seconds": 0.14457123700412922,
+      "group_index": 1,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 15,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:51.228657+00:00",
+      "group_elapsed_seconds": 0.14548904000548646,
+      "group_index": 1,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 16,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:52.791458+00:00",
+      "group_elapsed_seconds": 1.708303369989153,
+      "group_index": 1,
+      "route": "/v1/messages",
+      "start_sequence": 12
+    },
+    {
+      "sequence": 17,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_finished",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:52.816548+00:00",
+      "group_elapsed_seconds": 1.7333856860059313,
+      "group_index": 1,
+      "submission_index": 1
+    },
+    {
+      "sequence": 18,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:53.757273+00:00",
+      "group_elapsed_seconds": 2.674118044000352,
+      "group_index": 1,
+      "route": "/v1/messages",
+      "start_sequence": 15
+    },
+    {
+      "sequence": 19,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_finished",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:53.784040+00:00",
+      "group_elapsed_seconds": 2.7008772469998803,
+      "group_index": 1,
+      "submission_index": 2
+    },
+    {
+      "sequence": 20,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:54.352803+00:00",
+      "group_elapsed_seconds": 3.2696484490006696,
+      "group_index": 1,
+      "route": "/v1/messages",
+      "start_sequence": 14
+    },
+    {
+      "sequence": 21,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_finished",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:32:54.377616+00:00",
+      "group_elapsed_seconds": 3.294453401991632,
+      "group_index": 1,
+      "submission_index": 3
+    },
+    {
+      "sequence": 22,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:33:30.838846+00:00",
+      "group_elapsed_seconds": 39.75568402299541,
+      "group_index": 1,
+      "route": "/v1/messages",
+      "start_sequence": 13
+    },
+    {
+      "sequence": 23,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_finished",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:33:30.861225+00:00",
+      "group_elapsed_seconds": 39.77806382899871,
+      "group_index": 1,
+      "submission_index": 0
+    }
+  ],
+  "submission_order": [
+    "broader-fresh-05-switch-constraints",
+    "broader-fresh-06-leap-calendar",
+    "broader-fresh-07-two-key-sort",
+    "broader-fresh-08-quoted-csv"
+  ],
+  "client_task_start_order": [
+    "broader-fresh-05-switch-constraints",
+    "broader-fresh-06-leap-calendar",
+    "broader-fresh-08-quoted-csv",
+    "broader-fresh-07-two-key-sort"
+  ],
+  "client_task_finish_order": [
+    "broader-fresh-06-leap-calendar",
+    "broader-fresh-07-two-key-sort",
+    "broader-fresh-08-quoted-csv",
+    "broader-fresh-05-switch-constraints"
+  ],
+  "observed_future_completion_order": [
+    "broader-fresh-06-leap-calendar",
+    "broader-fresh-07-two-key-sort",
+    "broader-fresh-08-quoted-csv",
+    "broader-fresh-05-switch-constraints"
+  ],
+  "ordering_scope": "Sequences and elapsed times are local to this group. Client submission, task, and HTTP dispatch/completion order are recorded; GPU scheduler order is not observed.",
+  "group_sha256": "1e10609c24867056b1a7d7d3f325a60d1580a93f7746a34a7f0f5448b4c70864"
+}

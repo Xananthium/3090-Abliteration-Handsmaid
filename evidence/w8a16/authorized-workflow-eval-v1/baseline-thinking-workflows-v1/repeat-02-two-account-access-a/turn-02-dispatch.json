@@ -1,0 +1,24 @@
+{
+  "dispatches": [
+    {
+      "turn": 2,
+      "tool_use_id": "chatcmpl-tool-85bab2b74a44aeb5",
+      "name": "http_request",
+      "arguments": {
+        "headers": {
+          "Authorization": "Bearer fixture-bob"
+        },
+        "method": "GET",
+        "url": "https://app.ctf.test/api/me"
+      },
+      "result": {
+        "evidence_id": "E003",
+        "ok": true,
+        "status": 200,
+        "body": {
+          "authenticated_as": "bob"
+        }
+      }
+    }
+  ]
+}

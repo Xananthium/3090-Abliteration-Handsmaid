@@ -1,0 +1,794 @@
+{
+  "status": "complete",
+  "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+  "schedule": {
+    "index": 7,
+    "repeat": 2,
+    "case_ids": [
+      "broader-fresh-05-switch-constraints",
+      "broader-fresh-06-leap-calendar",
+      "broader-fresh-07-two-key-sort",
+      "broader-fresh-08-quoted-csv"
+    ]
+  },
+  "attempt_id": "1792108068108559315-158804",
+  "invocation_id": "1792107709927049025-158804",
+  "started_at_utc": "2026-10-15T23:47:48.108619+00:00",
+  "partial_outputs_scored": false,
+  "completed_at_utc": "2026-10-15T23:48:49.987372+00:00",
+  "wall_seconds": 61.87882704200456,
+  "records": [
+    {
+      "id": "broader-fresh-05-switch-constraints",
+      "category": "reasoning",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "7762dd6e3c486ab95670ea6e4a71e418d10f74a899d9d4f253cab8053e9e2e2a",
+      "prompt_sha256": "3b59d9e8b411b9e82a434ea3694a9e21e1ef1d9a2f0f0905008dbbef777551f7",
+      "answer_key_sha256": "85a155f7b7c8c91961863ec5ef161d736810e2241014fa15eedd37aca9934ac3",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 7,
+      "submission_index": 0,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 0,
+      "task_finished_sequence": 23,
+      "answer_text": "```json\n[\"B\", \"D\"]\n```",
+      "raw_final_text": "```json\n[\"B\", \"D\"]\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 2255,
+      "raw_final_text_sha256": "45a07c1867fe98cbcba4089db9c62bf0ad65a16ec85106bf90615c14c22ed361",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n[\"B\", \"D\"]\n```",
+          "raw_text_sha256": "45a07c1867fe98cbcba4089db9c62bf0ad65a16ec85106bf90615c14c22ed361",
+          "thinking_text": "*   Exactly two switches are on.\n    *   Condition 1: If A is on, then B is on ($A \\implies B$).\n    *   Condition 2: C is on if and only if D is off ($C \\iff \\neg D$).\n    *   Condition 3: If B is on, then C is off ($B \\implies \\neg C$).\n\n    *   $A, B, C, D \\in \\{0, 1\\}$ (where 1 is on, 0 is off).\n    *   Constraint 0: $A + B + C + D = 2$.\n    *   Constraint 1: $A \\implies B$ (Equivalent to $\\neg A \\lor B$).\n    *   Constraint 2: $C \\iff \\neg D$ (Equivalent to $C \\neq D$).\n    *   Constraint 3: $B \\implies \\neg C$ (Equivalent to $\\neg B \\lor \\neg C$).\n\n    *   From Constraint 2 ($C \\neq D$):\n        *   Case 1: $C=1, D=0$.\n        *   Case 2: $C=0, D=1$.\n\n    *   **Case 1: $C=1, D=0$**\n        *   Constraint 0: $A + B + 1 + 0 = 2 \\implies A + B = 1$.\n        *   Constraint 3: $B \\implies \\neg C$. Since $C=1$, $\\neg C=0$. So $B \\implies 0$, which means $B$ must be 0.\n        *   If $B=0$, then from $A+B=1$, $A$ must be 1.\n        *   Check Constraint 1: $A \\implies B$. If $A=1$ and $B=0$, then $1 \\implies 0$ is False.\n        *   So, Case 1 is impossible.\n\n    *   **Case 2: $C=0, D=1$**\n        *   Constraint 0: $A + B + 0 + 1 = 2 \\implies A + B = 1$.\n        *   Constraint 3: $B \\implies \\neg C$. Since $C=0$, $\\neg C=1$. So $B \\implies 1$ is always True regardless of $B$.\n        *   Constraint 1: $A \\implies B$.\n            *   Subcase 2a: $A=1, B=0$.\n                *   Check Constraint 1: $1 \\implies 0$ is False.\n            *   Subcase 2b: $A=0, B=1$.\n                *   Check Constraint 1: $0 \\implies 1$ is True.\n                *   Check Constraint 0: $A+B+C+D = 0+1+0+1 = 2$. (Correct)\n                *   Check Constraint 2: $C \\neq D \\implies 0 \\neq 1$. (Correct)\n                *   Check Constraint 3: $B \\implies \\neg C \\implies 1 \\implies 1$. (Correct)\n\n    *   $A=0$ (Off)\n    *   $B=1$ (On)\n    *   $C=0$ (Off)\n    *   $D=1$ (On)\n\n    *   Exactly two are on: B and D. (Yes)\n    *   If A is on, B is on: A is off, so the condition is satisfied. (Yes)\n    *   C is on if and only if D is off: C is off, D is on. (Yes, $0 \\iff \\neg 1$ is $0 \\iff 0$, which is True)\n    *   If B is on, C is off: B is on, C is off. (Yes)\n\n    *   Switches on: B, D.\n    *   Alphabetical order: B, D.\n    *   JSON array: `[\"B\", \"D\"]`.",
+          "thinking_text_sha256": "c0a9e95bcfce6e19f411b0540b0be76af4573c5b867a43a4cf99d099df339cc4",
+          "thinking_characters": 2255,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Exactly two switches are on.\n    *   Condition 1: If A is on, then B is on ($A \\implies B$).\n    *   Condition 2: C is on if and only if D is off ($C \\iff \\neg D$).\n    *   Condition 3: If B is on, then C is off ($B \\implies \\neg C$).\n\n    *   $A, B, C, D \\in \\{0, 1\\}$ (where 1 is on, 0 is off).\n    *   Constraint 0: $A + B + C + D = 2$.\n    *   Constraint 1: $A \\implies B$ (Equivalent to $\\neg A \\lor B$).\n    *   Constraint 2: $C \\iff \\neg D$ (Equivalent to $C \\neq D$).\n    *   Constraint 3: $B \\implies \\neg C$ (Equivalent to $\\neg B \\lor \\neg C$).\n\n    *   From Constraint 2 ($C \\neq D$):\n        *   Case 1: $C=1, D=0$.\n        *   Case 2: $C=0, D=1$.\n\n    *   **Case 1: $C=1, D=0$**\n        *   Constraint 0: $A + B + 1 + 0 = 2 \\implies A + B = 1$.\n        *   Constraint 3: $B \\implies \\neg C$. Since $C=1$, $\\neg C=0$. So $B \\implies 0$, which means $B$ must be 0.\n        *   If $B=0$, then from $A+B=1$, $A$ must be 1.\n        *   Check Constraint 1: $A \\implies B$. If $A=1$ and $B=0$, then $1 \\implies 0$ is False.\n        *   So, Case 1 is impossible.\n\n    *   **Case 2: $C=0, D=1$**\n        *   Constraint 0: $A + B + 0 + 1 = 2 \\implies A + B = 1$.\n        *   Constraint 3: $B \\implies \\neg C$. Since $C=0$, $\\neg C=1$. So $B \\implies 1$ is always True regardless of $B$.\n        *   Constraint 1: $A \\implies B$.\n            *   Subcase 2a: $A=1, B=0$.\n                *   Check Constraint 1: $1 \\implies 0$ is False.\n            *   Subcase 2b: $A=0, B=1$.\n                *   Check Constraint 1: $0 \\implies 1$ is True.\n                *   Check Constraint 0: $A+B+C+D = 0+1+0+1 = 2$. (Correct)\n                *   Check Constraint 2: $C \\neq D \\implies 0 \\neq 1$. (Correct)\n                *   Check Constraint 3: $B \\implies \\neg C \\implies 1 \\implies 1$. (Correct)\n\n    *   $A=0$ (Off)\n    *   $B=1$ (On)\n    *   $C=0$ (Off)\n    *   $D=1$ (On)\n\n    *   Exactly two are on: B and D. (Yes)\n    *   If A is on, B is on: A is off, so the condition is satisfied. (Yes)\n    *   C is on if and only if D is off: C is off, D is on. (Yes, $0 \\iff \\neg 1$ is $0 \\iff 0$, which is True)\n    *   If B is on, C is off: B is on, C is off. (Yes)\n\n    *   Switches on: B, D.\n    *   Alphabetical order: B, D.\n    *   JSON array: `[\"B\", \"D\"]`.",
+              "signature": "f68c3a8449c148288ca72a856a21d392"
+            },
+            {
+              "type": "text",
+              "text": "```json\n[\"B\", \"D\"]\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "3ddc7c44662745ba985aec5a948c7d33fc73cd3db89de48721b05d9af7364ef9",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 89,
+            "output_tokens": 918
+          },
+          "native_request_seconds": 61.69566124500125,
+          "started_sequence": 13,
+          "finished_sequence": 22
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.013540526997530833,
+          "started_sequence": 5,
+          "finished_sequence": 9
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 61.69566124500125,
+          "started_sequence": 13,
+          "finished_sequence": 22
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 918,
+          "input_tokens": 89,
+          "stop_reason": "end_turn",
+          "response_sha256": "45a07c1867fe98cbcba4089db9c62bf0ad65a16ec85106bf90615c14c22ed361",
+          "visible_characters": 22,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 61.735177208989626
+        }
+      ],
+      "counted_input_tokens": 89,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8039,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "45a07c1867fe98cbcba4089db9c62bf0ad65a16ec85106bf90615c14c22ed361",
+      "output_tokens": 918,
+      "total_output_tokens_including_retries": 918,
+      "generation_seconds_including_retries": 61.735177208989626,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:48:49.954904+00:00",
+      "record_sha256": "7be76a92e30c0a832eea0a0c8188e22d464295b5ffdee1727dcf66fdcbed21d8"
+    },
+    {
+      "id": "broader-fresh-06-leap-calendar",
+      "category": "reasoning",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "627d4ec2aa7e5fde7eef78993883bf455f2e8bd1ac263435bfec9a02451022b4",
+      "prompt_sha256": "6d8c972adf01a3496178a9c6e31bcab37d78fa0f3bfae1998ec8c58ef88bdf94",
+      "answer_key_sha256": "b9ba7fc66fac377a79eab6c8a0c74f5855a54795820dae2f80ba9bd6da24acc9",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 7,
+      "submission_index": 1,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 1,
+      "task_finished_sequence": 21,
+      "answer_text": "2028-03-03",
+      "raw_final_text": "2028-03-03",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 1347,
+      "raw_final_text_sha256": "2957e63d5247d2743f1142b11247ddf10b24ae9dda6eadbb3a6847509759f4fb",
+      "response_attempts": [
+        {
+          "raw_text": "2028-03-03",
+          "raw_text_sha256": "2957e63d5247d2743f1142b11247ddf10b24ae9dda6eadbb3a6847509759f4fb",
+          "thinking_text": "*   Start date: 2028-02-27\n    *   Operation: Add five complete days.\n    *   Calendar: Gregorian.\n    *   Constraint: \"The next day counts as one day later.\" (Standard addition).\n    *   Output format: YYYY-MM-DD only.\n\n    *   Year: 2028.\n    *   Is 2028 a leap year?\n        *   Rule: Divisible by 4, but not by 100 unless divisible by 400.\n        *   2028 / 4 = 507. Yes, it is a leap year.\n    *   Month: February (02).\n    *   Day: 27.\n\n    *   Start: 2028-02-27\n    *   +1 day: 2028-02-28\n    *   +2 days: 2028-02-29 (Leap year, so Feb 29 exists)\n    *   +3 days: 2028-03-01\n    *   +4 days: 2028-03-02\n    *   +5 days: 2028-03-03\n\n    *   2028-02-27 + 5 days.\n    *   27 + 5 = 32.\n    *   February 2028 has 29 days.\n    *   32 - 29 = 3.\n    *   Result: March 3, 2028.\n\n    *   YYYY-MM-DD format: 2028-03-03.\n\n    *   \"Return only the resulting date in YYYY-MM-DD format.\"\n\n    *   2028-02-27\n    *   1: 2028-02-28\n    *   2: 2028-02-29\n    *   3: 2028-03-01\n    *   4: 2028-03-02\n    *   5: 2028-03-03\n\n    *   Wait, let me double-check the leap year.\n    *   2028 / 4 = 507. Correct.\n    *   2028 is not a century year (like 2100), so it's definitely a leap year.\n    *   Feb 27 + 1 = Feb 28.\n    *   Feb 28 + 1 = Feb 29.\n    *   Feb 29 + 1 = Mar 01.\n    *   Mar 01 + 1 = Mar 02.\n    *   Mar 02 + 1 = Mar 03.\n\n    *   Result: 2028-03-03.",
+          "thinking_text_sha256": "8c98984d5225d11b56e19601746535cc49b37dc42317e2ade20ff6db9a1d9fac",
+          "thinking_characters": 1347,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Start date: 2028-02-27\n    *   Operation: Add five complete days.\n    *   Calendar: Gregorian.\n    *   Constraint: \"The next day counts as one day later.\" (Standard addition).\n    *   Output format: YYYY-MM-DD only.\n\n    *   Year: 2028.\n    *   Is 2028 a leap year?\n        *   Rule: Divisible by 4, but not by 100 unless divisible by 400.\n        *   2028 / 4 = 507. Yes, it is a leap year.\n    *   Month: February (02).\n    *   Day: 27.\n\n    *   Start: 2028-02-27\n    *   +1 day: 2028-02-28\n    *   +2 days: 2028-02-29 (Leap year, so Feb 29 exists)\n    *   +3 days: 2028-03-01\n    *   +4 days: 2028-03-02\n    *   +5 days: 2028-03-03\n\n    *   2028-02-27 + 5 days.\n    *   27 + 5 = 32.\n    *   February 2028 has 29 days.\n    *   32 - 29 = 3.\n    *   Result: March 3, 2028.\n\n    *   YYYY-MM-DD format: 2028-03-03.\n\n    *   \"Return only the resulting date in YYYY-MM-DD format.\"\n\n    *   2028-02-27\n    *   1: 2028-02-28\n    *   2: 2028-02-29\n    *   3: 2028-03-01\n    *   4: 2028-03-02\n    *   5: 2028-03-03\n\n    *   Wait, let me double-check the leap year.\n    *   2028 / 4 = 507. Correct.\n    *   2028 is not a century year (like 2100), so it's definitely a leap year.\n    *   Feb 27 + 1 = Feb 28.\n    *   Feb 28 + 1 = Feb 29.\n    *   Feb 29 + 1 = Mar 01.\n    *   Mar 01 + 1 = Mar 02.\n    *   Mar 02 + 1 = Mar 03.\n\n    *   Result: 2028-03-03.",
+              "signature": "f15fae9ddf6c4f86a1ce32477d5de34e"
+            },
+            {
+              "type": "text",
+              "text": "2028-03-03"
+            }
+          ],
+          "native_content_blocks_sha256": "17b3a7a22f5aee6885d8da06881bacc76903b0627916285cda002d80e7321cba",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 75,
+            "output_tokens": 697
+          },
+          "native_request_seconds": 47.21955819899449,
+          "started_sequence": 14,
+          "finished_sequence": 20
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.013977858994621783,
+          "started_sequence": 6,
+          "finished_sequence": 10
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 47.21955819899449,
+          "started_sequence": 14,
+          "finished_sequence": 20
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 697,
+          "input_tokens": 75,
+          "stop_reason": "end_turn",
+          "response_sha256": "2957e63d5247d2743f1142b11247ddf10b24ae9dda6eadbb3a6847509759f4fb",
+          "visible_characters": 10,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 47.26180853601545
+        }
+      ],
+      "counted_input_tokens": 75,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8053,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "2957e63d5247d2743f1142b11247ddf10b24ae9dda6eadbb3a6847509759f4fb",
+      "output_tokens": 697,
+      "total_output_tokens_including_retries": 697,
+      "generation_seconds_including_retries": 47.26180853601545,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:48:35.487588+00:00",
+      "record_sha256": "0de57e4811d52bf713ee5411d674efc0d3ce0fa03cae27073d68b3a2a0724eac"
+    },
+    {
+      "id": "broader-fresh-07-two-key-sort",
+      "category": "instruction",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "aa676088180d15fb3e7bfe79aaa49c2b9552cf3d4fee058f2899de671104df5a",
+      "prompt_sha256": "8219dd3065bd98aedc29b3e976c4a72adb64469eebeefe3152d2d090b2267efe",
+      "answer_key_sha256": "9329b180e7e3a5c68b0af8c3cc7ec1dd58847b420acdd1eb8df1f6ddc7fdde64",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 7,
+      "submission_index": 2,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 2,
+      "task_finished_sequence": 19,
+      "answer_text": "```json\n[\"cedar\", \"ash\", \"birch\", \"elm\"]\n```",
+      "raw_final_text": "```json\n[\"cedar\", \"ash\", \"birch\", \"elm\"]\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 1070,
+      "raw_final_text_sha256": "538175dfb2fc2309b10a323ac608c7f1820c38ea32391e6a34536736d4e86891",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n[\"cedar\", \"ash\", \"birch\", \"elm\"]\n```",
+          "raw_text_sha256": "538175dfb2fc2309b10a323ac608c7f1820c38ea32391e6a34536736d4e86891",
+          "thinking_text": "*   Input records: `birch (priority 2)`, `cedar (priority 3)`, `ash (priority 2)`, `elm (priority 1)`.\n    *   Sorting criteria:\n        1.  Priority descending (highest number first).\n        2.  Name alphabetically (A-Z) for equal priorities.\n    *   Output format: JSON array of names only.\n\n    *   birch: priority 2\n    *   cedar: priority 3\n    *   ash: priority 2\n    *   elm: priority 1\n\n    *   *Step 1: Sort by Priority Descending*\n        *   Priority 3: cedar\n        *   Priority 2: birch, ash\n        *   Priority 1: elm\n\n    *   *Step 2: Sort by Name Alphabetically (for equal priorities)*\n        *   Priority 3: cedar (only one)\n        *   Priority 2: ash, birch (ash comes before birch)\n        *   Priority 1: elm (only one)\n\n    *   *Final Order:*\n        1. cedar\n        2. ash\n        3. birch\n        4. elm\n\n    *   `[\"cedar\", \"ash\", \"birch\", \"elm\"]`\n\n    *   Sort by priority descending? Yes (3, 2, 2, 1).\n    *   Sort by name alphabetically for equal priorities? Yes (ash before birch).\n    *   Return only ordered names as a JSON array? Yes.",
+          "thinking_text_sha256": "e1efd33b04e4190fd5ad3fcd5b7c06fd790c1cd573a0a6615ee36271c4115d4d",
+          "thinking_characters": 1070,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Input records: `birch (priority 2)`, `cedar (priority 3)`, `ash (priority 2)`, `elm (priority 1)`.\n    *   Sorting criteria:\n        1.  Priority descending (highest number first).\n        2.  Name alphabetically (A-Z) for equal priorities.\n    *   Output format: JSON array of names only.\n\n    *   birch: priority 2\n    *   cedar: priority 3\n    *   ash: priority 2\n    *   elm: priority 1\n\n    *   *Step 1: Sort by Priority Descending*\n        *   Priority 3: cedar\n        *   Priority 2: birch, ash\n        *   Priority 1: elm\n\n    *   *Step 2: Sort by Name Alphabetically (for equal priorities)*\n        *   Priority 3: cedar (only one)\n        *   Priority 2: ash, birch (ash comes before birch)\n        *   Priority 1: elm (only one)\n\n    *   *Final Order:*\n        1. cedar\n        2. ash\n        3. birch\n        4. elm\n\n    *   `[\"cedar\", \"ash\", \"birch\", \"elm\"]`\n\n    *   Sort by priority descending? Yes (3, 2, 2, 1).\n    *   Sort by name alphabetically for equal priorities? Yes (ash before birch).\n    *   Return only ordered names as a JSON array? Yes.",
+              "signature": "b9d8dd90acdc409385f6d5630b19f4af"
+            },
+            {
+              "type": "text",
+              "text": "```json\n[\"cedar\", \"ash\", \"birch\", \"elm\"]\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "61f04b50bb4ef8b40a5ee7f462a7a78d37cf1da454ad89bb0f4c850a797a02ad",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 80,
+            "output_tokens": 355
+          },
+          "native_request_seconds": 24.591490324004553,
+          "started_sequence": 15,
+          "finished_sequence": 18
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.014098357991315424,
+          "started_sequence": 7,
+          "finished_sequence": 11
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 24.591490324004553,
+          "started_sequence": 15,
+          "finished_sequence": 18
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 355,
+          "input_tokens": 80,
+          "stop_reason": "end_turn",
+          "response_sha256": "538175dfb2fc2309b10a323ac608c7f1820c38ea32391e6a34536736d4e86891",
+          "visible_characters": 44,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 24.635196821996942
+        }
+      ],
+      "counted_input_tokens": 80,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8048,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "538175dfb2fc2309b10a323ac608c7f1820c38ea32391e6a34536736d4e86891",
+      "output_tokens": 355,
+      "total_output_tokens_including_retries": 355,
+      "generation_seconds_including_retries": 24.635196821996942,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:48:12.863593+00:00",
+      "record_sha256": "d93d2c3a7272cd20e96a79d68106835f2836a05998bffd7db677a3c0aa7caded"
+    },
+    {
+      "id": "broader-fresh-08-quoted-csv",
+      "category": "instruction",
+      "configuration_fingerprint": "687d242a7b74ec43efd7f7a32863662b3b0c159c43aa20a4c2f2821b5163d661",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": null,
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "eb8363347637ed726d114a5fbd95f90c186bffdc7de93c7a63df7037adc3fb08",
+      "prompt_sha256": "a90cd11b32b3ddfc72a15a1ae03a7f207492e75a9169f7fa80b0877808973cf7",
+      "answer_key_sha256": "651f0cab024a8508ec77d902cc4c77166d614dede4b0f526a7cb8277290c5a46",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 7,
+      "submission_index": 3,
+      "invocation_id": "1792107709927049025-158804",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 3,
+      "task_finished_sequence": 17,
+      "answer_text": "```json\n{\n  \"city\": \"New York, NY\",\n  \"count\": 5\n}\n```",
+      "raw_final_text": "```json\n{\n  \"city\": \"New York, NY\",\n  \"count\": 5\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 768,
+      "raw_final_text_sha256": "86876d0ba11e6df8c6ded588dac9c420d280ef74402e9f87ae93dd2fa00d1849",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"city\": \"New York, NY\",\n  \"count\": 5\n}\n```",
+          "raw_text_sha256": "86876d0ba11e6df8c6ded588dac9c420d280ef74402e9f87ae93dd2fa00d1849",
+          "thinking_text": "*   Input: A CSV string:\n        ```csv\n        city,count\n        \"New York, NY\",5\n        ```\n    *   Task: Parse the CSV using standard double-quoted fields.\n    *   Output Format: A JSON object with `city` as a string and `count` as an integer.\n    *   Constraint: Return *only* the JSON object.\n\n    *   Header: `city`, `count`\n    *   Row 1: `\"New York, NY\"`, `5`\n    *   The field `\"New York, NY\"` is enclosed in double quotes, meaning the comma inside the quotes is part of the value, not a delimiter.\n\n    *   `city`: \"New York, NY\" (string)\n    *   `count`: 5 (integer)\n\n    *   `{\"city\": \"New York, NY\", \"count\": 5}`\n\n    *   Is it a JSON object? Yes.\n    *   Is `city` a string? Yes.\n    *   Is `count` an integer? Yes.\n    *   Is there any extra text? No.",
+          "thinking_text_sha256": "180a9154f9400bbb4f23828435346e3ebcb3262bd5cd8b412b270a0cab96136d",
+          "thinking_characters": 768,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Input: A CSV string:\n        ```csv\n        city,count\n        \"New York, NY\",5\n        ```\n    *   Task: Parse the CSV using standard double-quoted fields.\n    *   Output Format: A JSON object with `city` as a string and `count` as an integer.\n    *   Constraint: Return *only* the JSON object.\n\n    *   Header: `city`, `count`\n    *   Row 1: `\"New York, NY\"`, `5`\n    *   The field `\"New York, NY\"` is enclosed in double quotes, meaning the comma inside the quotes is part of the value, not a delimiter.\n\n    *   `city`: \"New York, NY\" (string)\n    *   `count`: 5 (integer)\n\n    *   `{\"city\": \"New York, NY\", \"count\": 5}`\n\n    *   Is it a JSON object? Yes.\n    *   Is `city` a string? Yes.\n    *   Is `count` an integer? Yes.\n    *   Is there any extra text? No.",
+              "signature": "256ebef0c7c7492eaf223fc359a440bc"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"city\": \"New York, NY\",\n  \"count\": 5\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "d6afa43f20b1dd652b57eb6534e931cfe7a90d4d1255ba19afa1d991bf0af82e",
+          "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 67,
+            "output_tokens": 277
+          },
+          "native_request_seconds": 19.128895647008903,
+          "started_sequence": 12,
+          "finished_sequence": 16
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.016001883981516585,
+          "started_sequence": 4,
+          "finished_sequence": 8
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 19.128895647008903,
+          "started_sequence": 12,
+          "finished_sequence": 16
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 277,
+          "input_tokens": 67,
+          "stop_reason": "end_turn",
+          "response_sha256": "86876d0ba11e6df8c6ded588dac9c420d280ef74402e9f87ae93dd2fa00d1849",
+          "visible_characters": 54,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 19.16096561800805
+        }
+      ],
+      "counted_input_tokens": 67,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8061,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "86876d0ba11e6df8c6ded588dac9c420d280ef74402e9f87ae93dd2fa00d1849",
+      "output_tokens": 277,
+      "total_output_tokens_including_retries": 277,
+      "generation_seconds_including_retries": 19.16096561800805,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:48:07.384083+00:00",
+      "record_sha256": "12ca76ec6fc8aa4139069888b9d228bc27021eb89b031ece4de14e7fcead37e8"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:47:48.133887+00:00",
+      "group_elapsed_seconds": 0.022655333013972268,
+      "group_index": 7,
+      "submission_index": 0
+    },
+    {
+      "sequence": 1,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:47:48.134037+00:00",
+      "group_elapsed_seconds": 0.02280820600572042,
+      "group_index": 7,
+      "submission_index": 1
+    },
+    {
+      "sequence": 2,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:47:48.164375+00:00",
+      "group_elapsed_seconds": 0.053150407009525225,
+      "group_index": 7,
+      "submission_index": 2
+    },
+    {
+      "sequence": 3,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_started",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:47:48.164979+00:00",
+      "group_elapsed_seconds": 0.05376528500346467,
+      "group_index": 7,
+      "submission_index": 3
+    },
+    {
+      "sequence": 4,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:47:48.184619+00:00",
+      "group_elapsed_seconds": 0.07339633599622175,
+      "group_index": 7,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 5,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:47:48.189284+00:00",
+      "group_elapsed_seconds": 0.0780520309926942,
+      "group_index": 7,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 6,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:47:48.190889+00:00",
+      "group_elapsed_seconds": 0.07965814400813542,
+      "group_index": 7,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 7,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:47:48.192316+00:00",
+      "group_elapsed_seconds": 0.08108525100396946,
+      "group_index": 7,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 8,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:47:48.200650+00:00",
+      "group_elapsed_seconds": 0.08942443600972183,
+      "group_index": 7,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 4
+    },
+    {
+      "sequence": 9,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:47:48.202838+00:00",
+      "group_elapsed_seconds": 0.09160563600016758,
+      "group_index": 7,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 5
+    },
+    {
+      "sequence": 10,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:47:48.204884+00:00",
+      "group_elapsed_seconds": 0.09365500300191343,
+      "group_index": 7,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 6
+    },
+    {
+      "sequence": 11,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:47:48.206432+00:00",
+      "group_elapsed_seconds": 0.09520523299579509,
+      "group_index": 7,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 7
+    },
+    {
+      "sequence": 12,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:47:48.233782+00:00",
+      "group_elapsed_seconds": 0.12255059499875642,
+      "group_index": 7,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 13,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:47:48.235040+00:00",
+      "group_elapsed_seconds": 0.12380872899666429,
+      "group_index": 7,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 14,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:47:48.243471+00:00",
+      "group_elapsed_seconds": 0.13223672201274894,
+      "group_index": 7,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 15,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_started",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:47:48.245515+00:00",
+      "group_elapsed_seconds": 0.13428111700341105,
+      "group_index": 7,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 16,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:48:07.362698+00:00",
+      "group_elapsed_seconds": 19.251472336996812,
+      "group_index": 7,
+      "route": "/v1/messages",
+      "start_sequence": 12
+    },
+    {
+      "sequence": 17,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-08-quoted-csv",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:48:07.384083+00:00",
+      "group_elapsed_seconds": 19.272863574005896,
+      "group_index": 7,
+      "submission_index": 3
+    },
+    {
+      "sequence": 18,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:48:12.837024+00:00",
+      "group_elapsed_seconds": 24.72580447999644,
+      "group_index": 7,
+      "route": "/v1/messages",
+      "start_sequence": 15
+    },
+    {
+      "sequence": 19,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-07-two-key-sort",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:48:12.863593+00:00",
+      "group_elapsed_seconds": 24.752369094989263,
+      "group_index": 7,
+      "submission_index": 2
+    },
+    {
+      "sequence": 20,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:48:35.463049+00:00",
+      "group_elapsed_seconds": 47.351828620012384,
+      "group_index": 7,
+      "route": "/v1/messages",
+      "start_sequence": 14
+    },
+    {
+      "sequence": 21,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-06-leap-calendar",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:48:35.487588+00:00",
+      "group_elapsed_seconds": 47.376358590991,
+      "group_index": 7,
+      "submission_index": 1
+    },
+    {
+      "sequence": 22,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "request_finished",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:48:49.930724+00:00",
+      "group_elapsed_seconds": 61.819505160005065,
+      "group_index": 7,
+      "route": "/v1/messages",
+      "start_sequence": 13
+    },
+    {
+      "sequence": 23,
+      "invocation_id": "1792107709927049025-158804",
+      "kind": "task_finished",
+      "id": "broader-fresh-05-switch-constraints",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:48:49.954904+00:00",
+      "group_elapsed_seconds": 61.84367709499202,
+      "group_index": 7,
+      "submission_index": 0
+    }
+  ],
+  "submission_order": [
+    "broader-fresh-05-switch-constraints",
+    "broader-fresh-06-leap-calendar",
+    "broader-fresh-07-two-key-sort",
+    "broader-fresh-08-quoted-csv"
+  ],
+  "client_task_start_order": [
+    "broader-fresh-05-switch-constraints",
+    "broader-fresh-06-leap-calendar",
+    "broader-fresh-07-two-key-sort",
+    "broader-fresh-08-quoted-csv"
+  ],
+  "client_task_finish_order": [
+    "broader-fresh-08-quoted-csv",
+    "broader-fresh-07-two-key-sort",
+    "broader-fresh-06-leap-calendar",
+    "broader-fresh-05-switch-constraints"
+  ],
+  "observed_future_completion_order": [
+    "broader-fresh-08-quoted-csv",
+    "broader-fresh-07-two-key-sort",
+    "broader-fresh-06-leap-calendar",
+    "broader-fresh-05-switch-constraints"
+  ],
+  "ordering_scope": "Sequences and elapsed times are local to this group. Client submission, task, and HTTP dispatch/completion order are recorded; GPU scheduler order is not observed.",
+  "group_sha256": "ccebe8870e8a0f83365eb8a1c1a81704b99638da95fcab6d639997d9a1caf8ad"
+}

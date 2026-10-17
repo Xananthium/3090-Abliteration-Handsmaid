@@ -1,0 +1,794 @@
+{
+  "status": "complete",
+  "configuration_fingerprint": "ace6c1e1dbe82282b360cbf81235eb374cf60bf3ba93b0771d5a80abd406f344",
+  "schedule": {
+    "index": 10,
+    "repeat": 2,
+    "case_ids": [
+      "broader-fresh-17-cyclic-order",
+      "broader-fresh-18-rounding-order",
+      "broader-fresh-19-format-pivot",
+      "broader-fresh-20-expired-session"
+    ]
+  },
+  "attempt_id": "1792110981816886144-161303",
+  "invocation_id": "1792109741937547541-161303",
+  "started_at_utc": "2026-10-16T00:36:21.817001+00:00",
+  "partial_outputs_scored": false,
+  "completed_at_utc": "2026-10-16T00:38:59.656288+00:00",
+  "wall_seconds": 157.83941134699853,
+  "records": [
+    {
+      "id": "broader-fresh-17-cyclic-order",
+      "category": "consistency",
+      "configuration_fingerprint": "ace6c1e1dbe82282b360cbf81235eb374cf60bf3ba93b0771d5a80abd406f344",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "74b07e4165b520158b3207b057bded8228f1e9e158a6dc62ec0c01475e251f03",
+      "prompt_sha256": "2f0b7d1b435aebb6818fa8e35aa5fef5d6bd75f5ce109501adf770c8ef7aaba8",
+      "answer_key_sha256": "aca194bba9344c9a134fae5f5ffe1b7b4405c3487930632195bf044128c41f9d",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 10,
+      "submission_index": 0,
+      "invocation_id": "1792109741937547541-161303",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 2,
+      "task_finished_sequence": 21,
+      "answer_text": "INCONSISTENT",
+      "raw_final_text": "INCONSISTENT",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 2015,
+      "raw_final_text_sha256": "10380d715e17334f41d040113c613de7008ad03027bfd54cd28d2566cbbcbf00",
+      "response_attempts": [
+        {
+          "raw_text": "INCONSISTENT",
+          "raw_text_sha256": "10380d715e17334f41d040113c613de7008ad03027bfd54cd28d2566cbbcbf00",
+          "thinking_text": "*   Claim 1: A < B (A comes before B)\n    *   Claim 2: B < C (B comes before C)\n    *   Claim 3: C < A (C comes before A)\n\n    *   A valid order must place each item exactly once.\n    *   The items are A, B, and C.\n\n    *   From Claim 1 and Claim 2: A < B < C.\n    *   From Claim 3: C < A.\n    *   Combining them: A < B < C < A.\n\n    *   If A < B < C < A, then A must come before itself (A < A), which is impossible in a strict ordering of distinct items.\n    *   Let's check all possible permutations of {A, B, C}:\n        1.  (A, B, C):\n            *   A < B? Yes.\n            *   B < C? Yes.\n            *   C < A? No (C is last, A is first).\n        2.  (A, C, B):\n            *   A < B? Yes.\n            *   B < C? No (C is before B).\n            *   C < A? No.\n        3.  (B, A, C):\n            *   A < B? No.\n            *   B < C? Yes.\n            *   C < A? No.\n        4.  (B, C, A):\n            *   A < B? No.\n            *   B < C? Yes.\n            *   C < A? Yes.\n        5.  (C, A, B):\n            *   A < B? Yes.\n            *   B < C? No.\n            *   C < A? Yes.\n        6.  (C, B, A):\n            *   A < B? No.\n            *   B < C? No.\n            *   C < A? Yes.\n\n    *   Wait, let me re-check (B, C, A):\n        *   A < B? No (A is last, B is first).\n        *   B < C? Yes.\n        *   C < A? Yes.\n    *   Let me re-check (C, A, B):\n        *   A < B? Yes.\n        *   B < C? No (C is first, B is last).\n        *   C < A? Yes.\n\n    *   The claims are:\n        1. A < B\n        2. B < C\n        3. C < A\n    *   This forms a cycle: A $\\to$ B $\\to$ C $\\to$ A.\n    *   In a strict ordering (a total order), there can be no cycles.\n\n    *   Since no permutation of {A, B, C} satisfies all three claims, the claims are INCONSISTENT.\n\n    *   Claim 1: A < B\n    *   Claim 2: B < C\n    *   Claim 3: C < A\n    *   If A < B and B < C, then A < C (transitivity).\n    *   But Claim 3 says C < A.\n    *   A < C and C < A is a contradiction in a strict ordering.\n\n    *   The result is INCONSISTENT.",
+          "thinking_text_sha256": "1ae40d50c88253264c26e4fe52a348ad4f72e31ea928e68ad55005f74e957857",
+          "thinking_characters": 2015,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Claim 1: A < B (A comes before B)\n    *   Claim 2: B < C (B comes before C)\n    *   Claim 3: C < A (C comes before A)\n\n    *   A valid order must place each item exactly once.\n    *   The items are A, B, and C.\n\n    *   From Claim 1 and Claim 2: A < B < C.\n    *   From Claim 3: C < A.\n    *   Combining them: A < B < C < A.\n\n    *   If A < B < C < A, then A must come before itself (A < A), which is impossible in a strict ordering of distinct items.\n    *   Let's check all possible permutations of {A, B, C}:\n        1.  (A, B, C):\n            *   A < B? Yes.\n            *   B < C? Yes.\n            *   C < A? No (C is last, A is first).\n        2.  (A, C, B):\n            *   A < B? Yes.\n            *   B < C? No (C is before B).\n            *   C < A? No.\n        3.  (B, A, C):\n            *   A < B? No.\n            *   B < C? Yes.\n            *   C < A? No.\n        4.  (B, C, A):\n            *   A < B? No.\n            *   B < C? Yes.\n            *   C < A? Yes.\n        5.  (C, A, B):\n            *   A < B? Yes.\n            *   B < C? No.\n            *   C < A? Yes.\n        6.  (C, B, A):\n            *   A < B? No.\n            *   B < C? No.\n            *   C < A? Yes.\n\n    *   Wait, let me re-check (B, C, A):\n        *   A < B? No (A is last, B is first).\n        *   B < C? Yes.\n        *   C < A? Yes.\n    *   Let me re-check (C, A, B):\n        *   A < B? Yes.\n        *   B < C? No (C is first, B is last).\n        *   C < A? Yes.\n\n    *   The claims are:\n        1. A < B\n        2. B < C\n        3. C < A\n    *   This forms a cycle: A $\\to$ B $\\to$ C $\\to$ A.\n    *   In a strict ordering (a total order), there can be no cycles.\n\n    *   Since no permutation of {A, B, C} satisfies all three claims, the claims are INCONSISTENT.\n\n    *   Claim 1: A < B\n    *   Claim 2: B < C\n    *   Claim 3: C < A\n    *   If A < B and B < C, then A < C (transitivity).\n    *   But Claim 3 says C < A.\n    *   A < C and C < A is a contradiction in a strict ordering.\n\n    *   The result is INCONSISTENT.",
+              "signature": "cb2c59be0faa4c919e77230cb26c5c70"
+            },
+            {
+              "type": "text",
+              "text": "INCONSISTENT"
+            }
+          ],
+          "native_content_blocks_sha256": "c1b11ccea11bea34d99c117936a7974200d9dcc9e474779ae34eaf7a4eeac89b",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 81,
+            "output_tokens": 759
+          },
+          "native_request_seconds": 65.00299732599524,
+          "started_sequence": 15,
+          "finished_sequence": 20
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.008398664998821914,
+          "started_sequence": 7,
+          "finished_sequence": 10
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 65.00299732599524,
+          "started_sequence": 15,
+          "finished_sequence": 20
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 759,
+          "input_tokens": 81,
+          "stop_reason": "end_turn",
+          "response_sha256": "10380d715e17334f41d040113c613de7008ad03027bfd54cd28d2566cbbcbf00",
+          "visible_characters": 12,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 65.05347960899235
+        }
+      ],
+      "counted_input_tokens": 81,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8047,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "10380d715e17334f41d040113c613de7008ad03027bfd54cd28d2566cbbcbf00",
+      "output_tokens": 759,
+      "total_output_tokens_including_retries": 759,
+      "generation_seconds_including_retries": 65.05347960899235,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T00:37:26.982844+00:00",
+      "record_sha256": "f75b4a3e74f2b4794b130eb40aca202d1b030ce8dc550f9ebbee28bf4c3beeb2"
+    },
+    {
+      "id": "broader-fresh-18-rounding-order",
+      "category": "consistency",
+      "configuration_fingerprint": "ace6c1e1dbe82282b360cbf81235eb374cf60bf3ba93b0771d5a80abd406f344",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "68b037cfa29aab288628c75209180b17260f6fb30f1ae9b2c676728209287d00",
+      "prompt_sha256": "77c58ce95cbccd15ce2da9898826fe51e686a4a1f565981bd5890e5a4e090880",
+      "answer_key_sha256": "b5b1d4889ecf7ba9a6c6c0fed759e059963b8f6214599aa11fceab0a148e80fe",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 10,
+      "submission_index": 1,
+      "invocation_id": "1792109741937547541-161303",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 3,
+      "task_finished_sequence": 23,
+      "answer_text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.0,\n  \"equal\": false\n}\n```",
+      "raw_final_text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.0,\n  \"equal\": false\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 4165,
+      "raw_final_text_sha256": "39ef435d5ebb4c0ed90fe9a8986ac8c2f728c41f093c5237f6aeed3e68137ab3",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.0,\n  \"equal\": false\n}\n```",
+          "raw_text_sha256": "39ef435d5ebb4c0ed90fe9a8986ac8c2f728c41f093c5237f6aeed3e68137ab3",
+          "thinking_text": "*   Item cost: $0.03 each.\n    *   Number of items: 2.\n    *   Tax rate: 10% (0.10).\n    *   Rounding rule: Nearest cent, half-cent ties round up.\n\n    *   Combined price = $0.03 + $0.03 = $0.06.\n    *   Tax on combined price = $0.06 * 0.10 = $0.006.\n    *   Rounding $0.006 to the nearest cent:\n        *   The cents are 0.006.\n        *   The next cent is 0.01.\n        *   Is 0.006 closer to 0.00 or 0.01?\n        *   $0.006 - 0.00 = 0.006$.\n        *   $0.01 - 0.006 = 0.004$.\n        *   Since 0.004 < 0.006, it rounds to $0.01.\n    *   Method A tax = $0.01.\n\n    *   Tax on item 1 = $0.03 * 0.10 = $0.003.\n    *   Rounding $0.003 to the nearest cent:\n        *   $0.003 is closer to $0.00 than $0.01.\n        *   Tax on item 1 = $0.00.\n    *   Tax on item 2 = $0.03 * 0.10 = $0.003.\n    *   Rounding $0.003 to the nearest cent:\n        *   Tax on item 2 = $0.00.\n    *   Total tax = $0.00 + $0.00 = $0.00.\n    *   Method B tax = $0.00.\n\n    *   Method A = 0.01\n    *   Method B = 0.00\n    *   Equal? 0.01 == 0.00 is `false`.\n\n    *   `method_A`: 0.01\n    *   `method_B`: 0.00\n    *   `equal`: false\n\n    *   Item cost: 0.03.\n    *   Tax rate: 10%.\n    *   Method A: (0.03 + 0.03) * 0.10 = 0.006. Round(0.006) = 0.01.\n    *   Method B: Round(0.03 * 0.10) + Round(0.03 * 0.10) = Round(0.003) + Round(0.003) = 0.00 + 0.00 = 0.00.\n    *   Wait, let me re-check the rounding rule for 0.006.\n        *   0.006 is 0.6 cents.\n        *   Rounding to the nearest cent (0.01).\n        *   0.6 is > 0.5, so it rounds up to 1 cent ($0.01). Correct.\n    *   Re-check rounding for 0.003.\n        *   0.003 is 0.3 cents.\n        *   0.3 is < 0.5, so it rounds down to 0 cents ($0.00). Correct.\n\n    *   JSON format.\n    *   `method_A` (dollars only).\n    *   `method_B` (dollars only).\n    *   `equal` (Boolean).\n\n    *   `method_A`: 0.01\n    *   `method_B`: 0.00\n    *   `equal`: false\n\n    *Self-Correction/Double Check:*\n    Is there any ambiguity in \"dollars only\"? Usually, this means the numeric value representing the dollar amount.\n    Method A: $0.01.\n    Method B: $0.00.\n    Equal: false.\n\n    Let's re-read: \"Return only JSON with method_A and method_B as the tax amounts in dollars only, excluding the item prices, and equal as a Boolean.\"\n\n    Wait, \"equal as a Boolean\" could mean the key is `equal`.\n\n    Let's check the math one more time.\n    Item 1: 0.03. Tax: 0.003.\n    Item 2: 0.03. Tax: 0.003.\n    Method A: (0.03 + 0.03) * 0.1 = 0.006. Round(0.006) = 0.01.\n    Method B: Round(0.003) + Round(0.003) = 0 + 0 = 0.\n\n    Result:\n    method_A: 0.01\n    method_B: 0.00\n    equal: false\n\n    Wait, let's look at the rounding rule again: \"exact half-cent ties rounding up\".\n    0.005 would round to 0.01.\n    0.006 rounds to 0.01.\n    0.003 rounds to 0.00.\n    0.004 rounds to 0.00.\n\n    Everything seems solid.\n\n    Final JSON structure:\n    {\n      \"method_A\": 0.01,\n      \"method_B\": 0.0,\n      \"equal\": false\n    }\n    (Note: 0.00 is the same as 0.0 in JSON).\n\n    One more check on the prompt: \"method_A and method_B as the tax amounts in dollars only... and equal as a Boolean\".\n    Does \"equal\" refer to the key name? Yes, usually.\n\n    Let's check the math for Method A again.\n    0.03 + 0.03 = 0.06.\n    0.06 * 0.10 = 0.006.\n    Rounding 0.006 to the nearest cent:\n    The cents are 0.006.\n    The nearest cent is either 0.00 or 0.01.\n    0.006 is 0.006 away from 0.00.\n    0.006 is 0.004 away from 0.01.\n    So it rounds to 0.01. Correct.\n\n    Let's check the math for Method B again.\n    0.03 * 0.10 = 0.003.\n    Rounding 0.003 to the nearest cent:\n    The cents are 0.003.\n    The nearest cent is either 0.00 or 0.01.\n    0.003 is 0.003 away from 0.00.\n    0.003 is 0.007 away from 0.01.\n    So it rounds to 0.00. Correct.\n    0.00 + 0.00 = 0.00. Correct.\n\n    Final check on the prompt: \"Return only JSON with method_A and method_B as the tax amounts in dollars only, excluding the item prices, and equal as a Boolean.\"\n    The wording \"and equal as a Boolean\" is slightly ambiguous. It could mean \"and a key 'equal' which is a Boolean\".\n\n    Let's refine the JSON:\n    {\n      \"method_A\": 0.01,\n      \"method_B\": 0.0,\n      \"equal\": false\n    }",
+          "thinking_text_sha256": "39f23f51190efac28517caff3d7b528fee014ad49a4c518001f3cb5dfdc8a666",
+          "thinking_characters": 4165,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Item cost: $0.03 each.\n    *   Number of items: 2.\n    *   Tax rate: 10% (0.10).\n    *   Rounding rule: Nearest cent, half-cent ties round up.\n\n    *   Combined price = $0.03 + $0.03 = $0.06.\n    *   Tax on combined price = $0.06 * 0.10 = $0.006.\n    *   Rounding $0.006 to the nearest cent:\n        *   The cents are 0.006.\n        *   The next cent is 0.01.\n        *   Is 0.006 closer to 0.00 or 0.01?\n        *   $0.006 - 0.00 = 0.006$.\n        *   $0.01 - 0.006 = 0.004$.\n        *   Since 0.004 < 0.006, it rounds to $0.01.\n    *   Method A tax = $0.01.\n\n    *   Tax on item 1 = $0.03 * 0.10 = $0.003.\n    *   Rounding $0.003 to the nearest cent:\n        *   $0.003 is closer to $0.00 than $0.01.\n        *   Tax on item 1 = $0.00.\n    *   Tax on item 2 = $0.03 * 0.10 = $0.003.\n    *   Rounding $0.003 to the nearest cent:\n        *   Tax on item 2 = $0.00.\n    *   Total tax = $0.00 + $0.00 = $0.00.\n    *   Method B tax = $0.00.\n\n    *   Method A = 0.01\n    *   Method B = 0.00\n    *   Equal? 0.01 == 0.00 is `false`.\n\n    *   `method_A`: 0.01\n    *   `method_B`: 0.00\n    *   `equal`: false\n\n    *   Item cost: 0.03.\n    *   Tax rate: 10%.\n    *   Method A: (0.03 + 0.03) * 0.10 = 0.006. Round(0.006) = 0.01.\n    *   Method B: Round(0.03 * 0.10) + Round(0.03 * 0.10) = Round(0.003) + Round(0.003) = 0.00 + 0.00 = 0.00.\n    *   Wait, let me re-check the rounding rule for 0.006.\n        *   0.006 is 0.6 cents.\n        *   Rounding to the nearest cent (0.01).\n        *   0.6 is > 0.5, so it rounds up to 1 cent ($0.01). Correct.\n    *   Re-check rounding for 0.003.\n        *   0.003 is 0.3 cents.\n        *   0.3 is < 0.5, so it rounds down to 0 cents ($0.00). Correct.\n\n    *   JSON format.\n    *   `method_A` (dollars only).\n    *   `method_B` (dollars only).\n    *   `equal` (Boolean).\n\n    *   `method_A`: 0.01\n    *   `method_B`: 0.00\n    *   `equal`: false\n\n    *Self-Correction/Double Check:*\n    Is there any ambiguity in \"dollars only\"? Usually, this means the numeric value representing the dollar amount.\n    Method A: $0.01.\n    Method B: $0.00.\n    Equal: false.\n\n    Let's re-read: \"Return only JSON with method_A and method_B as the tax amounts in dollars only, excluding the item prices, and equal as a Boolean.\"\n\n    Wait, \"equal as a Boolean\" could mean the key is `equal`.\n\n    Let's check the math one more time.\n    Item 1: 0.03. Tax: 0.003.\n    Item 2: 0.03. Tax: 0.003.\n    Method A: (0.03 + 0.03) * 0.1 = 0.006. Round(0.006) = 0.01.\n    Method B: Round(0.003) + Round(0.003) = 0 + 0 = 0.\n\n    Result:\n    method_A: 0.01\n    method_B: 0.00\n    equal: false\n\n    Wait, let's look at the rounding rule again: \"exact half-cent ties rounding up\".\n    0.005 would round to 0.01.\n    0.006 rounds to 0.01.\n    0.003 rounds to 0.00.\n    0.004 rounds to 0.00.\n\n    Everything seems solid.\n\n    Final JSON structure:\n    {\n      \"method_A\": 0.01,\n      \"method_B\": 0.0,\n      \"equal\": false\n    }\n    (Note: 0.00 is the same as 0.0 in JSON).\n\n    One more check on the prompt: \"method_A and method_B as the tax amounts in dollars only... and equal as a Boolean\".\n    Does \"equal\" refer to the key name? Yes, usually.\n\n    Let's check the math for Method A again.\n    0.03 + 0.03 = 0.06.\n    0.06 * 0.10 = 0.006.\n    Rounding 0.006 to the nearest cent:\n    The cents are 0.006.\n    The nearest cent is either 0.00 or 0.01.\n    0.006 is 0.006 away from 0.00.\n    0.006 is 0.004 away from 0.01.\n    So it rounds to 0.01. Correct.\n\n    Let's check the math for Method B again.\n    0.03 * 0.10 = 0.003.\n    Rounding 0.003 to the nearest cent:\n    The cents are 0.003.\n    The nearest cent is either 0.00 or 0.01.\n    0.003 is 0.003 away from 0.00.\n    0.003 is 0.007 away from 0.01.\n    So it rounds to 0.00. Correct.\n    0.00 + 0.00 = 0.00. Correct.\n\n    Final check on the prompt: \"Return only JSON with method_A and method_B as the tax amounts in dollars only, excluding the item prices, and equal as a Boolean.\"\n    The wording \"and equal as a Boolean\" is slightly ambiguous. It could mean \"and a key 'equal' which is a Boolean\".\n\n    Let's refine the JSON:\n    {\n      \"method_A\": 0.01,\n      \"method_B\": 0.0,\n      \"equal\": false\n    }",
+              "signature": "6ca89ac2f3994a3daa9bdf114d2d9853"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"method_A\": 0.01,\n  \"method_B\": 0.0,\n  \"equal\": false\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "20b053214cc5ed8da680a92d4d7227833a5943e8e315d536692a6ff3cfbb52ca",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 114,
+            "output_tokens": 1856
+          },
+          "native_request_seconds": 157.64176276201033,
+          "started_sequence": 13,
+          "finished_sequence": 22
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.008979913021903485,
+          "started_sequence": 8,
+          "finished_sequence": 11
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 157.64176276201033,
+          "started_sequence": 13,
+          "finished_sequence": 22
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 1856,
+          "input_tokens": 114,
+          "stop_reason": "end_turn",
+          "response_sha256": "39ef435d5ebb4c0ed90fe9a8986ac8c2f728c41f093c5237f6aeed3e68137ab3",
+          "visible_characters": 71,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 157.679710299999
+        }
+      ],
+      "counted_input_tokens": 114,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8014,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "39ef435d5ebb4c0ed90fe9a8986ac8c2f728c41f093c5237f6aeed3e68137ab3",
+      "output_tokens": 1856,
+      "total_output_tokens_including_retries": 1856,
+      "generation_seconds_including_retries": 157.679710299999,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T00:38:59.610291+00:00",
+      "record_sha256": "b3f6e860cc5b3d24bd20ad2acd8864b87f538b8a2e7619ed7aa11f7a13c4ecb4"
+    },
+    {
+      "id": "broader-fresh-19-format-pivot",
+      "category": "recovery",
+      "configuration_fingerprint": "ace6c1e1dbe82282b360cbf81235eb374cf60bf3ba93b0771d5a80abd406f344",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "721e7c32ba553eb16a7a86cba178c8ea364c39f9028c8d1114f1f867ea621b0e",
+      "prompt_sha256": "b92c3658657df7f185a30ead85e66d7a78d6075a9897991d3d3ca6f224aa096e",
+      "answer_key_sha256": "05b422bc77ed867bfef6f804199aeff410b1eac6da273790f399ff9e0460ed02",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 10,
+      "submission_index": 2,
+      "invocation_id": "1792109741937547541-161303",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 0,
+      "task_finished_sequence": 17,
+      "answer_text": "parse_csv",
+      "raw_final_text": "parse_csv",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 513,
+      "raw_final_text_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+      "response_attempts": [
+        {
+          "raw_text": "parse_csv",
+          "raw_text_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+          "thinking_text": "*   Pipeline: `parse_json` was called twice.\n    *   Result: `unsupported_format` both times.\n    *   Input Content-Type: `text/csv`.\n    *   Tool Mapping:\n        *   `application/json` $\\rightarrow$ `parse_json`\n        *   `text/csv` $\\rightarrow$ `parse_csv`\n    *   Goal: Select the next tool based on the actual Content-Type.\n\n    *   The actual Content-Type is `text/csv`.\n    *   According to the tool guide, `text/csv` maps to `parse_csv`.\n\n    *   The user wants the tool name only.\n\n    *   `parse_csv`",
+          "thinking_text_sha256": "159fa1972f1413ba80485e49e1e093307c3313dd60f671cd3862b286ecb4d60e",
+          "thinking_characters": 513,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Pipeline: `parse_json` was called twice.\n    *   Result: `unsupported_format` both times.\n    *   Input Content-Type: `text/csv`.\n    *   Tool Mapping:\n        *   `application/json` $\\rightarrow$ `parse_json`\n        *   `text/csv` $\\rightarrow$ `parse_csv`\n    *   Goal: Select the next tool based on the actual Content-Type.\n\n    *   The actual Content-Type is `text/csv`.\n    *   According to the tool guide, `text/csv` maps to `parse_csv`.\n\n    *   The user wants the tool name only.\n\n    *   `parse_csv`",
+              "signature": "56bb1f18f4064c3c9c77362d46cdeaf2"
+            },
+            {
+              "type": "text",
+              "text": "parse_csv"
+            }
+          ],
+          "native_content_blocks_sha256": "ea92f14f774a4dace54de15d7af43ce68a1566afdfbf285dbffc6ae2a33af21f",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 96,
+            "output_tokens": 167
+          },
+          "native_request_seconds": 14.821971315017436,
+          "started_sequence": 14,
+          "finished_sequence": 16
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.008060697000473738,
+          "started_sequence": 6,
+          "finished_sequence": 9
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 14.821971315017436,
+          "started_sequence": 14,
+          "finished_sequence": 16
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 167,
+          "input_tokens": 96,
+          "stop_reason": "end_turn",
+          "response_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+          "visible_characters": 9,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 14.862307289993623
+        }
+      ],
+      "counted_input_tokens": 96,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8032,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "0e0b203dd811adb15fc2933cc8dee50952507d054edeb1465d0046da9e5ccb53",
+      "output_tokens": 167,
+      "total_output_tokens_including_retries": 167,
+      "generation_seconds_including_retries": 14.862307289993623,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T00:36:36.796794+00:00",
+      "record_sha256": "538b35a336d94cdfff23620e3010ddf6322d492d6714099fa9a04137c7b11346"
+    },
+    {
+      "id": "broader-fresh-20-expired-session",
+      "category": "recovery",
+      "configuration_fingerprint": "ace6c1e1dbe82282b360cbf81235eb374cf60bf3ba93b0771d5a80abd406f344",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "92703b884b2b3378aeec91b9bb5212fcf9e7d3ca5725662f9c9d9f708d0dd28b",
+      "prompt_sha256": "45bdd796f4bf537442a2fe2532cc3fea06368f034cc9079b3a09e385619f4feb",
+      "answer_key_sha256": "7ce0d0d026e5d42e4f8faa6a09f9fdb3f5a69d0e853651e1cbfb642c42d2a826",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 10,
+      "submission_index": 3,
+      "invocation_id": "1792109741937547541-161303",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 1,
+      "task_finished_sequence": 19,
+      "answer_text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```",
+      "raw_final_text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 627,
+      "raw_final_text_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```",
+          "raw_text_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+          "thinking_text": "*   Event: Mock read request failed.\n    *   Error code: `session_expired`.\n    *   Error detail: `session_id` is `s82`.\n    *   API Guide instruction: If `session_expired` occurs, call `refresh_session` with the same `session_id` before repeating the read.\n    *   Goal: Return a JSON object with the `name` and `arguments` for the next call.\n\n    *   Function name: `refresh_session`.\n    *   Arguments: `session_id` = `\"s82\"`.\n\n    *   Format: `{\"name\": \"...\", \"arguments\": {...}}`.\n    *   Content: `{\"name\": \"refresh_session\", \"arguments\": {\"session_id\": \"s82\"}}`.\n\n    *   \"Return only a JSON object...\" -> No extra text.",
+          "thinking_text_sha256": "29edb88ebf90495b8458a871401afd1ec7373287f3769cee540c77a3beb0b973",
+          "thinking_characters": 627,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Event: Mock read request failed.\n    *   Error code: `session_expired`.\n    *   Error detail: `session_id` is `s82`.\n    *   API Guide instruction: If `session_expired` occurs, call `refresh_session` with the same `session_id` before repeating the read.\n    *   Goal: Return a JSON object with the `name` and `arguments` for the next call.\n\n    *   Function name: `refresh_session`.\n    *   Arguments: `session_id` = `\"s82\"`.\n\n    *   Format: `{\"name\": \"...\", \"arguments\": {...}}`.\n    *   Content: `{\"name\": \"refresh_session\", \"arguments\": {\"session_id\": \"s82\"}}`.\n\n    *   \"Return only a JSON object...\" -> No extra text.",
+              "signature": "49f3a41ad00642aba0edbd37ad4c54a5"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"name\": \"refresh_session\",\n  \"arguments\": {\n    \"session_id\": \"s82\"\n  }\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "10e25bc90a90f961a3329d149f9e5dd18d23fefc3b1d44d005bcf399219e2741",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 84,
+            "output_tokens": 235
+          },
+          "native_request_seconds": 20.627557510015322,
+          "started_sequence": 12,
+          "finished_sequence": 18
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.006715489987982437,
+          "started_sequence": 4,
+          "finished_sequence": 5
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 20.627557510015322,
+          "started_sequence": 12,
+          "finished_sequence": 18
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 235,
+          "input_tokens": 84,
+          "stop_reason": "end_turn",
+          "response_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+          "visible_characters": 89,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 20.663987219013507
+        }
+      ],
+      "counted_input_tokens": 84,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8044,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "1d95f11076ba62278404ca1f089d03506943da29cddfd03249ab6f4a1fa26638",
+      "output_tokens": 235,
+      "total_output_tokens_including_retries": 235,
+      "generation_seconds_including_retries": 20.663987219013507,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T00:36:42.581861+00:00",
+      "record_sha256": "57ee5618ac94e7ef025666a3de85e6a741342111fa68abd7cca56526fe471cd0"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_started",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:21.874200+00:00",
+      "group_elapsed_seconds": 0.054425934999017045,
+      "group_index": 10,
+      "submission_index": 2
+    },
+    {
+      "sequence": 1,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_started",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:21.874464+00:00",
+      "group_elapsed_seconds": 0.05467760600731708,
+      "group_index": 10,
+      "submission_index": 3
+    },
+    {
+      "sequence": 2,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_started",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:21.874744+00:00",
+      "group_elapsed_seconds": 0.05496140199829824,
+      "group_index": 10,
+      "submission_index": 0
+    },
+    {
+      "sequence": 3,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_started",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:21.875869+00:00",
+      "group_elapsed_seconds": 0.05608612799551338,
+      "group_index": 10,
+      "submission_index": 1
+    },
+    {
+      "sequence": 4,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:21.894540+00:00",
+      "group_elapsed_seconds": 0.07474888299475424,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 5,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:21.901269+00:00",
+      "group_elapsed_seconds": 0.08147669199388474,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 4
+    },
+    {
+      "sequence": 6,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:21.902753+00:00",
+      "group_elapsed_seconds": 0.08297052001580596,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 7,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:21.903561+00:00",
+      "group_elapsed_seconds": 0.08376986300572753,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 8,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:21.904082+00:00",
+      "group_elapsed_seconds": 0.08429055000306107,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 9,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:21.910843+00:00",
+      "group_elapsed_seconds": 0.09105856801033951,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 6
+    },
+    {
+      "sequence": 10,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:21.911974+00:00",
+      "group_elapsed_seconds": 0.09218202900956385,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 7
+    },
+    {
+      "sequence": 11,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:21.913077+00:00",
+      "group_elapsed_seconds": 0.09328666699002497,
+      "group_index": 10,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 8
+    },
+    {
+      "sequence": 12,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:21.929729+00:00",
+      "group_elapsed_seconds": 0.10993685200810432,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 13,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:21.942781+00:00",
+      "group_elapsed_seconds": 0.1229900699981954,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 14,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:21.948733+00:00",
+      "group_elapsed_seconds": 0.12894137599505484,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 15,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_started",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:21.954389+00:00",
+      "group_elapsed_seconds": 0.13460628400207497,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 16,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:36.770726+00:00",
+      "group_elapsed_seconds": 14.950948042009259,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "start_sequence": 14
+    },
+    {
+      "sequence": 17,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_finished",
+      "id": "broader-fresh-19-format-pivot",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:36.796794+00:00",
+      "group_elapsed_seconds": 14.977009836002253,
+      "group_index": 10,
+      "submission_index": 2
+    },
+    {
+      "sequence": 18,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:42.557309+00:00",
+      "group_elapsed_seconds": 20.73752970501664,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "start_sequence": 12
+    },
+    {
+      "sequence": 19,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_finished",
+      "id": "broader-fresh-20-expired-session",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:36:42.581861+00:00",
+      "group_elapsed_seconds": 20.762071880017174,
+      "group_index": 10,
+      "submission_index": 3
+    },
+    {
+      "sequence": 20,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:37:26.957420+00:00",
+      "group_elapsed_seconds": 65.1376413530088,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "start_sequence": 15
+    },
+    {
+      "sequence": 21,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_finished",
+      "id": "broader-fresh-17-cyclic-order",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:37:26.982844+00:00",
+      "group_elapsed_seconds": 65.16305760500836,
+      "group_index": 10,
+      "submission_index": 0
+    },
+    {
+      "sequence": 22,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "request_finished",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.584566+00:00",
+      "group_elapsed_seconds": 157.76478568601306,
+      "group_index": 10,
+      "route": "/v1/messages",
+      "start_sequence": 13
+    },
+    {
+      "sequence": 23,
+      "invocation_id": "1792109741937547541-161303",
+      "kind": "task_finished",
+      "id": "broader-fresh-18-rounding-order",
+      "repeat": 2,
+      "at_utc": "2026-10-16T00:38:59.610291+00:00",
+      "group_elapsed_seconds": 157.7905044700019,
+      "group_index": 10,
+      "submission_index": 1
+    }
+  ],
+  "submission_order": [
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-18-rounding-order",
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-20-expired-session"
+  ],
+  "client_task_start_order": [
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-20-expired-session",
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-18-rounding-order"
+  ],
+  "client_task_finish_order": [
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-20-expired-session",
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-18-rounding-order"
+  ],
+  "observed_future_completion_order": [
+    "broader-fresh-19-format-pivot",
+    "broader-fresh-20-expired-session",
+    "broader-fresh-17-cyclic-order",
+    "broader-fresh-18-rounding-order"
+  ],
+  "ordering_scope": "Sequences and elapsed times are local to this group. Client submission, task, and HTTP dispatch/completion order are recorded; GPU scheduler order is not observed.",
+  "group_sha256": "ff5d4e70ed8dff8b5a0edda1483e4b8110eb22758f081d8f4f51bce1c4ac37c6"
+}

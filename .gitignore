@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+*.safetensors
+*.gguf
+*.bin
+*.pt
+*.pth
+*.npz
+*.npy

@@ -1,0 +1,547 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-15T23:00:35.004672+00:00",
+  "status": "completed_read_only_installed_code_and_documentation_audit",
+  "scope": "Only this JSON receipt written. No GPU query, API call, model initialization/inference, service action, environment/kernel patch, power-cap/governor change, or original-artifact modification.",
+  "recommendation": {
+    "order": "Finish the existing matched batch-4 UVA baseline measurement first. If its throughput remains impractical, one bounded w13-only prefetch profile is reasonable. Prefer group3/last2/prefetch2 to retain approximately the current weight footprint while allowing two selected layers in flight. Treat it as an experiment, not an established acceleration.",
+    "why_not_generic_prefetch": "All-weight prefetch is not a safe drop-in with the installed LoRA initialization order: offloaded w2/dense target weights are CPU-resident when LoRA buffers choose their device. Keep w2_weight, attention o_proj and dense MLP down weights resident, and prefetch w13_weight only.",
+    "new_installation_or_patch_required": false,
+    "expected_speedup": "Unknown. Bulk copies can improve transfer access patterns and overlap, but copying all experts can transfer far more than sparse UVA decode reads.",
+    "precision": "Keep BF16 source, BF16 KV and BF16 runtime LoRA unchanged. Both offload backends copy/store existing weights without quantizing them."
+  },
+  "root_reported_context": {
+    "provenance": "Parent agent supplied these facts from its runtime/hardware checks; this auditor did not independently query devices.",
+    "hardware": "2x NVIDIA RTX 3090, 24576 MiB each; NV4 GPU-to-GPU topology; both CPU affinity0-19 and NUMA0.",
+    "host_link": "Reported PCIe maximum Gen3 x16 on both GPUs; negotiated active width and sustainable simultaneous H2D bandwidth were not measured by this audit.",
+    "current_offload": "UVA nominal8 GiB/card, actual8.43 GiB/card.",
+    "current_memory": "Loaded LoRA model about17.14 GiB/card; total use about20.5 GiB including KV.",
+    "current_sequential_sample": {
+      "completion_tokens": 212,
+      "elapsed_seconds": 256,
+      "tokens_per_second": 0.828125,
+      "interpretation": "Single reported end-to-end sequential sample; not a sustained matched benchmark."
+    },
+    "batch4_runner": "Prepared by another agent; current server already has max-num-seqs4 and max-num-batched-tokens4096.",
+    "user_constraints": "Keep deliberate GPU power caps and CPU settings unchanged."
+  },
+  "current_profile": {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/lora-bf16-launch-v1.json",
+    "sha256": "c8815da042fb4af6d808d19a832329020dc658d28226831978583c220e752835",
+    "bytes": 2630
+  },
+  "source_metadata": [
+    {
+      "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/config.json",
+      "sha256": "ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3",
+      "bytes": 3815
+    },
+    {
+      "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model.safetensors.index.json",
+      "sha256": "dd30508a744068e19375fa54e6b717920646032042c893882a702781e9159db0",
+      "bytes": 92261
+    }
+  ],
+  "concrete_launch_alternative": {
+    "remove": [
+      "--cpu-offload-gb",
+      "8"
+    ],
+    "add": [
+      "--offload-backend",
+      "prefetch",
+      "--offload-group-size",
+      "3",
+      "--offload-num-in-group",
+      "2",
+      "--offload-prefetch-step",
+      "2",
+      "--offload-params",
+      "w13_weight"
+    ],
+    "minimum_buffer_flags": [
+      "--offload-backend",
+      "prefetch",
+      "--offload-group-size",
+      "3",
+      "--offload-num-in-group",
+      "2",
+      "--offload-prefetch-step",
+      "1",
+      "--offload-params",
+      "w13_weight"
+    ],
+    "full_proposed_args": [
+      "/home/isnotreal/vllm-env/bin/vllm",
+      "serve",
+      "/home/isnotreal/models/redcell-abliteration-source-bf16",
+      "--served-model-name",
+      "qwen3.6-35b-hauhau-w4a16-vision",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8002",
+      "--tensor-parallel-size",
+      "2",
+      "--dtype",
+      "bfloat16",
+      "--gpu-memory-utilization",
+      "0.85",
+      "--max-model-len",
+      "8192",
+      "--max-num-seqs",
+      "4",
+      "--max-num-batched-tokens",
+      "4096",
+      "--kv-cache-dtype",
+      "bfloat16",
+      "--no-enable-prefix-caching",
+      "--prefix-caching-hash-algo",
+      "sha256_cbor",
+      "--disable-log-stats",
+      "--enable-auto-tool-choice",
+      "--tool-call-parser",
+      "gemma4",
+      "--reasoning-parser",
+      "gemma4",
+      "--generation-config",
+      "auto",
+      "--override-generation-config",
+      "{\"temperature\": 0.5, \"top_p\": 0.95, \"top_k\": 64, \"min_p\": 0.0, \"presence_penalty\": 0.0, \"repetition_penalty\": 1.0}",
+      "--default-chat-template-kwargs",
+      "{\"enable_thinking\": true}",
+      "--limit-mm-per-prompt",
+      "{\"image\": 1, \"video\": 0}",
+      "--trust-remote-code",
+      "--attention-backend",
+      "TRITON_ATTN",
+      "--enforce-eager",
+      "--enable-lora",
+      "--max-loras",
+      "1",
+      "--max-cpu-loras",
+      "4",
+      "--max-lora-rank",
+      "8",
+      "--lora-dtype",
+      "bfloat16",
+      "--lora-target-modules",
+      "o_proj",
+      "down_proj",
+      "experts",
+      "--lora-modules",
+      "{\"name\": \"redcell-bf16-strength-1.5\", \"path\": \"/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/adapters/strength-1.5-vllm\", \"base_model_name\": \"qwen3.6-35b-hauhau-w4a16-vision\"}",
+      "--offload-backend",
+      "prefetch",
+      "--offload-group-size",
+      "3",
+      "--offload-num-in-group",
+      "2",
+      "--offload-prefetch-step",
+      "2",
+      "--offload-params",
+      "w13_weight"
+    ],
+    "retain": "TP2, current LoRA rank/max counts/IDs/paths, BF16 source and KV, localhost8002, current multimodal limits, disabled prefix cache and enforce-eager. Keep current environment and power limits.",
+    "environment_changes": {},
+    "mutual_exclusion": "UVA and prefetch are alternative backends, not additive budgets. Explicit prefetch ignores a retained nonzero cpu-offload-gb with a warning; remove that option to keep the receipt unambiguous.",
+    "matching_rule": "offload-params uses exact dotted parameter segments. w13_weight matches the actual expert gate/up parameter, including its routed_experts path; it does not select LoRA buffers, w2_weight, dense gates, router or vision."
+  },
+  "memory_model": {
+    "source_header_checks": "All1013 source tensors are BF16. All30 expert gate_up source shapes are[128,1408,2816], down shapes[128,2816,704].",
+    "runtime_shape_assumptions": "TP2 without expert parallelism; all128 experts per rank; gate/up intermediate partition352; Triton BF16 does not pad these NVIDIA expert dimensions. Runtime w13 shape[128,704,2816].",
+    "w13_bytes_per_layer_per_GPU": 507510784,
+    "w13_GiB_per_layer_per_GPU": 0.47265625,
+    "pool_rule": "StaticBufferPool groups by local parameter name, shape, stride and dtype. Uniform w13 tensors share one slot set across selected layers. Slot count equals offload_prefetch_step, not step+1. Net saved memory equals offloaded bytes minus buffer-pool bytes.",
+    "options": [
+      {
+        "label": "recommended_matched_footprint_trial",
+        "group_size": 3,
+        "num_in_group": 2,
+        "prefetch_step": 2,
+        "selected_zero_based_layers": [
+          1,
+          2,
+          4,
+          5,
+          7,
+          8,
+          10,
+          11,
+          13,
+          14,
+          16,
+          17,
+          19,
+          20,
+          22,
+          23,
+          25,
+          26,
+          28,
+          29
+        ],
+        "CPU_pinned_weight_bytes_per_GPU": 10150215680,
+        "CPU_pinned_weight_GiB_per_GPU": 9.453125,
+        "GPU_static_pool_bytes_per_GPU": 1015021568,
+        "GPU_static_pool_GiB_per_GPU": 0.9453125,
+        "net_weight_GPU_bytes_saved_per_GPU": 9135194112,
+        "net_weight_GPU_GiB_saved_per_GPU": 8.5078125,
+        "steady_state_H2D_weight_bytes_per_forward_per_GPU": 10150215680,
+        "ideal_H2D_seconds_at_full_Gen3_x16_payload_rate": 0.6443008,
+        "rough_loaded_model_GiB_from_root_report": 17.0621875
+      },
+      {
+        "label": "minimum_buffer_variant",
+        "group_size": 3,
+        "num_in_group": 2,
+        "prefetch_step": 1,
+        "selected_zero_based_layers": [
+          1,
+          2,
+          4,
+          5,
+          7,
+          8,
+          10,
+          11,
+          13,
+          14,
+          16,
+          17,
+          19,
+          20,
+          22,
+          23,
+          25,
+          26,
+          28,
+          29
+        ],
+        "CPU_pinned_weight_bytes_per_GPU": 10150215680,
+        "CPU_pinned_weight_GiB_per_GPU": 9.453125,
+        "GPU_static_pool_bytes_per_GPU": 507510784,
+        "GPU_static_pool_GiB_per_GPU": 0.47265625,
+        "net_weight_GPU_bytes_saved_per_GPU": 9642704896,
+        "net_weight_GPU_GiB_saved_per_GPU": 8.98046875,
+        "steady_state_H2D_weight_bytes_per_forward_per_GPU": 10150215680,
+        "ideal_H2D_seconds_at_full_Gen3_x16_payload_rate": 0.6443008,
+        "rough_loaded_model_GiB_from_root_report": 16.58953125
+      },
+      {
+        "label": "higher_VRAM_lower_transfer_variant",
+        "group_size": 2,
+        "num_in_group": 1,
+        "prefetch_step": 1,
+        "selected_zero_based_layers": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          15,
+          17,
+          19,
+          21,
+          23,
+          25,
+          27,
+          29
+        ],
+        "CPU_pinned_weight_bytes_per_GPU": 7612661760,
+        "CPU_pinned_weight_GiB_per_GPU": 7.08984375,
+        "GPU_static_pool_bytes_per_GPU": 507510784,
+        "GPU_static_pool_GiB_per_GPU": 0.47265625,
+        "net_weight_GPU_bytes_saved_per_GPU": 7105150976,
+        "net_weight_GPU_GiB_saved_per_GPU": 6.6171875,
+        "steady_state_H2D_weight_bytes_per_forward_per_GPU": 7612661760,
+        "ideal_H2D_seconds_at_full_Gen3_x16_payload_rate": 0.48322560000000003,
+        "rough_loaded_model_GiB_from_root_report": 18.9528125
+      }
+    ],
+    "recommended_host_pinned_weights_GiB_both_GPUs": 18.90625,
+    "prediction_limits": "These are weight-storage estimates from source shapes and installed allocation code. KV cache, adapter buffers, vision workspaces, processing transients, CUDA allocator reservation and profiling policy determine actual peak/total memory. Root-reported rounded baseline values only support approximate loaded-model comparisons.",
+    "logging_note": "Prefetch log labels total_offloaded_bytes as Total GPU memory saved and reports pool separately; subtract the pool to obtain net savings.",
+    "higher_VRAM_variant": "Group2/last1/step1 transfers fewer tensors but saves only6.6171875 GiB/card, roughly1.81 GiB less than current actual UVA. The unchanged memory-utilization0.85 would reduce available KV capacity. Higher memory utilization could make room, but no setting or capacity success is asserted or applied."
+  },
+  "compatibility_findings": [
+    {
+      "subject": "TP2 and Gemma4 MoE",
+      "status": "static-compatible narrow path",
+      "detail": "Offloading wraps decoder modules after TP-sharded parameter allocation. All experts stay present and source weights stay BF16; no expert-count/routing/top-k change. Current LoRA config selects native Triton MoE because partition352 is not a multiple128 for its alternative TRT-LLM branch."
+    },
+    {
+      "subject": "LoRA device initialization",
+      "status": "generic prefetch hazard; w13-only avoids identified issue",
+      "detail": "gpu_model_runner loads model, then load_lora_model, then offloader.post_init. Prefetch CPU placement precedes LoRA creation. _get_lora_device chooses routed_experts.w2_weight.device, or dense weight.device. Generic offload can therefore allocate adapter buffers on CPU. w13-only keeps these selectors on GPU."
+    },
+    {
+      "subject": "Dotted paths after LoRA wrapping",
+      "status": "handled by inspected installed code",
+      "detail": "Prefetch stores original dotted names and resolves them with getattr. BaseLayerWithLoRA.__getattr__ forwards public misses to base_layer, preserving access to routed_experts and public weights. post_init re-reads processed CPU storage before binding static GPU buffers."
+    },
+    {
+      "subject": "Vision",
+      "status": "retained with resident tower",
+      "detail": "Prefetch supports_tower_offload remains False and wraps only the decoder stack once. Gemma4 constructs vision using AutoModel rather than vLLM make_layers, so it does not invoke the decoder circular offloader twice. Vision capability and weights remain present; its GPU footprint must fit. UVA supports tower offload and may currently place its early-constructed vision tensors on CPU."
+    },
+    {
+      "subject": "Eager / compilation / graphs",
+      "status": "eager supported by code; keep it for first trial",
+      "detail": "Outside capture the offloader waits on per-layer CUDA events and uses a copy stream. Custom wait_prefetch/start_prefetch ops and static buffers include CUDA-graph support, but enabling graphs changes startup/memory behavior and is not needed for this backend trial."
+    },
+    {
+      "subject": "Pinned host memory and hardware",
+      "status": "existing CUDA stack sufficient in principle",
+      "detail": "Uses torch.cuda.Stream/Event, pinned CPU torch.empty_strided, and nonblocking copy_ into same-dtype GPU buffers. Keep pinning enabled on these discrete GPUs. No new attention/MoE kernel, package or offload daemon is required. NV4 assists GPU-to-GPU TP traffic; it does not upgrade the host PCIe links."
+    }
+  ],
+  "CPU_only_function_validation": {
+    "method": "AST-extracted installed _get_lora_device executed with SimpleNamespace metadata stubs; no torch or vLLM import and no GPU/model calls.",
+    "cases": [
+      {
+        "w2": "cpu",
+        "w13": "cpu",
+        "selected_device": "cpu"
+      },
+      {
+        "w2": "cuda:0",
+        "w13": "cpu",
+        "selected_device": "cuda:0"
+      },
+      {
+        "dense_weight": "cpu",
+        "selected_device": "cpu"
+      }
+    ],
+    "status": "all assertions passed",
+    "limit": "Confirms selector behavior only, not a full engine load."
+  },
+  "throughput_tradeoffs": {
+    "UVA": "No explicit full-tensor H2D copy or staging pool. GPU kernels access pinned host weights through UVA; PCIe transactions, locality and repeated reads can be costly. MoE routing may touch only a subset of experts per step.",
+    "prefetch": "Copies complete selected w13 tensors every model forward, including unused experts, then kernels read local GPU memory. Group3/last2 moves9.453125 GiB/card per steady-state forward. A batch amortizes this transfer across its generated tokens; overlap can hide some transfer but cannot remove host-link traffic.",
+    "bandwidth_arithmetic": "At an ideal full Gen3x16 payload rate of15.753846 GB/s,9.453125 GiB requires at least0.6443008 seconds/card of copy time per forward. This is an optimistic lower bound, not measured latency, and ignores protocol overhead, link sharing, H2D concurrency limits and compute. Both cards together read18.90625 GiB/forward from host.",
+    "prefetch_step_semantics": "The step advances through the selected/offloaded-module list, not every decoder layer. Step2 allows two selected layers in flight and uses two buffers. Step1 has the smallest footprint but adjacent selected layers can immediately wait for the next copy.",
+    "batch4_first": "The current max-num-seqs4 profile already supports the prepared runner. Compare aggregate completion tokens per wall-second with identical request/model IDs and token settings; avoid equating aggregate throughput with single-request latency.",
+    "other_full_precision_options": "Reducing UVA offload can reduce host reads while increasing resident weights and shrinking KV headroom unless memory utilization is raised. Enabling graphs can reduce dispatch overhead but will not remove the PCIe weight traffic. Neither is a measured win here.",
+    "not_selected": "No KV/weight quantization, reduced precision, expert dropping, CPU-governor/power-cap adjustment, or environment/kernel patch."
+  },
+  "bounded_runtime_decision_for_owner": {
+    "worth_one_profile_if": "The matched batch4 UVA result is still too slow for the planned benign comparison, and root chooses to spend one controlled restart on the alternative.",
+    "minimum_evidence": "Confirm selected-module count20 and reported pool near0.9453125 GiB/card for step2, native adapter identity and base/edit/base correctness, then compare matched batch4 end-to-end throughput and successful completion counts against UVA. Preserve a vision smoke check because tower residency changes. Root owns all execution.",
+    "stop_expanding_after": "One matched profile can decide whether to retain or revert this backend; no broader tuning sweep is proposed."
+  },
+  "unknowns": [
+    "Actual prefetch+Gemma4+LoRA+vision runtime success on this installation has not been established by this audit.",
+    "Sustained simultaneous H2D bandwidth and currently negotiated PCIe width.",
+    "Sparse UVA weight traffic amplification versus complete-tensor DMA for this routing/batch workload.",
+    "Peak load/post-processing/workspace memory and resulting KV capacity.",
+    "Whether two-copy-slot overlap materially helps under deliberate GPU power limits.",
+    "Any numerical changes from batch shape/kernel scheduling; storage precision remains BF16."
+  ],
+  "evidence": {
+    "offload_configuration": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/config/offload.py",
+      "sha256": "1dbcc23fedee34e09fe275b5889c43d77bbbafed7b36d097a620fb3e905c7aab",
+      "bytes": 6513,
+      "relevant_lines": [
+        47,
+        76,
+        80,
+        146
+      ]
+    },
+    "backend_factory_and_tower_contract": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/offloader/base.py",
+      "sha256": "982e295299e2a282703ef6bec91897883f187f1ca31c21b6b46bda9566e09303",
+      "bytes": 5773,
+      "relevant_lines": [
+        24,
+        64,
+        146,
+        185
+      ]
+    },
+    "UVA": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/offloader/uva.py",
+      "sha256": "1064eaff828cda23308654d2186c08f2c336e7fa25e2e7b9f518b051ea89ce0c",
+      "bytes": 5845,
+      "relevant_lines": [
+        22,
+        52,
+        86,
+        151
+      ]
+    },
+    "prefetch": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/offloader/prefetch.py",
+      "sha256": "d835fa9292f52f283835f724951bae645a84d554c48f30ed639e3297e7eeb776",
+      "bytes": 30930,
+      "relevant_lines": [
+        33,
+        138,
+        178,
+        263,
+        329,
+        388,
+        399,
+        427,
+        550,
+        565,
+        595,
+        608,
+        649,
+        682,
+        712,
+        752
+      ]
+    },
+    "prefetch_custom_ops": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/offloader/prefetch_ops.py",
+      "sha256": "6ee9baa30bc718b10690fde620d8aa0391807d2d3011af0eff5b6cf61d0e45d4",
+      "bytes": 2150,
+      "relevant_lines": [
+        15,
+        80
+      ]
+    },
+    "LoRA_device_selection": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/layers/utils.py",
+      "sha256": "ea716cb78c3e2922cae3ef868cb393144ea7373999deac1543bdc5e36c4fe462",
+      "bytes": 4425,
+      "relevant_lines": [
+        45,
+        75
+      ]
+    },
+    "LoRA_public_attribute_forwarding": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/layers/base.py",
+      "sha256": "112fea061687e2eb95880dc1014b0b18291354366fd869da395ee443e5b9f08a",
+      "bytes": 3499,
+      "relevant_lines": [
+        17,
+        35
+      ]
+    },
+    "MoE_LoRA_allocation": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/layers/fused_moe.py",
+      "sha256": "3a2a6c03fda98f5cc216570324921c889a01e0893ac3febe4bd13f4bf03fab0c",
+      "bytes": 25627,
+      "relevant_lines": [
+        28,
+        87,
+        163,
+        225
+      ]
+    },
+    "initialization_order": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/v1/worker/gpu_model_runner.py",
+      "sha256": "bb903dffcb5a6e5b8a477daf0854b3812e135349d61fc20c6133f91cd3c9752a",
+      "bytes": 335342,
+      "relevant_lines": [
+        962,
+        5273,
+        5285,
+        5433
+      ]
+    },
+    "decoder_stack_offload_hook": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/models/utils.py",
+      "sha256": "7171b6347b3cbab213df299fa317094ac6c9b2b397daf6a2ec93ff3a152b0e75",
+      "bytes": 42028,
+      "relevant_lines": [
+        865,
+        896
+      ]
+    },
+    "vision_construction": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py",
+      "sha256": "ee9b33f5f3d76bfec371dfc65292a915cc5b4741367ba0b28a450a5af8c40f9f",
+      "bytes": 94174,
+      "relevant_lines": [
+        1095,
+        1151
+      ]
+    },
+    "vision_offload_capability_gate": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/models/interfaces.py",
+      "sha256": "c34635d28191061a46d8c57d178c242dc7bc1993eda23e6a31a72eb1a3759fec",
+      "bytes": 64096,
+      "relevant_lines": [
+        353,
+        392
+      ]
+    },
+    "model_loading_transform": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/model_loader/utils.py",
+      "sha256": "e6e3477d926deb12fd1b50d4e6a7d649f97a5c2b6524cc2e4a604c80bb653f20",
+      "bytes": 13330,
+      "relevant_lines": [
+        133,
+        194
+      ]
+    },
+    "unquantized_expert_storage": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/fused_moe/unquantized_fused_moe_method.py",
+      "sha256": "dade56ddeef4967aa3ad3448ef46d964e6130a6f3d558e4a77ccce62303816a9",
+      "bytes": 13855,
+      "relevant_lines": [
+        68,
+        119,
+        167,
+        258
+      ]
+    },
+    "LoRA_Triton_backend_and_padding": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/fused_moe/oracle/unquantized.py",
+      "sha256": "64d7731a04872a7365e55112b0b9fa03f3886f0cd418733d8cdb40d80fe4bf43",
+      "bytes": 23637,
+      "relevant_lines": [
+        197,
+        248,
+        374,
+        382,
+        470,
+        477
+      ]
+    },
+    "CLI": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/engine/arg_utils.py",
+      "sha256": "95be1adb96f55933f6a52260c8cb2181d04707401ca21d97c33108c5ab58f3ac",
+      "bytes": 136087,
+      "relevant_lines": [
+        1391,
+        1420,
+        2741,
+        2753
+      ]
+    },
+    "pinning_and_UVA_environment": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/envs.py",
+      "sha256": "1d7101800f67b803a700fbf7489292cf1f0022b570085166ad407e6b1513dc15",
+      "bytes": 115599,
+      "relevant_lines": [
+        2106,
+        2113,
+        2200,
+        2203
+      ]
+    }
+  },
+  "official_documentation": [
+    {
+      "url": "https://docs.vllm.ai/en/v0.31.0/configuration/engine_args/",
+      "supports": "Installed offload CLI/backend selection and knobs."
+    },
+    {
+      "url": "https://docs.vllm.ai/en/v0.31.0/api/vllm/model_executor/offloader/prefetch/",
+      "supports": "Group selection, static buffer pool and async prefetch implementation."
+    },
+    {
+      "url": "https://docs.vllm.ai/en/latest/api/vllm/config/offload/",
+      "supports": "Configuration definitions; local installed hashes take precedence."
+    }
+  ]
+}

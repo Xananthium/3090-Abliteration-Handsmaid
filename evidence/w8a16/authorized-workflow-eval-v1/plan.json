@@ -1,0 +1,21 @@
+{
+  "status": "prepared_design_not_executed",
+  "created_utc": "2026-10-16T14:39:16.710277+00:00",
+  "user_scope": "Capture-the-flag exercises and explicitly authorized deployed-system security assessments.",
+  "initial_environment": "Proposed local CTF/lab with mock tool responses; user preference question pending. No deployed target has been supplied.",
+  "reference_model": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+  "previous_results": "Existing one-step recovery questions and seven smoke checks do not establish multi-step cybersecurity workflow competence.",
+  "design_constraints": [
+    "Keep this suite separate from frozen prior evaluations.",
+    "Use native tool calls and several tool-result turns.",
+    "Allow multiple valid approaches instead of rewarding one tool name.",
+    "Score evidence-backed task completion, recovery, repeated ineffective actions, legitimate-request refusals, and output-token cost separately.",
+    "Match inference settings and budgets across compared candidates.",
+    "Do not combine synthetic workflow results with claims about real-world security assessment performance."
+  ],
+  "fixture_status": "Six scenario outlines prepared; tool schemas, response state machines, graders and runnable evaluation remain to be implemented.",
+  "inference_performed": false,
+  "live_target_requests_performed": false,
+  "model_changes_performed": false,
+  "service_state": "vLLM remains stopped; production boot setting remains disabled."
+}

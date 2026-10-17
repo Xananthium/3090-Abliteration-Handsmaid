@@ -1,0 +1,157 @@
+{
+  "registered_utc": "2026-10-16T01:18:35.429465+00:00",
+  "candidate_was_newly_loaded": true,
+  "before": {
+    "qwen3.6-35b-hauhau-w4a16-vision": {
+      "requested": {
+        "id": "qwen3.6-35b-hauhau-w4a16-vision",
+        "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "parent": null,
+        "max_model_len": 8192
+      },
+      "base": {
+        "id": "qwen3.6-35b-hauhau-w4a16-vision",
+        "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "parent": null,
+        "max_model_len": 8192
+      },
+      "context_limit": 8192
+    },
+    "redcell-w8a16-strength-1.0": {
+      "requested": {
+        "id": "redcell-w8a16-strength-1.0",
+        "root": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/strength-1.0-vllm",
+        "parent": "qwen3.6-35b-hauhau-w4a16-vision",
+        "max_model_len": null
+      },
+      "base": {
+        "id": "qwen3.6-35b-hauhau-w4a16-vision",
+        "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "parent": null,
+        "max_model_len": 8192
+      },
+      "context_limit": 8192
+    },
+    "redcell-w8a16-strength-1.5": {
+      "requested": {
+        "id": "redcell-w8a16-strength-1.5",
+        "root": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/strength-1.5-vllm",
+        "parent": "qwen3.6-35b-hauhau-w4a16-vision",
+        "max_model_len": null
+      },
+      "base": {
+        "id": "qwen3.6-35b-hauhau-w4a16-vision",
+        "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "parent": null,
+        "max_model_len": 8192
+      },
+      "context_limit": 8192
+    },
+    "redcell-w8a16-attention-1.5-mlp-1.0": {
+      "requested": {
+        "id": "redcell-w8a16-attention-1.5-mlp-1.0",
+        "root": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/attention-1.5-mlp-1.0-vllm",
+        "parent": "qwen3.6-35b-hauhau-w4a16-vision",
+        "max_model_len": null
+      },
+      "base": {
+        "id": "qwen3.6-35b-hauhau-w4a16-vision",
+        "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "parent": null,
+        "max_model_len": 8192
+      },
+      "context_limit": 8192
+    }
+  },
+  "after": {
+    "qwen3.6-35b-hauhau-w4a16-vision": {
+      "requested": {
+        "id": "qwen3.6-35b-hauhau-w4a16-vision",
+        "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "parent": null,
+        "max_model_len": 8192
+      },
+      "base": {
+        "id": "qwen3.6-35b-hauhau-w4a16-vision",
+        "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "parent": null,
+        "max_model_len": 8192
+      },
+      "context_limit": 8192
+    },
+    "redcell-w8a16-strength-1.0": {
+      "requested": {
+        "id": "redcell-w8a16-strength-1.0",
+        "root": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/strength-1.0-vllm",
+        "parent": "qwen3.6-35b-hauhau-w4a16-vision",
+        "max_model_len": null
+      },
+      "base": {
+        "id": "qwen3.6-35b-hauhau-w4a16-vision",
+        "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "parent": null,
+        "max_model_len": 8192
+      },
+      "context_limit": 8192
+    },
+    "redcell-w8a16-strength-1.5": {
+      "requested": {
+        "id": "redcell-w8a16-strength-1.5",
+        "root": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/strength-1.5-vllm",
+        "parent": "qwen3.6-35b-hauhau-w4a16-vision",
+        "max_model_len": null
+      },
+      "base": {
+        "id": "qwen3.6-35b-hauhau-w4a16-vision",
+        "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "parent": null,
+        "max_model_len": 8192
+      },
+      "context_limit": 8192
+    },
+    "redcell-w8a16-attention-1.5-mlp-1.0": {
+      "requested": {
+        "id": "redcell-w8a16-attention-1.5-mlp-1.0",
+        "root": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/attention-1.5-mlp-1.0-vllm",
+        "parent": "qwen3.6-35b-hauhau-w4a16-vision",
+        "max_model_len": null
+      },
+      "base": {
+        "id": "qwen3.6-35b-hauhau-w4a16-vision",
+        "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "parent": null,
+        "max_model_len": 8192
+      },
+      "context_limit": 8192
+    },
+    "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1": {
+      "requested": {
+        "id": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+        "root": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/nf4-direction-w8-weight-strength-1.0-vllm-v1",
+        "parent": "qwen3.6-35b-hauhau-w4a16-vision",
+        "max_model_len": null
+      },
+      "base": {
+        "id": "qwen3.6-35b-hauhau-w4a16-vision",
+        "root": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+        "parent": null,
+        "max_model_len": 8192
+      },
+      "context_limit": 8192
+    }
+  },
+  "load": {
+    "request": {
+      "lora_name": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+      "lora_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/nf4-direction-w8-weight-strength-1.0-vllm-v1",
+      "load_inplace": false,
+      "is_3d_lora_weight": false
+    },
+    "response_sha256": "037406c7f0dbcbb97109397f301f8d73576bbab7f758a57970b33a2734bd61df",
+    "response_text": "Success: LoRA adapter 'redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1' added successfully."
+  },
+  "old_adapters_unloaded": false,
+  "max_cpu_loras_launch_attestation": 4,
+  "attestation_limit": "Capacity is pinned launch evidence; /v1/models does not expose engine cache capacity.",
+  "registration_sha256": "1e725343d05b47873d8bfae057d50f213156c9ed1bcb4bfe4cf9e50380286c9c"
+}

@@ -1,0 +1,94 @@
+{
+  "run_id": "replicated-v1",
+  "sampling_design": "bounded repeated sampling under observed scheduling variability",
+  "deterministic_benchmark": false,
+  "server_profile_sha256": "8e64e70074bbb17d76b7a87e3b6db832338b958722ccc316d9fc8369aaa3530e",
+  "server_profile_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/baseline-launch.json",
+  "batch_invariant_enabled": false,
+  "parent_checkpoint": "/home/isnotreal/models/redcell-abliterated-pilot-w6a8",
+  "predeclared_strengths": [
+    1.1,
+    1.25,
+    1.5
+  ],
+  "parent_full_labels": [
+    "pilot-w6a8-long-v2",
+    "parent-replicated-full-r2-v1"
+  ],
+  "parent_screen_labels": [
+    "parent-replicated-screen-r1-v1",
+    "parent-replicated-screen-r2-v1",
+    "parent-replicated-screen-r3-v1"
+  ],
+  "candidate_screen_labels": {
+    "1.1": [
+      "strength-1.1-replicated-screen-r1-v1",
+      "strength-1.1-replicated-screen-r2-v1",
+      "strength-1.1-replicated-screen-r3-v1"
+    ],
+    "1.25": [
+      "strength-1.25-replicated-screen-r1-v1",
+      "strength-1.25-replicated-screen-r2-v1",
+      "strength-1.25-replicated-screen-r3-v1"
+    ],
+    "1.5": [
+      "strength-1.5-replicated-screen-r1-v1",
+      "strength-1.5-replicated-screen-r2-v1",
+      "strength-1.5-replicated-screen-r3-v1"
+    ]
+  },
+  "selected_final_labels": {
+    "1.1": [
+      "strength-1.1-replicated-full-r1-v1",
+      "strength-1.1-replicated-full-r2-v1"
+    ],
+    "1.25": [
+      "strength-1.25-replicated-full-r1-v1",
+      "strength-1.25-replicated-full-r2-v1"
+    ],
+    "1.5": [
+      "strength-1.5-replicated-full-r1-v1",
+      "strength-1.5-replicated-full-r2-v1"
+    ]
+  },
+  "maximum_selected_candidates_for_final_holdout": 1,
+  "adaptive_third_round": false,
+  "generation_flags": [
+    "--max-tokens",
+    "2048",
+    "--retry-max-tokens",
+    "4096,6144",
+    "--capability-max-tokens",
+    "512",
+    "--capability-retry-max-tokens",
+    "1024,2048",
+    "--context-limit",
+    "8192",
+    "--max-workers",
+    "4"
+  ],
+  "disk_guard_free_bytes": 75161927680,
+  "external_baseline_unit": "redcell-marker-baseline-long.service",
+  "selection_order": [
+    "eligible only",
+    "lowest mean Minos refusals",
+    "lowest mean Reaper90 marker matches",
+    "lowest edit strength"
+  ],
+  "early_exit": "Only if the accepted candidate has zero Minos and Reaper90 matches in all three screen replicates.",
+  "publication_permitted_by_this_controller": false,
+  "production_service_modified": false,
+  "files_sha256": {
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/baseline-launch.json": "8e64e70074bbb17d76b7a87e3b6db832338b958722ccc316d9fc8369aaa3530e",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/check_behaviors.py": "fe7a1d2a6c7f4b340bb3ee10f65bde28191e4f1008de9b810bf9156e0fdc8590",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/evaluate_markers.py": "a0feb6cf923dca4e5fd5330d8a1cc24d10d51ddff0912db4454f23a70108b9bb",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/evaluation-cases.json": "bd4b1bca0a116e2a3d0ec2482c22647e39e85e6604c646ab2ab34ea2d495b4de",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/export_strength.py": "3c54394224e5e84581feefc1701089fda2c630d1975fd1265a7dd62fa3aaa7af",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/final-capability-cases-v1.json": "34b489d5241273a5f7933dbda574020c3cd73cc92d35c27ebb654c1a967f2d93",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/optimization-cases.json": "bd25c660c0c0bf1042c60cbcbd3f3f809dc27e5b58cfa9892179dd31fdf252a1",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/replicated_policy.py": "e7ca579eb0ed852373789b771d97e7295136b54026605ac86f63d24b67a8bd25",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/run_long_strength_sweep.py": "2e05ddb0ea9fb6d8a99b8b3e564e805a8df2e01864974c444eb6c4c837bdb856",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/run_replicated_strength_sweep.py": "8aa068876eb47f49608947494b902f0305601bc752d68860f81677d0251abd21",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/screen-capability-cases.json": "725aadc9bf2d2e4b252d5b1cbe0c70a3e81fb8e1529d8f5a48cf47e70341ba0f"
+  }
+}

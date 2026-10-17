@@ -1,0 +1,16 @@
+{
+  "repo": "terrorswift/REDCELL-26B-A4B-OSINT-Cyber-APEX-GGUF",
+  "revision": "ba311d958b4ed191a7291b38a6d805662415a570",
+  "files": [
+    {
+      "file": "REDCELL-26B-A4B-OSINT-Cyber-f16.gguf",
+      "size": 50505135136,
+      "sha256": "26cc25c909a26f8ed08a78444295ac174e7f329f8fb39ebae98f42d4115a7011"
+    }
+  ],
+  "verified_local_file": "/home/isnotreal/models/full-round-sources-20261006/redcell-independent/REDCELL-26B-A4B-OSINT-Cyber-f16.gguf",
+  "sha256_verified": true,
+  "independent_redownload_sha256": "26cc25c909a26f8ed08a78444295ac174e7f329f8fb39ebae98f42d4115a7011",
+  "conversion_reproduced": true,
+  "byte_identical_to_prior_conversion": true
+}

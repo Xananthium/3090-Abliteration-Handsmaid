@@ -1,0 +1,3801 @@
+{
+  "status": "completed_bounded_q8_geometry_followup",
+  "task_completed": true,
+  "started_utc": "2026-10-16T02:00:27.421428+00:00",
+  "finished_utc": "2026-10-16T02:01:04.479177+00:00",
+  "script_sha256": "8296faeb592d3156781260f8ffd0294ee7126be8841d53c1c0ebdc281ccc518a",
+  "range_plan_sha256": "4439ddf9d4899d535c464056d4852b55384d2cf192904ba812e8874c537a48d2",
+  "quantizer_sha256": "2c927a1b3d9f0920dcf4007fb686e1b0999333e9f65ce43dcc689900c0beae8b",
+  "phase1_helper_sha256": "6259a1d11b7c811cfb42ca87b553dcbec3e8a5a2b923babb31ed3b98a5e8efeb",
+  "observations": [
+    {
+      "kind": "control",
+      "layer": 0,
+      "tensor": "model.language_model.layers.0.mlp.up_proj.weight",
+      "shape": [
+        2112,
+        2816
+      ],
+      "route_comparisons": [
+        {
+          "route": "bf16_direct",
+          "parent_representation_frobenius_norm": 73.73350131553124,
+          "cast_only_frobenius_norm": 0.0,
+          "cast_only_relative_norm": 0.0,
+          "null_quantization_frobenius_norm": 0.42304635001250895,
+          "null_quantization_relative_norm": 0.005737505237980587,
+          "packed_bytes_exact_equal": true,
+          "packed_bytes_changed": 0,
+          "dequantized_values_exact_equal": true,
+          "dequantized_values_changed": 0,
+          "matched_quantized_delta_frobenius_norm": 0.0,
+          "matched_quantized_delta_relative_parent_norm": 0.0,
+          "raw_dequantized_hauhau_minus_bf16_parent_frobenius_norm": 0.42304635001250895,
+          "packed_null_sha256": "c8107a8037e57052e3f208b0ac55764b7148755b375df541d286c3739c823de1"
+        },
+        {
+          "route": "bf16_then_f16",
+          "parent_representation_frobenius_norm": 73.73350131553129,
+          "cast_only_frobenius_norm": 6.976357657574407e-07,
+          "cast_only_relative_norm": 9.461584670610103e-09,
+          "null_quantization_frobenius_norm": 0.4230463500177563,
+          "null_quantization_relative_norm": 0.005737505238051749,
+          "packed_bytes_exact_equal": true,
+          "packed_bytes_changed": 0,
+          "dequantized_values_exact_equal": true,
+          "dequantized_values_changed": 0,
+          "matched_quantized_delta_frobenius_norm": 0.0,
+          "matched_quantized_delta_relative_parent_norm": 0.0,
+          "raw_dequantized_hauhau_minus_bf16_parent_frobenius_norm": 0.42304635001250895,
+          "packed_null_sha256": "c8107a8037e57052e3f208b0ac55764b7148755b375df541d286c3739c823de1"
+        }
+      ],
+      "range_paths": {
+        "base": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/00-base.bin",
+        "hauhau": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/00-hauhau.bin"
+      },
+      "matching_routes": [
+        "bf16_direct",
+        "bf16_then_f16"
+      ],
+      "selected_route": "bf16_then_f16"
+    },
+    {
+      "kind": "target",
+      "layer": 27,
+      "tensor": "model.language_model.layers.27.self_attn.o_proj.weight",
+      "shape": [
+        2816,
+        4096
+      ],
+      "route_comparisons": [
+        {
+          "route": "bf16_direct",
+          "parent_representation_frobenius_norm": 94.87688241969242,
+          "cast_only_frobenius_norm": 0.0,
+          "cast_only_relative_norm": 0.0,
+          "null_quantization_frobenius_norm": 0.5143408529229013,
+          "null_quantization_relative_norm": 0.005421139900525925,
+          "packed_bytes_exact_equal": false,
+          "packed_bytes_changed": 9184641,
+          "dequantized_values_exact_equal": false,
+          "dequantized_values_changed": 10445271,
+          "matched_quantized_delta_frobenius_norm": 6.2047941678634455,
+          "matched_quantized_delta_relative_parent_norm": 0.06539837745106591,
+          "raw_dequantized_hauhau_minus_bf16_parent_frobenius_norm": 6.184971497738257,
+          "packed_null_sha256": "5888f662d422bcc850b7813875af6eae02b71db796f3e6f270c24e08df144d7a"
+        },
+        {
+          "route": "bf16_then_f16",
+          "parent_representation_frobenius_norm": 94.87688241969242,
+          "cast_only_frobenius_norm": 1.0606352335559806e-06,
+          "cast_only_relative_norm": 1.1179069194792997e-08,
+          "null_quantization_frobenius_norm": 0.514340852925623,
+          "null_quantization_relative_norm": 0.005421139900554613,
+          "packed_bytes_exact_equal": false,
+          "packed_bytes_changed": 9184641,
+          "dequantized_values_exact_equal": false,
+          "dequantized_values_changed": 10445271,
+          "matched_quantized_delta_frobenius_norm": 6.2047941678634455,
+          "matched_quantized_delta_relative_parent_norm": 0.06539837745106591,
+          "raw_dequantized_hauhau_minus_bf16_parent_frobenius_norm": 6.184971497738257,
+          "packed_null_sha256": "5888f662d422bcc850b7813875af6eae02b71db796f3e6f270c24e08df144d7a"
+        }
+      ],
+      "range_paths": {
+        "base": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/01-base.bin",
+        "hauhau": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/01-hauhau.bin"
+      },
+      "quantizer_null_spectrum": {
+        "seed": 20262043,
+        "rank_limit": 8,
+        "sketch_width": 12,
+        "power_iterations": 2,
+        "singular_values_estimate": [
+          0.03574730455875397,
+          0.034948889166116714,
+          0.024972714483737946,
+          0.02358182892203331,
+          0.02190796285867691,
+          0.02046455629169941,
+          0.01917789690196514,
+          0.018379615619778633
+        ],
+        "captured_energy_fraction": 0.01997150810785409
+      },
+      "matched_delta_definition": "dequant(published Hauhau Q8_0) minus dequant(Q8_0(selected parent representation)); not raw dequant-minus-parent",
+      "operator_input_definition": "Unquantized selected parent representation, not the quantized null",
+      "selected_route": "bf16_then_f16",
+      "geometry": {
+        "status": "nonzero_delta_geometry_measured",
+        "spectrum": {
+          "seed": 20263043,
+          "rank_limit": 8,
+          "sketch_width": 12,
+          "power_iterations": 2,
+          "singular_values_estimate": [
+            5.10059118270874,
+            2.3501694202423096,
+            1.5811604261398315,
+            1.5196549892425537,
+            1.2728558778762817,
+            0.051106203347444534,
+            0.04514431580901146,
+            0.035645682364702225
+          ],
+          "captured_energy_fraction": 0.986372738259477
+        },
+        "column_split": "even versus odd original input-coordinate columns",
+        "higher_rank_subspace_caveat": "When the true or effective edit rank is below the reported rank, extra basis vectors can be arbitrary. Read the singular values and captured energy alongside the subspace cosines.",
+        "column_split_spectra": [
+          {
+            "seed": 20263044,
+            "rank_limit": 8,
+            "sketch_width": 12,
+            "power_iterations": 2,
+            "singular_values_estimate": [
+              3.666731834411621,
+              1.6555424928665161,
+              1.1286221742630005,
+              1.0750293731689453,
+              0.8993836641311646,
+              0.03533753380179405,
+              0.032601892948150635,
+              0.02613578550517559
+            ],
+            "captured_energy_fraction": 0.9866951715391314
+          },
+          {
+            "seed": 20263045,
+            "rank_limit": 8,
+            "sketch_width": 12,
+            "power_iterations": 2,
+            "singular_values_estimate": [
+              3.546509027481079,
+              1.66890287399292,
+              1.1292076110839844,
+              1.0538076162338257,
+              0.8926774859428406,
+              0.03675523400306702,
+              0.02941468171775341,
+              0.02322837896645069
+            ],
+            "captured_energy_fraction": 0.9860611970162763
+          }
+        ],
+        "column_split_stability": [
+          {
+            "rank": 1,
+            "column_split_subspace_cosines": [
+              0.9994504007875
+            ],
+            "full_delta_energy_fraction": 0.6757503284336563,
+            "full_delta_low_rank_relative_residual": 0.5694292507119244,
+            "train_left_output_subspace_heldout_right_relative_residual": 0.5762158017179321,
+            "train_right_output_subspace_heldout_left_relative_residual": 0.5637649507933985
+          },
+          {
+            "rank": 2,
+            "column_split_subspace_cosines": [
+              0.9996412549060749,
+              0.9980810852620337
+            ],
+            "full_delta_energy_fraction": 0.8192145473362514,
+            "full_delta_low_rank_relative_residual": 0.42518872593678747,
+            "train_left_output_subspace_heldout_right_relative_residual": 0.4292447103766029,
+            "train_right_output_subspace_heldout_left_relative_residual": 0.4229706869017483
+          },
+          {
+            "rank": 3,
+            "column_split_subspace_cosines": [
+              0.9999759762192987,
+              0.9993562378132348,
+              0.6754981419178807
+            ],
+            "full_delta_energy_fraction": 0.8841522755894956,
+            "full_delta_low_rank_relative_residual": 0.340364105643507,
+            "train_left_output_subspace_heldout_right_relative_residual": 0.3484759762956845,
+            "train_right_output_subspace_heldout_left_relative_residual": 0.34342877344029304
+          },
+          {
+            "rank": 4,
+            "column_split_subspace_cosines": [
+              0.999988682443519,
+              0.9999529633847384,
+              0.9998807012411626,
+              0.9766071839876399
+            ],
+            "full_delta_energy_fraction": 0.9441362465123843,
+            "full_delta_low_rank_relative_residual": 0.23635514271455094,
+            "train_left_output_subspace_heldout_right_relative_residual": 0.24082273872143592,
+            "train_right_output_subspace_heldout_left_relative_residual": 0.23693900317451308
+          },
+          {
+            "rank": 5,
+            "column_split_subspace_cosines": [
+              0.9999899654055385,
+              0.9999533161445658,
+              0.9998975421049804,
+              0.9998811644275089,
+              0.999833331880463
+            ],
+            "full_delta_energy_fraction": 0.9862189577463322,
+            "full_delta_low_rank_relative_residual": 0.11739268398698374,
+            "train_left_output_subspace_heldout_right_relative_residual": 0.11897384458535977,
+            "train_right_output_subspace_heldout_left_relative_residual": 0.11629593143665683
+          },
+          {
+            "rank": 6,
+            "column_split_subspace_cosines": [
+              0.9999900081240778,
+              0.9999535093454347,
+              0.9998979462400797,
+              0.9998816338352134,
+              0.9998333853227107,
+              0.7321823717852238
+            ],
+            "full_delta_energy_fraction": 0.9862867987947344,
+            "full_delta_low_rank_relative_residual": 0.11710337828289005,
+            "train_left_output_subspace_heldout_right_relative_residual": 0.11873609857365326,
+            "train_right_output_subspace_heldout_left_relative_residual": 0.1160735674496359
+          },
+          {
+            "rank": 7,
+            "column_split_subspace_cosines": [
+              0.9999900156489373,
+              0.999953561640045,
+              0.9998999754848142,
+              0.999881638349757,
+              0.9998337099038116,
+              0.7725644971146132,
+              0.5514889895390312
+            ],
+            "full_delta_energy_fraction": 0.9863397348345677,
+            "full_delta_low_rank_relative_residual": 0.11687713705183013,
+            "train_left_output_subspace_heldout_right_relative_residual": 0.11855651490879221,
+            "train_right_output_subspace_heldout_left_relative_residual": 0.11594293575345498
+          },
+          {
+            "rank": 8,
+            "column_split_subspace_cosines": [
+              0.9999900394988686,
+              0.9999536534252002,
+              0.9999006671101964,
+              0.9998819655982762,
+              0.9998338311860776,
+              0.7743895009625952,
+              0.575106365517842,
+              0.29723173581852114
+            ],
+            "full_delta_energy_fraction": 0.986372738259477,
+            "full_delta_low_rank_relative_residual": 0.11673586312921569,
+            "train_left_output_subspace_heldout_right_relative_residual": 0.11847257415373968,
+            "train_right_output_subspace_heldout_left_relative_residual": 0.11588221972623555
+          }
+        ],
+        "heuristic_smallest_stable_output_rank": 5,
+        "heuristic_definition": "Smallest k in 1..8 with captured full-delta energy >=0.95 and minimum even/odd subspace cosine >=0.95. Descriptive triage only; not a causal or deployment acceptance test.",
+        "projection_fits": [
+          {
+            "rank": 1,
+            "all_columns_fit": {
+              "rank": 1,
+              "training_columns": 4096,
+              "evaluation_columns": 4096,
+              "ridge": 4.2257777063910357e-10,
+              "scalar_strength": 2.4691406796456,
+              "scalar_projection_relative_residual": 0.5751687286327566,
+              "fitted_operator_relative_residual": 0.5751687286327561,
+              "operator": [
+                [
+                  2.4691406793986874
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0,
+              "symmetric_operator_eigenvalues": [
+                2.4691406793986874
+              ]
+            },
+            "train_left_evaluate_right": {
+              "rank": 1,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 2.1670945733430829e-10,
+              "scalar_strength": 2.4799409996933366,
+              "scalar_projection_relative_residual": 0.5814817382887174,
+              "fitted_operator_relative_residual": 0.5814817382884085,
+              "operator": [
+                [
+                  2.4799409994453447
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0,
+              "symmetric_operator_eigenvalues": [
+                2.4799409994453447
+              ]
+            },
+            "train_right_evaluate_left": {
+              "rank": 1,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 2.0653797953915234e-10,
+              "scalar_strength": 2.4543356855829104,
+              "scalar_projection_relative_residual": 0.5702488601249658,
+              "fitted_operator_relative_residual": 0.570248860125532,
+              "operator": [
+                [
+                  2.454335685337479
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0,
+              "symmetric_operator_eigenvalues": [
+                2.454335685337479
+              ]
+            }
+          },
+          {
+            "rank": 2,
+            "all_columns_fit": {
+              "rank": 2,
+              "training_columns": 4096,
+              "evaluation_columns": 4096,
+              "ridge": 4.482446868664373e-10,
+              "scalar_strength": 1.72639032883364,
+              "scalar_projection_relative_residual": 0.5531598031141273,
+              "fitted_operator_relative_residual": 0.4286274792857387,
+              "operator": [
+                [
+                  2.515511138114262,
+                  0.1889296798704075
+                ],
+                [
+                  0.18510842470101868,
+                  1.1046056169847198
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0019579569345114173,
+              "symmetric_operator_eigenvalues": [
+                1.0802366710304927,
+                2.539880084068489
+              ]
+            },
+            "train_left_evaluate_right": {
+              "rank": 2,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 2.2770860081701151e-10,
+              "scalar_strength": 1.7331003729391024,
+              "scalar_projection_relative_residual": 0.5586887240764833,
+              "fitted_operator_relative_residual": 0.4324012289933397,
+              "operator": [
+                [
+                  2.526403589449242,
+                  0.1897987285290977
+                ],
+                [
+                  0.18441854877488809,
+                  1.0960704978484637
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0027501993026092966,
+              "symmetric_operator_eigenvalues": [
+                1.0719990367185666,
+                2.550475050579139
+              ]
+            },
+            "train_right_evaluate_left": {
+              "rank": 2,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 2.211921489052484e-10,
+              "scalar_strength": 1.7175687945166702,
+              "scalar_projection_relative_residual": 0.5495467379261854,
+              "fitted_operator_relative_residual": 0.42710203223640425,
+              "operator": [
+                [
+                  2.4995637263856354,
+                  0.1855473106082745
+                ],
+                [
+                  0.1835882312773996,
+                  1.1115484545722698
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0010082092072984884,
+              "symmetric_operator_eigenvalues": [
+                1.0874252801333788,
+                2.523686900824526
+              ]
+            }
+          },
+          {
+            "rank": 3,
+            "all_columns_fit": {
+              "rank": 3,
+              "training_columns": 4096,
+              "evaluation_columns": 4096,
+              "ridge": 4.47471421841937e-10,
+              "scalar_strength": 1.3954977927612482,
+              "scalar_projection_relative_residual": 0.5665405618704107,
+              "fitted_operator_relative_residual": 0.34072539242705974,
+              "operator": [
+                [
+                  2.551911488513115,
+                  0.17069148181277172,
+                  0.15011323109136898
+                ],
+                [
+                  0.17034481771128895,
+                  1.1120028421594175,
+                  -0.06088437950596438
+                ],
+                [
+                  0.1491046426768414,
+                  -0.05986388068027206,
+                  0.7798522237581542
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0007173955343700377,
+              "symmetric_operator_eigenvalues": [
+                0.7512951305284922,
+                1.1094984135501926,
+                2.582973010352001
+              ]
+            },
+            "train_left_evaluate_right": {
+              "rank": 3,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 2.1881195232559737e-10,
+              "scalar_strength": 1.4418628471420816,
+              "scalar_projection_relative_residual": 0.5598735266076945,
+              "fitted_operator_relative_residual": 0.3502090618131084,
+              "operator": [
+                [
+                  2.546723003534017,
+                  0.17765938273631446,
+                  0.1167723905778633
+                ],
+                [
+                  0.17468070737115474,
+                  1.1018881372642388,
+                  -0.0559618016483583
+                ],
+                [
+                  0.11431189264087079,
+                  -0.05462049908390211,
+                  0.815881728743531
+                ]
+              ],
+              "operator_asymmetry_relative": 0.00198842012599835,
+              "symmetric_operator_eigenvalues": [
+                0.792906002378819,
+                1.097034510101771,
+                2.574552357061198
+              ]
+            },
+            "train_right_evaluate_left": {
+              "rank": 3,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 2.2483293233059483e-10,
+              "scalar_strength": 1.375852006920687,
+              "scalar_projection_relative_residual": 0.568069715193485,
+              "fitted_operator_relative_residual": 0.3443567987559858,
+              "operator": [
+                [
+                  2.5383315103840602,
+                  0.16936103272558814,
+                  0.1525113619972159
+                ],
+                [
+                  0.17023256219428867,
+                  1.1171246972321018,
+                  -0.05254082312171208
+                ],
+                [
+                  0.1513281260551805,
+                  -0.05078097667488346,
+                  0.770565724700184
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0011191419634779159,
+              "symmetric_operator_eigenvalues": [
+                0.7454259091307724,
+                1.110581809165101,
+                2.570014214020473
+              ]
+            }
+          },
+          {
+            "rank": 4,
+            "all_columns_fit": {
+              "rank": 4,
+              "training_columns": 4096,
+              "evaluation_columns": 4096,
+              "ridge": 4.151694086823116e-10,
+              "scalar_strength": 1.2909013976260875,
+              "scalar_projection_relative_residual": 0.5302694408799027,
+              "fitted_operator_relative_residual": 0.2366177878981602,
+              "operator": [
+                [
+                  2.551897721732045,
+                  0.17053907622675157,
+                  0.14991426360788784,
+                  0.003015603262376465
+                ],
+                [
+                  0.17047803446607399,
+                  1.113477620093112,
+                  -0.058959037666351306,
+                  -0.029180984058824536
+                ],
+                [
+                  0.14924664175696423,
+                  -0.058291877895677836,
+                  0.7819044939303385,
+                  -0.031104742918073643
+                ],
+                [
+                  0.002736854966934991,
+                  -0.02969152714764514,
+                  -0.031248348518084487,
+                  0.8557615327396708
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0005217602093364167,
+              "symmetric_operator_eigenvalues": [
+                0.742027048122599,
+                0.8658036627105543,
+                1.1121911124738473,
+                2.583019545188165
+              ]
+            },
+            "train_left_evaluate_right": {
+              "rank": 4,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 2.100156389252337e-10,
+              "scalar_strength": 1.297606577746104,
+              "scalar_projection_relative_residual": 0.532696942677925,
+              "fitted_operator_relative_residual": 0.24127175662941236,
+              "operator": [
+                [
+                  2.553084097431926,
+                  0.16969875178924476,
+                  0.10906599406534799,
+                  -0.06891774224746681
+                ],
+                [
+                  0.16894622971352116,
+                  1.1090645854004761,
+                  -0.04901454392279353,
+                  0.062128819399384735
+                ],
+                [
+                  0.10974216816344826,
+                  -0.048901688646092414,
+                  0.821417900579676,
+                  0.04950958111600059
+                ],
+                [
+                  -0.06829491277026681,
+                  0.06319851072956194,
+                  0.04882304300887908,
+                  0.8139977717733731
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0008131783575955237,
+              "symmetric_operator_eigenvalues": [
+                0.7366752341500059,
+                0.8663051643277078,
+                1.1139413293766447,
+                2.580642627331092
+              ]
+            },
+            "train_right_evaluate_left": {
+              "rank": 4,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 2.0597939453166783e-10,
+              "scalar_strength": 1.2822247179517143,
+              "scalar_projection_relative_residual": 0.5300911206389446,
+              "fitted_operator_relative_residual": 0.2378637508287582,
+              "operator": [
+                [
+                  2.542489145067774,
+                  0.17047397999317876,
+                  0.15293278942077518,
+                  -0.05275327096642766
+                ],
+                [
+                  0.17113292643483136,
+                  1.1173657135877249,
+                  -0.05244956013181324,
+                  -0.011424081833510645
+                ],
+                [
+                  0.15155651576729529,
+                  -0.05071983958169238,
+                  0.770588874813862,
+                  -0.002897874679897434
+                ],
+                [
+                  -0.05273893062512897,
+                  -0.011939962306310548,
+                  -0.004004281185041402,
+                  0.8648381266194067
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0012187600388322399,
+              "symmetric_operator_eigenvalues": [
+                0.7454241174621313,
+                0.8630148128483666,
+                1.110775627825603,
+                2.5760673019526674
+              ]
+            }
+          },
+          {
+            "rank": 5,
+            "all_columns_fit": {
+              "rank": 5,
+              "training_columns": 4096,
+              "evaluation_columns": 4096,
+              "ridge": 4.041711926468607e-10,
+              "scalar_strength": 1.180172088176106,
+              "scalar_projection_relative_residual": 0.5185646201792509,
+              "fitted_operator_relative_residual": 0.11759824878206421,
+              "operator": [
+                [
+                  2.552101707609198,
+                  0.1699676215040828,
+                  0.14982782731826771,
+                  0.0025780322755866105,
+                  0.011367113327669254
+                ],
+                [
+                  0.17004961017415784,
+                  1.114677826202475,
+                  -0.05877749858651754,
+                  -0.02826196922236963,
+                  -0.023873945295364553
+                ],
+                [
+                  0.14917299035491022,
+                  -0.05808554771105463,
+                  0.781935702732299,
+                  -0.03094675296963039,
+                  -0.004104224700511849
+                ],
+                [
+                  0.002483396327855386,
+                  -0.028981477294683564,
+                  -0.03114094880045069,
+                  0.8563052279849985,
+                  -0.014123983589478343
+                ],
+                [
+                  0.011788796993103375,
+                  -0.02305548527278494,
+                  -0.0032594101768075403,
+                  -0.013701885340980238,
+                  0.6724853653427513
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0008159659343600852,
+              "symmetric_operator_eigenvalues": [
+                0.6680713866900375,
+                0.7450050757141706,
+                0.8669822441212122,
+                1.1142925067462952,
+                2.583154616600005
+              ]
+            },
+            "train_left_evaluate_right": {
+              "rank": 5,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 2.0366292314618534e-10,
+              "scalar_strength": 1.18815834783978,
+              "scalar_projection_relative_residual": 0.5182100234066457,
+              "fitted_operator_relative_residual": 0.11925330485725401,
+              "operator": [
+                [
+                  2.5546148142215945,
+                  0.17100742383508272,
+                  0.10952330719841204,
+                  -0.07027291465950755,
+                  -0.0274707883478953
+                ],
+                [
+                  0.17024512562775654,
+                  1.1101750643573747,
+                  -0.04862648901672041,
+                  0.06097888237193112,
+                  -0.023310448511285844
+                ],
+                [
+                  0.11014642357304127,
+                  -0.048556074252779115,
+                  0.8215386749211943,
+                  0.04915168618528751,
+                  -0.007254911496906846
+                ],
+                [
+                  -0.06937081652883359,
+                  0.06227867684079769,
+                  0.04850160868343396,
+                  0.8149502896476869,
+                  0.019308551905101345
+                ],
+                [
+                  -0.027586608163980966,
+                  -0.022088192164697516,
+                  -0.006852249566986964,
+                  0.01786369900507645,
+                  0.6759326568784951
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0012586487584321428,
+              "symmetric_operator_eigenvalues": [
+                0.6683923202002696,
+                0.7439716802807989,
+                0.8669010651591231,
+                1.1148533205275546,
+                2.5830931138585984
+              ]
+            },
+            "train_right_evaluate_left": {
+              "rank": 5,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 2.005353444136108e-10,
+              "scalar_strength": 1.1719820918955994,
+              "scalar_projection_relative_residual": 0.5192714175106121,
+              "fitted_operator_relative_residual": 0.11656895945182012,
+              "operator": [
+                [
+                  2.5481983064477878,
+                  0.16797835988727278,
+                  0.15347321659399674,
+                  -0.05651926260877791,
+                  0.055340177945020066
+                ],
+                [
+                  0.16890438377950862,
+                  1.1183398664479642,
+                  -0.05266051318201765,
+                  -0.009954045786490045,
+                  -0.02160176234675585
+                ],
+                [
+                  0.15182122851219715,
+                  -0.05083555227660181,
+                  0.7706139324294998,
+                  -0.0030724898145215755,
+                  0.002565919826184817
+                ],
+                [
+                  -0.0551785710743437,
+                  -0.010873533217739411,
+                  -0.004235216676430454,
+                  0.8664474112336186,
+                  -0.02364798045722861
+                ],
+                [
+                  0.056151954796201234,
+                  -0.0211966561796487,
+                  0.003359193302313627,
+                  -0.02386648020157492,
+                  0.6736863481009333
+                ]
+              ],
+              "operator_asymmetry_relative": 0.001602563715742147,
+              "symmetric_operator_eigenvalues": [
+                0.6675082555349652,
+                0.7460158944424267,
+                0.8670469868326665,
+                1.1137949498950883,
+                2.582919777954658
+              ]
+            }
+          },
+          {
+            "rank": 6,
+            "all_columns_fit": {
+              "rank": 6,
+              "training_columns": 4096,
+              "evaluation_columns": 4096,
+              "ridge": 9.437134090597146e-10,
+              "scalar_strength": 0.42125866328603545,
+              "scalar_projection_relative_residual": 0.8596532587380269,
+              "fitted_operator_relative_residual": 0.11759160520225531,
+              "operator": [
+                [
+                  2.5521501103615267,
+                  0.17020549073280386,
+                  0.15006325843972843,
+                  0.0025854268583313253,
+                  0.011949211794620577,
+                  -0.0010064502224479
+                ],
+                [
+                  0.17007201348834133,
+                  1.1147879237637481,
+                  -0.05866852933282281,
+                  -0.028258546631853565,
+                  -0.0236045212673657,
+                  -0.00046583503230511957
+                ],
+                [
+                  0.14919035799578423,
+                  -0.05800019702056856,
+                  0.7820201784778525,
+                  -0.03094409968296446,
+                  -0.003895360019692732,
+                  -0.000361127735825573
+                ],
+                [
+                  0.0024685385661401184,
+                  -0.029054493355800085,
+                  -0.03121321646476539,
+                  0.8563029580068295,
+                  -0.014302663813414603,
+                  0.0003089387208712927
+                ],
+                [
+                  0.011763542698055737,
+                  -0.023179593388993457,
+                  -0.003382246227748256,
+                  -0.013705743449974496,
+                  0.6721816558273387,
+                  0.0005251145993849913
+                ],
+                [
+                  -3.3285286632715654e-06,
+                  -2.8001526757004154e-05,
+                  -3.0222157612021534e-05,
+                  1.633664634424677e-05,
+                  -9.213598821191647e-05,
+                  9.724104956058475e-05
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0009707012159143638,
+              "symmetric_operator_eigenvalues": [
+                9.696270986691136e-05,
+                0.6677719098150886,
+                0.7450568274093985,
+                0.8670152843709275,
+                1.1143421306914998,
+                2.5832569524900744
+              ]
+            },
+            "train_left_evaluate_right": {
+              "rank": 6,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 4.683373675751112e-10,
+              "scalar_strength": 0.43076442933057796,
+              "scalar_projection_relative_residual": 0.8497377481032725,
+              "fitted_operator_relative_residual": 0.11924666955171383,
+              "operator": [
+                [
+                  2.554788831023421,
+                  0.17101215258478167,
+                  0.10951690601609697,
+                  -0.07026911875651515,
+                  -0.027058431900212225,
+                  -0.0006873295234590234
+                ],
+                [
+                  0.17040268049882326,
+                  1.1101793456953422,
+                  -0.0486322845599013,
+                  0.06098231911364771,
+                  -0.022937101499062165,
+                  -0.0006223073122460844
+                ],
+                [
+                  0.11025870560099621,
+                  -0.0485530230298564,
+                  0.821534544576066,
+                  0.049154135390074155,
+                  -0.0069888444602415195,
+                  -0.0004434894626220252
+                ],
+                [
+                  -0.06946072679098592,
+                  0.06227623355335116,
+                  0.0485049159584036,
+                  0.8149483282946655,
+                  0.019095497720338733,
+                  0.00035512585220369127
+                ],
+                [
+                  -0.02781316065789685,
+                  -0.022094348611322347,
+                  -0.006843915972617338,
+                  0.01785875717700496,
+                  0.6753958109720816,
+                  0.000894832608365637
+                ],
+                [
+                  -8.062341068344221e-05,
+                  7.447220099321565e-06,
+                  2.5771447251451355e-06,
+                  -3.1450462801688525e-05,
+                  -0.00021891504901032583,
+                  0.000317147563287895
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0013539660039462618,
+              "symmetric_operator_eigenvalues": [
+                0.0003167631948040125,
+                0.6680198263756727,
+                0.7438003376151288,
+                0.8669012895435819,
+                1.114838790569953,
+                2.583287000825722
+              ]
+            },
+            "train_right_evaluate_left": {
+              "rank": 6,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 4.034754525292815e-10,
+              "scalar_strength": 0.48534024655000757,
+              "scalar_projection_relative_residual": 0.8379339183281113,
+              "fitted_operator_relative_residual": 0.11656071811895412,
+              "operator": [
+                [
+                  2.5480670138795296,
+                  0.1683934047775985,
+                  0.15384707130473327,
+                  -0.05667164402082654,
+                  0.05590013326074617,
+                  -0.001235323860060727
+                ],
+                [
+                  0.16886443071674984,
+                  1.1184661670002822,
+                  -0.05254674692453906,
+                  -0.010000416366456833,
+                  -0.021431364580812778,
+                  -0.000375916432105176
+                ],
+                [
+                  0.15185678785985895,
+                  -0.05094796362000065,
+                  0.7705126770012638,
+                  -0.003031218607356561,
+                  0.002414260735683886,
+                  0.0003345768341577652
+                ],
+                [
+                  -0.055113432647888996,
+                  -0.011079450646344089,
+                  -0.004420698311643091,
+                  0.866523012555942,
+                  -0.02392579268810939,
+                  0.0006128847390597358
+                ],
+                [
+                  0.0561989581805185,
+                  -0.021345244684305317,
+                  0.0032253511102333363,
+                  -0.02381192674618856,
+                  0.6734858807465637,
+                  0.00044225313217081307
+                ],
+                [
+                  -1.6523184517634683e-05,
+                  3.891403994313279e-05,
+                  2.2342451989656525e-05,
+                  -2.9057107264025856e-07,
+                  1.583071536784288e-05,
+                  -0.0001343310703828074
+                ]
+              ],
+              "operator_asymmetry_relative": 0.001781767590066107,
+              "symmetric_operator_eigenvalues": [
+                -0.00013474724212525556,
+                0.6672434290060532,
+                0.7459057815673011,
+                0.8671352609778349,
+                1.1138839747816514,
+                2.5828867210224815
+              ]
+            }
+          },
+          {
+            "rank": 7,
+            "all_columns_fit": {
+              "rank": 7,
+              "training_columns": 4096,
+              "evaluation_columns": 4096,
+              "ridge": 1.2708204353998346e-09,
+              "scalar_strength": 0.2681920928350268,
+              "scalar_projection_relative_residual": 0.9131289299478614,
+              "fitted_operator_relative_residual": 0.11758816284700117,
+              "operator": [
+                [
+                  2.5519238573285747,
+                  0.17045070758046776,
+                  0.15034249267691477,
+                  0.002626671024933374,
+                  0.01202669607787933,
+                  -0.0010048763279596376,
+                  0.0003050842637795348
+                ],
+                [
+                  0.16997002423696334,
+                  1.114898461445188,
+                  -0.05854265734334293,
+                  -0.028239954765468183,
+                  -0.02356959324333231,
+                  -0.00046512555780468644,
+                  0.00013752450955925485
+                ],
+                [
+                  0.14984605985583024,
+                  -0.05871085862067711,
+                  0.7812109311842108,
+                  -0.031063629135225833,
+                  -0.004119916768196935,
+                  -0.00036568902260066113,
+                  -0.000884162856372192
+                ],
+                [
+                  0.0021515496025048203,
+                  -0.02871093495491602,
+                  -0.030821998365536948,
+                  0.8563607425915818,
+                  -0.014194105312622735,
+                  0.0003111438052597818,
+                  0.0004274348970249808
+                ],
+                [
+                  0.012212347848647534,
+                  -0.023666016556995868,
+                  -0.003936147828935722,
+                  -0.0137875572077758,
+                  0.6720279544743923,
+                  0.0005219925596099669,
+                  -0.0006051787454141418
+                ],
+                [
+                  -0.0002869370817551823,
+                  0.00027937857160575177,
+                  0.00031979884954865434,
+                  6.803632575651883e-05,
+                  4.990793901722548e-06,
+                  9.921392844718429e-05,
+                  0.00038242401497612556
+                ],
+                [
+                  -0.00022557934575550962,
+                  0.00027758753475067103,
+                  0.00035769996094478084,
+                  6.954814254056513e-05,
+                  5.31239523720325e-05,
+                  3.9371842236638355e-05,
+                  0.0003031276819250915
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0010805769438988482,
+              "symmetric_operator_eigenvalues": [
+                -3.345996289786421e-05,
+                0.00043518665036361117,
+                0.6674520226314997,
+                0.7444443010071784,
+                0.8668874589248696,
+                1.11452145084153,
+                2.5831173285417774
+              ]
+            },
+            "train_left_evaluate_right": {
+              "rank": 7,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 6.209458691637762e-10,
+              "scalar_strength": 0.2785486852806358,
+              "scalar_projection_relative_residual": 0.9099407760507456,
+              "fitted_operator_relative_residual": 0.11924420509893513,
+              "operator": [
+                [
+                  2.554456477343204,
+                  0.17138675890274596,
+                  0.10985883675755455,
+                  -0.07053099953760845,
+                  -0.02694568296538414,
+                  -0.0006308458926626873,
+                  0.0004787711434142693
+                ],
+                [
+                  0.17043987758154186,
+                  1.1101374195458076,
+                  -0.04867055355726087,
+                  0.06101162888573431,
+                  -0.022949720388978377,
+                  -0.0006286289779409934,
+                  -5.358422495315062e-05
+                ],
+                [
+                  0.11015413736576203,
+                  -0.048435160798926284,
+                  0.8216421260272985,
+                  0.049071739944841916,
+                  -0.006953370318218433,
+                  -0.0004257180461692014,
+                  0.000150635538701193
+                ],
+                [
+                  -0.06933921876729597,
+                  0.06213927792582364,
+                  0.048379906483581855,
+                  0.81504407151454,
+                  0.01905427685085272,
+                  0.0003344755097953687,
+                  -0.00017503812845703288
+                ],
+                [
+                  -0.026955865552358908,
+                  -0.02306063367881558,
+                  -0.007725915426775625,
+                  0.01853427028951723,
+                  0.6751049786919728,
+                  0.0007491349173068447,
+                  -0.0012349747670737734
+                ],
+                [
+                  -0.00026990762741195854,
+                  0.0002207955909113797,
+                  0.00019731589460591717,
+                  -0.00018059860462647573,
+                  -0.00015470151409881873,
+                  0.00034931650252970195,
+                  0.0002726730053003952
+                ],
+                [
+                  -0.00028825157426425394,
+                  0.0003513391298029622,
+                  0.00035058900854730376,
+                  -0.00027249018205771945,
+                  2.7868573410589296e-05,
+                  0.00013310638276052062,
+                  0.0003890605176124167
+                ]
+              ],
+              "operator_asymmetry_relative": 0.001426016649653987,
+              "symmetric_operator_eigenvalues": [
+                0.00016453004857715293,
+                0.0005729007284908733,
+                0.6674018052553743,
+                0.7443083798656055,
+                0.8668905734796751,
+                1.114772150013832,
+                2.583013110751409
+              ]
+            },
+            "train_right_evaluate_left": {
+              "rank": 7,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 5.352650006913765e-10,
+              "scalar_strength": 0.31354917975895585,
+              "scalar_projection_relative_residual": 0.8973455813421458,
+              "fitted_operator_relative_residual": 0.11654750780856844,
+              "operator": [
+                [
+                  2.547944427680942,
+                  0.16858292542178738,
+                  0.1540494204738474,
+                  -0.0566806081746174,
+                  0.055985374066065234,
+                  -0.0011793288687777879,
+                  0.00027957356551680887
+                ],
+                [
+                  0.1686718255025774,
+                  1.1187639388200248,
+                  -0.05222881903996771,
+                  -0.010014500737210037,
+                  -0.02129743554195937,
+                  -0.0002879379853996313,
+                  0.0004392615470504142
+                ],
+                [
+                  0.15241067836958286,
+                  -0.051804290650517566,
+                  0.7695983856891728,
+                  -0.0029907150133045937,
+                  0.0020291100236256945,
+                  8.157001431165827e-05,
+                  -0.0012632204410038678
+                ],
+                [
+                  -0.05600964133087121,
+                  -0.00969389214408726,
+                  -0.00294135224866012,
+                  0.8664574766561836,
+                  -0.023302609228955922,
+                  0.001022256085084324,
+                  0.0020439221754008884
+                ],
+                [
+                  0.05663413540012868,
+                  -0.022018038320684573,
+                  0.002507016501680991,
+                  -0.023780104132619054,
+                  0.6731832779079894,
+                  0.00024347232710188445,
+                  -0.000992479088702721
+                ],
+                [
+                  -0.00010620095351755367,
+                  0.00017755785793617158,
+                  0.0001703709806545367,
+                  -6.8483140645285345e-06,
+                  7.818862601788519e-05,
+                  -9.336794497838596e-05,
+                  0.00020452198463556236
+                ],
+                [
+                  5.557345423588709e-05,
+                  -2.3864930286513795e-05,
+                  1.576514502383024e-06,
+                  -7.204745562173531e-06,
+                  3.376612318391379e-05,
+                  -0.00025217218979183757,
+                  -0.00018606948977187851
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0017395184403788749,
+              "symmetric_operator_eigenvalues": [
+                -0.0001939613413593148,
+                -8.809513948224259e-05,
+                0.6669005580376091,
+                0.7449480388033904,
+                0.8669962206890572,
+                1.1142554888413494,
+                2.582849819428999
+              ]
+            }
+          },
+          {
+            "rank": 8,
+            "all_columns_fit": {
+              "rank": 8,
+              "training_columns": 4096,
+              "evaluation_columns": 4096,
+              "ridge": 1.3029156872526171e-09,
+              "scalar_strength": 0.22888034906440358,
+              "scalar_projection_relative_residual": 0.926374574370259,
+              "fitted_operator_relative_residual": 0.11758562343203492,
+              "operator": [
+                [
+                  2.5519368457625666,
+                  0.17038243460497784,
+                  0.15030020280204237,
+                  0.002510168639305195,
+                  0.011984449960947404,
+                  -0.001009403946119816,
+                  0.00023487693244928393,
+                  -0.0005464268416979889
+                ],
+                [
+                  0.1699709795435633,
+                  1.1148934399184633,
+                  -0.058545767788222305,
+                  -0.028248523583663507,
+                  -0.023572700469792315,
+                  -0.0004654585665695191,
+                  0.0001323607177343704,
+                  -4.019001464688616e-05
+                ],
+                [
+                  0.14982795045631792,
+                  -0.05861566776912385,
+                  0.7812698946100681,
+                  -0.03090119353366066,
+                  -0.004061014340535884,
+                  -0.0003593763070308209,
+                  -0.0007862749868053471,
+                  0.0007618657023499844
+                ],
+                [
+                  0.0021529573436828205,
+                  -0.028718334651774185,
+                  -0.030826581909963784,
+                  0.8563481155889967,
+                  -0.014198684115080651,
+                  0.0003106530838885952,
+                  0.00041982554573198247,
+                  -5.922392281197118e-05
+                ],
+                [
+                  0.012194075754893294,
+                  -0.023569970503499828,
+                  -0.0038766546639275932,
+                  -0.013623662272759471,
+                  0.6720873860799538,
+                  0.0005283619892930918,
+                  -0.0005064114430416719,
+                  0.000768710361865683
+                ],
+                [
+                  -0.0002898358748471134,
+                  0.00029461588594967953,
+                  0.0003292371973959775,
+                  9.403758820613887e-05,
+                  1.4419376554106515e-05,
+                  0.00010022441241343306,
+                  0.00039809304441355527,
+                  0.00012195276141197544
+                ],
+                [
+                  -0.00022755571877822596,
+                  0.00028797620895182054,
+                  0.00036413494801377475,
+                  8.727558704491506e-05,
+                  5.955228161317484e-05,
+                  4.0060781801463e-05,
+                  0.0003138106958870891,
+                  8.314637853797383e-05
+                ],
+                [
+                  -0.00012837005754150245,
+                  0.00012202647480349364,
+                  0.00013553618665020445,
+                  2.935206324643733e-05,
+                  8.135265266892629e-06,
+                  9.185360630474621e-05,
+                  0.00016670354795932395,
+                  -2.0143419960814e-05
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0011461226698077469,
+              "symmetric_operator_eigenvalues": [
+                -8.296106560407632e-05,
+                -2.5585958273660086e-05,
+                0.0005013025915296653,
+                0.6675575475576795,
+                0.7445280772860691,
+                0.8668260266535345,
+                1.1145060997144376,
+                2.583119066869017
+              ]
+            },
+            "train_left_evaluate_right": {
+              "rank": 8,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 6.311134817702196e-10,
+              "scalar_strength": 0.23984628881188644,
+              "scalar_projection_relative_residual": 0.9230009214846325,
+              "fitted_operator_relative_residual": 0.11924082228629333,
+              "operator": [
+                [
+                  2.5544770644738244,
+                  0.17137142771005648,
+                  0.10984916055136204,
+                  -0.0705151320799077,
+                  -0.026932101514488823,
+                  -0.0006146862784283388,
+                  0.00043258218721878967,
+                  -0.00024161915974973134
+                ],
+                [
+                  0.17048222920113615,
+                  1.1101058804036015,
+                  -0.04869045932586068,
+                  0.06104427122135638,
+                  -0.022921780798588642,
+                  -0.0005953856208275099,
+                  -0.0001486035783512208,
+                  -0.0004970559447665845
+                ],
+                [
+                  0.11009078449235826,
+                  -0.04838798208807401,
+                  0.8216719026305275,
+                  0.04902291098068168,
+                  -0.006995164545982471,
+                  -0.0004754460642694988,
+                  0.000292772929903355,
+                  0.0007435352229015936
+                ],
+                [
+                  -0.06925289328917039,
+                  0.062074991578436926,
+                  0.048339332475620986,
+                  0.8151106065132436,
+                  0.0191112262284308,
+                  0.0004022355772033489,
+                  -0.0003687164530281337,
+                  -0.0010131511121699768
+                ],
+                [
+                  -0.027029860233774926,
+                  -0.02300553004158701,
+                  -0.00769113704084658,
+                  0.01847723919520234,
+                  0.6750561640017761,
+                  0.0006910537488555026,
+                  -0.0010689615990892743,
+                  0.0008684318495965301
+                ],
+                [
+                  -0.00026583238474723274,
+                  0.000217760768853006,
+                  0.0001954004817863524,
+                  -0.00017745762824731255,
+                  -0.0001520130547868907,
+                  0.00035251531155861357,
+                  0.0002635298624624689,
+                  -4.782871463435687e-05
+                ],
+                [
+                  -0.0002740991042395182,
+                  0.00034079982411094493,
+                  0.00034393717827801003,
+                  -0.0002615822244920341,
+                  3.720503333504988e-05,
+                  0.000144215181091931,
+                  0.0003573082845261465,
+                  -0.00016609917643250127
+                ],
+                [
+                  -0.00024412677776041304,
+                  0.0002894095130702833,
+                  0.0002453336673251879,
+                  -0.00021940855321023067,
+                  0.00011450238329707706,
+                  -5.996382775588117e-05,
+                  0.00040565878761653296,
+                  0.0004332232032925526
+                ]
+              ],
+              "operator_asymmetry_relative": 0.00155121857241265,
+              "symmetric_operator_eigenvalues": [
+                0.00010380523047878021,
+                0.0004585153930354485,
+                0.0005785893578450857,
+                0.6673740072424449,
+                0.7443964619440757,
+                0.8668927950011724,
+                1.1147307118124963,
+                2.5830297788408014
+              ]
+            },
+            "train_right_evaluate_left": {
+              "rank": 8,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 5.019762996248757e-10,
+              "scalar_strength": 0.29260230260519976,
+              "scalar_projection_relative_residual": 0.9044707514547654,
+              "fitted_operator_relative_residual": 0.1165452244509714,
+              "operator": [
+                [
+                  2.548016458326117,
+                  0.1685374816770726,
+                  0.15397085995559032,
+                  -0.05669123088919788,
+                  0.05597492360707546,
+                  -0.0011170911912448452,
+                  0.00018319375128723645,
+                  -0.0005538179031793288
+                ],
+                [
+                  0.16862939326063503,
+                  1.1187907091380593,
+                  -0.05218254009803725,
+                  -0.010008243044870128,
+                  -0.02129127931529752,
+                  -0.0003246013578759347,
+                  0.0004960375893053527,
+                  0.00032624661736816026
+                ],
+                [
+                  0.15250260111953248,
+                  -0.05186228426358096,
+                  0.769498129703368,
+                  -0.0030042713161392183,
+                  0.002015773534995591,
+                  0.00016099540522669398,
+                  -0.0013862167396283388,
+                  -0.0007067616432281222
+                ],
+                [
+                  -0.05590557692066794,
+                  -0.009759545877020126,
+                  -0.003054850619753364,
+                  0.8664421297818284,
+                  -0.02331770727857512,
+                  0.00111217242410397,
+                  0.0019046798388603122,
+                  -0.0008001146545936562
+                ],
+                [
+                  0.056496510765448774,
+                  -0.0219312116065752,
+                  0.0026571174986315524,
+                  -0.02375980794786167,
+                  0.6732032450099943,
+                  0.00012455844324735213,
+                  -0.0008083318331782435,
+                  0.0010581474063002668
+                ],
+                [
+                  -0.00021534999891107822,
+                  0.0002464194599795717,
+                  0.00028941493094489175,
+                  9.248435924419463e-06,
+                  9.402437100157524e-05,
+                  -0.00018767763514281865,
+                  0.00035056776224262463,
+                  0.0008392086046971702
+                ],
+                [
+                  -1.9491898505040283e-07,
+                  1.1319065225037583e-05,
+                  6.240056867141059e-05,
+                  1.0196924785497917e-06,
+                  4.185720390107582e-05,
+                  -0.00030035857548832363,
+                  -0.00011144918133350214,
+                  0.00042878339897630275
+                ],
+                [
+                  1.0471127619529904e-05,
+                  -0.00012886474545067161,
+                  -9.696061682949237e-05,
+                  5.4953056093291064e-05,
+                  -0.00012943076556151895,
+                  0.00010982476307270776,
+                  -5.579247599977622e-05,
+                  0.000682571013054114
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0019059289770158405,
+              "symmetric_operator_eigenvalues": [
+                -0.00040742566176008347,
+                -0.00013475887022017265,
+                0.0009224038824868247,
+                0.6669411130466856,
+                0.7448415854152322,
+                0.8669817439149793,
+                1.1142841784827153,
+                2.582905275945826
+              ]
+            }
+          }
+        ],
+        "row_norm_ratio_min_median_max": [
+          0.9310720886464486,
+          0.9999249196120799,
+          1.0214159665307785
+        ],
+        "interpretation": "Low-rank edit recovery and symmetric projection compatibility are separate questions. Norm-preserving or oblique edits can remain low rank while failing U M U^T W fits. Neither semantic refusal causality nor transfer to REDCELL has been tested."
+      },
+      "same_layer_down_comparison": {
+        "status": "frozen_down_basis_tested_on_attention",
+        "layer": 27,
+        "down_basis_sha256": "4992657fd99fe2f04b564400a1ec206dc29ef3684792447d4761b7f5f22926a8",
+        "rank": 5,
+        "attention_vs_down_output_subspace_cosines": [
+          0.999984494823928,
+          0.9999650918515316,
+          0.9999628766347506,
+          0.9999490448462848,
+          0.9999327540430991
+        ],
+        "attention_delta_energy_in_down_subspace": 0.9861118439637262,
+        "down_subspace_attention_delta_relative_residual": 0.11784802092641947,
+        "separately_fitted_attention_coefficients": {
+          "all_columns": {
+            "rank": 5,
+            "training_columns": 4096,
+            "evaluation_columns": 4096,
+            "ridge": 4.0458524656317057e-10,
+            "scalar_strength": 1.1797112299505188,
+            "scalar_projection_relative_residual": 0.5183934360534134,
+            "fitted_operator_relative_residual": 0.11832786323768654,
+            "operator": [
+              [
+                1.1207917691648288,
+                -0.10874545168353462,
+                -0.044485429409689345,
+                -0.008156507443475245,
+                -0.03080631403352359
+              ],
+              [
+                -0.1112218762338479,
+                2.263496523002565,
+                0.6558723845391141,
+                0.16465063594931278,
+                -0.08856598015030775
+              ],
+              [
+                -0.04563647839715973,
+                0.658606733016849,
+                1.020090486371848,
+                0.08822311478596656,
+                -0.014747083383583957
+              ],
+              [
+                -0.00899929466469639,
+                0.16588895648834723,
+                0.08830570625064425,
+                0.8811631681995539,
+                -0.04444247348694239
+              ],
+              [
+                -0.03085274388947935,
+                -0.0851049557295659,
+                -0.013265784955419212,
+                -0.04397458686374314,
+                0.68944320921513
+              ]
+            ],
+            "operator_asymmetry_relative": 0.0025575193623187413,
+            "symmetric_operator_eigenvalues": [
+              0.6674083527237987,
+              0.7444910195007322,
+              0.8675461974203822,
+              1.1146486997645078,
+              2.5808908865445064
+            ]
+          },
+          "train_even_evaluate_odd": {
+            "rank": 5,
+            "training_columns": 2048,
+            "evaluation_columns": 2048,
+            "ridge": 2.037989609676894e-10,
+            "scalar_strength": 1.1881211621979777,
+            "scalar_projection_relative_residual": 0.5177725765964108,
+            "fitted_operator_relative_residual": 0.11967978358575072,
+            "operator": [
+              [
+                1.120629188325991,
+                -0.10834596468257855,
+                -0.04445815117113864,
+                -0.008121265851517057,
+                -0.030682393222192985
+              ],
+              [
+                -0.11026057308933356,
+                2.2627260013552424,
+                0.6556186094831615,
+                0.164058469934513,
+                -0.08857887582677777
+              ],
+              [
+                -0.04530697306648966,
+                0.6583121654077142,
+                1.0199599029390407,
+                0.08776348100478623,
+                -0.01470139089355504
+              ],
+              [
+                -0.008886186105883969,
+                0.16577282388421827,
+                0.08834701906882973,
+                0.8812592081005336,
+                -0.04443575792462979
+              ],
+              [
+                -0.031006297019537644,
+                -0.08486611178741077,
+                -0.013214168894104743,
+                -0.04395456275854666,
+                0.6894532723595697
+              ]
+            ],
+            "operator_asymmetry_relative": 0.0025687443181802204,
+            "symmetric_operator_eigenvalues": [
+              0.6674361343823944,
+              0.7444646595496761,
+              0.8677118567681983,
+              1.1145873686591188,
+              2.5798275537209916
+            ]
+          },
+          "train_odd_evaluate_even": {
+            "rank": 5,
+            "training_columns": 2048,
+            "evaluation_columns": 2048,
+            "ridge": 2.0078628559548118e-10,
+            "scalar_strength": 1.1711751118149683,
+            "scalar_projection_relative_residual": 0.5191990454407117,
+            "fitted_operator_relative_residual": 0.11702767479652837,
+            "operator": [
+              [
+                1.1209520686928591,
+                -0.10914569119454597,
+                -0.0445354635033078,
+                -0.008203639623006093,
+                -0.030892004143351654
+              ],
+              [
+                -0.11215497383969952,
+                2.26434895296147,
+                0.6561617156409426,
+                0.1653242498533762,
+                -0.0887046471832268
+              ],
+              [
+                -0.04595532150757423,
+                0.6589499259515539,
+                1.020240520661378,
+                0.08874083658996072,
+                -0.014869058706395027
+              ],
+              [
+                -0.009113536817600217,
+                0.16600267298312157,
+                0.0882704879252895,
+                0.8810613211132747,
+                -0.044458211232647704
+              ],
+              [
+                -0.03070129959253241,
+                -0.08535614372735462,
+                -0.013330605238112489,
+                -0.04400576175130058,
+                0.6894650037933528
+              ]
+            ],
+            "operator_asymmetry_relative": 0.002659780031443024,
+            "symmetric_operator_eigenvalues": [
+              0.6674057629763521,
+              0.7445124230437851,
+              0.8673689921820437,
+              1.1147073788185857,
+              2.582073310201567
+            ]
+          }
+        },
+        "unchanged_down_operator_prediction": {
+          "all_columns_relative_residual": 0.5826210626432159,
+          "even_columns_relative_residual": 0.585419183948339,
+          "odd_columns_relative_residual": 0.5796777700433545
+        },
+        "interpretation": "Frozen down subspace with attention-specific coefficients tests a restricted shared-subspace hypothesis. Unchanged down coefficients separately test the stronger shared-operator hypothesis. Neither is assumed or an inference result."
+      },
+      "diagnostic_basis": {
+        "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/layer-27-attention-delta-basis.npy",
+        "sha256": "aa61ccfd77cef8539ee3260bfa0d3d7efbb95063da7f6d6b451158df9aa4e024",
+        "deployment_adapter": false
+      },
+      "completed_utc": "2026-10-16T02:00:43.865611+00:00"
+    },
+    {
+      "kind": "target",
+      "layer": 25,
+      "tensor": "model.language_model.layers.25.self_attn.o_proj.weight",
+      "shape": [
+        2816,
+        4096
+      ],
+      "route_comparisons": [
+        {
+          "route": "bf16_direct",
+          "parent_representation_frobenius_norm": 100.93688397462506,
+          "cast_only_frobenius_norm": 0.0,
+          "cast_only_relative_norm": 0.0,
+          "null_quantization_frobenius_norm": 0.541848460709363,
+          "null_quantization_relative_norm": 0.005368190886946545,
+          "packed_bytes_exact_equal": false,
+          "packed_bytes_changed": 9253953,
+          "dequantized_values_exact_equal": false,
+          "dequantized_values_changed": 10516576,
+          "matched_quantized_delta_frobenius_norm": 6.731136092866445,
+          "matched_quantized_delta_relative_parent_norm": 0.0666865850005694,
+          "raw_dequantized_hauhau_minus_bf16_parent_frobenius_norm": 6.7108307475224285,
+          "packed_null_sha256": "ab56929bb40eeabc60c8fb6e06c7f9ecd2604c7cbad880ac767ce4a7ee76604a"
+        },
+        {
+          "route": "bf16_then_f16",
+          "parent_representation_frobenius_norm": 100.9368839746251,
+          "cast_only_frobenius_norm": 9.904121961544949e-07,
+          "cast_only_relative_norm": 9.812193096861185e-09,
+          "null_quantization_frobenius_norm": 0.5418484607037559,
+          "null_quantization_relative_norm": 0.005368190886890991,
+          "packed_bytes_exact_equal": false,
+          "packed_bytes_changed": 9253953,
+          "dequantized_values_exact_equal": false,
+          "dequantized_values_changed": 10516576,
+          "matched_quantized_delta_frobenius_norm": 6.731136092866445,
+          "matched_quantized_delta_relative_parent_norm": 0.06668658500056937,
+          "raw_dequantized_hauhau_minus_bf16_parent_frobenius_norm": 6.7108307475224285,
+          "packed_null_sha256": "ab56929bb40eeabc60c8fb6e06c7f9ecd2604c7cbad880ac767ce4a7ee76604a"
+        }
+      ],
+      "range_paths": {
+        "base": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/02-base.bin",
+        "hauhau": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/02-hauhau.bin"
+      },
+      "quantizer_null_spectrum": {
+        "seed": 20262041,
+        "rank_limit": 8,
+        "sketch_width": 12,
+        "power_iterations": 2,
+        "singular_values_estimate": [
+          0.02021612599492073,
+          0.01995578035712242,
+          0.019241822883486748,
+          0.018609968945384026,
+          0.018488118425011635,
+          0.01832827739417553,
+          0.01776750385761261,
+          0.017391175031661987
+        ],
+        "captured_energy_fraction": 0.009602791208583192
+      },
+      "matched_delta_definition": "dequant(published Hauhau Q8_0) minus dequant(Q8_0(selected parent representation)); not raw dequant-minus-parent",
+      "operator_input_definition": "Unquantized selected parent representation, not the quantized null",
+      "selected_route": "bf16_then_f16",
+      "geometry": {
+        "status": "nonzero_delta_geometry_measured",
+        "spectrum": {
+          "seed": 20263041,
+          "rank_limit": 8,
+          "sketch_width": 12,
+          "power_iterations": 2,
+          "singular_values_estimate": [
+            5.411627769470215,
+            2.489973306655884,
+            1.9789975881576538,
+            1.7520995140075684,
+            1.4976955652236938,
+            0.028622735291719437,
+            0.026776909828186035,
+            0.025565287098288536
+          ],
+          "captured_energy_fraction": 0.9869572148428712
+        },
+        "column_split": "even versus odd original input-coordinate columns",
+        "higher_rank_subspace_caveat": "When the true or effective edit rank is below the reported rank, extra basis vectors can be arbitrary. Read the singular values and captured energy alongside the subspace cosines.",
+        "column_split_spectra": [
+          {
+            "seed": 20263042,
+            "rank_limit": 8,
+            "sketch_width": 12,
+            "power_iterations": 2,
+            "singular_values_estimate": [
+              3.817636728286743,
+              1.7457367181777954,
+              1.371654748916626,
+              1.235763669013977,
+              1.0502594709396362,
+              0.021540865302085876,
+              0.021223124116659164,
+              0.02108653634786606
+            ],
+            "captured_energy_fraction": 0.9868602797048069
+          },
+          {
+            "seed": 20263043,
+            "rank_limit": 8,
+            "sketch_width": 12,
+            "power_iterations": 2,
+            "singular_values_estimate": [
+              3.8370957374572754,
+              1.7756167650222778,
+              1.4268935918807983,
+              1.2475041151046753,
+              1.0553927421569824,
+              0.022061996161937714,
+              0.021719099953770638,
+              0.02122463472187519
+            ],
+            "captured_energy_fraction": 0.9871100821018322
+          }
+        ],
+        "column_split_stability": [
+          {
+            "rank": 1,
+            "column_split_subspace_cosines": [
+              0.999073549764227
+            ],
+            "full_delta_energy_fraction": 0.6463668844114683,
+            "full_delta_low_rank_relative_residual": 0.5946705941851604,
+            "train_left_output_subspace_heldout_right_relative_residual": 0.5979191333041021,
+            "train_right_output_subspace_heldout_left_relative_residual": 0.5926863380315812
+          },
+          {
+            "rank": 2,
+            "column_split_subspace_cosines": [
+              0.9995206320221913,
+              0.9984191293442048
+            ],
+            "full_delta_energy_fraction": 0.783206743087527,
+            "full_delta_low_rank_relative_residual": 0.4656106280063557,
+            "train_left_output_subspace_heldout_right_relative_residual": 0.4687789454998361,
+            "train_right_output_subspace_heldout_left_relative_residual": 0.46414619126497403
+          },
+          {
+            "rank": 3,
+            "column_split_subspace_cosines": [
+              0.9999811720527713,
+              0.9988560767357049,
+              0.9950494302820851
+            ],
+            "full_delta_energy_fraction": 0.8696465446278799,
+            "full_delta_low_rank_relative_residual": 0.3610449492405621,
+            "train_left_output_subspace_heldout_right_relative_residual": 0.36183751778250306,
+            "train_right_output_subspace_heldout_left_relative_residual": 0.36275761844908083
+          },
+          {
+            "rank": 4,
+            "column_split_subspace_cosines": [
+              0.9999893266555276,
+              0.9999514095376493,
+              0.9999234711843666,
+              0.9500423212727747
+            ],
+            "full_delta_energy_fraction": 0.9374014538840507,
+            "full_delta_low_rank_relative_residual": 0.25019701460239147,
+            "train_left_output_subspace_heldout_right_relative_residual": 0.2527644807264982,
+            "train_right_output_subspace_heldout_left_relative_residual": 0.2545342072396909
+          },
+          {
+            "rank": 5,
+            "column_split_subspace_cosines": [
+              0.9999896468366197,
+              0.999952277008962,
+              0.9999234795879092,
+              0.9999065957118095,
+              0.999862295355104
+            ],
+            "full_delta_energy_fraction": 0.9869088825751404,
+            "full_delta_low_rank_relative_residual": 0.11441642113289323,
+            "train_left_output_subspace_heldout_right_relative_residual": 0.11409558506232369,
+            "train_right_output_subspace_heldout_left_relative_residual": 0.11517793336172005
+          },
+          {
+            "rank": 6,
+            "column_split_subspace_cosines": [
+              0.9999896521836806,
+              0.9999524090041173,
+              0.999923488228845,
+              0.9999069794707399,
+              0.9998624095822801,
+              0.0037711227578024376
+            ],
+            "full_delta_energy_fraction": 0.9869269645357283,
+            "full_delta_low_rank_relative_residual": 0.11433737562263593,
+            "train_left_output_subspace_heldout_right_relative_residual": 0.11406409912344224,
+            "train_right_output_subspace_heldout_left_relative_residual": 0.11514679788144161
+          },
+          {
+            "rank": 7,
+            "column_split_subspace_cosines": [
+              0.9999897141789762,
+              0.9999524229290776,
+              0.9999235659369287,
+              0.9999070092564133,
+              0.9998626215323642,
+              0.10891098366793714,
+              0.03137435468586156
+            ],
+            "full_delta_energy_fraction": 0.9869427895523549,
+            "full_delta_low_rank_relative_residual": 0.11426815150182956,
+            "train_left_output_subspace_heldout_right_relative_residual": 0.11403623650926319,
+            "train_right_output_subspace_heldout_left_relative_residual": 0.11511641661967817
+          },
+          {
+            "rank": 8,
+            "column_split_subspace_cosines": [
+              0.9999897315515268,
+              0.9999524282372216,
+              0.9999236738364405,
+              0.9999071374139015,
+              0.9998626324680623,
+              0.11715953283745982,
+              0.04560264069089499,
+              0.03331052577620971
+            ],
+            "full_delta_energy_fraction": 0.9869572148428712,
+            "full_delta_low_rank_relative_residual": 0.1142050137127471,
+            "train_left_output_subspace_heldout_right_relative_residual": 0.11400726464619619,
+            "train_right_output_subspace_heldout_left_relative_residual": 0.11508997037467983
+          }
+        ],
+        "heuristic_smallest_stable_output_rank": 5,
+        "heuristic_definition": "Smallest k in 1..8 with captured full-delta energy >=0.95 and minimum even/odd subspace cosine >=0.95. Descriptive triage only; not a causal or deployment acceptance test.",
+        "projection_fits": [
+          {
+            "rank": 1,
+            "all_columns_fit": {
+              "rank": 1,
+              "training_columns": 4096,
+              "evaluation_columns": 4096,
+              "ridge": 3.1187736974368437e-10,
+              "scalar_strength": 3.0642705491071967,
+              "scalar_projection_relative_residual": 0.5946928221414519,
+              "fitted_operator_relative_residual": 0.5946928221414507,
+              "operator": [
+                [
+                  3.064270548800769
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0,
+              "symmetric_operator_eigenvalues": [
+                3.064270548800769
+              ]
+            },
+            "train_left_evaluate_right": {
+              "rank": 1,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 1.5565594509221654e-10,
+              "scalar_strength": 3.059344619609827,
+              "scalar_projection_relative_residual": 0.598122588952986,
+              "fitted_operator_relative_residual": 0.5981225889532066,
+              "operator": [
+                [
+                  3.059344619303891
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0,
+              "symmetric_operator_eigenvalues": [
+                3.059344619303891
+              ]
+            },
+            "train_right_evaluate_left": {
+              "rank": 1,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 1.570628462356488e-10,
+              "scalar_strength": 3.0613422306652707,
+              "scalar_projection_relative_residual": 0.5928285017260215,
+              "fitted_operator_relative_residual": 0.5928285017261844,
+              "operator": [
+                [
+                  3.0613422303591373
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0,
+              "symmetric_operator_eigenvalues": [
+                3.0613422303591373
+              ]
+            }
+          },
+          {
+            "rank": 2,
+            "all_columns_fit": {
+              "rank": 2,
+              "training_columns": 4096,
+              "evaluation_columns": 4096,
+              "ridge": 3.337394227158692e-10,
+              "scalar_strength": 2.135067178916314,
+              "scalar_projection_relative_residual": 0.573098156715347,
+              "fitted_operator_relative_residual": 0.4656873803352877,
+              "operator": [
+                [
+                  3.0644112753708472,
+                  0.011336194702170354
+                ],
+                [
+                  0.010906643140960156,
+                  1.3202356989379571
+                ]
+              ],
+              "operator_asymmetry_relative": 0.00018205680216172286,
+              "symmetric_operator_eigenvalues": [
+                1.3201647881121463,
+                3.064482186196658
+              ]
+            },
+            "train_left_evaluate_right": {
+              "rank": 2,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 1.6533065777500446e-10,
+              "scalar_strength": 2.138374312435895,
+              "scalar_projection_relative_residual": 0.5760593083283905,
+              "fitted_operator_relative_residual": 0.46911952941413626,
+              "operator": [
+                [
+                  3.059350537512917,
+                  -0.0020824094600322344
+                ],
+                [
+                  -0.002157164522627135,
+                  1.3192363115011763
+                ]
+              ],
+              "operator_asymmetry_relative": 3.173172949267632e-05,
+              "symmetric_operator_eigenvalues": [
+                1.3192337292050527,
+                3.0593531198090407
+              ]
+            },
+            "train_right_evaluate_left": {
+              "rank": 2,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 1.6899738994049923e-10,
+              "scalar_strength": 2.128903133979194,
+              "scalar_projection_relative_residual": 0.5719300976876971,
+              "fitted_operator_relative_residual": 0.4643449688773126,
+              "operator": [
+                [
+                  3.0621584932582224,
+                  0.027086599910452307
+                ],
+                [
+                  0.026159369624404794,
+                  1.3201585432880387
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0003932146463835999,
+              "symmetric_operator_eigenvalues": [
+                1.3197517592093984,
+                3.062565277336863
+              ]
+            }
+          },
+          {
+            "rank": 3,
+            "all_columns_fit": {
+              "rank": 3,
+              "training_columns": 4096,
+              "evaluation_columns": 4096,
+              "ridge": 3.4601600394857584e-10,
+              "scalar_strength": 1.7398230022797723,
+              "scalar_projection_relative_residual": 0.5536181197276377,
+              "fitted_operator_relative_residual": 0.36117630176655574,
+              "operator": [
+                [
+                  3.0644158393006906,
+                  0.01133565967026873,
+                  -0.0016581520760735207
+                ],
+                [
+                  0.010905971705967089,
+                  1.3202357776458307,
+                  0.00024394288640453894
+                ],
+                [
+                  -0.0022154769613710315,
+                  0.00038724445791132276,
+                  1.0279041555565338
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0002908945132072961,
+              "symmetric_operator_eigenvalues": [
+                1.0279019495622301,
+                1.3201652426561852,
+                3.0644885802846407
+              ]
+            },
+            "train_left_evaluate_right": {
+              "rank": 3,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 1.694463900327051e-10,
+              "scalar_strength": 1.7505751326000965,
+              "scalar_projection_relative_residual": 0.5547631904763666,
+              "fitted_operator_relative_residual": 0.3622834293218009,
+              "operator": [
+                [
+                  3.059508033920443,
+                  -0.002083461366715383,
+                  -0.01045845664220994
+                ],
+                [
+                  -0.0021499274410648767,
+                  1.3192362631621504,
+                  -0.000480574134262098
+                ],
+                [
+                  -0.011499826172497177,
+                  0.0005245938129631513,
+                  1.0290264297336706
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0005875923900947917,
+              "symmetric_operator_eigenvalues": [
+                1.0289670650970062,
+                1.3192336888864218,
+                3.0595699728328363
+              ]
+            },
+            "train_right_evaluate_left": {
+              "rank": 3,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 1.7705074679770034e-10,
+              "scalar_strength": 1.7279681036650691,
+              "scalar_projection_relative_residual": 0.5544064967622194,
+              "fitted_operator_relative_residual": 0.3630513904040805,
+              "operator": [
+                [
+                  3.0623716672858694,
+                  0.027079198603076497,
+                  0.012650973600702189
+                ],
+                [
+                  0.02616190155713423,
+                  1.3201584553745775,
+                  0.00015025946664495635
+                ],
+                [
+                  0.012288731119843148,
+                  -0.0004499634688147848,
+                  1.0265646662270966
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0004679031073908798,
+              "symmetric_operator_eigenvalues": [
+                1.0264879541934073,
+                1.3197521903098144,
+                3.062854644384322
+              ]
+            }
+          },
+          {
+            "rank": 4,
+            "all_columns_fit": {
+              "rank": 4,
+              "training_columns": 4096,
+              "evaluation_columns": 4096,
+              "ridge": 3.5849620774348895e-10,
+              "scalar_strength": 1.5023966374680426,
+              "scalar_projection_relative_residual": 0.5344223795870446,
+              "fitted_operator_relative_residual": 0.2503220735521138,
+              "operator": [
+                [
+                  3.0645268217656585,
+                  0.010940517530737402,
+                  -0.0014190858680655143,
+                  0.008715012796736948
+                ],
+                [
+                  0.010612259282830092,
+                  1.3212815116893954,
+                  -0.00038874001058881606,
+                  -0.023064069114082465
+                ],
+                [
+                  -0.0020542227420742485,
+                  -0.0001868852495517563,
+                  1.028251511601381,
+                  0.012662652876349035
+                ],
+                [
+                  0.008232240140169062,
+                  -0.022897650870425522,
+                  0.012644877320694711,
+                  0.881271040682691
+                ]
+              ],
+              "operator_asymmetry_relative": 0.00035402784771431663,
+              "symmetric_operator_eigenvalues": [
+                0.8789684355386972,
+                1.029315468102075,
+                1.3224203466451223,
+                3.064626635453232
+              ]
+            },
+            "train_left_evaluate_right": {
+              "rank": 4,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 1.774588216281408e-10,
+              "scalar_strength": 1.500264705536934,
+              "scalar_projection_relative_residual": 0.5358476010915254,
+              "fitted_operator_relative_residual": 0.25308737412139215,
+              "operator": [
+                [
+                  3.0629411063923486,
+                  -0.0044924354307476,
+                  -0.010157108787606225,
+                  0.047018364674133284
+                ],
+                [
+                  -0.004014072672753023,
+                  1.3205443268602783,
+                  -0.0006442048667288474,
+                  -0.025530792205939266
+                ],
+                [
+                  -0.011297544809420119,
+                  0.00038265374069553523,
+                  1.0290441855599697,
+                  0.002770386854356463
+                ],
+                [
+                  0.046662485972104324,
+                  -0.025617406186884847,
+                  0.002865265680500926,
+                  0.8725603301201804
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0006489261206329226,
+              "symmetric_operator_eigenvalues": [
+                0.8700601439999716,
+                1.0290457995943334,
+                1.3219725963166205,
+                3.0640114090218518
+              ]
+            },
+            "train_right_evaluate_left": {
+              "rank": 4,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 1.8239798885696218e-10,
+              "scalar_strength": 1.4986392801140187,
+              "scalar_projection_relative_residual": 0.5354868791127614,
+              "fitted_operator_relative_residual": 0.2547307261214561,
+              "operator": [
+                [
+                  3.0630330474427345,
+                  0.02813599513070339,
+                  0.011953960818750314,
+                  -0.02032276708536002
+                ],
+                [
+                  0.027023246804525402,
+                  1.3215347691944832,
+                  -0.0007574917432882972,
+                  -0.026467256976255047
+                ],
+                [
+                  0.011756982402296636,
+                  -0.0012996263800202684,
+                  1.027125063513261,
+                  0.016339475942966468
+                ],
+                [
+                  -0.021276769548736554,
+                  -0.026606072539512603,
+                  0.016035054412810335,
+                  0.8871207956617575
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0006322047667512208,
+              "symmetric_operator_eigenvalues": [
+                0.8835101658830353,
+                1.0288699591320751,
+                1.3226899979360587,
+                3.0637435528610686
+              ]
+            }
+          },
+          {
+            "rank": 5,
+            "all_columns_fit": {
+              "rank": 5,
+              "training_columns": 4096,
+              "evaluation_columns": 4096,
+              "ridge": 3.5773079250940295e-10,
+              "scalar_strength": 1.3621163152267883,
+              "scalar_projection_relative_residual": 0.5172523682064003,
+              "fitted_operator_relative_residual": 0.11460799157515772,
+              "operator": [
+                [
+                  3.0645402935055186,
+                  0.010931567374880949,
+                  -0.0014042244100139023,
+                  0.008595463344559425,
+                  -0.002866677934531822
+                ],
+                [
+                  0.010602984536885168,
+                  1.3212876735089696,
+                  -0.00039897152166660886,
+                  -0.022981764165285398,
+                  0.001973591483280045
+                ],
+                [
+                  -0.0020436095073307924,
+                  -0.00019393631433719266,
+                  1.0282632196774208,
+                  0.012568470054852598,
+                  -0.002258411153541225
+                ],
+                [
+                  0.008145625520914133,
+                  -0.02284010712374252,
+                  0.012549327702293576,
+                  0.8820396667824237,
+                  0.018430895660456435
+                ],
+                [
+                  -0.0030481678192148228,
+                  0.0016936238237624949,
+                  -0.002673645787766436,
+                  0.018317908114135677,
+                  0.7958399264358679
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0003980563105693655,
+              "symmetric_operator_eigenvalues": [
+                0.7918941460048337,
+                0.8836907410716444,
+                1.029320142844032,
+                1.322422899034842,
+                3.064642850954847
+              ]
+            },
+            "train_left_evaluate_right": {
+              "rank": 5,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 1.7624909906562382e-10,
+              "scalar_strength": 1.3642577988330091,
+              "scalar_projection_relative_residual": 0.5160821330610389,
+              "fitted_operator_relative_residual": 0.1143982430160796,
+              "operator": [
+                [
+                  3.0635660508621605,
+                  -0.004920993476716791,
+                  -0.01036005062621605,
+                  0.04572184611332621,
+                  -0.019827273113046922
+                ],
+                [
+                  -0.004367853322099851,
+                  1.3207869332873288,
+                  -0.0005293196262464351,
+                  -0.024796833906832995,
+                  0.011224206185051721
+                ],
+                [
+                  -0.011447336508954919,
+                  0.00048537396847518735,
+                  1.0290928282873237,
+                  0.003081146815968368,
+                  0.004752359755463625
+                ],
+                [
+                  0.045723464295160665,
+                  -0.024973468499688036,
+                  0.0031701996314863917,
+                  0.8745084376676707,
+                  0.029791829866449435
+                ],
+                [
+                  -0.020831071017764068,
+                  0.011412915490022482,
+                  0.004546465782968752,
+                  0.029466384139320758,
+                  0.8044065652455996
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0007421980541981359,
+              "symmetric_operator_eigenvalues": [
+                0.7922801573677225,
+                0.883765625591022,
+                1.0292296624685875,
+                1.3223189189614553,
+                3.0647664509612973
+              ]
+            },
+            "train_right_evaluate_left": {
+              "rank": 5,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 1.8146789553006923e-10,
+              "scalar_strength": 1.3600309886179487,
+              "scalar_projection_relative_residual": 0.5185923888191225,
+              "fitted_operator_relative_residual": 0.11544143694939445,
+              "operator": [
+                [
+                  3.0639127915695523,
+                  0.02787407762369171,
+                  0.01154064727701132,
+                  -0.0201299592345267,
+                  0.02282767397190762
+                ],
+                [
+                  0.02681732795158408,
+                  1.3215960753762463,
+                  -0.0006607487835781557,
+                  -0.026512386884386348,
+                  -0.005343199581459473
+                ],
+                [
+                  0.011449198845992476,
+                  -0.001207993029483942,
+                  1.0272696636402527,
+                  0.01627202100427926,
+                  -0.007986393404525354
+                ],
+                [
+                  -0.02112316669633043,
+                  -0.026651803195821826,
+                  0.015962890090092885,
+                  0.8871544598095416,
+                  0.003985699633396842
+                ],
+                [
+                  0.024057543656752754,
+                  -0.005907001450371439,
+                  -0.00876216150965561,
+                  0.003577643462446027,
+                  0.7922215447648403
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0008678092918036873,
+              "symmetric_operator_eigenvalues": [
+                0.7914100601885986,
+                0.8837839241179536,
+                1.0292791388203324,
+                1.3228350440365568,
+                3.0648463679969904
+              ]
+            }
+          },
+          {
+            "rank": 6,
+            "all_columns_fit": {
+              "rank": 6,
+              "training_columns": 4096,
+              "evaluation_columns": 4096,
+              "ridge": 5.089872363369682e-10,
+              "scalar_strength": 0.7977697106203092,
+              "scalar_projection_relative_residual": 0.7556590184920355,
+              "fitted_operator_relative_residual": 0.1146046912493344,
+              "operator": [
+                [
+                  3.0646533643259244,
+                  0.010852367514541324,
+                  -0.0015108133514920366,
+                  0.00856334271848215,
+                  -0.0030008375081487476,
+                  0.0007009410009414801
+                ],
+                [
+                  0.010525871035293595,
+                  1.3213416871252524,
+                  -0.00032627871211480234,
+                  -0.02295985815215528,
+                  0.0020650872443116644,
+                  -0.0004780361803547718
+                ],
+                [
+                  -0.001846204728265376,
+                  -0.0003322072661198882,
+                  1.028077131493935,
+                  0.012512392310368837,
+                  -0.002492633441415286,
+                  0.0012237367770919288
+                ],
+                [
+                  0.008200087054402058,
+                  -0.022878254364837855,
+                  0.012497988286714846,
+                  0.8820241955935426,
+                  0.018366276628860596,
+                  0.00033761382489306814
+                ],
+                [
+                  -0.0029394916518508123,
+                  0.0016175022770695455,
+                  -0.002776091868424708,
+                  0.01828703594066547,
+                  0.7957109812938802,
+                  0.0006736970765962993
+                ],
+                [
+                  -3.376750064199602e-06,
+                  3.224641776466425e-06,
+                  4.052954426374096e-06,
+                  5.158963611570987e-07,
+                  2.158849948273641e-06,
+                  -2.1993011607974047e-05
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0007098480675773956,
+              "symmetric_operator_eigenvalues": [
+                -2.2613024753305056e-05,
+                0.7917824446685174,
+                0.8836639792234843,
+                1.0291277337423625,
+                1.3224787767926525,
+                3.0647550454186634
+              ]
+            },
+            "train_left_evaluate_right": {
+              "rank": 6,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 1.840536133766593e-10,
+              "scalar_strength": 1.0887534095931113,
+              "scalar_projection_relative_residual": 0.6427317246564616,
+              "fitted_operator_relative_residual": 0.11439752570140128,
+              "operator": [
+                [
+                  3.063567882665642,
+                  -0.004921659689263949,
+                  -0.010362498219512956,
+                  0.045723904819179144,
+                  -0.019830774063378562,
+                  7.398579332205942e-05
+                ],
+                [
+                  -0.00438420561155792,
+                  1.320792880431738,
+                  -0.0005074704371457392,
+                  -0.024815211580233396,
+                  0.011255458488682838,
+                  -0.0006604567125077171
+                ],
+                [
+                  -0.011407796512594721,
+                  0.0004709937007533187,
+                  1.0290399967295976,
+                  0.003125584211045232,
+                  0.004676791378702371,
+                  0.0015969907992296041
+                ],
+                [
+                  0.04572853348474698,
+                  -0.024975312108840124,
+                  0.003163426409153522,
+                  0.8745141347209396,
+                  0.029782141689531163,
+                  0.00020474078517604072
+                ],
+                [
+                  -0.020811750529729132,
+                  0.011405888838062296,
+                  0.004520650621620124,
+                  0.029488097650170356,
+                  0.8043696401523581,
+                  0.0007803400157621482
+                ],
+                [
+                  9.616648917424368e-06,
+                  -1.029523088279007e-06,
+                  -1.5682043835565864e-05,
+                  1.3682521650419865e-05,
+                  -1.0064090341112355e-05,
+                  0.00039556790201062785
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0010259743626304099,
+              "symmetric_operator_eigenvalues": [
+                0.00039468398887831967,
+                0.7922453120050217,
+                0.883769290822706,
+                1.0291763000525391,
+                1.32232638119249,
+                3.0647681345406514
+              ]
+            },
+            "train_right_evaluate_left": {
+              "rank": 6,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 2.073571911582676e-10,
+              "scalar_strength": 0.9918386587351021,
+              "scalar_projection_relative_residual": 0.6839696202920168,
+              "fitted_operator_relative_residual": 0.11543685258030685,
+              "operator": [
+                [
+                  3.064058457747279,
+                  0.027866305427288438,
+                  0.01136340171195595,
+                  -0.02017611360817513,
+                  0.0227457258863108,
+                  0.0013459534976425927
+                ],
+                [
+                  0.026936462393626896,
+                  1.321589718797537,
+                  -0.0008057106722243472,
+                  -0.02655013465655522,
+                  -0.005410221562870184,
+                  0.001100800247874882
+                ],
+                [
+                  0.011496623531319208,
+                  -0.0012105234298646237,
+                  1.0272119576278012,
+                  0.01625699448193697,
+                  -0.008013073315810732,
+                  0.0004382032973317828
+                ],
+                [
+                  -0.021056535094275762,
+                  -0.026655358403048876,
+                  0.015881813261284444,
+                  0.8871333475609412,
+                  0.003948214403538785,
+                  0.0006156748741578053
+                ],
+                [
+                  0.02397192473031264,
+                  -0.005902433150698993,
+                  -0.00865798104865494,
+                  0.0036047718369559864,
+                  0.792269711764549,
+                  -0.0007911174307369469
+                ],
+                [
+                  -4.552249625326243e-06,
+                  6.1119762049771615e-06,
+                  8.641973553414317e-06,
+                  6.229077524014656e-06,
+                  -6.725959755483342e-06,
+                  -6.176991341974403e-05
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0011140564430414865,
+              "symmetric_operator_eigenvalues": [
+                -6.251216373396038e-05,
+                0.7914631051602826,
+                0.883770741405514,
+                1.029207594652059,
+                1.322831250361535,
+                3.06499124416903
+              ]
+            }
+          },
+          {
+            "rank": 7,
+            "all_columns_fit": {
+              "rank": 7,
+              "training_columns": 4096,
+              "evaluation_columns": 4096,
+              "ridge": 6.356016948904372e-10,
+              "scalar_strength": 0.547567104978666,
+              "scalar_projection_relative_residual": 0.8399825522620374,
+              "fitted_operator_relative_residual": 0.11460310836357837,
+              "operator": [
+                [
+                  3.064677242642409,
+                  0.010858468500374462,
+                  -0.0015202181136033067,
+                  0.008569244692898681,
+                  -0.00303017004003526,
+                  0.00043962992824507415,
+                  0.000365057464919333
+                ],
+                [
+                  0.010497078427614041,
+                  1.3213343305124932,
+                  -0.00031493845598480293,
+                  -0.022966974747358166,
+                  0.0021004563904205636,
+                  -0.00016294749194582992,
+                  -0.00044018601398366147
+                ],
+                [
+                  -0.0017628294374969265,
+                  -0.00031090472222139004,
+                  1.0280442932662943,
+                  0.012532999974264264,
+                  -0.002595052540615411,
+                  0.00031132857592935915,
+                  0.0012746548721350014
+                ],
+                [
+                  0.00820571971374826,
+                  -0.022876815207551693,
+                  0.012495769805987197,
+                  0.8820255877758046,
+                  0.01835935740703454,
+                  0.00027597343858242824,
+                  8.611301283619915e-05
+                ],
+                [
+                  -0.0029057595156544744,
+                  0.0016261209010957514,
+                  -0.0027893776075536164,
+                  0.018295373427762815,
+                  0.7956695443485129,
+                  0.0003045532086117531,
+                  0.0005157023253670782
+                ],
+                [
+                  -1.1249631647755534e-05,
+                  1.2131056752358377e-06,
+                  7.153767602103894e-06,
+                  -1.4300243983610004e-06,
+                  1.182998195991595e-05,
+                  6.416299103613925e-05,
+                  -0.00012036188210625278
+                ],
+                [
+                  -1.659911519150407e-05,
+                  7.753908801630467e-06,
+                  1.0410458470291432e-05,
+                  -2.4854709608867666e-07,
+                  2.135075428173611e-05,
+                  -7.881022373805423e-05,
+                  -1.1978157075822213e-05
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0006961022488046725,
+              "symmetric_operator_eigenvalues": [
+                -8.109045005164183e-05,
+                0.00013263988636382423,
+                0.7917394190182787,
+                0.8836640889933478,
+                1.029097530654438,
+                1.3224718472741879,
+                3.06477874800291
+              ]
+            },
+            "train_left_evaluate_right": {
+              "rank": 7,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 1.8872891299763865e-10,
+              "scalar_strength": 0.9100419916990374,
+              "scalar_projection_relative_residual": 0.7120831811589395,
+              "fitted_operator_relative_residual": 0.11439369838160646,
+              "operator": [
+                [
+                  3.0635406697230683,
+                  -0.004901452416426303,
+                  -0.0103420088120254,
+                  0.045737767163679006,
+                  -0.01981314801823575,
+                  0.00013564951094847434,
+                  -0.0006079219904601263
+                ],
+                [
+                  -0.004459120061564638,
+                  1.320848509004088,
+                  -0.00045106517333984633,
+                  -0.024777049947511648,
+                  0.011303981205307564,
+                  -0.0004907027409495917,
+                  -0.001673547686648276
+                ],
+                [
+                  -0.011340415907398427,
+                  0.00042095946699290213,
+                  1.0289892639135865,
+                  0.0030912603404053955,
+                  0.004633148396385063,
+                  0.0014443083019228678,
+                  0.0015052457269504828
+                ],
+                [
+                  0.04571200505461328,
+                  -0.024963038735326702,
+                  0.0031758711437051374,
+                  0.8745225543477336,
+                  0.02979284729174604,
+                  0.000242193727898616,
+                  -0.000369236048933625
+                ],
+                [
+                  -0.020700031818295116,
+                  0.011322930839812471,
+                  0.00443653436123045,
+                  0.0294311878227866,
+                  0.8042972790051454,
+                  0.0005271886555166447,
+                  0.002495734677839214
+                ],
+                [
+                  1.9640859357630986e-05,
+                  -8.473114423089229e-06,
+                  -2.3229562826399585e-05,
+                  8.57616053071666e-06,
+                  -1.6556855399219727e-05,
+                  0.00037285333182273105,
+                  0.00022393535802268672
+                ],
+                [
+                  -1.3539272492377644e-05,
+                  1.3809845742993758e-05,
+                  1.4940245345401646e-05,
+                  7.845291259709842e-06,
+                  1.6398767985119768e-05,
+                  7.630964300849843e-05,
+                  -0.0003575066400277803
+                ]
+              ],
+              "operator_asymmetry_relative": 0.001600670766980064,
+              "symmetric_operator_eigenvalues": [
+                -0.00038981827484482317,
+                0.0004013837702521125,
+                0.7922056830212819,
+                0.8837551920823276,
+                1.0291229518636011,
+                1.3223787452394455,
+                3.0647394849833507
+              ]
+            },
+            "train_right_evaluate_left": {
+              "rank": 7,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 2.1083048742332593e-10,
+              "scalar_strength": 0.8360730912069049,
+              "scalar_projection_relative_residual": 0.7481381245823303,
+              "fitted_operator_relative_residual": 0.1154371388123285,
+              "operator": [
+                [
+                  3.064060927109592,
+                  0.02786707007364388,
+                  0.011362721213896376,
+                  -0.02017299156627266,
+                  0.022743099159710935,
+                  0.0013227876617702943,
+                  -9.255035385992255e-05
+                ],
+                [
+                  0.02694425849272118,
+                  1.321592132877422,
+                  -0.0008078590873172949,
+                  -0.026540277990477507,
+                  -0.005418514457895328,
+                  0.0010276628830911435,
+                  -0.0002921927414956956
+                ],
+                [
+                  0.011486932179981257,
+                  -0.0012135243820352805,
+                  1.0272146283263457,
+                  0.01624474163473181,
+                  -0.00800276439627638,
+                  0.0005291205464838403,
+                  0.0003632255594114277
+                ],
+                [
+                  -0.02105296727716225,
+                  -0.026654253619083083,
+                  0.015880830057713465,
+                  0.8871378583768046,
+                  0.003944419232213616,
+                  0.0005822041952751114,
+                  -0.00013371946694754177
+                ],
+                [
+                  0.023941041910769505,
+                  -0.005911996096159654,
+                  -0.008649470495639315,
+                  0.003565726459968052,
+                  0.7923025625481251,
+                  -0.000501397153552769,
+                  0.0011574680369180598
+                ],
+                [
+                  -1.942127921124249e-06,
+                  6.92020718999738e-06,
+                  7.92268757325486e-06,
+                  9.529073694479973e-06,
+                  -9.502407917911866e-06,
+                  -8.625618757806178e-05,
+                  -9.782566812949335e-05
+                ],
+                [
+                  9.856600823925e-06,
+                  3.554078757785452e-06,
+                  -1.1567102645777735e-06,
+                  1.962425969314881e-05,
+                  -1.3459972510106463e-05,
+                  -0.0001444988342617309,
+                  -0.0004921223905534062
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0011788520002817676,
+              "symmetric_operator_eigenvalues": [
+                -0.000525902186605196,
+                -5.354290357620349e-05,
+                0.791499063117454,
+                0.8837752102479486,
+                1.029208442573084,
+                1.3228330726800732,
+                3.064993387131779
+              ]
+            }
+          },
+          {
+            "rank": 8,
+            "all_columns_fit": {
+              "rank": 8,
+              "training_columns": 4096,
+              "evaluation_columns": 4096,
+              "ridge": 6.026477220660661e-10,
+              "scalar_strength": 0.5053217140277411,
+              "scalar_projection_relative_residual": 0.8533964972891618,
+              "fitted_operator_relative_residual": 0.11460293622030317,
+              "operator": [
+                [
+                  3.064674510635988,
+                  0.010864182148783314,
+                  -0.001526211650685771,
+                  0.008577433796741848,
+                  -0.003023150084591222,
+                  0.0004400052751085087,
+                  0.00039247483139810544,
+                  0.00034302724301773645
+                ],
+                [
+                  0.010499192652679195,
+                  1.3213299089420607,
+                  -0.00031030027760671453,
+                  -0.022973311994944394,
+                  0.002095023904055581,
+                  -0.00016323795906401887,
+                  -0.0004614033077410181,
+                  -0.0002654562050088692
+                ],
+                [
+                  -0.0017603448064351821,
+                  -0.0003161009539314417,
+                  1.028049744049774,
+                  0.012525552459694724,
+                  -0.0026014367835742345,
+                  0.00031098721999029343,
+                  0.0012497203673850683,
+                  -0.0003119633926668556
+                ],
+                [
+                  0.008202642805010414,
+                  -0.022870380316721936,
+                  0.012489019695470931,
+                  0.8820348106107888,
+                  0.018367263504140682,
+                  0.00027639616519119854,
+                  0.00011699131786846163,
+                  0.0003863281392794085
+                ],
+                [
+                  -0.0029061461454370275,
+                  0.0016269294787964372,
+                  -0.0027902257941412392,
+                  0.018296532324575752,
+                  0.7956705377982574,
+                  0.00030460632622645174,
+                  0.0005195823449813723,
+                  4.8544143520664376e-05
+                ],
+                [
+                  -1.1547608576272196e-05,
+                  1.8362795242099817e-06,
+                  6.500066969279804e-06,
+                  -5.368585866816195e-07,
+                  1.2595631659452858e-05,
+                  6.420392914253323e-05,
+                  -0.00011737153602507816,
+                  3.741315588869832e-05
+                ],
+                [
+                  -1.6544631929172204e-05,
+                  7.639965267229778e-06,
+                  1.0529983641017463e-05,
+                  -4.118570129519843e-07,
+                  2.12107599078753e-05,
+                  -7.881770902116817e-05,
+                  -1.252492360396097e-05,
+                  -6.8407671883114606e-06
+                ],
+                [
+                  -2.2342581909024063e-05,
+                  4.361184069054006e-06,
+                  2.0618462570313848e-05,
+                  4.888751410745515e-06,
+                  3.0710582224395854e-05,
+                  -3.9880170508607936e-05,
+                  -9.337060670757988e-05,
+                  -1.9717146167419274e-05
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0007436090303100031,
+              "symmetric_operator_eigenvalues": [
+                -0.0001023633184922111,
+                -2.489609743964534e-06,
+                0.0001361003388275168,
+                0.7917389161288545,
+                0.8836759387752227,
+                1.0291018615524035,
+                1.3224674227734736,
+                3.0647760872556944
+              ]
+            },
+            "train_left_evaluate_right": {
+              "rank": 8,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 2.0516357141761913e-10,
+              "scalar_strength": 0.7324813731932984,
+              "scalar_projection_relative_residual": 0.7735954870505932,
+              "fitted_operator_relative_residual": 0.11438678637618951,
+              "operator": [
+                [
+                  3.063525893831997,
+                  -0.004900068154040384,
+                  -0.010335567277693544,
+                  0.045740556359857465,
+                  -0.01979815604285024,
+                  0.00016625382585363293,
+                  -0.000547335095131675,
+                  0.00018377734481966047
+                ],
+                [
+                  -0.004659849794390744,
+                  1.3208673141634877,
+                  -0.00036355706985245756,
+                  -0.02473915874513365,
+                  0.011507646866251263,
+                  -7.49437464103939e-05,
+                  -0.0008504759461259023,
+                  0.0024966114464161776
+                ],
+                [
+                  -0.011128861278643931,
+                  0.0004011401751991571,
+                  1.028897036688636,
+                  0.0030513257528204693,
+                  0.004418499511504698,
+                  0.0010061283758374233,
+                  0.000637787610257782,
+                  -0.002631247992573458
+                ],
+                [
+                  0.045693735712104805,
+                  -0.024961327189063083,
+                  0.003183835660919628,
+                  0.8745260029939904,
+                  0.029811383844875694,
+                  0.00028003387699145657,
+                  -0.00029432448238897924,
+                  0.00022722815645500547
+                ],
+                [
+                  -0.02052257516076209,
+                  0.011306305983398587,
+                  0.0043591721523049635,
+                  0.029397689815177538,
+                  0.8041172268103459,
+                  0.00015963373401446215,
+                  0.00176809180537984,
+                  -0.002207148461137776
+                ],
+                [
+                  2.287087631785716e-05,
+                  -8.775715453465974e-06,
+                  -2.4637688340239386e-05,
+                  7.966439080012615e-06,
+                  -1.9834115476718462e-05,
+                  0.00036616319885560096,
+                  0.00021069100382976777,
+                  -4.017390545794747e-05
+                ],
+                [
+                  7.412104491636007e-06,
+                  1.1847036152657711e-05,
+                  5.806495012453675e-06,
+                  3.890357238419375e-06,
+                  -4.8590496063189834e-06,
+                  3.2914360716165254e-05,
+                  -0.0004434156185096449,
+                  -0.00026058644534410034
+                ],
+                [
+                  1.3579567326574736e-05,
+                  -3.7281742231226867e-06,
+                  -1.1005401797262282e-07,
+                  -3.1969617919513515e-06,
+                  -7.105855565691972e-06,
+                  -0.000133119740103838,
+                  0.0001648795994620378,
+                  -7.651453508042187e-05
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0019651081178293016,
+              "symmetric_operator_eigenvalues": [
+                -0.0004654026559312212,
+                -9.554182029987826e-05,
+                0.0004012124823515609,
+                0.7920547338020505,
+                0.8837384734253868,
+                1.029025421965328,
+                1.3223986497484437,
+                3.064722160586392
+              ]
+            },
+            "train_right_evaluate_left": {
+              "rank": 8,
+              "training_columns": 2048,
+              "evaluation_columns": 2048,
+              "ridge": 2.096231239733476e-10,
+              "scalar_strength": 0.7358164121822887,
+              "scalar_projection_relative_residual": 0.7829991840930822,
+              "fitted_operator_relative_residual": 0.11543695782575668,
+              "operator": [
+                [
+                  3.0640746989898524,
+                  0.027857119906617045,
+                  0.011356387054117442,
+                  -0.020156448224585663,
+                  0.02273403318154843,
+                  0.0012898919392662438,
+                  -6.851169599847287e-05,
+                  -0.0004290181495936544
+                ],
+                [
+                  0.026963807580313272,
+                  1.3215780086833697,
+                  -0.0008168503843256393,
+                  -0.026516794828752785,
+                  -0.005431383552740015,
+                  0.0009809676272472215,
+                  -0.00025807002912226797,
+                  -0.0006089883627913047
+                ],
+                [
+                  0.011483941953812618,
+                  -0.0012113639468029195,
+                  1.027216003634753,
+                  0.016241149653040996,
+                  -0.008000795941025556,
+                  0.0005362630473958475,
+                  0.0003580061532560364,
+                  9.315078989296694e-05
+                ],
+                [
+                  -0.0210535165189282,
+                  -0.0266538567925634,
+                  0.01588108267288609,
+                  0.8871371986057665,
+                  0.003944780796100674,
+                  0.0005835161226343233,
+                  -0.000134678162227078,
+                  1.710984319146462e-05
+                ],
+                [
+                  0.02391818698306117,
+                  -0.005895483435203612,
+                  -0.008638958729156343,
+                  0.0035382721880233233,
+                  0.7923176078663496,
+                  -0.0004468055161829454,
+                  0.0011175750176714272,
+                  0.0007119710829726076
+                ],
+                [
+                  -5.955056769626707e-06,
+                  9.819544011106335e-06,
+                  9.768371422577058e-06,
+                  4.708579788162924e-06,
+                  -6.860711123120887e-06,
+                  -7.667084305289178e-05,
+                  -0.00010483019028901454,
+                  0.0001250097716338323
+                ],
+                [
+                  8.220079218401949e-06,
+                  4.7364638756397875e-06,
+                  -4.040177523411542e-07,
+                  1.7658403151761167e-05,
+                  -1.2382656155116927e-05,
+                  -0.00014058981319415274,
+                  -0.0004949789206052377,
+                  5.098051819631612e-05
+                ],
+                [
+                  -2.7665934354076437e-05,
+                  1.3537957080056867e-05,
+                  2.7643184563740514e-05,
+                  -4.207433758469623e-06,
+                  1.6328894965936433e-05,
+                  -0.00016660564356412927,
+                  -8.357804823584085e-05,
+                  0.000309006641345583
+                ]
+              ],
+              "operator_asymmetry_relative": 0.0012234384032881662,
+              "symmetric_operator_eigenvalues": [
+                -0.0005292140622417657,
+                -4.465243100732394e-05,
+                0.0003099750360736163,
+                0.7915162778548356,
+                0.8837751543313297,
+                1.029209097508111,
+                1.3228174548853342,
+                3.065006781535342
+              ]
+            }
+          }
+        ],
+        "row_norm_ratio_min_median_max": [
+          0.9577577371953123,
+          0.9998690113010601,
+          1.0521208738559935
+        ],
+        "interpretation": "Low-rank edit recovery and symmetric projection compatibility are separate questions. Norm-preserving or oblique edits can remain low rank while failing U M U^T W fits. Neither semantic refusal causality nor transfer to REDCELL has been tested."
+      },
+      "same_layer_down_comparison": {
+        "status": "frozen_down_basis_tested_on_attention",
+        "layer": 25,
+        "down_basis_sha256": "af189790f4211234bfbe53055b7ff3179f129d30c0670e30e912453e35ce60fd",
+        "rank": 5,
+        "attention_vs_down_output_subspace_cosines": [
+          0.9999804602194533,
+          0.9999726104162254,
+          0.9999693589407685,
+          0.999957446236813,
+          0.9996388001855253
+        ],
+        "attention_delta_energy_in_down_subspace": 0.9864241407641497,
+        "down_subspace_attention_delta_relative_residual": 0.11651548925293259,
+        "separately_fitted_attention_coefficients": {
+          "all_columns": {
+            "rank": 5,
+            "training_columns": 4096,
+            "evaluation_columns": 4096,
+            "ridge": 3.577098993334199e-10,
+            "scalar_strength": 1.3615516238574696,
+            "scalar_projection_relative_residual": 0.5178802293246653,
+            "fitted_operator_relative_residual": 0.1189062555736782,
+            "operator": [
+              [
+                1.3010813003350892,
+                0.08907947626433255,
+                -0.02117629549587395,
+                -0.030187523684065055,
+                0.022957700555439414
+              ],
+              [
+                0.08893358155099637,
+                0.942249326856166,
+                0.056197750160284964,
+                -0.0015426223744765767,
+                0.1493782728036192
+              ],
+              [
+                -0.021087877167095342,
+                0.05644371806712958,
+                0.9992202150758068,
+                0.01764437630931821,
+                0.01358241827663551
+              ],
+              [
+                -0.030250860717368693,
+                -0.0015189989862015214,
+                0.01758237614281009,
+                0.8011521744131256,
+                0.11164071351003582
+              ],
+              [
+                0.022256162178541816,
+                0.14980929217378916,
+                0.012956569877340245,
+                0.1118851717276706,
+                3.047198013398455
+              ]
+            ],
+            "operator_asymmetry_relative": 0.0004248055940122758,
+            "symmetric_operator_eigenvalues": [
+              0.7919020094278038,
+              0.883530727390278,
+              1.0290508643281564,
+              1.3225814005085157,
+              3.0638360284238892
+            ]
+          },
+          "train_even_evaluate_odd": {
+            "rank": 5,
+            "training_columns": 2048,
+            "evaluation_columns": 2048,
+            "ridge": 1.7623948435882497e-10,
+            "scalar_strength": 1.3635629204197628,
+            "scalar_projection_relative_residual": 0.5166217460644129,
+            "fitted_operator_relative_residual": 0.11835449015578914,
+            "operator": [
+              [
+                1.3011813469356628,
+                0.08898227266674606,
+                -0.02099578667401498,
+                -0.030479515416109992,
+                0.022948829051134392
+              ],
+              [
+                0.08841368077532359,
+                0.9422490238633014,
+                0.056219883837007455,
+                -0.0014855902256538443,
+                0.14930170190044115
+              ],
+              [
+                -0.020898776988825113,
+                0.056375817968764994,
+                0.9993574922975369,
+                0.01773752829794619,
+                0.013646441162796136
+              ],
+              [
+                -0.03015237173484543,
+                -0.0012835149740360971,
+                0.017398472598707766,
+                0.8010764285791192,
+                0.11169761331885697
+              ],
+              [
+                0.020085969708490588,
+                0.15153936799626927,
+                0.01227297888713225,
+                0.11128511767012582,
+                3.0482855300968064
+              ]
+            ],
+            "operator_asymmetry_relative": 0.0015275712472640622,
+            "symmetric_operator_eigenvalues": [
+              0.7918746794272389,
+              0.883583498328427,
+              1.0291319823295364,
+              1.32259173979241,
+              3.0649679218948145
+            ]
+          },
+          "train_odd_evaluate_even": {
+            "rank": 5,
+            "training_columns": 2048,
+            "evaluation_columns": 2048,
+            "ridge": 1.8147041497459491e-10,
+            "scalar_strength": 1.359598303427351,
+            "scalar_projection_relative_residual": 0.5191698138851721,
+            "fitted_operator_relative_residual": 0.11948751026134978,
+            "operator": [
+              [
+                1.3010048437349133,
+                0.08914664153763101,
+                -0.021339336678571484,
+                -0.02989340552899874,
+                0.0229858178451814
+              ],
+              [
+                0.08943079290789074,
+                0.9422586843280846,
+                0.05617515640656943,
+                -0.001561068915624355,
+                0.1494379947674117
+              ],
+              [
+                -0.02127284612021163,
+                0.05651206556004152,
+                0.9990952579749055,
+                0.017520410483603924,
+                0.013502148143231082
+              ],
+              [
+                -0.030345023326011196,
+                -0.001743524811060556,
+                0.017746147573245847,
+                0.8012413381646266,
+                0.11161551610070054
+              ],
+              [
+                0.02438022780329195,
+                0.14822285343150013,
+                0.013497326523361514,
+                0.11271802728583351,
+                3.0462718707958567
+              ]
+            ],
+            "operator_asymmetry_relative": 0.0008681034257208075,
+            "symmetric_operator_eigenvalues": [
+              0.791935856936061,
+              0.8834848388664163,
+              1.028983625560547,
+              1.32258110107463,
+              3.062886572560731
+            ]
+          }
+        },
+        "unchanged_down_operator_prediction": {
+          "all_columns_relative_residual": 0.6967665818376447,
+          "even_columns_relative_residual": 0.6983902901083485,
+          "odd_columns_relative_residual": 0.6951710548719061
+        },
+        "interpretation": "Frozen down subspace with attention-specific coefficients tests a restricted shared-subspace hypothesis. Unchanged down coefficients separately test the stronger shared-operator hypothesis. Neither is assumed or an inference result."
+      },
+      "diagnostic_basis": {
+        "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/layer-25-attention-delta-basis.npy",
+        "sha256": "81b199d47651630ca9a8a1fa455cee9a10e0317e9d9db4b26920fa4bbde0f459",
+        "deployment_adapter": false
+      },
+      "completed_utc": "2026-10-16T02:00:58.053154+00:00"
+    },
+    {
+      "kind": "target",
+      "layer": 12,
+      "tensor": "model.language_model.layers.12.self_attn.o_proj.weight",
+      "shape": [
+        2816,
+        4096
+      ],
+      "route_comparisons": [
+        {
+          "route": "bf16_direct",
+          "parent_representation_frobenius_norm": 103.23607248023994,
+          "cast_only_frobenius_norm": 0.0,
+          "cast_only_relative_norm": 0.0,
+          "null_quantization_frobenius_norm": 0.5616011213679212,
+          "null_quantization_relative_norm": 0.005439969846541918,
+          "packed_bytes_exact_equal": true,
+          "packed_bytes_changed": 0,
+          "dequantized_values_exact_equal": true,
+          "dequantized_values_changed": 0,
+          "matched_quantized_delta_frobenius_norm": 0.0,
+          "matched_quantized_delta_relative_parent_norm": 0.0,
+          "raw_dequantized_hauhau_minus_bf16_parent_frobenius_norm": 0.5616011213679212,
+          "packed_null_sha256": "f3b04f6d9e8b274ec500bbdf08b4e1d0b4fdc863b8277ba10457a713dfbc9f9c"
+        },
+        {
+          "route": "bf16_then_f16",
+          "parent_representation_frobenius_norm": 103.23607248024003,
+          "cast_only_frobenius_norm": 1.00067176341666e-06,
+          "cast_only_relative_norm": 9.69304371403895e-09,
+          "null_quantization_frobenius_norm": 0.5616011213906424,
+          "null_quantization_relative_norm": 0.005439969846762003,
+          "packed_bytes_exact_equal": true,
+          "packed_bytes_changed": 0,
+          "dequantized_values_exact_equal": true,
+          "dequantized_values_changed": 0,
+          "matched_quantized_delta_frobenius_norm": 0.0,
+          "matched_quantized_delta_relative_parent_norm": 0.0,
+          "raw_dequantized_hauhau_minus_bf16_parent_frobenius_norm": 0.5616011213679212,
+          "packed_null_sha256": "f3b04f6d9e8b274ec500bbdf08b4e1d0b4fdc863b8277ba10457a713dfbc9f9c"
+        }
+      ],
+      "range_paths": {
+        "base": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/03-base.bin",
+        "hauhau": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/03-hauhau.bin"
+      },
+      "quantizer_null_spectrum": {
+        "seed": 20262028,
+        "rank_limit": 8,
+        "sketch_width": 12,
+        "power_iterations": 2,
+        "singular_values_estimate": [
+          0.02955932728946209,
+          0.02917940728366375,
+          0.027761347591876984,
+          0.026862192898988724,
+          0.026288140565156937,
+          0.025987491011619568,
+          0.025435591116547585,
+          0.025167517364025116
+        ],
+        "captured_energy_fraction": 0.01859330530934437
+      },
+      "matched_delta_definition": "dequant(published Hauhau Q8_0) minus dequant(Q8_0(selected parent representation)); not raw dequant-minus-parent",
+      "operator_input_definition": "Unquantized selected parent representation, not the quantized null",
+      "selected_route": "bf16_then_f16",
+      "geometry": {
+        "status": "zero_delta_in_sample",
+        "interpretation": "This F16 tensor sample shows no edit beyond the base representation cast. It does not test middle-layer quantized tensors."
+      },
+      "completed_utc": "2026-10-16T02:01:00.869841+00:00"
+    },
+    {
+      "kind": "target",
+      "layer": 18,
+      "tensor": "model.language_model.layers.18.self_attn.o_proj.weight",
+      "shape": [
+        2816,
+        4096
+      ],
+      "route_comparisons": [
+        {
+          "route": "bf16_direct",
+          "parent_representation_frobenius_norm": 99.90814017995814,
+          "cast_only_frobenius_norm": 0.0,
+          "cast_only_relative_norm": 0.0,
+          "null_quantization_frobenius_norm": 0.5409706856714875,
+          "null_quantization_relative_norm": 0.005414680772728544,
+          "packed_bytes_exact_equal": true,
+          "packed_bytes_changed": 0,
+          "dequantized_values_exact_equal": true,
+          "dequantized_values_changed": 0,
+          "matched_quantized_delta_frobenius_norm": 0.0,
+          "matched_quantized_delta_relative_parent_norm": 0.0,
+          "raw_dequantized_hauhau_minus_bf16_parent_frobenius_norm": 0.5409706856714875,
+          "packed_null_sha256": "340d40abf646272387c2280a19c6c1827d4b598e95c2c3bad006cf1c4b7b10c4"
+        },
+        {
+          "route": "bf16_then_f16",
+          "parent_representation_frobenius_norm": 99.90814017995831,
+          "cast_only_frobenius_norm": 9.99844919655488e-07,
+          "cast_only_relative_norm": 1.0007642198668995e-08,
+          "null_quantization_frobenius_norm": 0.5409706856932078,
+          "null_quantization_relative_norm": 0.005414680772945938,
+          "packed_bytes_exact_equal": true,
+          "packed_bytes_changed": 0,
+          "dequantized_values_exact_equal": true,
+          "dequantized_values_changed": 0,
+          "matched_quantized_delta_frobenius_norm": 0.0,
+          "matched_quantized_delta_relative_parent_norm": 0.0,
+          "raw_dequantized_hauhau_minus_bf16_parent_frobenius_norm": 0.5409706856714875,
+          "packed_null_sha256": "340d40abf646272387c2280a19c6c1827d4b598e95c2c3bad006cf1c4b7b10c4"
+        }
+      ],
+      "range_paths": {
+        "base": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/04-base.bin",
+        "hauhau": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/04-hauhau.bin"
+      },
+      "quantizer_null_spectrum": {
+        "seed": 20262034,
+        "rank_limit": 8,
+        "sketch_width": 12,
+        "power_iterations": 2,
+        "singular_values_estimate": [
+          0.03410125523805618,
+          0.03343190625309944,
+          0.03252045437693596,
+          0.031153544783592224,
+          0.0306069478392601,
+          0.028630709275603294,
+          0.02498580887913704,
+          0.019164089113473892
+        ],
+        "captured_energy_fraction": 0.02411339180714761
+      },
+      "matched_delta_definition": "dequant(published Hauhau Q8_0) minus dequant(Q8_0(selected parent representation)); not raw dequant-minus-parent",
+      "operator_input_definition": "Unquantized selected parent representation, not the quantized null",
+      "selected_route": "bf16_then_f16",
+      "geometry": {
+        "status": "zero_delta_in_sample",
+        "interpretation": "This F16 tensor sample shows no edit beyond the base representation cast. It does not test middle-layer quantized tensors."
+      },
+      "completed_utc": "2026-10-16T02:01:04.468463+00:00"
+    }
+  ],
+  "ranges": [
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/00-base.bin",
+      "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+      "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+      "offset": 3029340434,
+      "bytes": 11894784,
+      "sha256": "03c01ba482db89960b6871c7d544fe9364d4f53db26e36083f1bbc196ad132bd",
+      "content_range": "bytes 3029340434-3041235217/49907246508",
+      "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/00-hauhau.bin",
+      "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+      "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+      "offset": 1687099296,
+      "bytes": 6319104,
+      "sha256": "c8107a8037e57052e3f208b0ac55764b7148755b375df541d286c3739c823de1",
+      "content_range": "bytes 1687099296-1693418399/27275669856",
+      "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/01-base.bin",
+      "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+      "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+      "offset": 34579484730,
+      "bytes": 23068672,
+      "sha256": "e8ec9c7bb23db29e978f56ca3ee4d3d0036babb5bb324bd9325fbaaf5ddd7feb",
+      "content_range": "bytes 34579484730-34602553401/49907246508",
+      "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/01-hauhau.bin",
+      "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+      "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+      "offset": 24596879104,
+      "bytes": 12255232,
+      "sha256": "23fb0bf669156ab3e7859b0ce473334b5702f2449fa933f32b7a33a0f6250b81",
+      "content_range": "bytes 24596879104-24609134335/27275669856",
+      "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/02-base.bin",
+      "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+      "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+      "offset": 31323104822,
+      "bytes": 23068672,
+      "sha256": "6e5124f6b1a6ac36f675ff8804eb13425f6afb6153273f6e75f7241826d02b19",
+      "content_range": "bytes 31323104822-31346173493/49907246508",
+      "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/02-hauhau.bin",
+      "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+      "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+      "offset": 22836964032,
+      "bytes": 12255232,
+      "sha256": "3c362b4f263898aefcbcb20a811c978611747548f758a588954ccce4c2a15913",
+      "content_range": "bytes 22836964032-22849219263/27275669856",
+      "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/03-base.bin",
+      "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+      "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+      "offset": 9558682650,
+      "bytes": 23068672,
+      "sha256": "f6108d00a3d491da2a5d3506d048953a05462b32b4ea825b2a62ff5a34b81232",
+      "content_range": "bytes 9558682650-9581751321/49907246508",
+      "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/03-hauhau.bin",
+      "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+      "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+      "offset": 11311792928,
+      "bytes": 12255232,
+      "sha256": "f3b04f6d9e8b274ec500bbdf08b4e1d0b4fdc863b8277ba10457a713dfbc9f9c",
+      "content_range": "bytes 11311792928-11324048159/27275669856",
+      "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/04-base.bin",
+      "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+      "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+      "offset": 18812703782,
+      "bytes": 23068672,
+      "sha256": "b1dbecd72080ff78366a0487ffa0f4b7cda1ac4cd00b86def2fa06ce216df574",
+      "content_range": "bytes 18812703782-18835772453/49907246508",
+      "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/ranges/04-hauhau.bin",
+      "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+      "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+      "offset": 16656195552,
+      "bytes": 12255232,
+      "sha256": "340d40abf646272387c2280a19c6c1827d4b598e95c2c3bad006cf1c4b7b10c4",
+      "content_range": "bytes 16656195552-16668450783/27275669856",
+      "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+    }
+  ],
+  "resources": {
+    "peak_rss_bytes": 460804096,
+    "current_rss_bytes": 139079680,
+    "current_address_space_bytes": 259375104,
+    "getrusage_peak_rss_including_exec_history_bytes": 460804096,
+    "cpu_user_seconds": 26.463259,
+    "cpu_system_seconds": 2.450153,
+    "elapsed_seconds": 37.05796479099081,
+    "directory_bytes": 378328318,
+    "process_threads": 1,
+    "nice": 15,
+    "address_space_limit_bytes": 1073741824,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    }
+  },
+  "resource_directory_bytes_scope": "Combined phase 1 and phase 2 directories",
+  "quantization_caveat": "A matched quantizer baseline controls untouched conversion. Changed target blocks can change scales/codes, leaving differential quantization error. Low-rank geometry is approximate and not exact original edit rank.",
+  "causal_refusal_direction_established": false,
+  "transfer_to_redcell_tested": false,
+  "inference_gpu_services_or_adapter_operations": false,
+  "published": false
+}

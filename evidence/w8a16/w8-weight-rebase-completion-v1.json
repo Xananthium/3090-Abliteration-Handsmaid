@@ -1,0 +1,26 @@
+{
+  "status": "completed_cpu_validation_inference_pending",
+  "started_utc": "2026-10-15T23:56:38+00:00",
+  "finished_utc": "2026-10-15T23:58:47+00:00",
+  "wall_seconds_from_journal": 129,
+  "receipt": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/nf4-direction-w8-weight-strength-1.0-vllm-v1/provenance-validation.json",
+  "receipt_sha256": "38aa74f31d44b785704858c545837edcaea1585f2a503f230ace726cb6b1b310",
+  "candidate": {
+    "base_model_name_or_path": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+    "model_id": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/nf4-direction-w8-weight-strength-1.0-vllm-v1"
+  },
+  "changed_active_projections": 3111,
+  "unchanged_zero_padding_projections": 7680,
+  "factor_build_seconds": 66.65395879599964,
+  "max_process_rss_gib": 1.7993392944335938,
+  "candidate_bytes": 496650242,
+  "rank3_delta_relative_frobenius_error": {
+    "min": 0.02847140162326089,
+    "median": 0.05410031295091628,
+    "max": 0.13711152120531248
+  },
+  "inference_validated": false,
+  "launch_record": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8-weight-rebase-launch-v1.json",
+  "timing_caveat": "CPU-only construction overlapped the existing strength1.0 thinking evaluation in this interval. Latency comparisons are not idle-host deployment measurements."
+}

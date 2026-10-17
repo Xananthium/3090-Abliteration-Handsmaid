@@ -1,0 +1,726 @@
+{
+  "status": "complete",
+  "configuration_fingerprint": "bb47eaa83ff5e5eb5970a12d4d402900b3fb157a000e4e462f3445048474263b",
+  "schedule": {
+    "index": 9,
+    "repeat": 2,
+    "case_ids": [
+      "broader-fresh-13-equal-authority-conflict",
+      "broader-fresh-14-unit-agreement",
+      "broader-fresh-15-quantifier-gap",
+      "broader-fresh-16-table-total"
+    ]
+  },
+  "attempt_id": "1792107379256060793-158205",
+  "invocation_id": "1792107073742039518-158205",
+  "started_at_utc": "2026-10-15T23:36:19.256119+00:00",
+  "partial_outputs_scored": false,
+  "completed_at_utc": "2026-10-15T23:36:22.181924+00:00",
+  "wall_seconds": 2.9258740289951675,
+  "records": [
+    {
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "category": "consistency",
+      "configuration_fingerprint": "bb47eaa83ff5e5eb5970a12d4d402900b3fb157a000e4e462f3445048474263b",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "be29ab8a2ee30a7d9e2efe912d216e81acfc6c35327ace78ff580e000e56a195",
+      "prompt_sha256": "9cae34f8053a8174702c43fab7a66c7321b9d59932381d4ca6c331069fc544d0",
+      "answer_key_sha256": "86e7611d633ae80ecbe72fae03abdf172f92f21fdd28e3a4897d69faeb7f5823",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 9,
+      "submission_index": 0,
+      "invocation_id": "1792107073742039518-158205",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 0,
+      "task_finished_sequence": 17,
+      "answer_text": "CONFLICT",
+      "raw_final_text": "CONFLICT",
+      "raw_final_text_sha256": "d79910c78cef73436cb082e736cd62960bf56c2d8c6232362e6bde0eb62e33c9",
+      "response_attempts": [
+        {
+          "raw_text": "CONFLICT",
+          "raw_text_sha256": "d79910c78cef73436cb082e736cd62960bf56c2d8c6232362e6bde0eb62e33c9",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 88,
+            "output_tokens": 2
+          },
+          "native_request_seconds": 0.35558986201067455,
+          "started_sequence": 15,
+          "finished_sequence": 16
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.010339831991586834,
+          "started_sequence": 7,
+          "finished_sequence": 10
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 0.35558986201067455,
+          "started_sequence": 15,
+          "finished_sequence": 16
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 2,
+          "input_tokens": 88,
+          "stop_reason": "end_turn",
+          "response_sha256": "d79910c78cef73436cb082e736cd62960bf56c2d8c6232362e6bde0eb62e33c9",
+          "visible_characters": 8,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 0.3959065439994447
+        }
+      ],
+      "counted_input_tokens": 88,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8040,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "d79910c78cef73436cb082e736cd62960bf56c2d8c6232362e6bde0eb62e33c9",
+      "output_tokens": 2,
+      "total_output_tokens_including_retries": 2,
+      "generation_seconds_including_retries": 0.3959065439994447,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:36:19.759738+00:00",
+      "record_sha256": "28549b3ed04909d99620ac38c800bc5d295bfd16477d760d683144ede8d3afe4"
+    },
+    {
+      "id": "broader-fresh-14-unit-agreement",
+      "category": "consistency",
+      "configuration_fingerprint": "bb47eaa83ff5e5eb5970a12d4d402900b3fb157a000e4e462f3445048474263b",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "df18fb1143b9160543092d336202f14a15d98ea9c7f4efadf15b2581e622372b",
+      "prompt_sha256": "673caf9f24bda38a10a52d1369951eff615bf4630456973769a91ced850fd2c6",
+      "answer_key_sha256": "96400541d7bccac7b2cad05da1944d6430859f0cdd30bc31aa888cb41b0a4c83",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 9,
+      "submission_index": 1,
+      "invocation_id": "1792107073742039518-158205",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 1,
+      "task_finished_sequence": 23,
+      "answer_text": "```json\n{\n  \"same_mass\": true,\n  \"mass_g\": 2500\n}\n```",
+      "raw_final_text": "```json\n{\n  \"same_mass\": true,\n  \"mass_g\": 2500\n}\n```",
+      "raw_final_text_sha256": "ce5d82c9191c7967bb0bfda85f7b3b71a218a678916d15eeb7dc2a650fecfba5",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"same_mass\": true,\n  \"mass_g\": 2500\n}\n```",
+          "raw_text_sha256": "ce5d82c9191c7967bb0bfda85f7b3b71a218a678916d15eeb7dc2a650fecfba5",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 89,
+            "output_tokens": 30
+          },
+          "native_request_seconds": 2.757915641996078,
+          "started_sequence": 13,
+          "finished_sequence": 22
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.005830910988152027,
+          "started_sequence": 9,
+          "finished_sequence": 11
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 2.757915641996078,
+          "started_sequence": 13,
+          "finished_sequence": 22
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 30,
+          "input_tokens": 89,
+          "stop_reason": "end_turn",
+          "response_sha256": "ce5d82c9191c7967bb0bfda85f7b3b71a218a678916d15eeb7dc2a650fecfba5",
+          "visible_characters": 53,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 2.787387709977338
+        }
+      ],
+      "counted_input_tokens": 89,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8039,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "ce5d82c9191c7967bb0bfda85f7b3b71a218a678916d15eeb7dc2a650fecfba5",
+      "output_tokens": 30,
+      "total_output_tokens_including_retries": 30,
+      "generation_seconds_including_retries": 2.787387709977338,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:36:22.146466+00:00",
+      "record_sha256": "e7b823c786806427e4e952f52f2c7bdf549124f2a4ca5c6731ec186a52aeaa6a"
+    },
+    {
+      "id": "broader-fresh-15-quantifier-gap",
+      "category": "consistency",
+      "configuration_fingerprint": "bb47eaa83ff5e5eb5970a12d4d402900b3fb157a000e4e462f3445048474263b",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "7ccf7fb577c96126ea0335281a1169b7da827a6c3da6e4af83cf256a394790a0",
+      "prompt_sha256": "1d95f220dbba7b64e94cc559fa21b61f44fc3ca607cd7fc28e00c4d34018c95d",
+      "answer_key_sha256": "60c6c8ddbd9f866861b3a393152d4e571b957cff879828774568b5a7d6bd0265",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 9,
+      "submission_index": 2,
+      "invocation_id": "1792107073742039518-158205",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 3,
+      "task_finished_sequence": 19,
+      "answer_text": "NOT_ENTAILED",
+      "raw_final_text": "NOT_ENTAILED",
+      "raw_final_text_sha256": "74f54cdb515c8be45c2999290ca4d334333efb1cf7a7c22a6152ea0f42ffab9e",
+      "response_attempts": [
+        {
+          "raw_text": "NOT_ENTAILED",
+          "raw_text_sha256": "74f54cdb515c8be45c2999290ca4d334333efb1cf7a7c22a6152ea0f42ffab9e",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 73,
+            "output_tokens": 5
+          },
+          "native_request_seconds": 0.6241408860078081,
+          "started_sequence": 14,
+          "finished_sequence": 18
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.009386807010741904,
+          "started_sequence": 6,
+          "finished_sequence": 8
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 0.6241408860078081,
+          "started_sequence": 14,
+          "finished_sequence": 18
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 5,
+          "input_tokens": 73,
+          "stop_reason": "end_turn",
+          "response_sha256": "74f54cdb515c8be45c2999290ca4d334333efb1cf7a7c22a6152ea0f42ffab9e",
+          "visible_characters": 12,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 0.6710047779779416
+        }
+      ],
+      "counted_input_tokens": 73,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8055,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "74f54cdb515c8be45c2999290ca4d334333efb1cf7a7c22a6152ea0f42ffab9e",
+      "output_tokens": 5,
+      "total_output_tokens_including_retries": 5,
+      "generation_seconds_including_retries": 0.6710047779779416,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:36:20.022931+00:00",
+      "record_sha256": "90ce0d6112a6f3ee585a699634f7f226f0055f8ad5c05af8c5c74dcd012eed5a"
+    },
+    {
+      "id": "broader-fresh-16-table-total",
+      "category": "consistency",
+      "configuration_fingerprint": "bb47eaa83ff5e5eb5970a12d4d402900b3fb157a000e4e462f3445048474263b",
+      "protocol_fingerprint": "eb8cde31f05fc17942e2858bbaaca8a302509ffbbaff1cfff34a9059f65d514f",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "05c6cb37162ad693c61e349fc85954119971f3d9fc979b3419fb5ce0f505e904",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "670dd0384f812067aba3383dcb2671d18f67467ba1a480ed4fe53439b57f8968",
+      "prompt_sha256": "51752b6e9d9fed3f413117b35fd2d8f301c4f6ecfa57b7ab945e9d2af198b850",
+      "answer_key_sha256": "9fa6a330748cb280552da773e17b2e61aa5e4e3797cd2ada7806482b6f054ec4",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 9,
+      "submission_index": 3,
+      "invocation_id": "1792107073742039518-158205",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 2,
+      "task_finished_sequence": 21,
+      "answer_text": "```json\n{\n  \"computed_total\": 27,\n  \"consistent\": false\n}\n```",
+      "raw_final_text": "```json\n{\n  \"computed_total\": 27,\n  \"consistent\": false\n}\n```",
+      "raw_final_text_sha256": "0686ea281bd8b66daa35dc3e1af219ff5f64735ca9a77b86ed0737b45a7906ff",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"computed_total\": 27,\n  \"consistent\": false\n}\n```",
+          "raw_text_sha256": "0686ea281bd8b66daa35dc3e1af219ff5f64735ca9a77b86ed0737b45a7906ff",
+          "model_id": "redcell-w8a16-strength-1.5",
+          "requested_max_tokens": 512,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 81,
+            "output_tokens": 26
+          },
+          "native_request_seconds": 2.24308911699336,
+          "started_sequence": 12,
+          "finished_sequence": 20
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.00797811898519285,
+          "started_sequence": 4,
+          "finished_sequence": 5
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 2.24308911699336,
+          "started_sequence": 12,
+          "finished_sequence": 20
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 512,
+          "output_tokens": 26,
+          "input_tokens": 81,
+          "stop_reason": "end_turn",
+          "response_sha256": "0686ea281bd8b66daa35dc3e1af219ff5f64735ca9a77b86ed0737b45a7906ff",
+          "visible_characters": 61,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 2.2794879080029204
+        }
+      ],
+      "counted_input_tokens": 81,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8047,
+      "planned_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_safe_budgets": [
+        512,
+        1024,
+        2048
+      ],
+      "context_clipped": false,
+      "response_sha256": "0686ea281bd8b66daa35dc3e1af219ff5f64735ca9a77b86ed0737b45a7906ff",
+      "output_tokens": 26,
+      "total_output_tokens_including_retries": 26,
+      "generation_seconds_including_retries": 2.2794879080029204,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:36:21.628833+00:00",
+      "record_sha256": "d3291194bb17169c1bdb27bf71536b07f56e44f40cee84a6257ccdaf0ad70578"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_started",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.278060+00:00",
+      "group_elapsed_seconds": 0.019321529020089656,
+      "group_index": 9,
+      "submission_index": 0
+    },
+    {
+      "sequence": 1,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_started",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.293708+00:00",
+      "group_elapsed_seconds": 0.03496665300917812,
+      "group_index": 9,
+      "submission_index": 1
+    },
+    {
+      "sequence": 2,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_started",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.304261+00:00",
+      "group_elapsed_seconds": 0.04552081800648011,
+      "group_index": 9,
+      "submission_index": 3
+    },
+    {
+      "sequence": 3,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_started",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.304895+00:00",
+      "group_elapsed_seconds": 0.04615904501406476,
+      "group_index": 9,
+      "submission_index": 2
+    },
+    {
+      "sequence": 4,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.321415+00:00",
+      "group_elapsed_seconds": 0.06267755100270733,
+      "group_index": 9,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 5,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.329417+00:00",
+      "group_elapsed_seconds": 0.07067841599928215,
+      "group_index": 9,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 4
+    },
+    {
+      "sequence": 6,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.329497+00:00",
+      "group_elapsed_seconds": 0.07075452999561094,
+      "group_index": 9,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 7,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.330957+00:00",
+      "group_elapsed_seconds": 0.07221632901928388,
+      "group_index": 9,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 8,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.338896+00:00",
+      "group_elapsed_seconds": 0.08015279201208614,
+      "group_index": 9,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 6
+    },
+    {
+      "sequence": 9,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.338988+00:00",
+      "group_elapsed_seconds": 0.0802482750150375,
+      "group_index": 9,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 10,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.341313+00:00",
+      "group_elapsed_seconds": 0.08257362199947238,
+      "group_index": 9,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 7
+    },
+    {
+      "sequence": 11,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.344836+00:00",
+      "group_elapsed_seconds": 0.08609364100266248,
+      "group_index": 9,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 9
+    },
+    {
+      "sequence": 12,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.361961+00:00",
+      "group_elapsed_seconds": 0.10322044399799779,
+      "group_index": 9,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 13,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.368695+00:00",
+      "group_elapsed_seconds": 0.10995320699294098,
+      "group_index": 9,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 14,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.374942+00:00",
+      "group_elapsed_seconds": 0.11620157799916342,
+      "group_index": 9,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 15,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_started",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.378723+00:00",
+      "group_elapsed_seconds": 0.11998024600325152,
+      "group_index": 9,
+      "route": "/v1/messages",
+      "requested_max_tokens": 512
+    },
+    {
+      "sequence": 16,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.734334+00:00",
+      "group_elapsed_seconds": 0.47560441799578257,
+      "group_index": 9,
+      "route": "/v1/messages",
+      "start_sequence": 15
+    },
+    {
+      "sequence": 17,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_finished",
+      "id": "broader-fresh-13-equal-authority-conflict",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.759738+00:00",
+      "group_elapsed_seconds": 0.5010012820130214,
+      "group_index": 9,
+      "submission_index": 0
+    },
+    {
+      "sequence": 18,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:19.999105+00:00",
+      "group_elapsed_seconds": 0.7403743750182912,
+      "group_index": 9,
+      "route": "/v1/messages",
+      "start_sequence": 14
+    },
+    {
+      "sequence": 19,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_finished",
+      "id": "broader-fresh-15-quantifier-gap",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:20.022931+00:00",
+      "group_elapsed_seconds": 0.7641915169951972,
+      "group_index": 9,
+      "submission_index": 2
+    },
+    {
+      "sequence": 20,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:21.605074+00:00",
+      "group_elapsed_seconds": 2.3463455059973057,
+      "group_index": 9,
+      "route": "/v1/messages",
+      "start_sequence": 12
+    },
+    {
+      "sequence": 21,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_finished",
+      "id": "broader-fresh-16-table-total",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:21.628833+00:00",
+      "group_elapsed_seconds": 2.370094665006036,
+      "group_index": 9,
+      "submission_index": 3
+    },
+    {
+      "sequence": 22,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "request_finished",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:22.126628+00:00",
+      "group_elapsed_seconds": 2.867891475005308,
+      "group_index": 9,
+      "route": "/v1/messages",
+      "start_sequence": 13
+    },
+    {
+      "sequence": 23,
+      "invocation_id": "1792107073742039518-158205",
+      "kind": "task_finished",
+      "id": "broader-fresh-14-unit-agreement",
+      "repeat": 2,
+      "at_utc": "2026-10-15T23:36:22.146466+00:00",
+      "group_elapsed_seconds": 2.887736425996991,
+      "group_index": 9,
+      "submission_index": 1
+    }
+  ],
+  "submission_order": [
+    "broader-fresh-13-equal-authority-conflict",
+    "broader-fresh-14-unit-agreement",
+    "broader-fresh-15-quantifier-gap",
+    "broader-fresh-16-table-total"
+  ],
+  "client_task_start_order": [
+    "broader-fresh-13-equal-authority-conflict",
+    "broader-fresh-14-unit-agreement",
+    "broader-fresh-16-table-total",
+    "broader-fresh-15-quantifier-gap"
+  ],
+  "client_task_finish_order": [
+    "broader-fresh-13-equal-authority-conflict",
+    "broader-fresh-15-quantifier-gap",
+    "broader-fresh-16-table-total",
+    "broader-fresh-14-unit-agreement"
+  ],
+  "observed_future_completion_order": [
+    "broader-fresh-13-equal-authority-conflict",
+    "broader-fresh-15-quantifier-gap",
+    "broader-fresh-16-table-total",
+    "broader-fresh-14-unit-agreement"
+  ],
+  "ordering_scope": "Sequences and elapsed times are local to this group. Client submission, task, and HTTP dispatch/completion order are recorded; GPU scheduler order is not observed.",
+  "group_sha256": "251bb23db8372eeb2941ff81ea1f2ac1437d20e07b4d556ee723db9f4d688da0"
+}

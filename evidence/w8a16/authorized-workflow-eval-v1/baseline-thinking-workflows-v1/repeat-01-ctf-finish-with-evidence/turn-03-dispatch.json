@@ -1,0 +1,21 @@
+{
+  "dispatches": [
+    {
+      "turn": 3,
+      "tool_use_id": "chatcmpl-tool-898b3900e98a1d23",
+      "name": "read_artifact",
+      "arguments": {
+        "artifact": "packages/level7.json"
+      },
+      "result": {
+        "evidence_id": "E004",
+        "ok": true,
+        "artifact": "packages/level7.json",
+        "content": {
+          "state": "completed",
+          "evidence_artifact": "artifacts/finish.txt"
+        }
+      }
+    }
+  ]
+}

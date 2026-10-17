@@ -1,0 +1,39 @@
+{
+  "request": {
+    "model": "qwen3.6-35b-hauhau-w4a16-vision",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply with READY only."
+      }
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "thinking": {
+      "type": "disabled"
+    },
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "response": {
+    "id": "chatcmpl-a23cb4564e32df0c",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "READY"
+      }
+    ],
+    "model": "qwen3.6-35b-hauhau-w4a16-vision",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 18,
+      "output_tokens": 2
+    }
+  },
+  "status": "completed",
+  "finished_utc": "2026-10-17T16:36:32.974864+00:00",
+  "wall_seconds": 0.2754974690033123
+}

@@ -1,0 +1,9 @@
+{
+  "case_id": "ctf-finish-with-evidence",
+  "repeat": 2,
+  "turn": 5,
+  "attempt_count": 6,
+  "tool_calls": 5,
+  "known_generated_tokens": 1323,
+  "updated_utc": "2026-10-17T16:42:41.114863+00:00"
+}

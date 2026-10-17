@@ -1,0 +1,14 @@
+{
+  "started_utc": "2026-10-16T01:50:59.225180+00:00",
+  "script_sha256": "6259a1d11b7c811cfb42ca87b553dcbec3e8a5a2b923babb31ed3b98a5e8efeb",
+  "memo_sha256": "3b6f97842b4d8670861f38558762c4745d6a8584180b0662702390dcef914a82",
+  "ram_limit_bytes": 1073741824,
+  "disk_limit_bytes": 536870912,
+  "cooperative_deadline_seconds": 1800,
+  "external_timeout_wrapper_seconds": 1800,
+  "external_force_kill_grace_seconds": 5,
+  "one_cpu_thread": true,
+  "nice": 15,
+  "gpu_or_inference_or_services": false,
+  "timing_caveat": "Observed inference timing overlapping this interval may include this one-thread background CPU and download work."
+}

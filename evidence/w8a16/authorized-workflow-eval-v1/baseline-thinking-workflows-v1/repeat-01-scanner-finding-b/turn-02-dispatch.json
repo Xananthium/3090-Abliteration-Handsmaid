@@ -1,0 +1,24 @@
+{
+  "dispatches": [
+    {
+      "turn": 2,
+      "tool_use_id": "chatcmpl-tool-80a17c3774961f5c",
+      "name": "http_request",
+      "arguments": {
+        "method": "GET",
+        "url": "https://app.ctf.test/__lab__/validate/LAB-2026-001"
+      },
+      "result": {
+        "evidence_id": "E003",
+        "ok": true,
+        "status": 200,
+        "body": {
+          "validation": "reproduced",
+          "marker": "LAB-VALIDATION-001",
+          "synthetic_only": true,
+          "side_effects": "none"
+        }
+      }
+    }
+  ]
+}

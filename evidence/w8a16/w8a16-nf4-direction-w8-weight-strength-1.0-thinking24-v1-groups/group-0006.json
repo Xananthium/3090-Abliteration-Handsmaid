@@ -1,0 +1,794 @@
+{
+  "status": "complete",
+  "configuration_fingerprint": "c04f9e716f0a9c7b5fa4a2a907b752ea504c02b01c1f13bdc463a2cb1cc5f09f",
+  "schedule": {
+    "index": 6,
+    "repeat": 2,
+    "case_ids": [
+      "broader-fresh-01-remainders",
+      "broader-fresh-02-shortest-route",
+      "broader-fresh-03-base-seven",
+      "broader-fresh-04-round-robin"
+    ]
+  },
+  "attempt_id": "1792115192661082498-164240",
+  "invocation_id": "1792113771138356618-164240",
+  "started_at_utc": "2026-10-16T01:46:32.661229+00:00",
+  "partial_outputs_scored": false,
+  "completed_at_utc": "2026-10-16T01:51:03.479353+00:00",
+  "wall_seconds": 270.8182815639884,
+  "records": [
+    {
+      "id": "broader-fresh-01-remainders",
+      "category": "reasoning",
+      "configuration_fingerprint": "c04f9e716f0a9c7b5fa4a2a907b752ea504c02b01c1f13bdc463a2cb1cc5f09f",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "80670424a0c4ea8170d6e1b62f83258a3debf0469c14e6effd8930f935b97419",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "fbb8e8bd3d3479700a2fdf77d3be5b3499b4efd2e4228129a5e1478d15b961df",
+      "prompt_sha256": "9e2537074acd94565342e084a362b3630da22e33c86cb5117f19b3d67a50e38b",
+      "answer_key_sha256": "1e13a2d7eb2e77b8a8f930856a20e9fd7061700f7cb62d1aed687b6ca6576dab",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 6,
+      "submission_index": 0,
+      "invocation_id": "1792113771138356618-164240",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 0,
+      "task_finished_sequence": 19,
+      "answer_text": "94",
+      "raw_final_text": "94",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 1484,
+      "raw_final_text_sha256": "e3d6c4d4599e00882384ca981ee287ed961fa5f3828e2adb5e9ea890ab0d0525",
+      "response_attempts": [
+        {
+          "raw_text": "94",
+          "raw_text_sha256": "e3d6c4d4599e00882384ca981ee287ed961fa5f3828e2adb5e9ea890ab0d0525",
+          "thinking_text": "*   $n \\equiv 3 \\pmod{7}$\n    *   $n \\equiv 4 \\pmod{5}$\n    *   $n \\equiv 1 \\pmod{3}$\n    *   $0 \\le n < 100$\n\n    *   $n \\equiv 3 \\pmod{7} \\implies n = 7k + 3$ for some integer $k$.\n    *   $n \\equiv 4 \\pmod{5} \\implies 7k + 3 \\equiv 4 \\pmod{5}$\n        *   $2k + 3 \\equiv 4 \\pmod{5}$\n        *   $2k \\equiv 1 \\pmod{5}$\n        *   Multiply by 3 (the inverse of 2 mod 5): $6k \\equiv 3 \\pmod{5} \\implies k \\equiv 3 \\pmod{5}$\n        *   So, $k = 5m + 3$ for some integer $m$.\n    *   Substitute $k$ back into the expression for $n$:\n        *   $n = 7(5m + 3) + 3 = 35m + 21 + 3 = 35m + 24$.\n    *   Now use the third condition: $n \\equiv 1 \\pmod{3}$\n        *   $35m + 24 \\equiv 1 \\pmod{3}$\n        *   $2m + 0 \\equiv 1 \\pmod{3}$ (since $35 \\equiv 2 \\pmod{3}$ and $24 \\equiv 0 \\pmod{3}$)\n        *   $2m \\equiv 1 \\pmod{3}$\n        *   Multiply by 2 (the inverse of 2 mod 3): $4m \\equiv 2 \\pmod{3} \\implies m \\equiv 2 \\pmod{3}$\n        *   So, $m = 3p + 2$ for some integer $p$.\n    *   Substitute $m$ back into the expression for $n$:\n        *   $n = 35(3p + 2) + 24 = 105p + 70 + 24 = 105p + 94$.\n\n    *   $n = 105p + 94$\n    *   For $p = 0$, $n = 94$.\n    *   Check the range: $0 \\le 94 < 100$. This fits.\n\n    *   $94 \\div 7 = 13$ remainder $3$ ($13 \\times 7 = 91$, $94 - 91 = 3$). Correct.\n    *   $94 \\div 5 = 18$ remainder $4$ ($18 \\times 5 = 90$, $94 - 90 = 4$). Correct.\n    *   $94 \\div 3 = 31$ remainder $1$ ($31 \\times 3 = 93$, $94 - 93 = 1$). Correct.\n\n    *   $n = 94$.",
+          "thinking_text_sha256": "302fa2c03a098711413c672bb3aae895ddb5fc60b270d7542e6730ced6eaf02d",
+          "thinking_characters": 1484,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   $n \\equiv 3 \\pmod{7}$\n    *   $n \\equiv 4 \\pmod{5}$\n    *   $n \\equiv 1 \\pmod{3}$\n    *   $0 \\le n < 100$\n\n    *   $n \\equiv 3 \\pmod{7} \\implies n = 7k + 3$ for some integer $k$.\n    *   $n \\equiv 4 \\pmod{5} \\implies 7k + 3 \\equiv 4 \\pmod{5}$\n        *   $2k + 3 \\equiv 4 \\pmod{5}$\n        *   $2k \\equiv 1 \\pmod{5}$\n        *   Multiply by 3 (the inverse of 2 mod 5): $6k \\equiv 3 \\pmod{5} \\implies k \\equiv 3 \\pmod{5}$\n        *   So, $k = 5m + 3$ for some integer $m$.\n    *   Substitute $k$ back into the expression for $n$:\n        *   $n = 7(5m + 3) + 3 = 35m + 21 + 3 = 35m + 24$.\n    *   Now use the third condition: $n \\equiv 1 \\pmod{3}$\n        *   $35m + 24 \\equiv 1 \\pmod{3}$\n        *   $2m + 0 \\equiv 1 \\pmod{3}$ (since $35 \\equiv 2 \\pmod{3}$ and $24 \\equiv 0 \\pmod{3}$)\n        *   $2m \\equiv 1 \\pmod{3}$\n        *   Multiply by 2 (the inverse of 2 mod 3): $4m \\equiv 2 \\pmod{3} \\implies m \\equiv 2 \\pmod{3}$\n        *   So, $m = 3p + 2$ for some integer $p$.\n    *   Substitute $m$ back into the expression for $n$:\n        *   $n = 35(3p + 2) + 24 = 105p + 70 + 24 = 105p + 94$.\n\n    *   $n = 105p + 94$\n    *   For $p = 0$, $n = 94$.\n    *   Check the range: $0 \\le 94 < 100$. This fits.\n\n    *   $94 \\div 7 = 13$ remainder $3$ ($13 \\times 7 = 91$, $94 - 91 = 3$). Correct.\n    *   $94 \\div 5 = 18$ remainder $4$ ($18 \\times 5 = 90$, $94 - 90 = 4$). Correct.\n    *   $94 \\div 3 = 31$ remainder $1$ ($31 \\times 3 = 93$, $94 - 93 = 1$). Correct.\n\n    *   $n = 94$.",
+              "signature": "f8d31355fc2648778d1a481261c42c38"
+            },
+            {
+              "type": "text",
+              "text": "94"
+            }
+          ],
+          "native_content_blocks_sha256": "f81917e0b597d79cf2796d2c6209579c44b4261f0418288c97b97b886cc47301",
+          "model_id": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 78,
+            "output_tokens": 720
+          },
+          "native_request_seconds": 64.93675816399627,
+          "started_sequence": 15,
+          "finished_sequence": 18
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.008878469991032034,
+          "started_sequence": 8,
+          "finished_sequence": 11
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 64.93675816399627,
+          "started_sequence": 15,
+          "finished_sequence": 18
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 720,
+          "input_tokens": 78,
+          "stop_reason": "end_turn",
+          "response_sha256": "e3d6c4d4599e00882384ca981ee287ed961fa5f3828e2adb5e9ea890ab0d0525",
+          "visible_characters": 2,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 64.98149955700501
+        }
+      ],
+      "counted_input_tokens": 78,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8050,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "e3d6c4d4599e00882384ca981ee287ed961fa5f3828e2adb5e9ea890ab0d0525",
+      "output_tokens": 720,
+      "total_output_tokens_including_retries": 720,
+      "generation_seconds_including_retries": 64.98149955700501,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T01:47:37.769854+00:00",
+      "record_sha256": "197008b77d2ec3907d8c9cafde6c81aabfc7da057a86ee46740b2adb2a426c69"
+    },
+    {
+      "id": "broader-fresh-02-shortest-route",
+      "category": "reasoning",
+      "configuration_fingerprint": "c04f9e716f0a9c7b5fa4a2a907b752ea504c02b01c1f13bdc463a2cb1cc5f09f",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "80670424a0c4ea8170d6e1b62f83258a3debf0469c14e6effd8930f935b97419",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "7fbbf907afd7e3ee9d03345672a5ee4f81f313ff1da803338de6a1ee4af77f69",
+      "prompt_sha256": "02eded74b39a0f1b633b522a6b6b0575d6ef1321f7591f70ce76978ce4f7bcce",
+      "answer_key_sha256": "52683baff5c874b76dd52b2cbda1009da62652f2ba2a4816ace51b8f4b54de62",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 6,
+      "submission_index": 1,
+      "invocation_id": "1792113771138356618-164240",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 1,
+      "task_finished_sequence": 23,
+      "answer_text": "```json\n{\n  \"minutes\": 10,\n  \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]\n}\n```",
+      "raw_final_text": "```json\n{\n  \"minutes\": 10,\n  \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 6065,
+      "raw_final_text_sha256": "73769b0ef323568bef970085b8bf274de5f6840ed7dbd141bb7ac35ca2fa6f6e",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"minutes\": 10,\n  \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]\n}\n```",
+          "raw_text_sha256": "73769b0ef323568bef970085b8bf274de5f6840ed7dbd141bb7ac35ca2fa6f6e",
+          "thinking_text": "*   A -> B: 4\n    *   A -> C: 2\n    *   C -> B: 1\n    *   B -> D: 5\n    *   C -> D: 8\n    *   D -> E: 2\n    *   B -> E: 9\n\n    *   A -> B -> D -> E: 4 + 5 + 2 = 11\n    *   A -> B -> E: 4 + 9 = 13\n    *   A -> C -> B -> D -> E: 2 + 1 + 5 + 2 = 10\n    *   A -> C -> B -> E: 2 + 1 + 9 = 12\n    *   A -> C -> D -> E: 2 + 8 + 2 = 12\n\n    *   A -> B -> D -> E: 11\n    *   A -> B -> E: 13\n    *   A -> C -> B -> D -> E: 10\n    *   A -> C -> B -> E: 12\n    *   A -> C -> D -> E: 12\n\n    *   The fastest route is A -> C -> B -> D -> E with a total time of 10 minutes.\n\n    *   A to C: 2\n    *   C to B: 1\n    *   B to D: 5\n    *   D to E: 2\n    *   Total: 2 + 1 + 5 + 2 = 10.\n\n    *   A to B: 4\n    *   B to D: 5\n    *   D to E: 2\n    *   Total: 4 + 5 + 2 = 11.\n\n    *   A to C: 2\n    *   C to D: 8\n    *   D to E: 2\n    *   Total: 2 + 8 + 2 = 12.\n\n    *   A to B: 4\n    *   B to E: 9\n    *   Total: 4 + 9 = 13.\n\n    *   A to C: 2\n    *   C to B: 1\n    *   B to E: 9\n    *   Total: 2 + 1 + 9 = 12.\n\n    *   Fastest time: 10\n    *   Route: [\"A\", \"C\", \"B\", \"D\", \"E\"]\n\n    *   JSON format: `{\"minutes\": 10, \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]}`\n\n    *   A -> B (4)\n    *   A -> C (2)\n    *   C -> B (1)\n    *   B -> D (5)\n    *   C -> D (8)\n    *   D -> E (2)\n    *   B -> E (9)\n\n    *   A to C (2)\n    *   C to B (1)\n    *   B to D (5)\n    *   D to E (2)\n    *   Total = 2 + 1 + 5 + 2 = 10.\n\n    *   A to B (4)\n    *   B to D (5)\n    *   D to E (2)\n    *   Total = 4 + 5 + 2 = 11.\n\n    *   A to C (2)\n    *   C to D (8)\n    *   D to E (2)\n    *   Total = 2 + 8 + 2 = 12.\n\n    *   A to B (4)\n    *   B to E (9)\n    *   Total = 4 + 9 = 13.\n\n    *   A to C (2)\n    *   C to B (1)\n    *   B to E (9)\n    *   Total = 2 + 1 + 9 = 12.\n\n    *   Wait, let's re-check A -> C -> B -> D -> E.\n    *   A to C is 2.\n    *   C to B is 1.\n    *   B to D is 5.\n    *   D to E is 2.\n    *   2 + 1 + 5 + 2 = 10. Correct.\n\n    *   Is there any other path?\n    *   A -> B -> D -> E (11)\n    *   A -> C -> B -> D -> E (10)\n    *   A -> C -> D -> E (12)\n    *   A -> B -> E (13)\n    *   A -> C -> B -> E (12)\n\n    *   The minimum is indeed 10.\n\n    *   `{\"minutes\": 10, \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]}`\n\n    *   A -> B: 4\n    *   A -> C: 2\n    *   C -> B: 1\n    *   B -> D: 5\n    *   C -> D: 8\n    *   D -> E: 2\n    *   B -> E: 9\n    *   All edges are accounted for.\n\n    *   A to C (2)\n    *   C to B (1)\n    *   B to D (5)\n    *   D to E (2)\n    *   Total = 10.\n\n    *   A to B (4)\n    *   B to D (5)\n    *   D to E (2)\n    *   Total = 11.\n\n    *   A to C (2)\n    *   C to D (8)\n    *   D to E (2)\n    *   Total = 12.\n\n    *   A to B (4)\n    *   B to E (9)\n    *   Total = 13.\n\n    *   A to C (2)\n    *   C to B (1)\n    *   B to E (9)\n    *   Total = 12.\n\n    *   Wait, let me re-read the edges one more time.\n    *   A -> B: 4\n    *   A -> C: 2\n    *   C -> B: 1\n    *   B -> D: 5\n    *   C -> D: 8\n    *   D -> E: 2\n    *   B -> E: 9\n\n    *   Yes, the paths and their times are correct.\n    *   A-C-B-D-E = 2+1+5+2 = 10.\n    *   A-B-D-E = 4+5+2 = 11.\n    *   A-C-D-E = 2+8+2 = 12.\n    *   A-B-E = 4+9 = 13.\n    *   A-C-B-E = 2+1+9 = 12.\n\n    *   The fastest is 10.\n\n    *   JSON with minutes as an integer and route as an array of node names.\n    *   `{\"minutes\": 10, \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]}`\n\n    *   A to C: 2\n    *   C to B: 1\n    *   B to D: 5\n    *   D to E: 2\n    *   2 + 1 + 5 + 2 = 10. Correct.\n\n    *   A to B: 4\n    *   B to D: 5\n    *   D to E: 2\n    *   4 + 5 + 2 = 11. Correct.\n\n    *   A to C: 2\n    *   C to D: 8\n    *   D to E: 2\n    *   2 + 8 + 2 = 12. Correct.\n\n    *   A to B: 4\n    *   B to E: 9\n    *   4 + 9 = 13. Correct.\n\n    *   A to C: 2\n    *   C to B: 1\n    *   B to E: 9\n    *   2 + 1 + 9 = 12. Correct.\n\n    *   Wait, is there any other path?\n    *   A to C to B to D to E is the only one left.\n    *   A to C to B is 3.\n    *   A to B is 4.\n    *   So A to C to B is faster than A to B.\n    *   From B, we can go to D (5) or E (9).\n    *   If we go to D, we must go to E (2). So B to D to E is 5 + 2 = 7.\n    *   If we go to E, it's 9.\n    *   So from B, the fastest way to E is B to D to E (7).\n    *   Since A to C to B is 3, the fastest way from A to E via B is 3 + 7 = 10.\n    *   Since A to B is 4, the fastest way from A to E via B is 4 + 7 = 11.\n    *   Wait, let's re-check A to C to D to E.\n    *   A to C is 2.\n    *   C to D is 8.\n    *   D to E is 2.\n    *   2 + 8 + 2 = 12.\n    *   So the fastest is indeed 10.\n\n    *   A -> B: 4\n    *   A -> C: 2\n    *   C -> B: 1\n    *   B -> D: 5\n    *   C -> D: 8\n    *   D -> E: 2\n    *   B -> E: 9\n    *   All edges are used correctly.\n\n    *   A to C (2)\n    *   C to B (1)\n    *   B to D (5)\n    *   D to E (2)\n    *   Total = 10.\n\n    *   A to B (4)\n    *   B to D (5)\n    *   D to E (2)\n    *   Total = 11.\n\n    *   A to C (2)\n    *   C to D (8)\n    *   D to E (2)\n    *   Total = 12.\n\n    *   A to B (4)\n    *   B to E (9)\n    *   Total = 13.\n\n    *   A to C (2)\n    *   C to B (1)\n    *   B to E (9)\n    *   Total = 12.\n\n    *   The fastest is 10.\n\n    *   `{\"minutes\": 10, \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]}`\n    *   Wait, let me double-check the question for any other possible paths.\n    *   A -> B, A -> C, C -> B, B -> D, C -> D, D -> E, B -> E.\n    *   Nodes: A, B, C, D, E.\n    *   Edges:\n        (A,B,4), (A,C,2), (C,B,1), (B,D,5), (C,D,8), (D,E,2), (B,E,9).\n    *   All paths from A to E:\n        1. A-B-D-E: 4+5+2 = 11\n        2. A-B-E: 4+9 = 13\n        3. A-C-B-D-E: 2+1+5+2 = 10\n        4. A-C-B-E: 2+1+9 = 12\n        5. A-C-D-E: 2+8+2 = 12\n    *   The minimum is 10.\n\n    *   A to C is 2.\n    *   C to B is 1.\n    *   B to D is 5.\n    *   D to E is 2.\n    *   2 + 1 + 5 + 2 = 10.\n    *   Yes, it's correct.\n\n    *   `{\"minutes\": 10, \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]}`\n    *   The question asks for \"only JSON\".\n\n    *   A -> B: 4\n    *   A -> C: 2\n    *   C -> B: 1\n    *   B -> D: 5\n    *   C -> D: 8\n    *   D -> E: 2\n    *   B -> E: 9\n    *   Wait, let me re-read the B -> E: 9 part. Yes, it's 9.\n    *   And B -> D: 5.\n    *   And D -> E: 2.\n    *   So B to E via D is 5",
+          "thinking_text_sha256": "d4d28e0fc968453416d476849130a43dfbf0a5ddcc80b5a95260d62e45874d43",
+          "thinking_characters": 6065,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   A -> B: 4\n    *   A -> C: 2\n    *   C -> B: 1\n    *   B -> D: 5\n    *   C -> D: 8\n    *   D -> E: 2\n    *   B -> E: 9\n\n    *   A -> B -> D -> E: 4 + 5 + 2 = 11\n    *   A -> B -> E: 4 + 9 = 13\n    *   A -> C -> B -> D -> E: 2 + 1 + 5 + 2 = 10\n    *   A -> C -> B -> E: 2 + 1 + 9 = 12\n    *   A -> C -> D -> E: 2 + 8 + 2 = 12\n\n    *   A -> B -> D -> E: 11\n    *   A -> B -> E: 13\n    *   A -> C -> B -> D -> E: 10\n    *   A -> C -> B -> E: 12\n    *   A -> C -> D -> E: 12\n\n    *   The fastest route is A -> C -> B -> D -> E with a total time of 10 minutes.\n\n    *   A to C: 2\n    *   C to B: 1\n    *   B to D: 5\n    *   D to E: 2\n    *   Total: 2 + 1 + 5 + 2 = 10.\n\n    *   A to B: 4\n    *   B to D: 5\n    *   D to E: 2\n    *   Total: 4 + 5 + 2 = 11.\n\n    *   A to C: 2\n    *   C to D: 8\n    *   D to E: 2\n    *   Total: 2 + 8 + 2 = 12.\n\n    *   A to B: 4\n    *   B to E: 9\n    *   Total: 4 + 9 = 13.\n\n    *   A to C: 2\n    *   C to B: 1\n    *   B to E: 9\n    *   Total: 2 + 1 + 9 = 12.\n\n    *   Fastest time: 10\n    *   Route: [\"A\", \"C\", \"B\", \"D\", \"E\"]\n\n    *   JSON format: `{\"minutes\": 10, \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]}`\n\n    *   A -> B (4)\n    *   A -> C (2)\n    *   C -> B (1)\n    *   B -> D (5)\n    *   C -> D (8)\n    *   D -> E (2)\n    *   B -> E (9)\n\n    *   A to C (2)\n    *   C to B (1)\n    *   B to D (5)\n    *   D to E (2)\n    *   Total = 2 + 1 + 5 + 2 = 10.\n\n    *   A to B (4)\n    *   B to D (5)\n    *   D to E (2)\n    *   Total = 4 + 5 + 2 = 11.\n\n    *   A to C (2)\n    *   C to D (8)\n    *   D to E (2)\n    *   Total = 2 + 8 + 2 = 12.\n\n    *   A to B (4)\n    *   B to E (9)\n    *   Total = 4 + 9 = 13.\n\n    *   A to C (2)\n    *   C to B (1)\n    *   B to E (9)\n    *   Total = 2 + 1 + 9 = 12.\n\n    *   Wait, let's re-check A -> C -> B -> D -> E.\n    *   A to C is 2.\n    *   C to B is 1.\n    *   B to D is 5.\n    *   D to E is 2.\n    *   2 + 1 + 5 + 2 = 10. Correct.\n\n    *   Is there any other path?\n    *   A -> B -> D -> E (11)\n    *   A -> C -> B -> D -> E (10)\n    *   A -> C -> D -> E (12)\n    *   A -> B -> E (13)\n    *   A -> C -> B -> E (12)\n\n    *   The minimum is indeed 10.\n\n    *   `{\"minutes\": 10, \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]}`\n\n    *   A -> B: 4\n    *   A -> C: 2\n    *   C -> B: 1\n    *   B -> D: 5\n    *   C -> D: 8\n    *   D -> E: 2\n    *   B -> E: 9\n    *   All edges are accounted for.\n\n    *   A to C (2)\n    *   C to B (1)\n    *   B to D (5)\n    *   D to E (2)\n    *   Total = 10.\n\n    *   A to B (4)\n    *   B to D (5)\n    *   D to E (2)\n    *   Total = 11.\n\n    *   A to C (2)\n    *   C to D (8)\n    *   D to E (2)\n    *   Total = 12.\n\n    *   A to B (4)\n    *   B to E (9)\n    *   Total = 13.\n\n    *   A to C (2)\n    *   C to B (1)\n    *   B to E (9)\n    *   Total = 12.\n\n    *   Wait, let me re-read the edges one more time.\n    *   A -> B: 4\n    *   A -> C: 2\n    *   C -> B: 1\n    *   B -> D: 5\n    *   C -> D: 8\n    *   D -> E: 2\n    *   B -> E: 9\n\n    *   Yes, the paths and their times are correct.\n    *   A-C-B-D-E = 2+1+5+2 = 10.\n    *   A-B-D-E = 4+5+2 = 11.\n    *   A-C-D-E = 2+8+2 = 12.\n    *   A-B-E = 4+9 = 13.\n    *   A-C-B-E = 2+1+9 = 12.\n\n    *   The fastest is 10.\n\n    *   JSON with minutes as an integer and route as an array of node names.\n    *   `{\"minutes\": 10, \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]}`\n\n    *   A to C: 2\n    *   C to B: 1\n    *   B to D: 5\n    *   D to E: 2\n    *   2 + 1 + 5 + 2 = 10. Correct.\n\n    *   A to B: 4\n    *   B to D: 5\n    *   D to E: 2\n    *   4 + 5 + 2 = 11. Correct.\n\n    *   A to C: 2\n    *   C to D: 8\n    *   D to E: 2\n    *   2 + 8 + 2 = 12. Correct.\n\n    *   A to B: 4\n    *   B to E: 9\n    *   4 + 9 = 13. Correct.\n\n    *   A to C: 2\n    *   C to B: 1\n    *   B to E: 9\n    *   2 + 1 + 9 = 12. Correct.\n\n    *   Wait, is there any other path?\n    *   A to C to B to D to E is the only one left.\n    *   A to C to B is 3.\n    *   A to B is 4.\n    *   So A to C to B is faster than A to B.\n    *   From B, we can go to D (5) or E (9).\n    *   If we go to D, we must go to E (2). So B to D to E is 5 + 2 = 7.\n    *   If we go to E, it's 9.\n    *   So from B, the fastest way to E is B to D to E (7).\n    *   Since A to C to B is 3, the fastest way from A to E via B is 3 + 7 = 10.\n    *   Since A to B is 4, the fastest way from A to E via B is 4 + 7 = 11.\n    *   Wait, let's re-check A to C to D to E.\n    *   A to C is 2.\n    *   C to D is 8.\n    *   D to E is 2.\n    *   2 + 8 + 2 = 12.\n    *   So the fastest is indeed 10.\n\n    *   A -> B: 4\n    *   A -> C: 2\n    *   C -> B: 1\n    *   B -> D: 5\n    *   C -> D: 8\n    *   D -> E: 2\n    *   B -> E: 9\n    *   All edges are used correctly.\n\n    *   A to C (2)\n    *   C to B (1)\n    *   B to D (5)\n    *   D to E (2)\n    *   Total = 10.\n\n    *   A to B (4)\n    *   B to D (5)\n    *   D to E (2)\n    *   Total = 11.\n\n    *   A to C (2)\n    *   C to D (8)\n    *   D to E (2)\n    *   Total = 12.\n\n    *   A to B (4)\n    *   B to E (9)\n    *   Total = 13.\n\n    *   A to C (2)\n    *   C to B (1)\n    *   B to E (9)\n    *   Total = 12.\n\n    *   The fastest is 10.\n\n    *   `{\"minutes\": 10, \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]}`\n    *   Wait, let me double-check the question for any other possible paths.\n    *   A -> B, A -> C, C -> B, B -> D, C -> D, D -> E, B -> E.\n    *   Nodes: A, B, C, D, E.\n    *   Edges:\n        (A,B,4), (A,C,2), (C,B,1), (B,D,5), (C,D,8), (D,E,2), (B,E,9).\n    *   All paths from A to E:\n        1. A-B-D-E: 4+5+2 = 11\n        2. A-B-E: 4+9 = 13\n        3. A-C-B-D-E: 2+1+5+2 = 10\n        4. A-C-B-E: 2+1+9 = 12\n        5. A-C-D-E: 2+8+2 = 12\n    *   The minimum is 10.\n\n    *   A to C is 2.\n    *   C to B is 1.\n    *   B to D is 5.\n    *   D to E is 2.\n    *   2 + 1 + 5 + 2 = 10.\n    *   Yes, it's correct.\n\n    *   `{\"minutes\": 10, \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]}`\n    *   The question asks for \"only JSON\".\n\n    *   A -> B: 4\n    *   A -> C: 2\n    *   C -> B: 1\n    *   B -> D: 5\n    *   C -> D: 8\n    *   D -> E: 2\n    *   B -> E: 9\n    *   Wait, let me re-read the B -> E: 9 part. Yes, it's 9.\n    *   And B -> D: 5.\n    *   And D -> E: 2.\n    *   So B to E via D is 5",
+              "signature": "3065d23c7a27442790e46723550d0583"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"minutes\": 10,\n  \"route\": [\"A\", \"C\", \"B\", \"D\", \"E\"]\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "4209f72741ed4af8e2200ee3968a382469fa3890d2a14ad226d46ed2a6cdb8b8",
+          "model_id": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 120,
+            "output_tokens": 3112
+          },
+          "native_request_seconds": 270.6273275319836,
+          "started_sequence": 13,
+          "finished_sequence": 22
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.008498576004058123,
+          "started_sequence": 7,
+          "finished_sequence": 10
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 270.6273275319836,
+          "started_sequence": 13,
+          "finished_sequence": 22
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 3112,
+          "input_tokens": 120,
+          "stop_reason": "end_turn",
+          "response_sha256": "73769b0ef323568bef970085b8bf274de5f6840ed7dbd141bb7ac35ca2fa6f6e",
+          "visible_characters": 69,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 270.6626333640015
+        }
+      ],
+      "counted_input_tokens": 120,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8008,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "73769b0ef323568bef970085b8bf274de5f6840ed7dbd141bb7ac35ca2fa6f6e",
+      "output_tokens": 3112,
+      "total_output_tokens_including_retries": 3112,
+      "generation_seconds_including_retries": 270.6626333640015,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T01:51:03.444989+00:00",
+      "record_sha256": "2c29a7023e63d157e8bec04da20e6e42bd078361202b86ccc03dc649c89f7582"
+    },
+    {
+      "id": "broader-fresh-03-base-seven",
+      "category": "reasoning",
+      "configuration_fingerprint": "c04f9e716f0a9c7b5fa4a2a907b752ea504c02b01c1f13bdc463a2cb1cc5f09f",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "80670424a0c4ea8170d6e1b62f83258a3debf0469c14e6effd8930f935b97419",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "c5faf78172d2fe57c93518b2cc74c0e08be5edbc6839c490fefe5c846f1ab467",
+      "prompt_sha256": "f647491ea2c6b9cb6c9ffa41b0661a9200a4061c7080eeb2f8fbc408a8796a27",
+      "answer_key_sha256": "f87f1f93d6af1981fb920e0b85ec5f903110ac60cb0ca5bd93f4959a85ade53c",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 6,
+      "submission_index": 2,
+      "invocation_id": "1792113771138356618-164240",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 3,
+      "task_finished_sequence": 17,
+      "answer_text": "266",
+      "raw_final_text": "266",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 741,
+      "raw_final_text_sha256": "ea5b27556fbb134def2c2fbf944d9cdda3dbdb6b10473a1aec59f6f170c4ca3a",
+      "response_attempts": [
+        {
+          "raw_text": "266",
+          "raw_text_sha256": "ea5b27556fbb134def2c2fbf944d9cdda3dbdb6b10473a1aec59f6f170c4ca3a",
+          "thinking_text": "*   Number in base 7: $530_7$\n    *   Goal: Convert to decimal (base 10).\n\n    *   A number $d_n d_{n-1} \\dots d_1 d_0$ in base $b$ is calculated as:\n        $d_n \\cdot b^n + d_{n-1} \\cdot b^{n-1} + \\dots + d_1 \\cdot b^1 + d_0 \\cdot b^0$\n\n    *   Digits: $d_2 = 5$, $d_1 = 3$, $d_0 = 0$\n    *   Base: $b = 7$\n    *   Calculation:\n        $5 \\cdot 7^2 + 3 \\cdot 7^1 + 0 \\cdot 7^0$\n\n    *   $7^2 = 49$\n    *   $7^1 = 7$\n    *   $7^0 = 1$\n    *   $5 \\cdot 49 = 245$\n    *   $3 \\cdot 7 = 21$\n    *   $0 \\cdot 1 = 0$\n    *   Sum: $245 + 21 + 0 = 266$\n\n    *   $5 \\times 49$: $5 \\times 50 = 250$, $250 - 5 = 245$. Correct.\n    *   $3 \\times 7 = 21$. Correct.\n    *   $245 + 21 = 266$. Correct.\n\n    *   \"Reply with the integer only.\"\n\n    *   266.",
+          "thinking_text_sha256": "a2d4887a90c79103523d0de0a08fb60d4bd3c7627f8e5caecb3bda05f91c5281",
+          "thinking_characters": 741,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Number in base 7: $530_7$\n    *   Goal: Convert to decimal (base 10).\n\n    *   A number $d_n d_{n-1} \\dots d_1 d_0$ in base $b$ is calculated as:\n        $d_n \\cdot b^n + d_{n-1} \\cdot b^{n-1} + \\dots + d_1 \\cdot b^1 + d_0 \\cdot b^0$\n\n    *   Digits: $d_2 = 5$, $d_1 = 3$, $d_0 = 0$\n    *   Base: $b = 7$\n    *   Calculation:\n        $5 \\cdot 7^2 + 3 \\cdot 7^1 + 0 \\cdot 7^0$\n\n    *   $7^2 = 49$\n    *   $7^1 = 7$\n    *   $7^0 = 1$\n    *   $5 \\cdot 49 = 245$\n    *   $3 \\cdot 7 = 21$\n    *   $0 \\cdot 1 = 0$\n    *   Sum: $245 + 21 + 0 = 266$\n\n    *   $5 \\times 49$: $5 \\times 50 = 250$, $250 - 5 = 245$. Correct.\n    *   $3 \\times 7 = 21$. Correct.\n    *   $245 + 21 = 266$. Correct.\n\n    *   \"Reply with the integer only.\"\n\n    *   266.",
+              "signature": "dd460688ef5d45d9a5886e48c220ba91"
+            },
+            {
+              "type": "text",
+              "text": "266"
+            }
+          ],
+          "native_content_blocks_sha256": "e5ffd8655954bf34570400d711a2635b9d6a57d8d51c9408c959bbfd2107ea38",
+          "model_id": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 58,
+            "output_tokens": 399
+          },
+          "native_request_seconds": 36.059301040979335,
+          "started_sequence": 14,
+          "finished_sequence": 16
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.007969257974764332,
+          "started_sequence": 5,
+          "finished_sequence": 9
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 36.059301040979335,
+          "started_sequence": 14,
+          "finished_sequence": 16
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 399,
+          "input_tokens": 58,
+          "stop_reason": "end_turn",
+          "response_sha256": "ea5b27556fbb134def2c2fbf944d9cdda3dbdb6b10473a1aec59f6f170c4ca3a",
+          "visible_characters": 3,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 36.103980830986984
+        }
+      ],
+      "counted_input_tokens": 58,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8070,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "ea5b27556fbb134def2c2fbf944d9cdda3dbdb6b10473a1aec59f6f170c4ca3a",
+      "output_tokens": 399,
+      "total_output_tokens_including_retries": 399,
+      "generation_seconds_including_retries": 36.103980830986984,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T01:47:08.882342+00:00",
+      "record_sha256": "a91ddb9dd27a045cec7906cfdb215d5763d3ce11cdcaa676b831e086632ec18b"
+    },
+    {
+      "id": "broader-fresh-04-round-robin",
+      "category": "reasoning",
+      "configuration_fingerprint": "c04f9e716f0a9c7b5fa4a2a907b752ea504c02b01c1f13bdc463a2cb1cc5f09f",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "80670424a0c4ea8170d6e1b62f83258a3debf0469c14e6effd8930f935b97419",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "88fa62970a0884f8450a8c87e517252d1dffcaa5ce8f7ff34577ad7a10952d14",
+      "prompt_sha256": "f24f656d978487a3660cd6f25ff9dce61eeb3e000d63b37b7870473bf206f4b6",
+      "answer_key_sha256": "7ccf091e17ae117e865a01bdd6718f135f3d2b967f9381a9c19b8a7a1babf4e3",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 2,
+      "group_index": 6,
+      "submission_index": 3,
+      "invocation_id": "1792113771138356618-164240",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 2,
+      "task_finished_sequence": 21,
+      "answer_text": "```json\n{\n  \"A\": 9,\n  \"B\": 8,\n  \"C\": 5\n}\n```",
+      "raw_final_text": "```json\n{\n  \"A\": 9,\n  \"B\": 8,\n  \"C\": 5\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 2101,
+      "raw_final_text_sha256": "b0348615323956963da1c69c05277082eba989feeab2d6ad2a9f646287b560bf",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"A\": 9,\n  \"B\": 8,\n  \"C\": 5\n}\n```",
+          "raw_text_sha256": "b0348615323956963da1c69c05277082eba989feeab2d6ad2a9f646287b560bf",
+          "thinking_text": "*   Scheduling Algorithm: Round-Robin (RR).\n    *   Time Quantum ($q$): 2 minutes.\n    *   Switching Overhead: 0.\n    *   Jobs:\n        *   A: 5 minutes (arrives at $t=0$).\n        *   B: 3 minutes (arrives at $t=0$).\n        *   C: 1 minute (arrives at $t=0$).\n    *   Queue Order: A, B, C.\n    *   Rule: Unfinished jobs go to the end of the queue.\n\n    *   **$t = 0$**: Queue = [A, B, C].\n    *   **$t = 0$ to $t = 2$**: Job A runs.\n        *   A needs 5 mins. After 2 mins, A needs 3 mins left.\n        *   A goes to the end of the queue.\n        *   Queue = [B, C, A].\n    *   **$t = 2$ to $t = 4$**: Job B runs.\n        *   B needs 3 mins. After 2 mins, B needs 1 min left.\n        *   B goes to the end of the queue.\n        *   Queue = [C, A, B].\n    *   **$t = 4$ to $t = 5$**: Job C runs.\n        *   C needs 1 min. After 1 min, C is finished.\n        *   Queue = [A, B].\n        *   **C completes at $t = 5$**.\n    *   **$t = 5$ to $t = 7$**: Job A runs.\n        *   A needs 3 mins. After 2 mins, A needs 1 min left.\n        *   A goes to the end of the queue.\n        *   Queue = [B, A].\n    *   **$t = 7$ to $t = 8$**: Job B runs.\n        *   B needs 1 min. After 1 min, B is finished.\n        *   Queue = [A].\n        *   **B completes at $t = 8$**.\n    *   **$t = 8$ to $t = 9$**: Job A runs.\n        *   A needs 1 min. After 1 min, A is finished.\n        *   Queue = [].\n        *   **A completes at $t = 9$**.\n\n    *   A: 9\n    *   B: 8\n    *   C: 5\n\n    *   A (5), B (3), C (1). $q=2$.\n    *   Round 1:\n        *   A (2 mins): $t=2$, A left=3. Queue: B, C, A.\n        *   B (2 mins): $t=4$, B left=1. Queue: C, A, B.\n        *   C (1 min): $t=5$, C left=0. Queue: A, B. **C done at 5**.\n    *   Round 2:\n        *   A (2 mins): $t=7$, A left=1. Queue: B, A.\n        *   B (1 min): $t=8$, B left=0. Queue: A. **B done at 8**.\n    *   Round 3:\n        *   A (1 min): $t=9$, A left=0. Queue: empty. **A done at 9**.\n\n    *   A: 9\n    *   B: 8\n    *   C: 5\n\n    *   JSON object mapping A, B, C to completion times.\n\n    ```json\n    {\n      \"A\": 9,\n      \"B\": 8,\n      \"C\": 5\n    }\n    ```",
+          "thinking_text_sha256": "a786f39c2ed38e85e08c9d57ede0b878d27c035a69d87b9c365b4e91e992667b",
+          "thinking_characters": 2101,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Scheduling Algorithm: Round-Robin (RR).\n    *   Time Quantum ($q$): 2 minutes.\n    *   Switching Overhead: 0.\n    *   Jobs:\n        *   A: 5 minutes (arrives at $t=0$).\n        *   B: 3 minutes (arrives at $t=0$).\n        *   C: 1 minute (arrives at $t=0$).\n    *   Queue Order: A, B, C.\n    *   Rule: Unfinished jobs go to the end of the queue.\n\n    *   **$t = 0$**: Queue = [A, B, C].\n    *   **$t = 0$ to $t = 2$**: Job A runs.\n        *   A needs 5 mins. After 2 mins, A needs 3 mins left.\n        *   A goes to the end of the queue.\n        *   Queue = [B, C, A].\n    *   **$t = 2$ to $t = 4$**: Job B runs.\n        *   B needs 3 mins. After 2 mins, B needs 1 min left.\n        *   B goes to the end of the queue.\n        *   Queue = [C, A, B].\n    *   **$t = 4$ to $t = 5$**: Job C runs.\n        *   C needs 1 min. After 1 min, C is finished.\n        *   Queue = [A, B].\n        *   **C completes at $t = 5$**.\n    *   **$t = 5$ to $t = 7$**: Job A runs.\n        *   A needs 3 mins. After 2 mins, A needs 1 min left.\n        *   A goes to the end of the queue.\n        *   Queue = [B, A].\n    *   **$t = 7$ to $t = 8$**: Job B runs.\n        *   B needs 1 min. After 1 min, B is finished.\n        *   Queue = [A].\n        *   **B completes at $t = 8$**.\n    *   **$t = 8$ to $t = 9$**: Job A runs.\n        *   A needs 1 min. After 1 min, A is finished.\n        *   Queue = [].\n        *   **A completes at $t = 9$**.\n\n    *   A: 9\n    *   B: 8\n    *   C: 5\n\n    *   A (5), B (3), C (1). $q=2$.\n    *   Round 1:\n        *   A (2 mins): $t=2$, A left=3. Queue: B, C, A.\n        *   B (2 mins): $t=4$, B left=1. Queue: C, A, B.\n        *   C (1 min): $t=5$, C left=0. Queue: A, B. **C done at 5**.\n    *   Round 2:\n        *   A (2 mins): $t=7$, A left=1. Queue: B, A.\n        *   B (1 min): $t=8$, B left=0. Queue: A. **B done at 8**.\n    *   Round 3:\n        *   A (1 min): $t=9$, A left=0. Queue: empty. **A done at 9**.\n\n    *   A: 9\n    *   B: 8\n    *   C: 5\n\n    *   JSON object mapping A, B, C to completion times.\n\n    ```json\n    {\n      \"A\": 9,\n      \"B\": 8,\n      \"C\": 5\n    }\n    ```",
+              "signature": "615a321ecc45461e953aef9fa1bd5f63"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"A\": 9,\n  \"B\": 8,\n  \"C\": 5\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "4641f05ee0ddc2a219214f3f3c73452a334576878347d8fecc3144702e77c51e",
+          "model_id": "redcell-w8a16-nf4-direction-w8-weight-strength-1.0-v1",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 105,
+            "output_tokens": 909
+          },
+          "native_request_seconds": 81.13888527199742,
+          "started_sequence": 12,
+          "finished_sequence": 20
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.0076316900085657835,
+          "started_sequence": 4,
+          "finished_sequence": 6
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 81.13888527199742,
+          "started_sequence": 12,
+          "finished_sequence": 20
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 909,
+          "input_tokens": 105,
+          "stop_reason": "end_turn",
+          "response_sha256": "b0348615323956963da1c69c05277082eba989feeab2d6ad2a9f646287b560bf",
+          "visible_characters": 44,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 81.17563091201009
+        }
+      ],
+      "counted_input_tokens": 105,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8023,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "b0348615323956963da1c69c05277082eba989feeab2d6ad2a9f646287b560bf",
+      "output_tokens": 909,
+      "total_output_tokens_including_retries": 909,
+      "generation_seconds_including_retries": 81.17563091201009,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-16T01:47:53.946151+00:00",
+      "record_sha256": "fc9c82329e2e3849b99e66cd7407823118c777250b453cd5dc17afd00b9872dd"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "task_started",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:46:32.693372+00:00",
+      "group_elapsed_seconds": 0.02949847001582384,
+      "group_index": 6,
+      "submission_index": 0
+    },
+    {
+      "sequence": 1,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "task_started",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:46:32.709984+00:00",
+      "group_elapsed_seconds": 0.046110385010251775,
+      "group_index": 6,
+      "submission_index": 1
+    },
+    {
+      "sequence": 2,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "task_started",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:46:32.724916+00:00",
+      "group_elapsed_seconds": 0.06103779299883172,
+      "group_index": 6,
+      "submission_index": 3
+    },
+    {
+      "sequence": 3,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "task_started",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:46:32.725374+00:00",
+      "group_elapsed_seconds": 0.061500937008531764,
+      "group_index": 6,
+      "submission_index": 2
+    },
+    {
+      "sequence": 4,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "request_started",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:46:32.747023+00:00",
+      "group_elapsed_seconds": 0.08314201000030152,
+      "group_index": 6,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 5,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "request_started",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:46:32.754507+00:00",
+      "group_elapsed_seconds": 0.09062523001921363,
+      "group_index": 6,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 6,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "request_finished",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:46:32.754672+00:00",
+      "group_elapsed_seconds": 0.09079017501790076,
+      "group_index": 6,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 4
+    },
+    {
+      "sequence": 7,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "request_started",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:46:32.755284+00:00",
+      "group_elapsed_seconds": 0.0914024910016451,
+      "group_index": 6,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 8,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "request_started",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:46:32.756128+00:00",
+      "group_elapsed_seconds": 0.09225367501494475,
+      "group_index": 6,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 9,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "request_finished",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:46:32.762492+00:00",
+      "group_elapsed_seconds": 0.09861013799672946,
+      "group_index": 6,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 5
+    },
+    {
+      "sequence": 10,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "request_finished",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:46:32.763799+00:00",
+      "group_elapsed_seconds": 0.09991845200420357,
+      "group_index": 6,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 7
+    },
+    {
+      "sequence": 11,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "request_finished",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:46:32.765035+00:00",
+      "group_elapsed_seconds": 0.10116043500602245,
+      "group_index": 6,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 8
+    },
+    {
+      "sequence": 12,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "request_started",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:46:32.783382+00:00",
+      "group_elapsed_seconds": 0.11949853601981886,
+      "group_index": 6,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 13,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "request_started",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:46:32.794155+00:00",
+      "group_elapsed_seconds": 0.1302723670087289,
+      "group_index": 6,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 14,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "request_started",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:46:32.799352+00:00",
+      "group_elapsed_seconds": 0.13547195700812154,
+      "group_index": 6,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 15,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "request_started",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:46:32.808014+00:00",
+      "group_elapsed_seconds": 0.14414084600866772,
+      "group_index": 6,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 16,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "request_finished",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:47:08.858678+00:00",
+      "group_elapsed_seconds": 36.19480745901819,
+      "group_index": 6,
+      "route": "/v1/messages",
+      "start_sequence": 14
+    },
+    {
+      "sequence": 17,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "task_finished",
+      "id": "broader-fresh-03-base-seven",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:47:08.882342+00:00",
+      "group_elapsed_seconds": 36.218463412020355,
+      "group_index": 6,
+      "submission_index": 2
+    },
+    {
+      "sequence": 18,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "request_finished",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:47:37.744806+00:00",
+      "group_elapsed_seconds": 65.08093507299782,
+      "group_index": 6,
+      "route": "/v1/messages",
+      "start_sequence": 15
+    },
+    {
+      "sequence": 19,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "task_finished",
+      "id": "broader-fresh-01-remainders",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:47:37.769854+00:00",
+      "group_elapsed_seconds": 65.10597723600222,
+      "group_index": 6,
+      "submission_index": 0
+    },
+    {
+      "sequence": 20,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "request_finished",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:47:53.922289+00:00",
+      "group_elapsed_seconds": 81.2584198260156,
+      "group_index": 6,
+      "route": "/v1/messages",
+      "start_sequence": 12
+    },
+    {
+      "sequence": 21,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "task_finished",
+      "id": "broader-fresh-04-round-robin",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:47:53.946151+00:00",
+      "group_elapsed_seconds": 81.28227037200122,
+      "group_index": 6,
+      "submission_index": 3
+    },
+    {
+      "sequence": 22,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "request_finished",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:51:03.421500+00:00",
+      "group_elapsed_seconds": 270.7576235340093,
+      "group_index": 6,
+      "route": "/v1/messages",
+      "start_sequence": 13
+    },
+    {
+      "sequence": 23,
+      "invocation_id": "1792113771138356618-164240",
+      "kind": "task_finished",
+      "id": "broader-fresh-02-shortest-route",
+      "repeat": 2,
+      "at_utc": "2026-10-16T01:51:03.444989+00:00",
+      "group_elapsed_seconds": 270.7811131880153,
+      "group_index": 6,
+      "submission_index": 1
+    }
+  ],
+  "submission_order": [
+    "broader-fresh-01-remainders",
+    "broader-fresh-02-shortest-route",
+    "broader-fresh-03-base-seven",
+    "broader-fresh-04-round-robin"
+  ],
+  "client_task_start_order": [
+    "broader-fresh-01-remainders",
+    "broader-fresh-02-shortest-route",
+    "broader-fresh-04-round-robin",
+    "broader-fresh-03-base-seven"
+  ],
+  "client_task_finish_order": [
+    "broader-fresh-03-base-seven",
+    "broader-fresh-01-remainders",
+    "broader-fresh-04-round-robin",
+    "broader-fresh-02-shortest-route"
+  ],
+  "observed_future_completion_order": [
+    "broader-fresh-03-base-seven",
+    "broader-fresh-01-remainders",
+    "broader-fresh-04-round-robin",
+    "broader-fresh-02-shortest-route"
+  ],
+  "ordering_scope": "Sequences and elapsed times are local to this group. Client submission, task, and HTTP dispatch/completion order are recorded; GPU scheduler order is not observed.",
+  "group_sha256": "338bf9ff9cb1f02a4239fa313b93352c483cac41b31f6558d318358bffcbe1d5"
+}

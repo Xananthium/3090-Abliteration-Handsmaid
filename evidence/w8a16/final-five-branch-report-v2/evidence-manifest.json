@@ -1,0 +1,962 @@
+{
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/report_five_branches.py": {
+    "sha256": "5acd30e755274a0f786c962e072a6e8f31d329a91ce8dccb56b838e98f44c1a3",
+    "bytes": 37313
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/analyze_integrity.py": {
+    "sha256": "8bff2efeca121cb3fe100386d29736edfb2c3abfdc86fa6200658a020ef6f11e",
+    "bytes": 23378
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/analyze_thinking_integrity.py": {
+    "sha256": "a2c907c08d1963562516c47d984ae5f67a136689a23373c56d6fded1539d33b6",
+    "bytes": 22050
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/run_w8_rebase_evaluation.py": {
+    "sha256": "d4908da0a5a3b9487b28cb7b4fc8fae9a1918faa34654ca640538d07cb5160e3",
+    "bytes": 42367
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/evaluate_bf16_integrity.py": {
+    "sha256": "f0a84fc9f8b1ed8f0088df755b42935af75840751a524083b8656b32b30fe288",
+    "bytes": 24797
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/check_behaviors.py": {
+    "sha256": "9928ef1517927b81cd74b9a447989fe5e30e1002dd8cdbffeb8dbeed48fb180b",
+    "bytes": 10657
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/check_behaviors_thinking.py": {
+    "sha256": "cdfd43d3fcf7573e42d42047a3e40b9abebd806a6ab344cdeeb6e84f7738da6b",
+    "bytes": 16970
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/analyze_thinking_work.py": {
+    "sha256": "7ec041c485f859ef3876a4d6e446713495587ab703dcec55a1d0f51a98cfa738",
+    "bytes": 22929
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/run_thinking_behaviors.py": {
+    "sha256": "63350a4126b69d8f5b3278623df7ebb50d97e79c4381ddf47c04758bdf16df4b",
+    "bytes": 19332
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/broader-validation/capability-cases-v1.json": {
+    "sha256": "34bdac9e83f9651a2cddbef6e2b8dcbe9eedffa3e758bc2d2402421f97c1f5ba",
+    "bytes": 147669
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/evaluate_markers.py": {
+    "sha256": "a0feb6cf923dca4e5fd5330d8a1cc24d10d51ddff0912db4454f23a70108b9bb",
+    "bytes": 25892
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/evaluate_integrity_thinking.py": {
+    "sha256": "b3054a303ebd8371a57bd0951d93dc7cc8ff974a06180f027462d5b621001696",
+    "bytes": 47456
+  },
+  "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/entrypoints/anthropic/protocol.py": {
+    "sha256": "57f6024bbbc5aeea0a8f967cf768998e1047ac621805a10f4451f52c59d34fd3",
+    "bytes": 10607
+  },
+  "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/entrypoints/anthropic/serving.py": {
+    "sha256": "1e09aafc799b6604b187e9a8cb0b74558724d790a860f709c1236936697ec161",
+    "bytes": 50655
+  },
+  "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/entrypoints/openai/chat_completion/protocol.py": {
+    "sha256": "4bdc71f668e4820d8ae5bae2a153fed0296b430cd6353ace8c0c27cfb982ebc1",
+    "bytes": 47050
+  },
+  "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/parser/gemma4.py": {
+    "sha256": "c974f47dc39ab7276da1e4ae38c4010e3f5411481f75e3879e29f47b2fd08df7",
+    "bytes": 20893
+  },
+  "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/parser/engine/parser_engine.py": {
+    "sha256": "d1075deeb25b4872e92752d7ef0598a07a747afaf2afc56058ec30c6dc1da89a",
+    "bytes": 43641
+  },
+  "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/config/reasoning.py": {
+    "sha256": "2c4f7bdee48a9fb3d93787c4c32361c2411417cce452cfde86808d8759977861",
+    "bytes": 5168
+  },
+  "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/engine/arg_utils.py": {
+    "sha256": "95be1adb96f55933f6a52260c8cb2181d04707401ca21d97c33108c5ab58f3ac",
+    "bytes": 136087
+  },
+  "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/v1/engine/input_processor.py": {
+    "sha256": "d79601e4a053a7bacb0d6a23e273348435e4ab70c6a315dcccb2d428ed57d96b",
+    "bytes": 27744
+  },
+  "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/v1/sample/thinking_budget_state.py": {
+    "sha256": "962f8f55210eb0a431cb9c78b013e35f7a7dd58d06d6fb2e7fcff1b457356f8e",
+    "bytes": 24584
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/integrity-batch-result-v1.json": {
+    "sha256": "8a889c7374d514e1be0e17d3387775dc85c010e7912f8ea93e132d9dd24ded17",
+    "bytes": 6747
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/thinking-batch-result-v1.json": {
+    "sha256": "529501a29fecf3c86c9a5e0ecd0546f2ec6ea49f0cc40d414a05fe45dca60f48",
+    "bytes": 4965
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/thinking-behaviors-result-v1.json": {
+    "sha256": "5fbeec2ac4dc8b89cdd8306d9c4b9f5f503376767ce4a7fc0fda34bf477f90d2",
+    "bytes": 16430
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8-rebase-evaluation-result-v1.json": {
+    "sha256": "32e6e704bdbb2fcda80f54417c90dcc5b10b97d80770ec9c318b4d44049222f0",
+    "bytes": 26967
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8-rebase-evaluation-plan-v1.json": {
+    "sha256": "447e49b2bab14bd94cbe494ddfdc362a258bc57632640b0bfb5c9f46a401645b",
+    "bytes": 103139
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8-rebase-evaluation-registration-v1.json": {
+    "sha256": "648e705ba1e3404f8301812b55c64b37f05842dcc1f9378cd772c5752eb3c0c4",
+    "bytes": 5878
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/evaluate_integrity.py": {
+    "sha256": "dc7129030f78ac34887916e97e75b61c81d143920b0fc94d54a39500c7e73a07",
+    "bytes": 38749
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/run_thinking_batch.py": {
+    "sha256": "08ec7b4892fe6094456353e4ec8df746b2731c19aaabb5de98e2d9cc4a1b3a57",
+    "bytes": 3908
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/launch-v1.json": {
+    "sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+    "bytes": 3085
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/precision-manifest-v1.json": {
+    "sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+    "bytes": 1777
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapter-identities-v1.json": {
+    "sha256": "b6c8059c4e3c6fefc0c736b223740baf4130ce194a84dd283eefd49ab1687929",
+    "bytes": 2402
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/nf4-direction-w8-weight-strength-1.0-vllm-v1/provenance-validation.json": {
+    "sha256": "38aa74f31d44b785704858c545837edcaea1585f2a503f230ace726cb6b1b310",
+    "bytes": 45072
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/nf4-direction-w8-weight-strength-1.0-vllm-v1/adapter_model.safetensors": {
+    "sha256": "d9e1cc5bb190673c80380f38258576b3b1dec0d7d93d36e38c2533ba36a9b7cb",
+    "bytes": 494660296
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/nf4-direction-w8-weight-strength-1.0-vllm-v1/adapter_config.json": {
+    "sha256": "8f404726dab2bbd3ddbe99630a37ed3ded557ab077659c556f03e0ec36804891",
+    "bytes": 674069
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/nf4-direction-w8-weight-strength-1.0-vllm-v1/projection-validation.json": {
+    "sha256": "b5e726fe7496c0da58c2cee6cc838d716add24e7f3d7e88fa294d1f255833d46",
+    "bytes": 1315877
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/build_w8_weight_rebase.py": {
+    "sha256": "8f0d61388c70f5c3348287dd02291aca8589948c1c38bac01f07e82f24df4381",
+    "bytes": 42709
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8-weight-rebase-preflight-v1.json": {
+    "sha256": "66c114d97ce8754f94217b42e1e1a4311d14511aada3a855570aacbd56727096",
+    "bytes": 40546
+  },
+  "/home/isnotreal/model-tools/redcell-abliteration-20261014/candidate-adapter/adapter_config.json": {
+    "sha256": "26bdc03fe2ca3614c71ca8ba6bfb2eb25f54113f67bb7d3bb24ef6fa402904b9",
+    "bytes": 6377
+  },
+  "/home/isnotreal/model-tools/redcell-abliteration-20261014/candidate-adapter/adapter_model.safetensors": {
+    "sha256": "a46bafac4789ecb97bc94d2c3d6a106692f9694676d80604ccf9aa472d4f7389",
+    "bytes": 167902368
+  },
+  "/home/isnotreal/model-tools/redcell-abliteration-20261014/env/lib/python3.12/site-packages/peft/tuners/tuners_utils.py": {
+    "sha256": "e7f99b2ac5766ea317bcb943619d8a2a2235057acb5b543a1973ae8938173659",
+    "bytes": 133586
+  },
+  "/home/isnotreal/model-tools/redcell-abliteration-20261014/heretic/src/heretic/model.py": {
+    "sha256": "2031efcd1980d2734dfc2daa343c3b0588d1d25bf0062e8026fe35f4bd9d4b10",
+    "bytes": 33910
+  },
+  "/home/isnotreal/model-tools/redcell-abliteration-20261014/heretic/src/heretic/modifiers/abliteration.py": {
+    "sha256": "66bd3ff495db689494d8facbe2c08509915f97168460da802248ff71d217f10d",
+    "bytes": 19766
+  },
+  "/home/isnotreal/model-tools/redcell-abliteration-20261014/pilot-settings.json": {
+    "sha256": "7bed47264a1352e5cf045df57a84809e21a4e697d4cfd475a592aef889b0ac8e",
+    "bytes": 1926
+  },
+  "/home/isnotreal/model-tools/redcell-abliteration-20261014/pilot-summary.json": {
+    "sha256": "39ce2d9baabaee5b9ad70cffc14e95ad2ca91faf0b4ca6fde14bf557c9b214ab",
+    "bytes": 1045
+  },
+  "/home/isnotreal/model-tools/redcell-abliteration-20261014/refusal-directions.pt": {
+    "sha256": "c53e4a69845092099a096a9673893fce609a9b1dbbb022b5968f9492d218cda7",
+    "bytes": 350838
+  },
+  "/home/isnotreal/model-tools/redcell-abliteration-20261014/trials.json": {
+    "sha256": "69eb673b3d8c5cf59f1f9cb4f0b755be48600750713bd02e6ca7f555884d0b93",
+    "bytes": 11051
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/prepare_vllm_adapter.py": {
+    "sha256": "e57818219ca7e11fb3ccf22c4743b1f37f3d32b5323162fa17c13942f8921d40",
+    "bytes": 20034
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/attention-1.5-mlp-1.0-vllm/adapter_config.json": {
+    "sha256": "8f404726dab2bbd3ddbe99630a37ed3ded557ab077659c556f03e0ec36804891",
+    "bytes": 674069
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/attention-1.5-mlp-1.0-vllm/adapter_model.safetensors": {
+    "sha256": "a108c0bb3e80075975c6565c0f53dc965593611cebae78c19264d70a19c402ac",
+    "bytes": 494660296
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/strength-1.0-vllm/adapter_config.json": {
+    "sha256": "8f404726dab2bbd3ddbe99630a37ed3ded557ab077659c556f03e0ec36804891",
+    "bytes": 674069
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/strength-1.0-vllm/adapter_model.safetensors": {
+    "sha256": "61f51713f45cb9da0e7293074e405d2a36a8ab612a89b180120f47ab45603469",
+    "bytes": 494660296
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/strength-1.5-vllm/adapter_config.json": {
+    "sha256": "8f404726dab2bbd3ddbe99630a37ed3ded557ab077659c556f03e0ec36804891",
+    "bytes": 674069
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/adapters/strength-1.5-vllm/adapter_model.safetensors": {
+    "sha256": "cfd9fe8705b79237e252fba47f19b88c3071683d56eacd4ae4f69a249ada4919",
+    "bytes": 494660296
+  },
+  "/home/isnotreal/models/redcell-baseline-w8a16-native/config.json": {
+    "sha256": "bdd77ab53a226918ed1ac2725729c56fa13ddeba2492bc7a27f53a32aa24d0be",
+    "bytes": 4847
+  },
+  "/home/isnotreal/models/redcell-baseline-w8a16-native/conversion-receipt.json": {
+    "sha256": "1fc3fb351e6f56a3dd39cd594ad55435539024bd28edd298a43f32a73e7af03b",
+    "bytes": 119096
+  },
+  "/home/isnotreal/models/redcell-baseline-w8a16-native/model.safetensors.index.json": {
+    "sha256": "01adf6facae2403c2e0b02d225897535610554b1e5ad52232b66218c2d7a7e15",
+    "bytes": 3530059
+  },
+  "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/lora_weights.py": {
+    "sha256": "767c82ea9d3a302f14046af43c638d41389a6b5136b02b08ead6ab9128b9191c",
+    "bytes": 9725
+  },
+  "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/utils.py": {
+    "sha256": "49e8ff84a4725c963f685b4828eec1f70066969b3e46ca65c0be784df692a83f",
+    "bytes": 15274
+  },
+  "/home/isnotreal/models/redcell-baseline-w8a16-native/generation_config.json": {
+    "sha256": "d4226bbe3117d2d253ba4609720ba82c6c4ce4627a9a6ae05387c78983ac03de",
+    "bytes": 208
+  },
+  "/home/isnotreal/models/redcell-baseline-w8a16-native/chat_template.jinja": {
+    "sha256": "ae53464bf3be25802b3a5b37def7fd89667067d7577049b3b2d74c4d8de4c6d4",
+    "bytes": 18683
+  },
+  "/home/isnotreal/models/redcell-baseline-w8a16-native/tokenizer_config.json": {
+    "sha256": "9f4fec4b1dc6ecddf8f4a92e9caea5971c0e67d81309f3f9066a2bee8c362633",
+    "bytes": 3082
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-summary.json": {
+    "sha256": "65390e8c1b51343c28d768d5351696a7a8c0df90719d67674a212d7bfce316ea",
+    "bytes": 11207
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-config.json": {
+    "sha256": "6462f301a3f5da5c090508d41b3329602773f911dc93607de86a650c616536dc",
+    "bytes": 16855
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-groups/group-0000.json": {
+    "sha256": "b7934bbb52f41324f9f127e3559a7cc43349ce7d63c4e8b421dd953499746bf0",
+    "bytes": 41693
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-groups/group-0001.json": {
+    "sha256": "ff811cb13e113b5f8c799ddcdea8b78c3c3a1cb0c19ebee1ec6b14e41178e83a",
+    "bytes": 39537
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-groups/group-0002.json": {
+    "sha256": "fcd3e7f7655c6e811dab7acb1bfdda694c8b7f52fa2c8bf20cf94697d39a3fd4",
+    "bytes": 37374
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-groups/group-0003.json": {
+    "sha256": "49a412fe9d9fc86169901ff8aa98aa7861c02a8dc3e7af3eb1b25c99378d410c",
+    "bytes": 34335
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-groups/group-0004.json": {
+    "sha256": "26200767a0ce0fafb3def0381c4fc017f7fed3bbbf826f33b22605b39ef25d30",
+    "bytes": 42178
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-groups/group-0005.json": {
+    "sha256": "6b38f102ab24dccd7a3af35048aff7dd59186106d5f81196a0cc1dfbfcd6da24",
+    "bytes": 35446
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-groups/group-0006.json": {
+    "sha256": "93f64ec1538f55930ccc350988d20888cfc5f56756f77cbfb4fff988bf061e8b",
+    "bytes": 40892
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-groups/group-0007.json": {
+    "sha256": "1aa50c05864a4e57930f681cbb59f548eaede816afb839b757e98596608914bb",
+    "bytes": 40789
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-groups/group-0008.json": {
+    "sha256": "a77016a3bc399e0b5cc512b00b0737be9e94b2ffbf682b6ac740d49718ab68ff",
+    "bytes": 36779
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-groups/group-0009.json": {
+    "sha256": "46cc42ca8ea85447336599922452fa55a78318c27df29e3538a665d73f818461",
+    "bytes": 34359
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-groups/group-0010.json": {
+    "sha256": "e76b03e55b3e4065328a90ff05f01670fc2d90a1d8f721a3bb43c20bae4e0f04",
+    "bytes": 38407
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-groups/group-0011.json": {
+    "sha256": "2a544235f45f4e1428baf7a5337258575a000de3e011747f752b80e1bab946b4",
+    "bytes": 35596
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-answers.jsonl": {
+    "sha256": "62f75729f339a5671a6f4e623a1b7ecb11754c59c266a7fb0d7eeb50b08fc119",
+    "bytes": 284021
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-tools-vision-thinking-v1-behaviors-thinking.json": {
+    "sha256": "380f11aa32e1c94eebb82807dd68a7a2cf8ae86e6eb99655ff8b9dec6a6073b9",
+    "bytes": 65209
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-tools-vision-thinking-v1-behaviors-thinking-config.json": {
+    "sha256": "b16f7c6677c3ab239bec402da1c151115c51a6f45b87a967513c6882870025bf",
+    "bytes": 10787
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-summary.json": {
+    "sha256": "ffaff13f0830d87da294e04dd9f81bef692e9854bf8b695b8713923ead7d7a26",
+    "bytes": 12001
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-config.json": {
+    "sha256": "a0dd710cca4292844ddbb6983c76664552918f7595cbbd185e6fe1f1b972dd3d",
+    "bytes": 17678
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-groups/group-0000.json": {
+    "sha256": "dd3f6072246c92768761ab63a48ea016ac72945025c981350812ac2358071f06",
+    "bytes": 52559
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-groups/group-0001.json": {
+    "sha256": "dfcbf747a5f5ceb988d6352518eaf9169ac58c677e969034ddba3ecf6f7623b4",
+    "bytes": 40488
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-groups/group-0002.json": {
+    "sha256": "30f970ef339a9edd8d6d01cfc17773128dff03a4d42accac5c106cea29780b91",
+    "bytes": 43418
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-groups/group-0003.json": {
+    "sha256": "b18d6370436e289299424789cde70a47a9b69c31ac80469ffb35cf390f7f9031",
+    "bytes": 34913
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-groups/group-0004.json": {
+    "sha256": "4c6c4b4b8c3d5154211a213f0a4e21d2521176ae408e02453fda75cf868849ef",
+    "bytes": 44658
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-groups/group-0005.json": {
+    "sha256": "b9606ce67a12fad966798d6b80baa1396ff2bdbcc8634d2f348968e0fd597433",
+    "bytes": 35519
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-groups/group-0006.json": {
+    "sha256": "dabc0e0333453ac29e3821e00dd5a220cfd7dd7a8ba6fe5264b5c2e423149431",
+    "bytes": 51943
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-groups/group-0007.json": {
+    "sha256": "924e185ab8ffd4c56dbeadaf24caf6a915844dd0f485c83208d0056fb60c33db",
+    "bytes": 41193
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-groups/group-0008.json": {
+    "sha256": "130d951814d0665a19d47e612eb6b2e59430e8cae334e9c37cdf5485c8adb61c",
+    "bytes": 56903
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-groups/group-0009.json": {
+    "sha256": "69592534dab8b4adefffea9eea02e30c0603c0a9f08c0a81cc9c3c826fd28bb4",
+    "bytes": 35184
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-groups/group-0010.json": {
+    "sha256": "3f88001d7c5afcb0cc367c66ad61bfc6f90329349564bdb12892c7f867e2f271",
+    "bytes": 43289
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-groups/group-0011.json": {
+    "sha256": "0524188377483bfde34b2f72e056a8cddfa05f4119ac3cd35960d14d9dab6986",
+    "bytes": 35922
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-answers.jsonl": {
+    "sha256": "5f54988c75182c5cd8056907d5c3d6fd4c968c24e5bd34823d4ae58aaf8aea13",
+    "bytes": 342639
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-tools-vision-thinking-v1-behaviors-thinking.json": {
+    "sha256": "14af55b84b30f99ede2fbd5863cc7ac98ffe7cc4a5320484eb36167a4e278de4",
+    "bytes": 67387
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-tools-vision-thinking-v1-behaviors-thinking-config.json": {
+    "sha256": "8d1a5e9f985d7dc3a9743ee899ba0a85a1e056d99016244ae6c778e94317dc63",
+    "bytes": 11606
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-summary.json": {
+    "sha256": "6a9dad2e5d3b7dd2b03ab39c2b92f2d007d37bfef1f5b519f3cf5b53d27f7a01",
+    "bytes": 12002
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-config.json": {
+    "sha256": "c199e8db5ba1b4ddc89178847ddbc2ef18b1227f6124cee7470441a52a0005ae",
+    "bytes": 17678
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-groups/group-0000.json": {
+    "sha256": "21f55a3a642c9f574ef25754324d80358e9b56658033dae46953e54cdc25d690",
+    "bytes": 49534
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-groups/group-0001.json": {
+    "sha256": "9f50639dd7e1fe329bc61ad5bbd07fd1c362c74749810b853f325e90a7a38d14",
+    "bytes": 42367
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-groups/group-0002.json": {
+    "sha256": "650f3ea61b3ace240b13c6c78a05b10e145fd5afa7d6ab16edbb29f44ada50d0",
+    "bytes": 53753
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-groups/group-0003.json": {
+    "sha256": "165c54028457ac2468ac527240389304e98b927dbc4753725d7793453b4bc181",
+    "bytes": 35170
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-groups/group-0004.json": {
+    "sha256": "ae2421e208b807f18cee132a77e635d6b3b5a79eab4e7c679955058e457df7d9",
+    "bytes": 49509
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-groups/group-0005.json": {
+    "sha256": "1cd764d7c4abc2b2627cacd70ef58ef1e30c0b4c283fd2e6150dd6eb7f82081e",
+    "bytes": 35631
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-groups/group-0006.json": {
+    "sha256": "b8e17051502cb5aaaa0ebe0576e19e8b4f0134cf6958bc69b2f0db7a558e40c2",
+    "bytes": 48474
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-groups/group-0007.json": {
+    "sha256": "fbc003a6db6af30f32c70e06058816de6be11f028e9eeb5a868d8a4da949f350",
+    "bytes": 41804
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-groups/group-0008.json": {
+    "sha256": "e4e2adb38a86aa73b1448858fe069f4b25a8bb31dcae024cacc1bbf26452a108",
+    "bytes": 75785
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-groups/group-0009.json": {
+    "sha256": "be1f3942663ad62c0c2670a49a2e43d37960d00bf6dc7711c01721d67fdfefdd",
+    "bytes": 35178
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-groups/group-0010.json": {
+    "sha256": "a2618738dc6b4b45900b814ad0b63c8460629d1ac99707d2b7a97308f5a6bb7c",
+    "bytes": 45094
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-groups/group-0011.json": {
+    "sha256": "98f4fc536a1967dfcfe463937e2e2f32d7655179f2404efb47b1607b039eaa02",
+    "bytes": 35688
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-answers.jsonl": {
+    "sha256": "006eb48f5d7d5ba03fed0c70ae5a7b9dfbf40eb83c948741ef1ef7beec15557e",
+    "bytes": 374626
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-tools-vision-thinking-v1-behaviors-thinking.json": {
+    "sha256": "4da15bccf43d958af7cdbae9c4e88b0c2b8e1977a4bde97421e60e8f7cacee3f",
+    "bytes": 68787
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-tools-vision-thinking-v1-behaviors-thinking-config.json": {
+    "sha256": "ad3f84da4df0e003eebb260c5a27444ce8316d17099bcc70887775c2e2b0a7f4",
+    "bytes": 11606
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-summary.json": {
+    "sha256": "5081cbeda4320a6622bbdcc0717b4826be1a60647868599254f1d28b9ddf4b6c",
+    "bytes": 12065
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-config.json": {
+    "sha256": "b3df5516baebd5333db36a85d024f0835176bbd3d206044311b4c53605e7ee20",
+    "bytes": 17723
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-groups/group-0000.json": {
+    "sha256": "87adb1fcb4c93cea24e9432af96f347950033d948a51874b2f4867e4934ba5ab",
+    "bytes": 52120
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-groups/group-0001.json": {
+    "sha256": "6b4354e693d483337b763866663e66af2bf39d42316808f10b559dd27e89ced3",
+    "bytes": 42696
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-groups/group-0002.json": {
+    "sha256": "6805f4a300f113af51b7bf9cf70d00e38025ee714f60ab6c332e8065411e1ee7",
+    "bytes": 76499
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-groups/group-0003.json": {
+    "sha256": "59e3886e16543f5d9fe484911e94cfd908efa9b075c43e282360f9d265cb1cca",
+    "bytes": 35343
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-groups/group-0004.json": {
+    "sha256": "6b706936de2b87b16253d5ae627e9b56b6a8e8f0e5ddb008fa8058f8ddce2265",
+    "bytes": 47023
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-groups/group-0005.json": {
+    "sha256": "57cb85866fcb23ee8ee9aba21d15c2c6c3b42fc6da5e666b2111e79f695af1de",
+    "bytes": 35706
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-groups/group-0006.json": {
+    "sha256": "b411f4fe2ab1d831a31e317a011d006b7defd7fe71ccd7153f8c6e346ea470f7",
+    "bytes": 55798
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-groups/group-0007.json": {
+    "sha256": "9c2f6d372122d7ec7e09f25fc5d61c594d35ee0d90242dec5c45a9b8638b2319",
+    "bytes": 42205
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-groups/group-0008.json": {
+    "sha256": "1f0196dc7f535e16609fa6b311ed6f7b018f791dea72431ddf20da46e93c7b4b",
+    "bytes": 72038
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-groups/group-0009.json": {
+    "sha256": "7fd8d543a0047a9c698394371fe458550058effc5b2b85f2165c04d729bdd85d",
+    "bytes": 34927
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-groups/group-0010.json": {
+    "sha256": "190344f9cf9531482b1dad2c32d35d0057773e351e2e1b3c2c7eb3d428dde927",
+    "bytes": 50320
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-groups/group-0011.json": {
+    "sha256": "c37bef37b87944d71bdbeb8d5d6cef98b44a620979acb04be9ee92e223c59681",
+    "bytes": 35718
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-answers.jsonl": {
+    "sha256": "27a05f6e8f15425aa01701787ffd9a63bfc6ef89e6907ab05ff12e1f0dc83821",
+    "bytes": 404505
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-tools-vision-thinking-v1-behaviors-thinking.json": {
+    "sha256": "2010db81fa19ca07dfc021a84524cc00b4799ba71f7fd484a7b9d31cdf96dadb",
+    "bytes": 67723
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-tools-vision-thinking-v1-behaviors-thinking-config.json": {
+    "sha256": "8452a3797702d4d23b4cce901ca5ef8935f9db08edc7f0ad907a8743450d516c",
+    "bytes": 11642
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-summary.json": {
+    "sha256": "e924252a463713d5505a9f3a7f58c5670a21a7d2aa912668cca681005e4ccdc5",
+    "bytes": 10660
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-config.json": {
+    "sha256": "83b293b6fb447e93d66787a5736b583b130e2f5bfe209bd43595c02370df515c",
+    "bytes": 14543
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-groups/group-0000.json": {
+    "sha256": "eb3bdd648afb4a51577e83a2a63cf6076844362411fa64401217aa2c4aa13ed2",
+    "bytes": 26412
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-groups/group-0001.json": {
+    "sha256": "498887e826703ccb974e40496600492b028f32bb7bb3751e4fb0a01a4b6acd9d",
+    "bytes": 26585
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-groups/group-0002.json": {
+    "sha256": "b412f11ffff274af8ce583a1f041b73ff2622d12c6467e2553b329d468f87449",
+    "bytes": 26734
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-groups/group-0003.json": {
+    "sha256": "df1f1cf9e18b7792cf22c441f5725c7468796d1564588f5b5508976bddab8030",
+    "bytes": 26650
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-groups/group-0004.json": {
+    "sha256": "6b3e397a5a9cc4264662cb628d5245487ea5f24641312430c007f895dc7e2b30",
+    "bytes": 26689
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-groups/group-0005.json": {
+    "sha256": "35712cfd44d09f13166569a40725ab5eb94ce2b1f3198ded66504f76b1b4ab5b",
+    "bytes": 27131
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-groups/group-0006.json": {
+    "sha256": "8eb047e73b7d0a0e8c3246d4f7a076e65f41875e2b65c44357ce461316d06ebf",
+    "bytes": 26417
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-groups/group-0007.json": {
+    "sha256": "e5dd75726bfbaf7b8de253ccafca2ec8ae353a74faf207519597267bac490051",
+    "bytes": 26588
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-groups/group-0008.json": {
+    "sha256": "b2f1c03c65dcc7bf722e358d0f782ff128f4122c309da7410980b0b812127548",
+    "bytes": 26752
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-groups/group-0009.json": {
+    "sha256": "004b7435daeb5140c03348335d58ae31e5fd99c993f6bccd863ccbe7f1ad7c3e",
+    "bytes": 26650
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-groups/group-0010.json": {
+    "sha256": "adf992a7e1c84f0e7ba283115ab573a1b7d9faff6ba32d4f7516e459e4f5a31b",
+    "bytes": 26724
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-groups/group-0011.json": {
+    "sha256": "d250bbbc4fbdbd01d9231f777bba7d7566d8f393a93315f845b6a0b7af2c64ea",
+    "bytes": 27162
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-answers.jsonl": {
+    "sha256": "c6a2cbff5b8ca68407e4a9f8b720caae7cd3b8c2f3182364712ea1195e9a5333",
+    "bytes": 156557
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-tools-vision-v1-behaviors.json": {
+    "sha256": "b692494ec49851a8ef31da94ff3f543f7f4787c788f3392b7563b1acde98cc02",
+    "bytes": 18530
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-tools-vision-v1-behaviors-config.json": {
+    "sha256": "c939ee1ca23bff4231b297502331704691cabbd3269101a6c87713f611c75930",
+    "bytes": 8373
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-authored24-v1-summary.json": {
+    "sha256": "7e5ce4e201add025d12ebc057d3ac5a8b08ca932252165f9f8d05b1109368d08",
+    "bytes": 11695
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-authored24-v1-config.json": {
+    "sha256": "f9c1c333d93ebe2bcefc01b08b3082b99bba2b405f76fd72dc79e920390bb344",
+    "bytes": 15498
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-authored24-v1-groups/group-0000.json": {
+    "sha256": "336ffec343974bc35bdd3f49b5a8ea6b18f75969b5b9144694c4c06f54fa88c1",
+    "bytes": 33833
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-authored24-v1-groups/group-0001.json": {
+    "sha256": "ac268aa7473b6436c718485663c90479078d558183a34310d6fe4684073a9292",
+    "bytes": 26973
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-authored24-v1-groups/group-0002.json": {
+    "sha256": "9266c69d61a7cb88d8b55daf8c1587ec4375ca0fa3c675105e257820444143f4",
+    "bytes": 27178
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-authored24-v1-groups/group-0003.json": {
+    "sha256": "6d1268898d7575fa67606e0e53d4eb97478336dbbfab8682df48cd6096cf4061",
+    "bytes": 27064
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-authored24-v1-groups/group-0004.json": {
+    "sha256": "fcff4618a488f7f005055e471738803c129cec8f024daef06fa525d71b95d0f2",
+    "bytes": 29025
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-authored24-v1-groups/group-0005.json": {
+    "sha256": "f3515b63529309264af45d4b90736a84ae5e8e21add5e82f54a222d2bac9d514",
+    "bytes": 27547
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-authored24-v1-groups/group-0006.json": {
+    "sha256": "c713c1d3c89b4fff9bcd5f10ac490b823fe53b4502ee660afe64b0ad417d6a93",
+    "bytes": 34299
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-authored24-v1-groups/group-0007.json": {
+    "sha256": "f2c42ee3c05f86899231459889497bac8ce49e68cc72cef728496be0dd82d7c0",
+    "bytes": 26966
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-authored24-v1-groups/group-0008.json": {
+    "sha256": "7c8584e9f7dba050bdfb914696ce22b89829e0d0a161af2d175195308cf734ba",
+    "bytes": 27159
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-authored24-v1-groups/group-0009.json": {
+    "sha256": "4d6d22cd6b78d97cb8a6ec44022613ff7bee85581765b0dea44fd532655be800",
+    "bytes": 27072
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-authored24-v1-groups/group-0010.json": {
+    "sha256": "17f3ee530e6cacdbc43db82ed2b5db82620519864b24fb889fab3fbde3e8d625",
+    "bytes": 29045
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-authored24-v1-groups/group-0011.json": {
+    "sha256": "07ed528453546db288aba4006952f426847e772579e00e099277ebc672ba8b43",
+    "bytes": 27580
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-authored24-v1-answers.jsonl": {
+    "sha256": "67b57bf58e508b27d7271b60ebae5c2837d19f9edd7833ff903825dccd50ff09",
+    "bytes": 177686
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-thinking24-v1-summary.json": {
+    "sha256": "ce5b5b8a79902a9b28331adac3c63041d40167845afb8ff840657729ae09031d",
+    "bytes": 12242
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-thinking24-v1-config.json": {
+    "sha256": "15f8381746d9ee396a72ecf06898087353720e7b3aac2c873cf9e4e90cb9562e",
+    "bytes": 17810
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-thinking24-v1-groups/group-0000.json": {
+    "sha256": "24a6904740ee03b0bbcabc3ed6c4d620ca373b54442c28479c053ccc0dd261fb",
+    "bytes": 52156
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-thinking24-v1-groups/group-0001.json": {
+    "sha256": "9344f99b48c2bec774ea0a454f5500ca969f2a89dd696a05d4fb6b68b3d15b37",
+    "bytes": 43447
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-thinking24-v1-groups/group-0002.json": {
+    "sha256": "e27da411becf4621f69d22b66dedf3ac644ea74df8ad71c5d5bd20f4a43e3462",
+    "bytes": 103160
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-thinking24-v1-groups/group-0003.json": {
+    "sha256": "aab4295fe65964cde3ac7b54a32cf39b1f45a050447c0c5bcf81780cf356acac",
+    "bytes": 35067
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-thinking24-v1-groups/group-0004.json": {
+    "sha256": "a4f9ac90ac3fa4628f44b345d02503c0cd26963028b6178742216c1c7e02d034",
+    "bytes": 46118
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-thinking24-v1-groups/group-0005.json": {
+    "sha256": "60e1ef747856d7aa512eeafb8fa716b6ee07a2f6983057344a2f43edb83c1d32",
+    "bytes": 35859
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-thinking24-v1-groups/group-0006.json": {
+    "sha256": "c52f6f3aecf638898ab3721e2aa2fe7763c26bbd7f7ebfda6413524d35739874",
+    "bytes": 51630
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-thinking24-v1-groups/group-0007.json": {
+    "sha256": "bdd5321f8e7c443dfe72245b42bc941ea380f04b854d933dbb8279098c796665",
+    "bytes": 41106
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-thinking24-v1-groups/group-0008.json": {
+    "sha256": "857fde747c138c9843a59beef86adbb108edc5642da99f93432b04b8b585ada2",
+    "bytes": 59100
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-thinking24-v1-groups/group-0009.json": {
+    "sha256": "9a41276bf2410303ecd56aad61126df8c612d0f4627288dd55e9aef8e3a55c1c",
+    "bytes": 35380
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-thinking24-v1-groups/group-0010.json": {
+    "sha256": "dfe8b97aca9ebd6806f2ccb4bc9eccfa879ca8f72c262c6dfc53e740e1023ba4",
+    "bytes": 48803
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-thinking24-v1-groups/group-0011.json": {
+    "sha256": "47e9215b028d7e9c70823b15f5b67f8e3c230311d8cdf232a40ff98c8184dbdb",
+    "bytes": 36246
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-thinking24-v1-answers.jsonl": {
+    "sha256": "9f36d70e94155e8d0fc706b50d4c3ef450350a4b2dca9e5c3dbd8f8e99851e9f",
+    "bytes": 413435
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-tools-vision-v1-behaviors.json": {
+    "sha256": "24c685213b8cfd01f34318fb2eeb8158afdee9792e59c1cb14c16a49f8df5f2a",
+    "bytes": 19772
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-tools-vision-v1-behaviors-config.json": {
+    "sha256": "80b896db899693468670bc6142449cc17a284c8ab0a61fa9c888a91ab9841ac6",
+    "bytes": 9300
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-tools-vision-thinking-v1-behaviors-thinking.json": {
+    "sha256": "c17e16b2583cb47a6e5df761499774c0d1434fb1ae91b43911ddced6dd2f4e16",
+    "bytes": 68352
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-nf4-direction-w8-weight-strength-1.0-tools-vision-thinking-v1-behaviors-thinking-config.json": {
+    "sha256": "5e23214a2c816ec6985bf0e27b414b0d21c82ed066179ffc05e8864c8c757657",
+    "bytes": 11714
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8-weight-rebase-launch-v1.json": {
+    "sha256": "888267d1df5778a23c243a652dc4ef8ebf60db44600803d435e9339224c275a9",
+    "bytes": 974
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8-weight-rebase-completion-v1.json": {
+    "sha256": "8fe15fa9d7fbc5db144084ba90b138a071b99f05d37df903f767c3f82bcf2380",
+    "bytes": 1464
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8-rebase-delta-comparison-v1.json": {
+    "sha256": "3aff4af12403346662adee5bd2826134b725f0ea45feb05c452a0aedf8fd1e3e",
+    "bytes": 727257
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/research-runtime-overlap-events-v2.json": {
+    "sha256": "e329a048f80ebf39a9ff1f883e2bb9b529d9c987aeefe31a01f7e194eaa76c8f",
+    "bytes": 2790
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/result.json": {
+    "sha256": "e7dfbee08e89e9ae19a4ec883392422e8485ffb7dfb9837c8dc2e99d1245cacf",
+    "bytes": 256036
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-recovery-figures-v1/manifest.json": {
+    "sha256": "f7419747b1b4cf623ae014f20ea779846e33681ac1c5eea5daaa1ad31538eeeb",
+    "bytes": 1169
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-postanalysis-v1.json": {
+    "sha256": "f22314baa49a13a82e710a565f1b0ce59ba198e9ba2df2c34f8303ce5815bd71",
+    "bytes": 61975
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-q8-pilot-20261016T015600Z/summary-v1.json": {
+    "sha256": "204ae15e8e06340e2ef9e7647695f01fdc3eee61b6cbc40e8d1ab1c0a7f57aeb",
+    "bytes": 10535
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-summary.json": {
+    "sha256": "388b08614db11997a8203ed9ae691afa35c085e89e447f862f3f2e40dcca175e",
+    "bytes": 11455
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-config.json": {
+    "sha256": "fd7ebe025b0be068c23aac5e2da23f6c6a90575116b98404a519c43a18f98752",
+    "bytes": 15366
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-groups/group-0000.json": {
+    "sha256": "cf914592cce3d513909553f83915557e94d29b433dd8f1090fe949e74f8d9ef9",
+    "bytes": 34048
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-groups/group-0001.json": {
+    "sha256": "941867e0a9f4172cc643bd95b888f06fd9637499d3cbb529d50dd1168cc442d4",
+    "bytes": 26753
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-groups/group-0002.json": {
+    "sha256": "d9ee5e6014287950505fe59f93bd7b15448bd9dd7143d073b1f1dffa79f1483e",
+    "bytes": 26943
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-groups/group-0003.json": {
+    "sha256": "7565307a0fdc3915ead3990d35defbf1bc49fd400e0265d9064373bbe8729079",
+    "bytes": 26851
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-groups/group-0004.json": {
+    "sha256": "2b56e480df0d8014a5d3c91f5ea71298e255ec1cf9cbe45bed0716d92f9f57c3",
+    "bytes": 29455
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-groups/group-0005.json": {
+    "sha256": "c6b597128de33db5afcbe53bf672855f1ec83ada7ef0eafdf693e616842b2b4c",
+    "bytes": 27325
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-groups/group-0006.json": {
+    "sha256": "dc583eee42722b907cbab6411322f4b8bf3d22b4bf5f749eb55bd8c70d300717",
+    "bytes": 34851
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-groups/group-0007.json": {
+    "sha256": "c1fd6073d3286431d5cf036a417efd0727eaa741f206f19b2d05ebe64944383a",
+    "bytes": 26750
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-groups/group-0008.json": {
+    "sha256": "5e578a87e1a60596f5947b770f7a5dd350deb5353e54c3fb963a9ecc33c0a4d3",
+    "bytes": 26959
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-groups/group-0009.json": {
+    "sha256": "4a5d3704023977f16e047ed261546c1a038330b3aa9b586c7982b964a506f858",
+    "bytes": 26848
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-groups/group-0010.json": {
+    "sha256": "26eb6182f27a0bb4e74b7163809e852b3d2efef9fc32f8acfc3cde8b8debfa4b",
+    "bytes": 28842
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-groups/group-0011.json": {
+    "sha256": "fb73420e21af87b694c35dbe965a71ac3f205ec79264ff1eff1fdbf58289fd21",
+    "bytes": 27363
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-answers.jsonl": {
+    "sha256": "c67ea96df46f840bbaa2d1d01c629b5e93f42602e3a6ac56bb55c056bdfd3ee0",
+    "bytes": 176931
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-tools-vision-v1-behaviors.json": {
+    "sha256": "cdc3b95ae8275d84acd97d51c90a41ca0d6b728eac5ef05d716326ae01152cbc",
+    "bytes": 19286
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-tools-vision-v1-behaviors-config.json": {
+    "sha256": "f02bb20cd057eae58d326751ae7f0fcad93f311cd79cdee42f113d838505416e",
+    "bytes": 9192
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-summary.json": {
+    "sha256": "697736a58e811a9351c0ee9bd89b50fc563d228532bf43e163c75b17d11732c7",
+    "bytes": 11453
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-config.json": {
+    "sha256": "cdbdec1ea9a657d2048b3eda27cac0e70fa7305ed1a32339fe72408f376e8ddb",
+    "bytes": 15366
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-groups/group-0000.json": {
+    "sha256": "6f4808eeec9abc1463b8cdff90a341250c5795330c6f623a36890f7c0f262188",
+    "bytes": 35654
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-groups/group-0001.json": {
+    "sha256": "877572c2bd74939b92aa1cff2dbda052ddb056f7469414fe1a512b1026d86e18",
+    "bytes": 30933
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-groups/group-0002.json": {
+    "sha256": "e38458fc82345149b38426324f86adae8a4ab4d39ff8e2048f9f65f15c13bf3a",
+    "bytes": 26940
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-groups/group-0003.json": {
+    "sha256": "f160993089479987b052b9bb5c526448397496b5ea8adeeb8ff41522a7b42e06",
+    "bytes": 26851
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-groups/group-0004.json": {
+    "sha256": "d49b3cbf7dcf3c1cb407051b2527499daf862e86e205307285e39b2072bc6f10",
+    "bytes": 28817
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-groups/group-0005.json": {
+    "sha256": "b990ca21f0d1ad10e18b6f92389bde67f4034cff758e41598753c28a8729aad2",
+    "bytes": 27333
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-groups/group-0006.json": {
+    "sha256": "17c305ccf77da39f53648c4c673fd2cc125dad22a3e66a6e9c134824f7ad875e",
+    "bytes": 35665
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-groups/group-0007.json": {
+    "sha256": "8a82c0d812a92be856ff4e8716f2f37ab5ea1b5deac69e9d9076cea4b21dcbf2",
+    "bytes": 30953
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-groups/group-0008.json": {
+    "sha256": "b853548bc97ae17eb34eb9955b79ce1ef196c2528dcbb3b7d33bd07f7107c89d",
+    "bytes": 26932
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-groups/group-0009.json": {
+    "sha256": "a9c695a0ad41869c3b73b37e1c97f09d1f4d6a9cd1744d6bcd299923f28bf211",
+    "bytes": 26848
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-groups/group-0010.json": {
+    "sha256": "8d985c6eccb9cb987f0c8b18fd1b35f9d8afd781f145a2992a7cbc3cda0d99d0",
+    "bytes": 28847
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-groups/group-0011.json": {
+    "sha256": "c9fb391ee23db87eb40a0542e4ee7c2c6c979a54448bdcfd5c557ae7efc9d064",
+    "bytes": 27366
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-answers.jsonl": {
+    "sha256": "f690ebb11fa9c4b38b10759d091ba6ef417c25457b4b9f1ca7e95c0f167a2028",
+    "bytes": 187096
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-tools-vision-v1-behaviors.json": {
+    "sha256": "40afc3b948671add5ee96fe84ece2eb610ddb508a0a04f95fa9f1d2687e44eff",
+    "bytes": 19252
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-tools-vision-v1-behaviors-config.json": {
+    "sha256": "dce9a295e17219305883de5740f220440d6c7f320b3a67ddb96f6e5ea73e9716",
+    "bytes": 9192
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-summary.json": {
+    "sha256": "cee240b86572efc6b19021bbf321a08d116dbbbe7869774aa04d5909d1225997",
+    "bytes": 11516
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-config.json": {
+    "sha256": "28555674a367034ff7678da01f7817413a20e9bc2dfc66681be396c41efbbbc8",
+    "bytes": 15411
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-groups/group-0000.json": {
+    "sha256": "848e84a915dcffc7a4acdbea2a5d877652bdb142d2f67db9dd63f6d79854c00f",
+    "bytes": 33807
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-groups/group-0001.json": {
+    "sha256": "89d77b87e82cfd5b6e9d2596904424764c28e6b525e0fa301ae79fa3d5535390",
+    "bytes": 26822
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-groups/group-0002.json": {
+    "sha256": "96dc8ee71a82505d48a06aee96749fba7592366c5ee14b89e0e16ccc41809c6a",
+    "bytes": 27015
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-groups/group-0003.json": {
+    "sha256": "e4f31ac54abb3ec13b240ceff75d5daa3a6c32988dfb181bb84e5a7a36442872",
+    "bytes": 26922
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-groups/group-0004.json": {
+    "sha256": "41a278fd113e7fca5f2f95248de8931e85a094b3bfcab3dd25f51ccc84809ffd",
+    "bytes": 28955
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-groups/group-0005.json": {
+    "sha256": "a504ea39f44f7db3af144a70c2bf82a06c3cba909afb65e95d2faaf94bb94c08",
+    "bytes": 27402
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-groups/group-0006.json": {
+    "sha256": "556b2a2c0a45b01754e03f9a1324493f4116d1115c8b335305965cf0194ffbe9",
+    "bytes": 35239
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-groups/group-0007.json": {
+    "sha256": "0304403d6020825287529f5926decac27c52d55fef4f7108aed7bc5463f93c77",
+    "bytes": 26821
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-groups/group-0008.json": {
+    "sha256": "29576b1c7bf157b6f303a7525c7dee54f9f3e490a1dd85c5844cac177b1e4281",
+    "bytes": 27027
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-groups/group-0009.json": {
+    "sha256": "1c2788c252ab15c82dbaeebd564fbef6a8cd1f0771c7ff7ac22da9a7003f86cf",
+    "bytes": 26916
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-groups/group-0010.json": {
+    "sha256": "6d5b6a77b02cb7df78035da7d0e2a02eaf8e5f5fe581eb05f13f93df630fb8b7",
+    "bytes": 29921
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-groups/group-0011.json": {
+    "sha256": "ccc9f777627b302c338d3719bf3f6571db4d81d60fd665e64992464e5e7c2c8a",
+    "bytes": 27434
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-answers.jsonl": {
+    "sha256": "a723ac33a5b863613bbdf308884378b4b9722fb6ce9ef3325c83831ed758f7bf",
+    "bytes": 178247
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-tools-vision-v1-behaviors.json": {
+    "sha256": "50a5131d812840aa20950a25da0453f907ca0c0bce15a6e787bebc4f48e6dcbd",
+    "bytes": 19447
+  },
+  "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-tools-vision-v1-behaviors-config.json": {
+    "sha256": "67978444a7226ec3135dd8938f3a621e77879dae8dc9f2546f1c84ddaf31baa7",
+    "bytes": 9228
+  }
+}

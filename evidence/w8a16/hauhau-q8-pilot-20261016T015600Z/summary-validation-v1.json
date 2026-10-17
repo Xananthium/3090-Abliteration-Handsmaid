@@ -1,0 +1,32 @@
+{
+  "status": "completed",
+  "started_utc": "2026-10-16T02:03:04.482485+00:00",
+  "finished_utc": "2026-10-16T02:03:04.797098+00:00",
+  "postrun_range_hashes_matched": true,
+  "range_count": 10,
+  "range_bytes": 159509504,
+  "artifacts": {
+    "result.json": {
+      "bytes": 146598,
+      "sha256": "ca666400544e5f9ceb92a3ab6588ca6d488289f3c21187185478d4dc7e6f0a2d"
+    },
+    "summary-v1.json": {
+      "bytes": 10535,
+      "sha256": "204ae15e8e06340e2ef9e7647695f01fdc3eee61b6cbc40e8d1ab1c0a7f57aeb"
+    },
+    "summary-v1.csv": {
+      "bytes": 2083,
+      "sha256": "a02e4047de130551d0e34392e653ed3ae64a22d760e5809fd970bb142d8d32bf"
+    },
+    "ranges-manifest.json": {
+      "bytes": 6823,
+      "sha256": "ed24a6e47e0c43ecac912b88de5f931d8fa3b5d039c1d90742eeefe774ceefdf"
+    },
+    "recover_q8_geometry.py": {
+      "bytes": 16805,
+      "sha256": "8296faeb592d3156781260f8ffd0294ee7126be8841d53c1c0ebdc281ccc518a"
+    }
+  },
+  "combined_directory_bytes_before_receipt": 378487605,
+  "phase1_result_unchanged": true
+}

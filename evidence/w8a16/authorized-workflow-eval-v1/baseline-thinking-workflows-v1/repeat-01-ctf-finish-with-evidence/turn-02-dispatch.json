@@ -1,0 +1,23 @@
+{
+  "dispatches": [
+    {
+      "turn": 2,
+      "tool_use_id": "chatcmpl-tool-b5e30f4f74b17432",
+      "name": "read_artifact",
+      "arguments": {
+        "artifact": "artifacts/finish.txt"
+      },
+      "result": {
+        "evidence_id": "E003",
+        "ok": true,
+        "artifact": "artifacts/finish.txt",
+        "content": {
+          "status": "confirmed",
+          "flag": "FLAG{workflow_fixture_only}",
+          "source": "artifacts/finish.txt",
+          "synthetic_only": true
+        }
+      }
+    }
+  ]
+}

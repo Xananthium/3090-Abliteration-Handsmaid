@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-17T16:36:32.556325+00:00",
+  "unit": "redcell-workflow-baseline-eval-1792254992556315571",
+  "command": [
+    "/usr/bin/python3",
+    "-u",
+    "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/authorized-workflow-eval-v1/run_workflows_v1.py",
+    "--label",
+    "baseline-thinking-workflows-v1"
+  ],
+  "working_directory": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/authorized-workflow-eval-v1",
+  "source_sha256": {
+    "run_workflows_v1.py": "c638e3b1b73467c2af10b228e9b73815d879fbef854102f0e998ced70996ff7c",
+    "fixtures_v1.py": "b40a2f1af2985a85f426a571d6720f1d4fe18d698b5488792209e59940e42538",
+    "test_run_workflows_v1.py": "64198a0b866e8aa243082f2588170abd2003c26911b316c2f05604b657efbedd",
+    "test_fixtures_v1.py": "0ce7d1cc0daa179e8565eedccddf55d0b21079383ee7902857a2b1200ed7b10c",
+    "start_local_runtime.py": "424caab0b98b27fb88987ad049ab1c681050f855e9b17bdee4cc47308d24a98e"
+  },
+  "validation": {
+    "offline_tests_passed": 38,
+    "independent_four_issue_review": "GO",
+    "reviewed_issues": [
+      "evidence visibility within tool batches",
+      "negated final findings",
+      "state-changing retries",
+      "explicit URL port zero"
+    ]
+  },
+  "scope": "8 synthetic variants across 6 scenario families; 2 repeats each; unchanged W8A16 reference; no live target execution",
+  "runtime_limit_seconds": 7200
+}

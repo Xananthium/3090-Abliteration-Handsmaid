@@ -1,0 +1,242 @@
+[
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/00-base.bin",
+    "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+    "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "offset": 3076599826,
+    "bytes": 23068672,
+    "sha256": "9a5cf6cc22a48095ab37a8f5470d6ece227dd4d12c7397ee83d8a63347e465b7",
+    "content_range": "bytes 3076599826-3099668497/49907246508",
+    "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/00-hauhau.bin",
+    "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "offset": 823971232,
+    "bytes": 23068672,
+    "sha256": "454a0ec9cfc87a970c7b45a136e1a6bf056828511500db24d271dc95893c25f8",
+    "content_range": "bytes 823971232-847039903/27275669856",
+    "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/01-base.bin",
+    "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+    "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "offset": 3041269266,
+    "bytes": 720896,
+    "sha256": "009d5e2ea49f83f6a1faf424b26233adb6ac4b2c54fdd82eb7de162f4fef1be9",
+    "content_range": "bytes 3041269266-3041990161/49907246508",
+    "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/01-hauhau.bin",
+    "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "offset": 1146416032,
+    "bytes": 1441792,
+    "sha256": "6aec11960aedabf6e143394fefd847fca51ee0f1320e8fc23dd8f61d24fa9066",
+    "content_range": "bytes 1146416032-1147857823/27275669856",
+    "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/02-base.bin",
+    "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+    "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "offset": 3005545232,
+    "bytes": 5632,
+    "sha256": "218744f656a797cef91f0f985f9f034c3e9e06c40d3dad26502edd12a811f068",
+    "content_range": "bytes 3005545232-3005550863/49907246508",
+    "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/02-hauhau.bin",
+    "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "offset": 811704736,
+    "bytes": 11264,
+    "sha256": "f56d20377dd018b027b0315a8a02434eb350a4f5976a224fd4c66ba3f996f998",
+    "content_range": "bytes 811704736-811715999/27275669856",
+    "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/03-base.bin",
+    "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+    "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "offset": 34567223354,
+    "bytes": 720896,
+    "sha256": "7f1453fc17d402f0c51cf53f58d74926dbf93ca5a6672d32a2102edeea4fd5ee",
+    "content_range": "bytes 34567223354-34567944249/49907246508",
+    "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/03-hauhau.bin",
+    "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "offset": 24937154816,
+    "bytes": 1441792,
+    "sha256": "5da65301d40a1cb37740c878562e82b681bd452f3fed02eb243bb544b85896ac",
+    "content_range": "bytes 24937154816-24938596607/27275669856",
+    "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/04-base.bin",
+    "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+    "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "offset": 34531499320,
+    "bytes": 5632,
+    "sha256": "44e82397d067cabd4cf7fc6f6491756de9549d15f3eb51abb57c3a317ae8cd07",
+    "content_range": "bytes 34531499320-34531504951/49907246508",
+    "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/04-hauhau.bin",
+    "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "offset": 24596867840,
+    "bytes": 11264,
+    "sha256": "a7f0733c1c7db750f7672d976a174c6c1fe76c7922f656441febe27d3db3a609",
+    "content_range": "bytes 24596867840-24596879103/27275669856",
+    "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/05-base.bin",
+    "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+    "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "offset": 34531504954,
+    "bytes": 11894784,
+    "sha256": "0b885dfcd31f6f3d29877cb656dbb2ca629e52e27ab28c8f0784a0cab18abc86",
+    "content_range": "bytes 34531504954-34543399737/49907246508",
+    "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/05-hauhau.bin",
+    "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "offset": 24643738368,
+    "bytes": 11894784,
+    "sha256": "00e99cc1cba699aa46da99c626281427b9ba21e40099df88c1b534d1e8c0c1f6",
+    "content_range": "bytes 24643738368-24655633151/27275669856",
+    "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/06-base.bin",
+    "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+    "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "offset": 3005550866,
+    "bytes": 11894784,
+    "sha256": "7b5e45c9418ef38c42f23978326a69c247eb319ab66a9cc64f50c36205b60644",
+    "content_range": "bytes 3005550866-3017445649/49907246508",
+    "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/06-hauhau.bin",
+    "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "offset": 858575264,
+    "bytes": 11894784,
+    "sha256": "82ca7908799aa74bde5efade3de4bafd5ba5d122979b2dffc8b7b2a1977d1c91",
+    "content_range": "bytes 858575264-870470047/27275669856",
+    "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/07-base.bin",
+    "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+    "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "offset": 4633740820,
+    "bytes": 11894784,
+    "sha256": "212db6a8b9715ce485f1249a75da3c538155e2c37e25edcb32a80b066940b7fe",
+    "content_range": "bytes 4633740820-4645635603/49907246508",
+    "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/07-hauhau.bin",
+    "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "offset": 1751880640,
+    "bytes": 11894784,
+    "sha256": "f17d3dcd4e2a0b31cfaf938d207a89bbbad9f7a3fb00757268c802ff7ef5d971",
+    "content_range": "bytes 1751880640-1763775423/27275669856",
+    "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/08-base.bin",
+    "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+    "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "offset": 22021103914,
+    "bytes": 11894784,
+    "sha256": "5690a3b18b91949463446e2f0b78e91e9fc4b1503ab3620a05db79d5d3756b81",
+    "content_range": "bytes 22021103914-22032998697/49907246508",
+    "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/08-hauhau.bin",
+    "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "offset": 2623559136,
+    "bytes": 11894784,
+    "sha256": "93687b618031e9ed1ced3e4fb50ecfe457e4607d2b622107c93a7337b1c51524",
+    "content_range": "bytes 2623559136-2635453919/27275669856",
+    "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/09-base.bin",
+    "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+    "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "offset": 31275125046,
+    "bytes": 11894784,
+    "sha256": "93f915b75e543b92d3cc81efd8a9017e6901914761946421c6f001487bce138d",
+    "content_range": "bytes 31275125046-31287019829/49907246508",
+    "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/09-hauhau.bin",
+    "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "offset": 22867603136,
+    "bytes": 11894784,
+    "sha256": "803d9462de515e50c326868c8e22f30e620d2a1d4fe75df241271bdf3046d0ae",
+    "content_range": "bytes 22867603136-22879497919/27275669856",
+    "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/10-base.bin",
+    "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+    "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "offset": 32903315000,
+    "bytes": 11894784,
+    "sha256": "5328a347f2b62794b5ff6687ba94965adda550131a7138b4c0b6d562f6700b2b",
+    "content_range": "bytes 32903315000-32915209783/49907246508",
+    "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/10-hauhau.bin",
+    "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "offset": 23739281632,
+    "bytes": 11894784,
+    "sha256": "2d0764c813e363406a3b59ae12f281f50af0ec2bb7ca748162e4c35ac6d0a832",
+    "content_range": "bytes 23739281632-23751176415/27275669856",
+    "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/11-base.bin",
+    "endpoint": "https://huggingface.co/google/gemma-4-26B-A4B-it/resolve/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301/model-00001-of-00002.safetensors",
+    "revision": "47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301",
+    "offset": 36159694908,
+    "bytes": 11894784,
+    "sha256": "f6ab4e78446a1d3a889617b6e074f4709acf7bb2b8bce657fb0d42b03726b5fe",
+    "content_range": "bytes 36159694908-36171589691/49907246508",
+    "expected_full_file_sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3"
+  },
+  {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/11-hauhau.bin",
+    "endpoint": "https://huggingface.co/HauhauCS/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced/resolve/96c11c22b1128c3c8c655b21557b409f307c557f/Gemma4-26B-A4B-Uncensored-HauhauCS-Balanced-Q8_K_P.gguf",
+    "revision": "96c11c22b1128c3c8c655b21557b409f307c557f",
+    "offset": 25548195104,
+    "bytes": 11894784,
+    "sha256": "aa8e749dc7b88388c218a60f6d9b25563a17c154456be0654417cb8378c238f2",
+    "content_range": "bytes 25548195104-25560089887/27275669856",
+    "expected_full_file_sha256": "96fb0a8a8ab4fd2b3bcf0ece5b1f852cffa7fa9f2cb8886f6f0166d830016d9d"
+  }
+]

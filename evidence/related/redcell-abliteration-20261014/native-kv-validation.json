@@ -1,0 +1,7 @@
+{
+  "native_turboquant_q4_vision": [
+    "partial multimodal token full attention not supported"
+  ],
+  "native_turboquant_q4_without_vision_mask": [],
+  "native_int4_vision": []
+}

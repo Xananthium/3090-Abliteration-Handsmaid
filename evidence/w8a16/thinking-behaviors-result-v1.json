@@ -1,0 +1,473 @@
+{
+  "status": "completed",
+  "finished_utc": "2026-10-16T01:17:52.152301+00:00",
+  "comparisons": [
+    {
+      "branch": "baseline",
+      "label": "w8a16-baseline-tools-vision-thinking-v1",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-tools-vision-thinking-v1-behaviors-thinking.json",
+      "sha256": "380f11aa32e1c94eebb82807dd68a7a2cf8ae86e6eb99655ff8b9dec6a6073b9",
+      "config_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-tools-vision-thinking-v1-behaviors-thinking-config.json",
+      "config_sha256": "b16f7c6677c3ab239bec402da1c151115c51a6f45b87a967513c6882870025bf",
+      "configuration_fingerprint": "a95e4049c3383fc87e324c65942c1b269cfdc53804060de281b6745c1dddb0e5",
+      "protocol_fingerprint": "17fb2341fd7ca91144cdc68601f42220f88ae786aa84a4d1738257d3b65811c4",
+      "completed": true,
+      "passed": 7,
+      "total": 7,
+      "all_tests_passed": true,
+      "all_generations_complete": true,
+      "generation_count": 7,
+      "truncated_generations": 0,
+      "completion_by_test": [
+        {
+          "test": "forced_tool_call",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "tool_result_roundtrip",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "automatic_tool_choice",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "pivot_after_two_errors",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "workflow_completion",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "vision_red",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "vision_blue",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        }
+      ],
+      "generation_stop_reasons": [
+        "end_turn",
+        "end_turn",
+        "tool_use",
+        "tool_use",
+        "end_turn",
+        "end_turn",
+        "end_turn"
+      ],
+      "thinking_block_count": 7,
+      "total_output_tokens": 327
+    },
+    {
+      "branch": "strength-1.0",
+      "label": "w8a16-strength-1.0-tools-vision-thinking-v1",
+      "model_id": "redcell-w8a16-strength-1.0",
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-tools-vision-thinking-v1-behaviors-thinking.json",
+      "sha256": "14af55b84b30f99ede2fbd5863cc7ac98ffe7cc4a5320484eb36167a4e278de4",
+      "config_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-tools-vision-thinking-v1-behaviors-thinking-config.json",
+      "config_sha256": "8d1a5e9f985d7dc3a9743ee899ba0a85a1e056d99016244ae6c778e94317dc63",
+      "configuration_fingerprint": "107b6c9766c795b4a199dd4906c07fd4406940fd67ddc8b8254ce8f1633c1b9e",
+      "protocol_fingerprint": "17fb2341fd7ca91144cdc68601f42220f88ae786aa84a4d1738257d3b65811c4",
+      "completed": true,
+      "passed": 7,
+      "total": 7,
+      "all_tests_passed": true,
+      "all_generations_complete": true,
+      "generation_count": 7,
+      "truncated_generations": 0,
+      "completion_by_test": [
+        {
+          "test": "forced_tool_call",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "tool_result_roundtrip",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "automatic_tool_choice",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "pivot_after_two_errors",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "workflow_completion",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "vision_red",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "vision_blue",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        }
+      ],
+      "generation_stop_reasons": [
+        "end_turn",
+        "end_turn",
+        "tool_use",
+        "tool_use",
+        "end_turn",
+        "end_turn",
+        "end_turn"
+      ],
+      "thinking_block_count": 7,
+      "total_output_tokens": 427
+    },
+    {
+      "branch": "strength-1.5",
+      "label": "w8a16-strength-1.5-tools-vision-thinking-v1",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-tools-vision-thinking-v1-behaviors-thinking.json",
+      "sha256": "4da15bccf43d958af7cdbae9c4e88b0c2b8e1977a4bde97421e60e8f7cacee3f",
+      "config_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-tools-vision-thinking-v1-behaviors-thinking-config.json",
+      "config_sha256": "ad3f84da4df0e003eebb260c5a27444ce8316d17099bcc70887775c2e2b0a7f4",
+      "configuration_fingerprint": "defa32f9174e671c347a54cb6033859215927e49a66fc0c36b58e07d9c63dc67",
+      "protocol_fingerprint": "17fb2341fd7ca91144cdc68601f42220f88ae786aa84a4d1738257d3b65811c4",
+      "completed": true,
+      "passed": 7,
+      "total": 7,
+      "all_tests_passed": true,
+      "all_generations_complete": true,
+      "generation_count": 7,
+      "truncated_generations": 0,
+      "completion_by_test": [
+        {
+          "test": "forced_tool_call",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "tool_result_roundtrip",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "automatic_tool_choice",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "pivot_after_two_errors",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "workflow_completion",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "vision_red",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "vision_blue",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        }
+      ],
+      "generation_stop_reasons": [
+        "end_turn",
+        "end_turn",
+        "tool_use",
+        "tool_use",
+        "end_turn",
+        "end_turn",
+        "end_turn"
+      ],
+      "thinking_block_count": 7,
+      "total_output_tokens": 531
+    },
+    {
+      "branch": "attention-1.5-mlp-1.0",
+      "label": "w8a16-attention-1.5-mlp-1.0-tools-vision-thinking-v1",
+      "model_id": "redcell-w8a16-attention-1.5-mlp-1.0",
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-tools-vision-thinking-v1-behaviors-thinking.json",
+      "sha256": "2010db81fa19ca07dfc021a84524cc00b4799ba71f7fd484a7b9d31cdf96dadb",
+      "config_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-tools-vision-thinking-v1-behaviors-thinking-config.json",
+      "config_sha256": "8452a3797702d4d23b4cce901ca5ef8935f9db08edc7f0ad907a8743450d516c",
+      "configuration_fingerprint": "a6209ffabc9339038596b7292af8ed6bfe1bcdcf18925cf7986c960b96c0ed51",
+      "protocol_fingerprint": "17fb2341fd7ca91144cdc68601f42220f88ae786aa84a4d1738257d3b65811c4",
+      "completed": true,
+      "passed": 7,
+      "total": 7,
+      "all_tests_passed": true,
+      "all_generations_complete": true,
+      "generation_count": 7,
+      "truncated_generations": 0,
+      "completion_by_test": [
+        {
+          "test": "forced_tool_call",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "tool_result_roundtrip",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "automatic_tool_choice",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "pivot_after_two_errors",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "workflow_completion",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "vision_red",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        },
+        {
+          "test": "vision_blue",
+          "passed": true,
+          "generation_complete": true,
+          "conditional_followup_skipped": false
+        }
+      ],
+      "generation_stop_reasons": [
+        "end_turn",
+        "end_turn",
+        "tool_use",
+        "tool_use",
+        "end_turn",
+        "end_turn",
+        "end_turn"
+      ],
+      "thinking_block_count": 7,
+      "total_output_tokens": 432
+    }
+  ],
+  "upstream": {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/thinking-batch-result-v1.json",
+    "sha256": "529501a29fecf3c86c9a5e0ecd0546f2ec6ea49f0cc40d414a05fe45dca60f48",
+    "comparisons": [
+      {
+        "label": "baseline",
+        "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-thinking24-v1-summary.json",
+        "sha256": "65390e8c1b51343c28d768d5351696a7a8c0df90719d67674a212d7bfce316ea",
+        "capabilities": {
+          "correct": 46,
+          "total": 48,
+          "unresolved": 0,
+          "unresolved_truncated": 0,
+          "retried": 0,
+          "by_category": {
+            "consistency": {
+              "total": 12,
+              "correct": 12,
+              "unresolved": 0,
+              "unresolved_truncated": 0
+            },
+            "instruction": {
+              "total": 12,
+              "correct": 10,
+              "unresolved": 0,
+              "unresolved_truncated": 0
+            },
+            "reasoning": {
+              "total": 12,
+              "correct": 12,
+              "unresolved": 0,
+              "unresolved_truncated": 0
+            },
+            "recovery": {
+              "total": 12,
+              "correct": 12,
+              "unresolved": 0,
+              "unresolved_truncated": 0
+            }
+          }
+        }
+      },
+      {
+        "label": "strength-1.0",
+        "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-thinking24-v1-summary.json",
+        "sha256": "ffaff13f0830d87da294e04dd9f81bef692e9854bf8b695b8713923ead7d7a26",
+        "capabilities": {
+          "correct": 46,
+          "total": 48,
+          "unresolved": 0,
+          "unresolved_truncated": 0,
+          "retried": 0,
+          "by_category": {
+            "consistency": {
+              "total": 12,
+              "correct": 12,
+              "unresolved": 0,
+              "unresolved_truncated": 0
+            },
+            "instruction": {
+              "total": 12,
+              "correct": 10,
+              "unresolved": 0,
+              "unresolved_truncated": 0
+            },
+            "reasoning": {
+              "total": 12,
+              "correct": 12,
+              "unresolved": 0,
+              "unresolved_truncated": 0
+            },
+            "recovery": {
+              "total": 12,
+              "correct": 12,
+              "unresolved": 0,
+              "unresolved_truncated": 0
+            }
+          }
+        }
+      },
+      {
+        "label": "strength-1.5",
+        "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-thinking24-v1-summary.json",
+        "sha256": "6a9dad2e5d3b7dd2b03ab39c2b92f2d007d37bfef1f5b519f3cf5b53d27f7a01",
+        "capabilities": {
+          "correct": 46,
+          "total": 48,
+          "unresolved": 0,
+          "unresolved_truncated": 0,
+          "retried": 0,
+          "by_category": {
+            "consistency": {
+              "total": 12,
+              "correct": 12,
+              "unresolved": 0,
+              "unresolved_truncated": 0
+            },
+            "instruction": {
+              "total": 12,
+              "correct": 10,
+              "unresolved": 0,
+              "unresolved_truncated": 0
+            },
+            "reasoning": {
+              "total": 12,
+              "correct": 12,
+              "unresolved": 0,
+              "unresolved_truncated": 0
+            },
+            "recovery": {
+              "total": 12,
+              "correct": 12,
+              "unresolved": 0,
+              "unresolved_truncated": 0
+            }
+          }
+        }
+      },
+      {
+        "label": "attention-1.5-mlp-1.0",
+        "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-thinking24-v1-summary.json",
+        "sha256": "5081cbeda4320a6622bbdcc0717b4826be1a60647868599254f1d28b9ddf4b6c",
+        "capabilities": {
+          "correct": 46,
+          "total": 48,
+          "unresolved": 0,
+          "unresolved_truncated": 0,
+          "retried": 2,
+          "by_category": {
+            "consistency": {
+              "total": 12,
+              "correct": 12,
+              "unresolved": 0,
+              "unresolved_truncated": 0
+            },
+            "instruction": {
+              "total": 12,
+              "correct": 10,
+              "unresolved": 0,
+              "unresolved_truncated": 0
+            },
+            "reasoning": {
+              "total": 12,
+              "correct": 12,
+              "unresolved": 0,
+              "unresolved_truncated": 0
+            },
+            "recovery": {
+              "total": 12,
+              "correct": 12,
+              "unresolved": 0,
+              "unresolved_truncated": 0
+            }
+          }
+        }
+      }
+    ]
+  },
+  "input_sha256": {
+    "check_behaviors_thinking.py": "cdfd43d3fcf7573e42d42047a3e40b9abebd806a6ab344cdeeb6e84f7738da6b",
+    "launch-v1.json": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+    "precision-manifest-v1.json": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+    "adapter-identities-v1.json": "b6c8059c4e3c6fefc0c736b223740baf4130ce194a84dd283eefd49ab1687929",
+    "run_thinking_batch.py": "08ec7b4892fe6094456353e4ec8df746b2731c19aaabb5de98e2d9cc4a1b3a57"
+  },
+  "driver_sha256": "63350a4126b69d8f5b3278623df7ebb50d97e79c4381ddf47c04758bdf16df4b",
+  "protocol_fingerprint": "17fb2341fd7ca91144cdc68601f42220f88ae786aa84a4d1738257d3b65811c4",
+  "all_generations_complete": true,
+  "all_checks_passed": true,
+  "passed": 28,
+  "total": 28,
+  "scope": "Seven previously seen benign tool/vision smokes on four W8A16 branches with thinking enabled. Separate from thinking-disabled results; no refusal or broad quality claim.",
+  "quality_reference": "Untouched W8A16 baseline",
+  "model_or_service_changes": false,
+  "result_sha256": "adde6395a35766d61b8077dad00b906cc0a16b11a7971ac9b9e400c223923d4c"
+}

@@ -1,0 +1,794 @@
+{
+  "status": "complete",
+  "configuration_fingerprint": "ca9675a82af28214cb293f96a7ab5f455c9c0aad70e661b4cd827772b566004b",
+  "schedule": {
+    "index": 2,
+    "repeat": 1,
+    "case_ids": [
+      "broader-fresh-09-percent-encoding",
+      "broader-fresh-10-transpose",
+      "broader-fresh-11-second-delimited-field",
+      "broader-fresh-12-json-types"
+    ]
+  },
+  "attempt_id": "1792108576343900768-159633",
+  "invocation_id": "1792108252652286748-159633",
+  "started_at_utc": "2026-10-15T23:56:16.343983+00:00",
+  "partial_outputs_scored": false,
+  "completed_at_utc": "2026-10-15T23:57:36.666048+00:00",
+  "wall_seconds": 80.32215958699817,
+  "records": [
+    {
+      "id": "broader-fresh-09-percent-encoding",
+      "category": "instruction",
+      "configuration_fingerprint": "ca9675a82af28214cb293f96a7ab5f455c9c0aad70e661b4cd827772b566004b",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "ebc2aaa386ac338975f20da43a65ec62bbb99c07903bb418137f1b487a0b3c51",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.0",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "2e106de62707ca03071f0bbd11c406e0e66d7694bbafb20700dec66460adc771",
+      "prompt_sha256": "f4e8f0135c4132865ac323fc16868bff93860ee050114b9a5d9c1b9c298f9068",
+      "answer_key_sha256": "6e5f93ecb5df82fd2b6fa35821152b39560b0695bff50c472fc2013ec60c2658",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 2,
+      "submission_index": 0,
+      "invocation_id": "1792108252652286748-159633",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 0,
+      "task_finished_sequence": 17,
+      "answer_text": "a%20b%2Fc%2Bd",
+      "raw_final_text": "a%20b%2Fc%2Bd",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 721,
+      "raw_final_text_sha256": "e6b00429ab52b216f8285d5f3fb595a0a73251143c03f756ba0f8b8c374d78cf",
+      "response_attempts": [
+        {
+          "raw_text": "a%20b%2Fc%2Bd",
+          "raw_text_sha256": "e6b00429ab52b216f8285d5f3fb595a0a73251143c03f756ba0f8b8c374d78cf",
+          "thinking_text": "*   Input value: `a b/c+d`\n    *   Rules:\n        *   Letters and digits: Unchanged.\n        *   Space (` `): `%20`\n        *   Slash (`/`): `%2F`\n        *   Plus (`+`): `%2B`\n    *   Output format: Only the encoded value, no quotes.\n\n    *   `a` -> `a` (letter)\n    *   ` ` (space) -> `%20`\n    *   `b` -> `b` (letter)\n    *   `/` (slash) -> `%2F`\n    *   `c` -> `c` (letter)\n    *   `+` (plus) -> `%2B`\n    *   `d` -> `d` (letter)\n\n    *   `a` + `%20` + `b` + `%2F` + `c` + `%2B` + `d`\n    *   Result: `a%20b%2Fc%2Bd`\n\n    *   Letters/digits unchanged? Yes (`a`, `b`, `c`, `d`).\n    *   Space to `%20`? Yes.\n    *   Slash to `%2F`? Yes.\n    *   Plus to `%2B`? Yes.\n    *   Only encoded value? Yes.\n\n    `a%20b%2Fc%2Bd`",
+          "thinking_text_sha256": "1604579fa49857259902b86d2b941b7ed1872b37f792e7ec0b8d14bae70a54d3",
+          "thinking_characters": 721,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Input value: `a b/c+d`\n    *   Rules:\n        *   Letters and digits: Unchanged.\n        *   Space (` `): `%20`\n        *   Slash (`/`): `%2F`\n        *   Plus (`+`): `%2B`\n    *   Output format: Only the encoded value, no quotes.\n\n    *   `a` -> `a` (letter)\n    *   ` ` (space) -> `%20`\n    *   `b` -> `b` (letter)\n    *   `/` (slash) -> `%2F`\n    *   `c` -> `c` (letter)\n    *   `+` (plus) -> `%2B`\n    *   `d` -> `d` (letter)\n\n    *   `a` + `%20` + `b` + `%2F` + `c` + `%2B` + `d`\n    *   Result: `a%20b%2Fc%2Bd`\n\n    *   Letters/digits unchanged? Yes (`a`, `b`, `c`, `d`).\n    *   Space to `%20`? Yes.\n    *   Slash to `%2F`? Yes.\n    *   Plus to `%2B`? Yes.\n    *   Only encoded value? Yes.\n\n    `a%20b%2Fc%2Bd`",
+              "signature": "4a80ea0591ee4de2af5a76dcfd19cd5c"
+            },
+            {
+              "type": "text",
+              "text": "a%20b%2Fc%2Bd"
+            }
+          ],
+          "native_content_blocks_sha256": "608e857e6c5db95567da980eab2b1329611ddc2076ad0fe40b7b09f9311e86a5",
+          "model_id": "redcell-w8a16-strength-1.0",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 76,
+            "output_tokens": 337
+          },
+          "native_request_seconds": 30.40456324000843,
+          "started_sequence": 12,
+          "finished_sequence": 16
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.00826119800331071,
+          "started_sequence": 4,
+          "finished_sequence": 6
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 30.40456324000843,
+          "started_sequence": 12,
+          "finished_sequence": 16
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 337,
+          "input_tokens": 76,
+          "stop_reason": "end_turn",
+          "response_sha256": "e6b00429ab52b216f8285d5f3fb595a0a73251143c03f756ba0f8b8c374d78cf",
+          "visible_characters": 13,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 30.438970152987167
+        }
+      ],
+      "counted_input_tokens": 76,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8052,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "e6b00429ab52b216f8285d5f3fb595a0a73251143c03f756ba0f8b8c374d78cf",
+      "output_tokens": 337,
+      "total_output_tokens_including_retries": 337,
+      "generation_seconds_including_retries": 30.438970152987167,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:56:46.871923+00:00",
+      "record_sha256": "e02ef4529b6d842b1e680cbf930aeebae392af4878fa25c1b5d1d6536ef6592e"
+    },
+    {
+      "id": "broader-fresh-10-transpose",
+      "category": "instruction",
+      "configuration_fingerprint": "ca9675a82af28214cb293f96a7ab5f455c9c0aad70e661b4cd827772b566004b",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "ebc2aaa386ac338975f20da43a65ec62bbb99c07903bb418137f1b487a0b3c51",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.0",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "dc1dd71a15d32585db6ff57615694d602e2baa0b026cf3cc83d5d5c8cf1437d4",
+      "prompt_sha256": "13a3e818b6201b57a59d5a82c6652efeba165b45d68dd5e9e61ce9d356aac2fe",
+      "answer_key_sha256": "1edfb4e885f13e9593e35e8c66affb5062eca59b43b467c8b7d978eb7f4d3d0f",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 2,
+      "submission_index": 1,
+      "invocation_id": "1792108252652286748-159633",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 2,
+      "task_finished_sequence": 19,
+      "answer_text": "[[2, 7, 4], [5, 1, 9]]",
+      "raw_final_text": "[[2, 7, 4], [5, 1, 9]]",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 822,
+      "raw_final_text_sha256": "f3e9cab812dace522130f89ff20d6a601d221c1044205f56e26a3345e2ed226b",
+      "response_attempts": [
+        {
+          "raw_text": "[[2, 7, 4], [5, 1, 9]]",
+          "raw_text_sha256": "f3e9cab812dace522130f89ff20d6a601d221c1044205f56e26a3345e2ed226b",
+          "thinking_text": "*   Input matrix: `[[2, 5], [7, 1], [4, 9]]`\n    *   Operation: Transpose (columns become rows).\n    *   Output format: JSON array of arrays.\n\n    *   Row 0: `[2, 5]`\n    *   Row 1: `[7, 1]`\n    *   Row 2: `[4, 9]`\n\n    *   Column 0: `[2, 7, 4]`\n    *   Column 1: `[5, 1, 9]`\n\n    *   New Row 0: `[2, 7, 4]`\n    *   New Row 1: `[5, 1, 9]`\n\n    *   `[[2, 7, 4], [5, 1, 9]]`\n\n    *   Input: `[[2, 5], [7, 1], [4, 9]]` (3 rows, 2 columns)\n    *   Output: `[[2, 7, 4], [5, 1, 9]]` (2 rows, 3 columns)\n    *   Check values:\n        *   (0,0) -> (0,0): 2 -> 2 (Correct)\n        *   (0,1) -> (1,0): 5 -> 5 (Correct)\n        *   (1,0) -> (0,1): 7 -> 7 (Correct)\n        *   (1,1) -> (1,1): 1 -> 1 (Correct)\n        *   (2,0) -> (0,2): 4 -> 4 (Correct)\n        *   (2,1) -> (1,2): 9 -> 9 (Correct)\n\n    *   `[[2, 7, 4], [5, 1, 9]]`",
+          "thinking_text_sha256": "e167b7b02841af9e2a15856b88995e136f603ce16499a4f5e5d80353833f1e70",
+          "thinking_characters": 822,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Input matrix: `[[2, 5], [7, 1], [4, 9]]`\n    *   Operation: Transpose (columns become rows).\n    *   Output format: JSON array of arrays.\n\n    *   Row 0: `[2, 5]`\n    *   Row 1: `[7, 1]`\n    *   Row 2: `[4, 9]`\n\n    *   Column 0: `[2, 7, 4]`\n    *   Column 1: `[5, 1, 9]`\n\n    *   New Row 0: `[2, 7, 4]`\n    *   New Row 1: `[5, 1, 9]`\n\n    *   `[[2, 7, 4], [5, 1, 9]]`\n\n    *   Input: `[[2, 5], [7, 1], [4, 9]]` (3 rows, 2 columns)\n    *   Output: `[[2, 7, 4], [5, 1, 9]]` (2 rows, 3 columns)\n    *   Check values:\n        *   (0,0) -> (0,0): 2 -> 2 (Correct)\n        *   (0,1) -> (1,0): 5 -> 5 (Correct)\n        *   (1,0) -> (0,1): 7 -> 7 (Correct)\n        *   (1,1) -> (1,1): 1 -> 1 (Correct)\n        *   (2,0) -> (0,2): 4 -> 4 (Correct)\n        *   (2,1) -> (1,2): 9 -> 9 (Correct)\n\n    *   `[[2, 7, 4], [5, 1, 9]]`",
+              "signature": "3ca5131f10f34d4ab4addf6dcb69bf42"
+            },
+            {
+              "type": "text",
+              "text": "[[2, 7, 4], [5, 1, 9]]"
+            }
+          ],
+          "native_content_blocks_sha256": "0a93e34ea17eaaadc773da63fe00d3aabea21d67d0c91593317e906b9709a7b4",
+          "model_id": "redcell-w8a16-strength-1.0",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 63,
+            "output_tokens": 453
+          },
+          "native_request_seconds": 40.81546236202121,
+          "started_sequence": 14,
+          "finished_sequence": 18
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.014030737977009267,
+          "started_sequence": 7,
+          "finished_sequence": 10
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 40.81546236202121,
+          "started_sequence": 14,
+          "finished_sequence": 18
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 453,
+          "input_tokens": 63,
+          "stop_reason": "end_turn",
+          "response_sha256": "f3e9cab812dace522130f89ff20d6a601d221c1044205f56e26a3345e2ed226b",
+          "visible_characters": 22,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 40.85334608599078
+        }
+      ],
+      "counted_input_tokens": 63,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8065,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "f3e9cab812dace522130f89ff20d6a601d221c1044205f56e26a3345e2ed226b",
+      "output_tokens": 453,
+      "total_output_tokens_including_retries": 453,
+      "generation_seconds_including_retries": 40.85334608599078,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:56:57.312286+00:00",
+      "record_sha256": "17a90cfd2c646b8459f155eeece79bd3c1cb4eb2c478161874c1811f74caec58"
+    },
+    {
+      "id": "broader-fresh-11-second-delimited-field",
+      "category": "instruction",
+      "configuration_fingerprint": "ca9675a82af28214cb293f96a7ab5f455c9c0aad70e661b4cd827772b566004b",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "ebc2aaa386ac338975f20da43a65ec62bbb99c07903bb418137f1b487a0b3c51",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.0",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "71cdc0d09fa5ca522ed197d335d20f6f3f9fa402f0dbc437ade9caae97592609",
+      "prompt_sha256": "052a0467fae9ba9736c1461965b029b3ab85e49c22f8e26649fa4a5f6254e244",
+      "answer_key_sha256": "7317a8d3c9eea59a06c84c009dbe370640a27832cef6e3cfbd4fa951e1426f59",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 2,
+      "submission_index": 2,
+      "invocation_id": "1792108252652286748-159633",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 3,
+      "task_finished_sequence": 23,
+      "answer_text": "```json\n{\n  \"value\": \"blue\",\n  \"letters\": 4\n}\n```",
+      "raw_final_text": "```json\n{\n  \"value\": \"blue\",\n  \"letters\": 4\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 3074,
+      "raw_final_text_sha256": "8211a197f243f3d13799d076ce271ab806fc9355ffad14e0a74461b11b080385",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"value\": \"blue\",\n  \"letters\": 4\n}\n```",
+          "raw_text_sha256": "8211a197f243f3d13799d076ce271ab806fc9355ffad14e0a74461b11b080385",
+          "thinking_text": "*   Input string: `start<item>red</item>middle<item>blue</item>end<item>green</item>`\n    *   Task: Extract text in the *second* complete `<item>...</item>` block.\n    *   Output format: JSON with a value containing the text and a key (implied \"letters\" or similar, but the prompt says \"letters containing its character count\") containing the character count.\n    *   Constraint: Return *only* JSON.\n\n    *   Block 1: `<item>red</item>` -> text is \"red\"\n    *   Block 2: `<item>blue</item>` -> text is \"blue\"\n    *   Block 3: `<item>green</item>` -> text is \"green\"\n\n    *   The second block is `<item>blue</item>`.\n    *   The text is \"blue\".\n\n    *   Text: \"blue\"\n    *   Character count of \"blue\": 4\n\n    *   The prompt says: \"Return only JSON with value containing that text and letters containing its character count.\"\n    *   This phrasing is a bit ambiguous: \"value containing that text and letters containing its character count\".\n    *   Usually, this means a JSON object like `{\"text\": \"blue\", \"count\": 4}` or `{\"value\": \"blue\", \"letters\": 4}`.\n    *   Let's look at the specific wording: \"value containing that text\" and \"letters containing its character count\".\n    *   Let's try: `{\"text\": \"blue\", \"letters\": 4}` or `{\"value\": \"blue\", \"letters\": 4}`.\n    *   Actually, \"letters containing its character count\" might mean the key is \"letters\".\n    *   Let's re-read: \"Return only JSON with value containing that text and letters containing its character count.\"\n    *   Interpretation A: `{\"text\": \"blue\", \"letters\": 4}`\n    *   Interpretation B: `{\"value\": \"blue\", \"letters\": 4}`\n    *   Interpretation C: `{\"blue\": 4}` (unlikely)\n    *   Let's go with a standard key-value pair structure. Since the prompt says \"value containing that text\", the key for the text could be \"value\". Since it says \"letters containing its character count\", the key for the count could be \"letters\".\n\n    *   Text: \"blue\"\n    *   Count: 4\n    *   JSON: `{\"value\": \"blue\", \"letters\": 4}`\n\n    *   Second block? Yes (`blue`).\n    *   Only JSON? Yes.\n    *   Value contains text? Yes.\n    *   Letters contains character count? Yes.\n\n    Wait, \"letters containing its character count\" is a weird phrase. Does it mean the key is \"letters\"? Or does it mean the value of the \"letters\" key is the count?\n    \"Return only JSON with [value containing that text] and [letters containing its character count].\"\n    This implies two keys: `value` and `letters`.\n\n    Let's double check the text extraction.\n    `start<item>red</item>middle<item>blue</item>end<item>green</item>`\n    1. `red`\n    2. `blue`\n    3. `green`\n    Second is `blue`. Length is 4.\n\n    Final JSON structure:\n    ```json\n    {\n      \"value\": \"blue\",\n      \"letters\": 4\n    }\n    ```\n\n    Wait, could \"letters\" mean the count of letters? Yes.\n    Could \"value\" be the key? Yes.\n\n    Let's try to be as literal as possible to the prompt's weird phrasing.\n    \"value containing that text\" -> `{\"value\": \"blue\"}`\n    \"letters containing its character count\" -> `{\"letters\": 4}`\n\n    Result: `{\"value\": \"blue\", \"letters\": 4}`.",
+          "thinking_text_sha256": "a89fc1d1b3d6a640214cd00045f550929c425ba7604c72f8c1a2177c3b76a2b5",
+          "thinking_characters": 3074,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Input string: `start<item>red</item>middle<item>blue</item>end<item>green</item>`\n    *   Task: Extract text in the *second* complete `<item>...</item>` block.\n    *   Output format: JSON with a value containing the text and a key (implied \"letters\" or similar, but the prompt says \"letters containing its character count\") containing the character count.\n    *   Constraint: Return *only* JSON.\n\n    *   Block 1: `<item>red</item>` -> text is \"red\"\n    *   Block 2: `<item>blue</item>` -> text is \"blue\"\n    *   Block 3: `<item>green</item>` -> text is \"green\"\n\n    *   The second block is `<item>blue</item>`.\n    *   The text is \"blue\".\n\n    *   Text: \"blue\"\n    *   Character count of \"blue\": 4\n\n    *   The prompt says: \"Return only JSON with value containing that text and letters containing its character count.\"\n    *   This phrasing is a bit ambiguous: \"value containing that text and letters containing its character count\".\n    *   Usually, this means a JSON object like `{\"text\": \"blue\", \"count\": 4}` or `{\"value\": \"blue\", \"letters\": 4}`.\n    *   Let's look at the specific wording: \"value containing that text\" and \"letters containing its character count\".\n    *   Let's try: `{\"text\": \"blue\", \"letters\": 4}` or `{\"value\": \"blue\", \"letters\": 4}`.\n    *   Actually, \"letters containing its character count\" might mean the key is \"letters\".\n    *   Let's re-read: \"Return only JSON with value containing that text and letters containing its character count.\"\n    *   Interpretation A: `{\"text\": \"blue\", \"letters\": 4}`\n    *   Interpretation B: `{\"value\": \"blue\", \"letters\": 4}`\n    *   Interpretation C: `{\"blue\": 4}` (unlikely)\n    *   Let's go with a standard key-value pair structure. Since the prompt says \"value containing that text\", the key for the text could be \"value\". Since it says \"letters containing its character count\", the key for the count could be \"letters\".\n\n    *   Text: \"blue\"\n    *   Count: 4\n    *   JSON: `{\"value\": \"blue\", \"letters\": 4}`\n\n    *   Second block? Yes (`blue`).\n    *   Only JSON? Yes.\n    *   Value contains text? Yes.\n    *   Letters contains character count? Yes.\n\n    Wait, \"letters containing its character count\" is a weird phrase. Does it mean the key is \"letters\"? Or does it mean the value of the \"letters\" key is the count?\n    \"Return only JSON with [value containing that text] and [letters containing its character count].\"\n    This implies two keys: `value` and `letters`.\n\n    Let's double check the text extraction.\n    `start<item>red</item>middle<item>blue</item>end<item>green</item>`\n    1. `red`\n    2. `blue`\n    3. `green`\n    Second is `blue`. Length is 4.\n\n    Final JSON structure:\n    ```json\n    {\n      \"value\": \"blue\",\n      \"letters\": 4\n    }\n    ```\n\n    Wait, could \"letters\" mean the count of letters? Yes.\n    Could \"value\" be the key? Yes.\n\n    Let's try to be as literal as possible to the prompt's weird phrasing.\n    \"value containing that text\" -> `{\"value\": \"blue\"}`\n    \"letters containing its character count\" -> `{\"letters\": 4}`\n\n    Result: `{\"value\": \"blue\", \"letters\": 4}`.",
+              "signature": "51b9af80a26e47cdbb5058dba1b21ae3"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"value\": \"blue\",\n  \"letters\": 4\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "f93e5d807fbdc21cc52ac9f487241d1223862b5463ef71e037fdb9bdce0e584f",
+          "model_id": "redcell-w8a16-strength-1.0",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 85,
+            "output_tokens": 916
+          },
+          "native_request_seconds": 80.14390488498611,
+          "started_sequence": 13,
+          "finished_sequence": 22
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.012120886996854097,
+          "started_sequence": 5,
+          "finished_sequence": 9
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 80.14390488498611,
+          "started_sequence": 13,
+          "finished_sequence": 22
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 916,
+          "input_tokens": 85,
+          "stop_reason": "end_turn",
+          "response_sha256": "8211a197f243f3d13799d076ce271ab806fc9355ffad14e0a74461b11b080385",
+          "visible_characters": 49,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 80.18113894900307
+        }
+      ],
+      "counted_input_tokens": 85,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8043,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "8211a197f243f3d13799d076ce271ab806fc9355ffad14e0a74461b11b080385",
+      "output_tokens": 916,
+      "total_output_tokens_including_retries": 916,
+      "generation_seconds_including_retries": 80.18113894900307,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": true,
+      "scored_correct_before_completion_gate": true,
+      "recorded_at_utc": "2026-10-15T23:57:36.631390+00:00",
+      "record_sha256": "6a79f8f6e18de28586f5fa0d3aaeec9a5aa22102add1692afc682a1d06317dc1"
+    },
+    {
+      "id": "broader-fresh-12-json-types",
+      "category": "instruction",
+      "configuration_fingerprint": "ca9675a82af28214cb293f96a7ab5f455c9c0aad70e661b4cd827772b566004b",
+      "protocol_fingerprint": "746029232a2737d445e2b0b924b13e347348a6a96ac8e64286a762a9830f0265",
+      "base_checkpoint_fingerprint": "6d310bf1f91fea6cdc665388ad70e05fd8317e6fee02fdd6d6989919b25cc912",
+      "adapter_fingerprint": "ebc2aaa386ac338975f20da43a65ec62bbb99c07903bb418137f1b487a0b3c51",
+      "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+      "model_id": "redcell-w8a16-strength-1.0",
+      "selected_cases_fingerprint": "41d0b8ccffff7d499274d99015860fd4c03a8205ba93b4b7890bcc3b5119dd95",
+      "case_sha256": "4b2d25e6f90fd80e2b979c8313c43ed8c9b5ef9e74ad535a0c0ab9604df2a73a",
+      "prompt_sha256": "0083ae21728d5616259725a5bd28c9dbb68d0740f85cdd592e3fd15a8918786f",
+      "answer_key_sha256": "80dc10d01c7d4b0c82b99cf52237b05d3ce5d8ea2ed8aa64c26fb1bac6012beb",
+      "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+      "weight_bits": 8,
+      "activation_dtype": "bfloat16",
+      "quantization_backend": "compressed-tensors",
+      "repeat": 1,
+      "group_index": 2,
+      "submission_index": 3,
+      "invocation_id": "1792108252652286748-159633",
+      "evidence_status": "previously seen development diagnostics; not new held-out evidence",
+      "task_started_sequence": 1,
+      "task_finished_sequence": 21,
+      "answer_text": "```json\n{\n  \"booleans\": 2,\n  \"numbers\": 2,\n  \"strings\": 1,\n  \"nulls\": 1,\n  \"integers\": 2\n}\n```",
+      "raw_final_text": "```json\n{\n  \"booleans\": 2,\n  \"numbers\": 2,\n  \"strings\": 1,\n  \"nulls\": 1,\n  \"integers\": 2\n}\n```",
+      "thinking_requested": true,
+      "thinking_observed": true,
+      "thinking_characters": 1808,
+      "raw_final_text_sha256": "a80959236d2e6fb07a1ee10dc53d463b99dd9ba993c8dd6a99ca07ddb6d60213",
+      "response_attempts": [
+        {
+          "raw_text": "```json\n{\n  \"booleans\": 2,\n  \"numbers\": 2,\n  \"strings\": 1,\n  \"nulls\": 1,\n  \"integers\": 2\n}\n```",
+          "raw_text_sha256": "a80959236d2e6fb07a1ee10dc53d463b99dd9ba993c8dd6a99ca07ddb6d60213",
+          "thinking_text": "*   Input array: `[true, 1, false, 0, \"1\", null]`\n    *   Task: Count the JSON value types.\n    *   Specific constraints:\n        *   Booleans are not numbers.\n        *   Return *only* a JSON object.\n        *   Keys: `booleans`, `numbers`, `strings`, `nulls`, `integers`.\n\n    *   `true`: Boolean\n    *   `1`: Number (Integer)\n    *   `false`: Boolean\n    *   `0`: Number (Integer)\n    *   `\"1\"`: String\n    *   `null`: Null\n\n    *   `booleans`: `true`, `false` $\\rightarrow$ 2\n    *   `numbers`: `1`, `0` $\\rightarrow$ 2\n    *   `strings`: `\"1\"` $\\rightarrow$ 1\n    *   `nulls`: `null` $\\rightarrow$ 1\n    *   `integers`: `1`, `0` $\\rightarrow$ 2 (Note: In JSON, all numbers are technically numbers, but the prompt asks for an \"integer\" count specifically. Since 1 and 0 are integers, the count is 2).\n\n    *   `booleans`: 2\n    *   `numbers`: 2\n    *   `strings`: 1\n    *   `nulls`: 1\n    *   `integers`: 2\n\n    *   `{\"booleans\": 2, \"numbers\": 2, \"strings\": 1, \"nulls\": 1, \"integers\": 2}`\n\n    *   Input: `[true, 1, false, 0, \"1\", null]`\n    *   Booleans: `true`, `false` (2) - Correct.\n    *   Numbers: `1`, `0` (2) - Correct.\n    *   Strings: `\"1\"` (1) - Correct.\n    *   Nulls: `null` (1) - Correct.\n    *   Integers: `1`, `0` (2) - Correct.\n    *   Format: JSON object only.\n\n    *Self-Correction on \"integers\" vs \"numbers\":* In standard JSON, there is no distinction between integer and float types (everything is a \"number\"). However, the prompt asks for both `numbers` and `integers`. Since the input contains `1` and `0`, which are integers, the integer count is 2.\n\n    *Final check of the keys:* `booleans`, `numbers`, `strings`, `nulls`, `integers`.\n\n    Result:\n    ```json\n    {\n      \"booleans\": 2,\n      \"numbers\": 2,\n      \"strings\": 1,\n      \"nulls\": 1,\n      \"integers\": 2\n    }\n    ```",
+          "thinking_text_sha256": "1b609e38d956f896a8349ab086bf647648a8fced5a0a3a4a910a413b7703af25",
+          "thinking_characters": 1808,
+          "thinking_budget_tokens": 3072,
+          "native_content_blocks": [
+            {
+              "type": "thinking",
+              "thinking": "*   Input array: `[true, 1, false, 0, \"1\", null]`\n    *   Task: Count the JSON value types.\n    *   Specific constraints:\n        *   Booleans are not numbers.\n        *   Return *only* a JSON object.\n        *   Keys: `booleans`, `numbers`, `strings`, `nulls`, `integers`.\n\n    *   `true`: Boolean\n    *   `1`: Number (Integer)\n    *   `false`: Boolean\n    *   `0`: Number (Integer)\n    *   `\"1\"`: String\n    *   `null`: Null\n\n    *   `booleans`: `true`, `false` $\\rightarrow$ 2\n    *   `numbers`: `1`, `0` $\\rightarrow$ 2\n    *   `strings`: `\"1\"` $\\rightarrow$ 1\n    *   `nulls`: `null` $\\rightarrow$ 1\n    *   `integers`: `1`, `0` $\\rightarrow$ 2 (Note: In JSON, all numbers are technically numbers, but the prompt asks for an \"integer\" count specifically. Since 1 and 0 are integers, the count is 2).\n\n    *   `booleans`: 2\n    *   `numbers`: 2\n    *   `strings`: 1\n    *   `nulls`: 1\n    *   `integers`: 2\n\n    *   `{\"booleans\": 2, \"numbers\": 2, \"strings\": 1, \"nulls\": 1, \"integers\": 2}`\n\n    *   Input: `[true, 1, false, 0, \"1\", null]`\n    *   Booleans: `true`, `false` (2) - Correct.\n    *   Numbers: `1`, `0` (2) - Correct.\n    *   Strings: `\"1\"` (1) - Correct.\n    *   Nulls: `null` (1) - Correct.\n    *   Integers: `1`, `0` (2) - Correct.\n    *   Format: JSON object only.\n\n    *Self-Correction on \"integers\" vs \"numbers\":* In standard JSON, there is no distinction between integer and float types (everything is a \"number\"). However, the prompt asks for both `numbers` and `integers`. Since the input contains `1` and `0`, which are integers, the integer count is 2.\n\n    *Final check of the keys:* `booleans`, `numbers`, `strings`, `nulls`, `integers`.\n\n    Result:\n    ```json\n    {\n      \"booleans\": 2,\n      \"numbers\": 2,\n      \"strings\": 1,\n      \"nulls\": 1,\n      \"integers\": 2\n    }\n    ```",
+              "signature": "cf881bf7e8534befbd4b5f6d6d336216"
+            },
+            {
+              "type": "text",
+              "text": "```json\n{\n  \"booleans\": 2,\n  \"numbers\": 2,\n  \"strings\": 1,\n  \"nulls\": 1,\n  \"integers\": 2\n}\n```"
+            }
+          ],
+          "native_content_blocks_sha256": "6b571ed7c4b44258d299128e61418aaaccfabfbc6e4fc32b3d68c857b5e5c3b9",
+          "model_id": "redcell-w8a16-strength-1.0",
+          "requested_max_tokens": 4096,
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 74,
+            "output_tokens": 689
+          },
+          "native_request_seconds": 60.930521648027934,
+          "started_sequence": 15,
+          "finished_sequence": 20
+        }
+      ],
+      "native_requests": [
+        {
+          "route": "/v1/messages/count_tokens",
+          "seconds": 0.014458950026892126,
+          "started_sequence": 8,
+          "finished_sequence": 11
+        },
+        {
+          "route": "/v1/messages",
+          "seconds": 60.930521648027934,
+          "started_sequence": 15,
+          "finished_sequence": 20
+        }
+      ],
+      "attempts": [
+        {
+          "requested_max_tokens": 4096,
+          "output_tokens": 689,
+          "input_tokens": 74,
+          "stop_reason": "end_turn",
+          "response_sha256": "a80959236d2e6fb07a1ee10dc53d463b99dd9ba993c8dd6a99ca07ddb6d60213",
+          "visible_characters": 94,
+          "content_block_types": {
+            "text": 1
+          },
+          "seconds": 60.9786180939991
+        }
+      ],
+      "counted_input_tokens": 74,
+      "context_limit": 8192,
+      "context_margin": 64,
+      "available_output_tokens": 8054,
+      "planned_budgets": [
+        4096,
+        6144
+      ],
+      "context_safe_budgets": [
+        4096,
+        6144
+      ],
+      "context_clipped": false,
+      "response_sha256": "a80959236d2e6fb07a1ee10dc53d463b99dd9ba993c8dd6a99ca07ddb6d60213",
+      "output_tokens": 689,
+      "total_output_tokens_including_retries": 689,
+      "generation_seconds_including_retries": 60.9786180939991,
+      "stop_reason": "end_turn",
+      "unresolved_truncated": false,
+      "unresolved_reasons": [],
+      "generation_complete": true,
+      "correct": false,
+      "scored_correct_before_completion_gate": false,
+      "recorded_at_utc": "2026-10-15T23:57:17.435961+00:00",
+      "record_sha256": "6ad9bc6c29b7d607bb8f48a56a97d4a33b55917e6410dde7e0424641cb70e125"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "task_started",
+      "id": "broader-fresh-09-percent-encoding",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:16.390814+00:00",
+      "group_elapsed_seconds": 0.04429237701697275,
+      "group_index": 2,
+      "submission_index": 0
+    },
+    {
+      "sequence": 1,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "task_started",
+      "id": "broader-fresh-12-json-types",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:16.391376+00:00",
+      "group_elapsed_seconds": 0.04486214101780206,
+      "group_index": 2,
+      "submission_index": 3
+    },
+    {
+      "sequence": 2,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "task_started",
+      "id": "broader-fresh-10-transpose",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:16.391823+00:00",
+      "group_elapsed_seconds": 0.045309362991247326,
+      "group_index": 2,
+      "submission_index": 1
+    },
+    {
+      "sequence": 3,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "task_started",
+      "id": "broader-fresh-11-second-delimited-field",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:16.392352+00:00",
+      "group_elapsed_seconds": 0.04583565701614134,
+      "group_index": 2,
+      "submission_index": 2
+    },
+    {
+      "sequence": 4,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "request_started",
+      "id": "broader-fresh-09-percent-encoding",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:16.409275+00:00",
+      "group_elapsed_seconds": 0.06275333001394756,
+      "group_index": 2,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 5,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "request_started",
+      "id": "broader-fresh-11-second-delimited-field",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:16.417364+00:00",
+      "group_elapsed_seconds": 0.07084088900592178,
+      "group_index": 2,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 6,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "request_finished",
+      "id": "broader-fresh-09-percent-encoding",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:16.417552+00:00",
+      "group_elapsed_seconds": 0.07102749601472169,
+      "group_index": 2,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 4
+    },
+    {
+      "sequence": 7,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "request_started",
+      "id": "broader-fresh-10-transpose",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:16.418745+00:00",
+      "group_elapsed_seconds": 0.07222917000763118,
+      "group_index": 2,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 8,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "request_started",
+      "id": "broader-fresh-12-json-types",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:16.420055+00:00",
+      "group_elapsed_seconds": 0.07353308901656419,
+      "group_index": 2,
+      "route": "/v1/messages/count_tokens",
+      "requested_max_tokens": null
+    },
+    {
+      "sequence": 9,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "request_finished",
+      "id": "broader-fresh-11-second-delimited-field",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:16.429500+00:00",
+      "group_elapsed_seconds": 0.08297937799943611,
+      "group_index": 2,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 5
+    },
+    {
+      "sequence": 10,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "request_finished",
+      "id": "broader-fresh-10-transpose",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:16.432804+00:00",
+      "group_elapsed_seconds": 0.08628658801899292,
+      "group_index": 2,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 7
+    },
+    {
+      "sequence": 11,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "request_finished",
+      "id": "broader-fresh-12-json-types",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:16.434531+00:00",
+      "group_elapsed_seconds": 0.08801038999808952,
+      "group_index": 2,
+      "route": "/v1/messages/count_tokens",
+      "start_sequence": 8
+    },
+    {
+      "sequence": 12,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "request_started",
+      "id": "broader-fresh-09-percent-encoding",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:16.443530+00:00",
+      "group_elapsed_seconds": 0.09700484701897949,
+      "group_index": 2,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 13,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "request_started",
+      "id": "broader-fresh-11-second-delimited-field",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:16.463233+00:00",
+      "group_elapsed_seconds": 0.1167110770184081,
+      "group_index": 2,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 14,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "request_started",
+      "id": "broader-fresh-10-transpose",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:16.473228+00:00",
+      "group_elapsed_seconds": 0.12670776899904013,
+      "group_index": 2,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 15,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "request_started",
+      "id": "broader-fresh-12-json-types",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:16.481242+00:00",
+      "group_elapsed_seconds": 0.13472331999219023,
+      "group_index": 2,
+      "route": "/v1/messages",
+      "requested_max_tokens": 4096
+    },
+    {
+      "sequence": 16,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "request_finished",
+      "id": "broader-fresh-09-percent-encoding",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:46.848113+00:00",
+      "group_elapsed_seconds": 30.50160129001597,
+      "group_index": 2,
+      "route": "/v1/messages",
+      "start_sequence": 12
+    },
+    {
+      "sequence": 17,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "task_finished",
+      "id": "broader-fresh-09-percent-encoding",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:46.871923+00:00",
+      "group_elapsed_seconds": 30.525403567997273,
+      "group_index": 2,
+      "submission_index": 0
+    },
+    {
+      "sequence": 18,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "request_finished",
+      "id": "broader-fresh-10-transpose",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:57.288714+00:00",
+      "group_elapsed_seconds": 40.94220377501915,
+      "group_index": 2,
+      "route": "/v1/messages",
+      "start_sequence": 14
+    },
+    {
+      "sequence": 19,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "task_finished",
+      "id": "broader-fresh-10-transpose",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:56:57.312286+00:00",
+      "group_elapsed_seconds": 40.96576565501164,
+      "group_index": 2,
+      "submission_index": 1
+    },
+    {
+      "sequence": 20,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "request_finished",
+      "id": "broader-fresh-12-json-types",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:57:17.411791+00:00",
+      "group_elapsed_seconds": 61.065279008005746,
+      "group_index": 2,
+      "route": "/v1/messages",
+      "start_sequence": 15
+    },
+    {
+      "sequence": 21,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "task_finished",
+      "id": "broader-fresh-12-json-types",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:57:17.435961+00:00",
+      "group_elapsed_seconds": 61.08944070499274,
+      "group_index": 2,
+      "submission_index": 3
+    },
+    {
+      "sequence": 22,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "request_finished",
+      "id": "broader-fresh-11-second-delimited-field",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:57:36.607161+00:00",
+      "group_elapsed_seconds": 80.26064950600266,
+      "group_index": 2,
+      "route": "/v1/messages",
+      "start_sequence": 13
+    },
+    {
+      "sequence": 23,
+      "invocation_id": "1792108252652286748-159633",
+      "kind": "task_finished",
+      "id": "broader-fresh-11-second-delimited-field",
+      "repeat": 1,
+      "at_utc": "2026-10-15T23:57:36.631390+00:00",
+      "group_elapsed_seconds": 80.28486948600039,
+      "group_index": 2,
+      "submission_index": 2
+    }
+  ],
+  "submission_order": [
+    "broader-fresh-09-percent-encoding",
+    "broader-fresh-10-transpose",
+    "broader-fresh-11-second-delimited-field",
+    "broader-fresh-12-json-types"
+  ],
+  "client_task_start_order": [
+    "broader-fresh-09-percent-encoding",
+    "broader-fresh-12-json-types",
+    "broader-fresh-10-transpose",
+    "broader-fresh-11-second-delimited-field"
+  ],
+  "client_task_finish_order": [
+    "broader-fresh-09-percent-encoding",
+    "broader-fresh-10-transpose",
+    "broader-fresh-12-json-types",
+    "broader-fresh-11-second-delimited-field"
+  ],
+  "observed_future_completion_order": [
+    "broader-fresh-09-percent-encoding",
+    "broader-fresh-10-transpose",
+    "broader-fresh-12-json-types",
+    "broader-fresh-11-second-delimited-field"
+  ],
+  "ordering_scope": "Sequences and elapsed times are local to this group. Client submission, task, and HTTP dispatch/completion order are recorded; GPU scheduler order is not observed.",
+  "group_sha256": "e35bae4e3224c09d3d9c6659114ec16a7ea0a0037bd83027955708b3d470ebaf"
+}

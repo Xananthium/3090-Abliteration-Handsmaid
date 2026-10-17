@@ -1,0 +1,341 @@
+[
+  {
+    "path": "dry_run_logs",
+    "tree_id": "c780ceca0203360dca35581f2fe83ee57fed2684",
+    "last_commit": {
+      "oid": "2388f15a68ac94c7179aafe24d36c46e30609492",
+      "title": "Add files using upload-large-folder tool",
+      "date": "2026-04-01T23:25:27+00:00"
+    }
+  },
+  {
+    "path": ".gitattributes",
+    "size": 1708,
+    "blob_id": "ddcb389f1c4efd0f6ec18e8925435134b04580da",
+    "last_commit": {
+      "oid": "3ec32dd82ba229bc987cbccf34fff0305126801c",
+      "title": "Add files using upload-large-folder tool",
+      "date": "2026-03-31T14:45:58+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "README.md",
+    "size": 27919,
+    "blob_id": "8d7490f84b9da1c6dd36f63e04c990c0ff717dab",
+    "last_commit": {
+      "oid": "4fc494e6a3174bbc6c5be4fb3137f598cfb98894",
+      "title": "Update README.md",
+      "date": "2026-04-02T17:02:42+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "chat_template.jinja",
+    "size": 18924,
+    "blob_id": "e929d662bbbf430219c28133472e0956733a8f84",
+    "last_commit": {
+      "oid": "60941ad6341d0b7af91277ff25c4175f08b56819",
+      "title": "Update chat template with tool-calling and turn-balance fixes",
+      "date": "2026-07-17T11:54:30+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "config.json",
+    "size": 3861,
+    "blob_id": "73b55b5307c972efeb97e0b540e249615d738024",
+    "last_commit": {
+      "oid": "4264e25326a4de02cc6eca538ab233192c154bb3",
+      "title": "Upload folder using huggingface_hub",
+      "date": "2026-04-04T02:51:18+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "dry_run_precheck.csv",
+    "size": 4064,
+    "blob_id": "e5cbd3236cdf34f3fb929ad7e32b4f3ab48043a5",
+    "last_commit": {
+      "oid": "2388f15a68ac94c7179aafe24d36c46e30609492",
+      "title": "Add files using upload-large-folder tool",
+      "date": "2026-04-01T23:25:27+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "dry_run_precheck_tensor_compare.csv",
+    "size": 20244,
+    "blob_id": "0a6c6ec017598a44229fe45eaf10ee9cac84417d",
+    "last_commit": {
+      "oid": "2388f15a68ac94c7179aafe24d36c46e30609492",
+      "title": "Add files using upload-large-folder tool",
+      "date": "2026-04-01T23:25:27+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "generation_config.json",
+    "size": 208,
+    "blob_id": "e605bb4523b1462ea9d9a3810b9e3ecf7ab7b1f6",
+    "last_commit": {
+      "oid": "2388f15a68ac94c7179aafe24d36c46e30609492",
+      "title": "Add files using upload-large-folder tool",
+      "date": "2026-04-01T23:25:27+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "model-00001-of-00002.safetensors",
+    "size": 49907246508,
+    "blob_id": "2b813216506c6b8266f174ac81c93629b499362e",
+    "lfs": {
+      "size": 49907246508,
+      "sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3",
+      "pointer_size": 136
+    },
+    "xet_hash": "060a1348782427903c74f008d4a544cf7176de0ae0fa87bc06999fbf0e1715ef",
+    "last_commit": {
+      "oid": "2388f15a68ac94c7179aafe24d36c46e30609492",
+      "title": "Add files using upload-large-folder tool",
+      "date": "2026-04-01T23:25:27+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "unscanned",
+        "message": "",
+        "version": "1.5.2/27963"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "model-00002-of-00002.safetensors",
+    "size": 1704763408,
+    "blob_id": "43fd225b228774659bcb8948b8ad1b07b10cb53f",
+    "lfs": {
+      "size": 1704763408,
+      "sha256": "aab47033e1e8a492ef8e581efae1cf36478d0433567e7729b3c1728bc8970db7",
+      "pointer_size": 135
+    },
+    "xet_hash": "407c22ff8f9884674a186f8568d150a0c63a9f21ec6eea92e4aedd647e43e062",
+    "last_commit": {
+      "oid": "2388f15a68ac94c7179aafe24d36c46e30609492",
+      "title": "Add files using upload-large-folder tool",
+      "date": "2026-04-01T23:25:27+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "model.safetensors.index.json",
+    "size": 103196,
+    "blob_id": "889ab10e12aca96c43c9804a041fb1780de1e5ca",
+    "last_commit": {
+      "oid": "2388f15a68ac94c7179aafe24d36c46e30609492",
+      "title": "Add files using upload-large-folder tool",
+      "date": "2026-04-01T23:25:27+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "processor_config.json",
+    "size": 1689,
+    "blob_id": "5465974d23e1eca2c46c2809b26c997946ce0d90",
+    "last_commit": {
+      "oid": "3ec32dd82ba229bc987cbccf34fff0305126801c",
+      "title": "Add files using upload-large-folder tool",
+      "date": "2026-03-31T14:45:58+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "tokenizer.json",
+    "size": 32169626,
+    "blob_id": "1ff9f3e3439a939b971f9919e821bf87e835a503",
+    "lfs": {
+      "size": 32169626,
+      "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+      "pointer_size": 133
+    },
+    "xet_hash": "c62336ad134cad6f154d84eb0e5a5fa9ca17cd665ef3ba5ac4fd02b1486760b4",
+    "last_commit": {
+      "oid": "3ec32dd82ba229bc987cbccf34fff0305126801c",
+      "title": "Add files using upload-large-folder tool",
+      "date": "2026-03-31T14:45:58+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/27985"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "tokenizer_config.json",
+    "size": 22085,
+    "blob_id": "575333aee9a04cb1316f39850d578f886acd1a3f",
+    "last_commit": {
+      "oid": "60941ad6341d0b7af91277ff25c4175f08b56819",
+      "title": "Update chat template with tool-calling and turn-balance fixes",
+      "date": "2026-07-17T11:54:30+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "No security issues detected",
+        "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "dispatches": [
+    {
+      "turn": 1,
+      "tool_use_id": "chatcmpl-tool-ba5722aab06cc212",
+      "name": "read_artifact",
+      "arguments": {
+        "artifact": "deployment-manifest.json"
+      },
+      "result": {
+        "evidence_id": "E002",
+        "ok": true,
+        "artifact": "deployment-manifest.json",
+        "content": {
+          "service": "LabWidget",
+          "version": "2.4.1",
+          "deployment_id": "synthetic-app",
+          "applied_fixes": []
+        }
+      }
+    }
+  ]
+}

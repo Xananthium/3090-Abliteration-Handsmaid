@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "expected_base_checkpoint": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+  "config_sha256": "bdd77ab53a226918ed1ac2725729c56fa13ddeba2492bc7a27f53a32aa24d0be",
+  "index_sha256": "01adf6facae2403c2e0b02d225897535610554b1e5ad52232b66218c2d7a7e15",
+  "conversion_receipt_sha256": "1fc3fb351e6f56a3dd39cd594ad55435539024bd28edd298a43f32a73e7af03b",
+  "weight_bits": 8,
+  "activation_dtype": "bfloat16",
+  "launch_profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+  "quantization_backend": "compressed-tensors",
+  "backend_label": "compressed-tensors / Marlin W8A16 group32",
+  "quantization_configs": {
+    "root": {
+      "config_groups": {
+        "config_group_0": {
+          "format": "pack-quantized",
+          "input_activations": null,
+          "output_activations": null,
+          "targets": [
+            "Linear"
+          ],
+          "weights": {
+            "actorder": null,
+            "block_structure": null,
+            "dynamic": false,
+            "group_size": 32,
+            "num_bits": 8,
+            "observer": "memoryless_minmax",
+            "observer_kwargs": {},
+            "scale_dtype": null,
+            "strategy": "group",
+            "symmetric": true,
+            "type": "int",
+            "zp_dtype": null
+          }
+        }
+      },
+      "format": "pack-quantized",
+      "global_compression_ratio": null,
+      "ignore": [
+        "lm_head",
+        "re:.*embed.*",
+        "re:.*vision.*",
+        "re:.*router.*",
+        "re:.*\\.gate$",
+        "re:.*norm.*"
+      ],
+      "kv_cache_scheme": null,
+      "quant_method": "compressed-tensors",
+      "quantization_status": "compressed",
+      "transform_config": {},
+      "version": "0.17.1"
+    }
+  }
+}

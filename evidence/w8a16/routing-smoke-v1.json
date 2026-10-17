@@ -1,0 +1,527 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "label": "base-before",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "seconds": 0.886863101972267,
+      "passed": true,
+      "response": {
+        "id": "chatcmpl-af9a916167a0f7f3",
+        "object": "chat.completion",
+        "created": 1792106596,
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "7",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": {
+              "content": [
+                {
+                  "token": "7",
+                  "logprob": -1.1920928244535389e-07,
+                  "bytes": [
+                    55
+                  ],
+                  "top_logprobs": [
+                    {
+                      "token": "7",
+                      "logprob": -1.1920928244535389e-07,
+                      "bytes": [
+                        55
+                      ]
+                    },
+                    {
+                      "token": " ",
+                      "logprob": -16.375,
+                      "bytes": [
+                        32
+                      ]
+                    },
+                    {
+                      "token": " \u096d",
+                      "logprob": -20.546875,
+                      "bytes": [
+                        32,
+                        224,
+                        165,
+                        173
+                      ]
+                    },
+                    {
+                      "token": " \u06f7",
+                      "logprob": -20.59375,
+                      "bytes": [
+                        32,
+                        219,
+                        183
+                      ]
+                    },
+                    {
+                      "token": "  ",
+                      "logprob": -21.171875,
+                      "bytes": [
+                        32,
+                        32
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "token": "<turn|>",
+                  "logprob": -1.1920928244535389e-07,
+                  "bytes": [
+                    60,
+                    116,
+                    117,
+                    114,
+                    110,
+                    124,
+                    62
+                  ],
+                  "top_logprobs": [
+                    {
+                      "token": "<turn|>",
+                      "logprob": -1.1920928244535389e-07,
+                      "bytes": [
+                        60,
+                        116,
+                        117,
+                        114,
+                        110,
+                        124,
+                        62
+                      ]
+                    },
+                    {
+                      "token": "\u8fd0\u52a8",
+                      "logprob": -16.651123046875,
+                      "bytes": [
+                        232,
+                        191,
+                        144,
+                        229,
+                        138,
+                        168
+                      ]
+                    },
+                    {
+                      "token": "of",
+                      "logprob": -16.77734375,
+                      "bytes": [
+                        111,
+                        102
+                      ]
+                    },
+                    {
+                      "token": "\u200b",
+                      "logprob": -17.6796875,
+                      "bytes": [
+                        226,
+                        128,
+                        139
+                      ]
+                    },
+                    {
+                      "token": "Of",
+                      "logprob": -18.0234375,
+                      "bytes": [
+                        79,
+                        102
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "finish_reason": "stop",
+            "stop_reason": 106,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.31.0-tp2-5817e056",
+        "usage": {
+          "prompt_tokens": 27,
+          "total_tokens": 29,
+          "completion_tokens": 2,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      }
+    },
+    {
+      "label": "edit-1.5",
+      "model_id": "redcell-w8a16-strength-1.5",
+      "seconds": 0.2285342009854503,
+      "passed": true,
+      "response": {
+        "id": "chatcmpl-b14772472062c3b9",
+        "object": "chat.completion",
+        "created": 1792106596,
+        "model": "redcell-w8a16-strength-1.5",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "7",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": {
+              "content": [
+                {
+                  "token": "7",
+                  "logprob": 0.0,
+                  "bytes": [
+                    55
+                  ],
+                  "top_logprobs": [
+                    {
+                      "token": "7",
+                      "logprob": 0.0,
+                      "bytes": [
+                        55
+                      ]
+                    },
+                    {
+                      "token": " ",
+                      "logprob": -17.75,
+                      "bytes": [
+                        32
+                      ]
+                    },
+                    {
+                      "token": " \u06f7",
+                      "logprob": -18.875,
+                      "bytes": [
+                        32,
+                        219,
+                        183
+                      ]
+                    },
+                    {
+                      "token": " \u096d",
+                      "logprob": -20.5625,
+                      "bytes": [
+                        32,
+                        224,
+                        165,
+                        173
+                      ]
+                    },
+                    {
+                      "token": "\u0667",
+                      "logprob": -22.6875,
+                      "bytes": [
+                        217,
+                        167
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "token": "<turn|>",
+                  "logprob": 0.0,
+                  "bytes": [
+                    60,
+                    116,
+                    117,
+                    114,
+                    110,
+                    124,
+                    62
+                  ],
+                  "top_logprobs": [
+                    {
+                      "token": "<turn|>",
+                      "logprob": 0.0,
+                      "bytes": [
+                        60,
+                        116,
+                        117,
+                        114,
+                        110,
+                        124,
+                        62
+                      ]
+                    },
+                    {
+                      "token": "\u200b",
+                      "logprob": -19.265625,
+                      "bytes": [
+                        226,
+                        128,
+                        139
+                      ]
+                    },
+                    {
+                      "token": "</code>",
+                      "logprob": -21.91015625,
+                      "bytes": [
+                        60,
+                        47,
+                        99,
+                        111,
+                        100,
+                        101,
+                        62
+                      ]
+                    },
+                    {
+                      "token": "`",
+                      "logprob": -24.4765625,
+                      "bytes": [
+                        96
+                      ]
+                    },
+                    {
+                      "token": "$",
+                      "logprob": -24.984375,
+                      "bytes": [
+                        36
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "finish_reason": "stop",
+            "stop_reason": 106,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.31.0-tp2-5817e056",
+        "usage": {
+          "prompt_tokens": 27,
+          "total_tokens": 29,
+          "completion_tokens": 2,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      }
+    },
+    {
+      "label": "base-after",
+      "model_id": "qwen3.6-35b-hauhau-w4a16-vision",
+      "seconds": 0.22668395400978625,
+      "passed": true,
+      "response": {
+        "id": "chatcmpl-8692a4f5d431ea50",
+        "object": "chat.completion",
+        "created": 1792106597,
+        "model": "qwen3.6-35b-hauhau-w4a16-vision",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "7",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": {
+              "content": [
+                {
+                  "token": "7",
+                  "logprob": -1.1920928244535389e-07,
+                  "bytes": [
+                    55
+                  ],
+                  "top_logprobs": [
+                    {
+                      "token": "7",
+                      "logprob": -1.1920928244535389e-07,
+                      "bytes": [
+                        55
+                      ]
+                    },
+                    {
+                      "token": " ",
+                      "logprob": -16.375,
+                      "bytes": [
+                        32
+                      ]
+                    },
+                    {
+                      "token": " \u06f7",
+                      "logprob": -20.46875,
+                      "bytes": [
+                        32,
+                        219,
+                        183
+                      ]
+                    },
+                    {
+                      "token": " \u096d",
+                      "logprob": -20.515625,
+                      "bytes": [
+                        32,
+                        224,
+                        165,
+                        173
+                      ]
+                    },
+                    {
+                      "token": " Seven",
+                      "logprob": -21.1875,
+                      "bytes": [
+                        32,
+                        83,
+                        101,
+                        118,
+                        101,
+                        110
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "token": "<turn|>",
+                  "logprob": 0.0,
+                  "bytes": [
+                    60,
+                    116,
+                    117,
+                    114,
+                    110,
+                    124,
+                    62
+                  ],
+                  "top_logprobs": [
+                    {
+                      "token": "<turn|>",
+                      "logprob": 0.0,
+                      "bytes": [
+                        60,
+                        116,
+                        117,
+                        114,
+                        110,
+                        124,
+                        62
+                      ]
+                    },
+                    {
+                      "token": "\u8fd0\u52a8",
+                      "logprob": -16.669921875,
+                      "bytes": [
+                        232,
+                        191,
+                        144,
+                        229,
+                        138,
+                        168
+                      ]
+                    },
+                    {
+                      "token": "of",
+                      "logprob": -16.71875,
+                      "bytes": [
+                        111,
+                        102
+                      ]
+                    },
+                    {
+                      "token": "\u200b",
+                      "logprob": -17.7265625,
+                      "bytes": [
+                        226,
+                        128,
+                        139
+                      ]
+                    },
+                    {
+                      "token": "Of",
+                      "logprob": -17.9765625,
+                      "bytes": [
+                        79,
+                        102
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "finish_reason": "stop",
+            "stop_reason": 106,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.31.0-tp2-5817e056",
+        "usage": {
+          "prompt_tokens": 27,
+          "total_tokens": 29,
+          "completion_tokens": 2,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      }
+    }
+  ],
+  "base_reset_logprobs_exact_match": false,
+  "edit_logprobs_changed": true,
+  "profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+  "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+  "actual_service_environment": {
+    "unit": "redcell-w8a16-development-1792106483960140994",
+    "checked_pids": [
+      156917,
+      157046,
+      157047,
+      157156,
+      157157
+    ],
+    "forbidden_quantization_variables": [
+      "VLLM_MARLIN_INPUT_DTYPE",
+      "VLLM_HUMMING_INPUT_QUANT_CONFIG",
+      "VLLM_HUMMING_ONLINE_QUANT_CONFIG"
+    ],
+    "present": []
+  },
+  "scope": "One arithmetic prompt checks base/adapter routing and reset only; not model quality or refusal behavior."
+}

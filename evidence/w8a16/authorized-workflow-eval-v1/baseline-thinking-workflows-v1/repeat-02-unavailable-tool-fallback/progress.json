@@ -1,0 +1,9 @@
+{
+  "case_id": "unavailable-tool-fallback",
+  "repeat": 2,
+  "turn": 5,
+  "attempt_count": 6,
+  "tool_calls": 5,
+  "known_generated_tokens": 910,
+  "updated_utc": "2026-10-17T16:40:46.021706+00:00"
+}

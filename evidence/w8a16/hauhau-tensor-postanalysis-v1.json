@@ -1,0 +1,1395 @@
+{
+  "status": "completed_bounded_cpu_tensor_postanalysis",
+  "task_completed": true,
+  "started_utc": "2026-10-16T02:00:26.024339+00:00",
+  "finished_utc": "2026-10-16T02:00:41.178294+00:00",
+  "elapsed_seconds": 15.153962095995666,
+  "inputs": [
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/result.json",
+      "sha256": "e7dfbee08e89e9ae19a4ec883392422e8485ffb7dfb9837c8dc2e99d1245cacf",
+      "bytes": 256036
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges-manifest.json",
+      "sha256": "44eb6a9fc472786d88790e8df05e03ed5645ebdffb8de6ab1025710b94888191",
+      "bytes": 16429
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/recover_tensor_geometry.py",
+      "sha256": "6259a1d11b7c811cfb42ca87b553dcbec3e8a5a2b923babb31ed3b98a5e8efeb",
+      "bytes": 23186
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/09-base.bin",
+      "sha256": "93f915b75e543b92d3cc81efd8a9017e6901914761946421c6f001487bce138d",
+      "bytes": 11894784
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/09-hauhau.bin",
+      "sha256": "803d9462de515e50c326868c8e22f30e620d2a1d4fe75df241271bdf3046d0ae",
+      "bytes": 11894784
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/layer-25-weight-delta-left-basis.npy",
+      "sha256": "af189790f4211234bfbe53055b7ff3179f129d30c0670e30e912453e35ce60fd",
+      "bytes": 180352
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/10-base.bin",
+      "sha256": "5328a347f2b62794b5ff6687ba94965adda550131a7138b4c0b6d562f6700b2b",
+      "bytes": 11894784
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/10-hauhau.bin",
+      "sha256": "2d0764c813e363406a3b59ae12f281f50af0ec2bb7ca748162e4c35ac6d0a832",
+      "bytes": 11894784
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/layer-26-weight-delta-left-basis.npy",
+      "sha256": "2ccac89f9846b2a9b9f4761e466420d1c2abe680ada4ae01ad0417a9ff6ef9ce",
+      "bytes": 180352
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/05-base.bin",
+      "sha256": "0b885dfcd31f6f3d29877cb656dbb2ca629e52e27ab28c8f0784a0cab18abc86",
+      "bytes": 11894784
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/05-hauhau.bin",
+      "sha256": "00e99cc1cba699aa46da99c626281427b9ba21e40099df88c1b534d1e8c0c1f6",
+      "bytes": 11894784
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/layer-27-weight-delta-left-basis.npy",
+      "sha256": "4992657fd99fe2f04b564400a1ec206dc29ef3684792447d4761b7f5f22926a8",
+      "bytes": 180352
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/11-base.bin",
+      "sha256": "f6ab4e78446a1d3a889617b6e074f4709acf7bb2b8bce657fb0d42b03726b5fe",
+      "bytes": 11894784
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/ranges/11-hauhau.bin",
+      "sha256": "aa8e749dc7b88388c218a60f6d9b25563a17c154456be0654417cb8378c238f2",
+      "bytes": 11894784
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/hauhau-tensor-pilot-20261016T014149Z/layer-28-weight-delta-left-basis.npy",
+      "sha256": "a50dcc5693d64ad7e5c73ba2f767592d3eefd70f8425f056843b05305669c7ac",
+      "bytes": 180352
+    }
+  ],
+  "numpy_version": "2.5.4",
+  "scope": {
+    "layers": [
+      25,
+      26,
+      27,
+      28
+    ],
+    "component": "shared MLP down projection",
+    "rank": 5,
+    "downloads": false,
+    "gpu": false,
+    "inference": false,
+    "services": false,
+    "source_artifact_mutations": false,
+    "full_2816_by_2816_operators_constructed": false,
+    "causal_behavior_tested": false,
+    "model_or_adapter_created": false
+  },
+  "resources": {
+    "address_space_limit_bytes": 1073741824,
+    "external_timeout_seconds": 180,
+    "nice": 15,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "observed_final_process_threads": 1,
+    "peak_rss_kib": 433648,
+    "user_cpu_seconds": 14.232747,
+    "system_cpu_seconds": 0.930852,
+    "timing_overlap_caveat": "This one-thread background CPU analysis may overlap ongoing inference; no inference or service operation was performed by this process.",
+    "initial_interpreter_attempt": "The system python lacked numpy and exited before numerical computation; successful analysis used the existing Heretic environment."
+  },
+  "methods": {
+    "representation": "W = decoded Google BF16 cast to F16 and back to float32, matching the phase-1 export null; H = decoded Hauhau F16; Delta = H-W.",
+    "operator": "Delta_hat=-U M U^T W; U is rank-5 delta left subspace. M least squares uses ridge=(trace(Gram)/5)*1e-10 and pinv rcond=1e-12.",
+    "rank5_floor": "Approximate best rank-5 error uses the saved randomized-SVD U; no full SVD is performed. It is a numerical spectral-floor estimate, not a certified optimal residual.",
+    "cross_layer_operator": "Frobenius inner products computed in rank space: <U M U^T,V N V^T>=<M,(U^T V)N(U^T V)^T>. No dense output operator is formed.",
+    "column_split": "Separate even/odd training-only U and M fits, with reverse holdout; deterministic randomized SVD sketch12/power2/retained8 then first5. Splitting weight columns tests algebraic stability, not independent behavioral generalization.",
+    "rounding": "Compute prediction in float64, cast to float32, round to nearest-even BF16 with a tested bit conversion, then cast to F16 for the stored export representation. No rounding-aware fitting.",
+    "rounding_caveat": "Reduced residual after rounding is consistent with a low-rank edit followed by BF16 rounding; it does not identify the exact historical code path or recover exact factors.",
+    "numeric_tolerance": "Float64 reductions and rank-space algebra; negative error energy is tolerated only down to -1e-10*max(delta_energy,1) before clamping zero.",
+    "identifiability": "A general 2816x2816 left operator is underdetermined by a 2816x2112 weight matrix. Reported fits explicitly restrict the operator input and output to U.",
+    "causality": "Detected weight geometry does not establish refusal, RLHF, safety, model-quality effects, or transfer success on REDCELL."
+  },
+  "layer_results": [
+    {
+      "layer": 25,
+      "shape": [
+        2816,
+        2112
+      ],
+      "delta_relative_to_parent_norm": 0.033046652644957014,
+      "saved_full_column_basis_is_in_sample": true,
+      "rank5_captured_energy_fraction": 0.9940557792458808,
+      "rank5_spectral_floor_estimate": 0.07709877271474012,
+      "rank5_operator_fit_relative_residual": 0.07812138963701484,
+      "fit_residual_over_spectral_floor": 1.0132637250408425,
+      "fit_error_energy_above_spectral_floor": 0.00015873076469913403,
+      "fraction_operator_fit_error_at_spectral_floor": 0.9739911476914584,
+      "coefficient_matrix_M": [
+        [
+          0.9610772156990918,
+          0.03334194027054811,
+          -0.009640081965787375,
+          -0.01480639481291126,
+          -0.010077535520055752
+        ],
+        [
+          0.034011624287808906,
+          0.8132406080880712,
+          0.02840470289158844,
+          -0.005998815872922634,
+          -0.023886178408931643
+        ],
+        [
+          -0.008167046328875063,
+          0.028208316824438938,
+          0.8514109848810489,
+          0.008439308824747575,
+          -0.006210835092370185
+        ],
+        [
+          -0.01496114556801886,
+          -0.00575142144885506,
+          0.009140007460994796,
+          0.7398851279871275,
+          -0.011789008028382226
+        ],
+        [
+          -0.00967323003076359,
+          -0.02439933651065148,
+          -0.005245847532352819,
+          -0.012492476646150491,
+          0.48373025923056007
+        ]
+      ],
+      "operator_asymmetry_relative": 0.0018120608010775022,
+      "operator_eigenvalues_real": [
+        0.4811953038542506,
+        0.9699475105641805,
+        0.8668630046281046,
+        0.7928054060832049,
+        0.7385329707561596
+      ],
+      "operator_eigenvalues_imag": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "symmetric_part_eigenvalues": [
+        0.4811937020674306,
+        0.7385328026270428,
+        0.7928055307303303,
+        0.8668584284534099,
+        0.9699537320076858
+      ],
+      "remaining_gain_on_symmetric_edit_axes": [
+        0.5188062979325694,
+        0.2614671973729572,
+        0.20719446926966967,
+        0.13314157154659012,
+        0.030046267992314246
+      ],
+      "posthoc_symmetrized_operator_relative_residual": 0.07812651187079644,
+      "full_columns_fit_rounding_in_sample": {
+        "columns": 2112,
+        "unrounded_error_relative_to_delta": 0.07812138963703269,
+        "bf16_then_f16_rounded_error_relative_to_delta": 0.09155400559450876,
+        "rounded_error_relative_to_target_weight": 0.0030279634900916815,
+        "rounded_exact_match_fraction": 0.631831061413137,
+        "rounded_exact_match_fraction_on_changed_elements": 0.602264822888094,
+        "rounded_error_max_absolute": 0.00390625,
+        "rounding_step_norm_relative_to_delta": 0.04873094129225739,
+        "rounding_reduces_squared_error_fraction": -0.3734560916221299
+      },
+      "column_split": [
+        {
+          "split": "even_to_odd",
+          "training_columns": 1056,
+          "heldout_columns": 1056,
+          "training_basis_seed": 20261042,
+          "basis_learned_on_training_columns_only": true,
+          "training_operator_relative_residual": 0.07934876071539576,
+          "heldout_operator_relative_residual": 0.07759799998026852,
+          "heldout_rounding": {
+            "columns": 1056,
+            "unrounded_error_relative_to_delta": 0.07759799998027586,
+            "bf16_then_f16_rounded_error_relative_to_delta": 0.09082935634858856,
+            "rounded_error_relative_to_target_weight": 0.0030440905536956524,
+            "rounded_exact_match_fraction": 0.6235573508522727,
+            "rounded_exact_match_fraction_on_changed_elements": 0.5926235912249157,
+            "rounded_error_max_absolute": 0.00390625,
+            "rounding_step_norm_relative_to_delta": 0.04810901766935418,
+            "rounding_reduces_squared_error_fraction": -0.37009732231463177
+          },
+          "training_rounding": {
+            "columns": 1056,
+            "unrounded_error_relative_to_delta": 0.07934876071538025,
+            "bf16_then_f16_rounded_error_relative_to_delta": 0.09282513470607845,
+            "rounded_error_relative_to_target_weight": 0.0030284522056667224,
+            "rounded_exact_match_fraction": 0.6245053293948003,
+            "rounded_exact_match_fraction_on_changed_elements": 0.5943335757682277,
+            "rounded_error_max_absolute": 0.00390625,
+            "rounding_step_norm_relative_to_delta": 0.04936795040228921,
+            "rounding_reduces_squared_error_fraction": -0.36851915256285017
+          },
+          "fixed_full_basis_coefficient_only_holdout_relative_residual": 0.07706698138008529,
+          "fixed_full_basis_holdout_caveat": "The frozen full-column U has seen the held-out columns; only M is fit on training columns in this secondary diagnostic.",
+          "full_vs_training_basis_principal_cosines": [
+            0.9999956232702747,
+            0.999992734503795,
+            0.9999924629837114,
+            0.9999907841967832,
+            0.9999747116686369
+          ],
+          "full_vs_training_operator": {
+            "frobenius_cosine": 0.9999830645409875,
+            "relative_difference_to_first_operator": 0.005833045849693692,
+            "relative_difference_to_second_operator": 0.00583085794488076,
+            "first_norm": 1.7600497178132102,
+            "second_norm": 1.7607101388498752,
+            "optimal_second_scale_to_match_first": 0.9996079830113479,
+            "scale_adjusted_relative_difference_to_first": 0.005819848040567181
+          }
+        },
+        {
+          "split": "odd_to_even",
+          "training_columns": 1056,
+          "heldout_columns": 1056,
+          "training_basis_seed": 20261043,
+          "basis_learned_on_training_columns_only": true,
+          "training_operator_relative_residual": 0.07696966845976107,
+          "heldout_operator_relative_residual": 0.07953014281819493,
+          "heldout_rounding": {
+            "columns": 1056,
+            "unrounded_error_relative_to_delta": 0.07953014281818177,
+            "bf16_then_f16_rounded_error_relative_to_delta": 0.09308318683165814,
+            "rounded_error_relative_to_target_weight": 0.0030368712457399024,
+            "rounded_exact_match_fraction": 0.6269053729769284,
+            "rounded_exact_match_fraction_on_changed_elements": 0.5971938450058605,
+            "rounded_error_max_absolute": 0.00390625,
+            "rounding_step_norm_relative_to_delta": 0.049391230113060826,
+            "rounding_reduces_squared_error_fraction": -0.3698687623097858
+          },
+          "training_rounding": {
+            "columns": 1056,
+            "unrounded_error_relative_to_delta": 0.07696966845980184,
+            "bf16_then_f16_rounded_error_relative_to_delta": 0.09025440672431084,
+            "rounded_error_relative_to_target_weight": 0.0030248214672408532,
+            "rounded_exact_match_fraction": 0.6305711814523072,
+            "rounded_exact_match_fraction_on_changed_elements": 0.6004883379923633,
+            "rounded_error_max_absolute": 0.00390625,
+            "rounding_step_norm_relative_to_delta": 0.04811035224024312,
+            "rounding_reduces_squared_error_fraction": -0.374983858392234
+          },
+          "fixed_full_basis_coefficient_only_holdout_relative_residual": 0.07923707335392806,
+          "fixed_full_basis_holdout_caveat": "The frozen full-column U has seen the held-out columns; only M is fit on training columns in this secondary diagnostic.",
+          "full_vs_training_basis_principal_cosines": [
+            0.9999956266645764,
+            0.999994845396793,
+            0.9999938328707573,
+            0.9999898496376225,
+            0.999974402618251
+          ],
+          "full_vs_training_operator": {
+            "frobenius_cosine": 0.9999841336252739,
+            "relative_difference_to_first_operator": 0.005641148462103678,
+            "relative_difference_to_second_operator": 0.005642931422245768,
+            "first_norm": 1.7600497178132102,
+            "second_norm": 1.7594936064129214,
+            "optimal_second_scale_to_match_first": 1.0003001919359096,
+            "scale_adjusted_relative_difference_to_first": 0.0056331605436361785
+          }
+        }
+      ],
+      "training_halves_principal_cosines": [
+        0.9999811371608276,
+        0.9999763207118818,
+        0.9999722955565344,
+        0.9999617231898036,
+        0.9998994872267404
+      ],
+      "training_halves_operator_comparison": {
+        "frobenius_cosine": 0.999934950861548,
+        "relative_difference_to_first_operator": 0.011423037070210695,
+        "relative_difference_to_second_operator": 0.011430935078520466,
+        "first_norm": 1.7607101388498752,
+        "second_norm": 1.7594936064129214,
+        "optimal_second_scale_to_match_first": 1.000626316432945,
+        "scale_adjusted_relative_difference_to_first": 0.011405877673964919
+      }
+    },
+    {
+      "layer": 26,
+      "shape": [
+        2816,
+        2112
+      ],
+      "delta_relative_to_parent_norm": 0.0368609124688754,
+      "saved_full_column_basis_is_in_sample": true,
+      "rank5_captured_energy_fraction": 0.9958319801566606,
+      "rank5_spectral_floor_estimate": 0.06456020324735173,
+      "rank5_operator_fit_relative_residual": 0.06530636514154871,
+      "fit_residual_over_spectral_floor": 1.0115576137723448,
+      "fit_error_energy_above_spectral_floor": 9.69014846619225e-05,
+      "fraction_operator_fit_error_at_spectral_floor": 0.9772794203668619,
+      "coefficient_matrix_M": [
+        [
+          0.8657094729826881,
+          0.05397039484511126,
+          -0.02936621791507068,
+          0.015358564926408233,
+          -0.02587373283042141
+        ],
+        [
+          0.05565091764372388,
+          0.8378015481894285,
+          -0.06408366620772722,
+          0.010515689163029857,
+          0.011990990012446669
+        ],
+        [
+          -0.027837184608879188,
+          -0.06513408728211662,
+          0.7594831027348667,
+          -0.004188914867670315,
+          0.01393010874998893
+        ],
+        [
+          0.01788206870485192,
+          0.009876299193342783,
+          -0.004525833093978515,
+          0.8075520387876826,
+          0.01849362864970853
+        ],
+        [
+          -0.02631928493658356,
+          0.011833234431943382,
+          0.014074857519939685,
+          0.017834333799993732,
+          0.6861207501691736
+        ]
+      ],
+      "operator_asymmetry_relative": 0.0029541603928828477,
+      "operator_eigenvalues_real": [
+        0.9354825058425975,
+        0.6723089312104313,
+        0.7290564880975537,
+        0.8116941699928923,
+        0.808124817720365
+      ],
+      "operator_eigenvalues_imag": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "symmetric_part_eigenvalues": [
+        0.67230294270868,
+        0.7290456077579657,
+        0.8078858856858776,
+        0.8119434083894554,
+        0.9354890683218601
+      ],
+      "remaining_gain_on_symmetric_edit_axes": [
+        0.32769705729132004,
+        0.2709543922420343,
+        0.1921141143141224,
+        0.18805659161054455,
+        0.06451093167813993
+      ],
+      "posthoc_symmetrized_operator_relative_residual": 0.0653251856763584,
+      "full_columns_fit_rounding_in_sample": {
+        "columns": 2112,
+        "unrounded_error_relative_to_delta": 0.06530636514151664,
+        "bf16_then_f16_rounded_error_relative_to_delta": 0.07801362832724518,
+        "rounded_error_relative_to_target_weight": 0.0028786027383000136,
+        "rounded_exact_match_fraction": 0.6569723334194215,
+        "rounded_exact_match_fraction_on_changed_elements": 0.6300221964945639,
+        "rounded_error_max_absolute": 0.00390625,
+        "rounding_step_norm_relative_to_delta": 0.0436801312392995,
+        "rounding_reduces_squared_error_fraction": -0.4270195712237743
+      },
+      "column_split": [
+        {
+          "split": "even_to_odd",
+          "training_columns": 1056,
+          "heldout_columns": 1056,
+          "training_basis_seed": 20261043,
+          "basis_learned_on_training_columns_only": true,
+          "training_operator_relative_residual": 0.06760471601446823,
+          "heldout_operator_relative_residual": 0.06364140626927288,
+          "heldout_rounding": {
+            "columns": 1056,
+            "unrounded_error_relative_to_delta": 0.0636414062692893,
+            "bf16_then_f16_rounded_error_relative_to_delta": 0.07594163334769824,
+            "rounded_error_relative_to_target_weight": 0.002889286057525871,
+            "rounded_exact_match_fraction": 0.6489718518638086,
+            "rounded_exact_match_fraction_on_changed_elements": 0.6209390226089396,
+            "rounded_error_max_absolute": 0.00390625,
+            "rounding_step_norm_relative_to_delta": 0.042361135993623275,
+            "rounding_reduces_squared_error_fraction": -0.4239027611930928
+          },
+          "training_rounding": {
+            "columns": 1056,
+            "unrounded_error_relative_to_delta": 0.06760471601447658,
+            "bf16_then_f16_rounded_error_relative_to_delta": 0.08066924652338668,
+            "rounded_error_relative_to_target_weight": 0.0028830266971074984,
+            "rounded_exact_match_fraction": 0.6480894482825413,
+            "rounded_exact_match_fraction_on_changed_elements": 0.6202863016728596,
+            "rounded_error_max_absolute": 0.00390625,
+            "rounding_step_norm_relative_to_delta": 0.04508917163707237,
+            "rounding_reduces_squared_error_fraction": -0.42384270804808133
+          },
+          "fixed_full_basis_coefficient_only_holdout_relative_residual": 0.06322328231693854,
+          "fixed_full_basis_holdout_caveat": "The frozen full-column U has seen the held-out columns; only M is fit on training columns in this secondary diagnostic.",
+          "full_vs_training_basis_principal_cosines": [
+            0.9999956328824909,
+            0.9999950481398833,
+            0.9999931127111896,
+            0.9999921370500447,
+            0.9999905601496564
+          ],
+          "full_vs_training_operator": {
+            "frobenius_cosine": 0.9999864012354553,
+            "relative_difference_to_first_operator": 0.00523305896489725,
+            "relative_difference_to_second_operator": 0.0052308646930845845,
+            "first_norm": 1.7806114573624234,
+            "second_norm": 1.7813583980231837,
+            "optimal_second_scale_to_match_first": 0.9995670973468506,
+            "scale_adjusted_relative_difference_to_first": 0.005215107301187504
+          }
+        },
+        {
+          "split": "odd_to_even",
+          "training_columns": 1056,
+          "heldout_columns": 1056,
+          "training_basis_seed": 20261044,
+          "basis_learned_on_training_columns_only": true,
+          "training_operator_relative_residual": 0.06323662023072625,
+          "heldout_operator_relative_residual": 0.0679288109217916,
+          "heldout_rounding": {
+            "columns": 1056,
+            "unrounded_error_relative_to_delta": 0.06792881092178163,
+            "bf16_then_f16_rounded_error_relative_to_delta": 0.08101768333933212,
+            "rounded_error_relative_to_target_weight": 0.0028954794307813484,
+            "rounded_exact_match_fraction": 0.6499669098657025,
+            "rounded_exact_match_fraction_on_changed_elements": 0.6225403437107435,
+            "rounded_error_max_absolute": 0.00390625,
+            "rounding_step_norm_relative_to_delta": 0.0450978221844555,
+            "rounding_reduces_squared_error_fraction": -0.4224978423008039
+          },
+          "training_rounding": {
+            "columns": 1056,
+            "unrounded_error_relative_to_delta": 0.06323662023075488,
+            "bf16_then_f16_rounded_error_relative_to_delta": 0.07553978483116493,
+            "rounded_error_relative_to_target_weight": 0.00287399727237766,
+            "rounded_exact_match_fraction": 0.6540093540160123,
+            "rounded_exact_match_fraction_on_changed_elements": 0.6265662421268574,
+            "rounded_error_max_absolute": 0.00390625,
+            "rounding_step_norm_relative_to_delta": 0.042371993221154224,
+            "rounding_reduces_squared_error_fraction": -0.4269678421952454
+          },
+          "fixed_full_basis_coefficient_only_holdout_relative_residual": 0.06756111111219529,
+          "fixed_full_basis_holdout_caveat": "The frozen full-column U has seen the held-out columns; only M is fit on training columns in this secondary diagnostic.",
+          "full_vs_training_basis_principal_cosines": [
+            0.999996582945246,
+            0.9999960372725061,
+            0.9999951217935498,
+            0.9999926566664454,
+            0.999990211444493
+          ],
+          "full_vs_training_operator": {
+            "frobenius_cosine": 0.999988349668252,
+            "relative_difference_to_first_operator": 0.004831865039028637,
+            "relative_difference_to_second_operator": 0.004832962306718834,
+            "first_norm": 1.7806114573624234,
+            "second_norm": 1.7802071903110868,
+            "optimal_second_scale_to_match_first": 1.0002154369105076,
+            "scale_adjusted_relative_difference_to_first": 0.004827062022160001
+          }
+        }
+      ],
+      "training_halves_principal_cosines": [
+        0.9999843616884669,
+        0.9999798566451428,
+        0.9999775978435164,
+        0.999970175522341,
+        0.9999632254988485
+      ],
+      "training_halves_operator_comparison": {
+        "frobenius_cosine": 0.9999499808732906,
+        "relative_difference_to_first_operator": 0.010019543203415054,
+        "relative_difference_to_second_operator": 0.010026022547769036,
+        "first_norm": 1.7813583980231837,
+        "second_norm": 1.7802071903110868,
+        "optimal_second_scale_to_match_first": 1.0005966191612143,
+        "scale_adjusted_relative_difference_to_first": 0.010001787415555626
+      }
+    },
+    {
+      "layer": 27,
+      "shape": [
+        2816,
+        2112
+      ],
+      "delta_relative_to_parent_norm": 0.03856071217371006,
+      "saved_full_column_basis_is_in_sample": true,
+      "rank5_captured_energy_fraction": 0.9961106298249324,
+      "rank5_spectral_floor_estimate": 0.062364815201102215,
+      "rank5_operator_fit_relative_residual": 0.06320024697349583,
+      "fit_residual_over_spectral_floor": 1.0133958830744494,
+      "fit_error_energy_above_spectral_floor": 0.00010490104244323829,
+      "fraction_operator_fit_error_at_spectral_floor": 0.9737371258157552,
+      "coefficient_matrix_M": [
+        [
+          0.934935879316479,
+          0.009000976664579163,
+          0.006087783430280978,
+          0.0016305617585298698,
+          -0.021650127116122637
+        ],
+        [
+          0.008940459828893443,
+          0.7776229301902415,
+          0.021511396032121915,
+          -0.007100916223193286,
+          -0.008707412583732478
+        ],
+        [
+          0.005342359241376946,
+          0.0223976469683904,
+          0.7358194586807596,
+          0.008473073505022945,
+          0.013591336945347204
+        ],
+        [
+          0.0017493573836728589,
+          -0.007195131121032445,
+          0.008307132752050753,
+          0.8060979337422547,
+          -0.023981077132936627
+        ],
+        [
+          -0.02167538808325947,
+          -0.00926479562901381,
+          0.013390263317918677,
+          -0.023440484209934526,
+          0.6886267003325344
+        ]
+      ],
+      "operator_asymmetry_relative": 0.001138195893859073,
+      "operator_eigenvalues_real": [
+        0.9376854415767257,
+        0.675955166803763,
+        0.7320197227178924,
+        0.7859507813622241,
+        0.8114917898016646
+      ],
+      "operator_eigenvalues_imag": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "symmetric_part_eigenvalues": [
+        0.6759531408202987,
+        0.7320167538625155,
+        0.7859543664190235,
+        0.8114924797834101,
+        0.9376861613770209
+      ],
+      "remaining_gain_on_symmetric_edit_axes": [
+        0.32404685917970133,
+        0.2679832461374845,
+        0.2140456335809765,
+        0.1885075202165899,
+        0.06231383862297912
+      ],
+      "posthoc_symmetrized_operator_relative_residual": 0.0632029439357242,
+      "full_columns_fit_rounding_in_sample": {
+        "columns": 2112,
+        "unrounded_error_relative_to_delta": 0.06320024697351154,
+        "bf16_then_f16_rounded_error_relative_to_delta": 0.0749503662316103,
+        "rounded_error_relative_to_target_weight": 0.0028932969174273165,
+        "rounded_exact_match_fraction": 0.6491078778731921,
+        "rounded_exact_match_fraction_on_changed_elements": 0.6233078666074624,
+        "rounded_error_max_absolute": 0.00390625,
+        "rounding_step_norm_relative_to_delta": 0.04177473274107391,
+        "rounding_reduces_squared_error_fraction": -0.40640359463382647
+      },
+      "column_split": [
+        {
+          "split": "even_to_odd",
+          "training_columns": 1056,
+          "heldout_columns": 1056,
+          "training_basis_seed": 20261044,
+          "basis_learned_on_training_columns_only": true,
+          "training_operator_relative_residual": 0.06247544300015751,
+          "heldout_operator_relative_residual": 0.06418709535860516,
+          "heldout_rounding": {
+            "columns": 1056,
+            "unrounded_error_relative_to_delta": 0.06418709535864732,
+            "bf16_then_f16_rounded_error_relative_to_delta": 0.07600350678621817,
+            "rounded_error_relative_to_target_weight": 0.0029058542962465406,
+            "rounded_exact_match_fraction": 0.643606474905303,
+            "rounded_exact_match_fraction_on_changed_elements": 0.6174350802216508,
+            "rounded_error_max_absolute": 0.00390625,
+            "rounding_step_norm_relative_to_delta": 0.04220634661430933,
+            "rounding_reduces_squared_error_fraction": -0.4020768407426081
+          },
+          "training_rounding": {
+            "columns": 1056,
+            "unrounded_error_relative_to_delta": 0.062475443000173034,
+            "bf16_then_f16_rounded_error_relative_to_delta": 0.07415761986287689,
+            "rounded_error_relative_to_target_weight": 0.0028891302052185836,
+            "rounded_exact_match_fraction": 0.6463972780001722,
+            "rounded_exact_match_fraction_on_changed_elements": 0.6202833109466244,
+            "rounded_error_max_absolute": 0.00390625,
+            "rounding_step_norm_relative_to_delta": 0.04137464346316319,
+            "rounding_reduces_squared_error_fraction": -0.4089412237423877
+          },
+          "fixed_full_basis_coefficient_only_holdout_relative_residual": 0.06389675566695488,
+          "fixed_full_basis_holdout_caveat": "The frozen full-column U has seen the held-out columns; only M is fit on training columns in this secondary diagnostic.",
+          "full_vs_training_basis_principal_cosines": [
+            0.9999968296429785,
+            0.9999948651234797,
+            0.9999938270523135,
+            0.9999933417429762,
+            0.9999914986685889
+          ],
+          "full_vs_training_operator": {
+            "frobenius_cosine": 0.9999886196888119,
+            "relative_difference_to_first_operator": 0.004782031038833654,
+            "relative_difference_to_second_operator": 0.0047836526483940245,
+            "first_norm": 1.774334197447516,
+            "second_norm": 1.773732716213539,
+            "optimal_second_scale_to_match_first": 1.000327720604883,
+            "scale_adjusted_relative_difference_to_first": 0.004770795831384902
+          }
+        },
+        {
+          "split": "odd_to_even",
+          "training_columns": 1056,
+          "heldout_columns": 1056,
+          "training_basis_seed": 20261045,
+          "basis_learned_on_training_columns_only": true,
+          "training_operator_relative_residual": 0.0639829300201812,
+          "heldout_operator_relative_residual": 0.06302291315827636,
+          "heldout_rounding": {
+            "columns": 1056,
+            "unrounded_error_relative_to_delta": 0.06302291315829825,
+            "bf16_then_f16_rounded_error_relative_to_delta": 0.0746722633648874,
+            "rounded_error_relative_to_target_weight": 0.002909180364451409,
+            "rounded_exact_match_fraction": 0.6402406298424587,
+            "rounded_exact_match_fraction_on_changed_elements": 0.6133440027435626,
+            "rounded_error_max_absolute": 0.00390625,
+            "rounding_step_norm_relative_to_delta": 0.04137489499646883,
+            "rounding_reduces_squared_error_fraction": -0.40385315535087263
+          },
+          "training_rounding": {
+            "columns": 1056,
+            "unrounded_error_relative_to_delta": 0.06398293002018682,
+            "bf16_then_f16_rounded_error_relative_to_delta": 0.07579179294478046,
+            "rounded_error_relative_to_target_weight": 0.002897759806903475,
+            "rounded_exact_match_fraction": 0.6412229091339532,
+            "rounded_exact_match_fraction_on_changed_elements": 0.6145399716741421,
+            "rounded_error_max_absolute": 0.00390625,
+            "rounding_step_norm_relative_to_delta": 0.042193328801597124,
+            "rounding_reduces_squared_error_fraction": -0.403188812675741
+          },
+          "fixed_full_basis_coefficient_only_holdout_relative_residual": 0.06254707904701311,
+          "fixed_full_basis_holdout_caveat": "The frozen full-column U has seen the held-out columns; only M is fit on training columns in this secondary diagnostic.",
+          "full_vs_training_basis_principal_cosines": [
+            0.9999966228349502,
+            0.9999945309037088,
+            0.999992319268713,
+            0.9999918893861701,
+            0.9999905967358513
+          ],
+          "full_vs_training_operator": {
+            "frobenius_cosine": 0.9999866271155147,
+            "relative_difference_to_first_operator": 0.005189433851758223,
+            "relative_difference_to_second_operator": 0.005187274300267169,
+            "first_norm": 1.774334197447516,
+            "second_norm": 1.7750728832851876,
+            "optimal_second_scale_to_match_first": 0.9995704887325406,
+            "scale_adjusted_relative_difference_to_first": 0.005171613881226045
+          }
+        }
+      ],
+      "training_halves_principal_cosines": [
+        0.9999868058438828,
+        0.9999772730358325,
+        0.9999726631203206,
+        0.9999708297945863,
+        0.9999656697557375
+      ],
+      "training_halves_operator_comparison": {
+        "frobenius_cosine": 0.999950836295664,
+        "relative_difference_to_first_operator": 0.009948496213310867,
+        "relative_difference_to_second_operator": 0.009940985171278144,
+        "first_norm": 1.773732716213539,
+        "second_norm": 1.7750728832851876,
+        "optimal_second_scale_to_match_first": 0.9991958807123242,
+        "scale_adjusted_relative_difference_to_first": 0.009915895905173054
+      }
+    },
+    {
+      "layer": 28,
+      "shape": [
+        2816,
+        2112
+      ],
+      "delta_relative_to_parent_norm": 0.037885054152868455,
+      "saved_full_column_basis_is_in_sample": true,
+      "rank5_captured_energy_fraction": 0.9959109281143832,
+      "rank5_spectral_floor_estimate": 0.06394585119940778,
+      "rank5_operator_fit_relative_residual": 0.06528000251798975,
+      "fit_residual_over_spectral_floor": 1.020863766664417,
+      "fit_error_energy_above_spectral_floor": 0.00017240684313194615,
+      "fraction_operator_fit_error_at_spectral_floor": 0.9595429534896287,
+      "coefficient_matrix_M": [
+        [
+          0.8418908961289518,
+          -0.07026100589846128,
+          0.01931425444218799,
+          0.06361836586354339,
+          -0.01771174779418851
+        ],
+        [
+          -0.06989721145329525,
+          0.8089768918551852,
+          -0.012406124702581291,
+          -0.026037456375895197,
+          0.013277246422894235
+        ],
+        [
+          0.01682492583594156,
+          -0.0105624611870864,
+          0.7741326781995769,
+          -0.027205664014256274,
+          -0.00924052507376165
+        ],
+        [
+          0.06380088109985547,
+          -0.02490015004870762,
+          -0.027793294831498196,
+          0.8164503108564104,
+          0.012064105161820198
+        ],
+        [
+          -0.01764654134422745,
+          0.013685317679269879,
+          -0.009084584256801354,
+          0.012991406678310207,
+          0.684193466254585
+        ]
+      ],
+      "operator_asymmetry_relative": 0.0028254597450353583,
+      "operator_eigenvalues_real": [
+        0.935571781265937,
+        0.6786201492528834,
+        0.7343113229768411,
+        0.7600399210433,
+        0.817101068755749
+      ],
+      "operator_eigenvalues_imag": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "symmetric_part_eigenvalues": [
+        0.6786150298972006,
+        0.7342964575650395,
+        0.7600387188415385,
+        0.8171129256341585,
+        0.9355811113567721
+      ],
+      "remaining_gain_on_symmetric_edit_axes": [
+        0.3213849701027994,
+        0.2657035424349605,
+        0.2399612811584615,
+        0.1828870743658415,
+        0.06441888864322787
+      ],
+      "posthoc_symmetrized_operator_relative_residual": 0.06529613397963016,
+      "full_columns_fit_rounding_in_sample": {
+        "columns": 2112,
+        "unrounded_error_relative_to_delta": 0.0652800025180115,
+        "bf16_then_f16_rounded_error_relative_to_delta": 0.07698927965197883,
+        "rounded_error_relative_to_target_weight": 0.0029199211591806407,
+        "rounded_exact_match_fraction": 0.6305895088132748,
+        "rounded_exact_match_fraction_on_changed_elements": 0.6024938462914983,
+        "rounded_error_max_absolute": 0.00390625,
+        "rounding_step_norm_relative_to_delta": 0.042719907303974076,
+        "rounding_reduces_squared_error_fraction": -0.3909137082721128
+      },
+      "column_split": [
+        {
+          "split": "even_to_odd",
+          "training_columns": 1056,
+          "heldout_columns": 1056,
+          "training_basis_seed": 20261045,
+          "basis_learned_on_training_columns_only": true,
+          "training_operator_relative_residual": 0.06573086476166164,
+          "heldout_operator_relative_residual": 0.06554397454592198,
+          "heldout_rounding": {
+            "columns": 1056,
+            "unrounded_error_relative_to_delta": 0.06554397454589668,
+            "bf16_then_f16_rounded_error_relative_to_delta": 0.07716745660796176,
+            "rounded_error_relative_to_target_weight": 0.0029439051748588268,
+            "rounded_exact_match_fraction": 0.6194651369877755,
+            "rounded_exact_match_fraction_on_changed_elements": 0.5902843872539688,
+            "rounded_error_max_absolute": 0.00390625,
+            "rounding_step_norm_relative_to_delta": 0.04246125460165156,
+            "rounding_reduces_squared_error_fraction": -0.38612637224322
+          },
+          "training_rounding": {
+            "columns": 1056,
+            "unrounded_error_relative_to_delta": 0.06573086476167202,
+            "bf16_then_f16_rounded_error_relative_to_delta": 0.07742030872388211,
+            "rounded_error_relative_to_target_weight": 0.0029191196617151666,
+            "rounded_exact_match_fraction": 0.6233865196711432,
+            "rounded_exact_match_fraction_on_changed_elements": 0.5942015741195554,
+            "rounded_error_max_absolute": 0.00390625,
+            "rounding_step_norm_relative_to_delta": 0.04296180364151265,
+            "rounding_reduces_squared_error_fraction": -0.38730229814731865
+          },
+          "fixed_full_basis_coefficient_only_holdout_relative_residual": 0.06500540102786974,
+          "fixed_full_basis_holdout_caveat": "The frozen full-column U has seen the held-out columns; only M is fit on training columns in this secondary diagnostic.",
+          "full_vs_training_basis_principal_cosines": [
+            0.9999965265852035,
+            0.9999948136302047,
+            0.9999942005808533,
+            0.9999906584352455,
+            0.9999881689510003
+          ],
+          "full_vs_training_operator": {
+            "frobenius_cosine": 0.9999858561736922,
+            "relative_difference_to_first_operator": 0.005324207337838066,
+            "relative_difference_to_second_operator": 0.005325584233113248,
+            "first_norm": 1.7664541537588863,
+            "second_norm": 1.7659974484901924,
+            "optimal_second_scale_to_match_first": 1.0002444628945142,
+            "scale_adjusted_relative_difference_to_first": 0.005318594980610646
+          }
+        },
+        {
+          "split": "odd_to_even",
+          "training_columns": 1056,
+          "heldout_columns": 1056,
+          "training_basis_seed": 20261046,
+          "basis_learned_on_training_columns_only": true,
+          "training_operator_relative_residual": 0.06494357994059617,
+          "heldout_operator_relative_residual": 0.06590438284786293,
+          "heldout_rounding": {
+            "columns": 1056,
+            "unrounded_error_relative_to_delta": 0.06590438284789614,
+            "bf16_then_f16_rounded_error_relative_to_delta": 0.07766813351864686,
+            "rounded_error_relative_to_target_weight": 0.0029284638537363894,
+            "rounded_exact_match_fraction": 0.6280386428202479,
+            "rounded_exact_match_fraction_on_changed_elements": 0.5997338390011537,
+            "rounded_error_max_absolute": 0.00390625,
+            "rounding_step_norm_relative_to_delta": 0.04299098726640053,
+            "rounding_reduces_squared_error_fraction": -0.38885575285958307
+          },
+          "training_rounding": {
+            "columns": 1056,
+            "unrounded_error_relative_to_delta": 0.06494357994060483,
+            "bf16_then_f16_rounded_error_relative_to_delta": 0.07655792756140463,
+            "rounded_error_relative_to_target_weight": 0.002920651904720581,
+            "rounded_exact_match_fraction": 0.6282074563102618,
+            "rounded_exact_match_fraction_on_changed_elements": 0.6001492366848137,
+            "rounded_error_max_absolute": 0.00390625,
+            "rounding_step_norm_relative_to_delta": 0.04246610103159299,
+            "rounding_reduces_squared_error_fraction": -0.3896578566038813
+          },
+          "fixed_full_basis_coefficient_only_holdout_relative_residual": 0.06559074945032918,
+          "fixed_full_basis_holdout_caveat": "The frozen full-column U has seen the held-out columns; only M is fit on training columns in this secondary diagnostic.",
+          "full_vs_training_basis_principal_cosines": [
+            0.9999954192309064,
+            0.9999943266429527,
+            0.9999938663195204,
+            0.9999932861252262,
+            0.9999911278738142
+          ],
+          "full_vs_training_operator": {
+            "frobenius_cosine": 0.9999872995688138,
+            "relative_difference_to_first_operator": 0.005050646771975136,
+            "relative_difference_to_second_operator": 0.005049049063773383,
+            "first_norm": 1.7664541537588863,
+            "second_norm": 1.7670131260037254,
+            "optimal_second_scale_to_match_first": 0.9996709662391827,
+            "scale_adjusted_relative_difference_to_first": 0.0050399108197950685
+          }
+        }
+      ],
+      "training_halves_principal_cosines": [
+        0.9999838035244104,
+        0.9999780574010766,
+        0.9999750336263776,
+        0.9999661104961332,
+        0.9999629694033353
+      ],
+      "training_halves_operator_comparison": {
+        "frobenius_cosine": 0.9999468858567024,
+        "relative_difference_to_first_operator": 0.010325703644790027,
+        "relative_difference_to_second_operator": 0.010319768439867618,
+        "first_norm": 1.7659974484901924,
+        "second_norm": 1.7670131260037254,
+        "optimal_second_scale_to_match_first": 0.9993721173098559,
+        "scale_adjusted_relative_difference_to_first": 0.010306573896445403
+      }
+    }
+  ],
+  "cross_layer_pairs": [
+    {
+      "first_layer": 25,
+      "second_layer": 26,
+      "principal_cosines": [
+        0.8661156301032834,
+        0.8388424112697562,
+        0.6240280292089524,
+        0.08994731780407764,
+        0.04588011400673693
+      ],
+      "principal_angles_degrees": [
+        29.9896592091263,
+        32.98191776616556,
+        51.38911711089325,
+        84.839423668957,
+        87.37033998725632
+      ],
+      "subspace_overlap_fraction": 0.37068387234677896,
+      "output_operator_comparison": {
+        "frobenius_cosine": 0.3544580180759406,
+        "relative_difference_to_first_operator": 1.1429363509109927,
+        "relative_difference_to_second_operator": 1.1297382107599845,
+        "first_norm": 1.7600497178132102,
+        "second_norm": 1.7806114573624234,
+        "optimal_second_scale_to_match_first": 0.3503648884834782,
+        "scale_adjusted_relative_difference_to_first": 0.9350719295442871
+      }
+    },
+    {
+      "first_layer": 25,
+      "second_layer": 27,
+      "principal_cosines": [
+        0.7152343054664458,
+        0.6742493802866764,
+        0.6225248537197912,
+        0.14236275778546328,
+        0.00723461928712022
+      ],
+      "principal_angles_degrees": [
+        44.337595364877785,
+        47.60411263174973,
+        51.49925199000058,
+        81.81540798924196,
+        89.58548323246211
+      ],
+      "subspace_overlap_fraction": 0.27480580531047916,
+      "output_operator_comparison": {
+        "frobenius_cosine": 0.24890766785574628,
+        "relative_difference_to_first_operator": 1.2306267476856958,
+        "relative_difference_to_second_operator": 1.2207194468288243,
+        "first_norm": 1.7600497178132102,
+        "second_norm": 1.774334197447516,
+        "optimal_second_scale_to_match_first": 0.2469038083137148,
+        "scale_adjusted_relative_difference_to_first": 0.9685272184521266
+      }
+    },
+    {
+      "first_layer": 25,
+      "second_layer": 28,
+      "principal_cosines": [
+        0.6406007112252675,
+        0.6048137087229406,
+        0.24531096722407925,
+        0.12291583749492513,
+        0.006298656052551942
+      ],
+      "principal_angles_degrees": [
+        50.16337238069284,
+        52.78456231234068,
+        75.79978833663469,
+        82.93958609654085,
+        89.63911120529646
+      ],
+      "subspace_overlap_fraction": 0.17029886805941544,
+      "output_operator_comparison": {
+        "frobenius_cosine": 0.15718536745778183,
+        "relative_difference_to_first_operator": 1.3006829521485304,
+        "relative_difference_to_second_operator": 1.2959672109361462,
+        "first_norm": 1.7600497178132102,
+        "second_norm": 1.7664541537588863,
+        "optimal_second_scale_to_match_first": 0.15661547799003722,
+        "scale_adjusted_relative_difference_to_first": 0.9875691166987565
+      }
+    },
+    {
+      "first_layer": 26,
+      "second_layer": 27,
+      "principal_cosines": [
+        0.8590685117733695,
+        0.8324658514487253,
+        0.810474541342306,
+        0.8018134531009183,
+        0.40175020893794977
+      ],
+      "principal_angles_degrees": [
+        30.787844221332744,
+        33.64711988701974,
+        35.85767867048422,
+        36.69637501885978,
+        66.31236182471442
+      ],
+      "subspace_overlap_fraction": 0.5784350255736179,
+      "output_operator_comparison": {
+        "frobenius_cosine": 0.6021857152176721,
+        "relative_difference_to_first_operator": 0.8904134639341161,
+        "relative_difference_to_second_operator": 0.8935635789197193,
+        "first_norm": 1.7806114573624234,
+        "second_norm": 1.774334197447516,
+        "optimal_second_scale_to_match_first": 0.6043161347614671,
+        "scale_adjusted_relative_difference_to_first": 0.798356038611709
+      }
+    },
+    {
+      "first_layer": 26,
+      "second_layer": 28,
+      "principal_cosines": [
+        0.755980846023357,
+        0.6960007096617044,
+        0.6864436249077266,
+        0.48282398823254896,
+        0.3195902455213443
+      ],
+      "principal_angles_degrees": [
+        40.88885211390237,
+        45.89298543071794,
+        46.65075390774391,
+        61.12999585463955,
+        71.36185351255945
+      ],
+      "subspace_overlap_fraction": 0.37247716124508484,
+      "output_operator_comparison": {
+        "frobenius_cosine": 0.35703598711529194,
+        "relative_difference_to_first_operator": 1.1294985929977963,
+        "relative_difference_to_second_operator": 1.1385509957826694,
+        "first_norm": 1.7806114573624234,
+        "second_norm": 1.7664541537588863,
+        "optimal_second_scale_to_match_first": 0.35989746351207463,
+        "scale_adjusted_relative_difference_to_first": 0.9340906293848628
+      }
+    },
+    {
+      "first_layer": 27,
+      "second_layer": 28,
+      "principal_cosines": [
+        0.8472940233353903,
+        0.822050572977082,
+        0.8056304876643416,
+        0.6208589643362956,
+        0.13507779336831877
+      ],
+      "principal_angles_degrees": [
+        32.0814390498708,
+        34.70940608265813,
+        36.32881107411778,
+        51.621112232949,
+        82.23688167540041
+      ],
+      "subspace_overlap_fraction": 0.4892853306048196,
+      "output_operator_comparison": {
+        "frobenius_cosine": 0.46819274985528525,
+        "relative_difference_to_first_operator": 1.0290338073738032,
+        "relative_difference_to_second_operator": 1.0336242641042694,
+        "first_norm": 1.774334197447516,
+        "second_norm": 1.7664541537588863,
+        "optimal_second_scale_to_match_first": 0.47028132901014674,
+        "scale_adjusted_relative_difference_to_first": 0.8836263627704564
+      }
+    }
+  ],
+  "cross_layer_operator_prediction": [
+    {
+      "source_layer": 26,
+      "target_layer": 25,
+      "unchanged_source_operator_all_column_relative_residual": 1.2063861133464224,
+      "target_delta_energy_inside_source_subspace": 0.31988018582931727,
+      "column_split": [
+        {
+          "split": "even_to_odd",
+          "coefficient_scale_fit_on_training_columns": 0.2935197625968551,
+          "scaled_source_operator_heldout_relative_residual": 0.9493796643723627,
+          "source_subspace_refit_M_heldout_relative_residual": 0.903333429190525
+        },
+        {
+          "split": "odd_to_even",
+          "coefficient_scale_fit_on_training_columns": 0.3023580810806303,
+          "scaled_source_operator_heldout_relative_residual": 0.9480764576983042,
+          "source_subspace_refit_M_heldout_relative_residual": 0.8977732276012036
+        }
+      ]
+    },
+    {
+      "source_layer": 27,
+      "target_layer": 25,
+      "unchanged_source_operator_all_column_relative_residual": 1.2556543886920213,
+      "target_delta_energy_inside_source_subspace": 0.21987880383052918,
+      "column_split": [
+        {
+          "split": "even_to_odd",
+          "coefficient_scale_fit_on_training_columns": 0.22058227283311238,
+          "scaled_source_operator_heldout_relative_residual": 0.9761420094479111,
+          "source_subspace_refit_M_heldout_relative_residual": 0.957977878554441
+        },
+        {
+          "split": "odd_to_even",
+          "coefficient_scale_fit_on_training_columns": 0.21549662168296613,
+          "scaled_source_operator_heldout_relative_residual": 0.9746487686157727,
+          "source_subspace_refit_M_heldout_relative_residual": 0.9565066032056668
+        }
+      ]
+    },
+    {
+      "source_layer": 28,
+      "target_layer": 25,
+      "unchanged_source_operator_all_column_relative_residual": 1.3112042579173757,
+      "target_delta_energy_inside_source_subspace": 0.13918104769142364,
+      "column_split": [
+        {
+          "split": "even_to_odd",
+          "coefficient_scale_fit_on_training_columns": 0.13812521157598429,
+          "scaled_source_operator_heldout_relative_residual": 0.9908034559311212,
+          "source_subspace_refit_M_heldout_relative_residual": 0.9775057021767437
+        },
+        {
+          "split": "odd_to_even",
+          "coefficient_scale_fit_on_training_columns": 0.13764400422748968,
+          "scaled_source_operator_heldout_relative_residual": 0.9902088793025245,
+          "source_subspace_refit_M_heldout_relative_residual": 0.9784895997624443
+        }
+      ]
+    },
+    {
+      "source_layer": 25,
+      "target_layer": 26,
+      "unchanged_source_operator_all_column_relative_residual": 1.1103356004258909,
+      "target_delta_energy_inside_source_subspace": 0.36879324349810366,
+      "column_split": [
+        {
+          "split": "even_to_odd",
+          "coefficient_scale_fit_on_training_columns": 0.32678008197000985,
+          "scaled_source_operator_heldout_relative_residual": 0.9592467998278013,
+          "source_subspace_refit_M_heldout_relative_residual": 0.8995214695136414
+        },
+        {
+          "split": "odd_to_even",
+          "coefficient_scale_fit_on_training_columns": 0.34994083004208637,
+          "scaled_source_operator_heldout_relative_residual": 0.9571981659026616,
+          "source_subspace_refit_M_heldout_relative_residual": 0.8988378119641031
+        }
+      ]
+    },
+    {
+      "source_layer": 27,
+      "target_layer": 26,
+      "unchanged_source_operator_all_column_relative_residual": 0.9106332831475412,
+      "target_delta_energy_inside_source_subspace": 0.6004791122850585,
+      "column_split": [
+        {
+          "split": "even_to_odd",
+          "coefficient_scale_fit_on_training_columns": 0.5673551361760795,
+          "scaled_source_operator_heldout_relative_residual": 0.8198242413235393,
+          "source_subspace_refit_M_heldout_relative_residual": 0.7952289648998566
+        },
+        {
+          "split": "odd_to_even",
+          "coefficient_scale_fit_on_training_columns": 0.6300440433148573,
+          "scaled_source_operator_heldout_relative_residual": 0.8474365369949616,
+          "source_subspace_refit_M_heldout_relative_residual": 0.818782770174996
+        }
+      ]
+    },
+    {
+      "source_layer": 28,
+      "target_layer": 26,
+      "unchanged_source_operator_all_column_relative_residual": 1.1031411344653277,
+      "target_delta_energy_inside_source_subspace": 0.36889895769418213,
+      "column_split": [
+        {
+          "split": "even_to_odd",
+          "coefficient_scale_fit_on_training_columns": 0.35208657642333363,
+          "scaled_source_operator_heldout_relative_residual": 0.9342528385476001,
+          "source_subspace_refit_M_heldout_relative_residual": 0.9123875169544722
+        },
+        {
+          "split": "odd_to_even",
+          "coefficient_scale_fit_on_training_columns": 0.39392388111857957,
+          "scaled_source_operator_heldout_relative_residual": 0.9442164062597215,
+          "source_subspace_refit_M_heldout_relative_residual": 0.925426394906932
+        }
+      ]
+    },
+    {
+      "source_layer": 25,
+      "target_layer": 27,
+      "unchanged_source_operator_all_column_relative_residual": 1.1458258125411755,
+      "target_delta_energy_inside_source_subspace": 0.2648791698945612,
+      "column_split": [
+        {
+          "split": "even_to_odd",
+          "coefficient_scale_fit_on_training_columns": 0.2704823075077276,
+          "scaled_source_operator_heldout_relative_residual": 0.9790574723843146,
+          "source_subspace_refit_M_heldout_relative_residual": 0.9519969968211605
+        },
+        {
+          "split": "odd_to_even",
+          "coefficient_scale_fit_on_training_columns": 0.2529426771163338,
+          "scaled_source_operator_heldout_relative_residual": 0.9755175664890228,
+          "source_subspace_refit_M_heldout_relative_residual": 0.9401765044541673
+        }
+      ]
+    },
+    {
+      "source_layer": 26,
+      "target_layer": 27,
+      "unchanged_source_operator_all_column_relative_residual": 0.8820310404484957,
+      "target_delta_energy_inside_source_subspace": 0.6126311818267932,
+      "column_split": [
+        {
+          "split": "even_to_odd",
+          "coefficient_scale_fit_on_training_columns": 0.6330320565823095,
+          "scaled_source_operator_heldout_relative_residual": 0.8130571620330621,
+          "source_subspace_refit_M_heldout_relative_residual": 0.7910397741208666
+        },
+        {
+          "split": "odd_to_even",
+          "coefficient_scale_fit_on_training_columns": 0.6216945447872352,
+          "scaled_source_operator_heldout_relative_residual": 0.8085136817226429,
+          "source_subspace_refit_M_heldout_relative_residual": 0.786077751571383
+        }
+      ]
+    },
+    {
+      "source_layer": 28,
+      "target_layer": 27,
+      "unchanged_source_operator_all_column_relative_residual": 0.9972785420272734,
+      "target_delta_energy_inside_source_subspace": 0.4770083550185512,
+      "column_split": [
+        {
+          "split": "even_to_odd",
+          "coefficient_scale_fit_on_training_columns": 0.5067712806953216,
+          "scaled_source_operator_heldout_relative_residual": 0.8843447816962782,
+          "source_subspace_refit_M_heldout_relative_residual": 0.8438062711996229
+        },
+        {
+          "split": "odd_to_even",
+          "coefficient_scale_fit_on_training_columns": 0.49926438022998576,
+          "scaled_source_operator_heldout_relative_residual": 0.8817413910342466,
+          "source_subspace_refit_M_heldout_relative_residual": 0.8375063296381889
+        }
+      ]
+    },
+    {
+      "source_layer": 25,
+      "target_layer": 28,
+      "unchanged_source_operator_all_column_relative_residual": 1.2105194905913796,
+      "target_delta_energy_inside_source_subspace": 0.16830355344789683,
+      "column_split": [
+        {
+          "split": "even_to_odd",
+          "coefficient_scale_fit_on_training_columns": 0.14734747193513176,
+          "scaled_source_operator_heldout_relative_residual": 0.9906285135810936,
+          "source_subspace_refit_M_heldout_relative_residual": 0.9729698391472892
+        },
+        {
+          "split": "odd_to_even",
+          "coefficient_scale_fit_on_training_columns": 0.1704353131420397,
+          "scaled_source_operator_heldout_relative_residual": 0.9924673234175915,
+          "source_subspace_refit_M_heldout_relative_residual": 0.9781350342444939
+        }
+      ]
+    },
+    {
+      "source_layer": 26,
+      "target_layer": 28,
+      "unchanged_source_operator_all_column_relative_residual": 1.104451307345313,
+      "target_delta_energy_inside_source_subspace": 0.36639755511319194,
+      "column_split": [
+        {
+          "split": "even_to_odd",
+          "coefficient_scale_fit_on_training_columns": 0.3601942874842167,
+          "scaled_source_operator_heldout_relative_residual": 0.935528421389693,
+          "source_subspace_refit_M_heldout_relative_residual": 0.9166265026335869
+        },
+        {
+          "split": "odd_to_even",
+          "coefficient_scale_fit_on_training_columns": 0.3778864014559215,
+          "scaled_source_operator_heldout_relative_residual": 0.9463005460462507,
+          "source_subspace_refit_M_heldout_relative_residual": 0.9286846551766635
+        }
+      ]
+    },
+    {
+      "source_layer": 27,
+      "target_layer": 28,
+      "unchanged_source_operator_all_column_relative_residual": 1.0087962036476639,
+      "target_delta_energy_inside_source_subspace": 0.4902226392013678,
+      "column_split": [
+        {
+          "split": "even_to_odd",
+          "coefficient_scale_fit_on_training_columns": 0.4728786503689533,
+          "scaled_source_operator_heldout_relative_residual": 0.8817558517435192,
+          "source_subspace_refit_M_heldout_relative_residual": 0.8400006429391451
+        },
+        {
+          "split": "odd_to_even",
+          "coefficient_scale_fit_on_training_columns": 0.5078710946871808,
+          "scaled_source_operator_heldout_relative_residual": 0.8932546266210593,
+          "source_subspace_refit_M_heldout_relative_residual": 0.8481338611998533
+        }
+      ]
+    }
+  ],
+  "sealed_utc": "2026-10-16T02:01:56.251173+00:00",
+  "conclusions": {
+    "recoverability": "The sampled late-layer weight differences support stable, layer-specific rank-5 output edits. This is algebraic recoverability of edit geometry, without a demonstrated behavioral interpretation.",
+    "fit_and_spectral_floor": "Rank-5 restricted fits leave 6.320\u20137.812% relative delta residual; the approximate rank-5 spectral floors are 6.236\u20137.710%. Between 95.95% and 97.73% of fit-error energy is already at the rank-5 spectral floor.",
+    "column_split_stability": "With both U and M learned only from training columns, reverse held-out relative residuals are 6.302\u20137.953%; the lowest principal cosine between the two training subspaces is 0.999899. These are weight-column checks, not behavioral tests.",
+    "operator_eigenvalues": "Symmetric-part eigenvalues are positive and below one: 0.481\u20130.970 overall, and 0.672\u20130.938 for layers 26\u201328. This is consistent with anisotropic attenuation within each fitted subspace; it does not identify what features were attenuated.",
+    "common_operator_hypothesis": "A single unchanged physical rank-5 operator across layers 25\u201328 is not supported by these samples: pairwise Frobenius cosines are 0.157\u20130.602, and cross-layer predictions leave 88.20\u2013131.12% of target-delta norm unexplained. Even refitting M within another layer's fixed U leaves 78.61\u201397.85% held-out residual. Adjacent layers can share partial subspace overlap without sharing the complete operator.",
+    "bf16_rounding": "Rounding the simple fitted predictions to BF16 and then the F16 export representation increases in-sample error energy by 37.35\u201342.70%, yielding 7.495\u20139.155% relative delta residual. Held-out results are similar. Thus this particular fitted prediction plus one rounding step does not account for the remaining residual, despite all observed target entries being BF16-representable. It does not rule out an earlier low-rank BF16 edit with unknown exact factors or a different construction path.",
+    "smallest_next_diagnostic": "Use same-layer attention output 27 first: freeze its recovered shared-down U, fit only attention coefficients on half the columns and evaluate the other half, compare against the attention-specific rank-5 spectral floor and matched Q8 null. Layer 25 is a useful second sample because its coefficient spectrum differs. The artifact agent owns that separately authorized Q8 pilot.",
+    "exploratory_transfer_limit": "Any future transfer should preserve layer-specific U and component-specific coefficient estimates, remain reversible, and be labeled exploratory. No common global operator, refusal-specific mechanism, REDCELL quality improvement, or transfer success has been established."
+  }
+}

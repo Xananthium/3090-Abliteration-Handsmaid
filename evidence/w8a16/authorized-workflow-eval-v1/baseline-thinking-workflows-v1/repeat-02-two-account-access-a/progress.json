@@ -1,0 +1,9 @@
+{
+  "case_id": "two-account-access-a",
+  "repeat": 2,
+  "turn": 7,
+  "attempt_count": 8,
+  "tool_calls": 7,
+  "known_generated_tokens": 1154,
+  "updated_utc": "2026-10-17T16:41:03.043324+00:00"
+}

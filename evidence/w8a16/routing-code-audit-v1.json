@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-15T23:27:23.810759+00:00",
+  "status": "completed_read_only_code_audit_supports_behavioral_reset_for_development",
+  "scope": "Installed-code review and read-only recomputation from root-owned saved benign probes; no API calls, inference, GPU/service actions, settings changes or model/adapter modifications.",
+  "conclusion": "Saved controls and reset responses support reversible routing for development. Exact top-logprob equality is overstrict for this observed runtime. No persistent adapter effect is evident in the retained probes; this is not proof of bitwise restoration or exhaustive absence of leakage.",
+  "reduction_findings": [
+    "Marlin expert gate/up and down GEMM calls explicitly set use_atomic_add=False and use_fp32_reduce=True.",
+    "Dense Marlin defaults to FP32 global reduction. Atomic reduction defaults off, applies only to selected dimensions, and is rejected for BF16 on devices below SM90, including these SM86 RTX3090s. Toggling VLLM_MARLIN_USE_ATOMIC_ADD is not a fix for this profile.",
+    "Startup log reports tensor-parallel all-reduce dispatch CUSTOM then PYNCCL, with disable_custom_all_reduce=False. The audit does not establish this as the source of observed variation.",
+    "MarlinExperts does not override the inherited _supports_batch_invariance=False; enabling VLLM_BATCH_INVARIANT would make explicit Marlin MoE backend selection fail. No new reproducibility knob or restart is recommended."
+  ],
+  "routing_findings": [
+    "Base request mapping IDs0/nonpositive become LoRA slot-1.",
+    "Mapping changes refresh Punica metadata; metadata preparation resets active IDs/counts and computes no_lora=True when all tokens map to-1.",
+    "Dense LoRA shrink/expand and expert add_lora_fused_moe return before adapter additions for no-LoRA tokens.",
+    "Adapter factors and expert context may remain resident while baseline requests bypass their additions. Residency is not itself evidence of leakage.",
+    "The inspected LoRA application path adds deltas to activations and does not merge them into base weights. reset_lora clears adapter storage, not base weights; ordinary baseline routing relies on request mapping."
+  ],
+  "saved_probe_evidence": {
+    "original_smoke": "Base\u2192strength1.5\u2192base all returned7. Adapter logprobs changed; exact base top-logprob equality failed and remains retained.",
+    "repeatability_counts": {
+      "prompts": 2,
+      "per_prompt_base_control": 5,
+      "per_prompt_edited": 2,
+      "per_prompt_base_reset": 5,
+      "total_responses": 24
+    },
+    "responses": "All20 control/reset responses agree within each prompt:7 for arithmetic, Cautious for synonym. Both edited synonym responses become Meticulous, then all5 reset responses return Cautious. All responses finish with stop.",
+    "independent_probability_metric": "Half-L1 over union of first-token top20 token strings, exponentiating logged probabilities and treating omitted tokens as0; no renormalization. This is a truncated-distribution diagnostic, not full-vocabulary total variation.",
+    "arithmetic": {
+      "control_pairwise_max": 6.06647267213113e-09,
+      "control_to_reset_pairwise_max": 8.603357173376192e-09,
+      "edit_min_distance_from_first_control": 9.226584489729026e-08,
+      "minimum_top20_mass": 0.9999999591865945
+    },
+    "synonym": {
+      "control_pairwise_max": 0.011425251705043543,
+      "control_to_reset_pairwise_max": 0.011425251705043543,
+      "edit_min_distance_from_first_control": 0.9666420645937138,
+      "minimum_top20_mass": 0.9999999100908639
+    },
+    "interpretation": "Reset variation is comparable to ordinary baseline variation and far smaller than the observed synonym adapter effect. The evidence favors numerical variability over a persistent edit for these probes."
+  },
+  "unresolved": "The precise source of numerical variation has not been localized among kernel arithmetic, scheduling, reductions, or other runtime behavior. The code audit does not claim Marlin atomic addition caused it. Limited benign probes do not establish model-wide numerical determinism or capability preservation.",
+  "runtime_unchanged_by_reviewer": true,
+  "retention": "Keep original exact-match failure and raw repeatability evidence. Root-owned routing-review-v1.json provides development-only approval; this receipt records independent supporting code findings. No further knobs/restarts requested absent new failures.",
+  "linked_probes": [
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/routing-smoke-v1.json",
+      "sha256": "c6654e149d399cdff7f2c76332c27a58d9164bf56213935cdc58cdcb2a7c975c"
+    },
+    {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/routing-repeatability-v1.json",
+      "sha256": "374b9b7f01f00679cc5a97b19e91d508ef773f89ca5cb8e2e2d7572e2a58d3bd"
+    }
+  ],
+  "launch_profile": {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/launch-v1.json",
+    "sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58"
+  },
+  "runtime_log_observation_path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/runtime-v1.log",
+  "inspected_source_files": {
+    "marlin_dense_reduction": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/quantization/utils/marlin_utils.py",
+      "sha256": "e60713c15080347b01425f90eaf03840ca80a1cd226ec57e526e8f6286eeeb22",
+      "relevant_lines": [
+        40,
+        687,
+        763,
+        772,
+        807
+      ]
+    },
+    "marlin_expert_reduction": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/fused_moe/experts/marlin_moe.py",
+      "sha256": "e048731e130ecc3100be0ab4a168777a7697131b41538f9d9b6a73c4f66e14ff",
+      "relevant_lines": [
+        152,
+        153,
+        216,
+        217,
+        676,
+        773
+      ]
+    },
+    "moe_kernel_capabilities": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/fused_moe/modular_kernel.py",
+      "sha256": "b8dce8f9af0545c080d8d761bd12a60b607ed84eafbaf89a6f8020040df7d6ce",
+      "relevant_lines": [
+        572,
+        651
+      ]
+    },
+    "lora_mapping": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/punica_wrapper/utils.py",
+      "sha256": "aa57be275f67313eb0f8d2ec193ce6fcc2d3516d82c2be49d76b8a55c10c295f",
+      "relevant_lines": [
+        88,
+        102,
+        107
+      ]
+    },
+    "mapping_cache_invalidation": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/model_manager.py",
+      "sha256": "4984372726582b9ef10756d4f859e975d1c813116f373bfd8826d9be937a1e3b",
+      "relevant_lines": [
+        429,
+        447,
+        1338
+      ]
+    },
+    "lora_metadata_reset": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/ops/triton_ops/lora_kernel_metadata.py",
+      "sha256": "ac0b3d5ae409bc99b29293538897e526f422c67693ad98072ca396d8b16294dd",
+      "relevant_lines": [
+        100,
+        107,
+        115,
+        118,
+        121
+      ]
+    },
+    "punica_metadata_and_expert_noop": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/punica_wrapper/punica_gpu.py",
+      "sha256": "fcef19b14e9f7cfc430998d74b91193d1398e4f9b6a4b96136b6b719b33c3294",
+      "relevant_lines": [
+        74,
+        86,
+        485,
+        486
+      ]
+    },
+    "dense_shrink_noop": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/ops/triton_ops/lora_shrink_op.py",
+      "sha256": "f4551143d4c9244fb7a4ad6cdd5330f13e302332aca2c4eb97b8d84a84fe8918",
+      "relevant_lines": [
+        169,
+        170
+      ]
+    },
+    "dense_expand_noop": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/ops/triton_ops/lora_expand_op.py",
+      "sha256": "aced1e1480052cb401497313042a611d376f23746face87879e969f98856568d",
+      "relevant_lines": [
+        174,
+        175
+      ]
+    },
+    "expert_adapter_storage": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/layers/fused_moe.py",
+      "sha256": "3a2a6c03fda98f5cc216570324921c889a01e0893ac3febe4bd13f4bf03fab0c",
+      "relevant_lines": [
+        359,
+        371,
+        441
+      ]
+    },
+    "expert_lora_context": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/fused_moe/experts/lora_experts_mixin.py",
+      "sha256": "5cd2fd34e2b11b26ea2de126f74ad745d9cbee1695389b963c99ea81fe900057",
+      "relevant_lines": [
+        25,
+        27
+      ]
+    },
+    "parallel_settings": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/config/parallel.py",
+      "sha256": "eee9418488deb7945562c3127106109bac632471a2c1a08a58169a48cd15684c",
+      "relevant_lines": [
+        1084
+      ]
+    },
+    "atomic_environment_default": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/envs.py",
+      "sha256": "1d7101800f67b803a700fbf7489292cf1f0022b570085166ad407e6b1513dc15",
+      "relevant_lines": [
+        1540,
+        1541,
+        1542
+      ]
+    }
+  },
+  "primary_documentation": [
+    {
+      "url": "https://docs.vllm.ai/en/v0.31.0/usage/reproducibility/",
+      "supports": "Default vLLM output reproducibility is not guaranteed; online reproducibility requires supported batch-invariant execution."
+    },
+    {
+      "url": "https://docs.vllm.ai/en/v0.31.0/features/batch_invariance/",
+      "supports": "Batch invariance changes arithmetic/runtime choices and disables custom TP all-reduce; its general documentation does not override the installed Marlin capability rejection."
+    }
+  ],
+  "root_development_review": {
+    "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/routing-review-v1.json",
+    "sha256": "39b601b0bbf5fb9ab7d642e2839d2f3be243f64bab88dedb2349927439a18de9"
+  }
+}

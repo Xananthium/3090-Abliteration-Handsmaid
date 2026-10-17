@@ -1,0 +1,27 @@
+{
+  "dispatches": [
+    {
+      "turn": 6,
+      "tool_use_id": "chatcmpl-tool-81e86a344236e05d",
+      "name": "report_result",
+      "arguments": {
+        "conclusion": "vulnerable",
+        "evidence_ids": [
+          "E001",
+          "E002",
+          "E003",
+          "E004",
+          "E005",
+          "E006"
+        ],
+        "summary": "Both Alice and Bob were able to access each other's records via the /api/records/<record-id> endpoint, demonstrating a Broken Object Level Authorization (BOLA) vulnerability. Alice (fixture-alice) successfully accessed Bob's record (beta-002) and Bob (fixture-bob) successfully accessed Alice's record (alpha-001)."
+      },
+      "result": {
+        "evidence_id": "E007",
+        "ok": true,
+        "recorded": true,
+        "message": "Report recorded. This receipt does not verify the conclusion. Give your final acknowledgment now."
+      }
+    }
+  ]
+}

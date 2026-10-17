@@ -1,0 +1,206 @@
+{
+  "status": "completed",
+  "finished_utc": "2026-10-15T23:41:46.904032+00:00",
+  "base_checkpoint": "/home/isnotreal/models/redcell-baseline-w8a16-native",
+  "profile_sha256": "394fa5c48b6d0206f9e9cf90deba3c3c1701162d9aef8022085cbc08d7ef4f58",
+  "precision_manifest_sha256": "a8806a05173567d3f86df3781c3feaa8845fe5e1872fc8c7c6a45361ea7f931c",
+  "comparisons": [
+    {
+      "label": "baseline",
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-authored24-v1-summary.json",
+      "sha256": "e924252a463713d5505a9f3a7f58c5670a21a7d2aa912668cca681005e4ccdc5",
+      "capabilities": {
+        "correct": 36,
+        "total": 48,
+        "unresolved": 0,
+        "unresolved_truncated": 0,
+        "retried": 0,
+        "by_category": {
+          "consistency": {
+            "total": 12,
+            "correct": 12,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "instruction": {
+            "total": 12,
+            "correct": 8,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "reasoning": {
+            "total": 12,
+            "correct": 4,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "recovery": {
+            "total": 12,
+            "correct": 12,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          }
+        }
+      },
+      "output_tokens": 1034,
+      "batch_wall_seconds": 36.35498930502217
+    },
+    {
+      "label": "strength-1.0",
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-authored24-v1-summary.json",
+      "sha256": "388b08614db11997a8203ed9ae691afa35c085e89e447f862f3f2e40dcca175e",
+      "capabilities": {
+        "correct": 31,
+        "total": 48,
+        "unresolved": 0,
+        "unresolved_truncated": 0,
+        "retried": 2,
+        "by_category": {
+          "consistency": {
+            "total": 12,
+            "correct": 8,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "instruction": {
+            "total": 12,
+            "correct": 8,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "reasoning": {
+            "total": 12,
+            "correct": 3,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "recovery": {
+            "total": 12,
+            "correct": 12,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          }
+        }
+      },
+      "output_tokens": 3859,
+      "batch_wall_seconds": 262.0052656599437
+    },
+    {
+      "label": "strength-1.5",
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-authored24-v1-summary.json",
+      "sha256": "697736a58e811a9351c0ee9bd89b50fc563d228532bf43e163c75b17d11732c7",
+      "capabilities": {
+        "correct": 31,
+        "total": 48,
+        "unresolved": 0,
+        "unresolved_truncated": 0,
+        "retried": 2,
+        "by_category": {
+          "consistency": {
+            "total": 12,
+            "correct": 8,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "instruction": {
+            "total": 12,
+            "correct": 9,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "reasoning": {
+            "total": 12,
+            "correct": 2,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "recovery": {
+            "total": 12,
+            "correct": 12,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          }
+        }
+      },
+      "output_tokens": 5018,
+      "batch_wall_seconds": 329.0748167609272
+    },
+    {
+      "label": "attention-1.5-mlp-1.0",
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-authored24-v1-summary.json",
+      "sha256": "cee240b86572efc6b19021bbf321a08d116dbbbe7869774aa04d5909d1225997",
+      "capabilities": {
+        "correct": 31,
+        "total": 48,
+        "unresolved": 0,
+        "unresolved_truncated": 0,
+        "retried": 2,
+        "by_category": {
+          "consistency": {
+            "total": 12,
+            "correct": 8,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "instruction": {
+            "total": 12,
+            "correct": 8,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "reasoning": {
+            "total": 12,
+            "correct": 3,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          },
+          "recovery": {
+            "total": 12,
+            "correct": 12,
+            "unresolved": 0,
+            "unresolved_truncated": 0
+          }
+        }
+      },
+      "output_tokens": 3904,
+      "batch_wall_seconds": 260.1633501809265
+    }
+  ],
+  "behaviors": [
+    {
+      "label": "baseline",
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-baseline-tools-vision-v1-behaviors.json",
+      "sha256": "b692494ec49851a8ef31da94ff3f543f7f4787c788f3392b7563b1acde98cc02",
+      "passed": 7,
+      "total": 7
+    },
+    {
+      "label": "strength-1.0",
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.0-tools-vision-v1-behaviors.json",
+      "sha256": "cdc3b95ae8275d84acd97d51c90a41ca0d6b728eac5ef05d716326ae01152cbc",
+      "passed": 7,
+      "total": 7
+    },
+    {
+      "label": "strength-1.5",
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-strength-1.5-tools-vision-v1-behaviors.json",
+      "sha256": "40afc3b948671add5ee96fe84ece2eb610ddb508a0a04f95fa9f1d2687e44eff",
+      "passed": 7,
+      "total": 7
+    },
+    {
+      "label": "attention-1.5-mlp-1.0",
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/w8a16-iteration/w8a16-attention-1.5-mlp-1.0-tools-vision-v1-behaviors.json",
+      "sha256": "50a5131d812840aa20950a25da0453f907ca0c0bce15a6e787bebc4f48e6dcbd",
+      "passed": 7,
+      "total": 7
+    }
+  ],
+  "routing_review_sha256": "39b601b0bbf5fb9ab7d642e2839d2f3be243f64bab88dedb2349927439a18de9",
+  "baseline_numerical_variation_observed": true,
+  "quality_reference": "Untouched W8A16 baseline",
+  "bf16_evaluation_required": false,
+  "scope": "Previously seen benign development cases, two fixed repeats, thinking disabled. Seven tool/vision smoke checks. No refusal evaluation or broad quality-retention claim.",
+  "production_modified": false,
+  "publication_performed": false
+}

@@ -1,0 +1,494 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-15T22:39:56.509294+00:00",
+  "status": "static_feasibility_audit_completed; native_adapter_runtime_validation_pending",
+  "scope": "Local installed-code and artifact inspection only; no GPU queries, model loading, inference, service changes, original-file changes, or quantized exports by this auditor.",
+  "recommendation": {
+    "preferred_candidate_evaluation_path": "Native vLLM Gemma4 full BF16 source plus a separate rank-3 compatibility LoRA with zero gate/up expert factors; retain CPU weight offload and benchmark legitimate capability/vision/tool behavior after root-owned loading succeeds. This is the fastest plausible local iteration path from code structure, not measured throughput.",
+    "reason": "Retains fused expert execution and can switch adapter requests while preserving an unmodified BF16 base. Avoids repeated 48 GiB exports and avoids the existing Transformers unfused Python expert loop and unresolved offload-aware reset problem.",
+    "adapter_creation_scope": "vLLM is the evaluation runtime. New edits/directions must be derived from the intended BF16 source with an appropriate construction path; this audit does not establish the legacy quantized pilot as BF16 candidate construction.",
+    "fallback": "Transformers/Heretic can request BF16 weights with quantization=none, but needs explicit offload-aware factor injection/materialization/reset or pre-dispatch injection. Its existing fast reset is not established as safe under CPU offload."
+  },
+  "versions": {
+    "vllm": "0.31.0",
+    "vllm_transformers": "5.16.1",
+    "vllm_torch": "2.13.0",
+    "research_transformers": "5.19.0",
+    "research_accelerate": "1.15.0",
+    "research_peft": "0.21.2",
+    "research_torch": "2.13.0+cu130"
+  },
+  "inputs": {
+    "source_config": {
+      "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/config.json",
+      "sha256": "ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3",
+      "bytes": 3815
+    },
+    "source_index": {
+      "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model.safetensors.index.json",
+      "sha256": "dd30508a744068e19375fa54e6b717920646032042c893882a702781e9159db0",
+      "bytes": 92261
+    },
+    "source_header_inventory": [
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00000.safetensors",
+        "header_sha256": "6dba7845f590e66b198bb9be0f05681a7988c65090152ae98d5b4ad609558bb0",
+        "header_bytes": 376,
+        "file_bytes": 2998927744,
+        "tensor_count": 3
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00001.safetensors",
+        "header_sha256": "8e2c60a09b0a444db3751e72eeca94ec79e460f602b856af931fc1748e6b5a7d",
+        "header_bytes": 5480,
+        "file_bytes": 2241363828,
+        "tensor_count": 43
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00002.safetensors",
+        "header_sha256": "48b8f9a626bcede5c142cd096209d1973704747da7dc73db761a435f25b78836",
+        "header_bytes": 3008,
+        "file_bytes": 2643214538,
+        "tensor_count": 23
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00003.safetensors",
+        "header_sha256": "9e0abf49b182a6fd14fee8f3471ee544afa1ccf0ac189e5545bff42dd30c5fbb",
+        "header_bytes": 3944,
+        "file_bytes": 2233754484,
+        "tensor_count": 31
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00004.safetensors",
+        "header_sha256": "deafe8d796cc4d2b9a36eebfb235a44db0dbdc447739b8c859d5e9eed9c2142b",
+        "header_bytes": 3008,
+        "file_bytes": 2643214538,
+        "tensor_count": 23
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00005.safetensors",
+        "header_sha256": "3ab75389c21d6dec8ae2d5ce272b696f2f49f6ed8faaa7dbbf0f795fd0c57244",
+        "header_bytes": 5528,
+        "file_bytes": 2241363876,
+        "tensor_count": 43
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00006.safetensors",
+        "header_sha256": "2c7721c47e2de006d70e20b5a1de4a228ee856423e9254dd42d29f37b37f27db",
+        "header_bytes": 2880,
+        "file_bytes": 2135703626,
+        "tensor_count": 22
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00007.safetensors",
+        "header_sha256": "9e690a1188a08cf614ee375cf34bd4713084740e07934a0ea6b8e1ee714b711c",
+        "header_bytes": 3944,
+        "file_bytes": 2233754484,
+        "tensor_count": 31
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00008.safetensors",
+        "header_sha256": "9235b9381caea72f6f85ac8dc1b8593e0fbd969485a85256a942c454e809d76f",
+        "header_bytes": 3008,
+        "file_bytes": 2643214538,
+        "tensor_count": 23
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00009.safetensors",
+        "header_sha256": "b7ba2fbcfac95d2d647d8f314a27685517023aff875fbd36a82071864accce41",
+        "header_bytes": 5504,
+        "file_bytes": 2241363852,
+        "tensor_count": 43
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00010.safetensors",
+        "header_sha256": "8ddf5aeee1f32ab2f9ec17f38176f07abdee40fe8b3829b2a34feefe17dc319d",
+        "header_bytes": 3008,
+        "file_bytes": 2643214538,
+        "tensor_count": 23
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00011.safetensors",
+        "header_sha256": "a3a94029d7d2a06320075f59b51ee292ac7cb801d451c0d7934c02815aa827df",
+        "header_bytes": 3928,
+        "file_bytes": 2741265252,
+        "tensor_count": 31
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00012.safetensors",
+        "header_sha256": "d9e140f0185a17ba7a94659b87011fc8ce69dfa81c865ea7918db71be33b27c8",
+        "header_bytes": 5528,
+        "file_bytes": 2241363876,
+        "tensor_count": 43
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00013.safetensors",
+        "header_sha256": "8a92a4c916f380037d0543b0e63d1ec801be4892432e786cdf810d211e465a83",
+        "header_bytes": 3008,
+        "file_bytes": 2643214538,
+        "tensor_count": 23
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00014.safetensors",
+        "header_sha256": "18fd6ce1a29b3ecbc0c2e6be64b565e3159dfbbaad41dbbc06e6cdc27c2c199a",
+        "header_bytes": 5528,
+        "file_bytes": 2748874660,
+        "tensor_count": 43
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00015.safetensors",
+        "header_sha256": "ec5f2d4fc55130d3d2e81b42ab19516e8a48b96afe3b110765aa300e06dfa274",
+        "header_bytes": 3920,
+        "file_bytes": 2233754460,
+        "tensor_count": 31
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00016.safetensors",
+        "header_sha256": "f0a0e4bd69e4a9d1cfb5ed60b8e5b359cf564a9e44a37aba6b5b7b622536881c",
+        "header_bytes": 2984,
+        "file_bytes": 2643214514,
+        "tensor_count": 23
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00017.safetensors",
+        "header_sha256": "812fb8f18056b7f62137bfa66b3efc6b79e9a17d2913519de8796c8f5f435a84",
+        "header_bytes": 3912,
+        "file_bytes": 2233754452,
+        "tensor_count": 31
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00018.safetensors",
+        "header_sha256": "d9e1cf9c9fa3bce1c6eeaae25fa18e4a445b97880d2a212428a845d81d1da66b",
+        "header_bytes": 2984,
+        "file_bytes": 2643214514,
+        "tensor_count": 23
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00019.safetensors",
+        "header_sha256": "103e25cb46ca6c8024b671023e1a85e635a4eafef0315b4b12611e1e10bdb503",
+        "header_bytes": 7064,
+        "file_bytes": 2277815716,
+        "tensor_count": 55
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/model-00020.safetensors",
+        "header_sha256": "d9e52e7fdbd7461b20fddb170fa84ed4ece1feeaf8e0b2b141111e1e64767c20",
+        "header_bytes": 6056,
+        "file_bytes": 1160806320,
+        "tensor_count": 46
+      },
+      {
+        "path": "/home/isnotreal/models/redcell-abliteration-source-bf16/vision.safetensors",
+        "header_sha256": "6ae58f74fc159f256b0aee7896e2b8ad260d3ee279f8cc2445f03185ca9608f6",
+        "header_bytes": 49368,
+        "file_bytes": 1145638208,
+        "tensor_count": 356
+      }
+    ],
+    "source_tensor_count": 1013,
+    "source_dtypes": [
+      "BF16"
+    ],
+    "source_tensor_payload_bytes": 51611872412,
+    "source_tensor_payload_gib": 48.06730189546943,
+    "original_adapter_config": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/strength-1.5/adapter/adapter_config.json",
+      "sha256": "26bdc03fe2ca3614c71ca8ba6bfb2eb25f54113f67bb7d3bb24ef6fa402904b9",
+      "bytes": 6377
+    },
+    "original_adapter_tensors": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/strength-1.5/adapter/adapter_model.safetensors",
+      "sha256": "5f6e6d8771b65a2805101d1cd256c971f9bab84c3f79cd778e409a4e48727988",
+      "bytes": 167902336
+    },
+    "adapter_tensor_count": 7800,
+    "adapter_payload_bytes": 166709760,
+    "adapter_payload_mib": 158.98681640625,
+    "adapter_rank": 3,
+    "adapter_alpha": 3,
+    "adapter_scale": 1,
+    "adapter_projection_count": 3900,
+    "adapter_projection_breakdown": {
+      "expert_down": 3840,
+      "dense_down": 30,
+      "attention_o": 30
+    },
+    "selected_strength_note": "Strength 1.5 is already encoded in the original factor values; do not apply a second strength multiplier."
+  },
+  "native_vllm": {
+    "model_support": "Installed Gemma4ForConditionalGeneration implements SupportsLoRA and carries language-model MoE metadata. Language-only adapter keys are remapped from model.language_model.* to language_model.model.*. Vision remains on the native multimodal path; this adapter has no vision factors.",
+    "blocking_direct_load_issue": "pack_moe requires gate/down/up triplets for every expert. Existing down-only per-expert factors cause its non-None assertions to fail. A separate copy with zero gate/up A and B factors is required; installed code and originals must remain unchanged.",
+    "padding": {
+      "extra_projections": 7680,
+      "extra_tensors": 15360,
+      "extra_fp32_payload_bytes": 324403200,
+      "source_gate_up_shape": [
+        128,
+        1408,
+        2816
+      ],
+      "source_down_shape": [
+        128,
+        2816,
+        704
+      ],
+      "gate_up_A_shape": [
+        3,
+        2816
+      ],
+      "gate_up_B_shape": [
+        704,
+        3
+      ],
+      "mathematical_effect": "For each new gate/up projection, alpha/r * B @ A = 0 because both factors are exact finite zeros. Existing down/o factors stay byte-equivalent as tensors.",
+      "derived_total_tensors": 23160,
+      "derived_total_projections": 11580,
+      "derived_payload_bytes": 491112960
+    },
+    "loader_conventions": "vLLM uses safetensor keys as its checkpoint target truth and checks expert suffixes against packed expert mappings. PEFT accepts exact qualified module names or dot-separated suffix matches. Use explicit qualified target_modules covering original modules plus expert gate/up only.",
+    "startup_additions": [
+      "--enable-lora",
+      "--max-loras",
+      "1",
+      "--max-lora-rank",
+      "8",
+      "--lora-dtype",
+      "bfloat16",
+      "--lora-modules",
+      "strength-1.5-vllm=/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/adapters/strength-1.5-vllm"
+    ],
+    "optional_startup_restriction": [
+      "--lora-target-modules",
+      "o_proj",
+      "down_proj",
+      "experts"
+    ],
+    "startup_notes": [
+      "Rank 3 remains unchanged in the adapter; 8 is the smallest supported maximum-rank setting that can contain it.",
+      "The source-only launch did not enable LoRA; LoRA support must be configured at startup.",
+      "No tower/connector LoRA flag is needed for this language-only adapter.",
+      "Keep full BF16 source/dtype and CPU offload; omit quantization and Humming settings.",
+      "Use separate adapter IDs/names for successive candidates and clear/reload candidate state deliberately; avoid stale request or prefix-cache results."
+    ],
+    "moe_backend": "At TP=2 the expert intermediate partition is 352, not divisible by 128. Installed unquantized LoRA oracle therefore falls back to Triton rather than its TRT-LLM BF16 LoRA branch. This code path still needs runtime validation.",
+    "estimated_expert_lora_buffer_bytes_per_gpu": 583925760,
+    "estimated_expert_lora_buffer_mib_per_gpu": 556.875,
+    "buffer_assumptions": "TP=2, no expert parallelism, no fully sharded LoRA, max_loras=1, max_lora_rank=8, BF16 adapters, all 30x128 experts. Dense factors, metadata, temporary buffers and kernel workspace are additional; zero gate/up entries still allocate buffers."
+  },
+  "offload_and_memory": {
+    "source_payload_gib": 48.06730189546943,
+    "existing_root_profile": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/source-bf16-launch.json",
+      "sha256": "e528b6b8fbb8da75c0802aa0fd32a5a01e8578faa5d92f092debaabc40d4ef7e",
+      "bytes": 1562
+    },
+    "profile_cpu_offload_gib_per_gpu": 8,
+    "dtype_behavior": "Installed UVA offloader moves weight storage without quantizing or changing dtype. With UVA support it pins CPU weights and exposes an accelerator view; fallback copies CPU weights for forward.",
+    "capacity_and_latency": "A 48.067 GiB source cannot fit entirely in a nominal combined 48 GiB GPU capacity once KV cache, LoRA, vision and workspace are included. Offload adds host/device bandwidth cost; zero-copy addressing does not remove traffic. Actual peak memory and speed remain runtime questions.",
+    "allocation_detail": "CPU offload is a per-GPU whole-parameter budget; the last parameter can overshoot nominal bytes. Vision-tower construction also supports offload and can consume part of an unrestricted budget. Avoid assuming precisely 8 GiB of expert weights per GPU is offloaded.",
+    "host_ram_note": "Earlier CPU-only /proc/meminfo inspection showed about 125.5 GiB host memory and about 113.9 GiB available; available memory is transient."
+  },
+  "transformers_heretic": {
+    "legacy_precision": "Existing pilot uses dtypes=[bfloat16] with quantization=bnb_4bit and a recorded 11,725 Linear4bit modules. A BF16 label alone does not establish full BF16 weights.",
+    "required_baseline_change": "Use quantization=none and BF16 dtype; preserve the custom Gemma4 expert-unfusing conversion for coverage of all 3,840 expert down targets.",
+    "layout_cost": "Custom UnfusedExperts loops over active experts in Python, uses individual Linear calls and .tolist() synchronization. This is a plausible latency disadvantage to native fused vLLM, not a measured result.",
+    "offload_blocker": "Accelerate CPU dispatch replaces offloaded parameters with meta tensors between forwards. Heretic reads base weights and writes LoRA .data outside forward; reset directly zeros parameters. Fresh PEFT injection can place factors on child.weight.device (meta). None establishes correct CPU backing-store updates.",
+    "safe_design_requirement": "Inject before dispatch or explicitly materialize/update offloaded backing weights and factors, then independently verify disabled/reset adapter equivalence. Do not run the old pilot wholesale: Model(settings) itself generates a probe and the script has unrelated experiment flows.",
+    "independent_review": {
+      "path": "/home/isnotreal/model-tools/redcell-marker-eval-20261015/bf16-iteration/transformers-feasibility-audit.json",
+      "sha256": "5d05ba7f9f8b2f1ee9f27c08a5d3a3741c774dfbdb7c32ae0cea2182637d0b85",
+      "bytes": 39368
+    }
+  },
+  "precision_and_finalization": {
+    "base_precision": "The source contains only BF16 tensors, including the native vision weights; CPU offload preserves their storage precision.",
+    "adapter_precision": "Original and derived disk factors remain FP32. Standard vLLM CLI lora_dtype=bfloat16 (or auto with BF16 base) casts these factors to BF16 at load; CLI does not expose FP32 LoRA as a supported literal.",
+    "rounding_distinction": "Unmerged runtime LoRA computes base and low-rank branches separately after runtime factor casting. The existing merge path computes FP32 W + scale*(B@A), then rounds once to BF16. These differ in factor, product, accumulation and final rounding and are not asserted numerically identical.",
+    "final_check_requirement": "Once a candidate is selected, merge exactly once from the untouched BF16 source using preserved FP32 factors, and rerun the agreed legitimate capability/vision/tool checks on that merged BF16 checkpoint before any quantization. Avoid cumulative repeated BF16 merges.",
+    "claims_not_made": [
+      "No adapter GPU load, inference, latency or memory success is claimed by this audit.",
+      "No capability equivalence is inferred from zero padding or static compatibility.",
+      "No harmful-compliance test prompts or workflows are prepared."
+    ]
+  },
+  "code_evidence": {
+    "gemma4_mm": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py",
+      "sha256": "ee9b33f5f3d76bfec371dfc65292a915cc5b4741367ba0b28a450a5af8c40f9f",
+      "bytes": 94174,
+      "relevant_lines": [
+        1015,
+        1065,
+        1175
+      ]
+    },
+    "gemma4": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/models/gemma4.py",
+      "sha256": "7966bc15912cd7b52b581d811a4d10ffa1964967305cf5f28c4468c06f78c3ed",
+      "bytes": 58354,
+      "relevant_lines": [
+        635,
+        665,
+        1405
+      ]
+    },
+    "pack_moe": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/lora_weights.py",
+      "sha256": "767c82ea9d3a302f14046af43c638d41389a6b5136b02b08ead6ab9128b9191c",
+      "bytes": 9725,
+      "relevant_lines": [
+        156,
+        230
+      ]
+    },
+    "lora_checkpoint_loader": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/lora_model.py",
+      "sha256": "57d0c10b374a29e2b4fda826dfd9657712394c97ddf6a8099783f718ae2860a4",
+      "bytes": 14271,
+      "relevant_lines": [
+        120,
+        190,
+        210,
+        355
+      ]
+    },
+    "lora_key_mapping": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/utils.py",
+      "sha256": "49e8ff84a4725c963f685b4828eec1f70066969b3e46ca65c0be784df692a83f",
+      "bytes": 15274,
+      "relevant_lines": [
+        170,
+        220,
+        285,
+        328,
+        385,
+        423
+      ]
+    },
+    "lora_config": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/config/lora.py",
+      "sha256": "d8fe6d62f304c50fda1e9bee0a52b16d30f948f41df036c76535fe694d2bacfc",
+      "bytes": 7240,
+      "relevant_lines": [
+        27,
+        65,
+        139
+      ]
+    },
+    "lora_rank_validation": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/peft_helper.py",
+      "sha256": "a9ae0e40a71e3c3ea73cd98c5dd9277758240559122182a667e18b0d8353d6a7",
+      "bytes": 5268,
+      "relevant_lines": [
+        123,
+        139
+      ]
+    },
+    "lora_worker": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/worker_manager.py",
+      "sha256": "fcac0d5023892a2a8b835cc0bef8412feedd200570a0c11c957d90891a7fd0c5",
+      "bytes": 13624,
+      "relevant_lines": [
+        108,
+        157
+      ]
+    },
+    "moe_adapter_buffers": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/lora/layers/fused_moe.py",
+      "sha256": "3a2a6c03fda98f5cc216570324921c889a01e0893ac3febe4bd13f4bf03fab0c",
+      "bytes": 25627,
+      "relevant_lines": [
+        26,
+        93,
+        165,
+        225,
+        350
+      ]
+    },
+    "unquantized_lora_backend": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/layers/fused_moe/oracle/unquantized.py",
+      "sha256": "64d7731a04872a7365e55112b0b9fa03f3886f0cd418733d8cdb40d80fe4bf43",
+      "bytes": 23637,
+      "relevant_lines": [
+        197,
+        248
+      ]
+    },
+    "offload_config": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/config/offload.py",
+      "sha256": "1dbcc23fedee34e09fe275b5889c43d77bbbafed7b36d097a620fb3e905c7aab",
+      "bytes": 6513,
+      "relevant_lines": [
+        16,
+        43
+      ]
+    },
+    "uva_offloader": {
+      "path": "/home/isnotreal/vllm-env/lib/python3.12/site-packages/vllm/model_executor/offloader/uva.py",
+      "sha256": "1064eaff828cda23308654d2186c08f2c336e7fa25e2e7b9f518b051ea89ce0c",
+      "bytes": 5845,
+      "relevant_lines": [
+        24,
+        151
+      ]
+    },
+    "heretic_model": {
+      "path": "/home/isnotreal/model-tools/redcell-abliteration-20261014/heretic/src/heretic/model.py",
+      "sha256": "2031efcd1980d2734dfc2daa343c3b0588d1d25bf0062e8026fe35f4bd9d4b10",
+      "bytes": 33910,
+      "relevant_lines": [
+        114,
+        158,
+        192,
+        239,
+        316,
+        360
+      ]
+    },
+    "heretic_modifier": {
+      "path": "/home/isnotreal/model-tools/redcell-abliteration-20261014/heretic/src/heretic/modifiers/abliteration.py",
+      "sha256": "66bd3ff495db689494d8facbe2c08509915f97168460da802248ff71d217f10d",
+      "bytes": 19766,
+      "relevant_lines": [
+        377,
+        388,
+        457,
+        460
+      ]
+    },
+    "compatibility": {
+      "path": "/home/isnotreal/model-tools/redcell-abliteration-20261014/gemma4_heretic_compat.py",
+      "sha256": "e59633bcd0cc99ea7e6947d1a2f7ffa7701c356f7f13683cd3246e40c5f3e0e9",
+      "bytes": 6417,
+      "relevant_lines": [
+        15,
+        49,
+        98,
+        132
+      ]
+    },
+    "old_pilot": {
+      "path": "/home/isnotreal/model-tools/redcell-abliteration-20261014/pilot.py",
+      "sha256": "35e584e2a64e019f93f0aec1a12dcdd4a5ba36da1dc7795ec94d2b8dd104da1e",
+      "bytes": 13034,
+      "relevant_lines": [
+        139,
+        145
+      ]
+    },
+    "merge_bf16": {
+      "path": "/home/isnotreal/model-tools/redcell-abliteration-20261014/merge_bf16.py",
+      "sha256": "85cf7f0e77c46de7213d0917e29d46e6cf904656d0f07705c9c449bc1132f222",
+      "bytes": 8367,
+      "relevant_lines": [
+        68,
+        85
+      ]
+    }
+  },
+  "official_reference_links": [
+    "https://docs.vllm.ai/en/latest/features/lora/",
+    "https://docs.vllm.ai/en/latest/configuration/engine_args/"
+  ],
+  "reference_precedence": "Compatibility conclusions are pinned to local installed source hashes, not assumptions about latest documentation."
+}

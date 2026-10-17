@@ -1,0 +1,2266 @@
+[
+  {
+    "id": "broader-cybermetric-00052",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "The security team is reviewing the configuration of the door that serves as the only entrance or exit to the datacenter. Organization personnel commonly access the datacenter to perform their work. In the event of a fire that impacts power to the door-locking mechanism, which of the following configurations is best?\nA. The door should always remain locked\nB. The door should fail-open\nC. The door should automatically lock when there is no power\nD. The door should fail-secure\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 52,
+    "source_row_sha256": "1daa5da03d3730d34c15e596895ee4e7bdd7e6454ee608f16e84a72785153f83",
+    "source_question_sha256": "f3f9e27e944cac060e039dad22aa175719b603928cb582334865ec10855a9bfe"
+  },
+  {
+    "id": "broader-cybermetric-00071",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which model consists of the Application Layer, Host-to-Host Layer, Internet Layer, and Network Access Layer?\nA. OSI model\nB. WAN model\nC. LAN model\nD. TCP/IP model\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 71,
+    "source_row_sha256": "2b234724ae612570be4deb8fc12bdef0a90d29ed788d3271f02d1ad97d819abf",
+    "source_question_sha256": "c322e38c69998bcc98a071e3286ca3e93d06e75c51fa6eeed7da10f4bf8175cd"
+  },
+  {
+    "id": "broader-cybermetric-00080",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the purpose of network segmentation in a security control?\nA. Increase network performance\nB. Create more barriers for hackers\nC. Group portions of the network into segments for which rules can be defined and access controlled\nD. Prevent all network communication\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 80,
+    "source_row_sha256": "4ac9d8641614c1f58d68f9fb1e7c591542967400b7feb97ae392e8bb27e333b3",
+    "source_question_sha256": "d63fa83399a59cca9393e285fbc0840bf3eb871ed39316751469bf9d361fb0e0"
+  },
+  {
+    "id": "broader-cybermetric-00100",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the best description of the difference between a phishing e-mail and a spear phishing e-mail?\nA. A spear phishing e-mail is sent to random recipients; a phishing e-mail is sent to specific recipients.\nB. A phishing e-mail is sent to an entire company; a spear phishing e-mail is sent to a specific person.\nC. A phishing e-mail is sent to a specific person; a spear phishing e-mail is sent to an entire company.\nD. A phishing e-mail is sent to random recipients; a spear phishing e-mail is sent to specific recipients.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 100,
+    "source_row_sha256": "3d0cf6575287ed372cf60a80fa2bae8cbce094dd154eb754d21001f72edcca64",
+    "source_question_sha256": "a626b134bc236478effe02ed90a88a02c1244bfb09ca307a739da199d53e2312"
+  },
+  {
+    "id": "broader-cybermetric-00134",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which of the following protocols enables secure connection to a private trusted network through a public untrusted network, such as the Internet?\nA. TLS\nB. VPN\nC. SSL\nD. HTTP\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 134,
+    "source_row_sha256": "139a33ef0629115c6f06b3d9142ef0ef55bd1654f3df07d3c89af8a0660b7935",
+    "source_question_sha256": "3cd70115dd918235d988b37104a23bead0a10fe9621d2b424fd23c2514cf808d"
+  },
+  {
+    "id": "broader-cybermetric-00203",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the term used to describe data during its transmission?\nA. Dynamic / 'data in motion'\nB. Static integrity\nC. Static confidentiality\nD. None of the above\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 203,
+    "source_row_sha256": "e697a9edf2cd617e568d61bbe5ed5403f567b268053db4217834f37227ced513",
+    "source_question_sha256": "e832aa53c372580c798a8136abb962bb1560d295b18be2eb419d0f6b31fd693e"
+  },
+  {
+    "id": "broader-cybermetric-00218",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What cybersecurity principle ensures that information is kept secret and only accessible to authorized users or systems?\nA. Availability\nB. Integrity\nC. Non-repudiation\nD. Confidentiality\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 218,
+    "source_row_sha256": "c97484c5a3582d271f54e2747642a4e9786a5670d78d428174dcee010a582729",
+    "source_question_sha256": "e1be3e82434c66b1a15651306739604d17bca254096a0ca84238576f7109d883"
+  },
+  {
+    "id": "broader-cybermetric-00265",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which protocol is used on Windows systems for file and resource sharing as well as some remote management?\nA. Server Message Block (SMB)\nB. Simple Network Management Protocol (SNMP)\nC. Simple Mail Transfer Protocol (SMTP)\nD. Remote Procedure Call (RPC)\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 265,
+    "source_row_sha256": "e5fd5af5cadc7da5a4f7283413c58c4ee5096b252e7861668afb50756e160365",
+    "source_question_sha256": "ac713cd6b1d4631d59e2af13455869dca23d467f8e411ae582d0472e164061d3"
+  },
+  {
+    "id": "broader-cybermetric-00387",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the term used for the technique of storing shellcode in multiple places in the heap and redirecting the return address there?\nA. Heap Spraying\nB. Application Exploitation\nC. Privilege Escalation\nD. Buffer Overflow\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 387,
+    "source_row_sha256": "4c049cadb66b9245387cbc396ac2c1582ea3a43de6be87f2871c09e688ad7668",
+    "source_question_sha256": "dd40a7cb636902b90a8909dc1df2f4bc19027c6f8cd801c2e719f723a9a41924"
+  },
+  {
+    "id": "broader-cybermetric-00411",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary purpose of a security architecture in an organization?\nA. To design secure network infrastructure\nB. To establish security controls\nC. To manage business risks\nD. To analyze security events\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 411,
+    "source_row_sha256": "20b71f2e6a12b5f3af3395c98f69070d5f1aa41f41be43b3054d340ad68b4591",
+    "source_question_sha256": "8c4eafa5bff1ac5488b30e69d47f255c8258f6ac59704e801417452b19962cd6"
+  },
+  {
+    "id": "broader-cybermetric-00443",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which security model focuses on the prevention of unauthorized information flow between security domains?\nA. RADIUS (Remote Authentication Dial-In User Service)\nB. RSA (Rivest-Shamir-Adleman) algorithm\nC. Clark-Wilson integrity model\nD. Bell-LaPadula Model\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 443,
+    "source_row_sha256": "e3538780ba1c50c687d0e1085e59b684ef8d2dfe40c6e1f740c402d0ae3e0167",
+    "source_question_sha256": "ee81baf4beab28b120c8b586ef0625a4735875c5a7170680218dd46ddcd2eb44"
+  },
+  {
+    "id": "broader-cybermetric-00445",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which encryption algorithm is commonly used in secure Wi-Fi communication?\nA. WEP (Wired Equivalent Privacy)\nB. AES (Advanced Encryption Standard)\nC. DES (Data Encryption Standard)\nD. 3DES (Triple DES)\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 445,
+    "source_row_sha256": "432b680714fccad5dc6db918cdb37d2b395f0bed7475a047d45b5095a95c84e8",
+    "source_question_sha256": "c96126c45c171d8818a1feaadd32e076b4d6551784525a06952b60b3de44fe8b"
+  },
+  {
+    "id": "broader-cybermetric-00457",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the term used to describe the practice of disguising a message as something else to hide its true meaning?\nA. Encryption\nB. Authentication\nC. Obfuscation\nD. Firewalling\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 457,
+    "source_row_sha256": "8c52c433496a4aafc203994de147b166cc8a2c0ee3c6596a20674887fec184f2",
+    "source_question_sha256": "20e9f183acf8a39636d2caa8aac6740c15b6b1317971da2fdd394e064f7816e2"
+  },
+  {
+    "id": "broader-cybermetric-00662",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which feature of IKEv2 allows an IPsec server to send a redirection request to connecting or connected VPN clients?\nA. IKE Redirect\nB. Post-quantum Pre-shared Keys (PPKs)\nC. MOBIKE (Mobile IKE)\nD. Network Address Translation (NAT)\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 662,
+    "source_row_sha256": "9f5c62651a8f551ee2b6ea16763985075aaae4c0aef429ab992b9b896cd337a7",
+    "source_question_sha256": "2d194cbab06d8dfc842f9f099a27a255915151b54487405ad1aee4e1b1fc200c"
+  },
+  {
+    "id": "broader-cybermetric-00674",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What does IPComp do before encrypting a packet in IPsec?\nA. Encrypts the payload data\nB. Compresses the packet if it is not already compressed by the application\nC. Triggers an IKE negotiation for the outgoing packet\nD. Automatically compresses all packets regardless of their size\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 674,
+    "source_row_sha256": "f5d5ed83cebb718b3b36df2f35f4b408564c51a6a45b0f70c72cef00111001e4",
+    "source_question_sha256": "08a893b60ae85c43e59b53998b79de24c54957c2b45de232dfc8dae59cbb6194"
+  },
+  {
+    "id": "broader-cybermetric-00794",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the objective of cybersecurity?\nA. To increase the speed of internet connections\nB. To protect computers and networks from unauthorized access or cyberattacks\nC. To develop new software for security purposes\nD. To ensure data confidentiality\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 794,
+    "source_row_sha256": "1075eb9715b4c405f6cb1e2131bbf7771d19fbda184a4e0c00290d8e9bb596f6",
+    "source_question_sha256": "755d3335b96a771592826ae5102f15b8bda764aee403cea6b2a0e7534cfce7f6"
+  },
+  {
+    "id": "broader-cybermetric-00859",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the role of the 64-bit value Wt used in each of the 80 rounds in SHA-512?\nA. It represents the output of the final hash value after processing all message blocks.\nB. A 64-bit value derived from the current 1024-bit block being processed, using a message schedule.\nC. It signifies a constant value that remains the same across all rounds and all message blocks.\nD. It is used exclusively for padding the message blocks to ensure they are 1024 bits in length\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 859,
+    "source_row_sha256": "e6ca7ad443ccb735e7dc2cb26cb666ff41ffe8101a992f51d0b4213469a6a156",
+    "source_question_sha256": "9c368426c1c805cba775f8ab959f8c85e3781b17a5b5aa30cf8f01202c5fd72c"
+  },
+  {
+    "id": "broader-cybermetric-00861",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the purpose of the padding bits added to the message in SHA-512?\nA. To ensure a uniform message length for processing\nB. To add complexity to the hash function\nC. To ensure that the message length is a multiple of 1024 bits\nD. To add randomness to the message\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 861,
+    "source_row_sha256": "cca0b6ce68542097f4ca35734ddd6519b371a485ca5abfa9cc6e78d06fa09714",
+    "source_question_sha256": "5fc48accf6c2695be141ab289cbe634220db7abb6f297eb2cf56ae95d7112652"
+  },
+  {
+    "id": "broader-cybermetric-00881",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which mode of operation involves generating a MAC value and encrypting the plaintext in separate passes?\nA. GCM\nB. CFB\nC. CCM\nD. ECB\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 881,
+    "source_row_sha256": "687f88cfdedb55ffee51e386d31045a8e1249837f2c99ffc02e6d9234214c9a8",
+    "source_question_sha256": "e491bf67f6f18290660d5194a5d7e3449b251a59f051f141d9339e96a9b6d4d2"
+  },
+  {
+    "id": "broader-cybermetric-00885",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which requirements should a digital signature scheme satisfy?\nA. The scheme must allow denial of signing by the sender and must be computationally feasible to forge a signature.\nB. The signature must be easily forgeable and easily recognizable.\nC. The signature must depend on the message being signed, use information known only to the sender, and be computationally infeasible to forge.\nD. The signature must provide only authenticity and confidentiality.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 885,
+    "source_row_sha256": "18cd5ba4b9f43bffec50656ddeddba7d6a3e74723422c41a22a85bdded75a9f1",
+    "source_question_sha256": "25a07157ccb3f27c4779167f2f9a90582c06d2b599fcb6ed93ae643965125bee"
+  },
+  {
+    "id": "broader-cybermetric-00908",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What additional feature is added to the original Needham/Schroeder protocol in Denning's proposal to enhance security?\nA. Challenge/response\nB. Symmetric encryption\nC. Use of sequence numbers\nD. Encrypted timestamps\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 908,
+    "source_row_sha256": "57a4c2b6058224542066005c475b9ec8ce98b76d77c1aac17565da485198d313",
+    "source_question_sha256": "9599059a84a82d2a69ee93b5cabcdbbc9b1c864a1f210b35ee77de22b09b4b0f"
+  },
+  {
+    "id": "broader-cybermetric-00953",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary responsibility of identity and access management (IAM) in the context of cloud computing?\nA. Data loss prevention\nB. Web browsing protection\nC. Intrusion detection and prevention\nD. Authentication and access control\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 953,
+    "source_row_sha256": "160909b441edeb7c682505b4b40a19ef53cc61cf3a1bd6651e8ed03b3e5d0cff",
+    "source_question_sha256": "80ff7c1aa003d8db1c66d5d4dac044a3408d0380b93f90039b669b8507fe6950"
+  },
+  {
+    "id": "broader-cybermetric-00995",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the purpose of the STARTTLS extension for SMTP?\nA. Adds confidentiality and authentication to the exchange between SMTP agents\nB. Provides authentication and integrity protection for the entire SMTP message\nC. Provides secure email access for users\nD. Allow the server to offer SMTP service on a single port\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 995,
+    "source_row_sha256": "73bd53c4b9e13600d9d8aded0b178978dc96a8869e0d4c3800e0cf93b0d0382f",
+    "source_question_sha256": "397d8eacf18b436cf9490bdd99f64c25b05fafbdfc241897406e64f95ea77f81"
+  },
+  {
+    "id": "broader-cybermetric-01006",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "For which of the following scenarios would you use the MX (Mail Exchange) resource record type?\nA. Mapping a host name to a IPv4 address\nB. Indicating the mail server responsible for a domain\nC. Specifying an alias name for a host\nD. Mapping an IPv4 address to a hostname\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 1006,
+    "source_row_sha256": "eba46c9ff61de0c2e8a427edcb888ce3b2a7fa8daba16e625e3d4997de86d694",
+    "source_question_sha256": "c91686f22f88ee6f4cb870e9fb961475b6ae6bdb714a548991d8caac84e9da66"
+  },
+  {
+    "id": "broader-cybermetric-01110",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary purpose of performing sophisticated forensics in the event of a data breach involving personally identifiable information (PII)?\nA. Support legal requirements for notification\nB. Identify specific data types affected and the associated individuals\nC. Identify the jurisdictions of impacted individuals\nD. Meet contract obligations with impacted individuals\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 1110,
+    "source_row_sha256": "180f64a378a2a19f769e0ba3f6251362fb05e08ff0d44a1944b489b5ddd9c2b0",
+    "source_question_sha256": "e0e3d9cfb6c82d14afd21471a335c0c6e1af8413e25145882e44476f01de1850"
+  },
+  {
+    "id": "broader-cybermetric-01112",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary step to undertake once a security incident is detected within an Information Security Management System (ISMS)?\nA. Determine notification requirements and obligations\nB. Notify the incident response team for immediate action\nC. Coordinate with law enforcement agencies for investigation\nD. Shutdown the affected systems to prevent further breach\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 1112,
+    "source_row_sha256": "83b58eb6ee7b19875fa25c80a73fe0c4eeac9923f12fce9c1962fd4be037df23",
+    "source_question_sha256": "70b91dd1ecf94e55e8b879e25c9bd324307d4a74f60fb445411937cfe2d43a2a"
+  },
+  {
+    "id": "broader-cybermetric-01129",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the outcome of applying controls to raw risk in the risk management process?\nA. Avoiding risk\nB. Transferring risk\nC. Accepting risk\nD. Residual (post-control) risk\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 1129,
+    "source_row_sha256": "faa348d99504c997603eac209182ee9c26161a22d0f2bbbaedb73dd534db9964",
+    "source_question_sha256": "222d82b184554eba361a1798151a6f35bfcfdd42ee0e4d04d3fe2097cd0d6db1"
+  },
+  {
+    "id": "broader-cybermetric-01160",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What defines the collective psychological contracts shared by all employees within an organization?\nA. Shared values and compensation\nB. Total psychological contract\nC. The existence of a formal collective bargaining unit\nD. Formation of informal organization\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 1160,
+    "source_row_sha256": "b0749c2609f2745245ab8487d53c3779b54c6046a2d164aaa0b3d860acc06704",
+    "source_question_sha256": "5582b51604f789577bdc38e67beac4ba0ff210a8f45b6a31be4088f86e3e922a"
+  },
+  {
+    "id": "broader-cybermetric-01170",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary purpose of having a database to manage tokens during their life cycle?\nA. To verify the user's identity before assigning a token\nB. To document the process for assigning tokens\nC. To enforce token expiration\nD. To track the physical location of tokens\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 1170,
+    "source_row_sha256": "f7a735b880c9d6ca667a4397680fd2586bbbfc625b114b1f9b7dcdba9c633a38",
+    "source_question_sha256": "93401d38409ad8315fa2608d3b80d11c8b96dee1d2521d5e944d71733117d8cc"
+  },
+  {
+    "id": "broader-cybermetric-01174",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "How are rootkits often installed on systems?\nA. By physically connecting an infected USB drive\nB. By exploiting unpatched vulnerabilities in the operating system or software\nC. Through email attachments\nD. Through social engineering attacks\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 1174,
+    "source_row_sha256": "3df89c02ecde0d0662c0faea4a304009b6e24af81a88dc517d51463c28e263df",
+    "source_question_sha256": "411c3793c20194860c5aec2188b768001045a69667ab8ae76453d6cfc95ab1ac"
+  },
+  {
+    "id": "broader-cybermetric-01200",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which standard is used to provide data confidentiality through encrypting XML content?\nA. WSDL\nB. XML Encryption\nC. SOAP\nD. SAML\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 1200,
+    "source_row_sha256": "1c9013d5174095ef3096550a8612a1768c633810e213b435501ed54be9732b1a",
+    "source_question_sha256": "9c05832e23973cc3b66330f95e6385783e3259c1e7d737e1943d39fd73232872"
+  },
+  {
+    "id": "broader-cybermetric-01225",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the main goal of phishing attacks?\nA. To target computer networks for financial gain\nB. To install malware on personal computers\nC. To disrupt the functioning of web servers\nD. To acquire sensitive information such as usernames and passwords\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 1225,
+    "source_row_sha256": "624f09e02b72dd712f550175c2f4841cfe612bc2cfd6b1ed71f1696d49ac76ca",
+    "source_question_sha256": "1d8c4dce6cfffb0e05afbfd655be62e67cd014fd0514d680d5d9d6dd42296796"
+  },
+  {
+    "id": "broader-cybermetric-01230",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which of the following is a common method of web-based phishing delivery?\nA. Trojaned host delivery\nB. Postal mail and package delivery\nC. IRC and instant messaging\nD. Phishing calls and voicemails\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 1230,
+    "source_row_sha256": "4217b3e10b21c621a4f27546f1ba6b69d65a1dbb9ddc5e41d1dc7c8697ee123b",
+    "source_question_sha256": "361df9ed874a0ffb55a405da88d2b4f553bba050a96ce14c3445f419c3922f05"
+  },
+  {
+    "id": "broader-cybermetric-01277",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which of the following refers to who, what, when, where, and how of the collected evidence over its entire life span?\nA. Digital Evidence Life Cycle\nB. Chain of Custody\nC. Admissibility of Evidence\nD. Incident Response Plan\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 1277,
+    "source_row_sha256": "69bc214552162efb17e0f7bc7740d8fdbc6a96f64565bdd04a82e1ae7567339b",
+    "source_question_sha256": "29b05663505257520a1176788e2bc74eb348f0982bb7a42643c263f2f3895236"
+  },
+  {
+    "id": "broader-cybermetric-01279",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What does centralized management in a SIM enable?\nA. Gathering disparate and seemingly unrelated information into a single source.\nB. Reduction of traﬃc by setting alert thresholds.\nC. Real-time analysis of security events.\nD. Translation of complex data into simple form.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 1279,
+    "source_row_sha256": "73e897a9d3df119b65d6b3cd79f01f27ede017f0e0603aa2e3dad6fcad6f7daa",
+    "source_question_sha256": "28aa2d7738581e81c84969a2cd8a3bb2ac6bc961a1c6dd44de5e57a0f78abb37"
+  },
+  {
+    "id": "broader-cybermetric-01373",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "In the context of system development, which process transforms an operational need into an integrated system design solution through a concurrent consideration of all life-cycle needs?\nA. System analysis\nB. System verification\nC. Functional testing\nD. System synthesis\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 1373,
+    "source_row_sha256": "0f7f58dd8f0746824c4750080347db14c25fe1f4821155ebe5254821b93b1e2e",
+    "source_question_sha256": "2c054a8a7d4ccf0f898cbdd18424f89f6a5446979ad1321df59cfa3f35191200"
+  },
+  {
+    "id": "broader-cybermetric-01413",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which type of access control uses a classification system to match the authorizations allocated to the sensitivity of the objects?\nA. Non-discretionary access control\nB. Role-based access control\nC. Discretionary access control\nD. Mandatory access control\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 1413,
+    "source_row_sha256": "76b6edfaefb7b9bdbe2b2e18402567a889586808ce162a372a3c9e5bc2901048",
+    "source_question_sha256": "6e1593f14d354c57d737c75db285ca9306a6d573cd8d35539366aa57f929dbcb"
+  },
+  {
+    "id": "broader-cybermetric-01414",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What service uses port 135 and may have a flaw that allows an attacker to execute arbitrary code and gain SYSTEM privileges?\nA. Server Message Block\nB. Microsoft Service Locator Service\nC. NetBIOS Session\nD. Dynamic Host Configuration Protocol\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 1414,
+    "source_row_sha256": "6ff5e60b1fd6a31c8ead0039ecdba1003184893a13a8ddad5b93ea3712e38f54",
+    "source_question_sha256": "df0259dc0ddfe54669320af67c538f9f354bbf3d802c566bef58e9a4749a6cf8"
+  },
+  {
+    "id": "broader-cybermetric-01438",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the best protection against worms for Windows workstations?\nA. Disabling cookies on web browsers\nB. Using strong encryption for all network traffic\nC. Installing a personal firewall\nD. Up-to-date patches and upgrades\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 1438,
+    "source_row_sha256": "4809ca44500521c95c4d1e270e0acef674188faa9dabbfedbdd4ab74dbbd05af",
+    "source_question_sha256": "0481a8b06fb2c030fba38ea3975e2b977e71a1b0e5c924fbf2d9ef35f549bd43"
+  },
+  {
+    "id": "broader-cybermetric-01504",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Where does a Web bug typically reside?\nA. As a small, invisible image within the Web content\nB. As a visible image on the Web page\nC. As a hidden link within the page code\nD. As an encrypted file on the server\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 1504,
+    "source_row_sha256": "67f36c0121dbd5d31ea6def44f9fd5e23fa07d44464509e86d9df79cf63bd4a9",
+    "source_question_sha256": "55627abbbe7a0ec3cdd65963ec15d10a073850ba47143af91019713e3e1d95af"
+  },
+  {
+    "id": "broader-cybermetric-01518",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary goal of a spam filter?\nA. To add digital signatures to incoming e-mails\nB. To encrypt outgoing e-mails\nC. To filter out e-mails from specific domains\nD. To block unwanted e-mail based on content\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 1518,
+    "source_row_sha256": "2a6d0f92aad8af9ceb491920dde2fcd8f57a2535f615b615d6d9637b38e2fe1e",
+    "source_question_sha256": "7a0a4ee6c3df70ac6469cb6ca6aa19d03de769a9884343918d920343bb1f7c35"
+  },
+  {
+    "id": "broader-cybermetric-01612",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary goal of digital watermarking?\nA. To make images clearer and more detailed.\nB. To embed hidden information in digital files for authentication and ownership verification.\nC. To compress images and reduce file size.\nD. To encrypt digital files for secure transmission.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 1612,
+    "source_row_sha256": "33fa066d6627e699e673a965e5d3873b8dca1ca61b84208f22541b40b0199050",
+    "source_question_sha256": "acd175ec299879c027a8bbdfc5b384ab1d6e2257a51cd9df946305d0f47615b1"
+  },
+  {
+    "id": "broader-cybermetric-01620",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which security feature is primarily addressed by Public Key Infrastructure (PKI)?\nA. Authentication and non-repudiation\nB. Intrusion detection\nC. Message encryption\nD. File compression\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 1620,
+    "source_row_sha256": "4583f79d1ad5f1db6f16e3cab052ef7bc618721ef270a319e56d625c00b1ef89",
+    "source_question_sha256": "60dd8cff4043eb1ef3d93f2d668b3f8fae853991b581902f81a3c0235a9ca82d"
+  },
+  {
+    "id": "broader-cybermetric-01666",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which type of encryption uses the same key for both encryption and decryption?\nA. Symmetric encryption\nB. Triple DES\nC. Asymmetric encryption\nD. RC4 stream cipher\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 1666,
+    "source_row_sha256": "15e87fd279e53f18fdb277cbf87b1c1ed4cb007a5b5a13b2faf54571fa74494c",
+    "source_question_sha256": "bd93ba516e8718011f49fdfe11b8f568e239fdc3dd9a3ad4ee482a3a15dd78e0"
+  },
+  {
+    "id": "broader-cybermetric-01683",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What does security engineering involve?\nA. Developing new technology for electronic record and transaction security.\nB. Borrowing technology from other disciplines for implementation in a specific area of expertise.\nC. Mathematical and chemical expertise for designing ciphers and banknote inks.\nD. Applying protection measures against security breaches and unauthorized access.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 1683,
+    "source_row_sha256": "aa3f8015ffb3daddd7edd30cc0b3b20145c1ac49a384b54aa1e793f50c4006e8",
+    "source_question_sha256": "d16e39696aee408acce4024bd418837a38bd1749ec1c8939501b413244b43cdf"
+  },
+  {
+    "id": "broader-cybermetric-01736",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What was introduced in Windows 2000 that can override or complement the access control lists (ACLs) of Windows NT?\nA. Standardized access control tools\nB. Group policy-based security\nC. Capability-based access controls\nD. Integration with Active Directory\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 1736,
+    "source_row_sha256": "000d1c146118fc161485786e2c16c025d09f2fd14cacf84b70a35ce5d1651ef1",
+    "source_question_sha256": "f728c5ae8e7e3be99516d779248cfa5e709a450a68a773fa1f882660b1667347"
+  },
+  {
+    "id": "broader-cybermetric-01775",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "In computer security, what does the principle of assigning each principal a unique identifier help to prevent?\nA. Data breaches\nB. Malware infections\nC. Phishing attacks\nD. Unauthorized access\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 1775,
+    "source_row_sha256": "f0c97f65d7f77cd9fb12625c0ec2131eb652e1ee505c8a4b66be81cd74c02e18",
+    "source_question_sha256": "076d4e2e035908aac1e65450279784da09512cfcddeb2d83450351019caa8f36"
+  },
+  {
+    "id": "broader-cybermetric-01798",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is a primary reason for the chronic tendency of overclassification in multilevel secure systems?\nA. Automatic upgrade of new files to the highest label\nB. Inadequate implementation of mandatory access controls\nC. Inconvenience in dealing with 'blind write-up'\nD. Frequent challenges in managing information flow controls\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 1798,
+    "source_row_sha256": "c2845b2f754c4e1297d7cf114b37c844fba72dec4d4e90dba25625c135982199",
+    "source_question_sha256": "b9a447658d0bfc6b96964b66033634ed10e17181ea3de5ec3e1b8419796398c1"
+  },
+  {
+    "id": "broader-cybermetric-01827",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which principle involves two or more different staff members acting on a transaction at different points in its path?\nA. Dual control\nB. Functional separation of duties\nC. Least privilege\nD. Complete mediation\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 1827,
+    "source_row_sha256": "cafc50d6a39e01953efe1befcaadf3d54c35fbce97a30956c8dedac867c5b649",
+    "source_question_sha256": "85a2cfafc66bf9745eae7fc632f76bc9889c899fa7bb5819a771cec7a0bc5f1d"
+  },
+  {
+    "id": "broader-cybermetric-01963",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which cryptographic algorithm is used to protect the integrity and confidentiality of both message content and signaling data in third-generation mobile phones?\nA. A5/1\nB. A5/2\nC. Comp128\nD. Kasumi\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 1963,
+    "source_row_sha256": "ed6820af70bef9f48daded55e8b155c2043345b4973f126195431469f031a4df",
+    "source_question_sha256": "1a3095ef327a7812eb9682161c1d43d7fe2fad3d7921a29f1e8d914323bd7638"
+  },
+  {
+    "id": "broader-cybermetric-02103",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "In the context of the Common Criteria, what is the primary role of a Commercial Licensed Evaluation Facility (CLEF)?\nA. To perform evaluations on behalf of vendors seeking product evaluations.\nB. To audit and ensure compliance with all security laws and regulations.\nC. To evaluate the technical physical aspects of the products.\nD. To assess the reliability and maintainability of the software.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 2103,
+    "source_row_sha256": "8339303eb2bb9685cd9a1cc281908455c8fd5eca83bb404e8607560d0b67821a",
+    "source_question_sha256": "b723a4ae6d70bdcb7c10fda86add88c6bf5cc73b66256280bfba17dea7a87069"
+  },
+  {
+    "id": "broader-cybermetric-02120",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the term for the practice of requesting sensitive information from individuals in order to gain unauthorized access or misuse of their personal information?\nA. Phishing\nB. Denial of Service (DoS)\nC. Malware\nD. Hacking\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 2120,
+    "source_row_sha256": "95de0f51b655eb3be19380f166f686050435d998fadb462c9856af275e33a835",
+    "source_question_sha256": "d18b0fc24726c33f494ad0b5fa6302d8711c2c96e31acfbeafd8f3b7e180864f"
+  },
+  {
+    "id": "broader-cybermetric-02227",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which document defines the scope of security needed by the organization and discusses the assets that require protection and the extent to which security solutions should go to provide the necessary protection?\nA. Privacy Policy\nB. Acceptable Use Policy (AUP)\nC. Security Policy\nD. Service Level Agreement (SLA)\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 2227,
+    "source_row_sha256": "2f596f96b14e0a60be75d17fd4661b064c26793e41c06b559e2918c207a6e5f9",
+    "source_question_sha256": "cf8498b4697b37a86230eff41e5a57ecf0d64c5d3b7c244a7ad55dba5ae6f94e"
+  },
+  {
+    "id": "broader-cybermetric-02252",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the term for phishing done over any telephony or voice communication system?\nA. Smishing\nB. Phishing\nC. Vishing\nD. Whaling\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 2252,
+    "source_row_sha256": "3693df0941bcf55a71cbad7f35507f15f81ccc2405f1162d736d95239ff4318a",
+    "source_question_sha256": "4c557e1b14b07fa4166c8dc26df0228da79ef9c5c0d5bcbc7c69892da27227d9"
+  },
+  {
+    "id": "broader-cybermetric-02315",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the best method used to ensure that data cannot fall into the wrong hands and result in unauthorized disclosure?\nA. Encryption of sensitive data\nB. Continuous audit trail\nC. Data masking\nD. Data erasure\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 2315,
+    "source_row_sha256": "a2a3872d317b40c022e31dd1ef7658ea4d985aa4a0d1c95b826bf97f710c340d",
+    "source_question_sha256": "76fa7974e14b1ffd6e015cef5751255b2f34e79127d3b6a69a6595da6cbec874"
+  },
+  {
+    "id": "broader-cybermetric-02375",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the principle that emphasizes integrating privacy protections into products during the early design phase called?\nA. Privacy by Design\nB. Keep It Simple\nC. Zero Trust\nD. DRY\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 2375,
+    "source_row_sha256": "cf955ab4d147fb81f360f700db78e2b9e47578a6016e8d8bdf3d13e00b502c61",
+    "source_question_sha256": "23140b93aaa31d90cceb73c3bd9726160465413f014ea93c8311ca0efd6079d8"
+  },
+  {
+    "id": "broader-cybermetric-02406",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What are the primary elements of a high-performance computing system?\nA. Virtualization, Load Balancing, and Redundancy\nB. Computing Resources, Network, and Storage\nC. Network, Storage, and Security\nD. Cloud Infrastructure, Data Management, and Applications\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 2406,
+    "source_row_sha256": "9a6d8dcbaecc054b7719a932b6f092f26e1147cbd294c2f17c435c29c508b427",
+    "source_question_sha256": "a36df181d2f42eda26d253a8f200d90d6b22c4d9644cf872aee2f82c0153b9fb"
+  },
+  {
+    "id": "broader-cybermetric-02521",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What does an internal segmentation firewall (ISFW) aim to prevent within a private network?\nA. Denial-of-Service attacks\nB. Unauthorized access to network resources\nC. Spread of malicious code or harmful protocols\nD. Intrusion from external sources\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 2521,
+    "source_row_sha256": "5879060d6a8d8928b35d2552fe8289a03c17d32bcc3f5b502fb2a9d0baa7bb59",
+    "source_question_sha256": "9abe0bad4e54b4df57cdcf44ef74abb4bfd6e52b090eb1ece202217753e762ce"
+  },
+  {
+    "id": "broader-cybermetric-02686",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary advantage of using third-party security services?\nA. To enhance legal grounds for prosecuting criminals\nB. To achieve complete isolation and protection of sensitive data\nC. To gain access to more advanced security tools and expertise\nD. To offload the responsibility for security compliance to an external entity\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 2686,
+    "source_row_sha256": "55c497e9b302a1f06d4d715bdc5dfa4b9c4065f988f3d568dd9bc569e5976d66",
+    "source_question_sha256": "fc5d62ecc3670983405dfa6d9be81bb823bf09336d3c557b83146442fac76fdd"
+  },
+  {
+    "id": "broader-cybermetric-02696",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the main function of a Security Information and Event Management (SIEM) system?\nA. To ignore routine events and only raise alerts when it detects serious intrusion patterns.\nB. To provide centralized logging and real-time analysis of events occurring on systems throughout an organization.\nC. To perform manual review of logs and look for relevant data.\nD. To detect and prevent the unauthorized transfer of data outside the organization.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 2696,
+    "source_row_sha256": "c282035e31e177690759496af5e6c2232d37bda5f4c2583179adac1cbacd0a14",
+    "source_question_sha256": "9a6ba0fe4fa3f92b3a196521f6b37eb60b57247286fd13348ed2bfec1c3c70d4"
+  },
+  {
+    "id": "broader-cybermetric-02699",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary goal of threat hunting in a network?\nA. To search for cyber threats proactively beyond traditional network detection\nB. To collect data from logs tracking incoming and outgoing traffic\nC. To identify and block threats automatically using AI and machine learning\nD. To passively wait for traditional network tools to detect and report attacks\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 2699,
+    "source_row_sha256": "4dfff24be8d9653f290630cd8538c064cffa3be364b10da4d3b32e6e13993139",
+    "source_question_sha256": "d83717ce2c8a9db0f5e24353b66ae715a8a1e1c0e9866fa93faabfa34ab9d139"
+  },
+  {
+    "id": "broader-cybermetric-02764",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary purpose of software testing during the development process?\nA. To find reasons to delay release\nB. To improve software quality\nC. To assess software vulnerabilities\nD. To ensure live deployment\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 2764,
+    "source_row_sha256": "7b44e1cdd2049f8fe20450a083b9a3eaabdeac3e899ed40d4880f7015c343579",
+    "source_question_sha256": "7b3a84e557019738fe7d5a8c6beabc01326cd5af563fea93a82274ec30e15279"
+  },
+  {
+    "id": "broader-cybermetric-02765",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which database security threat involves the collection of numerous low-level security items to create something of a higher security level or value?\nA. Polyinstantiation\nB. Inference\nC. Aggregation\nD. Covert channel attacks\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 2765,
+    "source_row_sha256": "8f7142e0b259b796241dc231cc404f0f5752b6a9a75c03665f067a4f3ac44160",
+    "source_question_sha256": "3522b68493b46bf7a517c26dce84e01bb09dbeeae696d69b3cbe85be373cd535"
+  },
+  {
+    "id": "broader-cybermetric-02841",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which of the following scanning techniques opens a full connection to the remote system on the specified port?\nA. TCP ACK scanning\nB. TCP connect scanning\nC. TCP SYN scanning\nD. TCP NULL scanning\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 2841,
+    "source_row_sha256": "d1d97a71b5a7afa2e5588ce8845732a1b6157cff1c541ea0950e401c2fc3b9d2",
+    "source_question_sha256": "b7d87e34c63112d5a82c34ca355f8a330ff3d07d1861b6522daea74f552dad15"
+  },
+  {
+    "id": "broader-cybermetric-02849",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which type of test involves relocating personnel to the alternate site and shutting down operations at the primary site?\nA. Structured walk-throughs\nB. Read-through test\nC. Full-interruption test\nD. Simulation test\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 2849,
+    "source_row_sha256": "4985a8c4bd4fb854232e779aa0d8570cf63862fba68dc43212f55eabadf5f779",
+    "source_question_sha256": "a008176697d82c64ce17ddc70186425a5ec8570136ab46cf02862a0494c5501f"
+  },
+  {
+    "id": "broader-cybermetric-02852",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary benefit of end-to-end encryption in the context of VPN?\nA. Protecting data from unauthorized access on the local network\nB. Safeguarding data from potential eavesdropping\nC. Ensuring data integrity during transit\nD. Securing data against insider threats\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 2852,
+    "source_row_sha256": "bbe41e9a612bd4d749997d4c16383e6c85b4ead450dda084eada1e91553eff1a",
+    "source_question_sha256": "2b38d6a6daaedf8b7dd303e56ceea207e38591c11f9af9d2dfbcc6297c30ce8e"
+  },
+  {
+    "id": "broader-cybermetric-02967",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is sequence number in the context of session hijacking?\nA. A number used in reconstructing a UDP session\nB. A randomly chosen number by a hacker to hijack a session\nC. A number assigned to a packet indicating its order in the data stream\nD. A way of sending information from the sending to the receiving station\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 2967,
+    "source_row_sha256": "39cdec15066d3d3ead9e2a5ba8ca3836d27ef569076d70809c5cf60dc8a8b47a",
+    "source_question_sha256": "222ea8d05ab3c73181fb023633f0b9cab2544c88696e6b222c9dbeeb9e0f59b9"
+  },
+  {
+    "id": "broader-cybermetric-03035",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary procedural step in establishing a classification system?\nA. Specify the controls that will be applied to each classification level.\nB. Create an enterprise awareness program about the classification controls.\nC. Identify the administrator/custodian.\nD. Classify the data by its owner, who is subject to review by a supervisor.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 3035,
+    "source_row_sha256": "68f637f996c3606ef383b035a21e9ed79d463bafbe246c0bad4a9de7b5187451",
+    "source_question_sha256": "03ab75ab50988d93d4f95b9531a141610c86a95e31f9f54ccdf8dfe8e5a715b0"
+  },
+  {
+    "id": "broader-cybermetric-03157",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the main purpose of establishing a Computer Incident Response Team (CIRT) as part of incident handling?\nA. To verify the accuracy of information compromised by the incident\nB. To limit the resulting damage and provide information for prevention of future incidents\nC. To prosecute individuals responsible for malicious attacks\nD. To report incidents to law enforcement agencies\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 3157,
+    "source_row_sha256": "944a93d5c37b6a47ca8856a1fe62a90301c0b48d3747322abb1d9785300cafdc",
+    "source_question_sha256": "e444ffc4abaf59e2759e510776c2b015ea21b0f0780406940df9396f0b7e4da0"
+  },
+  {
+    "id": "broader-cybermetric-03188",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "In biometrics, a 'one-to-one' search to verify an individual’s claim of an identity is called\nA. Aggregation\nB. Audit trail review\nC. Authentication\nD. Accountability\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 3188,
+    "source_row_sha256": "ac033e6aabc1d559b73e717e4e0e6b867b6f04f7b3cdcb4ee6da00b840763003",
+    "source_question_sha256": "fbf653bbb9bb58966aa3a9493719314e45e379f5df88151ab98375e0e7547dd1"
+  },
+  {
+    "id": "broader-cybermetric-03207",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "In the * (star) property of the Bell-LaPadula model, what is NOT allowed?\nA. Subjects cannot read from their same level of security\nB. Subjects cannot read from a higher level of security relative to their level of security\nC. Subjects cannot write to a lower level of security relative to their level of security\nD. Subjects cannot read from a lower level of security relative to their level of security\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 3207,
+    "source_row_sha256": "adeaac8d93b94d13635c83c0f71451368c2973e541d9ab8af5869ae915756220",
+    "source_question_sha256": "48a77ead6e092da913b1ef0dd95c41f807b83e8c37ab4a1b4c7bdf46d285a641"
+  },
+  {
+    "id": "broader-cybermetric-03228",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the focus of HIPAA requirements concerning patient healthcare information?\nA. Ensuring the confidentiality and security of patient information\nB. Minimizing the use of electronic health records\nC. Promoting data sharing for research purposes\nD. Implementing advanced data analytics tools\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 3228,
+    "source_row_sha256": "1da0ef24eac7a19eccebe5dd8b0cb579a93ebd4c3f78d49c0eab03d7b4903bdd",
+    "source_question_sha256": "9f59f6b84761e76924e13ccb0b82ab7c1ebcf6373e0eb08e40ef6f7b38da848c"
+  },
+  {
+    "id": "broader-cybermetric-03306",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What kind of domain resides on a single switchport?\nA. Collision domain\nB. Windows domain\nC. Secure domain\nD. Broadcast domain\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 3306,
+    "source_row_sha256": "03787917325788d182f05802397dd549fa7a165aadba3ea7268904e93fae3589",
+    "source_question_sha256": "bb61903a3dd9221f114461dbb7e29142766b10911260b55bac8e260580985056"
+  },
+  {
+    "id": "broader-cybermetric-03379",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the main objective of using the nbtstat command?\nA. To gather user and group information remotely\nB. To troubleshoot name-resolution issues\nC. To change account passwords remotely\nD. To perform a zone transfer\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 3379,
+    "source_row_sha256": "42dce5df95066dc503ff7d55a6d9be50a2917ac88bbaeec4eb4a0a0e4d21e0d7",
+    "source_question_sha256": "a69f8cd52da0353ad588214bd4fea31f657190e455522a7aad385c959c4e5d97"
+  },
+  {
+    "id": "broader-cybermetric-03381",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the purpose of performing a DNS zone transfer?\nA. To check network performance\nB. To perform remote password changes\nC. To measure network uptime\nD. To update DNS servers with the correct information\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 3381,
+    "source_row_sha256": "914b501bb7e43bb3eec2e7a89df728610d45e057b7fd3aee9832accb73051ef0",
+    "source_question_sha256": "2a970be6bb1912f5cc43e01c5034691d0049203ce91ae0ce71e0fcf748a36099"
+  },
+  {
+    "id": "broader-cybermetric-03382",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which technique involves a password-cracking application using a list of known words to try different words in an attempt to recover the password?\nA. Dictionary Attack\nB. Brute-Force Attack\nC. Syllable Attack\nD. Rule-Based Attack\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 3382,
+    "source_row_sha256": "10ce156ccde8294df02435029d6a025d3729580af13be71b31eabcd5e0f33439",
+    "source_question_sha256": "3914183dab7fd3b00af765b73898cf456986b95704fdb570755a73a5f506f41a"
+  },
+  {
+    "id": "broader-cybermetric-03389",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is a replay attack in cybersecurity?\nA. A form of one-way encryption used to verify password integrity\nB. An attack that uses active online penetration to recover passwords\nC. Packets captured using a packet sniffer are later placed back on the network to gain access\nD. A type of offline attack that uses precomputed hashes to capture passwords\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 3389,
+    "source_row_sha256": "916d65a98ce3dec4c2d7476294d87c4bf3ae98b1e11b708a746b6d4c3b7d52ef",
+    "source_question_sha256": "8cb39e2dfe313200d30192b8eaad36ca19404d0bd7dcbd7d2ac394626ea009dc"
+  },
+  {
+    "id": "broader-cybermetric-03410",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What command is used to listen to open ports with netstat?\nA. netstat -ports\nB. netstat -s\nC. netstat -n\nD. netstat -an\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 3410,
+    "source_row_sha256": "5ceeba572dce424c49ea261320c75f95c2ddf228fcdbb572103632a4ea1c6538",
+    "source_question_sha256": "36062842991bf76e1f981de4e044ecdcb8aab2ad258dfc33a3a2ccf7d4c35f3e"
+  },
+  {
+    "id": "broader-cybermetric-03506",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "When a device is rooted, what is the effect on security?\nA. Hardened\nB. Stays the same\nC. Improved\nD. Lowered\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 3506,
+    "source_row_sha256": "79dab9dbe397d914e2573b713f39556aadafd42bc9067c0c8ea3a29154b39e5e",
+    "source_question_sha256": "77b265e0273eca148c8d26a222e7b598faa01ebd37ea15acef5d356ff2a85232"
+  },
+  {
+    "id": "broader-cybermetric-03512",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the main purpose of an intrusion detection system (IDS)?\nA. To act as a firewall\nB. To identify internal abuses of a system\nC. To gather and analyze information passing through a network\nD. To defend against network attacks\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 3512,
+    "source_row_sha256": "cbb373162d463a30075032d3f672b3dffe3bd11af45ce105672df7d9fc57896a",
+    "source_question_sha256": "a202fcff6cb435345cb61957eb3b0714fc6382a70e41a8a3b9a143e31eea5c8b"
+  },
+  {
+    "id": "broader-cybermetric-03609",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary purpose of columnar transposition in encryption?\nA. To rearrange the positions of letters in the plaintext\nB. To authenticate the integrity of plaintext messages\nC. To substitute plaintext characters with ciphertext characters\nD. To compress the plaintext to reduce its size\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 3609,
+    "source_row_sha256": "13c7fb278f624a207147dc7de9eca526ae08b2450a7f046d4c5ea4be86604f66",
+    "source_question_sha256": "12d9a6162c72cf3973baabcca9671c68a7f966f1f4b1c67657e54b05f89cba20"
+  },
+  {
+    "id": "broader-cybermetric-03612",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What does the transposition t = (1, 4, 0, 3, 5, 2) indicate in columnar transposition encryption?\nA. The encryption algorithm used to encrypt the plaintext\nB. The sequence of substitution steps applied to the plaintext\nC. The digital signature applied to the plaintext\nD. The order in which columns of the plaintext are rearranged\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 3612,
+    "source_row_sha256": "7a08103700c2e0832a2a86c4c29a8187c14e61e4df5a624ff621ba652663ef14",
+    "source_question_sha256": "d47da50ad1376642155332f35f0c02b3ea7484b0550489b131647b8a29a8529a"
+  },
+  {
+    "id": "broader-cybermetric-03616",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the purpose of conducting regular cybersecurity training for employees?\nA. To make employees proficient in hacking techniques\nB. To teach employees to bypass security measures\nC. To increase awareness of potential security risks and best practices\nD. To make employees complacent about cybersecurity threats\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 3616,
+    "source_row_sha256": "2ffac0c56de928434238f2e044a0c1805de99aba000af0280acbd536c0829cc3",
+    "source_question_sha256": "882c667c541af3407245c0ef852064bbb06fcc5485194f32e9fb47f098c8218c"
+  },
+  {
+    "id": "broader-cybermetric-03622",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is a key security measure to prevent unauthorized access to a network?\nA. Ignoring system login attempts\nB. Implementing multi-factor authentication\nC. Using weak or common passwords\nD. Sharing login credentials with colleagues\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 3622,
+    "source_row_sha256": "68564e6e661b8be6548886c626329aace7b1c14c42b874d791f5c1bd3427f78d",
+    "source_question_sha256": "70c1a0a79cd2ec0ee8733f6063855420b8dc5d6ad288c520296e196adfd5be8f"
+  },
+  {
+    "id": "broader-cybermetric-03631",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which of the following best describes the principle of least privilege?\nA. Allowing users to install any software they want\nB. Granting all users the same level of access\nC. Restricting access rights for users to the bare minimum they need to perform their work\nD. Providing unrestricted access to sensitive data\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 3631,
+    "source_row_sha256": "f175e74bfc2c46a3957be7f09f0cb8dc7c666994fad70146551a058647b7a66e",
+    "source_question_sha256": "23cac9175145cf57a0fd4fb571398e8627a704a3a205a74ea2166f2f2a356dcc"
+  },
+  {
+    "id": "broader-cybermetric-03633",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the purpose of performing regular software updates and patches in the context of cybersecurity best practices?\nA. To fix security vulnerabilities\nB. To improve system performance\nC. To introduce new features\nD. To increase system complexity\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 3633,
+    "source_row_sha256": "9d1a5a98a635c9a08580ccb38b50e4b281a956ee667f9f0ac9cab2024644d2bb",
+    "source_question_sha256": "a58919aca67545cd4d4098f8e5efe5243897fa7d2e0e6f5392d3d3f86ba3d76a"
+  },
+  {
+    "id": "broader-cybermetric-03639",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which type of substitution uses a permutation or rearrangement of the 26 letters?\nA. Monoalphabetic substitution\nB. Polyalphabetic substitution\nC. All provided answers\nD. Transposition\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 3639,
+    "source_row_sha256": "55bfabbd5ce0340c41c20af4af45c57823e0aed9ab644be6fa2d5521e78f9456",
+    "source_question_sha256": "86ce51cb6aee46148b9259f7e2aa805fd0550c5825eb17eec40ca05b21109bda"
+  },
+  {
+    "id": "broader-cybermetric-03647",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary reason for using cryptographic patents?\nA. To protect intellectual property related to cryptographic inventions\nB. To discourage academic research in cryptography\nC. To restrict public access to cryptography\nD. To facilitate global cryptographic standards\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 3647,
+    "source_row_sha256": "721a587804abd9a73ac51121f638f4beb1db93dc58a8c77cec956ea1301df02e",
+    "source_question_sha256": "70c7414732f9d77c1c73879b2246e57e8f7b02a00134154a8209af7555a36cf0"
+  },
+  {
+    "id": "broader-cybermetric-03657",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary goal of authentication in the context of e-commerce?\nA. To maintain a high data transmission speed\nB. To verify the identity of the parties involved in a transaction\nC. To ensure data integrity during transmission\nD. To hide transaction details from unauthorized parties\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 3657,
+    "source_row_sha256": "2b072d1964b54750068986c5d88727a02f2fa92c4b1439aa55552d0d8804b38a",
+    "source_question_sha256": "3177ee158348a9ecd5d6d914801fc942190eb859bf252adcd4e9cdb53a8f1afc"
+  },
+  {
+    "id": "broader-cybermetric-03687",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the best approach to creating strong and unique passwords for different accounts?\nA. Using the same password for all accounts to avoid forgetting them.\nB. Using easily memorable phrases and common words.\nC. Using a combination of letters, numbers, and special characters.\nD. Using the name of the website or service as the password.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 3687,
+    "source_row_sha256": "06cb4c4e7db9e6d093780ea25b18abe0369baa9d2c0b30a8b372ffee6ec85718",
+    "source_question_sha256": "6036ea09ec7c46c666c51be1567635fff173fba211daaa639757ae2954b31a00"
+  },
+  {
+    "id": "broader-cybermetric-03764",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary reason for the reusability of the one-time pad by the Soviet Union?\nA. To allow multiple rounds of encryption with the same key\nB. To simplify the key management process\nC. To increase the security of the encryption process\nD. To deal with the shortage of new one-time pads\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 3764,
+    "source_row_sha256": "1e3076e91e20eae3e299c354782a4d35d3a26c58dadb3bd654cd5e81da3e7b9c",
+    "source_question_sha256": "a2dd28d36a35f5b303ca49db620726d222acefaa27bb236a7623d2cb8e987b85"
+  },
+  {
+    "id": "broader-cybermetric-03816",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary purpose of applying stepping equations in cryptanalysis of RED ciphertext?\nA. To identify the number of active pins in the breakwheel\nB. To determine the number of inactive breakwheel pins\nC. To derive letter substitutions for plaintext characters\nD. To evaluate the performance characteristics of the machine\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 3816,
+    "source_row_sha256": "c61473ff23ebe44898a044cf5b0a5b6c0a1f8cb5dc2b453a13055825a7dd15b5",
+    "source_question_sha256": "baacf7d25eb65e66719d8c372ec7a0e4ed44ccf40194004bda6f86e696ee140c"
+  },
+  {
+    "id": "broader-cybermetric-03989",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What does the principle of 'defense-in-depth' in cybersecurity refer to?\nA. Implementing multiple layers of security controls\nB. Relying on a single layer of security\nC. Prioritizing network speed over security\nD. Focusing only on physical security measures\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 3989,
+    "source_row_sha256": "5adb90abfcdc62d00eb3a3fb102497e7df04a910e9c6788dc94c407eccbd38ae",
+    "source_question_sha256": "318144aa2aa5df92a56724b141b5a695da2cd39c864f62928a2a072f1e2af95d"
+  },
+  {
+    "id": "broader-cybermetric-04043",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What data should be subject to a data classification scheme?\nA. Sensitive data\nB. Classified data\nC. Critical data\nD. All data\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 4043,
+    "source_row_sha256": "6e2f8d9adae9d57cf51bad30d4edef460b5a0d4032ba4e68453c6f0d4595d5b1",
+    "source_question_sha256": "6a9eaaa96c6299a9bb57954f318a774f9589e245b2e100b41fbf4397f835d7b9"
+  },
+  {
+    "id": "broader-cybermetric-04183",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the purpose of the procurement and contracts policy in information security management?\nA. To ensure consistent security controls with third parties\nB. To address employee privacy rights\nC. To establish the process of outsourcing security controls\nD. To dictate the frequency of vulnerability assessments\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 4183,
+    "source_row_sha256": "6feb5a9502ca80e23faf845e1231deb7cb377277460c6cc606f5bc477ae5bcf2",
+    "source_question_sha256": "723b3b53ae840b0044a1cb3c3fff0428d9334f36577bffcc6c4a4916953480e0"
+  },
+  {
+    "id": "broader-cybermetric-04188",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What does the Fair Use Doctrine of the Copyright Act provide?\nA. It establishes specific exemptions from copyright liability.\nB. It protects information that provides a competitive advantage.\nC. It grants inventors limited property rights to exclude others from duplicating, using, or selling.\nD. It identifies goods and distinguishes them from those of others.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 4188,
+    "source_row_sha256": "5952a3ca6aa11c08560fe02b67bab8b9dd25cc482b7474300f119cce3022db45",
+    "source_question_sha256": "a6a7bbed129c8bc005ed6f68fd0c79073a44790338941a2d1c2a2ce1e0ecdc0d"
+  },
+  {
+    "id": "broader-cybermetric-04332",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the benefit of using SCP over Telnet or rcp?\nA. Faster data transfer\nB. Smaller network bandwidth usage\nC. Stronger encryption\nD. Easier user authentication\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 4332,
+    "source_row_sha256": "d451b41d71c9e54fb7b4facbf38f8e05fbc08c16e53091edb1d1e15a2825d85c",
+    "source_question_sha256": "c28ac66eabc324c3b8e534bdf3f791fbc828176cc28ac46ac4d8a5c4b8a79ef5"
+  },
+  {
+    "id": "broader-cybermetric-04387",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary goal of the Certified Ethical Hacker (CEH) examination?\nA. To promote malware development\nB. To provide skills-based learning in cyber security\nC. To test ethical behavior in hacking scenarios\nD. To encourage unauthorized access to systems\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 4387,
+    "source_row_sha256": "47fbea7774942e3cb557e3e8e9ec368a00fb02814fe8b0e14f007b374a689e51",
+    "source_question_sha256": "416edf4780c5dea806a87d15c0d1d8d592656fabc053831bef14d484ab17692e"
+  },
+  {
+    "id": "broader-cybermetric-04395",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "In TCP/IP networking, which protocol is used to hold network addresses and routing information in a packet?\nA. HTTP\nB. IP\nC. Routing Information Protocol (RIP)\nD. TCP\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 4395,
+    "source_row_sha256": "ee946847d3b5bd6242624683b4dbd48428e7c0705c5ded00166340cf607493a0",
+    "source_question_sha256": "acc1e46298b2fa1fc1f7026b4fec45bb52c438c56228dae922738a2cab04b99b"
+  },
+  {
+    "id": "broader-cybermetric-04465",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What can be determined by reading the banners returned by an unsolicited request to an open port in banner grabbing?\nA. The amount of RAM allocated to the application\nB. The level of encryption used by the application\nC. The version of the application running on the port\nD. The network traffic passing through the server\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 4465,
+    "source_row_sha256": "c279558c9e1f75195e3c79b6895cd2e0a6dc282217ae5327a218779ee6739e12",
+    "source_question_sha256": "b621e8fb56d851b3b82eb35ed7c02b4a1cd5de8eeecb37aa88dc6dfac226dd6d"
+  },
+  {
+    "id": "broader-cybermetric-04476",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which ICMP message type/code indicates the packet could not arrive at the recipient due to exceeding its time to live?\nA. Type 0,  Code 0\nB. Type 3,  Code 1\nC. Type 8,  Code 0\nD. Type 11, Code 0\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 4476,
+    "source_row_sha256": "02073d07a138cb4b51e739a36e98721120e3f5f63355e595f7417d893fae24a7",
+    "source_question_sha256": "045587d6bdd3577c9a8dc8bcb75b1d2452571f9627f97a630aa98500a28248f0"
+  },
+  {
+    "id": "broader-cybermetric-04539",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What attack involves placing Unicode in the string to represent dots and slashes, resulting in a directory traversal?\nA. Directory traversal\nB. Web defacement\nC. Web cache poisoning\nD. CSPP (connection string parameter pollution)\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 4539,
+    "source_row_sha256": "deeb6848795ae600a312c4ee690bdc5f0ff81a95728a57db0ec6b6b94547c6c5",
+    "source_question_sha256": "62f57280c4b23d715aa56f299a5e3169f430a7a6c65da431c1d9bbcdb55ee14d"
+  },
+  {
+    "id": "broader-cybermetric-04583",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which mobile attack vector leverages text messaging to attack users and devices?\nA. Spyware\nB. Phishing\nC. SMS phishing\nD. Trojans\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 4583,
+    "source_row_sha256": "829507338473c4b7de957802838ed3faceaed5d0294b644ce6e6d999c98ebe2c",
+    "source_question_sha256": "d28e9e26b58a3da65f77a0e890e7c668505400c818090a24808b7a91440dc2df"
+  },
+  {
+    "id": "broader-cybermetric-04615",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which of the following doesn’t define a method of transmitting data that violates a security policy?\nA. Covert channel\nB. Overt channel\nC. Backdoor channel\nD. Session hijacking\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 4615,
+    "source_row_sha256": "6cb72ba37a575c9f451a14fc51a4e54722fd5f91bb449526b85860b551b116c8",
+    "source_question_sha256": "a9eabb042335e8f6e545831920eff505e46b0f183076148f64e3a36cd3a249f3"
+  },
+  {
+    "id": "broader-cybermetric-04700",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary role of SOAP in the implementation of web services?\nA. To transfer data between different protocols\nB. To manage devices on an IP network\nC. To exchange structured information between web services\nD. To secure web servers from external attacks\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 4700,
+    "source_row_sha256": "76ffd377ba8a9852dafe90ff1b6c0489f378cc8a115ac7ce273d7242a83f3dcc",
+    "source_question_sha256": "fa6817d7bc5fc0ce6e1eb72fe26e33aa61c1e8490bd7a6a49ca69e56c4206174"
+  },
+  {
+    "id": "broader-cybermetric-04763",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which statement correctly defines spamming attacks?\nA. Sending spoofed packets with the same source and destination address\nB. Repeatedly sending e-mails\nC. Using ICMP oversized echo messages to flood the target computer\nD. Sending multiple spoofed packets with the SYN flag set to the target host of an open port\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 4763,
+    "source_row_sha256": "5d52a7c7bcce9ff1eb4ac4263e8172d3db0030e97ff8830097673791ffb0bede",
+    "source_question_sha256": "e2994ccc6fa6286bcb09aaa9ff7c486810f8d7cb1c1db902e2a9c1030428dfbd"
+  },
+  {
+    "id": "broader-cybermetric-04807",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What describes a weak point in network security that an attacker can use to infiltrate a network?\nA. An event\nB. An intermediary\nC. A target\nD. A vulnerability\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 4807,
+    "source_row_sha256": "9b6e99cdd1bbaf3c899df0c49718adbe8eec45153e1d941a74687707b5f6d4b6",
+    "source_question_sha256": "3e44b2137fe7320a0744db0d10c01e2a8df7572b002aa4f74dd69ec19f2c5b8a"
+  },
+  {
+    "id": "broader-cybermetric-04884",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "A reservationist at a travel agency is allowed to commit two mistakes per month without consequence. An automated system tracks these errors and alerts appropriate personnel when this limit is exceeded. What is the limit referred to as?\nA. Proximate causation\nB. Maximum fault tolerance\nC. Due care\nD. Clipping level\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 4884,
+    "source_row_sha256": "60fb4c6be74b40eeb588d19848c5453812cadf6f5ab338c2079fd729d70b8ea7",
+    "source_question_sha256": "1aceeff69a91d63620fbe6e0f2068baa5d09861e5d8a3ad4b5014dafb3901391"
+  },
+  {
+    "id": "broader-cybermetric-04920",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What device works at the physical layer to boost electrical signals between network segments?\nA. Router\nB. Switch\nC. Repeater\nD. Gateway\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 4920,
+    "source_row_sha256": "9e171437a8389d209cffa8e7e339bfd7077054ea50ab636f3c86aeb194404c0f",
+    "source_question_sha256": "497fb2374e4cf04d86c004f461364f2c1a18628aee1d0cee1ef9945b42463b9b"
+  },
+  {
+    "id": "broader-cybermetric-04937",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Physical security controls are your first line of defense and should be designed so that the breach of any one will not compromise the physical security of the organization. CCTV cameras mantraps lighting guards dogs and locks are but a few of the layers of physical security. Which area would it be most appropriate to install physical detective and deterrent controls to protect Ethernet appliances?\nA. HVAC\nB. Faraday Barrier\nC. Wiring Closet\nD. Plenum Space\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 4937,
+    "source_row_sha256": "c84a4277ca1947b24116e997e14b06945be63901e7fd86f551a774324f7480c3",
+    "source_question_sha256": "8468d750b15d0d8cad93c42cf0a8cfd3f2ebcb81be080e22fffd743384b8a928"
+  },
+  {
+    "id": "broader-cybermetric-05027",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is a potential sign of an attack when unusual system behavior is observed, such as server processes inexplicably stopping and system restart attempts?\nA. Potential system compromise\nB. Network scanners\nC. Decreasing audit logs\nD. Failed system login attempts\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 5027,
+    "source_row_sha256": "8233b4c42d0fd083d778f13f95bdfbb25edc3310291520fcf46a5f73f58e5b93",
+    "source_question_sha256": "80c3074fb1cc11d0bbb325c8fb23e0151e8c51c54fde9c392a579b6a84c64e0e"
+  },
+  {
+    "id": "broader-cybermetric-05122",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which wireless network protocol augments DSDV with authentication to provide security in the construction and exchange of routing information?\nA. Wi-Fi Protected Access (WPA)\nB. SEAD\nC. SLSP\nD. ARAN\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 5122,
+    "source_row_sha256": "43bb7d76a7defdde6ff485dc76e02b3ed0e2db3ebefb2d5950aec90f866796b7",
+    "source_question_sha256": "884be4ac2c1bbdcd4cff0d999ba935eea43c841845a67f94f8f46d62d27990af"
+  },
+  {
+    "id": "broader-cybermetric-05216",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the concept of 'First Principles' in computer forensics?\nA. The reliable and unchangeable foundation of evidence\nB. The core concepts of computer science\nC. The first steps in a cybersecurity breach investigation\nD. Referring to fundamental cybersecurity principles and best practices\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 5216,
+    "source_row_sha256": "bc4c44a0b312d8c9a87789c9f6464014274b2f6a81cf6ca22e3c109d36f22116",
+    "source_question_sha256": "08ef2276fb275f2565793734683525af5e1e8d99af774e169458952366631a32"
+  },
+  {
+    "id": "broader-cybermetric-05249",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What activities are typically part of the pre-attack phase in a penetration test?\nA. Information gathering and vulnerability analysis\nB. Social engineering and password cracking\nC. Denial of service testing and intrusion detection\nD. Router penetration testing and firewall testing\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 5249,
+    "source_row_sha256": "b8f0aa39f93c7e58ee6e8124f78fac739bdf340e0368ed12d6332515328c970b",
+    "source_question_sha256": "80d09929d6422f82b66391873a77ec2bcd5078b20e5f287103a8e659794db4c0"
+  },
+  {
+    "id": "broader-cybermetric-05311",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What do Enterprise Privacy Authorization Language (EPAL) and eXtensible Access Control Markup Language (XACML) have in common?\nA. Both are used for data deidentification.\nB. Both are designed for specifying privacy preferences.\nC. Both aim to regulate biometric technologies.\nD. Both provide ways to express access control policies.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 5311,
+    "source_row_sha256": "51f71958bf0f2f20f2fa7f47f7d9ea238de08b6509f9b24de2655b6fa7897f9a",
+    "source_question_sha256": "9360e707c90d7915216acd04dbdee3de7c5c4bda5100a3977c4e9d2e9dface37"
+  },
+  {
+    "id": "broader-cybermetric-05321",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "In the context of disclose-to field in personal privacy policies, why is it important for the consumer to specify this accurately?\nA. It ensures the consumer complies with regulatory requirements.\nB. It allows the consumer to share private information with other parties.\nC. It avoids the need for disclosing information to any party.\nD. An inaccurate specification can result in third parties gaining unauthorized access to the consumer's private information.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 5321,
+    "source_row_sha256": "58530abe872d346ed04736445e7b9706b91b77753b6e8a3413ae592ad44839d7",
+    "source_question_sha256": "5c99493a21166b4aefc1f62d2b0b06040191204292d849ae98857c1f0afd2ffb"
+  },
+  {
+    "id": "broader-cybermetric-05414",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary weapon of a Distributed Denial-of-Service (DDoS) attack?\nA. Compromised workstations\nB. Program virus\nC. Trojan horse\nD. Boot sector virus\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 5414,
+    "source_row_sha256": "d93a3dc55f2021c67d351753971e802c4124e601e2c3563568a6e979065e1094",
+    "source_question_sha256": "9813d68db7540dc5dd176e3cd774a94fd5263fe952ddc6bae81817a4ba2b72b7"
+  },
+  {
+    "id": "broader-cybermetric-05417",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the main purpose of security through diversity?\nA. To achieve maximum efficiency\nB. To lower procurement costs\nC. To ensure a uniform approach to security\nD. To withstand and survive uniform attacks\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 5417,
+    "source_row_sha256": "9b4afc542715c9e35c776d11503ad3aed50d00d1f278f1e49480c6dac696a352",
+    "source_question_sha256": "21c1a974a14c54596a986a1b4cb9ac9962f708f48bddf1cde84f80a716c68446"
+  },
+  {
+    "id": "broader-cybermetric-05447",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the main purpose of assessing internal control under SOX Section 404?\nA. To scale the assessment based on the size and complexity of the company.\nB. To develop a written information security plan describing the company's protection of nonpublic personal information.\nC. To evaluate controls over the period-end financial reporting process.\nD. To estimate the potential exposure to losses related to a computer intrusion.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 5447,
+    "source_row_sha256": "48c37b9586f77a7feb3f7ed3d2e2906906bbd8e2a40b54d370a181d1eb549431",
+    "source_question_sha256": "830153cbc85beed58eabe34b642ba2c64295d90d0057be5e1aee189dce951022"
+  },
+  {
+    "id": "broader-cybermetric-05488",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What role does encryption play in protecting data at rest and in transit in a computer network?\nA. It ensures the integrity and authenticity of data by digitally signing all network communications.\nB. It protects data from unauthorized access by converting it into a format that is unreadable without the proper decryption key.\nC. It monitors and logs network activities to detect and mitigate potential security breaches.\nD. It filters and blocks unwanted web traffic from reaching the network's servers and workstations.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 5488,
+    "source_row_sha256": "5e5bcae7f60edc05698ca634cbe835f540fadabe44de65272e36779c9dc165b7",
+    "source_question_sha256": "cad11a5ddaa71da5383e0524450415bc541034f99ec6389d60addf91a53af430"
+  },
+  {
+    "id": "broader-cybermetric-05503",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What security practice aims to ensure the ability to recover IT systems and data after a disruption or disaster?\nA. Incident response\nB. Risk management\nC. Intrusion detection\nD. Disaster recovery\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 5503,
+    "source_row_sha256": "cd175c80077a2c60a3a2d2da1364de002468c54032090f18f0fc1f82228b5fa1",
+    "source_question_sha256": "35813ce290425ca89a6d2771e9b9aedf668ea331811a70ab8268a3d231e5ca38"
+  },
+  {
+    "id": "broader-cybermetric-05580",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the function of Token-Passing in a LAN topology?\nA. To create a secure encrypted tunnel between network nodes\nB. To differentiate between network interruptions and user actions\nC. To avoid network collisions\nD. To prioritize network transmissions based on content\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 5580,
+    "source_row_sha256": "a740c431eb5d00c384b97d3eff19c05e31235ce454907d5160ec74913664617e",
+    "source_question_sha256": "de3ffa80764d666f6cd870c93d52c856eebe57bd9869047a6f97ed36eb72cb90"
+  },
+  {
+    "id": "broader-cybermetric-05667",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the purpose of problem management in cybersecurity?\nA. To enforce strict access restrictions\nB. To remove all system vulnerabilities\nC. To mitigate the negative impact of problems on computing services and resources\nD. To intensify security controls\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 5667,
+    "source_row_sha256": "db634f6a8c7d63e3629f4074a4299e5044f12d292f7e2674bb4f230c44850aa9",
+    "source_question_sha256": "408fcf4c706236ddd4d801b1b6e7a750dbdc112763043f8a114faf7651829b03"
+  },
+  {
+    "id": "broader-cybermetric-05731",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the main function of audit trails in physical security?\nA. Provide real-time monitoring of access attempts\nB. Reconstruct the details of an intrusion post-event\nC. Warn personnel of multiple access failure attempts\nD. Prevent unauthorized access\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 5731,
+    "source_row_sha256": "bd14153de0a677dd9f1b700e5acd98ff860eff772683b66e66b45944d7baf034",
+    "source_question_sha256": "e9a915b72e678b1a1f6306da9f20fcb17caefa0723d3dc1e06726780403b682a"
+  },
+  {
+    "id": "broader-cybermetric-05733",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What aspect of facility access is provided by a mantrap?\nA. Employee training\nB. Physical access control\nC. Crowd control\nD. Visual surveillance\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 5733,
+    "source_row_sha256": "c28583513dfae986fbdb832b0e3bce44c3b355e14d66d8f588e52492facf90cd",
+    "source_question_sha256": "ba0b0d80440748e99c6d42adbb2bfd06eb5447090f453d51865ea44545c4ec02"
+  },
+  {
+    "id": "broader-cybermetric-05835",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which of the following is NOT a characteristic of the ElGamal public key cryptosystem?\nA. It can be used to generate digital signatures.\nB. It can perform encryption.\nC. It is based on the discrete logarithm problem.\nD. It can perform encryption, but not digital signatures.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 5835,
+    "source_row_sha256": "268465d1a89f23a45ab5851b4ce17c9752e6ab231559740f21607acd3a567855",
+    "source_question_sha256": "ee5d335250dbd933332a14a32f07c6698bf3b79118f12391bd84ccff0471bdb8"
+  },
+  {
+    "id": "broader-cybermetric-05842",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "The minimum information necessary on a digital certificate is:\nA. Name, expiration date, digital signature of the certifier\nB. Name, serial number, private key\nC. Name, expiration date, public key\nD. Name, public key, digital signature of the certifier\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 5842,
+    "source_row_sha256": "ba44efcdb921e09c3936c97978fe1e8573625293e286f2c87a8a1e89482367b1",
+    "source_question_sha256": "e8318f062942e27bcb9b655f37035ef2c9f079d290086519e28cf8fb9c23f437"
+  },
+  {
+    "id": "broader-cybermetric-05861",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which definition of software engineering includes the specification, design, implementation, and evolution of programs, documentation, and operating procedures for computers?\nA. Software engineering\nB. An object-oriented system\nC. Structured analysis/structured design (SA/SD)\nD. Functional programming\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 5861,
+    "source_row_sha256": "c9d14f91e964a7ff7069816d05888a2fee8d432c7490d7fe2c8d8b710813730b",
+    "source_question_sha256": "95a7529459422921f83842e65b5c30d4186acba54229f78b73dd60cc5d2bc403"
+  },
+  {
+    "id": "broader-cybermetric-05973",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which standard is related to Public-Key specifications?\nA. ISO 7498–2:1989\nB. ISO/IEC 979x\nC. P1363 Standard Specifications\nD. X3 Information Processing\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 5973,
+    "source_row_sha256": "e6c46bcbd28be03e536e0b13487b7779c2c1c01fd228304d0ec777c3378b4697",
+    "source_question_sha256": "f7292da374029a1d9aabadb61cc5a549e1b37076da138e05b5a4c2a6de98f987"
+  },
+  {
+    "id": "broader-cybermetric-05984",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What was the major consequence of the Internet worm released by Robert T. Morris, Jr. in 1988?\nA. Hijacking sensitive data from networked computers\nB. Leading to a temporary shutdown of the ARPANET network\nC. Causing widespread panic but with no real damage\nD. Crippling government and university computer systems\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 5984,
+    "source_row_sha256": "b1711cbd93ba43998410722fc3422a5d40afca5ae105c4aab3a8aa837d831cec",
+    "source_question_sha256": "5d5e06ebeaa7c6db88a27e05754a9969e5f905bcb3376de8ffcc9afb75f01257"
+  },
+  {
+    "id": "broader-cybermetric-06029",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What type of authentication is based on the use of a user’s name and password pair?\nA. Combined Approach Authentication\nB. Public-Key Authentication\nC. Password Authentication\nD. Challenge-Response Passwords\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 6029,
+    "source_row_sha256": "09c9c2e53ad26aba38cce1ac3b58059829fc0c86a36f93892d57a3b079d95950",
+    "source_question_sha256": "c791686a555eaa998e6ba34316148e1947dfd8b320f77eb1bbdc404e59c2a09b"
+  },
+  {
+    "id": "broader-cybermetric-06104",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary method used by WLANs for client identification?\nA. IP Address\nB. Media Access Control (MAC) Address\nC. Subnet Mask\nD. Domain Name\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 6104,
+    "source_row_sha256": "273bc6e91e52a35507c6211e2566678926a49795ceb60ebedfc8ce70a46b8e3c",
+    "source_question_sha256": "0d6112a5e361ae1de8a1133c5148d278e7534c5ec678afc71d3cd0e239532902"
+  },
+  {
+    "id": "broader-cybermetric-06238",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is a possible result of an attacker gaining access to a limited user account with impersonation privileges?\nA. Physical damage to the host machine\nB. High system performance\nC. Increase in virtual memory allocation\nD. System compromise\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 6238,
+    "source_row_sha256": "ba7098a203c4d3f9c156e5671390c55b4142ae673d48fb47c23d17a43f62308a",
+    "source_question_sha256": "3f5382738653e868ff0de2480d966c4b59ca51e35b29e373c6385e7cf44a1cd7"
+  },
+  {
+    "id": "broader-cybermetric-06558",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which category of cable has a bandwidth limitation of up to 250 MHz per wire pair and performs to Category 6 requirements?\nA. CAT 3\nB. CAT 5e\nC. CAT 7\nD. CAT 6\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 6558,
+    "source_row_sha256": "815850ad687b1c7804fc1d20f7eb4a66155bfa3441d64153f4ff184e0604d85a",
+    "source_question_sha256": "ae4e705ba074372cf7f6a293f3be03682d42dc08f409d45bc541bd19520498f1"
+  },
+  {
+    "id": "broader-cybermetric-06562",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which organization drafted the 802.11x standard for wireless networks?\nA. Wi-Fi Alliance\nB. WiMAX Forum\nC. IEEE\nD. Bluetooth SIG\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 6562,
+    "source_row_sha256": "640b8e0e88f56013a5f9f3f4c11ee40895eccfe072b3d2d91cc66a751d4080c7",
+    "source_question_sha256": "06802a9810cb058c9ac13df1daa8cdd9355bdd3c98ec6439de7f5a3900b16fb0"
+  },
+  {
+    "id": "broader-cybermetric-06701",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is a crucial element for the effective operation of a firewall?\nA. Use of intrusion detection systems\nB. Absence of security policies\nC. Development of a security architecture\nD. Implementation of a stringent security audit\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 6701,
+    "source_row_sha256": "b0adb14763dc152bf4a3c324c8fef5ae704cd7d2acd5a94395dc2e63c2bf0337",
+    "source_question_sha256": "75fbdc01167799438dc2b5dee9ed06fe596e65b7d77095d5253fec464e3f3e45"
+  },
+  {
+    "id": "broader-cybermetric-06719",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What information is typically stored in a cookie?\nA. Users' Internet Protocol (IP) addresses\nB. Names and values, expiration dates, and domains\nC. Users' personal details and shopping preferences\nD. Users' passwords and credit card numbers\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 6719,
+    "source_row_sha256": "667f95da4d34b21b4439e46e13a4303f0b2e0521fb493b8d13afe9c97d01cd2e",
+    "source_question_sha256": "09cc06ba3f077ccc2c683fed9d6c1ca95834761a173e65dcdced732c59f11a34"
+  },
+  {
+    "id": "broader-cybermetric-06729",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What key advantage of VPNs enables the creation of a network of virtual channels through the Internet?\nA. Routing integration.\nB. Policy-based routing.\nC. Data encryption and protection.\nD. Logical independence.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 6729,
+    "source_row_sha256": "5264229e62b1125ff5fb8a9342485292b4437d711b9f852c60b24dc8a41a05fc",
+    "source_question_sha256": "834f7565a8cbbc8068eaac992499dd00cd5a96d0a40e8a77f7c8f176689bd095"
+  },
+  {
+    "id": "broader-cybermetric-06730",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which of the following statements is true regarding the IPv6 header fields?\nA. IPv6 does not include the Options field, as the use of optional headers enables additional functions to be specified as separate entities.\nB. IPv6 maintains the Header Checksum field for error detection purposes.\nC. IPv6 includes the Type of Service, Identification, Flags, and Fragment Offset fields similar to IPv4.\nD. IPv6 utilizes 64-bit addressing fields instead of the 32-bit fields used in IPv4.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 6730,
+    "source_row_sha256": "678582ff10ad2f9eb7cc0b6aa10a3ab31133f869cb5d9cfef4983964ce723a7c",
+    "source_question_sha256": "d741b77e1faf1e03249a42bd882b40635e912defb599abee762b1c5adcae4f70"
+  },
+  {
+    "id": "broader-cybermetric-06746",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which of the following actions can help a user minimize exposure to security weaknesses associated with broadband access methods?\nA. Disabling or hiding processes that advertise services or automatically respond to inquiries\nB. Purchasing higher bandwidth from the service provider\nC. Regularly updating the Wi-Fi access point password\nD. Utilizing exclusively licensed wireless systems\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 6746,
+    "source_row_sha256": "e49f4fbd79ffae76a4556aed1313f161f7265767aeb7ceee5f4c8e04bc715b56",
+    "source_question_sha256": "2e21836b11d924750d174488f688957e77a0377770b5c90b6f0c0d734af51bef"
+  },
+  {
+    "id": "broader-cybermetric-06801",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What are the primary concerns with voicemail systems?\nA. Inbound call tracking and voicemail scripts\nB. Caller ID and call forwarding\nC. Eavesdropping and password management\nD. Recording quality and message deletion\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 6801,
+    "source_row_sha256": "735529746ec6cc160d951aa9b46adf5f341f507d4f34007d6df482960877c8c6",
+    "source_question_sha256": "3130c573332ff93a0963427ab605ab6d472175a4f223496ada32e720cf4af6dd"
+  },
+  {
+    "id": "broader-cybermetric-06855",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary responsibility of the security department?\nA. Responding to incidents and alarms\nB. Training and awareness\nC. Developing new systems\nD. Regulating hardware and software use\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 6855,
+    "source_row_sha256": "e3abf4937a5ffd107362ac44fa1984a5cc2c1ae949ab30cf537be005ce01c081",
+    "source_question_sha256": "c56bc321ed5d567155f46e9fb7420f57856c5ed54e08db5bb686fd7477966193"
+  },
+  {
+    "id": "broader-cybermetric-06956",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary focus of an IT evaluation for due diligence before the purchase of a company?\nA. Assessing compliance with federal regulations\nB. Examining the condition and value of the IT system\nC. Reviewing the security architecture and infrastructure design\nD. Evaluating the data stored within the IT systems\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 6956,
+    "source_row_sha256": "fff8f8dbf7d926f506f706b20250847b5389d9e902168a906042474ad9429eb9",
+    "source_question_sha256": "7bbd6db63eae24c4af8c27ade5dd75b8f23588243ba2c4141c7923f6cca7210f"
+  },
+  {
+    "id": "broader-cybermetric-07043",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Why is it important to define procedures for the disposal of media in a security policy?\nA. To create a process for securely transferring media between different departments within the organization.\nB. To establish guidelines for safely and permanently eliminating sensitive data from storage media that are no longer needed.\nC. To outline the steps for reporting lost or stolen media to the IT department for investigation.\nD. To standardize the process for securing media from physical damage or wear and tear.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 7043,
+    "source_row_sha256": "d2b503de037d043534570b67f82e31613e190580c57af10b24027a4ebf870e14",
+    "source_question_sha256": "b41b79b5d68a710fd853fbf5f4814265cd619098fd64267fed5b8a89aea695c3"
+  },
+  {
+    "id": "broader-cybermetric-07072",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the purpose of establishing an IRM methodology and tools in Information Risk Management?\nA. To determine the current status of information security in the target environment and ensure associated risk is managed\nB. To develop high-level IRM policy statements and objectives\nC. To identify and measure risk associated with various strategic alternatives\nD. To assure that risk is managed effectively before funds are expended on a specific change in the IT environment\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 7072,
+    "source_row_sha256": "aa69748ecd903e2ca47a379d94ced7744254f65156f67f912b58df8576a86360",
+    "source_question_sha256": "925dc0b2bf07a7fc7789310228cebdbd282623e2c40bb9d350e4c0e294f3b934"
+  },
+  {
+    "id": "broader-cybermetric-07074",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which of the following tasks provides management with a documented assessment of risk in the current environment?\nA. Establish Risk Acceptance Criteria\nB. Monitor Information Risk Management Performance\nC. Asset Identification and Valuation\nD. Risk Evaluation\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 7074,
+    "source_row_sha256": "eba5679b035baef30fbd2f6b4b57e75fd8bdc087a7a336f3d4657f9d4b9983f2",
+    "source_question_sha256": "bfe3c6db15521ceea9e6ddc55afa0c481a88773a513e7cb819ab812da9318d55"
+  },
+  {
+    "id": "broader-cybermetric-07100",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which organization is responsible for locating an appropriate Common Criteria Testing Laboratory for an IT product evaluation?\nA. National Evaluation Authority\nB. IT product vendors\nC. Sponsors\nD. Customers or end users\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 7100,
+    "source_row_sha256": "ed971c4dd9351049fb3bac9546c363c565f4586f6337b2975b181ffccc070f96",
+    "source_question_sha256": "0257a7c97e8fe6632555da5327110c179ace8ffb2c8e26e8f8092826a29452da"
+  },
+  {
+    "id": "broader-cybermetric-07274",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Why are digital signatures required to be tightly integrated with relational database applications?\nA. To monitor network traffic for security purposes\nB. To ensure encrypting data in transit\nC. To prevent unauthorized access to the database\nD. To maintain data integrity and enforce non-repudiation of transactions\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 7274,
+    "source_row_sha256": "0872c5ad4a3c112f37aa324e9b85599f82bdf8210bf5dcaf0ad7b565316e86df",
+    "source_question_sha256": "7155da1553707d336dc4109cc449c1b92c68c7eeb61e5c60adc2fbd7ec422b44"
+  },
+  {
+    "id": "broader-cybermetric-07285",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the focus of the reliability perspective within the architecture?\nA. System security\nB. Frequency of system failures\nC. Business operations\nD. Data handling\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 7285,
+    "source_row_sha256": "ebab82e37e296e0f2be00493b127596c7107e4a6924ecdaa4053e19610dc41d8",
+    "source_question_sha256": "22591a378f16368ede47c659b4469500e13cbe13d490c053d6c604ccc14c0753"
+  },
+  {
+    "id": "broader-cybermetric-07310",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the purpose of the Personnel Background Screening in the C&A process?\nA. To identify and address system vulnerabilities\nB. To ensure consistent and appropriate performance of security measures\nC. To assess the compliance of the system\nD. To verify the qualification of key personnel\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 7310,
+    "source_row_sha256": "8b906eb116ab6cd4ede391820309d3391dc5fa44925d76f8eccc3b8f5f688a3d",
+    "source_question_sha256": "a4125dec96ff6cfb0b926ebd264404676518d07d31d143d07ac89b743af03d32"
+  },
+  {
+    "id": "broader-cybermetric-07399",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which group may use malicious code to punish, hinder, or destroy the operations of groups or governments they find objectionable?\nA. Script kiddies\nB. Terrorist groups\nC. Criminal enterprises\nD. Ideologues\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 7399,
+    "source_row_sha256": "2115cffb54fab4d1a8d627221ac575ffa9c03ab090c926c84695ee3ea1715e43",
+    "source_question_sha256": "bf2f5edb53bc484701fe93b70eefd055233edb715f1dd6e717d0eecda696577f"
+  },
+  {
+    "id": "broader-cybermetric-07507",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What attribute of a ticket ensures that it can be used by an intermediate service on behalf of the client?\nA. Forwardable\nB. Proxiable\nC. Managable\nD. Session Key\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 7507,
+    "source_row_sha256": "6ceea83715aafbb7d6a3b311d88a019e4dd518acd7d5f4f9ae56e8126c8d2809",
+    "source_question_sha256": "2b83fdbeff2b41ecfd143bd56a4fe4fa96eba5f979c9ad2c5f7781afd1f4b4ca"
+  },
+  {
+    "id": "broader-cybermetric-07508",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary manageability concern associated with service principals in Kerberos?\nA. Key Rollover\nB. Administrative Functions\nC. Ticket Granting\nD. Password Change\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 7508,
+    "source_row_sha256": "6d6d191fcb0979203fcfe657370df5edde8e8b4880e003b22154e3c5793935af",
+    "source_question_sha256": "545708247b885721fa5e71e574d20d7f38bb44d9f9a5270d36e1f43a022f0d43"
+  },
+  {
+    "id": "broader-cybermetric-07550",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What does FIC stand for in the context of intrusion detection systems?\nA. File Integrity Control\nB. Faulty Intrusion Counter\nC. File Integrity Checking\nD. File Inspection Criteria\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 7550,
+    "source_row_sha256": "b83d8af9730f00539173bb63adeed94a833967b441b01c933ca3b5d57bb3f637",
+    "source_question_sha256": "c72fb3412f318b355747dae34aeab523c081eda93f02e95b6881614081562514"
+  },
+  {
+    "id": "broader-cybermetric-07681",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary purpose of resource protection in information security?\nA. To make working within the organization's computing environment user-friendly\nB. To allocate resources efficiently\nC. To ensure that the equipment operates reliably\nD. To safeguard all computing resources from loss or compromise\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 7681,
+    "source_row_sha256": "6a37cf68257472f24e99351e4ea5c67a2b292f55684bf9f43f1f0402a1df1a69",
+    "source_question_sha256": "cd1c1a608720daa7860659a05249de9d9cdfe968dac7901932698ff585d0968d"
+  },
+  {
+    "id": "broader-cybermetric-07689",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the role of turnstiles in access control systems?\nA. To ensure only one person enters through a controlled portal at a time.\nB. To provide entrance for multiple people simultaneously.\nC. To prevent unauthorized entry into designated areas.\nD. To detect unauthorized access to secure facilities.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 7689,
+    "source_row_sha256": "a1f27d3635884fba8740f6064768db62c98111b9858387cf81222655b7155a7b",
+    "source_question_sha256": "2cbc003448bc00a8fda8b0bcdbf7236aa81c9ece4c9135445b3386fc51b956be"
+  },
+  {
+    "id": "broader-cybermetric-07753",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which action is key to ensuring that unauthorized changes in permission infrastructure are identified in a timely manner?\nA. Limiting access to critical business processes.\nB. Implementing a strategy to encompass all permissions.\nC. Implementing a monitoring and auditing methodology.\nD. Outsourcing the monitoring role to a managed services partner.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 7753,
+    "source_row_sha256": "16dfb15462d0e59aa5d91a4d54838db4b659def7b7f6da98a0287295a7bafd59",
+    "source_question_sha256": "d3deb25da80da95c819d8672b54cfb3148bfb39aab70ba13f2aa1097e5f6a0ed"
+  },
+  {
+    "id": "broader-cybermetric-07770",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which element of risk management capability ensures effective coordination between risk management-related groups?\nA. Culture\nB. Knowledge Management\nC. Risk Functions\nD. Training\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 7770,
+    "source_row_sha256": "f9603d022923734949937608cc3de8c77f384b6d7c0dcfc8bfb2ddc4cf41f830",
+    "source_question_sha256": "c2090a4d4364e5c12b3625fef5068203694b38a8aa7f97f6fff09ebd4b051d93"
+  },
+  {
+    "id": "broader-cybermetric-07818",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Why is it important to limit the number of interviewees in a Business Impact Assessment (BIA) session?\nA. To ensure a focused and efficient data-gathering process\nB. To prevent the disclosure of sensitive information\nC. To expedite the completion of BIA interviews\nD. To avoid conflicts between participants\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 7818,
+    "source_row_sha256": "833148ccbe0cecf876b4584b9b0fb15110edae37a7d5eef4dfc2f169ffac1a62",
+    "source_question_sha256": "6b40b798ddb51d42b5636d80ef66216736e2ea494305a15c67406f448019d270"
+  },
+  {
+    "id": "broader-cybermetric-07834",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary goal of Administrative Simplification under HIPAA?\nA. To reduce the costs of healthcare through widespread use of electronic data interchange.\nB. To standardize medical diagnoses for better accuracy.\nC. To ensure that healthcare workers are properly trained in using electronic systems.\nD. To protect patient data from being accessed by insurance companies.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 7834,
+    "source_row_sha256": "7e170fc74c71981d510ccc664395075abc4b11a4345423c41e6fb5ad18a97ba5",
+    "source_question_sha256": "62a52da456801db6de4588b83e56d3db6ca5c815b125c60025769b06f641c6a3"
+  },
+  {
+    "id": "broader-cybermetric-07986",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which of the following is a potential limitation of physical security systems?\nA. Inconsistency in labeling of electronic and physical sensitive materials\nB. Complacency resulting from repeated unwanted alarms\nC. Lack of education and training for IT security personnel\nD. Insufficient collaboration between IT and physical security teams\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 7986,
+    "source_row_sha256": "36d937aec3eee4dc35b2ecf04a591955f14613684e38557fe887c71fbe5836ae",
+    "source_question_sha256": "876c86f1aaa92eef89d8558a46d341739acb67d43d91dbd8d07580cb6c90edd1"
+  },
+  {
+    "id": "broader-cybermetric-08006",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What role does CCTV play in information security?\nA. It regulates software usage\nB. It minimizes network vulnerabilities\nC. It enhances physical security\nD. It ensures data encryption\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 8006,
+    "source_row_sha256": "72d5e07acc3718340f7a11dee31fe7e1cac226e03950ac42f00a07ce14f9433c",
+    "source_question_sha256": "5668cbb5c1b7869a8e46680c646ec1868426c5a1a3fd39efdca35d641263126f"
+  },
+  {
+    "id": "broader-cybermetric-08090",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What measure ensures that staff is fully trained on the equipment to be used?\nA. Definition and implementation of a roles and rights concept\nB. Definition of the processes for the destruction of information/data carriers\nC. Provision of manuals and training materials\nD. Implementation of a logging and auditing concept\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 8090,
+    "source_row_sha256": "dc1842c9d4745138a0cde896f20544d7e808c702e4d51e80d1b3ab7223dc729d",
+    "source_question_sha256": "066cdbf10d4011b999564f8e9771b1bbe82365a8ed7f75a59c1cb9bbac825b62"
+  },
+  {
+    "id": "broader-cybermetric-08125",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What do identity and access management controls aim to achieve in an organization's security framework?\nA. Implementing strict physical access controls through biometric authentication methods\nB. Centralized control and enforcement of access rights across diverse technology platforms\nC. Developing standardized procedures for incident response and disaster recovery\nD. Isolating wireless access points from the main network to prevent unauthorized access\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 8125,
+    "source_row_sha256": "e72b7469c125b2029174bf2990568838202672d3d1675435a180c49e69984454",
+    "source_question_sha256": "04ef747f975d701eb4d6b2c311619fa33da789d9c70e6b329da0484000500e99"
+  },
+  {
+    "id": "broader-cybermetric-08139",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What type of virus initially loads into the first sector of the hard drive and then into memory when the computer boots?\nA. Macro virus\nB. Boot sector virus\nC. Polymorphic virus\nD. Worm\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 8139,
+    "source_row_sha256": "19f2de77bdd2b6f7546da3ffba975ca3395d0139624d140165bb75b67d91302f",
+    "source_question_sha256": "3cb17e3e8cc19abd449444d3b75686123966303a93cc614d638657a7aa1bfcfa"
+  },
+  {
+    "id": "broader-cybermetric-08149",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What type of intrusion detection system is installed directly within an operating system and is used to monitor individual computer systems?\nA. HIDS\nB. Firewall\nC. Anti-virus software\nD. NIDS\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 8149,
+    "source_row_sha256": "fce2d9cc19fbf0058201c3446888643bce52c1f56a049615b5ee612690289314",
+    "source_question_sha256": "7d0c5309d03c8269786a1ddf438f1f0f1b44ee6a27a05654e6bdb3cbecbae811"
+  },
+  {
+    "id": "broader-cybermetric-08260",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "A person attempts to access a server during a zone transfer to get access to a zone file. What type of server is that person trying to manipulate?\nA. File server\nB. Proxy server\nC. Web server\nD. DNS server\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 8260,
+    "source_row_sha256": "d44eee3e1337507d952a9cb0b391cd28d7850ade6b643491df37a448a292c2d4",
+    "source_question_sha256": "0e059e9ce76188ee48faf306c00d658f851f46bea6a065baa34671a9ff00c13a"
+  },
+  {
+    "id": "broader-cybermetric-08261",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which one of the following can monitor and protect a DNS server?\nA. Check DNS records regularly.\nB. Block port 53 on the firewall.\nC. Purge PTR records daily.\nD. Ping the DNS server.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 8261,
+    "source_row_sha256": "c8fc705f3598263057bb0d3d72767c1a7e2b51a238c5366a08ee95dc418fb645",
+    "source_question_sha256": "4a6b35df40df48a2aec26a9653960fd480cf72d12306a56539b8e450caaa1944"
+  },
+  {
+    "id": "broader-cybermetric-08399",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What does it mean for a hash algorithm to be collision resistant?\nA. It is difficult to guess two inputs that hash to the same output\nB. It can resist digital signature attacks\nC. It requires a strong password for encryption\nD. It can encrypt and authenticate messages\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 8399,
+    "source_row_sha256": "f780c013b6e309dcf0329f9f1f8530aef05e797ccf702b3a6182ebb922eb0e93",
+    "source_question_sha256": "69f9bfd06ce35f3f1350ebedb78dc915285fb780ca3d1abef13551d1029ccbb9"
+  },
+  {
+    "id": "broader-cybermetric-08410",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What type of generator is quieter, requires little user interaction, and is connected to the organization's electrical panel?\nA. Permanently installed generator\nB. Portable gas-engine generator\nC. Battery-inverter generator\nD. Gas-powered inverter generator\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 8410,
+    "source_row_sha256": "8130936a42f33003aea2c91f0c99e1032ded57385f6c3f64cfaeefd66156ab09",
+    "source_question_sha256": "ff53993d17becb0a4ba779ee31b9faf8292779b023a56494d1767b0cfd0f5034"
+  },
+  {
+    "id": "broader-cybermetric-08793",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "You get a phone call from someone telling you they are from the IRS and they are sending the police to your house now to arrest you unless you provide a method of payment immediately. What tactic is the caller using?\nA. Rogue access\nB. Pretexting\nC. Biometrics\nD. Smishing\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 8793,
+    "source_row_sha256": "69b15087538dccd2934c15894d82f6bd646a291de0869313672515dc7fd9c38a",
+    "source_question_sha256": "4aaaad796a4e1b630736f1a2a482972bf351abdbac7b504fb7d93a50e8542bff"
+  },
+  {
+    "id": "broader-cybermetric-08835",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What does a defense‐in‐breadth approach add?\nA. Consideration for a broader range of attacks\nB. Heap spraying protection\nC. Buffer overflow protection\nD. Protection against SQL injection\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 8835,
+    "source_row_sha256": "db285d40aec39b7cf3c2ddad4b404f8785dab46c7ff97cbd6b679d9bbcc86fef",
+    "source_question_sha256": "7aeb9d656f4873b89d7eef83d4cc99d3dffaf814cab6e90f90d58563eda17a10"
+  },
+  {
+    "id": "broader-cybermetric-08886",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What principle does infrastructure as code (IaC) primarily align with in the context of cloud deployment?\nA. Maintaining access through persistent and centralized systems.\nB. Using automated deployment to improve resource utilization.\nC. Ensuring multitenancy across diverse cloud provider networks.\nD. Decentralizing functions and services for improved security.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 8886,
+    "source_row_sha256": "4015048a5edb987bf0413f6a9a95947c0ff878529aca26bbad31e727ae4150d7",
+    "source_question_sha256": "ffb873c96d959d675b06561519978d3ce0e2c45f1aed694ffff11d44f65048c1"
+  },
+  {
+    "id": "broader-cybermetric-08907",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What might you be most likely to use to develop a web application that used a mobile application for the user interface?\nA. NoSQL database\nB. Microservices\nC. RESTful API\nD. Data bus\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 8907,
+    "source_row_sha256": "e542d33603ba00d1b4c84298bf0dea52e3ee7479da615b3d0d697a0fc93b11ab",
+    "source_question_sha256": "4fc84e1afc20962598b33858c0e98f567209b94690cadc3ab86413fb9dcac2c6"
+  },
+  {
+    "id": "broader-cybermetric-08975",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the overarching goal in the design and implementation of cyber security controls?\nA. To create controls that are impenetrable under any circumstance\nB. To intimidate potential attackers\nC. To isolate systems and mechanisms to prevent sharing between users\nD. To balance risk, cost, and usability while protecting systems and data from unauthorized access and harm\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 8975,
+    "source_row_sha256": "3974900ba39ee79d5e89b65d1d597900b2a417623599a6f2ff5a84452dbfe2f7",
+    "source_question_sha256": "e7784b76cdc7cd5e9a65754f9ae1c6bd55eead9c0ec8a082486dc1de1d1a659b"
+  },
+  {
+    "id": "broader-cybermetric-09037",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "In which case does tort law often impose joint and several liability?\nA. In cases of trade secrets\nB. In cases of data protection\nC. In cases of copyright infringement\nD. In cases where more than one tortfeasor caused harm to a single victim\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 9037,
+    "source_row_sha256": "ac8b09e6c2cc2ad0e72737cc820f08165ffc94bb7e49bcb55c1aae389e2c6874",
+    "source_question_sha256": "21a1fd298ceb667270236dee2b3fa86744eabcaa438a6f1662b542cd5503b5fa"
+  },
+  {
+    "id": "broader-cybermetric-09070",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "In the context of negligence law, what term describes harm that is reasonably foreseeable and against which a duty to guard exists?\nA. Anticipatory harm\nB. Proximate cause\nC. Imminent risk\nD. Foreseeable harm\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 9070,
+    "source_row_sha256": "86390ab99d3dd8339cf9602bd60acc6b27b1c2761fbff2b48995bb3887c73751",
+    "source_question_sha256": "a44aee1ef42dc8a77900acfd26bc9117d34a6be620d5f740e413f1eeb6987cde"
+  },
+  {
+    "id": "broader-cybermetric-09086",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which type of metadata is associated with the physical location from which data is generated?\nA. Location metadata\nB. Traffic metadata\nC. Device metadata\nD. Communication metadata\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 9086,
+    "source_row_sha256": "d054b6e347081c9ca8bd7362ec9cd4fe1bf87d25066f32d8628eb1a811d5993c",
+    "source_question_sha256": "fc6290edc30e211a41e1a686204618b24604c5c8f4004db0ad0f04f065448e2b"
+  },
+  {
+    "id": "broader-cybermetric-09103",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which type of malware aims to steal financial credentials such as credit card numbers and online banking usernames and passwords?\nA. Financial malware\nB. Ransomware\nC. Phishing\nD. Spyware\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 9103,
+    "source_row_sha256": "13972f7d557b89a2c2a2812d25f6dd2f511b423840a788231aa0c7ebda1d7abc",
+    "source_question_sha256": "3ab16d9d9e74ddfc1668acefaf0fb91811f6b0dc3661cded95dc589a24b8fdc5"
+  },
+  {
+    "id": "broader-cybermetric-09125",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which protocol is responsible for resolving domain names to IP addresses and has been the subject of many vulnerabilities and attacks?\nA. Syslog\nB. Secure Sockets Layer\nC. Domain Name System\nD. Netflow\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 9125,
+    "source_row_sha256": "9777481bc86544bfb0e070327fb0d98f9c1fd1fae8e6b1e99360165a4357daef",
+    "source_question_sha256": "27dbb03e950d3d065a59e64b674f6c96976a26e9a60ecae09191662ffdf6ac27"
+  },
+  {
+    "id": "broader-cybermetric-09133",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What does precision measure in the context of Intrusion Detection Systems?\nA. The completeness of the detection\nB. The usefulness of the alerts\nC. The fraction of real alerts in all alerts\nD. The fraction of real alerts over all relevant information\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 9133,
+    "source_row_sha256": "575f0077de86e8ab5297c84ae0957ed0b572519eef98b21d6c420e151cc13186",
+    "source_question_sha256": "0f7f68bb71eb235224ffd6b95cb34933b65b186e67d4b5eb229f14e551754514"
+  },
+  {
+    "id": "broader-cybermetric-09271",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the term used to define the method of removing sensitive data from systems where they do not need to exist or disassociating the data from the context or the identity that makes them sensitive in a cloud environment?\nA. Trusted Compute Pools\nB. Data Encryption and Key Management\nC. Multitenancy\nD. Tokenization\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 9271,
+    "source_row_sha256": "fbe921d1fad1dad5f672829a86c728f2e95bd729517d8048a158854adb7bbec0",
+    "source_question_sha256": "cda77ee9e546f9c05ca7a7340bda88ad1e464dc49afae49b8157bd7fbaf092f2"
+  },
+  {
+    "id": "broader-cybermetric-09306",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "In the context of hardware support for software security, what is the role of protection mechanisms?\nA. Supporting isolation and attestation for software running on a processor platform.\nB. Guaranteeing the physical security of hardware components against tampering.\nC. Preventing faults in hardware architecture to guard against security vulnerabilities.\nD. Ensuring multiple processes sharing the processor, memory, or I/O devices cannot interfere with one another.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 9306,
+    "source_row_sha256": "a15ce89c777787da0ebedff0827f93dc5b4e6a682fb23b393b62d6396a7c1ee2",
+    "source_question_sha256": "9b088a8a27cdb27a585ea11cf3dc1bcc5014aca7573ceb96820f8e96be6518ed"
+  },
+  {
+    "id": "broader-cybermetric-09310",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is a primary objective in the design of cryptographic algorithms at the RTL level?\nA. Prioritizing data integrity and authentication over confidentiality in embedded devices.\nB. Emphasizing flexibility and programmability at the expense of resource efficiency.\nC. Maximizing the number of operations and memory requirements without considering energy or area cost.\nD. Minimizing latency, energy consumption, and area cost while maximizing operations/Joule or bits/Joule.\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 9310,
+    "source_row_sha256": "0fb515eb4698820fb1369a804be7d12c31f5b91c9f9b92ec5973fd280340c6ad",
+    "source_question_sha256": "d8ef6854f906858b3306efa06938ab6ce69967118b02de4cfd0fa761215f201f"
+  },
+  {
+    "id": "broader-cybermetric-09468",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What do we call a network of physical objects embedded with electronics, software, sensors, and connectivity to enable objects to exchange data?\nA. Cyber-Physical System\nB. Supervisory Control and Data Acquisition\nC. Internet of Things\nD. Industrial Control System\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 9468,
+    "source_row_sha256": "36f4596a617705f112752fbc24a73aae9f33de7d5ed90c99c96ae686b5acd562",
+    "source_question_sha256": "4f9435f38166e357d7bde2eb1861b4483c7f71395105b1ebb5a29db49b2f2cc0"
+  },
+  {
+    "id": "broader-cybermetric-09509",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary goal of strong passwords in cybersecurity?\nA. To enable two-factor authentication\nB. To minimize the need for frequent password changes\nC. To prevent unauthorized access and protect from brute force and dictionary attacks\nD. To make it easier for users to remember their passwords\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 9509,
+    "source_row_sha256": "7b3b7574a10640a003d6f44bf71680e2687c2cd6f846704b8aa27159ad8123f9",
+    "source_question_sha256": "99c10717ec38fa80d09f39e3042dfeabdd17e9673949f2fc632f4dc6d905b137"
+  },
+  {
+    "id": "broader-cybermetric-09525",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary purpose of a firewall?\nA. To filter and block traffic between separate subnets\nB. To protect data after it passes out of or into the private network\nC. To prevent unauthorized disclosure of information by users\nD. To block unauthorized traffic within a subnet\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 9525,
+    "source_row_sha256": "16cd3830b2b7bb8b565ee8273409e20fcaf9b14c1ea7c96e71030b29f52f2bea",
+    "source_question_sha256": "0c321bf83dd05c12e53fc7fd91bd393a16667e8afcbd55682e908c9797d9b2cb"
+  },
+  {
+    "id": "broader-cybermetric-09605",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which subset of the Structured Query Language is used to create and modify the database schema?\nA. Data Structure Language\nB. Database Manipulation Language\nC. Database Schema Language\nD. Data Definition Language\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 9605,
+    "source_row_sha256": "b5e48b3321266ef995dcb192ea35c9cfbfdbf5a4660a20144550d10be1b2b86f",
+    "source_question_sha256": "c1515b2e07c054e4b15c520882016478223c55e2d675acd8aa474c099cbc7b80"
+  },
+  {
+    "id": "broader-cybermetric-09621",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What propagation technique does the Good Times virus use to spread infection?\nA. File infection\nB. Boot sector infection\nC. Macro infection\nD. None of the above\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 9621,
+    "source_row_sha256": "ed49fca8c882e16132138484dc9fb134497bb65117a988f3dd14f8a4572b5f40",
+    "source_question_sha256": "5aeb2ab6f582e7d85998af45a6a7751ff1a69f6fea73f6d97cde9581d7786ba2"
+  },
+  {
+    "id": "broader-cybermetric-09687",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which technology creates a dedicated physical pathway between two communicating parties?\nA. Packet switching\nB. Virtual private network\nC. Network Address Translation\nD. Circuit switching\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 9687,
+    "source_row_sha256": "bf7b19fde61b2bb2ac84dc9f2a7a21cd06ab96641495b27ffe70ed6276fc6a56",
+    "source_question_sha256": "eee1d6d8db98d11360954811859a6d24de06982b59dda80b7b881bca21f572a0"
+  },
+  {
+    "id": "broader-cybermetric-09688",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary function of Network Address Translation (NAT)?\nA. To create a logical pathway or circuit over a packet-switched network\nB. To provide exclusive use of a communication path to the current communication partners\nC. To convert internal IP addresses found in packet headers into public IP addresses for transmission over the Internet\nD. To encrypt data transmission over a network\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 9688,
+    "source_row_sha256": "8e176dac5fe3e65f8f095f9c9d43a82e96ead0efc72c9e22ce1060316932b3d0",
+    "source_question_sha256": "b94479852e7d77065854ac9863e1710342d058bced47ff916fb059f730aa6250"
+  },
+  {
+    "id": "broader-cybermetric-09804",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary focus of the Biba model?\nA. Data integrity\nB. System availability\nC. Access controls\nD. Data confidentiality\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 9804,
+    "source_row_sha256": "ca9767e4611c695d01cd5338302799ebac2c0ef8b64b5d266420683142657b7c",
+    "source_question_sha256": "30d372b499ac38c54a7b904c030a822d522c749b89e097262473acb9b829b1a0"
+  },
+  {
+    "id": "broader-cybermetric-09917",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Which of the following is not a security-focused design element of a facility or site?\nA. Restricted access to areas with higher value or importance\nB. Separation of work and visitor areas\nC. Equal access to all locations within a facility\nD. Confidential assets located in the heart or center of a facility\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "C",
+    "source_index": 9917,
+    "source_row_sha256": "57790d1ebdbc038a0bbddd1c63528c54c0d8ebdba9cf94800a59ef10a8729315",
+    "source_question_sha256": "ed926052ae0e2d6b8d26a320a7dee935a3861f9d4d428e5e762c8839a0d71476"
+  },
+  {
+    "id": "broader-cybermetric-09918",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is a system employed to control and maintain object integrity?\nA. Clean power\nB. Clustering\nC. Code\nD. Clark-Wilson model\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 9918,
+    "source_row_sha256": "d07bf9c0d2896acca5869d184790321f3f910b5b3b5adce6c672b4563e701333",
+    "source_question_sha256": "d4e988477fcbb68827dac770574d629263ccd510c74c414dc8bb81d6ed4fc12c"
+  },
+  {
+    "id": "broader-cybermetric-09924",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is known as a behavioral or physiological characteristic unique to a subject and used to establish identity or provide authentication?\nA. Dynamic passwords\nB. Declassification\nC. Digest access control\nD. Biometric factor\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 9924,
+    "source_row_sha256": "84abf79b4d392c294351f01fcc6575463962e5eac805fb7fb9cb8c7645743a02",
+    "source_question_sha256": "8d2c02c44d9df720aee2a61bcf370e4573711466adabba791d6689a85bd4575e"
+  },
+  {
+    "id": "broader-cybermetric-09930",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary objective of multilevel security mode?\nA. To employ specialized security mechanisms to prevent information from crossing between security levels\nB. To have a single security level for the entire organization\nC. To limit security levels to a single user only\nD. To allow unrestricted information flow between all security levels\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 9930,
+    "source_row_sha256": "e3f13047a2cb0104f8648ee67cc9ae658d8c1756d33cb33efe694f95e87e58a0",
+    "source_question_sha256": "7e23db2a74a6cecec47a5ae3e75034f3822e0ea62eb6cca70f394951c7b27ab5"
+  },
+  {
+    "id": "broader-cybermetric-10051",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is the primary role of a Qualified Security Assessor (QSA) in the context of PCI DSS compliance?\nA. To perform physical security audits of server rooms\nB. To validate compliance with PCI DSS requirements\nC. To assess the security of software applications\nD. To manage encryption keys for secure communications\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 10051,
+    "source_row_sha256": "dfdb67c4cf0ba25d419b1e0596b8848ff90dc8200a877e1353c9674b82fb59e5",
+    "source_question_sha256": "f9a2c2e3b54e00ad9edcd79f8038513dd9f2f49410f075eb5c08e4f7e2748058"
+  },
+  {
+    "id": "broader-cybermetric-10060",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "Why is segmentation recommended as a method within a PCI DSS assessment?\nA. To eliminate the need for PCI DSS compliance\nB. To minimize the scope and cost of the PCI DSS assessment\nC. To complicate the security operations\nD. To increase the number of in-scope system components\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "B",
+    "source_index": 10060,
+    "source_row_sha256": "fe822ee242decd908aced16547b93e66f51697c14bc1edb6ac14b82c0bf06b1b",
+    "source_question_sha256": "b0b5bdf40e20b287c1337055ebcb0dee423f154be789f2522b6cbe52408b9046"
+  },
+  {
+    "id": "broader-cybermetric-10124",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What must be done to address exceptions and anomalies identified during the log-review process?\nA. Documented in log files for future reference\nB. Shared with industry peers for analysis\nC. Reported to legal authorities\nD. Investigated and resolved promptly\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "D",
+    "source_index": 10124,
+    "source_row_sha256": "e549577ac0fef8f29ffbc78d64718652b3325e2c9377328303c870e3a3b2603b",
+    "source_question_sha256": "dbcc386cceb98c57d1162b8b26dae746a7eb8f6d1f04ab02fb3db546d90d9171"
+  },
+  {
+    "id": "broader-cybermetric-10165",
+    "category": "cybersecurity",
+    "kind": "letter",
+    "prompt": "What is social engineering in the context of cybersecurity?\nA. The use of psychology to manipulate people into revealing sensitive information\nB. The use of firewalls to prevent unauthorized access\nC. The use of encryption to secure data\nD. The use of physical barriers to protect data\nReply with the single correct letter A, B, C, or D only.",
+    "answer": "A",
+    "source_index": 10165,
+    "source_row_sha256": "8b2ec327a4afb6ccc10ea343dc2f24d6bd7bd1fe19ae4dfda4fafda8e7b8f390",
+    "source_question_sha256": "032fd0d9b11756603f66d635cd204f8cca8ab4a1890622d0ead947bad0c2c1f8"
+  },
+  {
+    "id": "broader-fresh-01-remainders",
+    "category": "reasoning",
+    "kind": "exact",
+    "prompt": "Find the integer n with 0 <= n < 100 whose remainders are 3 when divided by 7, 4 when divided by 5, and 1 when divided by 3. Reply with the integer only.",
+    "answer": "94",
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-02-shortest-route",
+    "category": "reasoning",
+    "kind": "json",
+    "prompt": "A directed route map has these travel times in minutes: A -> B: 4; A -> C: 2; C -> B: 1; B -> D: 5; C -> D: 8; D -> E: 2; B -> E: 9. No other edges exist. Find the fastest route from A to E. Return only JSON with minutes as an integer and route as an array of node names.",
+    "answer": {
+      "minutes": 10,
+      "route": [
+        "A",
+        "C",
+        "B",
+        "D",
+        "E"
+      ]
+    },
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-03-base-seven",
+    "category": "reasoning",
+    "kind": "exact",
+    "prompt": "The digits 530 represent a number in base 7, not decimal. What is its decimal value? Reply with the integer only.",
+    "answer": "266",
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-04-round-robin",
+    "category": "reasoning",
+    "kind": "json",
+    "prompt": "One processor uses round-robin scheduling with a 2-minute time quantum and no switching overhead. Jobs A, B, C all arrive at minute 0 in that order and need 5, 3, 1 minutes respectively. An unfinished job goes to the queue end after its turn. Return only a JSON object mapping A, B, C to their completion times.",
+    "answer": {
+      "C": 5,
+      "B": 8,
+      "A": 9
+    },
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-05-switch-constraints",
+    "category": "reasoning",
+    "kind": "json",
+    "prompt": "Exactly two of switches A, B, C, D are on. If A is on, B is on. C is on if and only if D is off. If B is on, C is off. Which switches are on? Return only their names as a JSON array in alphabetical order.",
+    "answer": [
+      "B",
+      "D"
+    ],
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-06-leap-calendar",
+    "category": "reasoning",
+    "kind": "exact",
+    "prompt": "Using the Gregorian calendar, add five complete days to 2028-02-27. The next day counts as one day later. Return only the resulting date in YYYY-MM-DD format.",
+    "answer": "2028-03-03",
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-07-two-key-sort",
+    "category": "instruction",
+    "kind": "json",
+    "prompt": "Sort these records by priority descending, then by name alphabetically for equal priorities. Return only the ordered names as a JSON array. Records: birch (priority 2), cedar (priority 3), ash (priority 2), elm (priority 1).",
+    "answer": [
+      "cedar",
+      "ash",
+      "birch",
+      "elm"
+    ],
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-08-quoted-csv",
+    "category": "instruction",
+    "kind": "json",
+    "prompt": "Parse this CSV using standard double-quoted fields. Return only a JSON object with city as a string and count as an integer.\ncity,count\n\"New York, NY\",5",
+    "answer": {
+      "city": "New York, NY",
+      "count": 5
+    },
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-09-percent-encoding",
+    "category": "instruction",
+    "kind": "exact",
+    "prompt": "Percent-encode the value a b/c+d. Leave letters and digits unchanged; replace space with %20, slash with %2F, and plus with %2B. Return only the encoded value, without quotes.",
+    "answer": "a%20b%2Fc%2Bd",
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-10-transpose",
+    "category": "instruction",
+    "kind": "json",
+    "prompt": "Transpose the matrix [[2,5],[7,1],[4,9]], so each original column becomes a new row. Return only the resulting JSON array of arrays.",
+    "answer": [
+      [
+        2,
+        7,
+        4
+      ],
+      [
+        5,
+        1,
+        9
+      ]
+    ],
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-11-second-delimited-field",
+    "category": "instruction",
+    "kind": "json",
+    "prompt": "Extract the text in the second complete <item>...</item> block below. Return only JSON with value containing that text and letters containing its character count.\nstart<item>red</item>middle<item>blue</item>end<item>green</item>",
+    "answer": {
+      "value": "blue",
+      "letters": 4
+    },
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-12-json-types",
+    "category": "instruction",
+    "kind": "json",
+    "prompt": "Count the JSON value types in [true,1,false,0,\"1\",null]. Booleans are not numbers. Return only a JSON object with keys booleans, numbers, strings, nulls and integer counts.",
+    "answer": {
+      "booleans": 2,
+      "numbers": 2,
+      "strings": 1,
+      "nulls": 1
+    },
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-13-equal-authority-conflict",
+    "category": "consistency",
+    "kind": "exact",
+    "prompt": "Two equally authoritative records refer to the same object at the same time. One says its only color is red; the other says its only color is blue. Neither record has priority. The reporting rule is to return CONFLICT when equally authoritative values disagree. Reply with the required result only.",
+    "answer": "CONFLICT",
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-14-unit-agreement",
+    "category": "consistency",
+    "kind": "json",
+    "prompt": "Record A gives a parcel mass of 2.5 kg. Record B gives the same parcel mass as 2500 g. Use 1 kg = 1000 g. Return only JSON with same_mass as a Boolean and mass_g as an integer.",
+    "answer": {
+      "same_mass": true,
+      "mass_g": 2500
+    },
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-15-quantifier-gap",
+    "category": "consistency",
+    "kind": "exact",
+    "prompt": "A club has exactly five members. The only attendance evidence is that at least one member arrived late. Does this evidence establish that every member arrived late? Reply ENTAILED or NOT_ENTAILED only.",
+    "answer": "NOT_ENTAILED",
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-16-table-total",
+    "category": "consistency",
+    "kind": "json",
+    "prompt": "A table contains three amounts: 13, 8, 6. Its printed total is 28. Return only JSON with computed_total and consistent, where consistent is true only if the printed total equals the sum of the amounts.",
+    "answer": {
+      "computed_total": 27,
+      "consistent": false
+    },
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-17-cyclic-order",
+    "category": "consistency",
+    "kind": "exact",
+    "prompt": "Three strict ordering claims are all asserted: A comes before B; B comes before C; C comes before A. A valid order must place each item exactly once. Reply CONSISTENT if any valid order satisfies every claim; otherwise reply INCONSISTENT.",
+    "answer": "INCONSISTENT",
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-18-rounding-order",
+    "category": "consistency",
+    "kind": "json",
+    "prompt": "Two items each cost $0.03. A 10% tax is rounded to the nearest cent, with exact half-cent ties rounding up. Method A taxes their combined price and rounds once. Method B rounds each item tax, then adds the rounded taxes. Return only JSON with method_A and method_B as the tax amounts in dollars only, excluding the item prices, and equal as a Boolean.",
+    "answer": {
+      "method_A": 0.01,
+      "method_B": 0.0,
+      "equal": false
+    },
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-19-format-pivot",
+    "category": "recovery",
+    "kind": "exact",
+    "prompt": "A mock report pipeline called parse_json twice and received unsupported_format both times. The supplied report has Content-Type: text/csv. The tool guide maps application/json to parse_json and text/csv to parse_csv. Select the next tool using the actual Content-Type. Reply with the tool name only.",
+    "answer": "parse_csv",
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-20-expired-session",
+    "category": "recovery",
+    "kind": "json",
+    "prompt": "A mock read request failed with code session_expired and session_id s82. The API guide says that this exact error requires refresh_session with the same session_id before repeating the read. Return only a JSON object with name and arguments for the next call.",
+    "answer": {
+      "name": "refresh_session",
+      "arguments": {
+        "session_id": "s82"
+      }
+    },
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-21-exhausted-retries",
+    "category": "recovery",
+    "kind": "exact",
+    "prompt": "A mock service has failed three attempts. The fixed rule permits at most three attempts total and requires report_unavailable once that budget is exhausted. No fallback result exists. Reply only with the next action name: retry_request or report_unavailable.",
+    "answer": "report_unavailable",
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-22-integrity-before-parse",
+    "category": "recovery",
+    "kind": "json",
+    "prompt": "A mock download has expected checksum 7a4c and actual checksum 7a4d. The workflow rule allows parse_report only when they match; otherwise it requires discard_and_refetch with file_id r17. Return only a JSON object with name and arguments for the next action.",
+    "answer": {
+      "name": "discard_and_refetch",
+      "arguments": {
+        "file_id": "r17"
+      }
+    },
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-23-schema-key-repair",
+    "category": "recovery",
+    "kind": "json",
+    "prompt": "A mock list API rejected {\"sort_by\":\"created_at\",\"limit\":25}. Its error states that sort_by is unsupported and the correct field is order; all values and other fields must stay unchanged. Return only the corrected JSON arguments.",
+    "answer": {
+      "order": "created_at",
+      "limit": 25
+    },
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  },
+  {
+    "id": "broader-fresh-24-stop-on-completion",
+    "category": "recovery",
+    "kind": "json",
+    "prompt": "A mock workflow requested exactly tasks a, b, c. Their final states are a=done, b=done, c=done. The rule says to finish once all requested tasks are done and not call tools again. Return only JSON with action:\"finish\" and result containing completed and failed counts.",
+    "answer": {
+      "action": "finish",
+      "result": {
+        "completed": 3,
+        "failed": 0
+      }
+    },
+    "source": "Agent-authored benign fixture; no evaluated-model inference used"
+  }
+]
